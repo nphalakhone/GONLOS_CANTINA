@@ -1,6 +1,6 @@
 ﻿namespace Projet_GONLO
 {
-    partial class Form1
+    partial class MenuAcceuille
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // MenuAcceuille
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(1264, 921);
+            this.Name = "MenuAcceuille";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "G.O.N.L.O\'S CANTINA";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
