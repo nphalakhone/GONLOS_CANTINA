@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +18,7 @@ namespace Projet_GONLO
             InitializeComponent();
         }
 
+        bool etat = true;
         int counter = 0;
         int counter2 = 0;
         int len1 = 0;
@@ -34,9 +36,11 @@ namespace Projet_GONLO
             LblGonlo.Text = "";
             timer1.Start();
             timer2.Start();
-            this.DoubleBuffered = true;
 
+            this.DoubleBuffered = true;
         }
+
+        
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
@@ -45,21 +49,41 @@ namespace Projet_GONLO
             {
                 counter = 0;
                 Lbltitre.Text = "";
+                if (etat == true)
+                {
+                    Lbltitre.Font = new Font("Aurek-Besh", Lbltitre.Font.Size);
+                    etat = false;
+                }
+                else
+                {
+                    Lbltitre.Font = new Font("SF Distant Galaxy Alternate", Lbltitre.Font.Size);
+                    etat = true;
+                }
             }
             else
             {
                 Lbltitre.Text = txt1.Substring(0, counter);
             }
-           
         }
 
         private void Timer2_Tick(object sender, EventArgs e)
         {
+            
             counter2++;
             if (counter2 > len2)
             {
                 counter2 = 0;
                 LblGonlo.Text = "";
+                if (etat == true)
+                {
+                    LblGonlo.Font = new Font("Aurek-Besh", LblGonlo.Font.Size);
+                    etat = false;
+                }
+                else
+                {
+                    LblGonlo.Font = new Font("SF Distant Galaxy Alternate", LblGonlo.Font.Size);
+                    etat = true;
+                }
             }
             else
             {

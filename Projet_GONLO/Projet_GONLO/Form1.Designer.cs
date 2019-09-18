@@ -29,82 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.BtnSettings = new System.Windows.Forms.Button();
-            this.BtnSwoop = new System.Windows.Forms.Button();
-            this.BtnDejarik = new System.Windows.Forms.Button();
-            this.BtnPazaak = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAccueil));
             this.Lbltitre = new System.Windows.Forms.Label();
             this.LblGonlo = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.buttonEllipse3 = new Projet_GONLO.ButtonEllipse();
+            this.BtnEllSB = new Projet_GONLO.ButtonEllipse();
+            this.BtnEllDejarik = new Projet_GONLO.ButtonEllipse();
+            this.BtnEllPazaak = new Projet_GONLO.ButtonEllipse();
+            this.roundPanel1 = new Projet_GONLO.RoundPanel();
             this.SuspendLayout();
-            // 
-            // BtnSettings
-            // 
-            this.BtnSettings.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonBLuesteel;
-            this.BtnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnSettings.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSettings.ForeColor = System.Drawing.Color.GreenYellow;
-            this.BtnSettings.Location = new System.Drawing.Point(15, 460);
-            this.BtnSettings.Name = "BtnSettings";
-            this.BtnSettings.Size = new System.Drawing.Size(250, 60);
-            this.BtnSettings.TabIndex = 0;
-            this.BtnSettings.Text = "Settings";
-            this.BtnSettings.UseVisualStyleBackColor = true;
-            // 
-            // BtnSwoop
-            // 
-            this.BtnSwoop.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonBLuesteel;
-            this.BtnSwoop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnSwoop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnSwoop.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSwoop.ForeColor = System.Drawing.Color.GreenYellow;
-            this.BtnSwoop.Location = new System.Drawing.Point(15, 360);
-            this.BtnSwoop.Name = "BtnSwoop";
-            this.BtnSwoop.Size = new System.Drawing.Size(250, 60);
-            this.BtnSwoop.TabIndex = 1;
-            this.BtnSwoop.Text = "Swoop bike racing";
-            this.BtnSwoop.UseVisualStyleBackColor = true;
-            // 
-            // BtnDejarik
-            // 
-            this.BtnDejarik.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonBLuesteel;
-            this.BtnDejarik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnDejarik.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnDejarik.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDejarik.ForeColor = System.Drawing.Color.GreenYellow;
-            this.BtnDejarik.Location = new System.Drawing.Point(15, 260);
-            this.BtnDejarik.Name = "BtnDejarik";
-            this.BtnDejarik.Size = new System.Drawing.Size(250, 60);
-            this.BtnDejarik.TabIndex = 2;
-            this.BtnDejarik.Text = "Dejarik";
-            this.BtnDejarik.UseVisualStyleBackColor = true;
-            // 
-            // BtnPazaak
-            // 
-            this.BtnPazaak.BackColor = System.Drawing.SystemColors.Control;
-            this.BtnPazaak.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonBLuesteel;
-            this.BtnPazaak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnPazaak.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnPazaak.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPazaak.ForeColor = System.Drawing.Color.GreenYellow;
-            this.BtnPazaak.Location = new System.Drawing.Point(15, 160);
-            this.BtnPazaak.Name = "BtnPazaak";
-            this.BtnPazaak.Size = new System.Drawing.Size(250, 60);
-            this.BtnPazaak.TabIndex = 3;
-            this.BtnPazaak.Text = "Pazaak";
-            this.BtnPazaak.UseVisualStyleBackColor = false;
             // 
             // Lbltitre
             // 
             this.Lbltitre.AutoSize = true;
             this.Lbltitre.BackColor = System.Drawing.Color.Transparent;
-            this.Lbltitre.Font = new System.Drawing.Font("Bauhaus 93", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbltitre.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbltitre.ForeColor = System.Drawing.Color.Fuchsia;
             this.Lbltitre.Location = new System.Drawing.Point(12, 9);
             this.Lbltitre.Name = "Lbltitre";
-            this.Lbltitre.Size = new System.Drawing.Size(848, 39);
+            this.Lbltitre.Size = new System.Drawing.Size(560, 17);
             this.Lbltitre.TabIndex = 4;
             this.Lbltitre.Text = "Welcome to the jewel of the cantinas of Nar Shaddaa";
             // 
@@ -112,11 +57,11 @@
             // 
             this.LblGonlo.AutoSize = true;
             this.LblGonlo.BackColor = System.Drawing.Color.Transparent;
-            this.LblGonlo.Font = new System.Drawing.Font("Bauhaus 93", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblGonlo.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblGonlo.ForeColor = System.Drawing.Color.Fuchsia;
-            this.LblGonlo.Location = new System.Drawing.Point(12, 66);
+            this.LblGonlo.Location = new System.Drawing.Point(10, 42);
             this.LblGonlo.Name = "LblGonlo";
-            this.LblGonlo.Size = new System.Drawing.Size(360, 39);
+            this.LblGonlo.Size = new System.Drawing.Size(328, 30);
             this.LblGonlo.TabIndex = 5;
             this.LblGonlo.Text = "G.O.N.L.O.\'S CANTINA";
             // 
@@ -128,19 +73,91 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
             // 
+            // buttonEllipse3
+            // 
+            this.buttonEllipse3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonEllipse3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonEllipse3.BackgroundImage")));
+            this.buttonEllipse3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEllipse3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonEllipse3.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEllipse3.ForeColor = System.Drawing.Color.LimeGreen;
+            this.buttonEllipse3.Location = new System.Drawing.Point(35, 452);
+            this.buttonEllipse3.Name = "buttonEllipse3";
+            this.buttonEllipse3.Size = new System.Drawing.Size(250, 61);
+            this.buttonEllipse3.TabIndex = 10;
+            this.buttonEllipse3.Text = "SETTINGS";
+            this.buttonEllipse3.UseVisualStyleBackColor = false;
+            // 
+            // BtnEllSB
+            // 
+            this.BtnEllSB.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnEllSB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllSB.BackgroundImage")));
+            this.BtnEllSB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllSB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnEllSB.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEllSB.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllSB.Location = new System.Drawing.Point(35, 345);
+            this.BtnEllSB.Name = "BtnEllSB";
+            this.BtnEllSB.Size = new System.Drawing.Size(250, 61);
+            this.BtnEllSB.TabIndex = 9;
+            this.BtnEllSB.Text = "SWOOP BIKE RACNG";
+            this.BtnEllSB.UseVisualStyleBackColor = false;
+            // 
+            // BtnEllDejarik
+            // 
+            this.BtnEllDejarik.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnEllDejarik.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllDejarik.BackgroundImage")));
+            this.BtnEllDejarik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllDejarik.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnEllDejarik.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEllDejarik.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllDejarik.Location = new System.Drawing.Point(35, 246);
+            this.BtnEllDejarik.Name = "BtnEllDejarik";
+            this.BtnEllDejarik.Size = new System.Drawing.Size(250, 61);
+            this.BtnEllDejarik.TabIndex = 8;
+            this.BtnEllDejarik.Text = "Dejarik";
+            this.BtnEllDejarik.UseVisualStyleBackColor = false;
+            // 
+            // BtnEllPazaak
+            // 
+            this.BtnEllPazaak.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnEllPazaak.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllPazaak.BackgroundImage")));
+            this.BtnEllPazaak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllPazaak.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnEllPazaak.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEllPazaak.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllPazaak.Location = new System.Drawing.Point(35, 150);
+            this.BtnEllPazaak.Name = "BtnEllPazaak";
+            this.BtnEllPazaak.Size = new System.Drawing.Size(250, 61);
+            this.BtnEllPazaak.TabIndex = 7;
+            this.BtnEllPazaak.Text = "PAZAAK";
+            this.BtnEllPazaak.UseVisualStyleBackColor = false;
+            // 
+            // roundPanel1
+            // 
+            this.roundPanel1.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
+            this.roundPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundPanel1.BorderColor = System.Drawing.Color.White;
+            this.roundPanel1.Edge = 20;
+            this.roundPanel1.Location = new System.Drawing.Point(592, 89);
+            this.roundPanel1.Name = "roundPanel1";
+            this.roundPanel1.Size = new System.Drawing.Size(580, 459);
+            this.roundPanel1.TabIndex = 11;
+            // 
             // MenuAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.Slippery_Slopes_Cantina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.ClientSize = new System.Drawing.Size(1184, 560);
+            this.Controls.Add(this.roundPanel1);
+            this.Controls.Add(this.buttonEllipse3);
+            this.Controls.Add(this.BtnEllSB);
+            this.Controls.Add(this.BtnEllDejarik);
+            this.Controls.Add(this.BtnEllPazaak);
             this.Controls.Add(this.LblGonlo);
             this.Controls.Add(this.Lbltitre);
-            this.Controls.Add(this.BtnPazaak);
-            this.Controls.Add(this.BtnDejarik);
-            this.Controls.Add(this.BtnSwoop);
-            this.Controls.Add(this.BtnSettings);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -154,15 +171,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BtnSettings;
-        private System.Windows.Forms.Button BtnSwoop;
-        private System.Windows.Forms.Button BtnDejarik;
-        private System.Windows.Forms.Button BtnPazaak;
         private System.Windows.Forms.Label Lbltitre;
         private System.Windows.Forms.Label LblGonlo;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private ButtonEllipse BtnEllPazaak;
+        private ButtonEllipse BtnEllDejarik;
+        private ButtonEllipse BtnEllSB;
+        private ButtonEllipse buttonEllipse3;
+        private RoundPanel roundPanel1;
     }
 }
 
