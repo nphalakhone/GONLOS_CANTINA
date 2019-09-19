@@ -63,6 +63,16 @@ namespace Projet_GONLO.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _interface {
+            get {
+                object obj = ResourceManager.GetObject("interface", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap backButton {
             get {
                 object obj = ResourceManager.GetObject("backButton", resourceCulture);
@@ -96,6 +106,16 @@ namespace Projet_GONLO.Properties {
         internal static System.Drawing.Bitmap backButtonSteel {
             get {
                 object obj = ResourceManager.GetObject("backButtonSteel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap holochess_arkit {
+            get {
+                object obj = ResourceManager.GetObject("holochess-arkit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +176,16 @@ namespace Projet_GONLO.Properties {
         internal static System.Drawing.Bitmap Slippery_Slopes_Cantina {
             get {
                 object obj = ResourceManager.GetObject("Slippery_Slopes_Cantina", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap star_wars_resort {
+            get {
+                object obj = ResourceManager.GetObject("star_wars_resort", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

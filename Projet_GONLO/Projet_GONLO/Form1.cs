@@ -34,28 +34,32 @@ namespace Projet_GONLO
             len1 = txt1.Length;
             len2 = txt2.Length;
             RPnlPazaak.Hide();
-
+            RPnlDejarik.Hide();
             this.DoubleBuffered = true;
         }
 
         private void BtnEllPazaak_Click(object sender, EventArgs e)
         {
             RPnlPazaak.Show();
+            RPnlDejarik.Hide();
         }
 
         private void BtnEllDejarik_Click(object sender, EventArgs e)
         {
             RPnlPazaak.Hide();
+            RPnlDejarik.Show();
         }
 
         private void BtnEllSB_Click(object sender, EventArgs e)
         {
             RPnlPazaak.Hide();
+            RPnlDejarik.Hide();
         }
 
         private void BtnEllSettings_Click(object sender, EventArgs e)
         {
             RPnlPazaak.Hide();
+            RPnlDejarik.Hide();
         }
 
         private void TimerSlide1_Tick(object sender, EventArgs e)

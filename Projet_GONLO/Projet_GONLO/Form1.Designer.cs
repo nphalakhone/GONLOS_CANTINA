@@ -44,28 +44,34 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.RPnlP2 = new Projet_GONLO.RoundPanel();
+            this.RPnlImgPazaak2 = new Projet_GONLO.RoundPanel();
             this.RPnlImgPazaak = new Projet_GONLO.RoundPanel();
             this.BtnEllSettings = new Projet_GONLO.ButtonEllipse();
             this.BtnEllSB = new Projet_GONLO.ButtonEllipse();
             this.BtnEllDejarik = new Projet_GONLO.ButtonEllipse();
             this.BtnEllPazaak = new Projet_GONLO.ButtonEllipse();
+            this.roundPanel1 = new Projet_GONLO.RoundPanel();
+            this.buttonEllipse3 = new Projet_GONLO.ButtonEllipse();
+            this.RPnlDejarik = new Projet_GONLO.RoundPanel();
+            this.RPnlImgDejarik2 = new Projet_GONLO.RoundPanel();
+            this.RPnlImgDejarik = new Projet_GONLO.RoundPanel();
+            this.BtnEllPlayDejarik = new Projet_GONLO.ButtonEllipse();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.RPnlPazaak.SuspendLayout();
             this.GbxPazaak.SuspendLayout();
+            this.RPnlDejarik.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblWelcome
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timerSlide1 = new System.Windows.Forms.Timer(this.components);
-            this.roundPanel1 = new Projet_GONLO.RoundPanel();
-            this.buttonEllipse3 = new Projet_GONLO.ButtonEllipse();
-            this.BtnEllSB = new Projet_GONLO.ButtonEllipse();
-            this.BtnEllDejarik = new Projet_GONLO.ButtonEllipse();
-            this.BtnEllPazaak = new Projet_GONLO.ButtonEllipse();
-            this.SuspendLayout();
-            // 
-            // LblWelcomePartie1
             // 
             this.LblWelcome.AutoSize = true;
             this.LblWelcome.BackColor = System.Drawing.Color.Transparent;
@@ -73,7 +79,6 @@
             this.LblWelcome.ForeColor = System.Drawing.Color.Fuchsia;
             this.LblWelcome.Location = new System.Drawing.Point(12, 9);
             this.LblWelcome.Name = "LblWelcome";
-            this.LblWelcome.Name = "LblWelcomePartie1";
             this.LblWelcome.Size = new System.Drawing.Size(560, 17);
             this.LblWelcome.TabIndex = 4;
             this.LblWelcome.Text = "Welcome to the jewel of the cantinas of Nar Shaddaa";
@@ -93,7 +98,7 @@
             // timerSlide1
             // 
             this.timerSlide1.Enabled = true;
-            this.timerSlide1.Interval = 10;
+            this.timerSlide1.Interval = 20;
             this.timerSlide1.Tick += new System.EventHandler(this.TimerSlide1_Tick);
             // 
             // RPnlPazaak
@@ -103,33 +108,15 @@
             this.RPnlPazaak.BorderColor = System.Drawing.Color.White;
             this.RPnlPazaak.Controls.Add(this.BtnEllPlayPazaak);
             this.RPnlPazaak.Controls.Add(this.GbxPazaak);
-            this.RPnlPazaak.Controls.Add(this.RPnlP2);
+            this.RPnlPazaak.Controls.Add(this.RPnlImgPazaak2);
             this.RPnlPazaak.Controls.Add(this.RPnlImgPazaak);
             this.RPnlPazaak.Edge = 20;
             this.RPnlPazaak.Location = new System.Drawing.Point(592, 89);
             this.RPnlPazaak.Name = "RPnlPazaak";
-            this.RPnlPazaak.Size = new System.Drawing.Size(580, 459);
+            this.RPnlPazaak.Size = new System.Drawing.Size(580, 460);
             this.RPnlPazaak.TabIndex = 11;
             // 
             // BtnEllPlayPazaak
-            // timerSlide1
-            // 
-            this.timerSlide1.Enabled = true;
-            this.timerSlide1.Interval = 10;
-            this.timerSlide1.Tick += new System.EventHandler(this.TickSlide1);
-            // 
-            // roundPanel1
-            // 
-            this.roundPanel1.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
-            this.roundPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundPanel1.BorderColor = System.Drawing.Color.White;
-            this.roundPanel1.Edge = 20;
-            this.roundPanel1.Location = new System.Drawing.Point(592, 89);
-            this.roundPanel1.Name = "roundPanel1";
-            this.roundPanel1.Size = new System.Drawing.Size(580, 459);
-            this.roundPanel1.TabIndex = 11;
-            // 
-            // buttonEllipse3
             // 
             this.BtnEllPlayPazaak.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtongold;
             this.BtnEllPlayPazaak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -161,7 +148,7 @@
             this.GbxPazaak.Size = new System.Drawing.Size(548, 156);
             this.GbxPazaak.TabIndex = 2;
             this.GbxPazaak.TabStop = false;
-            this.GbxPazaak.Text = "Pazaak Description";
+            this.GbxPazaak.Text = "Description";
             // 
             // label8
             // 
@@ -242,16 +229,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Pazaak, an ancient game dating back to the Old Republic times,";
             // 
-            // RPnlP2
+            // RPnlImgPazaak2
             // 
-            this.RPnlP2.BackgroundImage = global::Projet_GONLO.Properties.Resources.pazaakBackground1;
-            this.RPnlP2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RPnlP2.BorderColor = System.Drawing.Color.White;
-            this.RPnlP2.Edge = 20;
-            this.RPnlP2.Location = new System.Drawing.Point(366, 15);
-            this.RPnlP2.Name = "RPnlP2";
-            this.RPnlP2.Size = new System.Drawing.Size(197, 137);
-            this.RPnlP2.TabIndex = 1;
+            this.RPnlImgPazaak2.BackgroundImage = global::Projet_GONLO.Properties.Resources.pazaakBackground1;
+            this.RPnlImgPazaak2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlImgPazaak2.BorderColor = System.Drawing.Color.White;
+            this.RPnlImgPazaak2.Edge = 20;
+            this.RPnlImgPazaak2.Location = new System.Drawing.Point(366, 15);
+            this.RPnlImgPazaak2.Name = "RPnlImgPazaak2";
+            this.RPnlImgPazaak2.Size = new System.Drawing.Size(197, 137);
+            this.RPnlImgPazaak2.TabIndex = 1;
             // 
             // RPnlImgPazaak
             // 
@@ -328,13 +315,182 @@
             this.BtnEllPazaak.UseVisualStyleBackColor = false;
             this.BtnEllPazaak.Click += new System.EventHandler(this.BtnEllPazaak_Click);
             // 
+            // roundPanel1
+            // 
+            this.roundPanel1.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
+            this.roundPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundPanel1.BorderColor = System.Drawing.Color.White;
+            this.roundPanel1.Edge = 20;
+            this.roundPanel1.Location = new System.Drawing.Point(592, 89);
+            this.roundPanel1.Name = "roundPanel1";
+            this.roundPanel1.Size = new System.Drawing.Size(580, 459);
+            this.roundPanel1.TabIndex = 11;
+            // 
+            // buttonEllipse3
+            // 
+            this.buttonEllipse3.Location = new System.Drawing.Point(0, 0);
+            this.buttonEllipse3.Name = "buttonEllipse3";
+            this.buttonEllipse3.Size = new System.Drawing.Size(75, 23);
+            this.buttonEllipse3.TabIndex = 0;
+            // 
+            // RPnlDejarik
+            // 
+            this.RPnlDejarik.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
+            this.RPnlDejarik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlDejarik.BorderColor = System.Drawing.Color.White;
+            this.RPnlDejarik.Controls.Add(this.groupBox1);
+            this.RPnlDejarik.Controls.Add(this.BtnEllPlayDejarik);
+            this.RPnlDejarik.Controls.Add(this.RPnlImgDejarik2);
+            this.RPnlDejarik.Controls.Add(this.RPnlImgDejarik);
+            this.RPnlDejarik.Edge = 20;
+            this.RPnlDejarik.Location = new System.Drawing.Point(592, 89);
+            this.RPnlDejarik.Name = "RPnlDejarik";
+            this.RPnlDejarik.Size = new System.Drawing.Size(580, 460);
+            this.RPnlDejarik.TabIndex = 12;
+            // 
+            // RPnlImgDejarik2
+            // 
+            this.RPnlImgDejarik2.BackgroundImage = global::Projet_GONLO.Properties.Resources.holochess_arkit;
+            this.RPnlImgDejarik2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlImgDejarik2.BorderColor = System.Drawing.Color.White;
+            this.RPnlImgDejarik2.Edge = 20;
+            this.RPnlImgDejarik2.Location = new System.Drawing.Point(366, 15);
+            this.RPnlImgDejarik2.Name = "RPnlImgDejarik2";
+            this.RPnlImgDejarik2.Size = new System.Drawing.Size(197, 137);
+            this.RPnlImgDejarik2.TabIndex = 1;
+            // 
+            // RPnlImgDejarik
+            // 
+            this.RPnlImgDejarik.BackgroundImage = global::Projet_GONLO.Properties.Resources._interface;
+            this.RPnlImgDejarik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlImgDejarik.BorderColor = System.Drawing.Color.White;
+            this.RPnlImgDejarik.Edge = 20;
+            this.RPnlImgDejarik.Location = new System.Drawing.Point(15, 15);
+            this.RPnlImgDejarik.Name = "RPnlImgDejarik";
+            this.RPnlImgDejarik.Size = new System.Drawing.Size(250, 250);
+            this.RPnlImgDejarik.TabIndex = 0;
+            // 
+            // BtnEllPlayDejarik
+            // 
+            this.BtnEllPlayDejarik.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtongold;
+            this.BtnEllPlayDejarik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllPlayDejarik.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnEllPlayDejarik.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEllPlayDejarik.Location = new System.Drawing.Point(366, 171);
+            this.BtnEllPlayDejarik.Name = "BtnEllPlayDejarik";
+            this.BtnEllPlayDejarik.Size = new System.Drawing.Size(197, 94);
+            this.BtnEllPlayDejarik.TabIndex = 4;
+            this.BtnEllPlayDejarik.Text = "Play";
+            this.BtnEllPlayDejarik.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(15, 288);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(548, 156);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Description";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(16, 114);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(63, 14);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Empire.";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(16, 100);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(511, 14);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "the Clone Wars and long through  the reign of the Galactic";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(16, 86);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(511, 14);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "homes throughout the galaxy from well before the time of";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(18, 98);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(0, 14);
+            this.label12.TabIndex = 4;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(16, 72);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(510, 14);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Shah-tezh, dejarik was commonly played on starships and in";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(16, 58);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(484, 14);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "other on a circular board. A variant of the more ancient";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(16, 44);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(510, 14);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "game in which teams of holographic creatures battled each";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(18, 30);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(518, 14);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Dejarik, also known as holochess, was a popular two-player";
+            // 
             // MenuAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Projet_GONLO.Properties.Resources.Slippery_Slopes_Cantina;
+            this.BackgroundImage = global::Projet_GONLO.Properties.Resources.star_wars_resort;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 560);
+            this.Controls.Add(this.RPnlDejarik);
             this.Controls.Add(this.RPnlPazaak);
             this.Controls.Add(this.BtnEllSettings);
             this.Controls.Add(this.BtnEllSB);
@@ -353,6 +509,9 @@
             this.RPnlPazaak.ResumeLayout(false);
             this.GbxPazaak.ResumeLayout(false);
             this.GbxPazaak.PerformLayout();
+            this.RPnlDejarik.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,7 +531,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private RoundPanel RPnlP2;
+        private RoundPanel RPnlImgPazaak2;
         private System.Windows.Forms.Label label5;
         private ButtonEllipse BtnEllPlayPazaak;
         private System.Windows.Forms.Label label8;
@@ -381,6 +540,19 @@
         private ButtonEllipse buttonEllipse3;
         private RoundPanel roundPanel1;
         private System.Windows.Forms.Timer timerSlide1;
+        private RoundPanel RPnlDejarik;
+        private RoundPanel RPnlImgDejarik;
+        private RoundPanel RPnlImgDejarik2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private ButtonEllipse BtnEllPlayDejarik;
     }
 }
 

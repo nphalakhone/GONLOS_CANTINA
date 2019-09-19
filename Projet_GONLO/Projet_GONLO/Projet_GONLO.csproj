@@ -89,7 +89,10 @@
   <ItemGroup>
     <Content Include="Properties\Slippery_Slopes_Cantina.jpg" />
     <Content Include="Resources\backButton.jpg" />
+    <None Include="Resources\interface.png" />
+    <None Include="Resources\holochess-arkit.jpg" />
     <Content Include="Resources\pazaakBackground.jpg" />
+    <None Include="Resources\star_wars_resort.jpg" />
     <None Include="Resources\pazaakBoard.jpg" />
     <None Include="Resources\pazaakEmptyBoard1.png" />
     <None Include="Resources\pazaakEmptyBoard.png" />
