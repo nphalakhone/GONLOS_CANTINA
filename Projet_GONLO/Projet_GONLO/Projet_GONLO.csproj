@@ -89,6 +89,13 @@
   <ItemGroup>
     <Content Include="Properties\Slippery_Slopes_Cantina.jpg" />
     <Content Include="Resources\backButton.jpg" />
+    <Content Include="Resources\pazaakBackground.jpg" />
+    <None Include="Resources\pazaakBoard.jpg" />
+    <None Include="Resources\pazaakEmptyBoard1.png" />
+    <None Include="Resources\pazaakEmptyBoard.png" />
+    <None Include="Resources\tumblr_oeofc6OfEn1vfq12to6_500.gif" />
+    <None Include="Resources\pazaakBackground2.jpg" />
+    <None Include="Resources\pazaakBackground1.jpg" />
     <None Include="Resources\backButtonSteel.jpg" />
     <None Include="Resources\backButtonBLuesteel.jpg" />
     <None Include="Resources\backButtongold.jpg" />

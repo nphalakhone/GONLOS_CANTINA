@@ -103,9 +103,69 @@ namespace Projet_GONLO.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pazaakBackground {
+            get {
+                object obj = ResourceManager.GetObject("pazaakBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pazaakBackground1 {
+            get {
+                object obj = ResourceManager.GetObject("pazaakBackground1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pazaakBoard {
+            get {
+                object obj = ResourceManager.GetObject("pazaakBoard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pazaakEmptyBoard {
+            get {
+                object obj = ResourceManager.GetObject("pazaakEmptyBoard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pazaakEmptyBoard1 {
+            get {
+                object obj = ResourceManager.GetObject("pazaakEmptyBoard1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Slippery_Slopes_Cantina {
             get {
                 object obj = ResourceManager.GetObject("Slippery_Slopes_Cantina", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumblr_oeofc6OfEn1vfq12to6_500 {
+            get {
+                object obj = ResourceManager.GetObject("tumblr_oeofc6OfEn1vfq12to6_500", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
