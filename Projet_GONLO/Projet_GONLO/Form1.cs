@@ -34,6 +34,7 @@ namespace Projet_GONLO
             len1 = txt1.Length;
             len2 = txt2.Length;
             RPnlPazaak.Hide();
+
             this.DoubleBuffered = true;
         }
 
@@ -59,6 +60,7 @@ namespace Projet_GONLO
 
         private void TimerSlide1_Tick(object sender, EventArgs e)
         {
+
             //label1
             if (LblWelcome.Left < this.Width)
             {
@@ -77,8 +79,9 @@ namespace Projet_GONLO
                     LblWelcome.Left = -675;
                     LblWelcome.Font = new Font("SF Distant Galaxy Alternate", 12);
                     etatWelcome = true;
-                }
+                } 
             }
+
             //label2
             if (LblGonlo.Left < this.Width)
             {
