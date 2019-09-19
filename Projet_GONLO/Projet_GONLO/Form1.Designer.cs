@@ -30,28 +30,29 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAccueil));
-            this.Lbltitre = new System.Windows.Forms.Label();
+            this.LblWelcome = new System.Windows.Forms.Label();
             this.LblGonlo = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timerSlide1 = new System.Windows.Forms.Timer(this.components);
+            this.roundPanel1 = new Projet_GONLO.RoundPanel();
             this.buttonEllipse3 = new Projet_GONLO.ButtonEllipse();
             this.BtnEllSB = new Projet_GONLO.ButtonEllipse();
             this.BtnEllDejarik = new Projet_GONLO.ButtonEllipse();
             this.BtnEllPazaak = new Projet_GONLO.ButtonEllipse();
-            this.roundPanel1 = new Projet_GONLO.RoundPanel();
             this.SuspendLayout();
             // 
-            // Lbltitre
+            // LblWelcomePartie1
             // 
-            this.Lbltitre.AutoSize = true;
-            this.Lbltitre.BackColor = System.Drawing.Color.Transparent;
-            this.Lbltitre.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbltitre.ForeColor = System.Drawing.Color.Fuchsia;
-            this.Lbltitre.Location = new System.Drawing.Point(12, 9);
-            this.Lbltitre.Name = "Lbltitre";
-            this.Lbltitre.Size = new System.Drawing.Size(560, 17);
-            this.Lbltitre.TabIndex = 4;
-            this.Lbltitre.Text = "Welcome to the jewel of the cantinas of Nar Shaddaa";
+            this.LblWelcome.AutoSize = true;
+            this.LblWelcome.BackColor = System.Drawing.Color.Transparent;
+            this.LblWelcome.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblWelcome.ForeColor = System.Drawing.Color.Fuchsia;
+            this.LblWelcome.Location = new System.Drawing.Point(12, 9);
+            this.LblWelcome.Name = "LblWelcomePartie1";
+            this.LblWelcome.Size = new System.Drawing.Size(560, 17);
+            this.LblWelcome.TabIndex = 4;
+            this.LblWelcome.Text = "Welcome to the jewel of the cantinas of Nar Shaddaa";
             // 
             // LblGonlo
             // 
@@ -59,7 +60,7 @@
             this.LblGonlo.BackColor = System.Drawing.Color.Transparent;
             this.LblGonlo.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblGonlo.ForeColor = System.Drawing.Color.Fuchsia;
-            this.LblGonlo.Location = new System.Drawing.Point(10, 42);
+            this.LblGonlo.Location = new System.Drawing.Point(12, 52);
             this.LblGonlo.Name = "LblGonlo";
             this.LblGonlo.Size = new System.Drawing.Size(328, 30);
             this.LblGonlo.TabIndex = 5;
@@ -72,6 +73,23 @@
             // timer2
             // 
             this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
+            // 
+            // timerSlide1
+            // 
+            this.timerSlide1.Enabled = true;
+            this.timerSlide1.Interval = 10;
+            this.timerSlide1.Tick += new System.EventHandler(this.TickSlide1);
+            // 
+            // roundPanel1
+            // 
+            this.roundPanel1.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
+            this.roundPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundPanel1.BorderColor = System.Drawing.Color.White;
+            this.roundPanel1.Edge = 20;
+            this.roundPanel1.Location = new System.Drawing.Point(592, 89);
+            this.roundPanel1.Name = "roundPanel1";
+            this.roundPanel1.Size = new System.Drawing.Size(580, 459);
+            this.roundPanel1.TabIndex = 11;
             // 
             // buttonEllipse3
             // 
@@ -133,17 +151,6 @@
             this.BtnEllPazaak.Text = "PAZAAK";
             this.BtnEllPazaak.UseVisualStyleBackColor = false;
             // 
-            // roundPanel1
-            // 
-            this.roundPanel1.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
-            this.roundPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundPanel1.BorderColor = System.Drawing.Color.White;
-            this.roundPanel1.Edge = 20;
-            this.roundPanel1.Location = new System.Drawing.Point(592, 89);
-            this.roundPanel1.Name = "roundPanel1";
-            this.roundPanel1.Size = new System.Drawing.Size(580, 459);
-            this.roundPanel1.TabIndex = 11;
-            // 
             // MenuAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,7 +164,7 @@
             this.Controls.Add(this.BtnEllDejarik);
             this.Controls.Add(this.BtnEllPazaak);
             this.Controls.Add(this.LblGonlo);
-            this.Controls.Add(this.Lbltitre);
+            this.Controls.Add(this.LblWelcome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -171,7 +178,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label Lbltitre;
+        private System.Windows.Forms.Label LblWelcome;
         private System.Windows.Forms.Label LblGonlo;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
@@ -180,6 +187,7 @@
         private ButtonEllipse BtnEllSB;
         private ButtonEllipse buttonEllipse3;
         private RoundPanel roundPanel1;
+        private System.Windows.Forms.Timer timerSlide1;
     }
 }
 

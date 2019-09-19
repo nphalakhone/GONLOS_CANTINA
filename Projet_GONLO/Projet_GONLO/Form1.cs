@@ -18,7 +18,8 @@ namespace Projet_GONLO
             InitializeComponent();
         }
 
-        bool etat = true;
+        bool etatWelcome = true;
+        bool etatGonlo = true;
         int counter = 0;
         int counter2 = 0;
         int len1 = 0;
@@ -28,14 +29,17 @@ namespace Projet_GONLO
 
         private void MenuAccueil_Load(object sender, EventArgs e)
         {
-            txt1 = Lbltitre.Text;
+            txt1 = LblWelcome.Text;
             txt2 = LblGonlo.Text;
             len1 = txt1.Length;
             len2 = txt2.Length;
-            Lbltitre.Text = "";
-            LblGonlo.Text = "";
+            //LblWelcomePartie1.Text = "";
+            //LblGonlo.Text = "";
             timer1.Start();
             timer2.Start();
+
+
+            
 
             this.DoubleBuffered = true;
         }
@@ -44,50 +48,105 @@ namespace Projet_GONLO
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            counter++;
-            if (counter > len1)
-            {
-                counter = 0;
-                Lbltitre.Text = "";
-                if (etat == true)
-                {
-                    Lbltitre.Font = new Font("Aurek-Besh", Lbltitre.Font.Size);
-                    etat = false;
-                }
-                else
-                {
-                    Lbltitre.Font = new Font("SF Distant Galaxy Alternate", Lbltitre.Font.Size);
-                    etat = true;
-                }
-            }
-            else
-            {
-                Lbltitre.Text = txt1.Substring(0, counter);
-            }
+
+            //counter++;
+            //if (counter > len1)
+            //{
+            //    counter = 0;
+            //    LblWelcomePartie1.Text = "";
+            //    if (etat == true)
+            //    {
+            //        //  Lbltitre.Font = new Font("Aurek-Besh", Lbltitre.Font.Size);
+            //        LblWelcomePartie1.Font = new Font("Aurek-Besh", LblWelcomePartie1.Font.Size);
+            //        etat = false;
+            //    }
+            //    else
+            //    {
+            //        LblWelcomePartie1.Font = new Font("SF Distant Galaxy Alternate", LblWelcomePartie1.Font.Size);
+            //        etat = true;
+            //    }
+            //}
+            //else
+            //{
+            //    LblWelcomePartie1.Text = txt1.Substring(0, counter);
+            //}
         }
+
 
         private void Timer2_Tick(object sender, EventArgs e)
         {
             
-            counter2++;
-            if (counter2 > len2)
+            //counter2++;
+            //if (counter2 > len2)
+            //{
+            //    counter2 = 0;
+            //    LblGonlo.Text = "";
+            //    if (etat == true)
+            //    {
+            //        LblGonlo.Font = new Font("Aurek-Besh", LblGonlo.Font.Size);
+            //        etat = false;
+            //    }
+            //    else
+            //    {
+            //        LblGonlo.Font = new Font("SF Distant Galaxy Alternate", LblGonlo.Font.Size);
+            //        etat = true;
+            //    }
+            //}
+            //else
+            //{
+            //    LblGonlo.Text = txt2.Substring(0, counter2);
+            //}
+        }
+
+        private void TickSlide1(object sender, EventArgs e)
+        {
+
+            
+            
+            //label1
+            if (LblWelcome.Left < this.Width)
             {
-                counter2 = 0;
-                LblGonlo.Text = "";
-                if (etat == true)
-                {
-                    LblGonlo.Font = new Font("Aurek-Besh", LblGonlo.Font.Size);
-                    etat = false;
-                }
-                else
-                {
-                    LblGonlo.Font = new Font("SF Distant Galaxy Alternate", LblGonlo.Font.Size);
-                    etat = true;
-                }
+                LblWelcome.Left += 5;
             }
             else
             {
-                LblGonlo.Text = txt2.Substring(0, counter2);
+
+                if (etatWelcome == true)
+                {
+                    LblWelcome.Font = new Font("Aurek-Besh", 12);
+                    LblWelcome.Left = -1500;
+                    etatWelcome = false;
+                }
+                else
+                {
+                    LblWelcome.Left = -675;
+                    LblWelcome.Font = new Font("SF Distant Galaxy Alternate", 12);
+                    etatWelcome = true;
+                } 
+            }
+
+
+
+
+            //label2
+            if (LblGonlo.Left < this.Width)
+            {
+                LblGonlo.Left += 5;
+            }
+            else
+            {
+                if (etatGonlo == true)
+                {
+                    LblGonlo.Font = new Font("Aurek-Besh", 12);
+                    LblGonlo.Left = -1500;
+                    etatGonlo = false;
+                }
+                else
+                {
+                    LblGonlo.Left = -675;
+                    LblGonlo.Font = new Font("SF Distant Galaxy Alternate", 12);
+                    etatGonlo = true;
+                }
             }
         }
     }
