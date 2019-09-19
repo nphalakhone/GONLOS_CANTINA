@@ -38,6 +38,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1001, 750);
             this.DoubleBuffered = true;
+            this.MaximizeBox = false;
             this.Name = "Pazaak";
             this.Text = "Pazaak";
             this.ResumeLayout(false);
