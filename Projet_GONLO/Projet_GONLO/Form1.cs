@@ -41,6 +41,7 @@ namespace Projet_GONLO
         private void BtnEllPazaak_Click(object sender, EventArgs e)
         {
             RPnlPazaak.Show();
+           
         }
 
         private void BtnEllDejarik_Click(object sender, EventArgs e)
@@ -102,6 +103,14 @@ namespace Projet_GONLO
                     etatGonlo = true;
                 }
             }
+        }
+
+        private void BtnEllPlayPazaak_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Pazaak newPazaakGame = new Pazaak();
+            newPazaakGame.ShowDialog();
+            
         }
     }
 }

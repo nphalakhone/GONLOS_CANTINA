@@ -50,22 +50,13 @@
             this.BtnEllSB = new Projet_GONLO.ButtonEllipse();
             this.BtnEllDejarik = new Projet_GONLO.ButtonEllipse();
             this.BtnEllPazaak = new Projet_GONLO.ButtonEllipse();
+            this.roundPanel1 = new Projet_GONLO.RoundPanel();
+            this.buttonEllipse3 = new Projet_GONLO.ButtonEllipse();
             this.RPnlPazaak.SuspendLayout();
             this.GbxPazaak.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblWelcome
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timerSlide1 = new System.Windows.Forms.Timer(this.components);
-            this.roundPanel1 = new Projet_GONLO.RoundPanel();
-            this.buttonEllipse3 = new Projet_GONLO.ButtonEllipse();
-            this.BtnEllSB = new Projet_GONLO.ButtonEllipse();
-            this.BtnEllDejarik = new Projet_GONLO.ButtonEllipse();
-            this.BtnEllPazaak = new Projet_GONLO.ButtonEllipse();
-            this.SuspendLayout();
-            // 
-            // LblWelcomePartie1
             // 
             this.LblWelcome.AutoSize = true;
             this.LblWelcome.BackColor = System.Drawing.Color.Transparent;
@@ -73,7 +64,6 @@
             this.LblWelcome.ForeColor = System.Drawing.Color.Fuchsia;
             this.LblWelcome.Location = new System.Drawing.Point(12, 9);
             this.LblWelcome.Name = "LblWelcome";
-            this.LblWelcome.Name = "LblWelcomePartie1";
             this.LblWelcome.Size = new System.Drawing.Size(560, 17);
             this.LblWelcome.TabIndex = 4;
             this.LblWelcome.Text = "Welcome to the jewel of the cantinas of Nar Shaddaa";
@@ -112,24 +102,6 @@
             this.RPnlPazaak.TabIndex = 11;
             // 
             // BtnEllPlayPazaak
-            // timerSlide1
-            // 
-            this.timerSlide1.Enabled = true;
-            this.timerSlide1.Interval = 10;
-            this.timerSlide1.Tick += new System.EventHandler(this.TickSlide1);
-            // 
-            // roundPanel1
-            // 
-            this.roundPanel1.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
-            this.roundPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundPanel1.BorderColor = System.Drawing.Color.White;
-            this.roundPanel1.Edge = 20;
-            this.roundPanel1.Location = new System.Drawing.Point(592, 89);
-            this.roundPanel1.Name = "roundPanel1";
-            this.roundPanel1.Size = new System.Drawing.Size(580, 459);
-            this.roundPanel1.TabIndex = 11;
-            // 
-            // buttonEllipse3
             // 
             this.BtnEllPlayPazaak.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtongold;
             this.BtnEllPlayPazaak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -141,6 +113,7 @@
             this.BtnEllPlayPazaak.TabIndex = 3;
             this.BtnEllPlayPazaak.Text = "Play";
             this.BtnEllPlayPazaak.UseVisualStyleBackColor = true;
+            this.BtnEllPlayPazaak.Click += new System.EventHandler(this.BtnEllPlayPazaak_Click);
             // 
             // GbxPazaak
             // 
@@ -328,11 +301,29 @@
             this.BtnEllPazaak.UseVisualStyleBackColor = false;
             this.BtnEllPazaak.Click += new System.EventHandler(this.BtnEllPazaak_Click);
             // 
+            // roundPanel1
+            // 
+            this.roundPanel1.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
+            this.roundPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.roundPanel1.BorderColor = System.Drawing.Color.White;
+            this.roundPanel1.Edge = 20;
+            this.roundPanel1.Location = new System.Drawing.Point(592, 89);
+            this.roundPanel1.Name = "roundPanel1";
+            this.roundPanel1.Size = new System.Drawing.Size(580, 459);
+            this.roundPanel1.TabIndex = 11;
+            // 
+            // buttonEllipse3
+            // 
+            this.buttonEllipse3.Location = new System.Drawing.Point(0, 0);
+            this.buttonEllipse3.Name = "buttonEllipse3";
+            this.buttonEllipse3.Size = new System.Drawing.Size(75, 23);
+            this.buttonEllipse3.TabIndex = 0;
+            // 
             // MenuAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Projet_GONLO.Properties.Resources.Slippery_Slopes_Cantina;
+            this.BackgroundImage = global::Projet_GONLO.Properties.Resources.star_wars_resort;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 560);
             this.Controls.Add(this.RPnlPazaak);
