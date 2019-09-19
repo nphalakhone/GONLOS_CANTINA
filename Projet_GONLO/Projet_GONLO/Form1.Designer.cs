@@ -128,6 +128,7 @@
             this.BtnEllPlayPazaak.TabIndex = 3;
             this.BtnEllPlayPazaak.Text = "Play";
             this.BtnEllPlayPazaak.UseVisualStyleBackColor = true;
+            this.BtnEllPlayPazaak.Click += new System.EventHandler(this.BtnEllPlayPazaak_Click);
             // 
             // GbxPazaak
             // 
