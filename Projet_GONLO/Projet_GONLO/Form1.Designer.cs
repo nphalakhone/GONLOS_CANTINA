@@ -264,7 +264,7 @@
             this.BtnEllSettings.Name = "BtnEllSettings";
             this.BtnEllSettings.Size = new System.Drawing.Size(250, 61);
             this.BtnEllSettings.TabIndex = 10;
-            this.BtnEllSettings.Text = "SETTINGS";
+            this.BtnEllSettings.Text = "info";
             this.BtnEllSettings.UseVisualStyleBackColor = false;
             this.BtnEllSettings.Click += new System.EventHandler(this.BtnEllSettings_Click);
             // 
