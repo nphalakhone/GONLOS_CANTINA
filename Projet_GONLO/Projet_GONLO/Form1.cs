@@ -115,5 +115,12 @@ namespace Projet_GONLO
             newPazaakGame.ShowDialog();
             
         }
+
+        private void BtnEllPlayDejarik_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Dejarik newDejarikGame = new Dejarik();
+            newDejarikGame.ShowDialog();
+        }
     }
 }

@@ -461,6 +461,7 @@
             this.BtnEllPlayDejarik.TabIndex = 4;
             this.BtnEllPlayDejarik.Text = "Play";
             this.BtnEllPlayDejarik.UseVisualStyleBackColor = true;
+            this.BtnEllPlayDejarik.Click += new System.EventHandler(this.BtnEllPlayDejarik_Click);
             // 
             // RPnlImgDejarik2
             // 
