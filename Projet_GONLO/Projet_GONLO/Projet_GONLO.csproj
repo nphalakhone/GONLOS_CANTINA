@@ -108,6 +108,7 @@
   <ItemGroup>
     <Content Include="Properties\Slippery_Slopes_Cantina.jpg" />
     <Content Include="Resources\backButton.jpg" />
+    <None Include="Resources\Background.png" />
     <Content Include="Resources\StarsBackground.PNG" />
     <None Include="Resources\StarsBackground1.PNG" />
     <None Include="Resources\holochess-arkit.jpg" />
