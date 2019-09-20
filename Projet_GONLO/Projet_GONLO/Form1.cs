@@ -74,14 +74,14 @@ namespace Projet_GONLO
             {
                 if (etatWelcome == true)
                 {
-                    LblWelcome.Font = new Font("Aurek-Besh", 12);
-                    LblWelcome.Left = -1500;
+                    LblWelcome.Font = new Font("Aurek-Besh", 14);
+                    LblWelcome.Left = -1300;
                     etatWelcome = false;
                 }
                 else
                 {
-                    LblWelcome.Left = -675;
-                    LblWelcome.Font = new Font("SF Distant Galaxy Alternate", 12);
+                    LblWelcome.Left = -1200;
+                    LblWelcome.Font = new Font("SF Distant Galaxy Alternate", 25);
                     etatWelcome = true;
                 } 
             }
@@ -95,14 +95,14 @@ namespace Projet_GONLO
             {
                 if (etatGonlo == true)
                 {
-                    LblGonlo.Font = new Font("Aurek-Besh", 12);
-                    LblGonlo.Left = -1500;
+                    LblGonlo.Font = new Font("Aurek-Besh", 14);
+                    LblGonlo.Left = -1300;
                     etatGonlo = false;
                 }
                 else
                 {
-                    LblGonlo.Left = -675;
-                    LblGonlo.Font = new Font("SF Distant Galaxy Alternate", 12);
+                    LblGonlo.Left = -1200;
+                    LblGonlo.Font = new Font("SF Distant Galaxy Alternate", 25);
                     etatGonlo = true;
                 }
             }

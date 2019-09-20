@@ -53,9 +53,6 @@
             this.roundPanel1 = new Projet_GONLO.RoundPanel();
             this.buttonEllipse3 = new Projet_GONLO.ButtonEllipse();
             this.RPnlDejarik = new Projet_GONLO.RoundPanel();
-            this.RPnlImgDejarik2 = new Projet_GONLO.RoundPanel();
-            this.RPnlImgDejarik = new Projet_GONLO.RoundPanel();
-            this.BtnEllPlayDejarik = new Projet_GONLO.ButtonEllipse();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -65,6 +62,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.BtnEllPlayDejarik = new Projet_GONLO.ButtonEllipse();
+            this.RPnlImgDejarik2 = new Projet_GONLO.RoundPanel();
+            this.RPnlImgDejarik = new Projet_GONLO.RoundPanel();
             this.RPnlPazaak.SuspendLayout();
             this.GbxPazaak.SuspendLayout();
             this.RPnlDejarik.SuspendLayout();
@@ -75,11 +75,11 @@
             // 
             this.LblWelcome.AutoSize = true;
             this.LblWelcome.BackColor = System.Drawing.Color.Transparent;
-            this.LblWelcome.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblWelcome.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblWelcome.ForeColor = System.Drawing.Color.Fuchsia;
             this.LblWelcome.Location = new System.Drawing.Point(12, 9);
             this.LblWelcome.Name = "LblWelcome";
-            this.LblWelcome.Size = new System.Drawing.Size(560, 17);
+            this.LblWelcome.Size = new System.Drawing.Size(1146, 34);
             this.LblWelcome.TabIndex = 4;
             this.LblWelcome.Text = "Welcome to the jewel of the cantinas of Nar Shaddaa";
             // 
@@ -87,11 +87,11 @@
             // 
             this.LblGonlo.AutoSize = true;
             this.LblGonlo.BackColor = System.Drawing.Color.Transparent;
-            this.LblGonlo.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblGonlo.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblGonlo.ForeColor = System.Drawing.Color.Fuchsia;
             this.LblGonlo.Location = new System.Drawing.Point(12, 52);
             this.LblGonlo.Name = "LblGonlo";
-            this.LblGonlo.Size = new System.Drawing.Size(328, 30);
+            this.LblGonlo.Size = new System.Drawing.Size(373, 34);
             this.LblGonlo.TabIndex = 5;
             this.LblGonlo.Text = "G.O.N.L.O.\'S CANTINA";
             // 
@@ -305,7 +305,7 @@
             this.BtnEllPazaak.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnEllPazaak.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllPazaak.BackgroundImage")));
             this.BtnEllPazaak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnEllPazaak.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnEllPazaak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllPazaak.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllPazaak.ForeColor = System.Drawing.Color.LimeGreen;
             this.BtnEllPazaak.Location = new System.Drawing.Point(35, 150);
@@ -348,41 +348,6 @@
             this.RPnlDejarik.Name = "RPnlDejarik";
             this.RPnlDejarik.Size = new System.Drawing.Size(580, 460);
             this.RPnlDejarik.TabIndex = 12;
-            // 
-            // RPnlImgDejarik2
-            // 
-            this.RPnlImgDejarik2.BackgroundImage = global::Projet_GONLO.Properties.Resources.holochess_arkit;
-            this.RPnlImgDejarik2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RPnlImgDejarik2.BorderColor = System.Drawing.Color.White;
-            this.RPnlImgDejarik2.Edge = 20;
-            this.RPnlImgDejarik2.Location = new System.Drawing.Point(366, 15);
-            this.RPnlImgDejarik2.Name = "RPnlImgDejarik2";
-            this.RPnlImgDejarik2.Size = new System.Drawing.Size(197, 137);
-            this.RPnlImgDejarik2.TabIndex = 1;
-            // 
-            // RPnlImgDejarik
-            // 
-            this.RPnlImgDejarik.BackgroundImage = global::Projet_GONLO.Properties.Resources._interface;
-            this.RPnlImgDejarik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RPnlImgDejarik.BorderColor = System.Drawing.Color.White;
-            this.RPnlImgDejarik.Edge = 20;
-            this.RPnlImgDejarik.Location = new System.Drawing.Point(15, 15);
-            this.RPnlImgDejarik.Name = "RPnlImgDejarik";
-            this.RPnlImgDejarik.Size = new System.Drawing.Size(250, 250);
-            this.RPnlImgDejarik.TabIndex = 0;
-            // 
-            // BtnEllPlayDejarik
-            // 
-            this.BtnEllPlayDejarik.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtongold;
-            this.BtnEllPlayDejarik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnEllPlayDejarik.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnEllPlayDejarik.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEllPlayDejarik.Location = new System.Drawing.Point(366, 171);
-            this.BtnEllPlayDejarik.Name = "BtnEllPlayDejarik";
-            this.BtnEllPlayDejarik.Size = new System.Drawing.Size(197, 94);
-            this.BtnEllPlayDejarik.TabIndex = 4;
-            this.BtnEllPlayDejarik.Text = "Play";
-            this.BtnEllPlayDejarik.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -483,6 +448,41 @@
             this.label16.Size = new System.Drawing.Size(518, 14);
             this.label16.TabIndex = 0;
             this.label16.Text = "Dejarik, also known as holochess, was a popular two-player";
+            // 
+            // BtnEllPlayDejarik
+            // 
+            this.BtnEllPlayDejarik.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtongold;
+            this.BtnEllPlayDejarik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllPlayDejarik.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnEllPlayDejarik.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEllPlayDejarik.Location = new System.Drawing.Point(366, 171);
+            this.BtnEllPlayDejarik.Name = "BtnEllPlayDejarik";
+            this.BtnEllPlayDejarik.Size = new System.Drawing.Size(197, 94);
+            this.BtnEllPlayDejarik.TabIndex = 4;
+            this.BtnEllPlayDejarik.Text = "Play";
+            this.BtnEllPlayDejarik.UseVisualStyleBackColor = true;
+            // 
+            // RPnlImgDejarik2
+            // 
+            this.RPnlImgDejarik2.BackgroundImage = global::Projet_GONLO.Properties.Resources.holochess_arkit;
+            this.RPnlImgDejarik2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlImgDejarik2.BorderColor = System.Drawing.Color.White;
+            this.RPnlImgDejarik2.Edge = 20;
+            this.RPnlImgDejarik2.Location = new System.Drawing.Point(366, 15);
+            this.RPnlImgDejarik2.Name = "RPnlImgDejarik2";
+            this.RPnlImgDejarik2.Size = new System.Drawing.Size(197, 137);
+            this.RPnlImgDejarik2.TabIndex = 1;
+            // 
+            // RPnlImgDejarik
+            // 
+            this.RPnlImgDejarik.BackgroundImage = global::Projet_GONLO.Properties.Resources._interface;
+            this.RPnlImgDejarik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlImgDejarik.BorderColor = System.Drawing.Color.White;
+            this.RPnlImgDejarik.Edge = 20;
+            this.RPnlImgDejarik.Location = new System.Drawing.Point(15, 15);
+            this.RPnlImgDejarik.Name = "RPnlImgDejarik";
+            this.RPnlImgDejarik.Size = new System.Drawing.Size(250, 250);
+            this.RPnlImgDejarik.TabIndex = 0;
             // 
             // MenuAccueil
             // 
