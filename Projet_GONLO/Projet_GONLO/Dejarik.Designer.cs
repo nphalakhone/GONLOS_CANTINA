@@ -41,6 +41,7 @@
             this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PnlDice = new Projet_GONLO.RoundPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GbLog.SuspendLayout();
             this.GbDice.SuspendLayout();
@@ -61,9 +62,9 @@
             // 
             this.GbLog.Controls.Add(this.ListBoxLog);
             this.GbLog.Controls.Add(this.LblPlayerTurn);
-            this.GbLog.Location = new System.Drawing.Point(864, 27);
+            this.GbLog.Location = new System.Drawing.Point(864, 28);
             this.GbLog.Name = "GbLog";
-            this.GbLog.Size = new System.Drawing.Size(564, 421);
+            this.GbLog.Size = new System.Drawing.Size(564, 420);
             this.GbLog.TabIndex = 1;
             this.GbLog.TabStop = false;
             this.GbLog.Enter += new System.EventHandler(this.GroupBox1_Enter);
@@ -88,6 +89,7 @@
             // 
             // GbDice
             // 
+            this.GbDice.Controls.Add(this.PnlDice);
             this.GbDice.Controls.Add(this.BtnDice);
             this.GbDice.Location = new System.Drawing.Point(864, 454);
             this.GbDice.Name = "GbDice";
@@ -158,6 +160,17 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // PnlDice
+            // 
+            this.PnlDice.BackgroundImage = global::Projet_GONLO.Properties.Resources.dice_six_faces_one;
+            this.PnlDice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PnlDice.BorderColor = System.Drawing.Color.White;
+            this.PnlDice.Edge = 20;
+            this.PnlDice.Location = new System.Drawing.Point(139, 19);
+            this.PnlDice.Name = "PnlDice";
+            this.PnlDice.Size = new System.Drawing.Size(300, 300);
+            this.PnlDice.TabIndex = 1;
+            // 
             // Dejarik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,8 +181,10 @@
             this.Controls.Add(this.GbLog);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Dejarik";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dejarik";
             this.Load += new System.EventHandler(this.Dejarik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -198,5 +213,6 @@
         private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private RoundPanel PnlDice;
     }
 }
