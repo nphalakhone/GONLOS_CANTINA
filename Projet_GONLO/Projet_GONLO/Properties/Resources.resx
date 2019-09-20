@@ -121,8 +121,8 @@
   <data name="pazaakBoard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pazaakBoard.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="StarsBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\StarsBackground1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backButtonBLuesteel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backButtonBLuesteel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="backButtongold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backButtongold.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,16 +157,13 @@
   <data name="pazaakEmptyBoard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pazaakEmptyBoard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backButtonBLuesteel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backButtonBLuesteel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="tumblr_oeofc6OfEn1vfq12to6_500" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tumblr_oeofc6OfEn1vfq12to6_500.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pazaakEmptyBoard11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pazaakEmptyBoard1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StarsBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StarsBackground1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
