@@ -49,6 +49,12 @@
     <Compile Include="ButtonEllipse.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CreationPerso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreationPerso.Designer.cs">
+      <DependentUpon>CreationPerso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dejarik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="RoundPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="CreationPerso.resx">
+      <DependentUpon>CreationPerso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dejarik.resx">
       <DependentUpon>Dejarik.cs</DependentUpon>
     </EmbeddedResource>

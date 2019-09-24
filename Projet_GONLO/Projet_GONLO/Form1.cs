@@ -20,8 +20,8 @@ namespace Projet_GONLO
 
         bool etatWelcome = true;
         bool etatGonlo = true;
-        int len1 = 0;
-        int len2 = 0;
+        int len1;
+        int len2;
         string txt1;
         string txt2;
 
