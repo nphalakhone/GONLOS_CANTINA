@@ -196,4 +196,25 @@
   <data name="SwoopBikeRacing2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SwoopBikeRacing2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cathar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cathar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chiss_EtU" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chiss_EtU.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="humans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\humans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mandalorian" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mandalorian.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sithPureBlood" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sithPureBlood.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="twilekCouple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twilekCouple.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zabrak" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zabrak.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

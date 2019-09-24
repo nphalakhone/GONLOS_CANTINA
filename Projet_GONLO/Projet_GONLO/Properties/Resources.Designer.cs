@@ -133,6 +133,26 @@ namespace Projet_GONLO.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cathar {
+            get {
+                object obj = ResourceManager.GetObject("cathar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chiss_EtU {
+            get {
+                object obj = ResourceManager.GetObject("Chiss_EtU", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dice_six_faces_five {
             get {
                 object obj = ResourceManager.GetObject("dice_six_faces_five", resourceCulture);
@@ -203,6 +223,26 @@ namespace Projet_GONLO.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap humans {
+            get {
+                object obj = ResourceManager.GetObject("humans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mandalorian {
+            get {
+                object obj = ResourceManager.GetObject("mandalorian", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pazaakBackground {
             get {
                 object obj = ResourceManager.GetObject("pazaakBackground", resourceCulture);
@@ -263,6 +303,16 @@ namespace Projet_GONLO.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sithPureBlood {
+            get {
+                object obj = ResourceManager.GetObject("sithPureBlood", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Slippery_Slopes_Cantina {
             get {
                 object obj = ResourceManager.GetObject("Slippery_Slopes_Cantina", resourceCulture);
@@ -316,6 +366,26 @@ namespace Projet_GONLO.Properties {
         internal static System.Drawing.Bitmap tumblr_oeofc6OfEn1vfq12to6_500 {
             get {
                 object obj = ResourceManager.GetObject("tumblr_oeofc6OfEn1vfq12to6_500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap twilekCouple {
+            get {
+                object obj = ResourceManager.GetObject("twilekCouple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zabrak {
+            get {
+                object obj = ResourceManager.GetObject("zabrak", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
