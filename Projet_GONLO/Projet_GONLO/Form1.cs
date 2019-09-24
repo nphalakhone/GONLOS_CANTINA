@@ -117,6 +117,7 @@ namespace Projet_GONLO
             Hide();
             Pazaak newPazaakGame = new Pazaak();
             newPazaakGame.ShowDialog();
+            this.Close();
             
         }
 
@@ -125,6 +126,7 @@ namespace Projet_GONLO
             Hide();
             Dejarik newDejarikGame = new Dejarik();
             newDejarikGame.ShowDialog();
+            this.Close();
         }
     }
 }
