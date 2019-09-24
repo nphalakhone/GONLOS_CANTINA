@@ -20,8 +20,6 @@ namespace Projet_GONLO
 
         bool etatWelcome = true;
         bool etatGonlo = true;
-        int counter = 0;
-        int counter2 = 0;
         int len1 = 0;
         int len2 = 0;
         string txt1;
@@ -35,6 +33,7 @@ namespace Projet_GONLO
             len2 = txt2.Length;
             RPnlPazaak.Hide();
             RPnlDejarik.Hide();
+            RPnlSBR.Hide();
             this.DoubleBuffered = true;
         }
 
@@ -42,24 +41,26 @@ namespace Projet_GONLO
         {
             RPnlPazaak.Show();
             RPnlDejarik.Hide();
+            RPnlSBR.Hide();
         }
 
         private void BtnEllDejarik_Click(object sender, EventArgs e)
         {
             RPnlPazaak.Hide();
             RPnlDejarik.Show();
+            RPnlSBR.Hide();
         }
 
         private void BtnEllSB_Click(object sender, EventArgs e)
         {
             RPnlPazaak.Hide();
+            RPnlSBR.Show();
             RPnlDejarik.Hide();
         }
 
         private void BtnEllSettings_Click(object sender, EventArgs e)
         {
-            RPnlPazaak.Hide();
-            RPnlDejarik.Hide();
+            this.Close();
         }
 
         private void TimerSlide1_Tick(object sender, EventArgs e)

@@ -46,7 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.RPnlImgPazaak2 = new Projet_GONLO.RoundPanel();
             this.RPnlImgPazaak = new Projet_GONLO.RoundPanel();
-            this.BtnEllSettings = new Projet_GONLO.ButtonEllipse();
+            this.BtnEllExit = new Projet_GONLO.ButtonEllipse();
             this.BtnEllSB = new Projet_GONLO.ButtonEllipse();
             this.BtnEllDejarik = new Projet_GONLO.ButtonEllipse();
             this.BtnEllPazaak = new Projet_GONLO.ButtonEllipse();
@@ -65,10 +65,26 @@
             this.BtnEllPlayDejarik = new Projet_GONLO.ButtonEllipse();
             this.RPnlImgDejarik2 = new Projet_GONLO.RoundPanel();
             this.RPnlImgDejarik = new Projet_GONLO.RoundPanel();
+            this.RPnlSBR = new Projet_GONLO.RoundPanel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.buttonEllipse1 = new Projet_GONLO.ButtonEllipse();
+            this.RPnlImgSBR2 = new Projet_GONLO.RoundPanel();
+            this.RPnlImgSBR = new Projet_GONLO.RoundPanel();
             this.RPnlPazaak.SuspendLayout();
             this.GbxPazaak.SuspendLayout();
             this.RPnlDejarik.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.RPnlSBR.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblWelcome
@@ -103,7 +119,8 @@
             // 
             // RPnlPazaak
             // 
-            this.RPnlPazaak.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
+            this.RPnlPazaak.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlPazaak.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded2;
             this.RPnlPazaak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlPazaak.BorderColor = System.Drawing.Color.White;
             this.RPnlPazaak.Controls.Add(this.BtnEllPlayPazaak);
@@ -252,21 +269,21 @@
             this.RPnlImgPazaak.Size = new System.Drawing.Size(325, 250);
             this.RPnlImgPazaak.TabIndex = 0;
             // 
-            // BtnEllSettings
+            // BtnEllExit
             // 
-            this.BtnEllSettings.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnEllSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllSettings.BackgroundImage")));
-            this.BtnEllSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnEllSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnEllSettings.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEllSettings.ForeColor = System.Drawing.Color.LimeGreen;
-            this.BtnEllSettings.Location = new System.Drawing.Point(35, 452);
-            this.BtnEllSettings.Name = "BtnEllSettings";
-            this.BtnEllSettings.Size = new System.Drawing.Size(250, 61);
-            this.BtnEllSettings.TabIndex = 10;
-            this.BtnEllSettings.Text = "info";
-            this.BtnEllSettings.UseVisualStyleBackColor = false;
-            this.BtnEllSettings.Click += new System.EventHandler(this.BtnEllSettings_Click);
+            this.BtnEllExit.BackColor = System.Drawing.Color.Transparent;
+            this.BtnEllExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllExit.BackgroundImage")));
+            this.BtnEllExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnEllExit.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEllExit.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllExit.Location = new System.Drawing.Point(35, 452);
+            this.BtnEllExit.Name = "BtnEllExit";
+            this.BtnEllExit.Size = new System.Drawing.Size(250, 61);
+            this.BtnEllExit.TabIndex = 10;
+            this.BtnEllExit.Text = "Exit";
+            this.BtnEllExit.UseVisualStyleBackColor = false;
+            this.BtnEllExit.Click += new System.EventHandler(this.BtnEllSettings_Click);
             // 
             // BtnEllSB
             // 
@@ -336,7 +353,8 @@
             // 
             // RPnlDejarik
             // 
-            this.RPnlDejarik.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
+            this.RPnlDejarik.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlDejarik.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded2;
             this.RPnlDejarik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlDejarik.BorderColor = System.Drawing.Color.White;
             this.RPnlDejarik.Controls.Add(this.groupBox1);
@@ -485,6 +503,169 @@
             this.RPnlImgDejarik.Size = new System.Drawing.Size(250, 250);
             this.RPnlImgDejarik.TabIndex = 0;
             // 
+            // RPnlSBR
+            // 
+            this.RPnlSBR.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlSBR.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded2;
+            this.RPnlSBR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlSBR.BorderColor = System.Drawing.Color.White;
+            this.RPnlSBR.Controls.Add(this.groupBox2);
+            this.RPnlSBR.Controls.Add(this.buttonEllipse1);
+            this.RPnlSBR.Controls.Add(this.RPnlImgSBR2);
+            this.RPnlSBR.Controls.Add(this.RPnlImgSBR);
+            this.RPnlSBR.Edge = 20;
+            this.RPnlSBR.Location = new System.Drawing.Point(592, 89);
+            this.RPnlSBR.Name = "RPnlSBR";
+            this.RPnlSBR.Size = new System.Drawing.Size(580, 460);
+            this.RPnlSBR.TabIndex = 13;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.label20);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.label22);
+            this.groupBox2.Controls.Add(this.label23);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(15, 288);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(548, 156);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Description";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(16, 128);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(395, 14);
+            this.label25.TabIndex = 8;
+            this.label25.Text = "more trials, the racer with the best time won.";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(16, 114);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(507, 14);
+            this.label17.TabIndex = 7;
+            this.label17.Text = "\"acceleration pads\". After all racers had completed one or";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(16, 100);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(426, 14);
+            this.label18.TabIndex = 6;
+            this.label18.Text = "course filled with obstacles and speed-enhancing";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(16, 86);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(472, 14);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "same time.  Instead, each racer would race alone over a";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(18, 98);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(0, 14);
+            this.label20.TabIndex = 4;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(16, 72);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(490, 14);
+            this.label21.TabIndex = 3;
+            this.label21.Text = "competing swoop racers did not take to the track at the";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(16, 58);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(512, 14);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "of 600 kilometers per hour. In the days of the Jedi Civil War,";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(16, 44);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(500, 14);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "swoop engines. The vehicles involved often reached speeds";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(18, 30);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(528, 14);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Swoop racing was a high-speed spectator sport using modified";
+            // 
+            // buttonEllipse1
+            // 
+            this.buttonEllipse1.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtongold;
+            this.buttonEllipse1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEllipse1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonEllipse1.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEllipse1.Location = new System.Drawing.Point(366, 171);
+            this.buttonEllipse1.Name = "buttonEllipse1";
+            this.buttonEllipse1.Size = new System.Drawing.Size(197, 94);
+            this.buttonEllipse1.TabIndex = 4;
+            this.buttonEllipse1.Text = "Play";
+            this.buttonEllipse1.UseVisualStyleBackColor = true;
+            // 
+            // RPnlImgSBR2
+            // 
+            this.RPnlImgSBR2.BackgroundImage = global::Projet_GONLO.Properties.Resources.SwoopBikeRacing;
+            this.RPnlImgSBR2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlImgSBR2.BorderColor = System.Drawing.Color.White;
+            this.RPnlImgSBR2.Edge = 20;
+            this.RPnlImgSBR2.Location = new System.Drawing.Point(366, 15);
+            this.RPnlImgSBR2.Name = "RPnlImgSBR2";
+            this.RPnlImgSBR2.Size = new System.Drawing.Size(197, 137);
+            this.RPnlImgSBR2.TabIndex = 1;
+            // 
+            // RPnlImgSBR
+            // 
+            this.RPnlImgSBR.BackColor = System.Drawing.Color.White;
+            this.RPnlImgSBR.BackgroundImage = global::Projet_GONLO.Properties.Resources.SwoopBikeRacing2;
+            this.RPnlImgSBR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlImgSBR.BorderColor = System.Drawing.Color.White;
+            this.RPnlImgSBR.Edge = 20;
+            this.RPnlImgSBR.Location = new System.Drawing.Point(15, 15);
+            this.RPnlImgSBR.Name = "RPnlImgSBR";
+            this.RPnlImgSBR.Size = new System.Drawing.Size(300, 250);
+            this.RPnlImgSBR.TabIndex = 0;
+            // 
             // MenuAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -492,9 +673,10 @@
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.star_wars_resort;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 560);
+            this.Controls.Add(this.RPnlSBR);
             this.Controls.Add(this.RPnlDejarik);
             this.Controls.Add(this.RPnlPazaak);
-            this.Controls.Add(this.BtnEllSettings);
+            this.Controls.Add(this.BtnEllExit);
             this.Controls.Add(this.BtnEllSB);
             this.Controls.Add(this.BtnEllDejarik);
             this.Controls.Add(this.BtnEllPazaak);
@@ -514,6 +696,9 @@
             this.RPnlDejarik.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.RPnlSBR.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -525,7 +710,7 @@
         private ButtonEllipse BtnEllPazaak;
         private ButtonEllipse BtnEllDejarik;
         private ButtonEllipse BtnEllSB;
-        private ButtonEllipse BtnEllSettings;
+        private ButtonEllipse BtnEllExit;
         private RoundPanel RPnlPazaak;
         private RoundPanel RPnlImgPazaak;
         private System.Windows.Forms.GroupBox GbxPazaak;
@@ -555,6 +740,20 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private ButtonEllipse BtnEllPlayDejarik;
+        private RoundPanel RPnlSBR;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private ButtonEllipse buttonEllipse1;
+        private RoundPanel RPnlImgSBR2;
+        private RoundPanel RPnlImgSBR;
+        private System.Windows.Forms.Label label25;
     }
 }
 

@@ -108,12 +108,16 @@
   <ItemGroup>
     <Content Include="Properties\Slippery_Slopes_Cantina.jpg" />
     <Content Include="Resources\backButton.jpg" />
+    <None Include="Resources\SwoopBikeRacing2.jpg" />
+    <None Include="Resources\SwoopBikeRacing.jpg" />
     <None Include="Resources\dice-six-faces-five.png" />
     <None Include="Resources\dice-six-faces-four.png" />
     <None Include="Resources\dice-six-faces-one.png" />
     <None Include="Resources\dice-six-faces-six.png" />
     <None Include="Resources\dice-six-faces-three.png" />
     <None Include="Resources\dice-six-faces-two.png" />
+    <None Include="Resources\BlueSteelFaded.png" />
+    <None Include="Resources\BlueSteelFaded2.png" />
     <Content Include="Resources\StarsBackground.PNG" />
     <None Include="Resources\StarsBackground1.PNG" />
     <None Include="Resources\holochess-arkit.jpg" />
