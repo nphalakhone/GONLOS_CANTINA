@@ -624,6 +624,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label24.Location = new System.Drawing.Point(18, 30);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(528, 14);
@@ -656,7 +657,7 @@
             // 
             // RPnlImgSBR
             // 
-            this.RPnlImgSBR.BackColor = System.Drawing.Color.White;
+            this.RPnlImgSBR.BackColor = System.Drawing.Color.Transparent;
             this.RPnlImgSBR.BackgroundImage = global::Projet_GONLO.Properties.Resources.SwoopBikeRacing2;
             this.RPnlImgSBR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlImgSBR.BorderColor = System.Drawing.Color.White;

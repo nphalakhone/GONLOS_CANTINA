@@ -39,23 +39,26 @@ namespace Projet_GONLO
 
         private void BtnEllPazaak_Click(object sender, EventArgs e)
         {
-            RPnlPazaak.Show();
             RPnlDejarik.Hide();
             RPnlSBR.Hide();
+            RPnlPazaak.Show();
+            this.Refresh();
         }
 
         private void BtnEllDejarik_Click(object sender, EventArgs e)
         {
             RPnlPazaak.Hide();
-            RPnlDejarik.Show();
             RPnlSBR.Hide();
+            RPnlDejarik.Show();
+            this.Refresh();
         }
 
         private void BtnEllSB_Click(object sender, EventArgs e)
         {
             RPnlPazaak.Hide();
-            RPnlSBR.Show();
             RPnlDejarik.Hide();
+            RPnlSBR.Show();
+            this.Refresh();
         }
 
         private void BtnEllSettings_Click(object sender, EventArgs e)
