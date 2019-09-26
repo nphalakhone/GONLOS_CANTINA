@@ -15,7 +15,9 @@ namespace Projet_GONLO
     {
         public MenuAccueil()
         {
+            this.DoubleBuffered = true;
             InitializeComponent();
+            
         }
 
         bool etatWelcome = true;
@@ -34,7 +36,7 @@ namespace Projet_GONLO
             RPnlPazaak.Hide();
             RPnlDejarik.Hide();
             RPnlSBR.Hide();
-            this.DoubleBuffered = true;
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
         private void BtnEllPazaak_Click(object sender, EventArgs e)

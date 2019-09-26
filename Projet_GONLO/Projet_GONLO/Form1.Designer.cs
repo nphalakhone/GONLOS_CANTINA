@@ -274,6 +274,7 @@
             this.BtnEllExit.BackColor = System.Drawing.Color.Transparent;
             this.BtnEllExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllExit.BackgroundImage")));
             this.BtnEllExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllExit.FlatAppearance.BorderSize = 0;
             this.BtnEllExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnEllExit.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllExit.ForeColor = System.Drawing.Color.LimeGreen;
@@ -290,6 +291,7 @@
             this.BtnEllSB.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnEllSB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllSB.BackgroundImage")));
             this.BtnEllSB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllSB.FlatAppearance.BorderSize = 0;
             this.BtnEllSB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnEllSB.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllSB.ForeColor = System.Drawing.Color.LimeGreen;
@@ -306,6 +308,7 @@
             this.BtnEllDejarik.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnEllDejarik.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllDejarik.BackgroundImage")));
             this.BtnEllDejarik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllDejarik.FlatAppearance.BorderSize = 0;
             this.BtnEllDejarik.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnEllDejarik.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllDejarik.ForeColor = System.Drawing.Color.LimeGreen;
@@ -322,6 +325,7 @@
             this.BtnEllPazaak.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnEllPazaak.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllPazaak.BackgroundImage")));
             this.BtnEllPazaak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllPazaak.FlatAppearance.BorderSize = 0;
             this.BtnEllPazaak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllPazaak.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllPazaak.ForeColor = System.Drawing.Color.LimeGreen;

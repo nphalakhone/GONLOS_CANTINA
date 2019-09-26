@@ -12,9 +12,28 @@ namespace Projet_GONLO
 {
     public partial class CreationPerso : Form
     {
+        int gbheight;
+        
+
         public CreationPerso()
         {
+            this.DoubleBuffered = true;
             InitializeComponent();
+            
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            if (this.GBoxMandalorian.Height == 675)
+            {
+                this.GBoxMandalorian.Height = 425;
+            }
+            else if (this.GBoxMandalorian.Height == 425)
+            {
+                this.GBoxMandalorian.Height = 675;
+            }
+            
         }
     }
 }

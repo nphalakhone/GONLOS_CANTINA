@@ -116,6 +116,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Slippery_Slopes_Cantina.jpg" />
+    <None Include="Resources\201-2018253_sign-symbol-icons-in-svg-and-png-yellow.png" />
+    <None Include="Resources\arrows.png" />
     <Content Include="Resources\backButton.jpg" />
     <None Include="Resources\zabrak.jpg" />
     <None Include="Resources\twilekCouple.jpg" />
