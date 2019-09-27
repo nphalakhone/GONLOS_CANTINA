@@ -79,6 +79,12 @@
     <Compile Include="RoundPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="textBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="textBox.Designer.cs">
+      <DependentUpon>textBox.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CreationPerso.resx">
       <DependentUpon>CreationPerso.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +107,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="textBox.resx">
+      <DependentUpon>textBox.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,6 +127,7 @@
     <Content Include="Properties\Slippery_Slopes_Cantina.jpg" />
     <None Include="Resources\201-2018253_sign-symbol-icons-in-svg-and-png-yellow.png" />
     <None Include="Resources\arrows.png" />
+    <None Include="Resources\arrows %281%29.png" />
     <Content Include="Resources\backButton.jpg" />
     <None Include="Resources\zabrak.jpg" />
     <None Include="Resources\twilekCouple.jpg" />
