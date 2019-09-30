@@ -41,5 +41,42 @@ namespace Projet_GONLO
         {
 
         }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnDice_Click(object sender, EventArgs e)
+        {
+            Random rng = new Random();
+            int dice = rng.Next(1, 7);
+            switch (dice)
+            {
+                case 1:
+                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_one;
+                    break;
+
+                case 2:
+                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_two;
+                    break;
+
+                case 3:
+                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_three;
+                    break;
+
+                case 4:
+                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_four;
+                    break;
+
+                case 5:
+                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_five;
+                    break;
+
+                case 6:
+                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_six;
+                    break;
+            }
+        }
     }
 }

@@ -16,9 +16,9 @@ namespace Projet_GONLO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new MenuAccueil());
+            Application.Run(new MenuAccueil());
             //Application.Run(new CreationPerso());
-            Application.Run(new Pazaak());
+            //Application.Run(new Pazaak());
         }
     }
 }

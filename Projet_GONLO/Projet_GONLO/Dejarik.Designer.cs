@@ -41,7 +41,7 @@
             this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PnlDice = new Projet_GONLO.RoundPanel();
+            this.PnlDe = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GbLog.SuspendLayout();
             this.GbDice.SuspendLayout();
@@ -80,16 +80,16 @@
             // LblPlayerTurn
             // 
             this.LblPlayerTurn.AutoSize = true;
-            this.LblPlayerTurn.Font = new System.Drawing.Font("SF Distant Galaxy", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPlayerTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPlayerTurn.Location = new System.Drawing.Point(6, 16);
             this.LblPlayerTurn.Name = "LblPlayerTurn";
-            this.LblPlayerTurn.Size = new System.Drawing.Size(339, 38);
+            this.LblPlayerTurn.Size = new System.Drawing.Size(242, 42);
             this.LblPlayerTurn.TabIndex = 0;
             this.LblPlayerTurn.Text = "Player 1 Turn";
             // 
             // GbDice
             // 
-            this.GbDice.Controls.Add(this.PnlDice);
+            this.GbDice.Controls.Add(this.PnlDe);
             this.GbDice.Controls.Add(this.BtnDice);
             this.GbDice.Location = new System.Drawing.Point(864, 454);
             this.GbDice.Name = "GbDice";
@@ -100,13 +100,14 @@
             // 
             // BtnDice
             // 
-            this.BtnDice.Font = new System.Drawing.Font("SF Distant Galaxy", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDice.Location = new System.Drawing.Point(219, 372);
             this.BtnDice.Name = "BtnDice";
             this.BtnDice.Size = new System.Drawing.Size(149, 32);
             this.BtnDice.TabIndex = 0;
             this.BtnDice.Text = "Roll the dice";
             this.BtnDice.UseVisualStyleBackColor = true;
+            this.BtnDice.Click += new System.EventHandler(this.BtnDice_Click);
             // 
             // menuStrip1
             // 
@@ -160,16 +161,15 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // PnlDice
+            // PnlDe
             // 
-            this.PnlDice.BackgroundImage = global::Projet_GONLO.Properties.Resources.dice_six_faces_one;
-            this.PnlDice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PnlDice.BorderColor = System.Drawing.Color.White;
-            this.PnlDice.Edge = 20;
-            this.PnlDice.Location = new System.Drawing.Point(139, 19);
-            this.PnlDice.Name = "PnlDice";
-            this.PnlDice.Size = new System.Drawing.Size(300, 300);
-            this.PnlDice.TabIndex = 1;
+            this.PnlDe.BackgroundImage = global::Projet_GONLO.Properties.Resources.dice_six_faces_one;
+            this.PnlDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PnlDe.Location = new System.Drawing.Point(139, 32);
+            this.PnlDe.Name = "PnlDe";
+            this.PnlDe.Size = new System.Drawing.Size(300, 300);
+            this.PnlDe.TabIndex = 1;
+            this.PnlDe.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // Dejarik
             // 
@@ -214,5 +214,6 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private RoundPanel PnlDice;
+        private System.Windows.Forms.Panel PnlDe;
     }
 }
