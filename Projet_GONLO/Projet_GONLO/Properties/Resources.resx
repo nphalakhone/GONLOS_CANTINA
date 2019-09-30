@@ -223,4 +223,88 @@
   <data name="arrowsUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrows (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Carte+-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte+-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte+-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte+-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte+-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte+-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte+-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte+-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte+-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte+-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte+-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte+-6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte+1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte+1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte+2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte+2.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte+3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte+3.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte+4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte+4.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte+5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte+5.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte+6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte+6.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte-1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte-2.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte-3.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte-4.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte-5.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte-6.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

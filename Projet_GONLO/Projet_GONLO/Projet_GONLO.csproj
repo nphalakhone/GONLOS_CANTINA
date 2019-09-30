@@ -49,6 +49,7 @@
     <Compile Include="ButtonEllipse.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Carte.cs" />
     <Compile Include="CreationPerso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +147,39 @@
     <None Include="Resources\humans.png" />
     <None Include="Resources\mandalorian.jpg" />
     <None Include="Resources\sithPureBlood.png" />
+    <None Include="Resources\Carte+-1&amp;2.PNG" />
+    <None Include="Resources\Carte+1.PNG" />
+    <None Include="Resources\Carte+-1T.png" />
+    <None Include="Resources\Carte+2.PNG" />
+    <None Include="Resources\Carte+-2.png" />
+    <None Include="Resources\Carte+-3&amp;4.png" />
+    <None Include="Resources\Carte+3.PNG" />
+    <None Include="Resources\Carte+-3.png" />
+    <None Include="Resources\Carte+4.PNG" />
+    <None Include="Resources\Carte+-4.png" />
+    <None Include="Resources\Carte+-5&amp;6.png" />
+    <None Include="Resources\Carte+5.PNG" />
+    <None Include="Resources\Carte+-5.png" />
+    <None Include="Resources\Carte+6.PNG" />
+    <None Include="Resources\Carte+-6.png" />
+    <None Include="Resources\Carte1.png" />
+    <None Include="Resources\Carte-1.PNG" />
+    <None Include="Resources\Carte2.png" />
+    <None Include="Resources\Carte-2.PNG" />
+    <None Include="Resources\Carte3.png" />
+    <None Include="Resources\Carte-3.PNG" />
+    <None Include="Resources\Carte4.png" />
+    <None Include="Resources\Carte-4.PNG" />
+    <None Include="Resources\Carte5.png" />
+    <None Include="Resources\Carte-5.PNG" />
+    <None Include="Resources\Carte6.png" />
+    <None Include="Resources\Carte-6.PNG" />
+    <None Include="Resources\Carte7.png" />
+    <None Include="Resources\Carte8.png" />
+    <None Include="Resources\Carte9.png" />
+    <None Include="Resources\Carte10.png" />
+    <None Include="Resources\CarteD.png" />
+    <None Include="Resources\Carte+-1.png" />
     <Content Include="Resources\StarsBackground.PNG" />
     <None Include="Resources\StarsBackground1.PNG" />
     <None Include="Resources\holochess-arkit.jpg" />
