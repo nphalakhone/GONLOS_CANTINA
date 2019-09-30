@@ -12,9 +12,17 @@ namespace Projet_GONLO
 {
     public partial class Pazaak : Form
     {
+
+
+
+
         public Pazaak()
         {
             InitializeComponent();
+            Carte c = new Carte();
+            RPnlG1.BackgroundImage = c.getCartePlus(1);
+            RPnlG1.BackgroundImageLayout = ImageLayout.Stretch;
+
         }
     }
 }
