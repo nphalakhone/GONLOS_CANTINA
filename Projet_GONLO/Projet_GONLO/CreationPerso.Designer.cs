@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreationPerso));
             this.GBoxMandalorian = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -110,7 +111,9 @@
             this.BtnGenName = new System.Windows.Forms.Button();
             this.CBoxFemale = new System.Windows.Forms.CheckBox();
             this.CBoxMale = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new Projet_GONLO.textBox();
+            this.BtnEll = new Projet_GONLO.ButtonEllipse();
+            this.BtnEllBack = new Projet_GONLO.ButtonEllipse();
+            this.TxtBoxNameGen = new Projet_GONLO.textBox();
             this.RPnlImgHum = new Projet_GONLO.RoundPanel();
             this.RPnlImgCath = new Projet_GONLO.RoundPanel();
             this.RPnlImgTwi = new Projet_GONLO.RoundPanel();
@@ -1038,7 +1041,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(35, 800);
+            this.label3.Location = new System.Drawing.Point(165, 830);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(356, 33);
             this.label3.TabIndex = 8;
@@ -1050,7 +1053,7 @@
             this.BtnGenName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGenName.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGenName.ForeColor = System.Drawing.Color.LimeGreen;
-            this.BtnGenName.Location = new System.Drawing.Point(840, 800);
+            this.BtnGenName.Location = new System.Drawing.Point(950, 826);
             this.BtnGenName.Name = "BtnGenName";
             this.BtnGenName.Size = new System.Drawing.Size(288, 38);
             this.BtnGenName.TabIndex = 10;
@@ -1064,7 +1067,7 @@
             this.CBoxFemale.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBoxFemale.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBoxFemale.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CBoxFemale.Location = new System.Drawing.Point(1189, 825);
+            this.CBoxFemale.Location = new System.Drawing.Point(1265, 860);
             this.CBoxFemale.Name = "CBoxFemale";
             this.CBoxFemale.Size = new System.Drawing.Size(95, 21);
             this.CBoxFemale.TabIndex = 12;
@@ -1079,7 +1082,7 @@
             this.CBoxMale.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBoxMale.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBoxMale.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CBoxMale.Location = new System.Drawing.Point(1189, 790);
+            this.CBoxMale.Location = new System.Drawing.Point(1265, 815);
             this.CBoxMale.Name = "CBoxMale";
             this.CBoxMale.Size = new System.Drawing.Size(73, 21);
             this.CBoxMale.TabIndex = 11;
@@ -1087,13 +1090,45 @@
             this.CBoxMale.UseVisualStyleBackColor = false;
             this.CBoxMale.CheckedChanged += new System.EventHandler(this.CBoxMale_CheckedChanged);
             // 
-            // textBox1
+            // BtnEll
             // 
-            this.textBox1.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(417, 805);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(387, 28);
-            this.textBox1.TabIndex = 9;
+            this.BtnEll.BackColor = System.Drawing.Color.Transparent;
+            this.BtnEll.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEll.BackgroundImage")));
+            this.BtnEll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEll.FlatAppearance.BorderSize = 0;
+            this.BtnEll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEll.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEll.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEll.Location = new System.Drawing.Point(1388, 810);
+            this.BtnEll.Name = "BtnEll";
+            this.BtnEll.Size = new System.Drawing.Size(140, 75);
+            this.BtnEll.TabIndex = 14;
+            this.BtnEll.Text = "next";
+            this.BtnEll.UseVisualStyleBackColor = false;
+            // 
+            // BtnEllBack
+            // 
+            this.BtnEllBack.BackColor = System.Drawing.Color.Transparent;
+            this.BtnEllBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllBack.BackgroundImage")));
+            this.BtnEllBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllBack.FlatAppearance.BorderSize = 0;
+            this.BtnEllBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEllBack.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEllBack.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllBack.Location = new System.Drawing.Point(15, 810);
+            this.BtnEllBack.Name = "BtnEllBack";
+            this.BtnEllBack.Size = new System.Drawing.Size(140, 75);
+            this.BtnEllBack.TabIndex = 13;
+            this.BtnEllBack.Text = "Back";
+            this.BtnEllBack.UseVisualStyleBackColor = false;
+            // 
+            // TxtBoxNameGen
+            // 
+            this.TxtBoxNameGen.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBoxNameGen.Location = new System.Drawing.Point(540, 832);
+            this.TxtBoxNameGen.Name = "TxtBoxNameGen";
+            this.TxtBoxNameGen.Size = new System.Drawing.Size(387, 28);
+            this.TxtBoxNameGen.TabIndex = 9;
             // 
             // RPnlImgHum
             // 
@@ -1172,10 +1207,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.StarsBackground;
             this.ClientSize = new System.Drawing.Size(1545, 900);
+            this.Controls.Add(this.BtnEll);
+            this.Controls.Add(this.BtnEllBack);
             this.Controls.Add(this.CBoxFemale);
             this.Controls.Add(this.CBoxMale);
             this.Controls.Add(this.BtnGenName);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtBoxNameGen);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.GBoxHuman);
             this.Controls.Add(this.GBoxCathar);
@@ -1187,6 +1224,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreationPerso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.CreationPerso_Load);
             this.GBoxMandalorian.ResumeLayout(false);
             this.GBoxMandalorian.PerformLayout();
             this.GBoxZabrak.ResumeLayout(false);
@@ -1226,7 +1264,7 @@
         private System.Windows.Forms.Button BtnInfoTwi;
         private System.Windows.Forms.Button BtnInfoCath;
         private System.Windows.Forms.Button BtnInfoHum;
-        private textBox textBox1;
+        private textBox TxtBoxNameGen;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label12;
@@ -1295,5 +1333,7 @@
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.CheckBox CBoxFemale;
         private System.Windows.Forms.CheckBox CBoxMale;
+        private ButtonEllipse BtnEllBack;
+        private ButtonEllipse BtnEll;
     }
 }
