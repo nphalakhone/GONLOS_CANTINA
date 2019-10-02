@@ -33,6 +33,7 @@
             this.ListBoxLog = new System.Windows.Forms.ListBox();
             this.LblPlayerTurn = new System.Windows.Forms.Label();
             this.GbDice = new System.Windows.Forms.GroupBox();
+            this.PnlDe = new System.Windows.Forms.Panel();
             this.BtnDice = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +42,6 @@
             this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PnlDe = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GbLog.SuspendLayout();
             this.GbDice.SuspendLayout();
@@ -80,10 +80,10 @@
             // LblPlayerTurn
             // 
             this.LblPlayerTurn.AutoSize = true;
-            this.LblPlayerTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPlayerTurn.Font = new System.Drawing.Font("SF Distant Galaxy", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPlayerTurn.Location = new System.Drawing.Point(6, 16);
             this.LblPlayerTurn.Name = "LblPlayerTurn";
-            this.LblPlayerTurn.Size = new System.Drawing.Size(242, 42);
+            this.LblPlayerTurn.Size = new System.Drawing.Size(339, 38);
             this.LblPlayerTurn.TabIndex = 0;
             this.LblPlayerTurn.Text = "Player 1 Turn";
             // 
@@ -97,6 +97,16 @@
             this.GbDice.TabIndex = 2;
             this.GbDice.TabStop = false;
             this.GbDice.Enter += new System.EventHandler(this.GroupBox2_Enter);
+            // 
+            // PnlDe
+            // 
+            this.PnlDe.BackgroundImage = global::Projet_GONLO.Properties.Resources.dice_six_faces_one;
+            this.PnlDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PnlDe.Location = new System.Drawing.Point(139, 32);
+            this.PnlDe.Name = "PnlDe";
+            this.PnlDe.Size = new System.Drawing.Size(300, 300);
+            this.PnlDe.TabIndex = 1;
+            this.PnlDe.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // BtnDice
             // 
@@ -160,16 +170,6 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // PnlDe
-            // 
-            this.PnlDe.BackgroundImage = global::Projet_GONLO.Properties.Resources.dice_six_faces_one;
-            this.PnlDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PnlDe.Location = new System.Drawing.Point(139, 32);
-            this.PnlDe.Name = "PnlDe";
-            this.PnlDe.Size = new System.Drawing.Size(300, 300);
-            this.PnlDe.TabIndex = 1;
-            this.PnlDe.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // Dejarik
             // 

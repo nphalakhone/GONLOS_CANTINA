@@ -288,7 +288,7 @@
             // 
             // BtnEllSB
             // 
-            this.BtnEllSB.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnEllSB.BackColor = System.Drawing.Color.Transparent;
             this.BtnEllSB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllSB.BackgroundImage")));
             this.BtnEllSB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnEllSB.FlatAppearance.BorderSize = 0;
@@ -305,7 +305,7 @@
             // 
             // BtnEllDejarik
             // 
-            this.BtnEllDejarik.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnEllDejarik.BackColor = System.Drawing.Color.Transparent;
             this.BtnEllDejarik.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllDejarik.BackgroundImage")));
             this.BtnEllDejarik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnEllDejarik.FlatAppearance.BorderSize = 0;
@@ -322,7 +322,7 @@
             // 
             // BtnEllPazaak
             // 
-            this.BtnEllPazaak.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnEllPazaak.BackColor = System.Drawing.Color.Transparent;
             this.BtnEllPazaak.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllPazaak.BackgroundImage")));
             this.BtnEllPazaak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnEllPazaak.FlatAppearance.BorderSize = 0;
