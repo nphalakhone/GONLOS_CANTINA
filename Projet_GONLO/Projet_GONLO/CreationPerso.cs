@@ -162,6 +162,22 @@ namespace Projet_GONLO
         {
             
         }
+
+        private void BtnEllNext_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MenuAccueil menuAccueil = new MenuAccueil();
+            menuAccueil.ShowDialog();
+            this.Close();
+        }
+
+        private void BtnEllBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartForm startFrom = new StartForm();
+            startFrom.ShowDialog();
+            this.Close();
+        }
     }
 
  }
