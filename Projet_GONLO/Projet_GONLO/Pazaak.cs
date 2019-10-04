@@ -19,7 +19,7 @@ namespace Projet_GONLO
         public Pazaak()
         {
             InitializeComponent();
-            Carte c = new Carte();
+            Cards c = new Cards();
             RPnlG1.BackgroundImage = c.getCartePlus(1);
             RPnlG1.BackgroundImageLayout = ImageLayout.Stretch;
 
