@@ -30,10 +30,8 @@ namespace Projet_GONLO
 
             //Cards c = new Cards();
             RPnlG1.BackgroundImage = c.getCartePlus(1);
-
             RPnlG1.BackgroundImageLayout = ImageLayout.Stretch;
             RPnlG2.BackgroundImageLayout = ImageLayout.Stretch;
-
             RPnlG3.BackgroundImageLayout = ImageLayout.Stretch;
             RPnlG4.BackgroundImageLayout = ImageLayout.Stretch;
 

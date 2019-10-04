@@ -256,6 +256,7 @@
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "Pazaak";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pazaak";
             this.ResumeLayout(false);
 
