@@ -20,8 +20,18 @@ namespace Projet_GONLO
         {
             InitializeComponent();
             Carte c = new Carte();
-            RPnlG1.BackgroundImage = c.getCartePlus(1);
+            RPnlG1.BackgroundImage = c.getCartePlus(4);
+            RPnlG2.BackgroundImage = c.getCarteMinus(2);
+            RPnlG3.BackgroundImage = c.getCartePlusMinus(1);
+            RPnlG4.BackgroundImage = c.getCarteNormal(7);
+
+
+
             RPnlG1.BackgroundImageLayout = ImageLayout.Stretch;
+            RPnlG2.BackgroundImageLayout = ImageLayout.Stretch;
+
+            RPnlG3.BackgroundImageLayout = ImageLayout.Stretch;
+            RPnlG4.BackgroundImageLayout = ImageLayout.Stretch;
 
         }
     }

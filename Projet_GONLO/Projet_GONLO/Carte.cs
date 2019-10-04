@@ -34,11 +34,24 @@ namespace Projet_GONLO
             //TabPlusCards[0] = (Bitmap)rm;
 
             //TabPlusCards[0] = (Image)Properties.Resources.ResourceManager.GetObject("Card1");
-            TabPlusCards[0] = (Image)Properties.Resources.ResourceManager.GetObject("Carte1");
-            for (int i = 0; i < 5; i++)
+            
+            for (int i = 0; i < TabPlusCards.Length; i++)
             {
-
+                TabPlusCards[i] = (Image)Properties.Resources.ResourceManager.GetObject("Carte" + "+" + (i+1));
             }
+            for (int i = 0; i < TabMinusCards.Length; i++)
+            {
+                TabMinusCards[i] = (Image)Properties.Resources.ResourceManager.GetObject("Carte" + "-" + (i + 1));
+            }
+            for (int i = 0; i < TabPlusMinusCards.Length; i++)
+            {
+                TabPlusMinusCards[i] = (Image)Properties.Resources.ResourceManager.GetObject("Carte" + "+-" + (i + 1));
+            }
+            for (int i = 0; i < TabNormalCards.Length; i++)
+            {
+                TabNormalCards[i] = (Image)Properties.Resources.ResourceManager.GetObject("Carte" + (i + 1));
+            }
+
             //TabPlusCards[0] = Resources.ResourceManager.GetObject("Resource_Image");
             //    for (int i = 0; i < 6; i++)
             //    {
@@ -53,7 +66,7 @@ namespace Projet_GONLO
             //}
         }
 
-            public Image getCartePlus(int num)
+        public Image getCartePlus(int num)
         {
             return TabPlusCards[num-1];
         }
