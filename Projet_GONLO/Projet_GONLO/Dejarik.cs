@@ -15,7 +15,7 @@ namespace Projet_GONLO
         public Dejarik()
         {
             InitializeComponent();
-            //createMonsters();
+            createMonsters();
         }
 
         private void createMonsters()
@@ -62,7 +62,6 @@ namespace Projet_GONLO
 
         private void BtnDice_Click(object sender, EventArgs e)
         {
-            createMonsters();
             Random rng = new Random();
             int dice = rng.Next(1, 7);
             switch (dice)
