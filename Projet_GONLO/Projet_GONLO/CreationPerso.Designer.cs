@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreationPerso));
             this.GBoxMandalorian = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -41,6 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnInfoMand = new System.Windows.Forms.Button();
+            this.RPnlImgMando = new Projet_GONLO.RoundPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.GBoxZabrak = new System.Windows.Forms.GroupBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -55,6 +57,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.BtnInfoZab = new System.Windows.Forms.Button();
+            this.RPnlImgZabrak = new Projet_GONLO.RoundPanel();
             this.GBoxSPB = new System.Windows.Forms.GroupBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -68,6 +71,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.BtnInfoSPB = new System.Windows.Forms.Button();
+            this.RPnlImgSPB = new Projet_GONLO.RoundPanel();
             this.GBoxTwilek = new System.Windows.Forms.GroupBox();
             this.label46 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
@@ -81,6 +85,7 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.BtnInfoTwi = new System.Windows.Forms.Button();
+            this.RPnlImgTwi = new Projet_GONLO.RoundPanel();
             this.GBoxCathar = new System.Windows.Forms.GroupBox();
             this.label57 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
@@ -94,6 +99,7 @@
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.BtnInfoCath = new System.Windows.Forms.Button();
+            this.RPnlImgCath = new Projet_GONLO.RoundPanel();
             this.GBoxHuman = new System.Windows.Forms.GroupBox();
             this.label67 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
@@ -106,17 +112,14 @@
             this.label59 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.BtnInfoHum = new System.Windows.Forms.Button();
+            this.RPnlImgHum = new Projet_GONLO.RoundPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.BtnGenName = new System.Windows.Forms.Button();
             this.CBoxFemale = new System.Windows.Forms.CheckBox();
             this.CBoxMale = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new Projet_GONLO.textBox();
-            this.RPnlImgHum = new Projet_GONLO.RoundPanel();
-            this.RPnlImgCath = new Projet_GONLO.RoundPanel();
-            this.RPnlImgTwi = new Projet_GONLO.RoundPanel();
-            this.RPnlImgSPB = new Projet_GONLO.RoundPanel();
-            this.RPnlImgZabrak = new Projet_GONLO.RoundPanel();
-            this.RPnlImgMando = new Projet_GONLO.RoundPanel();
+            this.BtnEllNext = new Projet_GONLO.ButtonEllipse();
+            this.BtnEllBack = new Projet_GONLO.ButtonEllipse();
+            this.TxtBoxNameGen = new Projet_GONLO.textBox();
             this.GBoxMandalorian.SuspendLayout();
             this.GBoxZabrak.SuspendLayout();
             this.GBoxSPB.SuspendLayout();
@@ -275,6 +278,18 @@
             this.BtnInfoMand.TabIndex = 9;
             this.BtnInfoMand.UseVisualStyleBackColor = true;
             this.BtnInfoMand.Click += new System.EventHandler(this.BtnInfoMand_Click);
+            // 
+            // RPnlImgMando
+            // 
+            this.RPnlImgMando.BackgroundImage = global::Projet_GONLO.Properties.Resources.mandalorian;
+            this.RPnlImgMando.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlImgMando.BorderColor = System.Drawing.Color.White;
+            this.RPnlImgMando.Edge = 20;
+            this.RPnlImgMando.Location = new System.Drawing.Point(25, 75);
+            this.RPnlImgMando.Name = "RPnlImgMando";
+            this.RPnlImgMando.Size = new System.Drawing.Size(200, 200);
+            this.RPnlImgMando.TabIndex = 0;
+            this.RPnlImgMando.Click += new System.EventHandler(this.RPnlImgMando_Click);
             // 
             // label1
             // 
@@ -439,6 +454,18 @@
             this.BtnInfoZab.UseVisualStyleBackColor = true;
             this.BtnInfoZab.Click += new System.EventHandler(this.BtnInfoZab_Click);
             // 
+            // RPnlImgZabrak
+            // 
+            this.RPnlImgZabrak.BackgroundImage = global::Projet_GONLO.Properties.Resources.zabrak;
+            this.RPnlImgZabrak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlImgZabrak.BorderColor = System.Drawing.Color.White;
+            this.RPnlImgZabrak.Edge = 20;
+            this.RPnlImgZabrak.Location = new System.Drawing.Point(25, 60);
+            this.RPnlImgZabrak.Name = "RPnlImgZabrak";
+            this.RPnlImgZabrak.Size = new System.Drawing.Size(200, 230);
+            this.RPnlImgZabrak.TabIndex = 1;
+            this.RPnlImgZabrak.Click += new System.EventHandler(this.RPnlImgZabrak_Click);
+            // 
             // GBoxSPB
             // 
             this.GBoxSPB.BackColor = System.Drawing.Color.Transparent;
@@ -589,6 +616,18 @@
             this.BtnInfoSPB.TabIndex = 10;
             this.BtnInfoSPB.UseVisualStyleBackColor = true;
             this.BtnInfoSPB.Click += new System.EventHandler(this.BtnInfoSPB_Click);
+            // 
+            // RPnlImgSPB
+            // 
+            this.RPnlImgSPB.BackgroundImage = global::Projet_GONLO.Properties.Resources.sithPureBlood;
+            this.RPnlImgSPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlImgSPB.BorderColor = System.Drawing.Color.White;
+            this.RPnlImgSPB.Edge = 20;
+            this.RPnlImgSPB.Location = new System.Drawing.Point(25, 60);
+            this.RPnlImgSPB.Name = "RPnlImgSPB";
+            this.RPnlImgSPB.Size = new System.Drawing.Size(200, 230);
+            this.RPnlImgSPB.TabIndex = 1;
+            this.RPnlImgSPB.Click += new System.EventHandler(this.RPnlImgSPB_Click);
             // 
             // GBoxTwilek
             // 
@@ -741,6 +780,18 @@
             this.BtnInfoTwi.UseVisualStyleBackColor = true;
             this.BtnInfoTwi.Click += new System.EventHandler(this.BtnInfoTwi_Click);
             // 
+            // RPnlImgTwi
+            // 
+            this.RPnlImgTwi.BackgroundImage = global::Projet_GONLO.Properties.Resources.twilekCouple;
+            this.RPnlImgTwi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlImgTwi.BorderColor = System.Drawing.Color.White;
+            this.RPnlImgTwi.Edge = 20;
+            this.RPnlImgTwi.Location = new System.Drawing.Point(25, 75);
+            this.RPnlImgTwi.Name = "RPnlImgTwi";
+            this.RPnlImgTwi.Size = new System.Drawing.Size(200, 200);
+            this.RPnlImgTwi.TabIndex = 1;
+            this.RPnlImgTwi.Click += new System.EventHandler(this.RPnlImgTwi_Click);
+            // 
             // GBoxCathar
             // 
             this.GBoxCathar.BackColor = System.Drawing.Color.Transparent;
@@ -892,6 +943,18 @@
             this.BtnInfoCath.UseVisualStyleBackColor = true;
             this.BtnInfoCath.Click += new System.EventHandler(this.BtnInfoCath_Click);
             // 
+            // RPnlImgCath
+            // 
+            this.RPnlImgCath.BackgroundImage = global::Projet_GONLO.Properties.Resources.cathar;
+            this.RPnlImgCath.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlImgCath.BorderColor = System.Drawing.Color.White;
+            this.RPnlImgCath.Edge = 20;
+            this.RPnlImgCath.Location = new System.Drawing.Point(25, 113);
+            this.RPnlImgCath.Name = "RPnlImgCath";
+            this.RPnlImgCath.Size = new System.Drawing.Size(200, 125);
+            this.RPnlImgCath.TabIndex = 1;
+            this.RPnlImgCath.Click += new System.EventHandler(this.RPnlImgCath_Click);
+            // 
             // GBoxHuman
             // 
             this.GBoxHuman.BackColor = System.Drawing.Color.Transparent;
@@ -1032,13 +1095,25 @@
             this.BtnInfoHum.UseVisualStyleBackColor = true;
             this.BtnInfoHum.Click += new System.EventHandler(this.BtnInfoHum_Click);
             // 
+            // RPnlImgHum
+            // 
+            this.RPnlImgHum.BackgroundImage = global::Projet_GONLO.Properties.Resources.humans;
+            this.RPnlImgHum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlImgHum.BorderColor = System.Drawing.Color.White;
+            this.RPnlImgHum.Edge = 20;
+            this.RPnlImgHum.Location = new System.Drawing.Point(25, 60);
+            this.RPnlImgHum.Name = "RPnlImgHum";
+            this.RPnlImgHum.Size = new System.Drawing.Size(200, 230);
+            this.RPnlImgHum.TabIndex = 1;
+            this.RPnlImgHum.Click += new System.EventHandler(this.RPnlImgHum_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(35, 800);
+            this.label3.Location = new System.Drawing.Point(165, 830);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(356, 33);
             this.label3.TabIndex = 8;
@@ -1050,7 +1125,7 @@
             this.BtnGenName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGenName.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGenName.ForeColor = System.Drawing.Color.LimeGreen;
-            this.BtnGenName.Location = new System.Drawing.Point(840, 800);
+            this.BtnGenName.Location = new System.Drawing.Point(950, 826);
             this.BtnGenName.Name = "BtnGenName";
             this.BtnGenName.Size = new System.Drawing.Size(288, 38);
             this.BtnGenName.TabIndex = 10;
@@ -1064,7 +1139,7 @@
             this.CBoxFemale.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBoxFemale.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBoxFemale.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CBoxFemale.Location = new System.Drawing.Point(1189, 825);
+            this.CBoxFemale.Location = new System.Drawing.Point(1265, 860);
             this.CBoxFemale.Name = "CBoxFemale";
             this.CBoxFemale.Size = new System.Drawing.Size(95, 21);
             this.CBoxFemale.TabIndex = 12;
@@ -1079,7 +1154,7 @@
             this.CBoxMale.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBoxMale.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBoxMale.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CBoxMale.Location = new System.Drawing.Point(1189, 790);
+            this.CBoxMale.Location = new System.Drawing.Point(1265, 815);
             this.CBoxMale.Name = "CBoxMale";
             this.CBoxMale.Size = new System.Drawing.Size(73, 21);
             this.CBoxMale.TabIndex = 11;
@@ -1087,95 +1162,59 @@
             this.CBoxMale.UseVisualStyleBackColor = false;
             this.CBoxMale.CheckedChanged += new System.EventHandler(this.CBoxMale_CheckedChanged);
             // 
-            // textBox1
+            // BtnEllNext
             // 
-            this.textBox1.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(417, 805);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(387, 28);
-            this.textBox1.TabIndex = 9;
+            this.BtnEllNext.BackColor = System.Drawing.Color.Transparent;
+            this.BtnEllNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllNext.BackgroundImage")));
+            this.BtnEllNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllNext.FlatAppearance.BorderSize = 0;
+            this.BtnEllNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEllNext.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEllNext.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllNext.Location = new System.Drawing.Point(1388, 810);
+            this.BtnEllNext.Name = "BtnEllNext";
+            this.BtnEllNext.Size = new System.Drawing.Size(140, 75);
+            this.BtnEllNext.TabIndex = 14;
+            this.BtnEllNext.Text = "next";
+            this.BtnEllNext.UseVisualStyleBackColor = false;
+            this.BtnEllNext.Click += new System.EventHandler(this.BtnEllNext_Click);
             // 
-            // RPnlImgHum
+            // BtnEllBack
             // 
-            this.RPnlImgHum.BackgroundImage = global::Projet_GONLO.Properties.Resources.humans;
-            this.RPnlImgHum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RPnlImgHum.BorderColor = System.Drawing.Color.White;
-            this.RPnlImgHum.Edge = 20;
-            this.RPnlImgHum.Location = new System.Drawing.Point(25, 60);
-            this.RPnlImgHum.Name = "RPnlImgHum";
-            this.RPnlImgHum.Size = new System.Drawing.Size(200, 230);
-            this.RPnlImgHum.TabIndex = 1;
-            this.RPnlImgHum.Click += new System.EventHandler(this.RPnlImgHum_Click);
+            this.BtnEllBack.BackColor = System.Drawing.Color.Transparent;
+            this.BtnEllBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllBack.BackgroundImage")));
+            this.BtnEllBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllBack.FlatAppearance.BorderSize = 0;
+            this.BtnEllBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEllBack.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEllBack.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllBack.Location = new System.Drawing.Point(15, 810);
+            this.BtnEllBack.Name = "BtnEllBack";
+            this.BtnEllBack.Size = new System.Drawing.Size(140, 75);
+            this.BtnEllBack.TabIndex = 13;
+            this.BtnEllBack.Text = "Back";
+            this.BtnEllBack.UseVisualStyleBackColor = false;
+            this.BtnEllBack.Click += new System.EventHandler(this.BtnEllBack_Click);
             // 
-            // RPnlImgCath
+            // TxtBoxNameGen
             // 
-            this.RPnlImgCath.BackgroundImage = global::Projet_GONLO.Properties.Resources.cathar;
-            this.RPnlImgCath.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RPnlImgCath.BorderColor = System.Drawing.Color.White;
-            this.RPnlImgCath.Edge = 20;
-            this.RPnlImgCath.Location = new System.Drawing.Point(25, 113);
-            this.RPnlImgCath.Name = "RPnlImgCath";
-            this.RPnlImgCath.Size = new System.Drawing.Size(200, 125);
-            this.RPnlImgCath.TabIndex = 1;
-            this.RPnlImgCath.Click += new System.EventHandler(this.RPnlImgCath_Click);
-            // 
-            // RPnlImgTwi
-            // 
-            this.RPnlImgTwi.BackgroundImage = global::Projet_GONLO.Properties.Resources.twilekCouple;
-            this.RPnlImgTwi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RPnlImgTwi.BorderColor = System.Drawing.Color.White;
-            this.RPnlImgTwi.Edge = 20;
-            this.RPnlImgTwi.Location = new System.Drawing.Point(25, 75);
-            this.RPnlImgTwi.Name = "RPnlImgTwi";
-            this.RPnlImgTwi.Size = new System.Drawing.Size(200, 200);
-            this.RPnlImgTwi.TabIndex = 1;
-            this.RPnlImgTwi.Click += new System.EventHandler(this.RPnlImgTwi_Click);
-            // 
-            // RPnlImgSPB
-            // 
-            this.RPnlImgSPB.BackgroundImage = global::Projet_GONLO.Properties.Resources.sithPureBlood;
-            this.RPnlImgSPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RPnlImgSPB.BorderColor = System.Drawing.Color.White;
-            this.RPnlImgSPB.Edge = 20;
-            this.RPnlImgSPB.Location = new System.Drawing.Point(25, 60);
-            this.RPnlImgSPB.Name = "RPnlImgSPB";
-            this.RPnlImgSPB.Size = new System.Drawing.Size(200, 230);
-            this.RPnlImgSPB.TabIndex = 1;
-            this.RPnlImgSPB.Click += new System.EventHandler(this.RPnlImgSPB_Click);
-            // 
-            // RPnlImgZabrak
-            // 
-            this.RPnlImgZabrak.BackgroundImage = global::Projet_GONLO.Properties.Resources.zabrak;
-            this.RPnlImgZabrak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RPnlImgZabrak.BorderColor = System.Drawing.Color.White;
-            this.RPnlImgZabrak.Edge = 20;
-            this.RPnlImgZabrak.Location = new System.Drawing.Point(25, 60);
-            this.RPnlImgZabrak.Name = "RPnlImgZabrak";
-            this.RPnlImgZabrak.Size = new System.Drawing.Size(200, 230);
-            this.RPnlImgZabrak.TabIndex = 1;
-            this.RPnlImgZabrak.Click += new System.EventHandler(this.RPnlImgZabrak_Click);
-            // 
-            // RPnlImgMando
-            // 
-            this.RPnlImgMando.BackgroundImage = global::Projet_GONLO.Properties.Resources.mandalorian;
-            this.RPnlImgMando.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RPnlImgMando.BorderColor = System.Drawing.Color.White;
-            this.RPnlImgMando.Edge = 20;
-            this.RPnlImgMando.Location = new System.Drawing.Point(25, 75);
-            this.RPnlImgMando.Name = "RPnlImgMando";
-            this.RPnlImgMando.Size = new System.Drawing.Size(200, 200);
-            this.RPnlImgMando.TabIndex = 0;
-            this.RPnlImgMando.Click += new System.EventHandler(this.RPnlImgMando_Click);
+            this.TxtBoxNameGen.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBoxNameGen.Location = new System.Drawing.Point(540, 832);
+            this.TxtBoxNameGen.Name = "TxtBoxNameGen";
+            this.TxtBoxNameGen.Size = new System.Drawing.Size(387, 28);
+            this.TxtBoxNameGen.TabIndex = 9;
             // 
             // CreationPerso
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.StarsBackground;
             this.ClientSize = new System.Drawing.Size(1545, 900);
+            this.Controls.Add(this.BtnEllNext);
+            this.Controls.Add(this.BtnEllBack);
             this.Controls.Add(this.CBoxFemale);
             this.Controls.Add(this.CBoxMale);
             this.Controls.Add(this.BtnGenName);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtBoxNameGen);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.GBoxHuman);
             this.Controls.Add(this.GBoxCathar);
@@ -1187,6 +1226,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreationPerso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.CreationPerso_Load);
             this.GBoxMandalorian.ResumeLayout(false);
             this.GBoxMandalorian.PerformLayout();
             this.GBoxZabrak.ResumeLayout(false);
@@ -1226,7 +1266,7 @@
         private System.Windows.Forms.Button BtnInfoTwi;
         private System.Windows.Forms.Button BtnInfoCath;
         private System.Windows.Forms.Button BtnInfoHum;
-        private textBox textBox1;
+        private textBox TxtBoxNameGen;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label12;
@@ -1295,5 +1335,7 @@
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.CheckBox CBoxFemale;
         private System.Windows.Forms.CheckBox CBoxMale;
+        private ButtonEllipse BtnEllBack;
+        private ButtonEllipse BtnEllNext;
     }
 }

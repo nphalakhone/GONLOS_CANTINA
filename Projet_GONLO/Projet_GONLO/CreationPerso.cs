@@ -23,100 +23,50 @@ namespace Projet_GONLO
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
+        public void groupBoxExtended(GroupBox gb, Button button)
+        {
+            if (gb.Height == 725)
+            {
+                gb.Height = 425;
+                button.Location = new Point(65, 350);
+                button.BackgroundImage = Properties.Resources.arrows;
+            }
+            else if (gb.Height == 425)
+            {
+                gb.Height = 725;
+                button.Location = new Point(65, 685);
+                button.BackgroundImage = Properties.Resources.arrowsUp;
+            }
+        }
+
         private void BtnInfoMand_Click(object sender, EventArgs e)
         {
-            if (this.GBoxMandalorian.Height == 725)
-            {
-                this.GBoxMandalorian.Height = 425;
-                BtnInfoMand.Location = new Point(65, 350);
-                BtnInfoMand.BackgroundImage = Properties.Resources.arrows;
-            }
-            else if (this.GBoxMandalorian.Height == 425)
-            {
-                this.GBoxMandalorian.Height = 725;
-                BtnInfoMand.Location = new Point(65, 685);
-                BtnInfoMand.BackgroundImage = Properties.Resources.arrowsUp;
-            }
+            groupBoxExtended(GBoxMandalorian, BtnInfoMand);
         }
 
         private void BtnInfoZab_Click(object sender, EventArgs e)
         {
-            if (this.GBoxZabrak.Height == 725)
-            {
-                this.GBoxZabrak.Height = 425;
-                BtnInfoZab.Location = new Point(65, 350);
-                BtnInfoZab.BackgroundImage = Properties.Resources.arrows;
-            }
-            else if (this.GBoxZabrak.Height == 425)
-            {
-                this.GBoxZabrak.Height = 725;
-                BtnInfoZab.Location = new Point(65, 685);
-                BtnInfoZab.BackgroundImage = Properties.Resources.arrowsUp;
-            }
+            groupBoxExtended(GBoxZabrak, BtnInfoZab);
         }
 
         private void BtnInfoSPB_Click(object sender, EventArgs e)
         {
-            if (this.GBoxSPB.Height == 725)
-            {
-                this.GBoxSPB.Height = 425;
-                BtnInfoSPB.Location = new Point(65, 350);
-                BtnInfoSPB.BackgroundImage = Properties.Resources.arrows;
-            }
-            else if (this.GBoxSPB.Height == 425)
-            {
-                this.GBoxSPB.Height = 725;
-                BtnInfoSPB.Location = new Point(65, 685);
-                BtnInfoSPB.BackgroundImage = Properties.Resources.arrowsUp;
-            }
+            groupBoxExtended(GBoxSPB, BtnInfoSPB);
         }
 
         private void BtnInfoTwi_Click(object sender, EventArgs e)
         {
-            if (this.GBoxTwilek.Height == 725)
-            {
-                this.GBoxTwilek.Height = 425;
-                BtnInfoTwi.Location = new Point(65, 350);
-                BtnInfoTwi.BackgroundImage = Properties.Resources.arrows;
-            }
-            else if (this.GBoxTwilek.Height == 425)
-            {
-                this.GBoxTwilek.Height = 725;
-                BtnInfoTwi.Location = new Point(65, 685);
-                BtnInfoTwi.BackgroundImage = Properties.Resources.arrowsUp;
-            }
+            groupBoxExtended(GBoxTwilek, BtnInfoTwi);
         }
 
         private void BtnInfoCath_Click(object sender, EventArgs e)
         {
-            if (this.GBoxCathar.Height == 725)
-            {
-                this.GBoxCathar.Height = 425;
-                BtnInfoCath.Location = new Point(65, 350);
-                BtnInfoCath.BackgroundImage = Properties.Resources.arrows;
-            }
-            else if (this.GBoxCathar.Height == 425)
-            {
-                this.GBoxCathar.Height = 725;
-                BtnInfoCath.Location = new Point(65, 685);
-                BtnInfoCath.BackgroundImage = Properties.Resources.arrowsUp;
-            }
+            groupBoxExtended(GBoxCathar, BtnInfoCath);
         }
 
         private void BtnInfoHum_Click(object sender, EventArgs e)
         {
-            if (this.GBoxHuman.Height == 725)
-            {
-                this.GBoxHuman.Height = 425;
-                BtnInfoHum.Location = new Point(65, 350);
-                BtnInfoHum.BackgroundImage = Properties.Resources.arrows;
-            }
-            else if (this.GBoxHuman.Height == 425)
-            {
-                this.GBoxHuman.Height = 725;
-                BtnInfoHum.Location = new Point(65, 685);
-                BtnInfoHum.BackgroundImage = Properties.Resources.arrowsUp;
-            }
+            groupBoxExtended(GBoxHuman, BtnInfoHum);
         }
 
         private void CheckPanelBorderStyle()
@@ -206,6 +156,27 @@ namespace Projet_GONLO
             {
                 CBoxFemale.Checked = true;
             }
+        }
+
+        private void CreationPerso_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnEllNext_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MenuAccueil menuAccueil = new MenuAccueil();
+            menuAccueil.ShowDialog();
+            this.Close();
+        }
+
+        private void BtnEllBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartForm startFrom = new StartForm();
+            startFrom.ShowDialog();
+            this.Close();
         }
     }
 

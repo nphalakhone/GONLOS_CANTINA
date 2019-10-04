@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Projet_GONLO
 {
-    class Carte
+    class Cards
     {
 
         private static Image[] TabPlusCards = new Image[6];
@@ -18,7 +18,7 @@ namespace Projet_GONLO
         private Image[] TabNormalCards = new Image[10];
 
 
-        public Carte()
+        public Cards()
         {
             RemplirTableauCartes();
         }

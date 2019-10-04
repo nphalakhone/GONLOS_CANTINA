@@ -18,6 +18,7 @@ namespace Projet_GONLO
             GraphicsPath graphics = new GraphicsPath();
             graphics.AddEllipse(0,0,ClientSize.Width, ClientSize.Height);
             this.Region = new System.Drawing.Region(graphics);
+            this.FlatAppearance.BorderSize = 0;
             base.OnPaint(pEvent);
         }
     }
