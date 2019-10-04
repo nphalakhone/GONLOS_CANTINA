@@ -15,28 +15,21 @@ namespace Projet_GONLO
         public MenuDejarik()
         {
             InitializeComponent();
-            PnlChooseMonster.Hide();
+           
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void BtnSolo_Click(object sender, EventArgs e)
         {
+            PnlChooseMonster.Visible = true;
+            PnlChooseOption.Visible = false;
 
         }
 
-        private void Panel1_Paint(object sender, PaintEventArgs e)
+        private void BtnMulti_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-
+            PnlChooseMonster.Visible = true;
+            PnlChooseOption.Visible = false;
         }
     }
 }

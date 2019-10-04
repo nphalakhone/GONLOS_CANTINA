@@ -153,6 +153,16 @@ namespace Projet_GONLO.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BlueSteelFaded21 {
+            get {
+                object obj = ResourceManager.GetObject("BlueSteelFaded21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Carte__1 {
             get {
                 object obj = ResourceManager.GetObject("Carte+-1", resourceCulture);
@@ -393,9 +403,49 @@ namespace Projet_GONLO.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ghhhk {
+            get {
+                object obj = ResourceManager.GetObject("ghhhk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ghhhk1 {
+            get {
+                object obj = ResourceManager.GetObject("ghhhk1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ghhhk2 {
+            get {
+                object obj = ResourceManager.GetObject("ghhhk2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap holochess_arkit {
             get {
                 object obj = ResourceManager.GetObject("holochess-arkit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap houjix {
+            get {
+                object obj = ResourceManager.GetObject("houjix", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -516,6 +566,26 @@ namespace Projet_GONLO.Properties {
         internal static System.Drawing.Bitmap StarsBackground {
             get {
                 object obj = ResourceManager.GetObject("StarsBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StarsBackground1 {
+            get {
+                object obj = ResourceManager.GetObject("StarsBackground1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StarsBackground2 {
+            get {
+                object obj = ResourceManager.GetObject("StarsBackground2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

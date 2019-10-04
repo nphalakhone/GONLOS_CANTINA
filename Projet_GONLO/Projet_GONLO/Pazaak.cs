@@ -20,7 +20,7 @@ namespace Projet_GONLO
         {
             InitializeComponent();
 
-            Carte c = new Carte();
+            Cards c = new Cards();
             RPnlG1.BackgroundImage = c.getCartePlus(4);
             RPnlG2.BackgroundImage = c.getCarteMinus(2);
             RPnlG3.BackgroundImage = c.getCartePlusMinus(1);
