@@ -45,6 +45,7 @@
             this.BtnChooseDef = new System.Windows.Forms.Button();
             this.BtnChooseAtk = new System.Windows.Forms.Button();
             this.LblMenuPlayerTurn = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.PnlChooseOption.SuspendLayout();
             this.PnlChooseMonster.SuspendLayout();
             this.SuspendLayout();
@@ -87,6 +88,7 @@
             // PnlChooseMonster
             // 
             this.PnlChooseMonster.BackColor = System.Drawing.Color.Transparent;
+            this.PnlChooseMonster.Controls.Add(this.panel1);
             this.PnlChooseMonster.Controls.Add(this.BtnMonnok);
             this.PnlChooseMonster.Controls.Add(this.BtnMantellian);
             this.PnlChooseMonster.Controls.Add(this.BtnGrimtaash);
@@ -108,67 +110,93 @@
             // 
             // BtnMonnok
             // 
+            this.BtnMonnok.BackgroundImage = global::Projet_GONLO.Properties.Resources.Monnok;
+            this.BtnMonnok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnMonnok.Location = new System.Drawing.Point(1154, 292);
             this.BtnMonnok.Name = "BtnMonnok";
             this.BtnMonnok.Size = new System.Drawing.Size(135, 145);
             this.BtnMonnok.TabIndex = 38;
             this.BtnMonnok.UseVisualStyleBackColor = true;
+            this.BtnMonnok.Click += new System.EventHandler(this.BtnMonnok_Click);
             // 
             // BtnMantellian
             // 
+            this.BtnMantellian.BackgroundImage = global::Projet_GONLO.Properties.Resources.Mantellian_Savrip;
+            this.BtnMantellian.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnMantellian.Location = new System.Drawing.Point(1013, 292);
             this.BtnMantellian.Name = "BtnMantellian";
             this.BtnMantellian.Size = new System.Drawing.Size(135, 145);
             this.BtnMantellian.TabIndex = 37;
             this.BtnMantellian.UseVisualStyleBackColor = true;
+            this.BtnMantellian.Click += new System.EventHandler(this.BtnMantellian_Click);
             // 
             // BtnGrimtaash
             // 
+            this.BtnGrimtaash.BackgroundImage = global::Projet_GONLO.Properties.Resources.grimtaash;
+            this.BtnGrimtaash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnGrimtaash.Location = new System.Drawing.Point(818, 292);
             this.BtnGrimtaash.Name = "BtnGrimtaash";
             this.BtnGrimtaash.Size = new System.Drawing.Size(135, 145);
             this.BtnGrimtaash.TabIndex = 36;
             this.BtnGrimtaash.UseVisualStyleBackColor = true;
+            this.BtnGrimtaash.Click += new System.EventHandler(this.BtnGrimtaash_Click);
             // 
             // BtnKlorslug
             // 
+            this.BtnKlorslug.BackgroundImage = global::Projet_GONLO.Properties.Resources.klorslaug;
+            this.BtnKlorslug.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnKlorslug.Location = new System.Drawing.Point(677, 292);
             this.BtnKlorslug.Name = "BtnKlorslug";
             this.BtnKlorslug.Size = new System.Drawing.Size(135, 145);
             this.BtnKlorslug.TabIndex = 35;
             this.BtnKlorslug.UseVisualStyleBackColor = true;
+            this.BtnKlorslug.Click += new System.EventHandler(this.BtnKlorslug_Click);
             // 
             // BtnNgok
             // 
+            this.BtnNgok.BackgroundImage = global::Projet_GONLO.Properties.Resources.Ngok;
+            this.BtnNgok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnNgok.Location = new System.Drawing.Point(488, 292);
             this.BtnNgok.Name = "BtnNgok";
             this.BtnNgok.Size = new System.Drawing.Size(135, 145);
             this.BtnNgok.TabIndex = 34;
             this.BtnNgok.UseVisualStyleBackColor = true;
+            this.BtnNgok.Click += new System.EventHandler(this.BtnNgok_Click);
             // 
             // BtnKintanStrider
             // 
+            this.BtnKintanStrider.BackgroundImage = global::Projet_GONLO.Properties.Resources.Kintan_Strider;
+            this.BtnKintanStrider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnKintanStrider.Location = new System.Drawing.Point(347, 292);
             this.BtnKintanStrider.Name = "BtnKintanStrider";
             this.BtnKintanStrider.Size = new System.Drawing.Size(135, 145);
             this.BtnKintanStrider.TabIndex = 33;
             this.BtnKintanStrider.UseVisualStyleBackColor = true;
+            this.BtnKintanStrider.Click += new System.EventHandler(this.BtnKintanStrider_Click);
             // 
             // BtnHoujix
             // 
+            this.BtnHoujix.BackgroundImage = global::Projet_GONLO.Properties.Resources.houjix1;
+            this.BtnHoujix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnHoujix.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BtnHoujix.Location = new System.Drawing.Point(152, 292);
             this.BtnHoujix.Name = "BtnHoujix";
             this.BtnHoujix.Size = new System.Drawing.Size(135, 145);
             this.BtnHoujix.TabIndex = 32;
             this.BtnHoujix.UseVisualStyleBackColor = true;
+            this.BtnHoujix.Click += new System.EventHandler(this.BtnHoujix_Click);
             // 
             // BtnGhhhk
             // 
+            this.BtnGhhhk.BackColor = System.Drawing.Color.Transparent;
+            this.BtnGhhhk.BackgroundImage = global::Projet_GONLO.Properties.Resources.ghhhk;
+            this.BtnGhhhk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnGhhhk.Location = new System.Drawing.Point(11, 292);
             this.BtnGhhhk.Name = "BtnGhhhk";
             this.BtnGhhhk.Size = new System.Drawing.Size(135, 145);
             this.BtnGhhhk.TabIndex = 31;
-            this.BtnGhhhk.UseVisualStyleBackColor = true;
+            this.BtnGhhhk.UseVisualStyleBackColor = false;
+            this.BtnGhhhk.Click += new System.EventHandler(this.BtnGhhhk_Click);
             // 
             // BtnChoosePow
             // 
@@ -231,6 +259,14 @@
             this.LblMenuPlayerTurn.TabIndex = 26;
             this.LblMenuPlayerTurn.Text = "Player 1\'s Turn to Pick";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(11, 443);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(135, 27);
+            this.panel1.TabIndex = 39;
+            // 
             // MenuDejarik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,5 +303,6 @@
         private System.Windows.Forms.Button BtnChooseDef;
         private System.Windows.Forms.Button BtnChooseAtk;
         private System.Windows.Forms.Label LblMenuPlayerTurn;
+        private System.Windows.Forms.Panel panel1;
     }
 }

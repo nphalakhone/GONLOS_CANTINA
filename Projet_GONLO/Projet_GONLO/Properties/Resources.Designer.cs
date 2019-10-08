@@ -433,6 +433,26 @@ namespace Projet_GONLO.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ghhhk3 {
+            get {
+                object obj = ResourceManager.GetObject("ghhhk3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grimtaash {
+            get {
+                object obj = ResourceManager.GetObject("grimtaash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap holochess_arkit {
             get {
                 object obj = ResourceManager.GetObject("holochess-arkit", resourceCulture);
@@ -453,6 +473,16 @@ namespace Projet_GONLO.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap houjix1 {
+            get {
+                object obj = ResourceManager.GetObject("houjix1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap humans {
             get {
                 object obj = ResourceManager.GetObject("humans", resourceCulture);
@@ -463,9 +493,69 @@ namespace Projet_GONLO.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Kintan_Strider {
+            get {
+                object obj = ResourceManager.GetObject("Kintan_Strider", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap klorslaug {
+            get {
+                object obj = ResourceManager.GetObject("klorslaug", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap klorslaug1 {
+            get {
+                object obj = ResourceManager.GetObject("klorslaug1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mandalorian {
             get {
                 object obj = ResourceManager.GetObject("mandalorian", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mantellian_Savrip {
+            get {
+                object obj = ResourceManager.GetObject("Mantellian_Savrip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Monnok {
+            get {
+                object obj = ResourceManager.GetObject("Monnok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ngok {
+            get {
+                object obj = ResourceManager.GetObject("Ngok", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
