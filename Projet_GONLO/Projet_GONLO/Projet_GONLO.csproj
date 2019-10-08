@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BouttonCercle.cs" />
+    <Compile Include="BouttonCercle.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ButtonEllipse.cs">
       <SubType>Component</SubType>
     </Compile>
