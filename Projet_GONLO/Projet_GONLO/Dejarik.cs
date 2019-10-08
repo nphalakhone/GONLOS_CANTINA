@@ -12,10 +12,41 @@ namespace Projet_GONLO
 {
     public partial class Dejarik : Form
     {
+        List<Button> listBoutons = new List<Button>();
         public Dejarik()
         {
             InitializeComponent();
             createMonsters();
+            initialiserBoutons();
+        }
+
+        private void initialiserBoutons()
+        {
+            listBoutons.Add(new Button());
+            listBoutons.Add(bouttonCercle1);
+            listBoutons.Add(bouttonCercle2);
+            listBoutons.Add(bouttonCercle3);
+            listBoutons.Add(bouttonCercle4);
+            listBoutons.Add(bouttonCercle5);
+            listBoutons.Add(bouttonCercle6);
+            listBoutons.Add(bouttonCercle7);
+            listBoutons.Add(bouttonCercle8);
+            listBoutons.Add(bouttonCercle9);
+            listBoutons.Add(bouttonCercle10);
+            listBoutons.Add(bouttonCercle11);
+            listBoutons.Add(bouttonCercle12);
+            listBoutons.Add(bouttonCercle13);
+            listBoutons.Add(bouttonCercle14);
+            listBoutons.Add(bouttonCercle15);
+            listBoutons.Add(bouttonCercle16);
+            listBoutons.Add(bouttonCercle17);
+            listBoutons.Add(bouttonCercle18);
+            listBoutons.Add(bouttonCercle19);
+            listBoutons.Add(bouttonCercle20);
+            listBoutons.Add(bouttonCercle21);
+            listBoutons.Add(bouttonCercle22);
+            listBoutons.Add(bouttonCercle23);
+            listBoutons.Add(bouttonCercle24);
         }
 
         private void createMonsters()
