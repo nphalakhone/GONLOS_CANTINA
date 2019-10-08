@@ -160,13 +160,27 @@ namespace Projet_GONLO
 
         private void CreationPerso_Load(object sender, EventArgs e)
         {
-            
+            BtnEllNext.Enabled = false;
+            CBoxMale.Checked = true;
+            RPnlImgMando.BorderStyle = style3D;
         }
 
         private void BtnEllNext_Click(object sender, EventArgs e)
         {
             this.Hide();
             MenuAccueil menuAccueil = new MenuAccueil();
+            Player player = new Player();
+            player.species = VerificationSpecies();
+            player.nom = TxtBoxNameGen.Text;
+            if (CBoxFemale.Checked)
+            {
+                player.gender = "Female";
+            }
+            else if (CBoxMale.Checked)
+            {
+                player.gender = "Male";
+            }
+            MessageBox.Show(player.nom + "," + player.species + "," + player.gender);
             menuAccueil.ShowDialog();
             this.Close();
         }
@@ -177,6 +191,41 @@ namespace Projet_GONLO
             StartForm startFrom = new StartForm();
             startFrom.ShowDialog();
             this.Close();
+        }
+
+        private void TxtBoxNameGen_TextChanged(object sender, EventArgs e)
+        {
+            BtnEllNext.Enabled = true;
+        }
+
+        private string VerificationSpecies()
+        {
+            String species = "";
+            if (RPnlImgMando.BorderStyle == style3D)
+            {
+                species = "Mandalorian";
+            }
+            else if (RPnlImgZabrak.BorderStyle == style3D)
+            {
+                species = "Zabrak";
+            }
+            else if (RPnlImgSPB.BorderStyle == style3D)
+            {
+                species = "Sith PureBlood";
+            }
+            else if (RPnlImgTwi.BorderStyle == style3D)
+            {
+                species = "Twi'lek";
+            }
+            else if (RPnlImgCath.BorderStyle == style3D)
+            {
+                species = "Cathar";
+            }
+            else if (RPnlImgHum.BorderStyle == style3D)
+            {
+                species = "Human";
+            }
+            return species;
         }
     }
 
