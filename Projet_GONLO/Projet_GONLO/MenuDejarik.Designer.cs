@@ -261,10 +261,10 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Location = new System.Drawing.Point(11, 443);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(135, 27);
+            this.panel1.Size = new System.Drawing.Size(135, 30);
             this.panel1.TabIndex = 39;
             // 
             // MenuDejarik
