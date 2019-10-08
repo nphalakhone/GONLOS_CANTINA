@@ -198,218 +198,266 @@
             // bouttonCercle1
             // 
             this.bouttonCercle1.AutoEllipsis = true;
+            this.bouttonCercle1.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle1.Location = new System.Drawing.Point(318, 108);
             this.bouttonCercle1.Name = "bouttonCercle1";
             this.bouttonCercle1.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle1.TabIndex = 6;
-            this.bouttonCercle1.UseVisualStyleBackColor = true;
+            this.bouttonCercle1.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle2
             // 
             this.bouttonCercle2.AutoEllipsis = true;
+            this.bouttonCercle2.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle2.Location = new System.Drawing.Point(472, 108);
             this.bouttonCercle2.Name = "bouttonCercle2";
             this.bouttonCercle2.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle2.TabIndex = 7;
-            this.bouttonCercle2.UseVisualStyleBackColor = true;
+            this.bouttonCercle2.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle3
             // 
             this.bouttonCercle3.AutoEllipsis = true;
+            this.bouttonCercle3.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle3.Location = new System.Drawing.Point(612, 177);
             this.bouttonCercle3.Name = "bouttonCercle3";
             this.bouttonCercle3.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle3.TabIndex = 8;
-            this.bouttonCercle3.UseVisualStyleBackColor = true;
+            this.bouttonCercle3.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle4
             // 
             this.bouttonCercle4.AutoEllipsis = true;
+            this.bouttonCercle4.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle4.Location = new System.Drawing.Point(698, 325);
             this.bouttonCercle4.Name = "bouttonCercle4";
             this.bouttonCercle4.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle4.TabIndex = 9;
-            this.bouttonCercle4.UseVisualStyleBackColor = true;
+            this.bouttonCercle4.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle5
             // 
             this.bouttonCercle5.AutoEllipsis = true;
+            this.bouttonCercle5.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle5.Location = new System.Drawing.Point(698, 486);
             this.bouttonCercle5.Name = "bouttonCercle5";
             this.bouttonCercle5.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle5.TabIndex = 10;
-            this.bouttonCercle5.UseVisualStyleBackColor = true;
+            this.bouttonCercle5.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle6
             // 
             this.bouttonCercle6.AutoEllipsis = true;
+            this.bouttonCercle6.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle6.Location = new System.Drawing.Point(612, 628);
             this.bouttonCercle6.Name = "bouttonCercle6";
             this.bouttonCercle6.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle6.TabIndex = 11;
-            this.bouttonCercle6.UseVisualStyleBackColor = true;
+            this.bouttonCercle6.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle7
             // 
             this.bouttonCercle7.AutoEllipsis = true;
+            this.bouttonCercle7.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle7.Location = new System.Drawing.Point(472, 713);
             this.bouttonCercle7.Name = "bouttonCercle7";
             this.bouttonCercle7.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle7.TabIndex = 12;
-            this.bouttonCercle7.UseVisualStyleBackColor = true;
+            this.bouttonCercle7.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle8
             // 
             this.bouttonCercle8.AutoEllipsis = true;
+            this.bouttonCercle8.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle8.Location = new System.Drawing.Point(318, 713);
             this.bouttonCercle8.Name = "bouttonCercle8";
             this.bouttonCercle8.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle8.TabIndex = 13;
-            this.bouttonCercle8.UseVisualStyleBackColor = true;
+            this.bouttonCercle8.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle9
             // 
             this.bouttonCercle9.AutoEllipsis = true;
+            this.bouttonCercle9.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle9.Location = new System.Drawing.Point(170, 628);
             this.bouttonCercle9.Name = "bouttonCercle9";
             this.bouttonCercle9.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle9.TabIndex = 14;
-            this.bouttonCercle9.UseVisualStyleBackColor = true;
+            this.bouttonCercle9.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle10
             // 
             this.bouttonCercle10.AutoEllipsis = true;
+            this.bouttonCercle10.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle10.Location = new System.Drawing.Point(92, 486);
             this.bouttonCercle10.Name = "bouttonCercle10";
             this.bouttonCercle10.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle10.TabIndex = 15;
-            this.bouttonCercle10.UseVisualStyleBackColor = true;
+            this.bouttonCercle10.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle11
             // 
             this.bouttonCercle11.AutoEllipsis = true;
+            this.bouttonCercle11.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle11.Location = new System.Drawing.Point(92, 325);
             this.bouttonCercle11.Name = "bouttonCercle11";
             this.bouttonCercle11.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle11.TabIndex = 16;
-            this.bouttonCercle11.UseVisualStyleBackColor = true;
+            this.bouttonCercle11.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle12
             // 
             this.bouttonCercle12.AutoEllipsis = true;
+            this.bouttonCercle12.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle12.Location = new System.Drawing.Point(170, 177);
             this.bouttonCercle12.Name = "bouttonCercle12";
             this.bouttonCercle12.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle12.TabIndex = 17;
-            this.bouttonCercle12.UseVisualStyleBackColor = true;
+            this.bouttonCercle12.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle13
             // 
             this.bouttonCercle13.AutoEllipsis = true;
+            this.bouttonCercle13.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle13.Location = new System.Drawing.Point(351, 233);
             this.bouttonCercle13.Name = "bouttonCercle13";
             this.bouttonCercle13.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle13.TabIndex = 18;
-            this.bouttonCercle13.UseVisualStyleBackColor = true;
+            this.bouttonCercle13.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle14
             // 
             this.bouttonCercle14.AutoEllipsis = true;
+            this.bouttonCercle14.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle14.Location = new System.Drawing.Point(438, 233);
             this.bouttonCercle14.Name = "bouttonCercle14";
             this.bouttonCercle14.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle14.TabIndex = 19;
-            this.bouttonCercle14.UseVisualStyleBackColor = true;
+            this.bouttonCercle14.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle15
             // 
             this.bouttonCercle15.AutoEllipsis = true;
+            this.bouttonCercle15.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle15.Location = new System.Drawing.Point(525, 274);
             this.bouttonCercle15.Name = "bouttonCercle15";
             this.bouttonCercle15.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle15.TabIndex = 20;
-            this.bouttonCercle15.UseVisualStyleBackColor = true;
+            this.bouttonCercle15.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle16
             // 
             this.bouttonCercle16.AutoEllipsis = true;
+            this.bouttonCercle16.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle16.Location = new System.Drawing.Point(573, 358);
             this.bouttonCercle16.Name = "bouttonCercle16";
             this.bouttonCercle16.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle16.TabIndex = 21;
-            this.bouttonCercle16.UseVisualStyleBackColor = true;
+            this.bouttonCercle16.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle17
             // 
             this.bouttonCercle17.AutoEllipsis = true;
+            this.bouttonCercle17.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle17.Location = new System.Drawing.Point(573, 454);
             this.bouttonCercle17.Name = "bouttonCercle17";
             this.bouttonCercle17.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle17.TabIndex = 22;
-            this.bouttonCercle17.UseVisualStyleBackColor = true;
+            this.bouttonCercle17.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle18
             // 
             this.bouttonCercle18.AutoEllipsis = true;
+            this.bouttonCercle18.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle18.Location = new System.Drawing.Point(525, 533);
             this.bouttonCercle18.Name = "bouttonCercle18";
             this.bouttonCercle18.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle18.TabIndex = 23;
-            this.bouttonCercle18.UseVisualStyleBackColor = true;
+            this.bouttonCercle18.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle19
             // 
             this.bouttonCercle19.AutoEllipsis = true;
+            this.bouttonCercle19.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle19.Location = new System.Drawing.Point(438, 577);
             this.bouttonCercle19.Name = "bouttonCercle19";
             this.bouttonCercle19.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle19.TabIndex = 24;
-            this.bouttonCercle19.UseVisualStyleBackColor = true;
+            this.bouttonCercle19.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle20
             // 
             this.bouttonCercle20.AutoEllipsis = true;
+            this.bouttonCercle20.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle20.Location = new System.Drawing.Point(351, 577);
             this.bouttonCercle20.Name = "bouttonCercle20";
             this.bouttonCercle20.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle20.TabIndex = 25;
-            this.bouttonCercle20.UseVisualStyleBackColor = true;
+            this.bouttonCercle20.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle21
             // 
             this.bouttonCercle21.AutoEllipsis = true;
+            this.bouttonCercle21.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle21.Location = new System.Drawing.Point(264, 533);
             this.bouttonCercle21.Name = "bouttonCercle21";
             this.bouttonCercle21.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle21.TabIndex = 26;
-            this.bouttonCercle21.UseVisualStyleBackColor = true;
+            this.bouttonCercle21.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle22
             // 
             this.bouttonCercle22.AutoEllipsis = true;
+            this.bouttonCercle22.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle22.Location = new System.Drawing.Point(218, 454);
             this.bouttonCercle22.Name = "bouttonCercle22";
             this.bouttonCercle22.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle22.TabIndex = 27;
-            this.bouttonCercle22.UseVisualStyleBackColor = true;
+            this.bouttonCercle22.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle23
             // 
             this.bouttonCercle23.AutoEllipsis = true;
+            this.bouttonCercle23.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle23.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle23.Location = new System.Drawing.Point(218, 358);
             this.bouttonCercle23.Name = "bouttonCercle23";
             this.bouttonCercle23.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle23.TabIndex = 28;
-            this.bouttonCercle23.UseVisualStyleBackColor = true;
+            this.bouttonCercle23.UseVisualStyleBackColor = false;
             // 
             // bouttonCercle24
             // 
             this.bouttonCercle24.AutoEllipsis = true;
+            this.bouttonCercle24.BackColor = System.Drawing.Color.White;
+            this.bouttonCercle24.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bouttonCercle24.Location = new System.Drawing.Point(264, 274);
             this.bouttonCercle24.Name = "bouttonCercle24";
             this.bouttonCercle24.Size = new System.Drawing.Size(81, 90);
             this.bouttonCercle24.TabIndex = 29;
-            this.bouttonCercle24.UseVisualStyleBackColor = true;
+            this.bouttonCercle24.UseVisualStyleBackColor = false;
             // 
             // Dejarik
             // 
