@@ -1203,6 +1203,7 @@
             this.TxtBoxNameGen.Name = "TxtBoxNameGen";
             this.TxtBoxNameGen.Size = new System.Drawing.Size(387, 28);
             this.TxtBoxNameGen.TabIndex = 9;
+            this.TxtBoxNameGen.TextChanged += new System.EventHandler(this.TxtBoxNameGen_TextChanged);
             // 
             // CreationPerso
             // 
