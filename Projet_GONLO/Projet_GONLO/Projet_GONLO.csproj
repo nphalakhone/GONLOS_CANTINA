@@ -103,6 +103,7 @@
     <Compile Include="textBox.Designer.cs">
       <DependentUpon>textBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tile.cs" />
     <EmbeddedResource Include="CreationPerso.resx">
       <DependentUpon>CreationPerso.cs</DependentUpon>
     </EmbeddedResource>
