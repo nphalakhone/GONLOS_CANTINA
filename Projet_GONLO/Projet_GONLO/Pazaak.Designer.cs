@@ -46,6 +46,9 @@
             this.RPnlG3 = new Projet_GONLO.RoundPanel();
             this.RPnlG2 = new Projet_GONLO.RoundPanel();
             this.RPnlG1 = new Projet_GONLO.RoundPanel();
+            this.RPnlStand = new Projet_GONLO.RoundPanel();
+            this.RPnlEndTurn = new Projet_GONLO.RoundPanel();
+            this.RPnlForfeitGame = new Projet_GONLO.RoundPanel();
             this.SuspendLayout();
             // 
             // RPnlD9
@@ -228,6 +231,36 @@
             this.RPnlG1.Size = new System.Drawing.Size(73, 89);
             this.RPnlG1.TabIndex = 0;
             // 
+            // RPnlStand
+            // 
+            this.RPnlStand.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlStand.BorderColor = System.Drawing.Color.White;
+            this.RPnlStand.Edge = 20;
+            this.RPnlStand.Location = new System.Drawing.Point(713, 618);
+            this.RPnlStand.Name = "RPnlStand";
+            this.RPnlStand.Size = new System.Drawing.Size(175, 30);
+            this.RPnlStand.TabIndex = 18;
+            // 
+            // RPnlEndTurn
+            // 
+            this.RPnlEndTurn.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlEndTurn.BorderColor = System.Drawing.Color.White;
+            this.RPnlEndTurn.Edge = 20;
+            this.RPnlEndTurn.Location = new System.Drawing.Point(525, 618);
+            this.RPnlEndTurn.Name = "RPnlEndTurn";
+            this.RPnlEndTurn.Size = new System.Drawing.Size(175, 30);
+            this.RPnlEndTurn.TabIndex = 19;
+            // 
+            // RPnlForfeitGame
+            // 
+            this.RPnlForfeitGame.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlForfeitGame.BorderColor = System.Drawing.Color.White;
+            this.RPnlForfeitGame.Edge = 20;
+            this.RPnlForfeitGame.Location = new System.Drawing.Point(525, 652);
+            this.RPnlForfeitGame.Name = "RPnlForfeitGame";
+            this.RPnlForfeitGame.Size = new System.Drawing.Size(363, 30);
+            this.RPnlForfeitGame.TabIndex = 20;
+            // 
             // Pazaak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,6 +268,9 @@
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.pazaakEmptyBoard11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1001, 750);
+            this.Controls.Add(this.RPnlForfeitGame);
+            this.Controls.Add(this.RPnlEndTurn);
+            this.Controls.Add(this.RPnlStand);
             this.Controls.Add(this.RPnlD9);
             this.Controls.Add(this.RPnlD8);
             this.Controls.Add(this.RPnlD7);
@@ -282,5 +318,8 @@
         private RoundPanel RPnlD7;
         private RoundPanel RPnlD8;
         private RoundPanel RPnlD9;
+        private RoundPanel RPnlStand;
+        private RoundPanel RPnlEndTurn;
+        private RoundPanel RPnlForfeitGame;
     }
 }

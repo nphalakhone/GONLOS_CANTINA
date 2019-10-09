@@ -36,5 +36,10 @@ namespace Projet_GONLO
             RPnlG4.BackgroundImageLayout = ImageLayout.Stretch;
 
         }
+
+        private void TSMenuFile_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
