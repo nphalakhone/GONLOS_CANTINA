@@ -71,6 +71,7 @@
             // 
             this.RPnlEndTurn.BackColor = System.Drawing.Color.Transparent;
             this.RPnlEndTurn.BorderColor = System.Drawing.Color.White;
+            this.RPnlEndTurn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.RPnlEndTurn.Edge = 20;
             this.RPnlEndTurn.Location = new System.Drawing.Point(525, 618);
             this.RPnlEndTurn.Name = "RPnlEndTurn";
@@ -82,6 +83,7 @@
             // 
             this.RPnlStand.BackColor = System.Drawing.Color.Transparent;
             this.RPnlStand.BorderColor = System.Drawing.Color.White;
+            this.RPnlStand.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.RPnlStand.Edge = 20;
             this.RPnlStand.Location = new System.Drawing.Point(713, 618);
             this.RPnlStand.Name = "RPnlStand";

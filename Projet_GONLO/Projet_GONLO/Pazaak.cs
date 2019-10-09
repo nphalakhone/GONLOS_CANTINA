@@ -154,6 +154,26 @@ namespace Projet_GONLO
                     MessageBox.Show("Player gagné!!");
                 }
             }
+            else if (AiPoints > 20 && PlayerPoints > 20)
+            {
+                if (AiPoints < PlayerPoints)
+                {
+                    MessageBox.Show("Player gagné!!");
+                }
+                else
+                {
+                    MessageBox.Show("Ai gagne!!");
+                }
+            }
+            else if (AiPoints < 20 && PlayerPoints > 20)
+            {
+                MessageBox.Show("Ai gagne!!");
+            }
+            else
+            {
+                MessageBox.Show("Player gagné!!");
+            }
+
 
                // differenceFrom20(PlayerPoints);
         }
