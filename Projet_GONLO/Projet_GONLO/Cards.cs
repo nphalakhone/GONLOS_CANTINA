@@ -37,15 +37,15 @@ namespace Projet_GONLO
             
             for (int i = 0; i < TabPlusCards.Length; i++)
             {
-                TabPlusCards[i] = (Image)Properties.Resources.ResourceManager.GetObject("Carte" + "+" + (i+1));
+                TabPlusCards[i] = (Image)Properties.Resources.ResourceManager.GetObject("Carte" + "Plus" + (i+1));
             }
             for (int i = 0; i < TabMinusCards.Length; i++)
             {
-                TabMinusCards[i] = (Image)Properties.Resources.ResourceManager.GetObject("Carte" + "-" + (i + 1));
+                TabMinusCards[i] = (Image)Properties.Resources.ResourceManager.GetObject("Carte" + "Minus" + (i + 1));
             }
             for (int i = 0; i < TabPlusMinusCards.Length; i++)
             {
-                TabPlusMinusCards[i] = (Image)Properties.Resources.ResourceManager.GetObject("Carte" + "+-" + (i + 1));
+                TabPlusMinusCards[i] = (Image)Properties.Resources.ResourceManager.GetObject("Carte" + "PlusMinus" + (i + 1));
             }
             for (int i = 0; i < TabNormalCards.Length; i++)
             {
