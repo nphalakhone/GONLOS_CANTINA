@@ -29,5 +29,13 @@ namespace Projet_GONLO
         {
             this.Close();
         }
+
+        private void BtnEllLoad_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoadForm load = new LoadForm();
+            load.ShowDialog();
+            this.Close();
+        }
     }
 }
