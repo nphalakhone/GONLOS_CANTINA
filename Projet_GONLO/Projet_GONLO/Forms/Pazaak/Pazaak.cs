@@ -143,7 +143,11 @@ namespace Projet_GONLO
         private void FindWinner()
         {
 
-            if (AiPoints < 20 && PlayerPoints < 20)
+            if (AiPoints == PlayerPoints)
+            {
+                MessageBox.Show("Egalite");
+            }
+               else if (AiPoints < 20 && PlayerPoints < 20)
             {
                 if (differenceFrom20(AiPoints) < differenceFrom20(PlayerPoints))
                 {
