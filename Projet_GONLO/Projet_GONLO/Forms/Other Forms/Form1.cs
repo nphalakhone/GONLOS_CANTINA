@@ -117,10 +117,14 @@ namespace Projet_GONLO
         private void BtnEllPlayPazaak_Click(object sender, EventArgs e)
         {
             Hide();
-            Pazaak newPazaakGame = new Pazaak();
-            newPazaakGame.ShowDialog();
+            PazaakCardsSelector pazaakCards = new PazaakCardsSelector();
+            pazaakCards.ShowDialog();
             this.Close();
-            
+            //Hide();
+            //Pazaak newPazaakGame = new Pazaak();
+            //newPazaakGame.ShowDialog();
+            //this.Close();
+
         }
 
         private void BtnEllPlayDejarik_Click(object sender, EventArgs e)

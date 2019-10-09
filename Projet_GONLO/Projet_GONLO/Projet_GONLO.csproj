@@ -52,62 +52,62 @@
     <Compile Include="ButtonEllipse.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Cards.cs" />
-    <Compile Include="CreationPerso.cs">
+    <Compile Include="Classes\Pazaak\Cards.cs" />
+    <Compile Include="Forms\Charac Creator\CreationPerso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreationPerso.Designer.cs">
+    <Compile Include="Forms\Charac Creator\CreationPerso.Designer.cs">
       <DependentUpon>CreationPerso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dejarik.cs">
+    <Compile Include="Forms\Dejarik\Dejarik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dejarik.Designer.cs">
+    <Compile Include="Forms\Dejarik\Dejarik.Designer.cs">
       <DependentUpon>Dejarik.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\Other Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Other Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedNamesList.cs" />
-    <Compile Include="LoadForm.cs">
+    <Compile Include="Classes\Charac Creator\GeneratedNamesList.cs" />
+    <Compile Include="Forms\Other Forms\LoadForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoadForm.Designer.cs">
+    <Compile Include="Forms\Other Forms\LoadForm.Designer.cs">
       <DependentUpon>LoadForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogiqueBouton.cs" />
-    <Compile Include="MenuDejarik.cs">
+    <Compile Include="Classes\Dejarik\LogiqueBouton.cs" />
+    <Compile Include="Forms\Dejarik\MenuDejarik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuDejarik.Designer.cs">
+    <Compile Include="Forms\Dejarik\MenuDejarik.Designer.cs">
       <DependentUpon>MenuDejarik.cs</DependentUpon>
     </Compile>
-    <Compile Include="Monster.cs" />
-    <Compile Include="PazaakCardsSelector.cs">
+    <Compile Include="Classes\Dejarik\Monster.cs" />
+    <Compile Include="Forms\Pazaak\PazaakCardsSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PazaakCardsSelector.Designer.cs">
+    <Compile Include="Forms\Pazaak\PazaakCardsSelector.Designer.cs">
       <DependentUpon>PazaakCardsSelector.cs</DependentUpon>
     </Compile>
-    <Compile Include="Player.cs" />
-    <Compile Include="Pazaak.cs">
+    <Compile Include="Classes\Charac Creator\Player.cs" />
+    <Compile Include="Forms\Pazaak\Pazaak.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pazaak.Designer.cs">
+    <Compile Include="Forms\Pazaak\Pazaak.Designer.cs">
       <DependentUpon>Pazaak.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoundPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="StartForm.cs">
+    <Compile Include="Forms\Other Forms\StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartForm.Designer.cs">
+    <Compile Include="Forms\Other Forms\StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="textBox.cs">
@@ -116,26 +116,26 @@
     <Compile Include="textBox.Designer.cs">
       <DependentUpon>textBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tile.cs" />
-    <EmbeddedResource Include="CreationPerso.resx">
+    <Compile Include="Classes\Dejarik\Tile.cs" />
+    <EmbeddedResource Include="Forms\Charac Creator\CreationPerso.resx">
       <DependentUpon>CreationPerso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dejarik.resx">
+    <EmbeddedResource Include="Forms\Dejarik\Dejarik.resx">
       <DependentUpon>Dejarik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms\Other Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoadForm.resx">
+    <EmbeddedResource Include="Forms\Other Forms\LoadForm.resx">
       <DependentUpon>LoadForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuDejarik.resx">
+    <EmbeddedResource Include="Forms\Dejarik\MenuDejarik.resx">
       <DependentUpon>MenuDejarik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pazaak.resx">
+    <EmbeddedResource Include="Forms\Pazaak\Pazaak.resx">
       <DependentUpon>Pazaak.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PazaakCardsSelector.resx">
+    <EmbeddedResource Include="Forms\Pazaak\PazaakCardsSelector.resx">
       <DependentUpon>PazaakCardsSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -148,7 +148,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="StartForm.resx">
+    <EmbeddedResource Include="Forms\Other Forms\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="textBox.resx">
@@ -249,5 +249,6 @@
     <None Include="Resources\backButton1.jpg" />
     <None Include="Resources\Slippery_Slopes_Cantina.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
