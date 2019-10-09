@@ -71,6 +71,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneratedNamesList.cs" />
     <Compile Include="LogiqueBouton.cs" />
     <Compile Include="MenuDejarik.cs">
       <SubType>Form</SubType>
