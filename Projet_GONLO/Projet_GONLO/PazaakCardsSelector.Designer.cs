@@ -30,6 +30,9 @@
         {
             this.RPnlPlus1 = new Projet_GONLO.RoundPanel();
             this.GBoxAvailableCards = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.RPnlMinus6 = new Projet_GONLO.RoundPanel();
             this.RPnlMinus5 = new Projet_GONLO.RoundPanel();
@@ -49,6 +52,7 @@
             this.RPnlPlusMinus1 = new Projet_GONLO.RoundPanel();
             this.RPnlPlus2 = new Projet_GONLO.RoundPanel();
             this.GBoxDeckCards = new System.Windows.Forms.GroupBox();
+            this.BtnEllReady = new Projet_GONLO.ButtonEllipse();
             this.roundPanel17 = new Projet_GONLO.RoundPanel();
             this.roundPanel19 = new Projet_GONLO.RoundPanel();
             this.roundPanel23 = new Projet_GONLO.RoundPanel();
@@ -59,10 +63,6 @@
             this.roundPanel20 = new Projet_GONLO.RoundPanel();
             this.roundPanel26 = new Projet_GONLO.RoundPanel();
             this.roundPanel18 = new Projet_GONLO.RoundPanel();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.BtnEllReady = new Projet_GONLO.ButtonEllipse();
             this.GBoxAvailableCards.SuspendLayout();
             this.GBoxDeckCards.SuspendLayout();
             this.SuspendLayout();
@@ -115,6 +115,36 @@
             this.GBoxAvailableCards.TabIndex = 2;
             this.GBoxAvailableCards.TabStop = false;
             this.GBoxAvailableCards.Text = "Available cards";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(315, 35);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(104, 14);
+            this.label32.TabIndex = 47;
+            this.label32.Text = "minus cards";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(180, 35);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(94, 14);
+            this.label31.TabIndex = 46;
+            this.label31.Text = "plus minus";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(198, 49);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(55, 14);
+            this.label30.TabIndex = 45;
+            this.label30.Text = "cards";
             // 
             // label24
             // 
@@ -354,6 +384,21 @@
             this.GBoxDeckCards.TabStop = false;
             this.GBoxDeckCards.Text = "Chosen cards";
             // 
+            // BtnEllReady
+            // 
+            this.BtnEllReady.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded2;
+            this.BtnEllReady.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllReady.FlatAppearance.BorderSize = 0;
+            this.BtnEllReady.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEllReady.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllReady.Location = new System.Drawing.Point(66, 682);
+            this.BtnEllReady.Name = "BtnEllReady";
+            this.BtnEllReady.Size = new System.Drawing.Size(186, 58);
+            this.BtnEllReady.TabIndex = 49;
+            this.BtnEllReady.Text = "Ready";
+            this.BtnEllReady.UseVisualStyleBackColor = true;
+            this.BtnEllReady.Click += new System.EventHandler(this.BtnEllReady_Click);
+            // 
             // roundPanel17
             // 
             this.roundPanel17.BackColor = System.Drawing.Color.Transparent;
@@ -463,50 +508,6 @@
             this.roundPanel18.Name = "roundPanel18";
             this.roundPanel18.Size = new System.Drawing.Size(75, 90);
             this.roundPanel18.TabIndex = 37;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(198, 49);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(55, 14);
-            this.label30.TabIndex = 45;
-            this.label30.Text = "cards";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(180, 35);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(94, 14);
-            this.label31.TabIndex = 46;
-            this.label31.Text = "plus minus";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(315, 35);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(104, 14);
-            this.label32.TabIndex = 47;
-            this.label32.Text = "minus cards";
-            // 
-            // BtnEllReady
-            // 
-            this.BtnEllReady.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded2;
-            this.BtnEllReady.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnEllReady.FlatAppearance.BorderSize = 0;
-            this.BtnEllReady.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEllReady.ForeColor = System.Drawing.Color.LimeGreen;
-            this.BtnEllReady.Location = new System.Drawing.Point(66, 682);
-            this.BtnEllReady.Name = "BtnEllReady";
-            this.BtnEllReady.Size = new System.Drawing.Size(186, 58);
-            this.BtnEllReady.TabIndex = 49;
-            this.BtnEllReady.Text = "Ready";
-            this.BtnEllReady.UseVisualStyleBackColor = true;
             // 
             // PazaakCardsSelector
             // 
