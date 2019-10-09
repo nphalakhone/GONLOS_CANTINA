@@ -53,16 +53,16 @@
             this.RPnlPlus2 = new Projet_GONLO.RoundPanel();
             this.GBoxDeckCards = new System.Windows.Forms.GroupBox();
             this.BtnEllReady = new Projet_GONLO.ButtonEllipse();
-            this.roundPanel17 = new Projet_GONLO.RoundPanel();
-            this.roundPanel19 = new Projet_GONLO.RoundPanel();
-            this.roundPanel23 = new Projet_GONLO.RoundPanel();
-            this.roundPanel22 = new Projet_GONLO.RoundPanel();
-            this.roundPanel24 = new Projet_GONLO.RoundPanel();
-            this.roundPanel21 = new Projet_GONLO.RoundPanel();
-            this.roundPanel25 = new Projet_GONLO.RoundPanel();
-            this.roundPanel20 = new Projet_GONLO.RoundPanel();
-            this.roundPanel26 = new Projet_GONLO.RoundPanel();
-            this.roundPanel18 = new Projet_GONLO.RoundPanel();
+            this.RPnlPlayerDC9 = new Projet_GONLO.RoundPanel();
+            this.RPnlPlayerDC4 = new Projet_GONLO.RoundPanel();
+            this.RPnlPlayerDC6 = new Projet_GONLO.RoundPanel();
+            this.RPnlPlayerDC1 = new Projet_GONLO.RoundPanel();
+            this.RPnlPlayerDC7 = new Projet_GONLO.RoundPanel();
+            this.RPnlPlayerDC2 = new Projet_GONLO.RoundPanel();
+            this.RPnlPlayerDC8 = new Projet_GONLO.RoundPanel();
+            this.RPnlPlayerDC3 = new Projet_GONLO.RoundPanel();
+            this.RPnlPlayerDC10 = new Projet_GONLO.RoundPanel();
+            this.RPnlPlayerDC5 = new Projet_GONLO.RoundPanel();
             this.GBoxAvailableCards.SuspendLayout();
             this.GBoxDeckCards.SuspendLayout();
             this.SuspendLayout();
@@ -73,12 +73,13 @@
             this.RPnlPlus1.BackgroundImage = global::Projet_GONLO.Properties.Resources.CartePlus1;
             this.RPnlPlus1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlPlus1.BorderColor = System.Drawing.Color.Black;
+            this.RPnlPlus1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlus1.Edge = 20;
             this.RPnlPlus1.Location = new System.Drawing.Point(48, 66);
             this.RPnlPlus1.Name = "RPnlPlus1";
             this.RPnlPlus1.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlus1.TabIndex = 1;
-            this.RPnlPlus1.Paint += new System.Windows.Forms.PaintEventHandler(this.RPnl1Plus_Paint);
+            this.RPnlPlus1.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // GBoxAvailableCards
             // 
@@ -162,11 +163,13 @@
             this.RPnlMinus6.BackgroundImage = global::Projet_GONLO.Properties.Resources.CarteMinus6;
             this.RPnlMinus6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlMinus6.BorderColor = System.Drawing.Color.Black;
+            this.RPnlMinus6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlMinus6.Edge = 20;
             this.RPnlMinus6.Location = new System.Drawing.Point(325, 650);
             this.RPnlMinus6.Name = "RPnlMinus6";
             this.RPnlMinus6.Size = new System.Drawing.Size(75, 90);
             this.RPnlMinus6.TabIndex = 33;
+            this.RPnlMinus6.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlMinus5
             // 
@@ -174,11 +177,13 @@
             this.RPnlMinus5.BackgroundImage = global::Projet_GONLO.Properties.Resources.CarteMinus5;
             this.RPnlMinus5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlMinus5.BorderColor = System.Drawing.Color.White;
+            this.RPnlMinus5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlMinus5.Edge = 20;
             this.RPnlMinus5.Location = new System.Drawing.Point(325, 533);
             this.RPnlMinus5.Name = "RPnlMinus5";
             this.RPnlMinus5.Size = new System.Drawing.Size(75, 90);
             this.RPnlMinus5.TabIndex = 37;
+            this.RPnlMinus5.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlMinus4
             // 
@@ -186,11 +191,13 @@
             this.RPnlMinus4.BackgroundImage = global::Projet_GONLO.Properties.Resources.CarteMinus4;
             this.RPnlMinus4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlMinus4.BorderColor = System.Drawing.Color.White;
+            this.RPnlMinus4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlMinus4.Edge = 20;
             this.RPnlMinus4.Location = new System.Drawing.Point(325, 417);
             this.RPnlMinus4.Name = "RPnlMinus4";
             this.RPnlMinus4.Size = new System.Drawing.Size(75, 90);
             this.RPnlMinus4.TabIndex = 36;
+            this.RPnlMinus4.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlMinus3
             // 
@@ -198,11 +205,13 @@
             this.RPnlMinus3.BackgroundImage = global::Projet_GONLO.Properties.Resources.CarteMinus3;
             this.RPnlMinus3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlMinus3.BorderColor = System.Drawing.Color.White;
+            this.RPnlMinus3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlMinus3.Edge = 20;
             this.RPnlMinus3.Location = new System.Drawing.Point(325, 300);
             this.RPnlMinus3.Name = "RPnlMinus3";
             this.RPnlMinus3.Size = new System.Drawing.Size(75, 90);
             this.RPnlMinus3.TabIndex = 35;
+            this.RPnlMinus3.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlMinus2
             // 
@@ -210,11 +219,13 @@
             this.RPnlMinus2.BackgroundImage = global::Projet_GONLO.Properties.Resources.CarteMinus2;
             this.RPnlMinus2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlMinus2.BorderColor = System.Drawing.Color.White;
+            this.RPnlMinus2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlMinus2.Edge = 20;
             this.RPnlMinus2.Location = new System.Drawing.Point(325, 183);
             this.RPnlMinus2.Name = "RPnlMinus2";
             this.RPnlMinus2.Size = new System.Drawing.Size(75, 90);
             this.RPnlMinus2.TabIndex = 34;
+            this.RPnlMinus2.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlMinus1
             // 
@@ -222,11 +233,13 @@
             this.RPnlMinus1.BackgroundImage = global::Projet_GONLO.Properties.Resources.CarteMinus1;
             this.RPnlMinus1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlMinus1.BorderColor = System.Drawing.Color.Black;
+            this.RPnlMinus1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlMinus1.Edge = 20;
             this.RPnlMinus1.Location = new System.Drawing.Point(325, 66);
             this.RPnlMinus1.Name = "RPnlMinus1";
             this.RPnlMinus1.Size = new System.Drawing.Size(75, 90);
             this.RPnlMinus1.TabIndex = 32;
+            this.RPnlMinus1.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlPlusMinus6
             // 
@@ -234,11 +247,13 @@
             this.RPnlPlusMinus6.BackgroundImage = global::Projet_GONLO.Properties.Resources.CartePlusMinus6;
             this.RPnlPlusMinus6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlPlusMinus6.BorderColor = System.Drawing.Color.Black;
+            this.RPnlPlusMinus6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlusMinus6.Edge = 20;
             this.RPnlPlusMinus6.Location = new System.Drawing.Point(187, 650);
             this.RPnlPlusMinus6.Name = "RPnlPlusMinus6";
             this.RPnlPlusMinus6.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlusMinus6.TabIndex = 33;
+            this.RPnlPlusMinus6.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlPlus6
             // 
@@ -246,11 +261,13 @@
             this.RPnlPlus6.BackgroundImage = global::Projet_GONLO.Properties.Resources.CartePlus6;
             this.RPnlPlus6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlPlus6.BorderColor = System.Drawing.Color.Black;
+            this.RPnlPlus6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlus6.Edge = 20;
             this.RPnlPlus6.Location = new System.Drawing.Point(48, 650);
             this.RPnlPlus6.Name = "RPnlPlus6";
             this.RPnlPlus6.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlus6.TabIndex = 2;
+            this.RPnlPlus6.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlPlusMinus5
             // 
@@ -258,11 +275,13 @@
             this.RPnlPlusMinus5.BackgroundImage = global::Projet_GONLO.Properties.Resources.CartePlusMinus5;
             this.RPnlPlusMinus5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlPlusMinus5.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlusMinus5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlusMinus5.Edge = 20;
             this.RPnlPlusMinus5.Location = new System.Drawing.Point(187, 533);
             this.RPnlPlusMinus5.Name = "RPnlPlusMinus5";
             this.RPnlPlusMinus5.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlusMinus5.TabIndex = 37;
+            this.RPnlPlusMinus5.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlPlusMinus4
             // 
@@ -270,11 +289,13 @@
             this.RPnlPlusMinus4.BackgroundImage = global::Projet_GONLO.Properties.Resources.CartePlusMinus4;
             this.RPnlPlusMinus4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlPlusMinus4.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlusMinus4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlusMinus4.Edge = 20;
             this.RPnlPlusMinus4.Location = new System.Drawing.Point(187, 417);
             this.RPnlPlusMinus4.Name = "RPnlPlusMinus4";
             this.RPnlPlusMinus4.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlusMinus4.TabIndex = 36;
+            this.RPnlPlusMinus4.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlPlus5
             // 
@@ -282,11 +303,13 @@
             this.RPnlPlus5.BackgroundImage = global::Projet_GONLO.Properties.Resources.CartePlus5;
             this.RPnlPlus5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlPlus5.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlus5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlus5.Edge = 20;
             this.RPnlPlus5.Location = new System.Drawing.Point(48, 533);
             this.RPnlPlus5.Name = "RPnlPlus5";
             this.RPnlPlus5.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlus5.TabIndex = 5;
+            this.RPnlPlus5.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlPlusMinus3
             // 
@@ -294,11 +317,13 @@
             this.RPnlPlusMinus3.BackgroundImage = global::Projet_GONLO.Properties.Resources.CartePlusMinus3;
             this.RPnlPlusMinus3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlPlusMinus3.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlusMinus3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlusMinus3.Edge = 20;
             this.RPnlPlusMinus3.Location = new System.Drawing.Point(187, 300);
             this.RPnlPlusMinus3.Name = "RPnlPlusMinus3";
             this.RPnlPlusMinus3.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlusMinus3.TabIndex = 35;
+            this.RPnlPlusMinus3.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlPlus4
             // 
@@ -306,11 +331,13 @@
             this.RPnlPlus4.BackgroundImage = global::Projet_GONLO.Properties.Resources.CartePlus4;
             this.RPnlPlus4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlPlus4.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlus4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlus4.Edge = 20;
             this.RPnlPlus4.Location = new System.Drawing.Point(48, 417);
             this.RPnlPlus4.Name = "RPnlPlus4";
             this.RPnlPlus4.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlus4.TabIndex = 4;
+            this.RPnlPlus4.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlPlusMinus2
             // 
@@ -318,11 +345,13 @@
             this.RPnlPlusMinus2.BackgroundImage = global::Projet_GONLO.Properties.Resources.CartePlusMinus2;
             this.RPnlPlusMinus2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlPlusMinus2.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlusMinus2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlusMinus2.Edge = 20;
             this.RPnlPlusMinus2.Location = new System.Drawing.Point(187, 183);
             this.RPnlPlusMinus2.Name = "RPnlPlusMinus2";
             this.RPnlPlusMinus2.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlusMinus2.TabIndex = 34;
+            this.RPnlPlusMinus2.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlPlus3
             // 
@@ -330,11 +359,13 @@
             this.RPnlPlus3.BackgroundImage = global::Projet_GONLO.Properties.Resources.CartePlus3;
             this.RPnlPlus3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlPlus3.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlus3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlus3.Edge = 20;
             this.RPnlPlus3.Location = new System.Drawing.Point(48, 300);
             this.RPnlPlus3.Name = "RPnlPlus3";
             this.RPnlPlus3.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlus3.TabIndex = 3;
+            this.RPnlPlus3.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlPlusMinus1
             // 
@@ -342,11 +373,13 @@
             this.RPnlPlusMinus1.BackgroundImage = global::Projet_GONLO.Properties.Resources.CartePlusMinus1;
             this.RPnlPlusMinus1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlPlusMinus1.BorderColor = System.Drawing.Color.Black;
+            this.RPnlPlusMinus1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlusMinus1.Edge = 20;
             this.RPnlPlusMinus1.Location = new System.Drawing.Point(187, 66);
             this.RPnlPlusMinus1.Name = "RPnlPlusMinus1";
             this.RPnlPlusMinus1.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlusMinus1.TabIndex = 32;
+            this.RPnlPlusMinus1.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // RPnlPlus2
             // 
@@ -354,27 +387,29 @@
             this.RPnlPlus2.BackgroundImage = global::Projet_GONLO.Properties.Resources.CartePlus2;
             this.RPnlPlus2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RPnlPlus2.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlus2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlus2.Edge = 20;
             this.RPnlPlus2.Location = new System.Drawing.Point(48, 183);
             this.RPnlPlus2.Name = "RPnlPlus2";
             this.RPnlPlus2.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlus2.TabIndex = 2;
+            this.RPnlPlus2.Click += new System.EventHandler(this.AddAvailableCards_Click);
             // 
             // GBoxDeckCards
             // 
             this.GBoxDeckCards.BackColor = System.Drawing.Color.Transparent;
             this.GBoxDeckCards.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GBoxDeckCards.Controls.Add(this.BtnEllReady);
-            this.GBoxDeckCards.Controls.Add(this.roundPanel17);
-            this.GBoxDeckCards.Controls.Add(this.roundPanel19);
-            this.GBoxDeckCards.Controls.Add(this.roundPanel23);
-            this.GBoxDeckCards.Controls.Add(this.roundPanel22);
-            this.GBoxDeckCards.Controls.Add(this.roundPanel24);
-            this.GBoxDeckCards.Controls.Add(this.roundPanel21);
-            this.GBoxDeckCards.Controls.Add(this.roundPanel25);
-            this.GBoxDeckCards.Controls.Add(this.roundPanel20);
-            this.GBoxDeckCards.Controls.Add(this.roundPanel26);
-            this.GBoxDeckCards.Controls.Add(this.roundPanel18);
+            this.GBoxDeckCards.Controls.Add(this.RPnlPlayerDC9);
+            this.GBoxDeckCards.Controls.Add(this.RPnlPlayerDC4);
+            this.GBoxDeckCards.Controls.Add(this.RPnlPlayerDC6);
+            this.GBoxDeckCards.Controls.Add(this.RPnlPlayerDC1);
+            this.GBoxDeckCards.Controls.Add(this.RPnlPlayerDC7);
+            this.GBoxDeckCards.Controls.Add(this.RPnlPlayerDC2);
+            this.GBoxDeckCards.Controls.Add(this.RPnlPlayerDC8);
+            this.GBoxDeckCards.Controls.Add(this.RPnlPlayerDC3);
+            this.GBoxDeckCards.Controls.Add(this.RPnlPlayerDC10);
+            this.GBoxDeckCards.Controls.Add(this.RPnlPlayerDC5);
             this.GBoxDeckCards.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBoxDeckCards.ForeColor = System.Drawing.Color.MidnightBlue;
             this.GBoxDeckCards.Location = new System.Drawing.Point(469, 12);
@@ -399,115 +434,135 @@
             this.BtnEllReady.UseVisualStyleBackColor = true;
             this.BtnEllReady.Click += new System.EventHandler(this.BtnEllReady_Click);
             // 
-            // roundPanel17
+            // RPnlPlayerDC9
             // 
-            this.roundPanel17.BackColor = System.Drawing.Color.Transparent;
-            this.roundPanel17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundPanel17.BorderColor = System.Drawing.Color.White;
-            this.roundPanel17.Edge = 20;
-            this.roundPanel17.Location = new System.Drawing.Point(177, 441);
-            this.roundPanel17.Name = "roundPanel17";
-            this.roundPanel17.Size = new System.Drawing.Size(75, 90);
-            this.roundPanel17.TabIndex = 47;
+            this.RPnlPlayerDC9.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlPlayerDC9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlPlayerDC9.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlayerDC9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RPnlPlayerDC9.Edge = 20;
+            this.RPnlPlayerDC9.Location = new System.Drawing.Point(177, 441);
+            this.RPnlPlayerDC9.Name = "RPnlPlayerDC9";
+            this.RPnlPlayerDC9.Size = new System.Drawing.Size(75, 90);
+            this.RPnlPlayerDC9.TabIndex = 47;
+            this.RPnlPlayerDC9.Click += new System.EventHandler(this.RemoveDeckCards);
             // 
-            // roundPanel19
+            // RPnlPlayerDC4
             // 
-            this.roundPanel19.BackColor = System.Drawing.Color.Transparent;
-            this.roundPanel19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundPanel19.BorderColor = System.Drawing.Color.White;
-            this.roundPanel19.Edge = 20;
-            this.roundPanel19.Location = new System.Drawing.Point(66, 441);
-            this.roundPanel19.Name = "roundPanel19";
-            this.roundPanel19.Size = new System.Drawing.Size(75, 90);
-            this.roundPanel19.TabIndex = 36;
+            this.RPnlPlayerDC4.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlPlayerDC4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlPlayerDC4.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlayerDC4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RPnlPlayerDC4.Edge = 20;
+            this.RPnlPlayerDC4.Location = new System.Drawing.Point(66, 441);
+            this.RPnlPlayerDC4.Name = "RPnlPlayerDC4";
+            this.RPnlPlayerDC4.Size = new System.Drawing.Size(75, 90);
+            this.RPnlPlayerDC4.TabIndex = 36;
+            this.RPnlPlayerDC4.Click += new System.EventHandler(this.RemoveDeckCards);
             // 
-            // roundPanel23
+            // RPnlPlayerDC6
             // 
-            this.roundPanel23.BackColor = System.Drawing.Color.Transparent;
-            this.roundPanel23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundPanel23.BorderColor = System.Drawing.Color.Black;
-            this.roundPanel23.Edge = 20;
-            this.roundPanel23.Location = new System.Drawing.Point(177, 90);
-            this.roundPanel23.Name = "roundPanel23";
-            this.roundPanel23.Size = new System.Drawing.Size(75, 90);
-            this.roundPanel23.TabIndex = 44;
+            this.RPnlPlayerDC6.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlPlayerDC6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlPlayerDC6.BorderColor = System.Drawing.Color.Black;
+            this.RPnlPlayerDC6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RPnlPlayerDC6.Edge = 20;
+            this.RPnlPlayerDC6.Location = new System.Drawing.Point(177, 90);
+            this.RPnlPlayerDC6.Name = "RPnlPlayerDC6";
+            this.RPnlPlayerDC6.Size = new System.Drawing.Size(75, 90);
+            this.RPnlPlayerDC6.TabIndex = 44;
+            this.RPnlPlayerDC6.Click += new System.EventHandler(this.RemoveDeckCards);
             // 
-            // roundPanel22
+            // RPnlPlayerDC1
             // 
-            this.roundPanel22.BackColor = System.Drawing.Color.Transparent;
-            this.roundPanel22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundPanel22.BorderColor = System.Drawing.Color.Black;
-            this.roundPanel22.Edge = 20;
-            this.roundPanel22.Location = new System.Drawing.Point(66, 90);
-            this.roundPanel22.Name = "roundPanel22";
-            this.roundPanel22.Size = new System.Drawing.Size(75, 90);
-            this.roundPanel22.TabIndex = 32;
+            this.RPnlPlayerDC1.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlPlayerDC1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlPlayerDC1.BorderColor = System.Drawing.Color.Black;
+            this.RPnlPlayerDC1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RPnlPlayerDC1.Edge = 20;
+            this.RPnlPlayerDC1.Location = new System.Drawing.Point(66, 90);
+            this.RPnlPlayerDC1.Name = "RPnlPlayerDC1";
+            this.RPnlPlayerDC1.Size = new System.Drawing.Size(75, 90);
+            this.RPnlPlayerDC1.TabIndex = 32;
+            this.RPnlPlayerDC1.Click += new System.EventHandler(this.RemoveDeckCards);
             // 
-            // roundPanel24
+            // RPnlPlayerDC7
             // 
-            this.roundPanel24.BackColor = System.Drawing.Color.Transparent;
-            this.roundPanel24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundPanel24.BorderColor = System.Drawing.Color.White;
-            this.roundPanel24.Edge = 20;
-            this.roundPanel24.Location = new System.Drawing.Point(177, 207);
-            this.roundPanel24.Name = "roundPanel24";
-            this.roundPanel24.Size = new System.Drawing.Size(75, 90);
-            this.roundPanel24.TabIndex = 45;
+            this.RPnlPlayerDC7.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlPlayerDC7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlPlayerDC7.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlayerDC7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RPnlPlayerDC7.Edge = 20;
+            this.RPnlPlayerDC7.Location = new System.Drawing.Point(177, 207);
+            this.RPnlPlayerDC7.Name = "RPnlPlayerDC7";
+            this.RPnlPlayerDC7.Size = new System.Drawing.Size(75, 90);
+            this.RPnlPlayerDC7.TabIndex = 45;
+            this.RPnlPlayerDC7.Click += new System.EventHandler(this.RemoveDeckCards);
             // 
-            // roundPanel21
+            // RPnlPlayerDC2
             // 
-            this.roundPanel21.BackColor = System.Drawing.Color.Transparent;
-            this.roundPanel21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundPanel21.BorderColor = System.Drawing.Color.White;
-            this.roundPanel21.Edge = 20;
-            this.roundPanel21.Location = new System.Drawing.Point(66, 207);
-            this.roundPanel21.Name = "roundPanel21";
-            this.roundPanel21.Size = new System.Drawing.Size(75, 90);
-            this.roundPanel21.TabIndex = 34;
+            this.RPnlPlayerDC2.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlPlayerDC2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlPlayerDC2.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlayerDC2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RPnlPlayerDC2.Edge = 20;
+            this.RPnlPlayerDC2.Location = new System.Drawing.Point(66, 207);
+            this.RPnlPlayerDC2.Name = "RPnlPlayerDC2";
+            this.RPnlPlayerDC2.Size = new System.Drawing.Size(75, 90);
+            this.RPnlPlayerDC2.TabIndex = 34;
+            this.RPnlPlayerDC2.Click += new System.EventHandler(this.RemoveDeckCards);
             // 
-            // roundPanel25
+            // RPnlPlayerDC8
             // 
-            this.roundPanel25.BackColor = System.Drawing.Color.Transparent;
-            this.roundPanel25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundPanel25.BorderColor = System.Drawing.Color.White;
-            this.roundPanel25.Edge = 20;
-            this.roundPanel25.Location = new System.Drawing.Point(177, 324);
-            this.roundPanel25.Name = "roundPanel25";
-            this.roundPanel25.Size = new System.Drawing.Size(75, 90);
-            this.roundPanel25.TabIndex = 46;
+            this.RPnlPlayerDC8.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlPlayerDC8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlPlayerDC8.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlayerDC8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RPnlPlayerDC8.Edge = 20;
+            this.RPnlPlayerDC8.Location = new System.Drawing.Point(177, 324);
+            this.RPnlPlayerDC8.Name = "RPnlPlayerDC8";
+            this.RPnlPlayerDC8.Size = new System.Drawing.Size(75, 90);
+            this.RPnlPlayerDC8.TabIndex = 46;
+            this.RPnlPlayerDC8.Click += new System.EventHandler(this.RemoveDeckCards);
             // 
-            // roundPanel20
+            // RPnlPlayerDC3
             // 
-            this.roundPanel20.BackColor = System.Drawing.Color.Transparent;
-            this.roundPanel20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundPanel20.BorderColor = System.Drawing.Color.White;
-            this.roundPanel20.Edge = 20;
-            this.roundPanel20.Location = new System.Drawing.Point(66, 324);
-            this.roundPanel20.Name = "roundPanel20";
-            this.roundPanel20.Size = new System.Drawing.Size(75, 90);
-            this.roundPanel20.TabIndex = 35;
+            this.RPnlPlayerDC3.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlPlayerDC3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlPlayerDC3.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlayerDC3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RPnlPlayerDC3.Edge = 20;
+            this.RPnlPlayerDC3.Location = new System.Drawing.Point(66, 324);
+            this.RPnlPlayerDC3.Name = "RPnlPlayerDC3";
+            this.RPnlPlayerDC3.Size = new System.Drawing.Size(75, 90);
+            this.RPnlPlayerDC3.TabIndex = 35;
+            this.RPnlPlayerDC3.Click += new System.EventHandler(this.RemoveDeckCards);
             // 
-            // roundPanel26
+            // RPnlPlayerDC10
             // 
-            this.roundPanel26.BackColor = System.Drawing.Color.Transparent;
-            this.roundPanel26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundPanel26.BorderColor = System.Drawing.Color.White;
-            this.roundPanel26.Edge = 20;
-            this.roundPanel26.Location = new System.Drawing.Point(177, 557);
-            this.roundPanel26.Name = "roundPanel26";
-            this.roundPanel26.Size = new System.Drawing.Size(75, 90);
-            this.roundPanel26.TabIndex = 48;
+            this.RPnlPlayerDC10.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlPlayerDC10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlPlayerDC10.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlayerDC10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RPnlPlayerDC10.Edge = 20;
+            this.RPnlPlayerDC10.Location = new System.Drawing.Point(177, 557);
+            this.RPnlPlayerDC10.Name = "RPnlPlayerDC10";
+            this.RPnlPlayerDC10.Size = new System.Drawing.Size(75, 90);
+            this.RPnlPlayerDC10.TabIndex = 48;
+            this.RPnlPlayerDC10.Click += new System.EventHandler(this.RemoveDeckCards);
             // 
-            // roundPanel18
+            // RPnlPlayerDC5
             // 
-            this.roundPanel18.BackColor = System.Drawing.Color.Transparent;
-            this.roundPanel18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.roundPanel18.BorderColor = System.Drawing.Color.White;
-            this.roundPanel18.Edge = 20;
-            this.roundPanel18.Location = new System.Drawing.Point(66, 557);
-            this.roundPanel18.Name = "roundPanel18";
-            this.roundPanel18.Size = new System.Drawing.Size(75, 90);
-            this.roundPanel18.TabIndex = 37;
+            this.RPnlPlayerDC5.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlPlayerDC5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RPnlPlayerDC5.BorderColor = System.Drawing.Color.White;
+            this.RPnlPlayerDC5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RPnlPlayerDC5.Edge = 20;
+            this.RPnlPlayerDC5.Location = new System.Drawing.Point(66, 557);
+            this.RPnlPlayerDC5.Name = "RPnlPlayerDC5";
+            this.RPnlPlayerDC5.Size = new System.Drawing.Size(75, 90);
+            this.RPnlPlayerDC5.TabIndex = 37;
+            this.RPnlPlayerDC5.Click += new System.EventHandler(this.RemoveDeckCards);
             // 
             // PazaakCardsSelector
             // 
@@ -522,6 +577,7 @@
             this.Name = "PazaakCardsSelector";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PazaakCardsSelector";
+            this.Load += new System.EventHandler(this.PazaakCardsSelector_Load);
             this.GBoxAvailableCards.ResumeLayout(false);
             this.GBoxAvailableCards.PerformLayout();
             this.GBoxDeckCards.ResumeLayout(false);
@@ -552,16 +608,16 @@
         private RoundPanel RPnlPlus3;
         private RoundPanel RPnlPlusMinus1;
         private RoundPanel RPnlPlus2;
-        private RoundPanel roundPanel17;
-        private RoundPanel roundPanel19;
-        private RoundPanel roundPanel23;
-        private RoundPanel roundPanel22;
-        private RoundPanel roundPanel24;
-        private RoundPanel roundPanel21;
-        private RoundPanel roundPanel25;
-        private RoundPanel roundPanel20;
-        private RoundPanel roundPanel26;
-        private RoundPanel roundPanel18;
+        private RoundPanel RPnlPlayerDC9;
+        private RoundPanel RPnlPlayerDC4;
+        private RoundPanel RPnlPlayerDC6;
+        private RoundPanel RPnlPlayerDC1;
+        private RoundPanel RPnlPlayerDC7;
+        private RoundPanel RPnlPlayerDC2;
+        private RoundPanel RPnlPlayerDC8;
+        private RoundPanel RPnlPlayerDC3;
+        private RoundPanel RPnlPlayerDC10;
+        private RoundPanel RPnlPlayerDC5;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
