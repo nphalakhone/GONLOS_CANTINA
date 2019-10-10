@@ -1131,6 +1131,7 @@
             this.BtnGenName.TabIndex = 10;
             this.BtnGenName.Text = "Generate random name";
             this.BtnGenName.UseVisualStyleBackColor = false;
+            this.BtnGenName.Click += new System.EventHandler(this.BtnGenName_Click);
             // 
             // CBoxFemale
             // 

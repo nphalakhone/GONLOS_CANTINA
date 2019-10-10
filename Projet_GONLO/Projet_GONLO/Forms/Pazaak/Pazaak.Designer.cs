@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.RPnlForfeitGame = new Projet_GONLO.RoundPanel();
+            this.RPnlEndTurn = new Projet_GONLO.RoundPanel();
+            this.RPnlStand = new Projet_GONLO.RoundPanel();
             this.RPnlD9 = new Projet_GONLO.RoundPanel();
             this.RPnlD8 = new Projet_GONLO.RoundPanel();
             this.RPnlD7 = new Projet_GONLO.RoundPanel();
@@ -46,7 +49,47 @@
             this.RPnlG3 = new Projet_GONLO.RoundPanel();
             this.RPnlG2 = new Projet_GONLO.RoundPanel();
             this.RPnlG1 = new Projet_GONLO.RoundPanel();
+            this.RPnlDownG1 = new Projet_GONLO.RoundPanel();
+            this.RPnlDownG2 = new Projet_GONLO.RoundPanel();
+            this.RPnlDownG3 = new Projet_GONLO.RoundPanel();
+            this.RPnlDownG4 = new Projet_GONLO.RoundPanel();
+            this.LblPointsPlayer = new System.Windows.Forms.Label();
+            this.LblPointsAi = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // RPnlForfeitGame
+            // 
+            this.RPnlForfeitGame.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlForfeitGame.BorderColor = System.Drawing.Color.White;
+            this.RPnlForfeitGame.Edge = 20;
+            this.RPnlForfeitGame.Location = new System.Drawing.Point(525, 652);
+            this.RPnlForfeitGame.Name = "RPnlForfeitGame";
+            this.RPnlForfeitGame.Size = new System.Drawing.Size(363, 30);
+            this.RPnlForfeitGame.TabIndex = 20;
+            // 
+            // RPnlEndTurn
+            // 
+            this.RPnlEndTurn.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlEndTurn.BorderColor = System.Drawing.Color.White;
+            this.RPnlEndTurn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RPnlEndTurn.Edge = 20;
+            this.RPnlEndTurn.Location = new System.Drawing.Point(525, 618);
+            this.RPnlEndTurn.Name = "RPnlEndTurn";
+            this.RPnlEndTurn.Size = new System.Drawing.Size(175, 30);
+            this.RPnlEndTurn.TabIndex = 19;
+            this.RPnlEndTurn.Click += new System.EventHandler(this.End_Turn_Click);
+            // 
+            // RPnlStand
+            // 
+            this.RPnlStand.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlStand.BorderColor = System.Drawing.Color.White;
+            this.RPnlStand.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RPnlStand.Edge = 20;
+            this.RPnlStand.Location = new System.Drawing.Point(713, 618);
+            this.RPnlStand.Name = "RPnlStand";
+            this.RPnlStand.Size = new System.Drawing.Size(175, 30);
+            this.RPnlStand.TabIndex = 18;
+            this.RPnlStand.Click += new System.EventHandler(this.Stand_Click);
             // 
             // RPnlD9
             // 
@@ -228,6 +271,70 @@
             this.RPnlG1.Size = new System.Drawing.Size(73, 89);
             this.RPnlG1.TabIndex = 0;
             // 
+            // RPnlDownG1
+            // 
+            this.RPnlDownG1.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlDownG1.BorderColor = System.Drawing.Color.White;
+            this.RPnlDownG1.Edge = 20;
+            this.RPnlDownG1.Location = new System.Drawing.Point(115, 479);
+            this.RPnlDownG1.Name = "RPnlDownG1";
+            this.RPnlDownG1.Size = new System.Drawing.Size(73, 89);
+            this.RPnlDownG1.TabIndex = 7;
+            // 
+            // RPnlDownG2
+            // 
+            this.RPnlDownG2.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlDownG2.BorderColor = System.Drawing.Color.White;
+            this.RPnlDownG2.Edge = 20;
+            this.RPnlDownG2.Location = new System.Drawing.Point(213, 479);
+            this.RPnlDownG2.Name = "RPnlDownG2";
+            this.RPnlDownG2.Size = new System.Drawing.Size(73, 89);
+            this.RPnlDownG2.TabIndex = 8;
+            // 
+            // RPnlDownG3
+            // 
+            this.RPnlDownG3.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlDownG3.BorderColor = System.Drawing.Color.White;
+            this.RPnlDownG3.Edge = 20;
+            this.RPnlDownG3.Location = new System.Drawing.Point(308, 479);
+            this.RPnlDownG3.Name = "RPnlDownG3";
+            this.RPnlDownG3.Size = new System.Drawing.Size(73, 89);
+            this.RPnlDownG3.TabIndex = 9;
+            // 
+            // RPnlDownG4
+            // 
+            this.RPnlDownG4.BackColor = System.Drawing.Color.Transparent;
+            this.RPnlDownG4.BorderColor = System.Drawing.Color.White;
+            this.RPnlDownG4.Edge = 20;
+            this.RPnlDownG4.Location = new System.Drawing.Point(398, 479);
+            this.RPnlDownG4.Name = "RPnlDownG4";
+            this.RPnlDownG4.Size = new System.Drawing.Size(73, 89);
+            this.RPnlDownG4.TabIndex = 10;
+            // 
+            // LblPointsPlayer
+            // 
+            this.LblPointsPlayer.AutoSize = true;
+            this.LblPointsPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.LblPointsPlayer.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPointsPlayer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LblPointsPlayer.Location = new System.Drawing.Point(457, 87);
+            this.LblPointsPlayer.Name = "LblPointsPlayer";
+            this.LblPointsPlayer.Size = new System.Drawing.Size(23, 20);
+            this.LblPointsPlayer.TabIndex = 21;
+            this.LblPointsPlayer.Text = "0";
+            // 
+            // LblPointsAi
+            // 
+            this.LblPointsAi.AutoSize = true;
+            this.LblPointsAi.BackColor = System.Drawing.Color.Transparent;
+            this.LblPointsAi.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPointsAi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LblPointsAi.Location = new System.Drawing.Point(523, 87);
+            this.LblPointsAi.Name = "LblPointsAi";
+            this.LblPointsAi.Size = new System.Drawing.Size(23, 20);
+            this.LblPointsAi.TabIndex = 22;
+            this.LblPointsAi.Text = "0";
+            // 
             // Pazaak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,6 +342,15 @@
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.pazaakEmptyBoard11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1001, 750);
+            this.Controls.Add(this.LblPointsAi);
+            this.Controls.Add(this.LblPointsPlayer);
+            this.Controls.Add(this.RPnlDownG4);
+            this.Controls.Add(this.RPnlDownG3);
+            this.Controls.Add(this.RPnlDownG2);
+            this.Controls.Add(this.RPnlDownG1);
+            this.Controls.Add(this.RPnlForfeitGame);
+            this.Controls.Add(this.RPnlEndTurn);
+            this.Controls.Add(this.RPnlStand);
             this.Controls.Add(this.RPnlD9);
             this.Controls.Add(this.RPnlD8);
             this.Controls.Add(this.RPnlD7);
@@ -259,6 +375,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pazaak";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -282,5 +399,14 @@
         private RoundPanel RPnlD7;
         private RoundPanel RPnlD8;
         private RoundPanel RPnlD9;
+        private RoundPanel RPnlStand;
+        private RoundPanel RPnlEndTurn;
+        private RoundPanel RPnlForfeitGame;
+        private RoundPanel RPnlDownG1;
+        private RoundPanel RPnlDownG2;
+        private RoundPanel RPnlDownG3;
+        private RoundPanel RPnlDownG4;
+        private System.Windows.Forms.Label LblPointsPlayer;
+        private System.Windows.Forms.Label LblPointsAi;
     }
 }

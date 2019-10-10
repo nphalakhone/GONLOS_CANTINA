@@ -32,6 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.BtnEllExit = new Projet_GONLO.ButtonEllipse();
             this.BtnEllStart = new Projet_GONLO.ButtonEllipse();
+            this.BtnEllLoad = new Projet_GONLO.ButtonEllipse();
             this.SuspendLayout();
             // 
             // label1
@@ -67,7 +68,7 @@
             this.BtnEllExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllExit.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllExit.ForeColor = System.Drawing.Color.LimeGreen;
-            this.BtnEllExit.Location = new System.Drawing.Point(109, 356);
+            this.BtnEllExit.Location = new System.Drawing.Point(109, 526);
             this.BtnEllExit.Name = "BtnEllExit";
             this.BtnEllExit.Size = new System.Drawing.Size(275, 100);
             this.BtnEllExit.TabIndex = 3;
@@ -92,13 +93,31 @@
             this.BtnEllStart.UseVisualStyleBackColor = false;
             this.BtnEllStart.Click += new System.EventHandler(this.BtnEllStart_Click);
             // 
+            // BtnEllLoad
+            // 
+            this.BtnEllLoad.BackColor = System.Drawing.Color.Transparent;
+            this.BtnEllLoad.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded2;
+            this.BtnEllLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllLoad.FlatAppearance.BorderSize = 0;
+            this.BtnEllLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEllLoad.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEllLoad.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllLoad.Location = new System.Drawing.Point(109, 372);
+            this.BtnEllLoad.Name = "BtnEllLoad";
+            this.BtnEllLoad.Size = new System.Drawing.Size(275, 100);
+            this.BtnEllLoad.TabIndex = 4;
+            this.BtnEllLoad.Text = "load";
+            this.BtnEllLoad.UseVisualStyleBackColor = false;
+            this.BtnEllLoad.Click += new System.EventHandler(this.BtnEllLoad_Click);
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.StarsBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(500, 500);
+            this.ClientSize = new System.Drawing.Size(500, 674);
+            this.Controls.Add(this.BtnEllLoad);
             this.Controls.Add(this.BtnEllExit);
             this.Controls.Add(this.BtnEllStart);
             this.Controls.Add(this.label2);
@@ -119,5 +138,6 @@
         private System.Windows.Forms.Label label2;
         private ButtonEllipse BtnEllStart;
         private ButtonEllipse BtnEllExit;
+        private ButtonEllipse BtnEllLoad;
     }
 }
