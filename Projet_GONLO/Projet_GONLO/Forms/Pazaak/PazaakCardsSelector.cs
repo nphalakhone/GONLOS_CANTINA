@@ -13,6 +13,9 @@ namespace Projet_GONLO
     public partial class PazaakCardsSelector : Form
     {
         List<RoundPanel> playerDeck = new List<RoundPanel>();
+        List<int> positionCarteEnleve = new List<int>();
+        int nbCartes = 0;
+
 
         public PazaakCardsSelector()
         {
@@ -45,16 +48,26 @@ namespace Projet_GONLO
         private void AddAvailableCards_Click(object sender, EventArgs e)
         {
             RoundPanel roundPanel = sender as RoundPanel;
-            int numberCards = CheckDeck();
-            if (numberCards < 10)
+           // int numberCards = CheckDeck();
+            //MessageBox.Show(nbCartes.ToString());
+            if (nbCartes < 10)
             {
-                playerDeck.ElementAt(numberCards).BackgroundImage = roundPanel.BackgroundImage;
+                if (positionCarteEnleve.Count == 0)
+                {
+                    playerDeck.ElementAt(nbCartes).BackgroundImage = roundPanel.BackgroundImage;
+                }
+                else
+                {
+                    playerDeck.ElementAt(positionCarteEnleve.ElementAt(1)).BackgroundImage = roundPanel.BackgroundImage;
+                }
+                
+                nbCartes++;
             }
-            else if (numberCards > 8)
+            if (nbCartes == 10)
             {
                 BtnEllReady.Enabled = true;
             }
-            else
+            if (nbCartes > 10)
             {
                 MessageBox.Show("You have the maximum cards allowed");
             }
@@ -67,6 +80,9 @@ namespace Projet_GONLO
             {
                 roundPanel.BackgroundImage = null;
                 BtnEllReady.Enabled = false;
+                int pos = CheckHoleDeck();
+                //MessageBox.Show(pos.ToString());
+                positionCarteEnleve.Add(pos);
             }
         }
 
@@ -78,6 +94,7 @@ namespace Projet_GONLO
                 if (playerDeck.ElementAt(i).BackgroundImage == null)
                 {
                     index = i;
+                    return index;
                 }
             }
             return index;
