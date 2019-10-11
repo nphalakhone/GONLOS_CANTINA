@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace Projet_GONLO
 {
-    class Tile
+    public class Tile
     {
+        private List<Tile> listBouttonAttaque = new List<Tile>();
+        private List<Tile> listBouttonDeplacement = new List<Tile>();
+        private List<Tile> listBouttonAdjacent = new List<Tile>();
+
+        //Liste de tous les bouttons qui sont sur le board
+        private static List<Tile> listBouttons = new List<Tile>();
+
+        public static List<Tile> ListBouttons
+        {
+            get
+            {
+                return listBouttons;
+            }
+        }
     }
 }
