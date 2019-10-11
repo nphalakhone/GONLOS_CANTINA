@@ -122,5 +122,28 @@ namespace Projet_GONLO
                     break;
             }
         }
+
+        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dejarik newDejarik = new Dejarik();
+            newDejarik.ShowDialog();
+            this.Close();
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
