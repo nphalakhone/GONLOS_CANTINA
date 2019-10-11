@@ -230,6 +230,7 @@
     <None Include="Resources\Monsters\grimtaash.png" />
     <None Include="Resources\Monsters\Mantellian_Savrip.png" />
     <None Include="Resources\Monsters\Monnok.png" />
+    <None Include="Resources\boutonSteelDejarik.JPG" />
     <Content Include="Resources\StarsBackground.PNG" />
     <None Include="Resources\StarsBackground1.PNG" />
     <None Include="Resources\holochess-arkit.jpg" />
