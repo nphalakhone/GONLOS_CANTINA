@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -125,7 +126,13 @@ namespace Projet_GONLO
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string filepath = Environment.CurrentDirectory;
+            List<string> lines = File.ReadAllLines(filepath).ToList();
 
+            foreach (var line in lines)
+            {
+                Console.WriteLine(line);
+            }
         }
 
         private void LoadToolStripMenuItem_Click(object sender, EventArgs e)
