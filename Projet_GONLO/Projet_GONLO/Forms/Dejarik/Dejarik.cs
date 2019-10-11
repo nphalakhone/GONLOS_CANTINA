@@ -143,7 +143,7 @@ namespace Projet_GONLO
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

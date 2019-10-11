@@ -8,9 +8,10 @@ namespace Projet_GONLO
 {
     class Player
     {
-        private String _nom;
-        private String _species;
-        private String _gender;
+        private string _nom;
+        private string _species;
+        private string _gender;
+        private string _credits;
 
         public Player()
         {
