@@ -104,6 +104,19 @@ namespace Projet_GONLO
                 this.Close();
             }
         }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ReturnToMainMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            MenuAccueil menu = new MenuAccueil();
+            menu.ShowDialog();
+            this.Close();
+        }
     }
 
 }

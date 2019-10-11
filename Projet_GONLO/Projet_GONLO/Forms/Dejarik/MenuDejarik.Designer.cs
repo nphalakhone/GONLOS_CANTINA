@@ -32,6 +32,14 @@
             this.BtnMulti = new System.Windows.Forms.Button();
             this.BtnSolo = new System.Windows.Forms.Button();
             this.PnlChooseMonster = new System.Windows.Forms.Panel();
+            this.LblMonnok = new System.Windows.Forms.Label();
+            this.LblMantellian = new System.Windows.Forms.Label();
+            this.LblGrimstaash = new System.Windows.Forms.Label();
+            this.LblKlorslug = new System.Windows.Forms.Label();
+            this.LblNgok = new System.Windows.Forms.Label();
+            this.LblKintanStrider = new System.Windows.Forms.Label();
+            this.LblHoujix = new System.Windows.Forms.Label();
+            this.LblGhhhk = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnMonnok = new System.Windows.Forms.Button();
             this.BtnMantellian = new System.Windows.Forms.Button();
@@ -46,16 +54,12 @@
             this.BtnChooseDef = new System.Windows.Forms.Button();
             this.BtnChooseAtk = new System.Windows.Forms.Button();
             this.LblMenuPlayerTurn = new System.Windows.Forms.Label();
-            this.LblGhhhk = new System.Windows.Forms.Label();
-            this.LblHoujix = new System.Windows.Forms.Label();
-            this.LblKintanStrider = new System.Windows.Forms.Label();
-            this.LblNgok = new System.Windows.Forms.Label();
-            this.LblKlorslug = new System.Windows.Forms.Label();
-            this.LblGrimstaash = new System.Windows.Forms.Label();
-            this.LblMantellian = new System.Windows.Forms.Label();
-            this.LblMonnok = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.returnToMainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PnlChooseOption.SuspendLayout();
             this.PnlChooseMonster.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlChooseOption
@@ -63,9 +67,9 @@
             this.PnlChooseOption.BackColor = System.Drawing.Color.Transparent;
             this.PnlChooseOption.Controls.Add(this.BtnMulti);
             this.PnlChooseOption.Controls.Add(this.BtnSolo);
-            this.PnlChooseOption.Location = new System.Drawing.Point(12, 12);
+            this.PnlChooseOption.Location = new System.Drawing.Point(12, 27);
             this.PnlChooseOption.Name = "PnlChooseOption";
-            this.PnlChooseOption.Size = new System.Drawing.Size(1300, 500);
+            this.PnlChooseOption.Size = new System.Drawing.Size(1300, 485);
             this.PnlChooseOption.TabIndex = 1;
             // 
             // BtnMulti
@@ -118,11 +122,107 @@
             this.PnlChooseMonster.Controls.Add(this.BtnChooseDef);
             this.PnlChooseMonster.Controls.Add(this.BtnChooseAtk);
             this.PnlChooseMonster.Controls.Add(this.LblMenuPlayerTurn);
-            this.PnlChooseMonster.Location = new System.Drawing.Point(12, 12);
+            this.PnlChooseMonster.Location = new System.Drawing.Point(12, 27);
             this.PnlChooseMonster.Name = "PnlChooseMonster";
-            this.PnlChooseMonster.Size = new System.Drawing.Size(1300, 500);
+            this.PnlChooseMonster.Size = new System.Drawing.Size(1300, 485);
             this.PnlChooseMonster.TabIndex = 6;
             this.PnlChooseMonster.Visible = false;
+            // 
+            // LblMonnok
+            // 
+            this.LblMonnok.AutoSize = true;
+            this.LblMonnok.BackColor = System.Drawing.Color.Transparent;
+            this.LblMonnok.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMonnok.ForeColor = System.Drawing.Color.Gold;
+            this.LblMonnok.Location = new System.Drawing.Point(1168, 269);
+            this.LblMonnok.Name = "LblMonnok";
+            this.LblMonnok.Size = new System.Drawing.Size(95, 20);
+            this.LblMonnok.TabIndex = 47;
+            this.LblMonnok.Text = "Monnok";
+            // 
+            // LblMantellian
+            // 
+            this.LblMantellian.AutoSize = true;
+            this.LblMantellian.BackColor = System.Drawing.Color.Transparent;
+            this.LblMantellian.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMantellian.ForeColor = System.Drawing.Color.Gold;
+            this.LblMantellian.Location = new System.Drawing.Point(1009, 269);
+            this.LblMantellian.Name = "LblMantellian";
+            this.LblMantellian.Size = new System.Drawing.Size(142, 20);
+            this.LblMantellian.TabIndex = 46;
+            this.LblMantellian.Text = "Mantellian";
+            // 
+            // LblGrimstaash
+            // 
+            this.LblGrimstaash.AutoSize = true;
+            this.LblGrimstaash.BackColor = System.Drawing.Color.Transparent;
+            this.LblGrimstaash.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblGrimstaash.ForeColor = System.Drawing.Color.Gold;
+            this.LblGrimstaash.Location = new System.Drawing.Point(812, 269);
+            this.LblGrimstaash.Name = "LblGrimstaash";
+            this.LblGrimstaash.Size = new System.Drawing.Size(144, 20);
+            this.LblGrimstaash.TabIndex = 45;
+            this.LblGrimstaash.Text = "Grimstaash";
+            // 
+            // LblKlorslug
+            // 
+            this.LblKlorslug.AutoSize = true;
+            this.LblKlorslug.BackColor = System.Drawing.Color.Transparent;
+            this.LblKlorslug.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblKlorslug.ForeColor = System.Drawing.Color.Gold;
+            this.LblKlorslug.Location = new System.Drawing.Point(685, 269);
+            this.LblKlorslug.Name = "LblKlorslug";
+            this.LblKlorslug.Size = new System.Drawing.Size(119, 20);
+            this.LblKlorslug.TabIndex = 44;
+            this.LblKlorslug.Text = "Klorslug";
+            // 
+            // LblNgok
+            // 
+            this.LblNgok.AutoSize = true;
+            this.LblNgok.BackColor = System.Drawing.Color.Transparent;
+            this.LblNgok.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNgok.ForeColor = System.Drawing.Color.Gold;
+            this.LblNgok.Location = new System.Drawing.Point(513, 269);
+            this.LblNgok.Name = "LblNgok";
+            this.LblNgok.Size = new System.Drawing.Size(65, 20);
+            this.LblNgok.TabIndex = 43;
+            this.LblNgok.Text = "Ngok";
+            // 
+            // LblKintanStrider
+            // 
+            this.LblKintanStrider.AutoSize = true;
+            this.LblKintanStrider.BackColor = System.Drawing.Color.Transparent;
+            this.LblKintanStrider.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblKintanStrider.ForeColor = System.Drawing.Color.Gold;
+            this.LblKintanStrider.Location = new System.Drawing.Point(350, 274);
+            this.LblKintanStrider.Name = "LblKintanStrider";
+            this.LblKintanStrider.Size = new System.Drawing.Size(128, 14);
+            this.LblKintanStrider.TabIndex = 42;
+            this.LblKintanStrider.Text = "Kintan Strider";
+            // 
+            // LblHoujix
+            // 
+            this.LblHoujix.AutoSize = true;
+            this.LblHoujix.BackColor = System.Drawing.Color.Transparent;
+            this.LblHoujix.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHoujix.ForeColor = System.Drawing.Color.Gold;
+            this.LblHoujix.Location = new System.Drawing.Point(171, 269);
+            this.LblHoujix.Name = "LblHoujix";
+            this.LblHoujix.Size = new System.Drawing.Size(82, 20);
+            this.LblHoujix.TabIndex = 41;
+            this.LblHoujix.Text = "Houjix";
+            // 
+            // LblGhhhk
+            // 
+            this.LblGhhhk.AutoSize = true;
+            this.LblGhhhk.BackColor = System.Drawing.Color.Transparent;
+            this.LblGhhhk.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblGhhhk.ForeColor = System.Drawing.Color.Gold;
+            this.LblGhhhk.Location = new System.Drawing.Point(35, 269);
+            this.LblGhhhk.Name = "LblGhhhk";
+            this.LblGhhhk.Size = new System.Drawing.Size(79, 20);
+            this.LblGhhhk.TabIndex = 40;
+            this.LblGhhhk.Text = "Ghhhk";
             // 
             // panel1
             // 
@@ -282,101 +382,36 @@
             this.LblMenuPlayerTurn.TabIndex = 26;
             this.LblMenuPlayerTurn.Text = "Player 1\'s Turn to Pick";
             // 
-            // LblGhhhk
+            // menuStrip1
             // 
-            this.LblGhhhk.AutoSize = true;
-            this.LblGhhhk.BackColor = System.Drawing.Color.Transparent;
-            this.LblGhhhk.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGhhhk.ForeColor = System.Drawing.Color.Gold;
-            this.LblGhhhk.Location = new System.Drawing.Point(35, 269);
-            this.LblGhhhk.Name = "LblGhhhk";
-            this.LblGhhhk.Size = new System.Drawing.Size(79, 20);
-            this.LblGhhhk.TabIndex = 40;
-            this.LblGhhhk.Text = "Ghhhk";
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.returnToMainMenuToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1325, 24);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // LblHoujix
+            // returnToMainMenuToolStripMenuItem
             // 
-            this.LblHoujix.AutoSize = true;
-            this.LblHoujix.BackColor = System.Drawing.Color.Transparent;
-            this.LblHoujix.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblHoujix.ForeColor = System.Drawing.Color.Gold;
-            this.LblHoujix.Location = new System.Drawing.Point(171, 269);
-            this.LblHoujix.Name = "LblHoujix";
-            this.LblHoujix.Size = new System.Drawing.Size(82, 20);
-            this.LblHoujix.TabIndex = 41;
-            this.LblHoujix.Text = "Houjix";
+            this.returnToMainMenuToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnToMainMenuToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
+            this.returnToMainMenuToolStripMenuItem.Name = "returnToMainMenuToolStripMenuItem";
+            this.returnToMainMenuToolStripMenuItem.Size = new System.Drawing.Size(158, 20);
+            this.returnToMainMenuToolStripMenuItem.Text = "Back to Main menu";
+            this.returnToMainMenuToolStripMenuItem.Click += new System.EventHandler(this.ReturnToMainMenuToolStripMenuItem_Click);
             // 
-            // LblKintanStrider
+            // exitToolStripMenuItem
             // 
-            this.LblKintanStrider.AutoSize = true;
-            this.LblKintanStrider.BackColor = System.Drawing.Color.Transparent;
-            this.LblKintanStrider.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblKintanStrider.ForeColor = System.Drawing.Color.Gold;
-            this.LblKintanStrider.Location = new System.Drawing.Point(350, 274);
-            this.LblKintanStrider.Name = "LblKintanStrider";
-            this.LblKintanStrider.Size = new System.Drawing.Size(128, 14);
-            this.LblKintanStrider.TabIndex = 42;
-            this.LblKintanStrider.Text = "Kintan Strider";
-            // 
-            // LblNgok
-            // 
-            this.LblNgok.AutoSize = true;
-            this.LblNgok.BackColor = System.Drawing.Color.Transparent;
-            this.LblNgok.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNgok.ForeColor = System.Drawing.Color.Gold;
-            this.LblNgok.Location = new System.Drawing.Point(513, 269);
-            this.LblNgok.Name = "LblNgok";
-            this.LblNgok.Size = new System.Drawing.Size(65, 20);
-            this.LblNgok.TabIndex = 43;
-            this.LblNgok.Text = "Ngok";
-            // 
-            // LblKlorslug
-            // 
-            this.LblKlorslug.AutoSize = true;
-            this.LblKlorslug.BackColor = System.Drawing.Color.Transparent;
-            this.LblKlorslug.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblKlorslug.ForeColor = System.Drawing.Color.Gold;
-            this.LblKlorslug.Location = new System.Drawing.Point(685, 269);
-            this.LblKlorslug.Name = "LblKlorslug";
-            this.LblKlorslug.Size = new System.Drawing.Size(119, 20);
-            this.LblKlorslug.TabIndex = 44;
-            this.LblKlorslug.Text = "Klorslug";
-            // 
-            // LblGrimstaash
-            // 
-            this.LblGrimstaash.AutoSize = true;
-            this.LblGrimstaash.BackColor = System.Drawing.Color.Transparent;
-            this.LblGrimstaash.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGrimstaash.ForeColor = System.Drawing.Color.Gold;
-            this.LblGrimstaash.Location = new System.Drawing.Point(812, 269);
-            this.LblGrimstaash.Name = "LblGrimstaash";
-            this.LblGrimstaash.Size = new System.Drawing.Size(144, 20);
-            this.LblGrimstaash.TabIndex = 45;
-            this.LblGrimstaash.Text = "Grimstaash";
-            // 
-            // LblMantellian
-            // 
-            this.LblMantellian.AutoSize = true;
-            this.LblMantellian.BackColor = System.Drawing.Color.Transparent;
-            this.LblMantellian.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMantellian.ForeColor = System.Drawing.Color.Gold;
-            this.LblMantellian.Location = new System.Drawing.Point(1009, 269);
-            this.LblMantellian.Name = "LblMantellian";
-            this.LblMantellian.Size = new System.Drawing.Size(142, 20);
-            this.LblMantellian.TabIndex = 46;
-            this.LblMantellian.Text = "Mantellian";
-            // 
-            // LblMonnok
-            // 
-            this.LblMonnok.AutoSize = true;
-            this.LblMonnok.BackColor = System.Drawing.Color.Transparent;
-            this.LblMonnok.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMonnok.ForeColor = System.Drawing.Color.Gold;
-            this.LblMonnok.Location = new System.Drawing.Point(1168, 269);
-            this.LblMonnok.Name = "LblMonnok";
-            this.LblMonnok.Size = new System.Drawing.Size(95, 20);
-            this.LblMonnok.TabIndex = 47;
-            this.LblMonnok.Text = "Monnok";
+            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.exitToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // MenuDejarik
             // 
@@ -386,12 +421,17 @@
             this.ClientSize = new System.Drawing.Size(1325, 525);
             this.Controls.Add(this.PnlChooseMonster);
             this.Controls.Add(this.PnlChooseOption);
+            this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuDejarik";
             this.Text = "MenuDejarik";
             this.PnlChooseOption.ResumeLayout(false);
             this.PnlChooseMonster.ResumeLayout(false);
             this.PnlChooseMonster.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -423,5 +463,8 @@
         private System.Windows.Forms.Label LblGrimstaash;
         private System.Windows.Forms.Label LblMonnok;
         private System.Windows.Forms.Label LblMantellian;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem returnToMainMenuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
