@@ -639,6 +639,7 @@
             // 
             this.buttonEllipse1.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtongold;
             this.buttonEllipse1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEllipse1.FlatAppearance.BorderSize = 0;
             this.buttonEllipse1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEllipse1.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEllipse1.Location = new System.Drawing.Point(366, 171);

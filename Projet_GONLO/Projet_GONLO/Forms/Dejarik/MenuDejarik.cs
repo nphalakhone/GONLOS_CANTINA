@@ -12,6 +12,7 @@ namespace Projet_GONLO
 {
     public partial class MenuDejarik : Form
     {
+
         public MenuDejarik()
         {
             InitializeComponent();
@@ -36,48 +37,73 @@ namespace Projet_GONLO
         {
             BtnGhhhk.Enabled = false;
             BtnHoujix.Enabled = false;
+            checkMonsterFinish();
         }
+
+ 
 
         private void BtnHoujix_Click(object sender, EventArgs e)
         {
             BtnGhhhk.Enabled = false;
             BtnHoujix.Enabled = false;
+            checkMonsterFinish();
         }
 
         private void BtnKintanStrider_Click(object sender, EventArgs e)
         {
             BtnKintanStrider.Enabled = false;
             BtnNgok.Enabled = false;
+            checkMonsterFinish();
         }
 
         private void BtnNgok_Click(object sender, EventArgs e)
         {
             BtnKintanStrider.Enabled = false;
             BtnNgok.Enabled = false;
+            checkMonsterFinish();
         }
 
         private void BtnKlorslug_Click(object sender, EventArgs e)
         {
             BtnKlorslug.Enabled = false;
             BtnGrimtaash.Enabled = false;
+            checkMonsterFinish();
         }
 
         private void BtnGrimtaash_Click(object sender, EventArgs e)
         {
             BtnKlorslug.Enabled = false;
             BtnGrimtaash.Enabled = false;
+            checkMonsterFinish();
         }
 
         private void BtnMantellian_Click(object sender, EventArgs e)
         {
             BtnMantellian.Enabled = false;
             BtnMonnok.Enabled = false;
+            checkMonsterFinish();
         }
 
         private void BtnMonnok_Click(object sender, EventArgs e)
         {
             BtnMantellian.Enabled = false;
             BtnMonnok.Enabled = false;
+            checkMonsterFinish();
+        }
+
+        private void checkMonsterFinish()
+        {
+            if (BtnGhhhk.Enabled == false && BtnHoujix.Enabled == false
+                && BtnKintanStrider.Enabled == false && BtnNgok.Enabled == false
+                && BtnKlorslug.Enabled == false && BtnGrimtaash.Enabled == false
+                && BtnMantellian.Enabled == false && BtnMonnok.Enabled == false)
+            {
+                Hide();
+                Dejarik newDejarikGame = new Dejarik();
+                newDejarikGame.ShowDialog();
+                this.Close();
+            }
         }
     }
+
 }

@@ -130,8 +130,8 @@ namespace Projet_GONLO
         private void BtnEllPlayDejarik_Click(object sender, EventArgs e)
         {
             Hide();
-            Dejarik newDejarikGame = new Dejarik();
-            newDejarikGame.ShowDialog();
+            MenuDejarik menuDejarik = new MenuDejarik();
+            menuDejarik.ShowDialog();
             this.Close();
         }
     }
