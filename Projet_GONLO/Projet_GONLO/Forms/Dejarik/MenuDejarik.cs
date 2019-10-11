@@ -12,6 +12,7 @@ namespace Projet_GONLO
 {
     public partial class MenuDejarik : Form
     {
+        private Boolean multiplayer = false;
 
         public MenuDejarik()
         {
@@ -22,13 +23,15 @@ namespace Projet_GONLO
 
         private void BtnSolo_Click(object sender, EventArgs e)
         {
+
+            multiplayer = false;
             PnlChooseMonster.Visible = true;
             PnlChooseOption.Visible = false;
-
         }
 
         private void BtnMulti_Click(object sender, EventArgs e)
         {
+            multiplayer = true;
             PnlChooseMonster.Visible = true;
             PnlChooseOption.Visible = false;
         }
@@ -38,15 +41,16 @@ namespace Projet_GONLO
             BtnGhhhk.Enabled = false;
             BtnHoujix.Enabled = false;
             checkMonsterFinish();
+            nextTurn();
         }
 
- 
 
         private void BtnHoujix_Click(object sender, EventArgs e)
         {
             BtnGhhhk.Enabled = false;
             BtnHoujix.Enabled = false;
             checkMonsterFinish();
+            nextTurn();
         }
 
         private void BtnKintanStrider_Click(object sender, EventArgs e)
@@ -54,6 +58,7 @@ namespace Projet_GONLO
             BtnKintanStrider.Enabled = false;
             BtnNgok.Enabled = false;
             checkMonsterFinish();
+            nextTurn();
         }
 
         private void BtnNgok_Click(object sender, EventArgs e)
@@ -61,6 +66,7 @@ namespace Projet_GONLO
             BtnKintanStrider.Enabled = false;
             BtnNgok.Enabled = false;
             checkMonsterFinish();
+            nextTurn();
         }
 
         private void BtnKlorslug_Click(object sender, EventArgs e)
@@ -68,6 +74,7 @@ namespace Projet_GONLO
             BtnKlorslug.Enabled = false;
             BtnGrimtaash.Enabled = false;
             checkMonsterFinish();
+            nextTurn();
         }
 
         private void BtnGrimtaash_Click(object sender, EventArgs e)
@@ -75,6 +82,7 @@ namespace Projet_GONLO
             BtnKlorslug.Enabled = false;
             BtnGrimtaash.Enabled = false;
             checkMonsterFinish();
+            nextTurn();
         }
 
         private void BtnMantellian_Click(object sender, EventArgs e)
@@ -82,6 +90,7 @@ namespace Projet_GONLO
             BtnMantellian.Enabled = false;
             BtnMonnok.Enabled = false;
             checkMonsterFinish();
+            nextTurn();
         }
 
         private void BtnMonnok_Click(object sender, EventArgs e)
@@ -89,6 +98,7 @@ namespace Projet_GONLO
             BtnMantellian.Enabled = false;
             BtnMonnok.Enabled = false;
             checkMonsterFinish();
+            nextTurn();
         }
 
         private void checkMonsterFinish()
@@ -116,6 +126,32 @@ namespace Projet_GONLO
             MenuAccueil menu = new MenuAccueil();
             menu.ShowDialog();
             this.Close();
+        }
+
+        private void nextTurn()
+        {
+            if (multiplayer)
+            {
+                changeLabel();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void changeLabel()
+        {
+            if (LblMenuPlayerTurn.Text.Equals("Player 1's Turn to Pick"))
+            {
+                LblMenuPlayerTurn.Text = "Player 2's Turn to Pick";
+                Refresh();
+            }
+            else
+            {
+                LblMenuPlayerTurn.Text = "Player 1's Turn to Pick";
+                Refresh();
+            }
         }
     }
 

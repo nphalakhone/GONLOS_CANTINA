@@ -54,12 +54,12 @@
             this.BtnChooseDef = new System.Windows.Forms.Button();
             this.BtnChooseAtk = new System.Windows.Forms.Button();
             this.LblMenuPlayerTurn = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MnMenuDejarik = new System.Windows.Forms.MenuStrip();
             this.returnToMainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PnlChooseOption.SuspendLayout();
             this.PnlChooseMonster.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.MnMenuDejarik.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlChooseOption
@@ -382,17 +382,17 @@
             this.LblMenuPlayerTurn.TabIndex = 26;
             this.LblMenuPlayerTurn.Text = "Player 1\'s Turn to Pick";
             // 
-            // menuStrip1
+            // MnMenuDejarik
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.returnToMainMenuToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1325, 24);
-            this.menuStrip1.TabIndex = 7;
-            this.menuStrip1.Text = "menuStrip1";
+            this.MnMenuDejarik.BackColor = System.Drawing.Color.Transparent;
+            this.MnMenuDejarik.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem,
+            this.returnToMainMenuToolStripMenuItem});
+            this.MnMenuDejarik.Location = new System.Drawing.Point(0, 0);
+            this.MnMenuDejarik.Name = "MnMenuDejarik";
+            this.MnMenuDejarik.Size = new System.Drawing.Size(1325, 24);
+            this.MnMenuDejarik.TabIndex = 7;
+            this.MnMenuDejarik.Text = "menuStrip1";
             // 
             // returnToMainMenuToolStripMenuItem
             // 
@@ -421,15 +421,16 @@
             this.ClientSize = new System.Drawing.Size(1325, 525);
             this.Controls.Add(this.PnlChooseMonster);
             this.Controls.Add(this.PnlChooseOption);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.MnMenuDejarik);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuDejarik";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuDejarik";
             this.PnlChooseOption.ResumeLayout(false);
             this.PnlChooseMonster.ResumeLayout(false);
             this.PnlChooseMonster.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.MnMenuDejarik.ResumeLayout(false);
+            this.MnMenuDejarik.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,7 +464,7 @@
         private System.Windows.Forms.Label LblGrimstaash;
         private System.Windows.Forms.Label LblMonnok;
         private System.Windows.Forms.Label LblMantellian;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip MnMenuDejarik;
         private System.Windows.Forms.ToolStripMenuItem returnToMainMenuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
