@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-s
+
 namespace Projet_GONLO
 {
     static class Program
@@ -18,7 +18,6 @@ namespace Projet_GONLO
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new MenuAccueil());
             //Application.Run(new CreationPerso());
-            //Application.Run(new MenuDejarik());
             Application.Run(new StartForm());
             //Application.Run(new Pazaak());
 

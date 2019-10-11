@@ -32,6 +32,7 @@
             this.BtnMulti = new System.Windows.Forms.Button();
             this.BtnSolo = new System.Windows.Forms.Button();
             this.PnlChooseMonster = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.BtnMonnok = new System.Windows.Forms.Button();
             this.BtnMantellian = new System.Windows.Forms.Button();
             this.BtnGrimtaash = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.BtnChooseDef = new System.Windows.Forms.Button();
             this.BtnChooseAtk = new System.Windows.Forms.Button();
             this.LblMenuPlayerTurn = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.PnlChooseOption.SuspendLayout();
             this.PnlChooseMonster.SuspendLayout();
             this.SuspendLayout();
@@ -107,6 +107,14 @@
             this.PnlChooseMonster.Size = new System.Drawing.Size(1300, 500);
             this.PnlChooseMonster.TabIndex = 6;
             this.PnlChooseMonster.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Location = new System.Drawing.Point(11, 443);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(135, 30);
+            this.panel1.TabIndex = 39;
             // 
             // BtnMonnok
             // 
@@ -203,7 +211,7 @@
             this.BtnChoosePow.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded;
             this.BtnChoosePow.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChoosePow.ForeColor = System.Drawing.Color.White;
-            this.BtnChoosePow.Location = new System.Drawing.Point(1088, 216);
+            this.BtnChoosePow.Location = new System.Drawing.Point(1086, 174);
             this.BtnChoosePow.Name = "BtnChoosePow";
             this.BtnChoosePow.Size = new System.Drawing.Size(150, 30);
             this.BtnChoosePow.TabIndex = 30;
@@ -215,7 +223,7 @@
             this.BtnChooseMov.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded;
             this.BtnChooseMov.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChooseMov.ForeColor = System.Drawing.Color.White;
-            this.BtnChooseMov.Location = new System.Drawing.Point(742, 216);
+            this.BtnChooseMov.Location = new System.Drawing.Point(749, 174);
             this.BtnChooseMov.Name = "BtnChooseMov";
             this.BtnChooseMov.Size = new System.Drawing.Size(150, 30);
             this.BtnChooseMov.TabIndex = 29;
@@ -227,7 +235,7 @@
             this.BtnChooseDef.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded;
             this.BtnChooseDef.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChooseDef.ForeColor = System.Drawing.Color.White;
-            this.BtnChooseDef.Location = new System.Drawing.Point(413, 216);
+            this.BtnChooseDef.Location = new System.Drawing.Point(409, 174);
             this.BtnChooseDef.Name = "BtnChooseDef";
             this.BtnChooseDef.Size = new System.Drawing.Size(150, 30);
             this.BtnChooseDef.TabIndex = 28;
@@ -240,7 +248,7 @@
             this.BtnChooseAtk.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded;
             this.BtnChooseAtk.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChooseAtk.ForeColor = System.Drawing.Color.White;
-            this.BtnChooseAtk.Location = new System.Drawing.Point(80, 216);
+            this.BtnChooseAtk.Location = new System.Drawing.Point(80, 174);
             this.BtnChooseAtk.Name = "BtnChooseAtk";
             this.BtnChooseAtk.Size = new System.Drawing.Size(150, 30);
             this.BtnChooseAtk.TabIndex = 27;
@@ -258,14 +266,6 @@
             this.LblMenuPlayerTurn.Size = new System.Drawing.Size(395, 28);
             this.LblMenuPlayerTurn.TabIndex = 26;
             this.LblMenuPlayerTurn.Text = "Player 1\'s Turn to Pick";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Location = new System.Drawing.Point(11, 443);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(135, 30);
-            this.panel1.TabIndex = 39;
             // 
             // MenuDejarik
             // 
