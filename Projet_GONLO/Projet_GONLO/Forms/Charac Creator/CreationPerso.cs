@@ -171,17 +171,17 @@ namespace Projet_GONLO
             this.Hide();
             MenuAccueil menuAccueil = new MenuAccueil();
             Player player = new Player();
-            player.species = VerificationSpecies();
-            player.nom = TxtBoxNameGen.Text;
+            player.getSpecies = VerificationSpecies();
+            player.getNom = TxtBoxNameGen.Text;
             if (CBoxFemale.Checked)
             {
-                player.gender = "Female";
+                player.getGender = "Female";
             }
             else if (CBoxMale.Checked)
             {
-                player.gender = "Male";
+                player.getGender = "Male";
             }
-            MessageBox.Show(player.nom + "," + player.species + "," + player.gender);
+            MessageBox.Show(player.getNom + "," + player.getSpecies + "," + player.getGender);
             menuAccueil.ShowDialog();
             this.Close();
         }
