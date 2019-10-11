@@ -14,6 +14,8 @@ namespace Projet_GONLO
     {
         List<RoundPanel> playerDeck = new List<RoundPanel>();
         List<int> positionCarteEnleve = new List<int>();
+        //List<bool> PanelRempi = new List<bool>();
+        //bool[] PanelRempi = new bool[8];
         int nbCartes = 0;
 
 
@@ -21,7 +23,16 @@ namespace Projet_GONLO
         {
             InitializeComponent();
             FillListPanels();
+            //InitializeArrayBool();
         }
+
+        //private void InitializeArrayBool()
+        //{
+        //    for (int i = 0; i < PanelRempi.Length; i++)
+        //    {
+        //        PanelRempi[i] = false;
+        //    }
+        //}
 
         public void FillListPanels()
         {
@@ -50,19 +61,28 @@ namespace Projet_GONLO
             RoundPanel roundPanel = sender as RoundPanel;
            // int numberCards = CheckDeck();
             //MessageBox.Show(nbCartes.ToString());
-            if (nbCartes < 10)
-            {
+
                 if (positionCarteEnleve.Count == 0)
                 {
+                    if (nbCartes < 10)
+                {
                     playerDeck.ElementAt(nbCartes).BackgroundImage = roundPanel.BackgroundImage;
+                    nbCartes++;
+                }
+               
+                    //PanelRempi[nbCartes] = true;
                 }
                 else
                 {
-                    playerDeck.ElementAt(positionCarteEnleve.ElementAt(1)).BackgroundImage = roundPanel.BackgroundImage;
-                }
 
+
+                    //MessageBox.Show(positionCarteEnleve.ElementAt(1).ToString());
+                    playerDeck.ElementAt(positionCarteEnleve.ElementAt(0)).BackgroundImage = roundPanel.BackgroundImage;
+                    positionCarteEnleve.RemoveAt(0);
                 nbCartes++;
             }
+                
+           
             if (nbCartes == 10)
             {
                 BtnEllReady.Enabled = true;
@@ -80,25 +100,37 @@ namespace Projet_GONLO
             {
                 roundPanel.BackgroundImage = null;
                 BtnEllReady.Enabled = false;
-                int pos = CheckHoleDeck();
-                //MessageBox.Show(pos.ToString());
-                positionCarteEnleve.Add(pos);
+                //int pos = CheckHoleDeck();
+                int idx = playerDeck.IndexOf(roundPanel);
+                MessageBox.Show(idx.ToString());
+                positionCarteEnleve.Add(idx);
+                nbCartes--;
             }
+             
+            //if (roundPanel.BackgroundImage != null)
+            //{
+            //    roundPanel.BackgroundImage = null;
+            //    BtnEllReady.Enabled = false;
+            //    int pos = CheckHoleDeck();
+            //    //MessageBox.Show(pos.ToString());
+            //    positionCarteEnleve.Add(pos);
+            //}
         }
 
-        public int CheckHoleDeck()
-        {
-            int index = 0;
-            for (int i = 0; i < playerDeck.Count(); i++)
-            {
-                if (playerDeck.ElementAt(i).BackgroundImage == null)
-                {
-                    index = i;
-                    return index;
-                }
-            }
-            return index;
-        }
+        //public int CheckHoleDeck()
+        //{
+        //    int index = 0;
+        //    for (int i = 0; i < playerDeck.Count(); i++)
+        //    {
+        //        if (playerDeck.ElementAt(i).BackgroundImage == null)
+        //        {
+        //            //PanelRempi[i] = false;
+        //            index = i;
+        //            return index;
+        //        }
+        //    }
+        //    return index;
+        //}
 
         public int CheckDeck()
         {
