@@ -60,7 +60,7 @@ namespace Projet_GONLO
                 {
                     playerDeck.ElementAt(positionCarteEnleve.ElementAt(1)).BackgroundImage = roundPanel.BackgroundImage;
                 }
-                
+
                 nbCartes++;
             }
             if (nbCartes == 10)

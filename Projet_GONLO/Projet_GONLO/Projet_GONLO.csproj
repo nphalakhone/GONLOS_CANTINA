@@ -78,7 +78,6 @@
     <Compile Include="Forms\Other Forms\LoadForm.Designer.cs">
       <DependentUpon>LoadForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Dejarik\LogiqueBouton.cs" />
     <Compile Include="Forms\Dejarik\MenuDejarik.cs">
       <SubType>Form</SubType>
     </Compile>
