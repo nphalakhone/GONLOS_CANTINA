@@ -12,7 +12,7 @@ namespace Projet_GONLO
 {
     public partial class Dejarik : Form
     {
-        List<Button> listBoutons = new List<Button>();
+        List<Button> listButtons = new List<Button>();
         public Dejarik()
         {
             InitializeComponent();
@@ -22,31 +22,32 @@ namespace Projet_GONLO
 
         private void initialiserBoutons()
         {
-            listBoutons.Add(new Button());
-            listBoutons.Add(bouttonCercle1);
-            listBoutons.Add(bouttonCercle2);
-            listBoutons.Add(bouttonCercle3);
-            listBoutons.Add(bouttonCercle4);
-            listBoutons.Add(bouttonCercle5);
-            listBoutons.Add(bouttonCercle6);
-            listBoutons.Add(bouttonCercle7);
-            listBoutons.Add(bouttonCercle8);
-            listBoutons.Add(bouttonCercle9);
-            listBoutons.Add(bouttonCercle10);
-            listBoutons.Add(bouttonCercle11);
-            listBoutons.Add(bouttonCercle12);
-            listBoutons.Add(bouttonCercle13);
-            listBoutons.Add(bouttonCercle14);
-            listBoutons.Add(bouttonCercle15);
-            listBoutons.Add(bouttonCercle16);
-            listBoutons.Add(bouttonCercle17);
-            listBoutons.Add(bouttonCercle18);
-            listBoutons.Add(bouttonCercle19);
-            listBoutons.Add(bouttonCercle20);
-            listBoutons.Add(bouttonCercle21);
-            listBoutons.Add(bouttonCercle22);
-            listBoutons.Add(bouttonCercle23);
-            listBoutons.Add(bouttonCercle24);
+            listButtons.Add(new Button());
+            listButtons.Add(Button15);
+            listButtons.Add(Button16);
+            listButtons.Add(Button17);
+            listButtons.Add(Button18);
+            listButtons.Add(Button19);
+            listButtons.Add(Button20);
+            listButtons.Add(Button21);
+            listButtons.Add(Button22);
+            listButtons.Add(Button23);
+            listButtons.Add(Button24);
+            listButtons.Add(Button25);
+            listButtons.Add(Button14);
+            listButtons.Add(Button2);
+            listButtons.Add(Button3);
+            listButtons.Add(Button4);
+            listButtons.Add(Button5);
+            listButtons.Add(Button6);
+            listButtons.Add(Button7);
+            listButtons.Add(Button8);
+            listButtons.Add(Button9);
+            listButtons.Add(Button10);
+            listButtons.Add(Button11);
+            listButtons.Add(Button12);
+            listButtons.Add(Button13);
+            listButtons.Add(Button1);
         }
 
         private void createMonsters()

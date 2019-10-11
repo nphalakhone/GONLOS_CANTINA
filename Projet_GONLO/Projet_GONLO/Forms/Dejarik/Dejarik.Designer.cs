@@ -43,30 +43,31 @@
             this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bouttonCercle24 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle23 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle22 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle21 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle20 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle19 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle18 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle17 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle16 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle15 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle14 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle13 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle12 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle11 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle10 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle9 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle8 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle7 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle6 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle5 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle4 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle3 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle2 = new Projet_GONLO.BouttonCercle();
-            this.bouttonCercle1 = new Projet_GONLO.BouttonCercle();
+            this.Button1 = new Projet_GONLO.BouttonCercle();
+            this.Button13 = new Projet_GONLO.BouttonCercle();
+            this.Button12 = new Projet_GONLO.BouttonCercle();
+            this.Button11 = new Projet_GONLO.BouttonCercle();
+            this.Button10 = new Projet_GONLO.BouttonCercle();
+            this.Button9 = new Projet_GONLO.BouttonCercle();
+            this.Button8 = new Projet_GONLO.BouttonCercle();
+            this.Button7 = new Projet_GONLO.BouttonCercle();
+            this.Button6 = new Projet_GONLO.BouttonCercle();
+            this.Button5 = new Projet_GONLO.BouttonCercle();
+            this.Button4 = new Projet_GONLO.BouttonCercle();
+            this.Button3 = new Projet_GONLO.BouttonCercle();
+            this.Button2 = new Projet_GONLO.BouttonCercle();
+            this.Button14 = new Projet_GONLO.BouttonCercle();
+            this.Button25 = new Projet_GONLO.BouttonCercle();
+            this.Button24 = new Projet_GONLO.BouttonCercle();
+            this.Button23 = new Projet_GONLO.BouttonCercle();
+            this.Button22 = new Projet_GONLO.BouttonCercle();
+            this.Button21 = new Projet_GONLO.BouttonCercle();
+            this.Button20 = new Projet_GONLO.BouttonCercle();
+            this.Button19 = new Projet_GONLO.BouttonCercle();
+            this.Button18 = new Projet_GONLO.BouttonCercle();
+            this.Button17 = new Projet_GONLO.BouttonCercle();
+            this.Button16 = new Projet_GONLO.BouttonCercle();
+            this.Button15 = new Projet_GONLO.BouttonCercle();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GbLog.SuspendLayout();
             this.GbDice.SuspendLayout();
@@ -221,293 +222,331 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(66, 21);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // bouttonCercle24
+            // Button1
             // 
-            this.bouttonCercle24.AutoEllipsis = true;
-            this.bouttonCercle24.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle24.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle24.Location = new System.Drawing.Point(264, 274);
-            this.bouttonCercle24.Name = "bouttonCercle24";
-            this.bouttonCercle24.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle24.TabIndex = 29;
-            this.bouttonCercle24.UseVisualStyleBackColor = false;
+            this.Button1.AutoEllipsis = true;
+            this.Button1.BackColor = System.Drawing.Color.Transparent;
+            this.Button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button1.BackgroundImage")));
+            this.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button1.FlatAppearance.BorderSize = 0;
+            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button1.Location = new System.Drawing.Point(395, 400);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(81, 90);
+            this.Button1.TabIndex = 30;
+            this.Button1.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle23
+            // Button13
             // 
-            this.bouttonCercle23.AutoEllipsis = true;
-            this.bouttonCercle23.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle23.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle23.Location = new System.Drawing.Point(218, 358);
-            this.bouttonCercle23.Name = "bouttonCercle23";
-            this.bouttonCercle23.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle23.TabIndex = 28;
-            this.bouttonCercle23.UseVisualStyleBackColor = false;
+            this.Button13.AutoEllipsis = true;
+            this.Button13.BackColor = System.Drawing.Color.Transparent;
+            this.Button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button13.BackgroundImage")));
+            this.Button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button13.FlatAppearance.BorderSize = 0;
+            this.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button13.Location = new System.Drawing.Point(264, 274);
+            this.Button13.Name = "Button13";
+            this.Button13.Size = new System.Drawing.Size(81, 90);
+            this.Button13.TabIndex = 29;
+            this.Button13.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle22
+            // Button12
             // 
-            this.bouttonCercle22.AutoEllipsis = true;
-            this.bouttonCercle22.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle22.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle22.Location = new System.Drawing.Point(218, 454);
-            this.bouttonCercle22.Name = "bouttonCercle22";
-            this.bouttonCercle22.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle22.TabIndex = 27;
-            this.bouttonCercle22.UseVisualStyleBackColor = false;
+            this.Button12.AutoEllipsis = true;
+            this.Button12.BackColor = System.Drawing.Color.Transparent;
+            this.Button12.FlatAppearance.BorderSize = 0;
+            this.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button12.Location = new System.Drawing.Point(218, 358);
+            this.Button12.Name = "Button12";
+            this.Button12.Size = new System.Drawing.Size(81, 90);
+            this.Button12.TabIndex = 28;
+            this.Button12.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle21
+            // Button11
             // 
-            this.bouttonCercle21.AutoEllipsis = true;
-            this.bouttonCercle21.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle21.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle21.Location = new System.Drawing.Point(264, 533);
-            this.bouttonCercle21.Name = "bouttonCercle21";
-            this.bouttonCercle21.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle21.TabIndex = 26;
-            this.bouttonCercle21.UseVisualStyleBackColor = false;
+            this.Button11.AutoEllipsis = true;
+            this.Button11.BackColor = System.Drawing.Color.Transparent;
+            this.Button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button11.BackgroundImage")));
+            this.Button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button11.FlatAppearance.BorderSize = 0;
+            this.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button11.Location = new System.Drawing.Point(218, 454);
+            this.Button11.Name = "Button11";
+            this.Button11.Size = new System.Drawing.Size(81, 90);
+            this.Button11.TabIndex = 27;
+            this.Button11.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle20
+            // Button10
             // 
-            this.bouttonCercle20.AutoEllipsis = true;
-            this.bouttonCercle20.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle20.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle20.Location = new System.Drawing.Point(351, 577);
-            this.bouttonCercle20.Name = "bouttonCercle20";
-            this.bouttonCercle20.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle20.TabIndex = 25;
-            this.bouttonCercle20.UseVisualStyleBackColor = false;
+            this.Button10.AutoEllipsis = true;
+            this.Button10.BackColor = System.Drawing.Color.Transparent;
+            this.Button10.FlatAppearance.BorderSize = 0;
+            this.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button10.Location = new System.Drawing.Point(264, 533);
+            this.Button10.Name = "Button10";
+            this.Button10.Size = new System.Drawing.Size(81, 90);
+            this.Button10.TabIndex = 26;
+            this.Button10.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle19
+            // Button9
             // 
-            this.bouttonCercle19.AutoEllipsis = true;
-            this.bouttonCercle19.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle19.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle19.Location = new System.Drawing.Point(438, 577);
-            this.bouttonCercle19.Name = "bouttonCercle19";
-            this.bouttonCercle19.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle19.TabIndex = 24;
-            this.bouttonCercle19.UseVisualStyleBackColor = false;
+            this.Button9.AutoEllipsis = true;
+            this.Button9.BackColor = System.Drawing.Color.Transparent;
+            this.Button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button9.BackgroundImage")));
+            this.Button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button9.FlatAppearance.BorderSize = 0;
+            this.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button9.Location = new System.Drawing.Point(351, 577);
+            this.Button9.Name = "Button9";
+            this.Button9.Size = new System.Drawing.Size(81, 90);
+            this.Button9.TabIndex = 25;
+            this.Button9.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle18
+            // Button8
             // 
-            this.bouttonCercle18.AutoEllipsis = true;
-            this.bouttonCercle18.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle18.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle18.Location = new System.Drawing.Point(525, 533);
-            this.bouttonCercle18.Name = "bouttonCercle18";
-            this.bouttonCercle18.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle18.TabIndex = 23;
-            this.bouttonCercle18.UseVisualStyleBackColor = false;
+            this.Button8.AutoEllipsis = true;
+            this.Button8.BackColor = System.Drawing.Color.Transparent;
+            this.Button8.FlatAppearance.BorderSize = 0;
+            this.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button8.Location = new System.Drawing.Point(438, 577);
+            this.Button8.Name = "Button8";
+            this.Button8.Size = new System.Drawing.Size(81, 90);
+            this.Button8.TabIndex = 24;
+            this.Button8.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle17
+            // Button7
             // 
-            this.bouttonCercle17.AutoEllipsis = true;
-            this.bouttonCercle17.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle17.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle17.Location = new System.Drawing.Point(573, 454);
-            this.bouttonCercle17.Name = "bouttonCercle17";
-            this.bouttonCercle17.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle17.TabIndex = 22;
-            this.bouttonCercle17.UseVisualStyleBackColor = false;
+            this.Button7.AutoEllipsis = true;
+            this.Button7.BackColor = System.Drawing.Color.Transparent;
+            this.Button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button7.BackgroundImage")));
+            this.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button7.FlatAppearance.BorderSize = 0;
+            this.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button7.Location = new System.Drawing.Point(525, 533);
+            this.Button7.Name = "Button7";
+            this.Button7.Size = new System.Drawing.Size(81, 90);
+            this.Button7.TabIndex = 23;
+            this.Button7.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle16
+            // Button6
             // 
-            this.bouttonCercle16.AutoEllipsis = true;
-            this.bouttonCercle16.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle16.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle16.Location = new System.Drawing.Point(573, 358);
-            this.bouttonCercle16.Name = "bouttonCercle16";
-            this.bouttonCercle16.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle16.TabIndex = 21;
-            this.bouttonCercle16.UseVisualStyleBackColor = false;
+            this.Button6.AutoEllipsis = true;
+            this.Button6.BackColor = System.Drawing.Color.Transparent;
+            this.Button6.FlatAppearance.BorderSize = 0;
+            this.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button6.Location = new System.Drawing.Point(573, 454);
+            this.Button6.Name = "Button6";
+            this.Button6.Size = new System.Drawing.Size(81, 90);
+            this.Button6.TabIndex = 22;
+            this.Button6.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle15
+            // Button5
             // 
-            this.bouttonCercle15.AutoEllipsis = true;
-            this.bouttonCercle15.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle15.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle15.Location = new System.Drawing.Point(525, 274);
-            this.bouttonCercle15.Name = "bouttonCercle15";
-            this.bouttonCercle15.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle15.TabIndex = 20;
-            this.bouttonCercle15.UseVisualStyleBackColor = false;
+            this.Button5.AutoEllipsis = true;
+            this.Button5.BackColor = System.Drawing.Color.Transparent;
+            this.Button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button5.BackgroundImage")));
+            this.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button5.FlatAppearance.BorderSize = 0;
+            this.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button5.Location = new System.Drawing.Point(573, 358);
+            this.Button5.Name = "Button5";
+            this.Button5.Size = new System.Drawing.Size(81, 90);
+            this.Button5.TabIndex = 21;
+            this.Button5.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle14
+            // Button4
             // 
-            this.bouttonCercle14.AutoEllipsis = true;
-            this.bouttonCercle14.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle14.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle14.Location = new System.Drawing.Point(438, 233);
-            this.bouttonCercle14.Name = "bouttonCercle14";
-            this.bouttonCercle14.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle14.TabIndex = 19;
-            this.bouttonCercle14.UseVisualStyleBackColor = false;
+            this.Button4.AutoEllipsis = true;
+            this.Button4.BackColor = System.Drawing.Color.Transparent;
+            this.Button4.FlatAppearance.BorderSize = 0;
+            this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button4.Location = new System.Drawing.Point(525, 274);
+            this.Button4.Name = "Button4";
+            this.Button4.Size = new System.Drawing.Size(81, 90);
+            this.Button4.TabIndex = 20;
+            this.Button4.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle13
+            // Button3
             // 
-            this.bouttonCercle13.AutoEllipsis = true;
-            this.bouttonCercle13.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle13.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle13.Location = new System.Drawing.Point(351, 233);
-            this.bouttonCercle13.Name = "bouttonCercle13";
-            this.bouttonCercle13.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle13.TabIndex = 18;
-            this.bouttonCercle13.UseVisualStyleBackColor = false;
+            this.Button3.AutoEllipsis = true;
+            this.Button3.BackColor = System.Drawing.Color.Transparent;
+            this.Button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button3.BackgroundImage")));
+            this.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button3.FlatAppearance.BorderSize = 0;
+            this.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button3.Location = new System.Drawing.Point(438, 233);
+            this.Button3.Name = "Button3";
+            this.Button3.Size = new System.Drawing.Size(81, 90);
+            this.Button3.TabIndex = 19;
+            this.Button3.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle12
+            // Button2
             // 
-            this.bouttonCercle12.AutoEllipsis = true;
-            this.bouttonCercle12.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle12.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle12.Location = new System.Drawing.Point(170, 177);
-            this.bouttonCercle12.Name = "bouttonCercle12";
-            this.bouttonCercle12.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle12.TabIndex = 17;
-            this.bouttonCercle12.UseVisualStyleBackColor = false;
+            this.Button2.AutoEllipsis = true;
+            this.Button2.BackColor = System.Drawing.Color.Transparent;
+            this.Button2.FlatAppearance.BorderSize = 0;
+            this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button2.Location = new System.Drawing.Point(351, 233);
+            this.Button2.Name = "Button2";
+            this.Button2.Size = new System.Drawing.Size(81, 90);
+            this.Button2.TabIndex = 18;
+            this.Button2.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle11
+            // Button14
             // 
-            this.bouttonCercle11.AutoEllipsis = true;
-            this.bouttonCercle11.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle11.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle11.Location = new System.Drawing.Point(92, 325);
-            this.bouttonCercle11.Name = "bouttonCercle11";
-            this.bouttonCercle11.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle11.TabIndex = 16;
-            this.bouttonCercle11.UseVisualStyleBackColor = false;
+            this.Button14.AutoEllipsis = true;
+            this.Button14.BackColor = System.Drawing.Color.Transparent;
+            this.Button14.FlatAppearance.BorderSize = 0;
+            this.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button14.Location = new System.Drawing.Point(170, 177);
+            this.Button14.Name = "Button14";
+            this.Button14.Size = new System.Drawing.Size(81, 90);
+            this.Button14.TabIndex = 17;
+            this.Button14.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle10
+            // Button25
             // 
-            this.bouttonCercle10.AutoEllipsis = true;
-            this.bouttonCercle10.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle10.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle10.Location = new System.Drawing.Point(92, 486);
-            this.bouttonCercle10.Name = "bouttonCercle10";
-            this.bouttonCercle10.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle10.TabIndex = 15;
-            this.bouttonCercle10.UseVisualStyleBackColor = false;
+            this.Button25.AutoEllipsis = true;
+            this.Button25.BackColor = System.Drawing.Color.Transparent;
+            this.Button25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button25.BackgroundImage")));
+            this.Button25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button25.FlatAppearance.BorderSize = 0;
+            this.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button25.Location = new System.Drawing.Point(92, 325);
+            this.Button25.Name = "Button25";
+            this.Button25.Size = new System.Drawing.Size(81, 90);
+            this.Button25.TabIndex = 16;
+            this.Button25.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle9
+            // Button24
             // 
-            this.bouttonCercle9.AutoEllipsis = true;
-            this.bouttonCercle9.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle9.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle9.Location = new System.Drawing.Point(170, 628);
-            this.bouttonCercle9.Name = "bouttonCercle9";
-            this.bouttonCercle9.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle9.TabIndex = 14;
-            this.bouttonCercle9.UseVisualStyleBackColor = false;
+            this.Button24.AutoEllipsis = true;
+            this.Button24.BackColor = System.Drawing.Color.Transparent;
+            this.Button24.FlatAppearance.BorderSize = 0;
+            this.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button24.Location = new System.Drawing.Point(92, 486);
+            this.Button24.Name = "Button24";
+            this.Button24.Size = new System.Drawing.Size(81, 90);
+            this.Button24.TabIndex = 15;
+            this.Button24.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle8
+            // Button23
             // 
-            this.bouttonCercle8.AutoEllipsis = true;
-            this.bouttonCercle8.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle8.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle8.Location = new System.Drawing.Point(318, 713);
-            this.bouttonCercle8.Name = "bouttonCercle8";
-            this.bouttonCercle8.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle8.TabIndex = 13;
-            this.bouttonCercle8.UseVisualStyleBackColor = false;
+            this.Button23.AutoEllipsis = true;
+            this.Button23.BackColor = System.Drawing.Color.Transparent;
+            this.Button23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button23.BackgroundImage")));
+            this.Button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button23.FlatAppearance.BorderSize = 0;
+            this.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button23.Location = new System.Drawing.Point(170, 628);
+            this.Button23.Name = "Button23";
+            this.Button23.Size = new System.Drawing.Size(81, 90);
+            this.Button23.TabIndex = 14;
+            this.Button23.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle7
+            // Button22
             // 
-            this.bouttonCercle7.AutoEllipsis = true;
-            this.bouttonCercle7.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle7.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle7.Location = new System.Drawing.Point(472, 713);
-            this.bouttonCercle7.Name = "bouttonCercle7";
-            this.bouttonCercle7.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle7.TabIndex = 12;
-            this.bouttonCercle7.UseVisualStyleBackColor = false;
+            this.Button22.AutoEllipsis = true;
+            this.Button22.BackColor = System.Drawing.Color.Transparent;
+            this.Button22.FlatAppearance.BorderSize = 0;
+            this.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button22.Location = new System.Drawing.Point(318, 713);
+            this.Button22.Name = "Button22";
+            this.Button22.Size = new System.Drawing.Size(81, 90);
+            this.Button22.TabIndex = 13;
+            this.Button22.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle6
+            // Button21
             // 
-            this.bouttonCercle6.AutoEllipsis = true;
-            this.bouttonCercle6.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle6.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle6.Location = new System.Drawing.Point(612, 628);
-            this.bouttonCercle6.Name = "bouttonCercle6";
-            this.bouttonCercle6.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle6.TabIndex = 11;
-            this.bouttonCercle6.UseVisualStyleBackColor = false;
+            this.Button21.AutoEllipsis = true;
+            this.Button21.BackColor = System.Drawing.Color.Transparent;
+            this.Button21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button21.BackgroundImage")));
+            this.Button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button21.FlatAppearance.BorderSize = 0;
+            this.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button21.Location = new System.Drawing.Point(472, 713);
+            this.Button21.Name = "Button21";
+            this.Button21.Size = new System.Drawing.Size(81, 90);
+            this.Button21.TabIndex = 12;
+            this.Button21.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle5
+            // Button20
             // 
-            this.bouttonCercle5.AutoEllipsis = true;
-            this.bouttonCercle5.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle5.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle5.Location = new System.Drawing.Point(698, 486);
-            this.bouttonCercle5.Name = "bouttonCercle5";
-            this.bouttonCercle5.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle5.TabIndex = 10;
-            this.bouttonCercle5.UseVisualStyleBackColor = false;
+            this.Button20.AutoEllipsis = true;
+            this.Button20.BackColor = System.Drawing.Color.Transparent;
+            this.Button20.FlatAppearance.BorderSize = 0;
+            this.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button20.Location = new System.Drawing.Point(612, 628);
+            this.Button20.Name = "Button20";
+            this.Button20.Size = new System.Drawing.Size(81, 90);
+            this.Button20.TabIndex = 11;
+            this.Button20.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle4
+            // Button19
             // 
-            this.bouttonCercle4.AutoEllipsis = true;
-            this.bouttonCercle4.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle4.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle4.Location = new System.Drawing.Point(698, 325);
-            this.bouttonCercle4.Name = "bouttonCercle4";
-            this.bouttonCercle4.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle4.TabIndex = 9;
-            this.bouttonCercle4.UseVisualStyleBackColor = false;
+            this.Button19.AutoEllipsis = true;
+            this.Button19.BackColor = System.Drawing.Color.Transparent;
+            this.Button19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button19.BackgroundImage")));
+            this.Button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button19.FlatAppearance.BorderSize = 0;
+            this.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button19.Location = new System.Drawing.Point(698, 486);
+            this.Button19.Name = "Button19";
+            this.Button19.Size = new System.Drawing.Size(81, 90);
+            this.Button19.TabIndex = 10;
+            this.Button19.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle3
+            // Button18
             // 
-            this.bouttonCercle3.AutoEllipsis = true;
-            this.bouttonCercle3.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle3.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle3.Location = new System.Drawing.Point(612, 177);
-            this.bouttonCercle3.Name = "bouttonCercle3";
-            this.bouttonCercle3.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle3.TabIndex = 8;
-            this.bouttonCercle3.UseVisualStyleBackColor = false;
+            this.Button18.AutoEllipsis = true;
+            this.Button18.BackColor = System.Drawing.Color.Transparent;
+            this.Button18.FlatAppearance.BorderSize = 0;
+            this.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button18.Location = new System.Drawing.Point(698, 325);
+            this.Button18.Name = "Button18";
+            this.Button18.Size = new System.Drawing.Size(81, 90);
+            this.Button18.TabIndex = 9;
+            this.Button18.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle2
+            // Button17
             // 
-            this.bouttonCercle2.AutoEllipsis = true;
-            this.bouttonCercle2.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle2.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle2.Location = new System.Drawing.Point(472, 108);
-            this.bouttonCercle2.Name = "bouttonCercle2";
-            this.bouttonCercle2.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle2.TabIndex = 7;
-            this.bouttonCercle2.UseVisualStyleBackColor = false;
+            this.Button17.AutoEllipsis = true;
+            this.Button17.BackColor = System.Drawing.Color.Transparent;
+            this.Button17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button17.BackgroundImage")));
+            this.Button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button17.FlatAppearance.BorderSize = 0;
+            this.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button17.Location = new System.Drawing.Point(612, 177);
+            this.Button17.Name = "Button17";
+            this.Button17.Size = new System.Drawing.Size(81, 90);
+            this.Button17.TabIndex = 8;
+            this.Button17.UseVisualStyleBackColor = false;
             // 
-            // bouttonCercle1
+            // Button16
             // 
-            this.bouttonCercle1.AutoEllipsis = true;
-            this.bouttonCercle1.BackColor = System.Drawing.Color.White;
-            this.bouttonCercle1.FlatAppearance.BorderSize = 0;
-            this.bouttonCercle1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bouttonCercle1.Location = new System.Drawing.Point(318, 108);
-            this.bouttonCercle1.Name = "bouttonCercle1";
-            this.bouttonCercle1.Size = new System.Drawing.Size(81, 90);
-            this.bouttonCercle1.TabIndex = 6;
-            this.bouttonCercle1.UseVisualStyleBackColor = false;
+            this.Button16.AutoEllipsis = true;
+            this.Button16.BackColor = System.Drawing.Color.Transparent;
+            this.Button16.FlatAppearance.BorderSize = 0;
+            this.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button16.Location = new System.Drawing.Point(472, 108);
+            this.Button16.Name = "Button16";
+            this.Button16.Size = new System.Drawing.Size(81, 90);
+            this.Button16.TabIndex = 7;
+            this.Button16.UseVisualStyleBackColor = false;
+            // 
+            // Button15
+            // 
+            this.Button15.AutoEllipsis = true;
+            this.Button15.BackColor = System.Drawing.Color.Transparent;
+            this.Button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button15.BackgroundImage")));
+            this.Button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button15.FlatAppearance.BorderSize = 0;
+            this.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button15.Location = new System.Drawing.Point(318, 108);
+            this.Button15.Name = "Button15";
+            this.Button15.Size = new System.Drawing.Size(81, 90);
+            this.Button15.TabIndex = 6;
+            this.Button15.UseVisualStyleBackColor = false;
             // 
             // Dejarik
             // 
@@ -515,30 +554,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.StarsBackground;
             this.ClientSize = new System.Drawing.Size(1440, 876);
-            this.Controls.Add(this.bouttonCercle24);
-            this.Controls.Add(this.bouttonCercle23);
-            this.Controls.Add(this.bouttonCercle22);
-            this.Controls.Add(this.bouttonCercle21);
-            this.Controls.Add(this.bouttonCercle20);
-            this.Controls.Add(this.bouttonCercle19);
-            this.Controls.Add(this.bouttonCercle18);
-            this.Controls.Add(this.bouttonCercle17);
-            this.Controls.Add(this.bouttonCercle16);
-            this.Controls.Add(this.bouttonCercle15);
-            this.Controls.Add(this.bouttonCercle14);
-            this.Controls.Add(this.bouttonCercle13);
-            this.Controls.Add(this.bouttonCercle12);
-            this.Controls.Add(this.bouttonCercle11);
-            this.Controls.Add(this.bouttonCercle10);
-            this.Controls.Add(this.bouttonCercle9);
-            this.Controls.Add(this.bouttonCercle8);
-            this.Controls.Add(this.bouttonCercle7);
-            this.Controls.Add(this.bouttonCercle6);
-            this.Controls.Add(this.bouttonCercle5);
-            this.Controls.Add(this.bouttonCercle4);
-            this.Controls.Add(this.bouttonCercle3);
-            this.Controls.Add(this.bouttonCercle2);
-            this.Controls.Add(this.bouttonCercle1);
+            this.Controls.Add(this.Button1);
+            this.Controls.Add(this.Button13);
+            this.Controls.Add(this.Button12);
+            this.Controls.Add(this.Button11);
+            this.Controls.Add(this.Button10);
+            this.Controls.Add(this.Button9);
+            this.Controls.Add(this.Button8);
+            this.Controls.Add(this.Button7);
+            this.Controls.Add(this.Button6);
+            this.Controls.Add(this.Button5);
+            this.Controls.Add(this.Button4);
+            this.Controls.Add(this.Button3);
+            this.Controls.Add(this.Button2);
+            this.Controls.Add(this.Button14);
+            this.Controls.Add(this.Button25);
+            this.Controls.Add(this.Button24);
+            this.Controls.Add(this.Button23);
+            this.Controls.Add(this.Button22);
+            this.Controls.Add(this.Button21);
+            this.Controls.Add(this.Button20);
+            this.Controls.Add(this.Button19);
+            this.Controls.Add(this.Button18);
+            this.Controls.Add(this.Button17);
+            this.Controls.Add(this.Button16);
+            this.Controls.Add(this.Button15);
             this.Controls.Add(this.GbDice);
             this.Controls.Add(this.GbLog);
             this.Controls.Add(this.pictureBox1);
@@ -577,29 +617,30 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private RoundPanel PnlDice;
         private System.Windows.Forms.Panel PnlDe;
-        private BouttonCercle bouttonCercle1;
-        private BouttonCercle bouttonCercle2;
-        private BouttonCercle bouttonCercle3;
-        private BouttonCercle bouttonCercle4;
-        private BouttonCercle bouttonCercle5;
-        private BouttonCercle bouttonCercle6;
-        private BouttonCercle bouttonCercle7;
-        private BouttonCercle bouttonCercle8;
-        private BouttonCercle bouttonCercle9;
-        private BouttonCercle bouttonCercle10;
-        private BouttonCercle bouttonCercle11;
-        private BouttonCercle bouttonCercle12;
-        private BouttonCercle bouttonCercle13;
-        private BouttonCercle bouttonCercle14;
-        private BouttonCercle bouttonCercle15;
-        private BouttonCercle bouttonCercle16;
-        private BouttonCercle bouttonCercle17;
-        private BouttonCercle bouttonCercle18;
-        private BouttonCercle bouttonCercle19;
-        private BouttonCercle bouttonCercle20;
-        private BouttonCercle bouttonCercle21;
-        private BouttonCercle bouttonCercle22;
-        private BouttonCercle bouttonCercle23;
-        private BouttonCercle bouttonCercle24;
+        private BouttonCercle Button15;
+        private BouttonCercle Button16;
+        private BouttonCercle Button17;
+        private BouttonCercle Button18;
+        private BouttonCercle Button19;
+        private BouttonCercle Button20;
+        private BouttonCercle Button21;
+        private BouttonCercle Button22;
+        private BouttonCercle Button23;
+        private BouttonCercle Button24;
+        private BouttonCercle Button25;
+        private BouttonCercle Button14;
+        private BouttonCercle Button2;
+        private BouttonCercle Button3;
+        private BouttonCercle Button4;
+        private BouttonCercle Button5;
+        private BouttonCercle Button6;
+        private BouttonCercle Button7;
+        private BouttonCercle Button8;
+        private BouttonCercle Button9;
+        private BouttonCercle Button10;
+        private BouttonCercle Button11;
+        private BouttonCercle Button12;
+        private BouttonCercle Button13;
+        private BouttonCercle Button1;
     }
 }

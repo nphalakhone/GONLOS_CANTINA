@@ -163,6 +163,16 @@ namespace Projet_GONLO.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boutonSteelDejarik {
+            get {
+                object obj = ResourceManager.GetObject("boutonSteelDejarik", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Carte1 {
             get {
                 object obj = ResourceManager.GetObject("Carte1", resourceCulture);
