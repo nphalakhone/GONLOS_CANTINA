@@ -55,8 +55,8 @@
             this.BtnChooseAtk = new System.Windows.Forms.Button();
             this.LblMenuPlayerTurn = new System.Windows.Forms.Label();
             this.MnMenuDejarik = new System.Windows.Forms.MenuStrip();
-            this.returnToMainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnToMainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PnlChooseOption.SuspendLayout();
             this.PnlChooseMonster.SuspendLayout();
             this.MnMenuDejarik.SuspendLayout();
@@ -376,11 +376,11 @@
             this.LblMenuPlayerTurn.AutoSize = true;
             this.LblMenuPlayerTurn.Font = new System.Drawing.Font("SF Distant Galaxy", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMenuPlayerTurn.ForeColor = System.Drawing.Color.Gold;
-            this.LblMenuPlayerTurn.Location = new System.Drawing.Point(466, 63);
+            this.LblMenuPlayerTurn.Location = new System.Drawing.Point(234, 53);
             this.LblMenuPlayerTurn.Name = "LblMenuPlayerTurn";
-            this.LblMenuPlayerTurn.Size = new System.Drawing.Size(395, 28);
+            this.LblMenuPlayerTurn.Size = new System.Drawing.Size(849, 28);
             this.LblMenuPlayerTurn.TabIndex = 26;
-            this.LblMenuPlayerTurn.Text = "Player 1\'s Turn to Pick";
+            this.LblMenuPlayerTurn.Text = "Player 1 choose one monster for each category  ";
             // 
             // MnMenuDejarik
             // 
@@ -394,15 +394,6 @@
             this.MnMenuDejarik.TabIndex = 7;
             this.MnMenuDejarik.Text = "menuStrip1";
             // 
-            // returnToMainMenuToolStripMenuItem
-            // 
-            this.returnToMainMenuToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnToMainMenuToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
-            this.returnToMainMenuToolStripMenuItem.Name = "returnToMainMenuToolStripMenuItem";
-            this.returnToMainMenuToolStripMenuItem.Size = new System.Drawing.Size(158, 20);
-            this.returnToMainMenuToolStripMenuItem.Text = "Back to Main menu";
-            this.returnToMainMenuToolStripMenuItem.Click += new System.EventHandler(this.ReturnToMainMenuToolStripMenuItem_Click);
-            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
@@ -412,6 +403,15 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
+            // returnToMainMenuToolStripMenuItem
+            // 
+            this.returnToMainMenuToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnToMainMenuToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
+            this.returnToMainMenuToolStripMenuItem.Name = "returnToMainMenuToolStripMenuItem";
+            this.returnToMainMenuToolStripMenuItem.Size = new System.Drawing.Size(158, 20);
+            this.returnToMainMenuToolStripMenuItem.Text = "Back to Main menu";
+            this.returnToMainMenuToolStripMenuItem.Click += new System.EventHandler(this.ReturnToMainMenuToolStripMenuItem_Click);
             // 
             // MenuDejarik
             // 
