@@ -14,6 +14,9 @@ namespace Projet_GONLO
     public partial class Dejarik : Form
     {
         List<Button> listButtons = new List<Button>();
+        List<Player> players = new List<Player>();
+        Player dejarikPlayer = new Player();
+
         public Dejarik()
         {
             InitializeComponent();
@@ -127,19 +130,12 @@ namespace Projet_GONLO
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string filepath = Environment.CurrentDirectory;
-            List<string> lines = File.ReadAllLines(filepath).ToList();
-
-            foreach (var line in lines)
-            {
-                Console.WriteLine(line);
-            }
+            StreamWriter writer = new StreamWriter("C:\\Users\\1156103\\Documents\\GitHub\\GONLOS_CANTINA\\Projet_GONLO\\Saves\\Saves.txt");
+            string playerData = dejarikPlayer.Name + "," + dejarikPlayer.Species + "," + dejarikPlayer.Gender + "," + dejarikPlayer.PowMonster + "," + dejarikPlayer.AttMonster + "," + dejarikPlayer.DefMonster + "," + dejarikPlayer.MovMonster;
+            writer.Flush();
+            writer.WriteLine(playerData);
         }
 
-        private void LoadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
         {

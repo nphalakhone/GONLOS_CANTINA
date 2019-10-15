@@ -79,6 +79,7 @@
             this.buttonEllipse1 = new Projet_GONLO.ButtonEllipse();
             this.RPnlImgSBR2 = new Projet_GONLO.RoundPanel();
             this.RPnlImgSBR = new Projet_GONLO.RoundPanel();
+            this.LblPlayerName = new System.Windows.Forms.Label();
             this.RPnlPazaak.SuspendLayout();
             this.GbxPazaak.SuspendLayout();
             this.RPnlDejarik.SuspendLayout();
@@ -275,7 +276,7 @@
             this.BtnEllExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllExit.BackgroundImage")));
             this.BtnEllExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnEllExit.FlatAppearance.BorderSize = 0;
-            this.BtnEllExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnEllExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllExit.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllExit.ForeColor = System.Drawing.Color.LimeGreen;
             this.BtnEllExit.Location = new System.Drawing.Point(35, 452);
@@ -292,7 +293,7 @@
             this.BtnEllSB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllSB.BackgroundImage")));
             this.BtnEllSB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnEllSB.FlatAppearance.BorderSize = 0;
-            this.BtnEllSB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnEllSB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllSB.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllSB.ForeColor = System.Drawing.Color.LimeGreen;
             this.BtnEllSB.Location = new System.Drawing.Point(35, 345);
@@ -309,7 +310,7 @@
             this.BtnEllDejarik.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllDejarik.BackgroundImage")));
             this.BtnEllDejarik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnEllDejarik.FlatAppearance.BorderSize = 0;
-            this.BtnEllDejarik.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnEllDejarik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllDejarik.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllDejarik.ForeColor = System.Drawing.Color.LimeGreen;
             this.BtnEllDejarik.Location = new System.Drawing.Point(35, 246);
@@ -672,6 +673,18 @@
             this.RPnlImgSBR.Size = new System.Drawing.Size(300, 250);
             this.RPnlImgSBR.TabIndex = 0;
             // 
+            // LblPlayerName
+            // 
+            this.LblPlayerName.AutoSize = true;
+            this.LblPlayerName.BackColor = System.Drawing.Color.Maroon;
+            this.LblPlayerName.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPlayerName.ForeColor = System.Drawing.Color.Gold;
+            this.LblPlayerName.Location = new System.Drawing.Point(18, 104);
+            this.LblPlayerName.Name = "LblPlayerName";
+            this.LblPlayerName.Size = new System.Drawing.Size(226, 25);
+            this.LblPlayerName.TabIndex = 14;
+            this.LblPlayerName.Text = "Player\'s name";
+            // 
             // MenuAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -679,6 +692,7 @@
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.star_wars_resort;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 560);
+            this.Controls.Add(this.LblPlayerName);
             this.Controls.Add(this.RPnlSBR);
             this.Controls.Add(this.RPnlDejarik);
             this.Controls.Add(this.RPnlPazaak);
@@ -689,7 +703,7 @@
             this.Controls.Add(this.LblGonlo);
             this.Controls.Add(this.LblWelcome);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MenuAccueil";
@@ -760,6 +774,7 @@
         private RoundPanel RPnlImgSBR2;
         private RoundPanel RPnlImgSBR;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label LblPlayerName;
     }
 }
 

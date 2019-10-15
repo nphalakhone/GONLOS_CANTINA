@@ -16,85 +16,60 @@ namespace Projet_GONLO
         private Monster _attMonster;
         private Monster _defMonster;
         private Monster _movMonster;
-        private Cards _fstCard;
-        private Cards _secCard;
-        private Cards _trdCard;
-        private Cards _fthCard;
+       
 
         public Player()
         {
 
         }
 
-        public string getNom
+        public string Name
         {
             get { return _nom; }
             set { _nom = value; }
         }
 
-        public string getSpecies
+        public string Species
         {
             get { return _species; }
             set { _species = value; }
         }
 
-        public string getGender
+        public string Gender
         {
             get { return _gender; }
             set { _gender = value; }
         }
 
-        public string getCredits
+        public string Credits
         {
             get { return _credits; }
             set { _credits = value; }
         }
 
-        public Monster getPowMonster
+        public Monster PowMonster
         {
             get { return _powMonster; }
             set { _powMonster = value; }
         }
 
-        public Monster getAttMonster
+        public Monster AttMonster
         {
             get { return _attMonster; }
             set { _attMonster = value; }
         }
 
-        public Monster getDefMonster
+        public Monster DefMonster
         {
             get { return _defMonster; }
             set { _defMonster = value; }
         }
 
-        public Monster getMovMonster
+        public Monster MovMonster
         {
             get { return _movMonster; }
             set { _movMonster = value; }
         }
-
-        public Cards getFirstCard
-        {
-            get { return _fstCard; }
-            set { _fstCard = value; }
-        }
-        public Cards getSecondCard
-        {
-            get { return _secCard; }
-            set { _secCard = value; }
-        }
-        public Cards getThirdCard
-        {
-            get { return _trdCard; }
-            set { _trdCard = value; }
-        }
-        public Cards getFourthCard
-        {
-            get { return _fthCard; }
-            set { _fthCard = value; }
-        }
-
 
     }
 }
