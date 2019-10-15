@@ -80,8 +80,14 @@ namespace Projet_GONLO
         {
             btnGhhhk.Enabled = false;
             btnHoujix.Enabled = false;
+            addMonsterToPlayer(btnGhhhk);
             checkMonsterFinish();
             nextTurn();
+        }
+
+        private void addMonsterToPlayer(Button btnGhhhk)
+        {
+            
         }
 
         private void checkMonsterFinish()
@@ -147,7 +153,7 @@ namespace Projet_GONLO
                 computerChoose(BtnMantellian, BtnMonnok, message);
             }
 
-        }
+         }
 
         private void computerChoose(Button btnGhhhk, Button btnHoujix, string message)
         {
