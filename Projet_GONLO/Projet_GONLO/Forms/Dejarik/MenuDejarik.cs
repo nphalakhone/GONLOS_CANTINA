@@ -18,7 +18,6 @@ namespace Projet_GONLO
         {
             InitializeComponent();
            
-
         }
 
         private void BtnSolo_Click(object sender, EventArgs e)
@@ -38,65 +37,49 @@ namespace Projet_GONLO
 
         private void BtnGhhhk_Click(object sender, EventArgs e)
         {
-            BtnGhhhk.Enabled = false;
-            BtnHoujix.Enabled = false;
-            checkMonsterFinish();
-            nextTurn();
+            btnClick(BtnGhhhk, BtnHoujix);
         }
-
+ 
 
         private void BtnHoujix_Click(object sender, EventArgs e)
         {
-            BtnGhhhk.Enabled = false;
-            BtnHoujix.Enabled = false;
-            checkMonsterFinish();
-            nextTurn();
+            btnClick(BtnGhhhk, BtnHoujix);
         }
 
         private void BtnKintanStrider_Click(object sender, EventArgs e)
         {
-            BtnKintanStrider.Enabled = false;
-            BtnNgok.Enabled = false;
-            checkMonsterFinish();
-            nextTurn();
+            btnClick(BtnKintanStrider, BtnNgok);
         }
 
         private void BtnNgok_Click(object sender, EventArgs e)
         {
-            BtnKintanStrider.Enabled = false;
-            BtnNgok.Enabled = false;
-            checkMonsterFinish();
-            nextTurn();
+            btnClick(BtnKintanStrider, BtnNgok);
         }
 
         private void BtnKlorslug_Click(object sender, EventArgs e)
         {
-            BtnKlorslug.Enabled = false;
-            BtnGrimtaash.Enabled = false;
-            checkMonsterFinish();
-            nextTurn();
+            btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
         private void BtnGrimtaash_Click(object sender, EventArgs e)
         {
-            BtnKlorslug.Enabled = false;
-            BtnGrimtaash.Enabled = false;
-            checkMonsterFinish();
-            nextTurn();
+            btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
         private void BtnMantellian_Click(object sender, EventArgs e)
         {
-            BtnMantellian.Enabled = false;
-            BtnMonnok.Enabled = false;
-            checkMonsterFinish();
-            nextTurn();
+            btnClick(BtnMantellian, BtnMonnok);
         }
 
         private void BtnMonnok_Click(object sender, EventArgs e)
         {
-            BtnMantellian.Enabled = false;
-            BtnMonnok.Enabled = false;
+            btnClick(BtnMantellian, BtnMonnok);
+        }
+
+        private void btnClick(Button btnGhhhk, Button btnHoujix)
+        {
+            btnGhhhk.Enabled = false;
+            btnHoujix.Enabled = false;
             checkMonsterFinish();
             nextTurn();
         }
