@@ -12,7 +12,7 @@ namespace Projet_GONLO
 {
     public partial class CreationPerso : Form
     {
-
+        Player player = new Player();
         BorderStyle style3D = BorderStyle.Fixed3D;
         BorderStyle styleNone = BorderStyle.None;
         GeneratedNamesList nameList = new GeneratedNamesList();
@@ -170,18 +170,18 @@ namespace Projet_GONLO
         {
             this.Hide();
             MenuAccueil menuAccueil = new MenuAccueil();
-            Player player = new Player();
-            player.getSpecies = VerificationSpecies();
-            player.getNom = TxtBoxNameGen.Text;
+            player.Species = VerificationSpecies();
+            player.Name = TxtBoxNameGen.Text;
             if (CBoxFemale.Checked)
             {
-                player.getGender = "Female";
+                player.Gender = "Female";
             }
             else if (CBoxMale.Checked)
             {
-                player.getGender = "Male";
+                player.Gender = "Male";
             }
-            MessageBox.Show(player.getNom + "," + player.getSpecies + "," + player.getGender);
+
+            //MessageBox.Show(player.Name + "," + player.Species + "," + player.Gender);
             menuAccueil.ShowDialog();
             this.Close();
         }

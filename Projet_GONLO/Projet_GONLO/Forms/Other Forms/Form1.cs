@@ -13,6 +13,7 @@ namespace Projet_GONLO
 {
     public partial class MenuAccueil : Form
     {
+        
         public MenuAccueil()
         {
             this.DoubleBuffered = true;

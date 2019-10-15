@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadForm));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new Projet_GONLO.textBox();
+            this.TBoxName = new Projet_GONLO.textBox();
             this.BtnEllLoad = new Projet_GONLO.ButtonEllipse();
             this.BtnEllBack = new Projet_GONLO.ButtonEllipse();
             this.label2 = new System.Windows.Forms.Label();
+            this.BtnEllDelete = new Projet_GONLO.ButtonEllipse();
             this.SuspendLayout();
             // 
             // label1
@@ -48,14 +49,14 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Write down your character\'s name";
             // 
-            // textBox1
+            // TBoxName
             // 
-            this.textBox1.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(188, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 28);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.TBoxName.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBoxName.Location = new System.Drawing.Point(188, 140);
+            this.TBoxName.Name = "TBoxName";
+            this.TBoxName.Size = new System.Drawing.Size(300, 28);
+            this.TBoxName.TabIndex = 3;
+            this.TBoxName.TextChanged += new System.EventHandler(this.TBoxName_TextChanged);
             // 
             // BtnEllLoad
             // 
@@ -103,6 +104,22 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "to load your game";
             // 
+            // BtnEllDelete
+            // 
+            this.BtnEllDelete.BackColor = System.Drawing.Color.Transparent;
+            this.BtnEllDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEllDelete.BackgroundImage")));
+            this.BtnEllDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllDelete.FlatAppearance.BorderSize = 0;
+            this.BtnEllDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEllDelete.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEllDelete.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllDelete.Location = new System.Drawing.Point(253, 220);
+            this.BtnEllDelete.Name = "BtnEllDelete";
+            this.BtnEllDelete.Size = new System.Drawing.Size(175, 75);
+            this.BtnEllDelete.TabIndex = 7;
+            this.BtnEllDelete.Text = "delete";
+            this.BtnEllDelete.UseVisualStyleBackColor = false;
+            // 
             // LoadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,10 +127,11 @@
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.StarsBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(687, 344);
+            this.Controls.Add(this.BtnEllDelete);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnEllBack);
             this.Controls.Add(this.BtnEllLoad);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TBoxName);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -129,9 +147,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private textBox textBox1;
+        private textBox TBoxName;
         private ButtonEllipse BtnEllLoad;
         private ButtonEllipse BtnEllBack;
         private System.Windows.Forms.Label label2;
+        private ButtonEllipse BtnEllDelete;
     }
 }
