@@ -15,11 +15,6 @@ namespace Projet_GONLO
         //Liste de tous les bouttons qui sont sur le board
         private static List<Tile> listTiles = new List<Tile>();
 
-        public static List<Tile> ListTiles { get => listTiles; }
-        public List<Tile> ListAttack { get => listAttack; }
-        public List<Tile> ListMovement { get => listMovement; }
-        public List<Tile> ListDefense { get => listDefense; }
-
         public static void CreateTiles()
         {
             for (int i = 0; i < 24; i++)
@@ -31,8 +26,7 @@ namespace Projet_GONLO
 
         private static void CreateGraphTiles()
         {
-            
-
+            AssociateMovement(23,34);
             
         }
 
@@ -41,6 +35,14 @@ namespace Projet_GONLO
             foreach (int position in tab)
             {
                 listTiles[myTile].listMovement.Add(listTiles[position]);
+            }
+        }
+
+        private static void AssociateAttack(int myTile, params int[] tab)
+        {
+            foreach (int position in tab)
+            {
+                listTiles[myTile].listAttack.Add(listTiles[position]);
             }
         }
 
@@ -61,5 +63,10 @@ namespace Projet_GONLO
         {
             Number = number;
         }
+
+        public static List<Tile> getListTiles { get => listTiles; }
+        public List<Tile> getListAttack { get => listAttack; }
+        public List<Tile> getListMovement { get => listMovement; }
+        public List<Tile> getListDefense { get => listDefense; }
     }
 }
