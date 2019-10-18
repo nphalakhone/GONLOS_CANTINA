@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -96,6 +97,11 @@ namespace Projet_GONLO
 
         }
 
+        private void Btn_Action(object sender, EventArgs e, String typeAction, Monster monstre)
+        {
+            
+        }
+
         private void BtnDice_Click(object sender, EventArgs e)
         {
             Random rng = new Random();
@@ -148,6 +154,11 @@ namespace Projet_GONLO
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Dejarik_Holochess_Rules.pdf");
         }
     }
 }
