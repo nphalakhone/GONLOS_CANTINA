@@ -14,7 +14,7 @@ namespace Projet_GONLO
 {
     public partial class Dejarik : Form
     {
-        List<Button> listButtons = new List<Button>();
+        List<Button> listButtons;
         List<Player> players = new List<Player>();
         Player dejarikPlayer = new Player();
 
@@ -27,7 +27,7 @@ namespace Projet_GONLO
 
         private void initalizeListButtons()
         {
-            listButtons.Add(new Button());
+            listButtons = new List<Button>();
             listButtons.Add(Button15);
             listButtons.Add(Button16);
             listButtons.Add(Button17);
@@ -53,6 +53,38 @@ namespace Projet_GONLO
             listButtons.Add(Button12);
             listButtons.Add(Button13);
             listButtons.Add(Button1);
+
+            for (int i = 0; i < listButtons.Count; i++)
+            {
+                listButtons[i].Click += btn_Click;
+            }
+
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
+            List<int> accessibleButtons = new List<int>();
+
+            for (int i = 0; i < listButtons.Count; i++)
+            {
+                listButtons[i].Enabled = false;
+            }
+
+           
+            for (int i = 0; i < Tile.ListTiles[currPosition].ListMovement.Count; i++)
+            {
+                    accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[i].Number);
+            }
+
+
+            //Activate accessible buttons
+            for (int i = 0; i < accessibleButtons.Count; i++)
+            {
+                listButtons[accessibleButtons[i]].Enabled = true;
+            }
+            //timerTransport.Start();
+
         }
 
         private void createMonsters()
@@ -97,10 +129,6 @@ namespace Projet_GONLO
 
         }
 
-        private void Btn_Action(object sender, EventArgs e, String typeAction, Monster monstre)
-        {
-            
-        }
 
         private void BtnDice_Click(object sender, EventArgs e)
         {
