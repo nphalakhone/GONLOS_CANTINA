@@ -8,7 +8,7 @@ using System.Drawing.Drawing2D;
 
 namespace Projet_GONLO
 {
-    public class BouttonCercle : Button
+    public class ButtonCircle : Button
     {
         protected override void OnPaint(PaintEventArgs e)
         {

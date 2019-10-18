@@ -21,10 +21,10 @@ namespace Projet_GONLO
         {
             InitializeComponent();
             createMonsters();
-            initialiserBoutons();
+            initalizeListButtons();
         }
 
-        private void initialiserBoutons()
+        private void initalizeListButtons()
         {
             listButtons.Add(new Button());
             listButtons.Add(Button15);
