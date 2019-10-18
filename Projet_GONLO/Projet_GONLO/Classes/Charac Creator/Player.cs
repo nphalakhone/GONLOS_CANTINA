@@ -11,7 +11,11 @@ namespace Projet_GONLO
         private string _nom;
         private string _species;
         private string _gender;
-        private string _credits;
+        private int _credits;
+        private int _pazaakgameswon;
+        private int _pazaakgameslost;
+        private int _dejarikgameswon;
+        private int _dejarikgameslost;
         private Monster _powMonster;
         private Monster _attMonster;
         private Monster _defMonster;
@@ -20,7 +24,7 @@ namespace Projet_GONLO
 
         public Player()
         {
-
+            
         }
 
         public string Name
@@ -41,10 +45,34 @@ namespace Projet_GONLO
             set { _gender = value; }
         }
 
-        public string Credits
+        public int Credits
         {
             get { return _credits; }
             set { _credits = value; }
+        }
+
+        public int PazaakGamesWon
+        {
+            get { return _pazaakgameswon; }
+            set { _pazaakgameswon = value; }
+        }
+
+        public int PazaakGamesLost
+        {
+            get { return _pazaakgameslost; }
+            set { _pazaakgameslost = value; }
+        }
+
+        public int DejarikGamesWon
+        {
+            get { return _dejarikgameswon; }
+            set { _dejarikgameswon = value; }
+        }
+
+        public int DejarikGamesLost
+        {
+            get { return _dejarikgameslost; }
+            set { _dejarikgameslost = value; }
         }
 
         public Monster PowMonster
@@ -71,5 +99,6 @@ namespace Projet_GONLO
             set { _movMonster = value; }
         }
 
+        
     }
 }

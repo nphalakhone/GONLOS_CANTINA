@@ -13,12 +13,19 @@ namespace Projet_GONLO
 {
     public partial class MenuAccueil : Form
     {
-        
+        Player player1 = new Player();
+        //public MenuAccueil()
+        //{
+        //    this.DoubleBuffered = true;
+        //    InitializeComponent();
+
+        //}
+
         public MenuAccueil()
         {
             this.DoubleBuffered = true;
             InitializeComponent();
-            
+           // player1 = player;
         }
 
         bool etatWelcome = true;
@@ -28,12 +35,21 @@ namespace Projet_GONLO
         string txt1;
         string txt2;
 
+        internal Player Player1 { get => player1; set => player1 = value; }
+
         private void MenuAccueil_Load(object sender, EventArgs e)
         {
             txt1 = LblWelcome.Text;
             txt2 = LblGonlo.Text;
             len1 = txt1.Length;
             len2 = txt2.Length;
+            LblPlayerName.Text = player1.Name;
+            LblPlayerSpecies.Text = player1.Species;
+            LblPlayerCredits.Text = player1.Credits.ToString();
+            LblNbPGW.Text = player1.PazaakGamesWon.ToString();
+            LblNbPGL.Text = player1.PazaakGamesLost.ToString();
+            LblNbDGW.Text = player1.DejarikGamesWon.ToString();
+            LblNbDGL.Text = player1.DejarikGamesLost.ToString();
             RPnlPazaak.Hide();
             RPnlDejarik.Hide();
             RPnlSBR.Hide();
@@ -134,6 +150,20 @@ namespace Projet_GONLO
             MenuDejarik menuDejarik = new MenuDejarik();
             menuDejarik.ShowDialog();
             this.Close();
+        }
+
+        private void BtnGBoxPI_Click(object sender, EventArgs e)
+        {
+            if (GBoxPlayerInfo.Height == 445)
+            {
+                GBoxPlayerInfo.Height = 275;
+                BtnGBoxPI.BackgroundImage = Properties.Resources.arrows;
+            }
+            else if (GBoxPlayerInfo.Height == 275)
+            {
+                GBoxPlayerInfo.Height = 445;
+                BtnGBoxPI.BackgroundImage = Properties.Resources.arrowsUp;
+            }
         }
     }
 }

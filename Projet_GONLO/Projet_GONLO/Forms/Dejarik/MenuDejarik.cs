@@ -13,6 +13,7 @@ namespace Projet_GONLO
     public partial class MenuDejarik : Form
     {
         private Boolean multiplayer = false;
+        Player player = new Player();
 
         public MenuDejarik()
         {
@@ -112,6 +113,7 @@ namespace Projet_GONLO
         private void ReturnToMainMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hide();
+            //MenuAccueil menu = new MenuAccueil();
             MenuAccueil menu = new MenuAccueil();
             menu.ShowDialog();
             this.Close();

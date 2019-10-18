@@ -40,7 +40,7 @@ namespace Projet_GONLO
                 newPlayer.Name = playerData[0];
                 newPlayer.Species = playerData[1];
                 newPlayer.Gender = playerData[2];
-                newPlayer.Credits = playerData[3];
+                newPlayer.Credits = int.Parse(playerData[3]);
                 //newPlayer.PowMonster = playerData[4];
                 //newPlayer.AttMonster = playerData[5];
                 //newPlayer.DefMonster = playerData[6];
@@ -56,6 +56,7 @@ namespace Projet_GONLO
                 }
             }
             this.Hide();
+            //MenuAccueil menu = new MenuAccueil();
             MenuAccueil menu = new MenuAccueil();
             menu.ShowDialog();
             this.Close();

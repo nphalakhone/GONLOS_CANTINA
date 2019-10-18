@@ -169,9 +169,16 @@ namespace Projet_GONLO
         private void BtnEllNext_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MenuAccueil menuAccueil = new MenuAccueil();
+            //MenuAccueil menuAccueil = new MenuAccueil();
             player.Species = VerificationSpecies();
             player.Name = TxtBoxNameGen.Text;
+            player.Credits = 500;
+            player.PazaakGamesWon = 10;
+            player.PazaakGamesLost = 2;
+            player.DejarikGamesLost = 5;
+            player.DejarikGamesWon = 8;
+            MenuAccueil menuAccueil = new MenuAccueil();
+            menuAccueil.Player1 = player;
             if (CBoxFemale.Checked)
             {
                 player.Gender = "Female";
