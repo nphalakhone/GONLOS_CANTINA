@@ -367,7 +367,7 @@
             this.GBoxPlayerInfo.ForeColor = System.Drawing.Color.LimeGreen;
             this.GBoxPlayerInfo.Location = new System.Drawing.Point(307, 104);
             this.GBoxPlayerInfo.Name = "GBoxPlayerInfo";
-            this.GBoxPlayerInfo.Size = new System.Drawing.Size(280, 445);
+            this.GBoxPlayerInfo.Size = new System.Drawing.Size(280, 275);
             this.GBoxPlayerInfo.TabIndex = 33;
             this.GBoxPlayerInfo.TabStop = false;
             this.GBoxPlayerInfo.Text = "player\'s info";
