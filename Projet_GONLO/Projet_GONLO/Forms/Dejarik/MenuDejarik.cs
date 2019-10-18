@@ -17,6 +17,7 @@ namespace Projet_GONLO
         private ComputerDejarik cpu = new ComputerDejarik();
         Monster mantellianSavrip, monnok, ghhhk, houjix, kintanStrider, ngok, klorslug, grimtaash;
         Player player1 = new Player();
+        internal Player Player1 { get => player1; set => player1 = value; }
 
         public MenuDejarik()
         {
@@ -41,42 +42,50 @@ namespace Projet_GONLO
 
         private void BtnGhhhk_Click(object sender, EventArgs e)
         {
-            btnClick(BtnGhhhk, BtnHoujix);
+            player1.AttMonster = ghhhk;
+            btnClick(BtnGhhhk, BtnHoujix);           
         }
  
 
         private void BtnHoujix_Click(object sender, EventArgs e)
         {
+            player1.AttMonster = houjix;
             btnClick(BtnGhhhk, BtnHoujix);
         }
 
         private void BtnKintanStrider_Click(object sender, EventArgs e)
         {
+            player1.DefMonster = kintanStrider;
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
         private void BtnNgok_Click(object sender, EventArgs e)
         {
+            player1.DefMonster = ngok;
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
         private void BtnKlorslug_Click(object sender, EventArgs e)
         {
+            player1.MovMonster = klorslug;
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
         private void BtnGrimtaash_Click(object sender, EventArgs e)
         {
+            player1.MovMonster = grimtaash;
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
         private void BtnMantellian_Click(object sender, EventArgs e)
         {
+            player1.PowMonster = mantellianSavrip;
             btnClick(BtnMantellian, BtnMonnok);
         }
 
         private void BtnMonnok_Click(object sender, EventArgs e)
         {
+            player1.PowMonster = monnok;
             btnClick(BtnMantellian, BtnMonnok);
         }
 
@@ -84,7 +93,6 @@ namespace Projet_GONLO
         {
             btnGhhhk.Enabled = false;
             btnHoujix.Enabled = false;
-            addMonsterToPlayer(btnGhhhk);
             checkMonsterFinish();
             nextTurn();
         }
@@ -101,10 +109,6 @@ namespace Projet_GONLO
             grimtaash = new Monster("Grimtaash the Molator", 1, 2, 3, (Image)Properties.Resources.ResourceManager.GetObject("grimtaash"), typeMonster.Mobile);
         }
 
-        private void addMonsterToPlayer(Button btnGhhhk)
-        {
-            
-        }
 
         private void checkMonsterFinish()
         {
