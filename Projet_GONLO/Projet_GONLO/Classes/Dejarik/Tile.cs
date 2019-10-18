@@ -8,16 +8,14 @@ namespace Projet_GONLO
 {
     public class Tile
     {
-        private List<Tile> listAttack = new List<Tile>();
         private List<Tile> listMovement = new List<Tile>();
-        private List<Tile> listDefense = new List<Tile>();
 
         //Liste de tous les bouttons qui sont sur le board
         private static List<Tile> listTiles = new List<Tile>();
 
         public static void CreateTiles()
         {
-            for (int i = 0; i < 24; i++)
+            for (int i = 0; i < 25; i++)
             {
                 listTiles.Add(new Tile(i));
             }
@@ -61,13 +59,6 @@ namespace Projet_GONLO
             }
         }
 
-        private static void AssociateAttack(int myTile, params int[] tab)
-        {
-            foreach (int position in tab)
-            {
-                listTiles[myTile].listAttack.Add(listTiles[position]);
-            }
-        }
 
         /// <summary>
         /// Case Number
@@ -87,9 +78,21 @@ namespace Projet_GONLO
             Number = number;
         }
 
-        public static List<Tile> getListTiles { get => listTiles; }
-        public List<Tile> getListAttack { get => listAttack; }
-        public List<Tile> getListMovement { get => listMovement; }
-        public List<Tile> getListDefense { get => listDefense; }
+        public static List<Tile> ListTiles
+        {
+            get
+            {
+                return listTiles;
+            }
+        }
+
+        public List<Tile> ListMovement
+        {
+            get
+            {
+                return listMovement;
+            }
+        }
+
     }
 }
