@@ -15,7 +15,7 @@ namespace Projet_GONLO
 
         public static void CreateTiles()
         {
-            for (int i = 0; i < 25; i++)
+            for (int i = 0; i < 26; i++)
             {
                 listTiles.Add(new Tile(i));
             }

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Projet_GONLO
 {
     public partial class Dejarik : Form
@@ -23,23 +24,13 @@ namespace Projet_GONLO
             InitializeComponent();
             createMonsters();
             initalizeListButtons();
+            Tile.CreateTiles();
         }
 
         private void initalizeListButtons()
         {
             listButtons = new List<Button>();
-            listButtons.Add(Button15);
-            listButtons.Add(Button16);
-            listButtons.Add(Button17);
-            listButtons.Add(Button18);
-            listButtons.Add(Button19);
-            listButtons.Add(Button20);
-            listButtons.Add(Button21);
-            listButtons.Add(Button22);
-            listButtons.Add(Button23);
-            listButtons.Add(Button24);
-            listButtons.Add(Button25);
-            listButtons.Add(Button14);
+            listButtons.Add(Button1);
             listButtons.Add(Button2);
             listButtons.Add(Button3);
             listButtons.Add(Button4);
@@ -52,7 +43,18 @@ namespace Projet_GONLO
             listButtons.Add(Button11);
             listButtons.Add(Button12);
             listButtons.Add(Button13);
-            listButtons.Add(Button1);
+            listButtons.Add(Button14);
+            listButtons.Add(Button15);
+            listButtons.Add(Button16);
+            listButtons.Add(Button17);
+            listButtons.Add(Button18);
+            listButtons.Add(Button19);
+            listButtons.Add(Button20);
+            listButtons.Add(Button21);
+            listButtons.Add(Button22);
+            listButtons.Add(Button23);
+            listButtons.Add(Button24);
+            listButtons.Add(Button25);
 
             for (int i = 0; i < listButtons.Count; i++)
             {
@@ -71,16 +73,17 @@ namespace Projet_GONLO
                 listButtons[i].Enabled = false;
             }
 
-           
+
             for (int i = 0; i < Tile.ListTiles[currPosition].ListMovement.Count; i++)
             {
-                    accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[i].Number);
+                accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[0].Number);
             }
 
 
             //Activate accessible buttons
             for (int i = 0; i < accessibleButtons.Count; i++)
             {
+                listButtons[accessibleButtons[i]].BackColor = Color.Green;
                 listButtons[accessibleButtons[i]].Enabled = true;
             }
             //timerTransport.Start();
