@@ -52,6 +52,7 @@
     <Compile Include="ButtonEllipse.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Classes\Dejarik\ComputerDejarik.cs" />
     <Compile Include="Classes\Pazaak\Cards.cs" />
     <Compile Include="Forms\Charac Creator\CreationPerso.cs">
       <SubType>Form</SubType>

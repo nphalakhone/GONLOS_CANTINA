@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projet_GONLO.Classes.Dejarik;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,12 +14,14 @@ namespace Projet_GONLO
     public partial class MenuDejarik : Form
     {
         private Boolean multiplayer = false;
-        Player player = new Player();
+        private ComputerDejarik cpu = new ComputerDejarik();
+        Monster mantellianSavrip, monnok, ghhhk, houjix, kintanStrider, ngok, klorslug, grimtaash;
+        Player player1 = new Player();
 
         public MenuDejarik()
         {
-            InitializeComponent();
-           
+            InitializeComponent();       
+            createMonsters();
         }
 
         private void BtnSolo_Click(object sender, EventArgs e)
@@ -86,6 +89,18 @@ namespace Projet_GONLO
             nextTurn();
         }
 
+        private void createMonsters()
+        {
+            mantellianSavrip = new Monster("The Mantellian Savrip", 2, 3, 2, (Image)Properties.Resources.ResourceManager.GetObject("Mantellian_Savrip"), typeMonster.Power);
+            monnok = new Monster("The Monnok", 3, 2, 2, (Image)Properties.Resources.ResourceManager.GetObject("Monnok"), typeMonster.Power);
+            ghhhk = new Monster("The Ghhhk", 3, 2, 1, (Image)Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive);
+            houjix = new Monster("The Houjix", 3, 1, 2, (Image)Properties.Resources.ResourceManager.GetObject("houjix"), typeMonster.Offensive);
+            kintanStrider = new Monster("The Kintan Strider", 1, 3, 2, (Image)Properties.Resources.ResourceManager.GetObject("Kintan_Strider"), typeMonster.Defensive);
+            ngok = new Monster("The Ng'ok", 2, 3, 1, (Image)Properties.Resources.ResourceManager.GetObject("Ngok"), typeMonster.Defensive);
+            klorslug = new Monster("The K'lor'slug", 2, 1, 3, (Image)Properties.Resources.ResourceManager.GetObject("klorslaug"), typeMonster.Mobile);
+            grimtaash = new Monster("Grimtaash the Molator", 1, 2, 3, (Image)Properties.Resources.ResourceManager.GetObject("grimtaash"), typeMonster.Mobile);
+        }
+
         private void addMonsterToPlayer(Button btnGhhhk)
         {
             
@@ -138,21 +153,25 @@ namespace Projet_GONLO
             {
                 String message = "The computer chose the monster Ghhhk, you have then be assigned the monster Houjix";
                 computerChoose(BtnGhhhk, BtnHoujix, message);
+                cpu.AttMonster = houjix;
             }
             else if (BtnKintanStrider.Enabled == true && BtnNgok.Enabled == true)
             {
                 String message = "The computer chose the monster Kintan Strider, you have then be assigned the monster Ngok";
                 computerChoose(BtnKintanStrider, BtnNgok, message);
+                cpu.AttMonster = kintanStrider;
             }
             else if (BtnKlorslug.Enabled == true && BtnGrimtaash.Enabled == true)
             {
                 String message = "The computer chose the monster Klorslug, you have then be assigned the monster Grimstaash";
                 computerChoose(BtnKlorslug, BtnGrimtaash, message);
+                cpu.MovMonster = klorslug;
             }
             else
             {
                 String message = "The computer chose the monster Mantellian, you have then be assigned the monster Monnok";
                 computerChoose(BtnMantellian, BtnMonnok, message);
+                cpu.PowMonster = mantellianSavrip;
             }
 
          }
