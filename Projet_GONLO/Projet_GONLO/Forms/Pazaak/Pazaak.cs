@@ -92,6 +92,8 @@ namespace Projet_GONLO
             int pointsAdded = rand.Next(1, 11);
             if (turn == 0 && !playerStand) //player
             {
+                CPBoxAI.BackColor = Color.Black;
+                CPBoxPlayer.BackColor = Color.Maroon;
                 TabPanelLeft[nbCardsPlayer].BackgroundImage = c.getCarteNormal(pointsAdded);
                 TabPanelLeft[nbCardsPlayer].BackgroundImageLayout = ImageLayout.Stretch;
                 nbCardsPlayer++;
@@ -106,6 +108,8 @@ namespace Projet_GONLO
             }
             else if(turn == 1 && !AiStand)
             {
+                CPBoxAI.BackColor = Color.Maroon;
+                CPBoxPlayer.BackColor = Color.Black;
                 TabPanelRight[nbCardsAi].BackgroundImage = c.getCarteNormal(pointsAdded);
                 TabPanelRight[nbCardsAi].BackgroundImageLayout = ImageLayout.Stretch;
                 nbCardsAi++;

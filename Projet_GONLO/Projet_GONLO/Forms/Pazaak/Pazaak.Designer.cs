@@ -31,6 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pazaak));
             this.LblPointsPlayer = new System.Windows.Forms.Label();
             this.LblPointsAi = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CPBoxAI = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
+            this.CPBoxPlayer = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
             this.RPnlDownG4 = new Projet_GONLO.RoundPanel();
             this.RPnlDownG3 = new Projet_GONLO.RoundPanel();
             this.RPnlDownG2 = new Projet_GONLO.RoundPanel();
@@ -56,13 +64,9 @@
             this.RPnlG3 = new Projet_GONLO.RoundPanel();
             this.RPnlG2 = new Projet_GONLO.RoundPanel();
             this.RPnlG1 = new Projet_GONLO.RoundPanel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxAI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // LblPointsPlayer
@@ -88,6 +92,90 @@
             this.LblPointsAi.Size = new System.Drawing.Size(23, 20);
             this.LblPointsAi.TabIndex = 22;
             this.LblPointsAi.Text = "0";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filesToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1001, 25);
+            this.menuStrip1.TabIndex = 23;
+            this.menuStrip1.Text = "MnDejarik";
+            // 
+            // filesToolStripMenuItem
+            // 
+            this.filesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveToolStripMenuItem,
+            this.restartToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.filesToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filesToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
+            this.filesToolStripMenuItem.Name = "filesToolStripMenuItem";
+            this.filesToolStripMenuItem.Size = new System.Drawing.Size(70, 21);
+            this.filesToolStripMenuItem.Text = "Files";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.saveToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.BackgroundImage")));
+            this.saveToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
+            // 
+            // restartToolStripMenuItem
+            // 
+            this.restartToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.restartToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("restartToolStripMenuItem.BackgroundImage")));
+            this.restartToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.restartToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.restartToolStripMenuItem.Text = "Restart";
+            this.restartToolStripMenuItem.Click += new System.EventHandler(this.RestartToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.exitToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.BackgroundImage")));
+            this.exitToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(66, 21);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.HelpToolStripMenuItem_Click);
+            // 
+            // CPBoxAI
+            // 
+            this.CPBoxAI.BackColor = System.Drawing.Color.Black;
+            this.CPBoxAI.Location = new System.Drawing.Point(838, 76);
+            this.CPBoxAI.Name = "CPBoxAI";
+            this.CPBoxAI.Size = new System.Drawing.Size(50, 50);
+            this.CPBoxAI.TabIndex = 25;
+            this.CPBoxAI.TabStop = false;
+            // 
+            // CPBoxPlayer
+            // 
+            this.CPBoxPlayer.BackColor = System.Drawing.Color.Maroon;
+            this.CPBoxPlayer.Location = new System.Drawing.Point(113, 76);
+            this.CPBoxPlayer.Name = "CPBoxPlayer";
+            this.CPBoxPlayer.Size = new System.Drawing.Size(51, 51);
+            this.CPBoxPlayer.TabIndex = 24;
+            this.CPBoxPlayer.TabStop = false;
             // 
             // RPnlDownG4
             // 
@@ -343,72 +431,6 @@
             this.RPnlG1.Size = new System.Drawing.Size(73, 89);
             this.RPnlG1.TabIndex = 0;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filesToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1001, 25);
-            this.menuStrip1.TabIndex = 23;
-            this.menuStrip1.Text = "MnDejarik";
-            // 
-            // filesToolStripMenuItem
-            // 
-            this.filesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveToolStripMenuItem,
-            this.restartToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.filesToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filesToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
-            this.filesToolStripMenuItem.Name = "filesToolStripMenuItem";
-            this.filesToolStripMenuItem.Size = new System.Drawing.Size(70, 21);
-            this.filesToolStripMenuItem.Text = "Files";
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
-            this.saveToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.BackgroundImage")));
-            this.saveToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.saveToolStripMenuItem.Text = "Save";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
-            // 
-            // restartToolStripMenuItem
-            // 
-            this.restartToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
-            this.restartToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("restartToolStripMenuItem.BackgroundImage")));
-            this.restartToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.restartToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
-            this.restartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.restartToolStripMenuItem.Text = "Restart";
-            this.restartToolStripMenuItem.Click += new System.EventHandler(this.RestartToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
-            this.exitToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.BackgroundImage")));
-            this.exitToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(66, 21);
-            this.helpToolStripMenuItem.Text = "Help";
-            this.helpToolStripMenuItem.Click += new System.EventHandler(this.HelpToolStripMenuItem_Click);
-            // 
             // Pazaak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,6 +438,8 @@
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.pazaakEmptyBoard11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1001, 750);
+            this.Controls.Add(this.CPBoxAI);
+            this.Controls.Add(this.CPBoxPlayer);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.LblPointsAi);
             this.Controls.Add(this.LblPointsPlayer);
@@ -452,6 +476,8 @@
             this.Text = "Pazaak";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxAI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxPlayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,5 +518,7 @@
         private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private Classes.Pazaak.CircularPictureBox CPBoxPlayer;
+        private Classes.Pazaak.CircularPictureBox CPBoxAI;
     }
 }
