@@ -870,7 +870,7 @@
             this.BtnEllExit.TabIndex = 10;
             this.BtnEllExit.Text = "Exit";
             this.BtnEllExit.UseVisualStyleBackColor = false;
-            this.BtnEllExit.Click += new System.EventHandler(this.BtnEllExit_Click);
+            this.BtnEllExit.Click += new System.EventHandler(this.BtnEllSettings_Click);
             // 
             // BtnEllSB
             // 

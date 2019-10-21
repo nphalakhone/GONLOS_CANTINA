@@ -25,6 +25,7 @@ namespace Projet_GONLO
         {
             this.DoubleBuffered = true;
             InitializeComponent();
+           // player1 = player;
         }
 
         bool etatWelcome = true;
@@ -79,7 +80,7 @@ namespace Projet_GONLO
             this.Refresh();
         }
 
-        private void BtnEllExit_Click(object sender, EventArgs e)
+        private void BtnEllSettings_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -136,6 +137,10 @@ namespace Projet_GONLO
             PazaakCardsSelector pazaakCards = new PazaakCardsSelector();
             pazaakCards.ShowDialog();
             this.Close();
+            //Hide();
+            //Pazaak newPazaakGame = new Pazaak();
+            //newPazaakGame.ShowDialog();
+            //this.Close();
 
         }
 
