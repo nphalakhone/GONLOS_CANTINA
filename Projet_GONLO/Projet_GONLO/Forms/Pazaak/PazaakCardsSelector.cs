@@ -17,7 +17,7 @@ namespace Projet_GONLO
         //List<bool> PanelRempi = new List<bool>();
         //bool[] PanelRempi = new bool[8];
         int nbCartes = 0;
-
+        internal Player Player1 { get => player1; set => player1 = value; }
 
         public PazaakCardsSelector()
         {
@@ -25,6 +25,7 @@ namespace Projet_GONLO
             FillListPanels();
             //InitializeArrayBool();
         }
+
 
         //private void InitializeArrayBool()
         //{
@@ -65,17 +66,13 @@ namespace Projet_GONLO
                 if (positionCarteEnleve.Count == 0)
                 {
                     if (nbCartes < 10)
-                {
+                    {
                     playerDeck.ElementAt(nbCartes).BackgroundImage = roundPanel.BackgroundImage;
                     nbCartes++;
-                }
-               
-                    //PanelRempi[nbCartes] = true;
+                    }                    //PanelRempi[nbCartes] = true;
                 }
                 else
                 {
-
-
                     //MessageBox.Show(positionCarteEnleve.ElementAt(1).ToString());
                     playerDeck.ElementAt(positionCarteEnleve.ElementAt(0)).BackgroundImage = roundPanel.BackgroundImage;
                     positionCarteEnleve.RemoveAt(0);
@@ -148,6 +145,19 @@ namespace Projet_GONLO
         private void PazaakCardsSelector_Load(object sender, EventArgs e)
         {
             BtnEllReady.Enabled = false;
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ReturnToMainMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            MenuAccueil menuAcceuil = new MenuAccueil();
+            menuAcceuil.ShowDialog();
+            this.Close();
         }
     }
 }

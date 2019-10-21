@@ -63,8 +63,12 @@
             this.RPnlPlayerDC3 = new Projet_GONLO.RoundPanel();
             this.RPnlPlayerDC10 = new Projet_GONLO.RoundPanel();
             this.RPnlPlayerDC5 = new Projet_GONLO.RoundPanel();
+            this.MnMenuPazaak = new System.Windows.Forms.MenuStrip();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnToMainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GBoxAvailableCards.SuspendLayout();
             this.GBoxDeckCards.SuspendLayout();
+            this.MnMenuPazaak.SuspendLayout();
             this.SuspendLayout();
             // 
             // RPnlPlus1
@@ -75,7 +79,7 @@
             this.RPnlPlus1.BorderColor = System.Drawing.Color.Black;
             this.RPnlPlus1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlus1.Edge = 20;
-            this.RPnlPlus1.Location = new System.Drawing.Point(48, 66);
+            this.RPnlPlus1.Location = new System.Drawing.Point(43, 85);
             this.RPnlPlus1.Name = "RPnlPlus1";
             this.RPnlPlus1.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlus1.TabIndex = 1;
@@ -110,9 +114,9 @@
             this.GBoxAvailableCards.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.GBoxAvailableCards.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBoxAvailableCards.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.GBoxAvailableCards.Location = new System.Drawing.Point(12, 12);
+            this.GBoxAvailableCards.Location = new System.Drawing.Point(12, 27);
             this.GBoxAvailableCards.Name = "GBoxAvailableCards";
-            this.GBoxAvailableCards.Size = new System.Drawing.Size(450, 775);
+            this.GBoxAvailableCards.Size = new System.Drawing.Size(450, 760);
             this.GBoxAvailableCards.TabIndex = 2;
             this.GBoxAvailableCards.TabStop = false;
             this.GBoxAvailableCards.Text = "Available cards";
@@ -121,7 +125,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(315, 35);
+            this.label32.Location = new System.Drawing.Point(315, 54);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(104, 14);
             this.label32.TabIndex = 47;
@@ -131,7 +135,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(180, 35);
+            this.label31.Location = new System.Drawing.Point(180, 54);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(94, 14);
             this.label31.TabIndex = 46;
@@ -141,7 +145,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(198, 49);
+            this.label30.Location = new System.Drawing.Point(198, 68);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(55, 14);
             this.label30.TabIndex = 45;
@@ -151,7 +155,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(40, 35);
+            this.label24.Location = new System.Drawing.Point(40, 54);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(98, 14);
             this.label24.TabIndex = 44;
@@ -165,7 +169,7 @@
             this.RPnlMinus6.BorderColor = System.Drawing.Color.Black;
             this.RPnlMinus6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlMinus6.Edge = 20;
-            this.RPnlMinus6.Location = new System.Drawing.Point(325, 650);
+            this.RPnlMinus6.Location = new System.Drawing.Point(320, 635);
             this.RPnlMinus6.Name = "RPnlMinus6";
             this.RPnlMinus6.Size = new System.Drawing.Size(75, 90);
             this.RPnlMinus6.TabIndex = 33;
@@ -179,7 +183,7 @@
             this.RPnlMinus5.BorderColor = System.Drawing.Color.White;
             this.RPnlMinus5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlMinus5.Edge = 20;
-            this.RPnlMinus5.Location = new System.Drawing.Point(325, 533);
+            this.RPnlMinus5.Location = new System.Drawing.Point(320, 525);
             this.RPnlMinus5.Name = "RPnlMinus5";
             this.RPnlMinus5.Size = new System.Drawing.Size(75, 90);
             this.RPnlMinus5.TabIndex = 37;
@@ -193,7 +197,7 @@
             this.RPnlMinus4.BorderColor = System.Drawing.Color.White;
             this.RPnlMinus4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlMinus4.Edge = 20;
-            this.RPnlMinus4.Location = new System.Drawing.Point(325, 417);
+            this.RPnlMinus4.Location = new System.Drawing.Point(320, 415);
             this.RPnlMinus4.Name = "RPnlMinus4";
             this.RPnlMinus4.Size = new System.Drawing.Size(75, 90);
             this.RPnlMinus4.TabIndex = 36;
@@ -207,7 +211,7 @@
             this.RPnlMinus3.BorderColor = System.Drawing.Color.White;
             this.RPnlMinus3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlMinus3.Edge = 20;
-            this.RPnlMinus3.Location = new System.Drawing.Point(325, 300);
+            this.RPnlMinus3.Location = new System.Drawing.Point(320, 305);
             this.RPnlMinus3.Name = "RPnlMinus3";
             this.RPnlMinus3.Size = new System.Drawing.Size(75, 90);
             this.RPnlMinus3.TabIndex = 35;
@@ -221,7 +225,7 @@
             this.RPnlMinus2.BorderColor = System.Drawing.Color.White;
             this.RPnlMinus2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlMinus2.Edge = 20;
-            this.RPnlMinus2.Location = new System.Drawing.Point(325, 183);
+            this.RPnlMinus2.Location = new System.Drawing.Point(320, 195);
             this.RPnlMinus2.Name = "RPnlMinus2";
             this.RPnlMinus2.Size = new System.Drawing.Size(75, 90);
             this.RPnlMinus2.TabIndex = 34;
@@ -235,7 +239,7 @@
             this.RPnlMinus1.BorderColor = System.Drawing.Color.Black;
             this.RPnlMinus1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlMinus1.Edge = 20;
-            this.RPnlMinus1.Location = new System.Drawing.Point(325, 66);
+            this.RPnlMinus1.Location = new System.Drawing.Point(320, 85);
             this.RPnlMinus1.Name = "RPnlMinus1";
             this.RPnlMinus1.Size = new System.Drawing.Size(75, 90);
             this.RPnlMinus1.TabIndex = 32;
@@ -249,7 +253,7 @@
             this.RPnlPlusMinus6.BorderColor = System.Drawing.Color.Black;
             this.RPnlPlusMinus6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlusMinus6.Edge = 20;
-            this.RPnlPlusMinus6.Location = new System.Drawing.Point(187, 650);
+            this.RPnlPlusMinus6.Location = new System.Drawing.Point(183, 635);
             this.RPnlPlusMinus6.Name = "RPnlPlusMinus6";
             this.RPnlPlusMinus6.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlusMinus6.TabIndex = 33;
@@ -263,7 +267,7 @@
             this.RPnlPlus6.BorderColor = System.Drawing.Color.Black;
             this.RPnlPlus6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlus6.Edge = 20;
-            this.RPnlPlus6.Location = new System.Drawing.Point(48, 650);
+            this.RPnlPlus6.Location = new System.Drawing.Point(43, 635);
             this.RPnlPlus6.Name = "RPnlPlus6";
             this.RPnlPlus6.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlus6.TabIndex = 2;
@@ -277,7 +281,7 @@
             this.RPnlPlusMinus5.BorderColor = System.Drawing.Color.White;
             this.RPnlPlusMinus5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlusMinus5.Edge = 20;
-            this.RPnlPlusMinus5.Location = new System.Drawing.Point(187, 533);
+            this.RPnlPlusMinus5.Location = new System.Drawing.Point(183, 525);
             this.RPnlPlusMinus5.Name = "RPnlPlusMinus5";
             this.RPnlPlusMinus5.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlusMinus5.TabIndex = 37;
@@ -291,7 +295,7 @@
             this.RPnlPlusMinus4.BorderColor = System.Drawing.Color.White;
             this.RPnlPlusMinus4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlusMinus4.Edge = 20;
-            this.RPnlPlusMinus4.Location = new System.Drawing.Point(187, 417);
+            this.RPnlPlusMinus4.Location = new System.Drawing.Point(183, 415);
             this.RPnlPlusMinus4.Name = "RPnlPlusMinus4";
             this.RPnlPlusMinus4.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlusMinus4.TabIndex = 36;
@@ -305,7 +309,7 @@
             this.RPnlPlus5.BorderColor = System.Drawing.Color.White;
             this.RPnlPlus5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlus5.Edge = 20;
-            this.RPnlPlus5.Location = new System.Drawing.Point(48, 533);
+            this.RPnlPlus5.Location = new System.Drawing.Point(43, 525);
             this.RPnlPlus5.Name = "RPnlPlus5";
             this.RPnlPlus5.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlus5.TabIndex = 5;
@@ -319,7 +323,7 @@
             this.RPnlPlusMinus3.BorderColor = System.Drawing.Color.White;
             this.RPnlPlusMinus3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlusMinus3.Edge = 20;
-            this.RPnlPlusMinus3.Location = new System.Drawing.Point(187, 300);
+            this.RPnlPlusMinus3.Location = new System.Drawing.Point(183, 305);
             this.RPnlPlusMinus3.Name = "RPnlPlusMinus3";
             this.RPnlPlusMinus3.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlusMinus3.TabIndex = 35;
@@ -333,7 +337,7 @@
             this.RPnlPlus4.BorderColor = System.Drawing.Color.White;
             this.RPnlPlus4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlus4.Edge = 20;
-            this.RPnlPlus4.Location = new System.Drawing.Point(48, 417);
+            this.RPnlPlus4.Location = new System.Drawing.Point(43, 415);
             this.RPnlPlus4.Name = "RPnlPlus4";
             this.RPnlPlus4.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlus4.TabIndex = 4;
@@ -347,7 +351,7 @@
             this.RPnlPlusMinus2.BorderColor = System.Drawing.Color.White;
             this.RPnlPlusMinus2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlusMinus2.Edge = 20;
-            this.RPnlPlusMinus2.Location = new System.Drawing.Point(187, 183);
+            this.RPnlPlusMinus2.Location = new System.Drawing.Point(183, 195);
             this.RPnlPlusMinus2.Name = "RPnlPlusMinus2";
             this.RPnlPlusMinus2.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlusMinus2.TabIndex = 34;
@@ -361,7 +365,7 @@
             this.RPnlPlus3.BorderColor = System.Drawing.Color.White;
             this.RPnlPlus3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlus3.Edge = 20;
-            this.RPnlPlus3.Location = new System.Drawing.Point(48, 300);
+            this.RPnlPlus3.Location = new System.Drawing.Point(43, 305);
             this.RPnlPlus3.Name = "RPnlPlus3";
             this.RPnlPlus3.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlus3.TabIndex = 3;
@@ -375,7 +379,7 @@
             this.RPnlPlusMinus1.BorderColor = System.Drawing.Color.Black;
             this.RPnlPlusMinus1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlusMinus1.Edge = 20;
-            this.RPnlPlusMinus1.Location = new System.Drawing.Point(187, 66);
+            this.RPnlPlusMinus1.Location = new System.Drawing.Point(182, 85);
             this.RPnlPlusMinus1.Name = "RPnlPlusMinus1";
             this.RPnlPlusMinus1.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlusMinus1.TabIndex = 32;
@@ -389,7 +393,7 @@
             this.RPnlPlus2.BorderColor = System.Drawing.Color.White;
             this.RPnlPlus2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RPnlPlus2.Edge = 20;
-            this.RPnlPlus2.Location = new System.Drawing.Point(48, 183);
+            this.RPnlPlus2.Location = new System.Drawing.Point(43, 195);
             this.RPnlPlus2.Name = "RPnlPlus2";
             this.RPnlPlus2.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlus2.TabIndex = 2;
@@ -412,9 +416,9 @@
             this.GBoxDeckCards.Controls.Add(this.RPnlPlayerDC5);
             this.GBoxDeckCards.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBoxDeckCards.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.GBoxDeckCards.Location = new System.Drawing.Point(469, 12);
+            this.GBoxDeckCards.Location = new System.Drawing.Point(469, 27);
             this.GBoxDeckCards.Name = "GBoxDeckCards";
-            this.GBoxDeckCards.Size = new System.Drawing.Size(319, 776);
+            this.GBoxDeckCards.Size = new System.Drawing.Size(319, 761);
             this.GBoxDeckCards.TabIndex = 3;
             this.GBoxDeckCards.TabStop = false;
             this.GBoxDeckCards.Text = "Chosen cards";
@@ -564,6 +568,37 @@
             this.RPnlPlayerDC5.TabIndex = 37;
             this.RPnlPlayerDC5.Click += new System.EventHandler(this.RemoveDeckCards);
             // 
+            // MnMenuPazaak
+            // 
+            this.MnMenuPazaak.BackColor = System.Drawing.Color.Transparent;
+            this.MnMenuPazaak.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem,
+            this.returnToMainMenuToolStripMenuItem});
+            this.MnMenuPazaak.Location = new System.Drawing.Point(0, 0);
+            this.MnMenuPazaak.Name = "MnMenuPazaak";
+            this.MnMenuPazaak.Size = new System.Drawing.Size(800, 24);
+            this.MnMenuPazaak.TabIndex = 8;
+            this.MnMenuPazaak.Text = "menuStrip1";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.exitToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
+            // returnToMainMenuToolStripMenuItem
+            // 
+            this.returnToMainMenuToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnToMainMenuToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
+            this.returnToMainMenuToolStripMenuItem.Name = "returnToMainMenuToolStripMenuItem";
+            this.returnToMainMenuToolStripMenuItem.Size = new System.Drawing.Size(158, 20);
+            this.returnToMainMenuToolStripMenuItem.Text = "Back to Main menu";
+            this.returnToMainMenuToolStripMenuItem.Click += new System.EventHandler(this.ReturnToMainMenuToolStripMenuItem_Click);
+            // 
             // PazaakCardsSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -571,6 +606,7 @@
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 800);
+            this.Controls.Add(this.MnMenuPazaak);
             this.Controls.Add(this.GBoxDeckCards);
             this.Controls.Add(this.GBoxAvailableCards);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -581,7 +617,10 @@
             this.GBoxAvailableCards.ResumeLayout(false);
             this.GBoxAvailableCards.PerformLayout();
             this.GBoxDeckCards.ResumeLayout(false);
+            this.MnMenuPazaak.ResumeLayout(false);
+            this.MnMenuPazaak.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -622,5 +661,8 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
         private ButtonEllipse BtnEllReady;
+        private System.Windows.Forms.MenuStrip MnMenuPazaak;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem returnToMainMenuToolStripMenuItem;
     }
 }
