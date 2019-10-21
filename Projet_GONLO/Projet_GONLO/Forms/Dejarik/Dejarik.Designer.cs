@@ -105,10 +105,10 @@
             // LblPlayerTurn
             // 
             this.LblPlayerTurn.AutoSize = true;
-            this.LblPlayerTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPlayerTurn.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPlayerTurn.Location = new System.Drawing.Point(6, 16);
             this.LblPlayerTurn.Name = "LblPlayerTurn";
-            this.LblPlayerTurn.Size = new System.Drawing.Size(242, 42);
+            this.LblPlayerTurn.Size = new System.Drawing.Size(339, 38);
             this.LblPlayerTurn.TabIndex = 0;
             this.LblPlayerTurn.Text = "Player 1 Turn";
             // 
@@ -152,7 +152,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1440, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1440, 25);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "MnDejarik";
             // 
@@ -162,10 +162,10 @@
             this.saveToolStripMenuItem,
             this.restartToolStripMenuItem,
             this.exitToolStripMenuItem});
-            this.filesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filesToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filesToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
             this.filesToolStripMenuItem.Name = "filesToolStripMenuItem";
-            this.filesToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
+            this.filesToolStripMenuItem.Size = new System.Drawing.Size(70, 21);
             this.filesToolStripMenuItem.Text = "Files";
             // 
             // saveToolStripMenuItem
@@ -175,7 +175,7 @@
             this.saveToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -186,7 +186,7 @@
             this.restartToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.restartToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
-            this.restartToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.restartToolStripMenuItem.Text = "Restart";
             this.restartToolStripMenuItem.Click += new System.EventHandler(this.RestartToolStripMenuItem_Click);
             // 
@@ -197,16 +197,16 @@
             this.exitToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(66, 21);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.HelpToolStripMenuItem_Click);
             // 
@@ -214,8 +214,6 @@
             // 
             this.Button1.AutoEllipsis = true;
             this.Button1.BackColor = System.Drawing.Color.Transparent;
-
-
             this.Button1.FlatAppearance.BorderSize = 0;
             this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button1.Location = new System.Drawing.Point(395, 400);
@@ -229,7 +227,6 @@
             // 
             this.Button2.AutoEllipsis = true;
             this.Button2.BackColor = System.Drawing.Color.Transparent;
-
             this.Button2.FlatAppearance.BorderSize = 0;
             this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button2.Location = new System.Drawing.Point(351, 233);
@@ -243,8 +240,6 @@
             // 
             this.Button3.AutoEllipsis = true;
             this.Button3.BackColor = System.Drawing.Color.Transparent;
-
-
             this.Button3.FlatAppearance.BorderSize = 0;
             this.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button3.Location = new System.Drawing.Point(438, 233);
@@ -258,7 +253,6 @@
             // 
             this.Button4.AutoEllipsis = true;
             this.Button4.BackColor = System.Drawing.Color.Transparent;
-
             this.Button4.FlatAppearance.BorderSize = 0;
             this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button4.Location = new System.Drawing.Point(525, 274);
@@ -272,7 +266,6 @@
             // 
             this.Button5.AutoEllipsis = true;
             this.Button5.BackColor = System.Drawing.Color.Transparent;
-
             this.Button5.FlatAppearance.BorderSize = 0;
             this.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button5.Location = new System.Drawing.Point(573, 358);
@@ -286,7 +279,6 @@
             // 
             this.Button6.AutoEllipsis = true;
             this.Button6.BackColor = System.Drawing.Color.Transparent;
-
             this.Button6.FlatAppearance.BorderSize = 0;
             this.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button6.Location = new System.Drawing.Point(573, 454);
@@ -300,7 +292,6 @@
             // 
             this.Button7.AutoEllipsis = true;
             this.Button7.BackColor = System.Drawing.Color.Transparent;
-
             this.Button7.FlatAppearance.BorderSize = 0;
             this.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button7.Location = new System.Drawing.Point(525, 533);
@@ -327,7 +318,6 @@
             // 
             this.Button9.AutoEllipsis = true;
             this.Button9.BackColor = System.Drawing.Color.Transparent;
-
             this.Button9.FlatAppearance.BorderSize = 0;
             this.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button9.Location = new System.Drawing.Point(351, 577);
@@ -354,7 +344,6 @@
             // 
             this.Button11.AutoEllipsis = true;
             this.Button11.BackColor = System.Drawing.Color.Transparent;
-
             this.Button11.FlatAppearance.BorderSize = 0;
             this.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button11.Location = new System.Drawing.Point(218, 454);
@@ -381,7 +370,6 @@
             // 
             this.Button13.AutoEllipsis = true;
             this.Button13.BackColor = System.Drawing.Color.Transparent;
-
             this.Button13.FlatAppearance.BorderSize = 0;
             this.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button13.Location = new System.Drawing.Point(264, 274);
@@ -408,7 +396,6 @@
             // 
             this.Button15.AutoEllipsis = true;
             this.Button15.BackColor = System.Drawing.Color.Transparent;
-
             this.Button15.FlatAppearance.BorderSize = 0;
             this.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button15.Location = new System.Drawing.Point(318, 108);
@@ -435,7 +422,6 @@
             // 
             this.Button17.AutoEllipsis = true;
             this.Button17.BackColor = System.Drawing.Color.Transparent;
-
             this.Button17.FlatAppearance.BorderSize = 0;
             this.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button17.Location = new System.Drawing.Point(612, 177);
@@ -462,7 +448,6 @@
             // 
             this.Button19.AutoEllipsis = true;
             this.Button19.BackColor = System.Drawing.Color.Transparent;
-
             this.Button19.FlatAppearance.BorderSize = 0;
             this.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button19.Location = new System.Drawing.Point(698, 486);
@@ -489,7 +474,6 @@
             // 
             this.Button21.AutoEllipsis = true;
             this.Button21.BackColor = System.Drawing.Color.Transparent;
-
             this.Button21.FlatAppearance.BorderSize = 0;
             this.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button21.Location = new System.Drawing.Point(472, 713);
@@ -516,7 +500,6 @@
             // 
             this.Button23.AutoEllipsis = true;
             this.Button23.BackColor = System.Drawing.Color.Transparent;
-
             this.Button23.FlatAppearance.BorderSize = 0;
             this.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button23.Location = new System.Drawing.Point(170, 628);
@@ -543,7 +526,6 @@
             // 
             this.Button25.AutoEllipsis = true;
             this.Button25.BackColor = System.Drawing.Color.Transparent;
-
             this.Button25.FlatAppearance.BorderSize = 0;
             this.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button25.Location = new System.Drawing.Point(92, 325);

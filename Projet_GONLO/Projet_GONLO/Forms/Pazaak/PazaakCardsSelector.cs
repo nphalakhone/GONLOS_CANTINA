@@ -149,5 +149,18 @@ namespace Projet_GONLO
         {
             BtnEllReady.Enabled = false;
         }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MenuAccueil menu = new MenuAccueil();
+            menu.ShowDialog();
+            this.Close();
+        }
     }
 }

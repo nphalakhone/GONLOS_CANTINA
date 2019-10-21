@@ -63,8 +63,12 @@
             this.RPnlPlayerDC3 = new Projet_GONLO.RoundPanel();
             this.RPnlPlayerDC10 = new Projet_GONLO.RoundPanel();
             this.RPnlPlayerDC5 = new Projet_GONLO.RoundPanel();
+            this.MenuPazaakCS = new System.Windows.Forms.MenuStrip();
+            this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GBoxAvailableCards.SuspendLayout();
             this.GBoxDeckCards.SuspendLayout();
+            this.MenuPazaakCS.SuspendLayout();
             this.SuspendLayout();
             // 
             // RPnlPlus1
@@ -110,9 +114,9 @@
             this.GBoxAvailableCards.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.GBoxAvailableCards.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBoxAvailableCards.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.GBoxAvailableCards.Location = new System.Drawing.Point(12, 12);
+            this.GBoxAvailableCards.Location = new System.Drawing.Point(12, 37);
             this.GBoxAvailableCards.Name = "GBoxAvailableCards";
-            this.GBoxAvailableCards.Size = new System.Drawing.Size(450, 775);
+            this.GBoxAvailableCards.Size = new System.Drawing.Size(450, 750);
             this.GBoxAvailableCards.TabIndex = 2;
             this.GBoxAvailableCards.TabStop = false;
             this.GBoxAvailableCards.Text = "Available cards";
@@ -412,9 +416,9 @@
             this.GBoxDeckCards.Controls.Add(this.RPnlPlayerDC5);
             this.GBoxDeckCards.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBoxDeckCards.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.GBoxDeckCards.Location = new System.Drawing.Point(469, 12);
+            this.GBoxDeckCards.Location = new System.Drawing.Point(469, 37);
             this.GBoxDeckCards.Name = "GBoxDeckCards";
-            this.GBoxDeckCards.Size = new System.Drawing.Size(319, 776);
+            this.GBoxDeckCards.Size = new System.Drawing.Size(319, 751);
             this.GBoxDeckCards.TabIndex = 3;
             this.GBoxDeckCards.TabStop = false;
             this.GBoxDeckCards.Text = "Chosen cards";
@@ -564,6 +568,36 @@
             this.RPnlPlayerDC5.TabIndex = 37;
             this.RPnlPlayerDC5.Click += new System.EventHandler(this.RemoveDeckCards);
             // 
+            // MenuPazaakCS
+            // 
+            this.MenuPazaakCS.BackColor = System.Drawing.Color.Transparent;
+            this.MenuPazaakCS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filesToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.MenuPazaakCS.Location = new System.Drawing.Point(0, 0);
+            this.MenuPazaakCS.Name = "MenuPazaakCS";
+            this.MenuPazaakCS.Size = new System.Drawing.Size(800, 25);
+            this.MenuPazaakCS.TabIndex = 4;
+            this.MenuPazaakCS.Text = "MnDejarik";
+            // 
+            // filesToolStripMenuItem
+            // 
+            this.filesToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filesToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
+            this.filesToolStripMenuItem.Name = "filesToolStripMenuItem";
+            this.filesToolStripMenuItem.Size = new System.Drawing.Size(63, 21);
+            this.filesToolStripMenuItem.Text = "exit";
+            this.filesToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(202, 21);
+            this.helpToolStripMenuItem.Text = "Back to main menu";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.HelpToolStripMenuItem_Click);
+            // 
             // PazaakCardsSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -571,6 +605,7 @@
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 800);
+            this.Controls.Add(this.MenuPazaakCS);
             this.Controls.Add(this.GBoxDeckCards);
             this.Controls.Add(this.GBoxAvailableCards);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -581,7 +616,10 @@
             this.GBoxAvailableCards.ResumeLayout(false);
             this.GBoxAvailableCards.PerformLayout();
             this.GBoxDeckCards.ResumeLayout(false);
+            this.MenuPazaakCS.ResumeLayout(false);
+            this.MenuPazaakCS.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -622,5 +660,8 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
         private ButtonEllipse BtnEllReady;
+        private System.Windows.Forms.MenuStrip MenuPazaakCS;
+        private System.Windows.Forms.ToolStripMenuItem filesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }

@@ -186,5 +186,28 @@ namespace Projet_GONLO
         {
             return 20 - points;
         }
+
+        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Pazaak newPazaakGame = new Pazaak();
+            newPazaakGame.ShowDialog();
+            this.Close();
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
