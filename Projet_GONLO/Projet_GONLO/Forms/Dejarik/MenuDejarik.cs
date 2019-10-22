@@ -17,6 +17,7 @@ namespace Projet_GONLO
         private ComputerDejarik cpu = new ComputerDejarik();
         Monster mantellianSavrip, monnok, ghhhk, houjix, kintanStrider, ngok, klorslug, grimtaash;
         Player player1 = new Player();
+        
         internal Player Player1 { get => player1; set => player1 = value; }
 
         public MenuDejarik()
@@ -118,7 +119,7 @@ namespace Projet_GONLO
                 && BtnMantellian.Enabled == false && BtnMonnok.Enabled == false)
             {
                 Hide();
-                Dejarik newDejarikGame = new Dejarik();
+                Dejarik newDejarikGame = new Dejarik(multiplayer);
                 newDejarikGame.ShowDialog();
                 this.Close();
             }
@@ -155,7 +156,7 @@ namespace Projet_GONLO
         {
             if (BtnGhhhk.Enabled == true && BtnHoujix.Enabled == true)
             {
-                String message = "The computer chose the monster Ghhhk, you have then be assigned the monster Houjix";
+                String message = "The computer chose the monster Ghhhk, you have then be assigned the monster Houjix " + player1.Name;
                 computerChoose(BtnGhhhk, BtnHoujix, message);
                 cpu.AttMonster = houjix;
             }
@@ -167,7 +168,7 @@ namespace Projet_GONLO
             }
             else if (BtnKlorslug.Enabled == true && BtnGrimtaash.Enabled == true)
             {
-                String message = "The computer chose the monster Klorslug, you have then be assigned the monster Grimstaash";
+                String message = "The computer chose the monster Klorslug, you have then be assigned the monster Grimstaash ";
                 computerChoose(BtnKlorslug, BtnGrimtaash, message);
                 cpu.MovMonster = klorslug;
             }

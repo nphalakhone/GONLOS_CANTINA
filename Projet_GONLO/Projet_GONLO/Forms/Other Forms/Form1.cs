@@ -148,6 +148,7 @@ namespace Projet_GONLO
         {
             Hide();
             MenuDejarik menuDejarik = new MenuDejarik();
+            menuDejarik.Player1 = player1;
             menuDejarik.ShowDialog();
             this.Close();
         }

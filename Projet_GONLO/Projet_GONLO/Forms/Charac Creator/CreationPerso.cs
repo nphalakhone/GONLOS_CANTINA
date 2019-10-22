@@ -178,6 +178,7 @@ namespace Projet_GONLO
             player.DejarikGamesLost = 5;
             player.DejarikGamesWon = 8;
             MenuAccueil menuAccueil = new MenuAccueil();
+
             menuAccueil.Player1 = player;
             if (CBoxFemale.Checked)
             {
