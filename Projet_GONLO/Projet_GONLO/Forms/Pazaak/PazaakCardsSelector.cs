@@ -12,6 +12,7 @@ namespace Projet_GONLO
 {
     public partial class PazaakCardsSelector : Form
     {
+        Player playerCBS = new Player();
         List<RoundPanel> playerDeck = new List<RoundPanel>();
         List<int> positionCarteEnleve = new List<int>();
         //List<bool> PanelRempi = new List<bool>();
@@ -26,6 +27,7 @@ namespace Projet_GONLO
             //InitializeArrayBool();
         }
 
+        internal Player Player1 { get => playerCBS; set => playerCBS = value; }
         //private void InitializeArrayBool()
         //{
         //    for (int i = 0; i < PanelRempi.Length; i++)
@@ -74,8 +76,6 @@ namespace Projet_GONLO
                 }
                 else
                 {
-
-
                     //MessageBox.Show(positionCarteEnleve.ElementAt(1).ToString());
                     playerDeck.ElementAt(positionCarteEnleve.ElementAt(0)).BackgroundImage = roundPanel.BackgroundImage;
                     positionCarteEnleve.RemoveAt(0);
@@ -159,6 +159,7 @@ namespace Projet_GONLO
         {
             this.Hide();
             MenuAccueil menu = new MenuAccueil();
+            menu.Player1 = playerCBS;
             menu.ShowDialog();
             this.Close();
         }
