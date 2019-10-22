@@ -13,17 +13,20 @@ namespace Projet_GONLO
 {
     public partial class MenuDejarik : Form
     {
+        Player playerDejarik = new Player();
         private Boolean multiplayer = false;
         private ComputerDejarik cpu = new ComputerDejarik();
         Monster mantellianSavrip, monnok, ghhhk, houjix, kintanStrider, ngok, klorslug, grimtaash;
-        Player player1 = new Player();
-        internal Player Player1 { get => player1; set => player1 = value; }
+        
+       
 
         public MenuDejarik()
         {
             InitializeComponent();       
             createMonsters();
         }
+
+        internal Player Player1 { get => playerDejarik; set => playerDejarik = value; }
 
         private void BtnSolo_Click(object sender, EventArgs e)
         {
@@ -42,50 +45,50 @@ namespace Projet_GONLO
 
         private void BtnGhhhk_Click(object sender, EventArgs e)
         {
-            player1.AttMonster = ghhhk;
+            playerDejarik.AttMonster = ghhhk;
             btnClick(BtnGhhhk, BtnHoujix);           
         }
  
 
         private void BtnHoujix_Click(object sender, EventArgs e)
         {
-            player1.AttMonster = houjix;
+            playerDejarik.AttMonster = houjix;
             btnClick(BtnGhhhk, BtnHoujix);
         }
 
         private void BtnKintanStrider_Click(object sender, EventArgs e)
         {
-            player1.DefMonster = kintanStrider;
+            playerDejarik.DefMonster = kintanStrider;
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
         private void BtnNgok_Click(object sender, EventArgs e)
         {
-            player1.DefMonster = ngok;
+            playerDejarik.DefMonster = ngok;
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
         private void BtnKlorslug_Click(object sender, EventArgs e)
         {
-            player1.MovMonster = klorslug;
+            playerDejarik.MovMonster = klorslug;
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
         private void BtnGrimtaash_Click(object sender, EventArgs e)
         {
-            player1.MovMonster = grimtaash;
+            playerDejarik.MovMonster = grimtaash;
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
         private void BtnMantellian_Click(object sender, EventArgs e)
         {
-            player1.PowMonster = mantellianSavrip;
+            playerDejarik.PowMonster = mantellianSavrip;
             btnClick(BtnMantellian, BtnMonnok);
         }
 
         private void BtnMonnok_Click(object sender, EventArgs e)
         {
-            player1.PowMonster = monnok;
+            playerDejarik.PowMonster = monnok;
             btnClick(BtnMantellian, BtnMonnok);
         }
 
@@ -131,9 +134,9 @@ namespace Projet_GONLO
 
         private void ReturnToMainMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hide();
-            //MenuAccueil menu = new MenuAccueil();
+            this.Hide();
             MenuAccueil menu = new MenuAccueil();
+            menu.Player1 = playerDejarik;
             menu.ShowDialog();
             this.Close();
         }

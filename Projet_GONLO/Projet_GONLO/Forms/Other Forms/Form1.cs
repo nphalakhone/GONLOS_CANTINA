@@ -135,6 +135,7 @@ namespace Projet_GONLO
         {
             Hide();
             PazaakCardsSelector pazaakCards = new PazaakCardsSelector();
+            pazaakCards.Player1 = player1;
             pazaakCards.ShowDialog();
             this.Close();
             //Hide();
