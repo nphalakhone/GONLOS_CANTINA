@@ -17,8 +17,10 @@ namespace Projet_GONLO
     {
         List<Button> listButtons;
         List<Player> players = new List<Player>();
-        Player dejarikPlayer = new Player();
+        Player playerDejarik = new Player();
         Boolean multiplayer;
+
+        internal Player Player1 { get => playerDejarik; set => playerDejarik = value; }
 
         public Dejarik(Boolean multi)
         {
@@ -43,7 +45,8 @@ namespace Projet_GONLO
 
         private void addMonsterCPU()
         {
-            
+            //listButtons[14].Image = playerDejarik.AttMonster.Picture;
+            //listButtons[15].Image = playerDejarik.DefMonster.Picture;
         }
 
         private void initalizeListButtons()
@@ -85,6 +88,12 @@ namespace Projet_GONLO
 
         private void btn_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < listButtons.Count; i++)
+            {
+                listButtons[i].BackColor = Color.Transparent;
+                listButtons[i].Enabled = false;
+            }
+
             int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
             List<int> accessibleButtons = new List<int>();
 
@@ -174,7 +183,7 @@ namespace Projet_GONLO
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StreamWriter writer = new StreamWriter("C:\\Users\\1156103\\Documents\\GitHub\\GONLOS_CANTINA\\Projet_GONLO\\Saves\\Saves.txt");
-            string playerData = dejarikPlayer.Name + "," + dejarikPlayer.Species + "," + dejarikPlayer.Gender + "," + dejarikPlayer.PowMonster + "," + dejarikPlayer.AttMonster + "," + dejarikPlayer.DefMonster + "," + dejarikPlayer.MovMonster;
+            string playerData = playerDejarik.Name + "," + playerDejarik.Species + "," + playerDejarik.Gender + "," + playerDejarik.PowMonster + "," + playerDejarik.AttMonster + "," + playerDejarik.DefMonster + "," + playerDejarik.MovMonster;
             writer.Flush();
             writer.WriteLine(playerData);
         }
