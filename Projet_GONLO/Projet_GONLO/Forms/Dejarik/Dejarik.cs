@@ -18,12 +18,32 @@ namespace Projet_GONLO
         List<Button> listButtons;
         List<Player> players = new List<Player>();
         Player dejarikPlayer = new Player();
+        Boolean multiplayer;
 
-        public Dejarik()
+        public Dejarik(Boolean multi)
         {
+            multiplayer = multi;
             InitializeComponent();
             initalizeListButtons();
             Tile.CreateTiles();
+            addMonster();
+        }
+
+        private void addMonster()
+        {
+            if (multiplayer)
+            {
+
+            }
+            else
+            {
+                addMonsterCPU();
+            }
+        }
+
+        private void addMonsterCPU()
+        {
+            
         }
 
         private void initalizeListButtons()
@@ -163,7 +183,7 @@ namespace Projet_GONLO
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Dejarik newDejarik = new Dejarik();
+            Dejarik newDejarik = new Dejarik(multiplayer);
             newDejarik.ShowDialog();
             this.Close();
         }
