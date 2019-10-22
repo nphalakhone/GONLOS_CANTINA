@@ -13,20 +13,18 @@ namespace Projet_GONLO
 {
     public partial class MenuDejarik : Form
     {
-        Player playerDejarik = new Player();
         private Boolean multiplayer = false;
         private ComputerDejarik cpu = new ComputerDejarik();
         Monster mantellianSavrip, monnok, ghhhk, houjix, kintanStrider, ngok, klorslug, grimtaash;
+        Player player1 = new Player();
         
-       
+        internal Player Player1 { get => player1; set => player1 = value; }
 
         public MenuDejarik()
         {
             InitializeComponent();       
             createMonsters();
         }
-
-        internal Player Player1 { get => playerDejarik; set => playerDejarik = value; }
 
         private void BtnSolo_Click(object sender, EventArgs e)
         {
@@ -45,50 +43,50 @@ namespace Projet_GONLO
 
         private void BtnGhhhk_Click(object sender, EventArgs e)
         {
-            playerDejarik.AttMonster = ghhhk;
+            player1.AttMonster = ghhhk;
             btnClick(BtnGhhhk, BtnHoujix);           
         }
  
 
         private void BtnHoujix_Click(object sender, EventArgs e)
         {
-            playerDejarik.AttMonster = houjix;
+            player1.AttMonster = houjix;
             btnClick(BtnGhhhk, BtnHoujix);
         }
 
         private void BtnKintanStrider_Click(object sender, EventArgs e)
         {
-            playerDejarik.DefMonster = kintanStrider;
+            player1.DefMonster = kintanStrider;
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
         private void BtnNgok_Click(object sender, EventArgs e)
         {
-            playerDejarik.DefMonster = ngok;
+            player1.DefMonster = ngok;
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
         private void BtnKlorslug_Click(object sender, EventArgs e)
         {
-            playerDejarik.MovMonster = klorslug;
+            player1.MovMonster = klorslug;
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
         private void BtnGrimtaash_Click(object sender, EventArgs e)
         {
-            playerDejarik.MovMonster = grimtaash;
+            player1.MovMonster = grimtaash;
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
         private void BtnMantellian_Click(object sender, EventArgs e)
         {
-            playerDejarik.PowMonster = mantellianSavrip;
+            player1.PowMonster = mantellianSavrip;
             btnClick(BtnMantellian, BtnMonnok);
         }
 
         private void BtnMonnok_Click(object sender, EventArgs e)
         {
-            playerDejarik.PowMonster = monnok;
+            player1.PowMonster = monnok;
             btnClick(BtnMantellian, BtnMonnok);
         }
 
@@ -121,7 +119,7 @@ namespace Projet_GONLO
                 && BtnMantellian.Enabled == false && BtnMonnok.Enabled == false)
             {
                 Hide();
-                Dejarik newDejarikGame = new Dejarik();
+                Dejarik newDejarikGame = new Dejarik(multiplayer);
                 newDejarikGame.ShowDialog();
                 this.Close();
             }
@@ -134,9 +132,9 @@ namespace Projet_GONLO
 
         private void ReturnToMainMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
+            //MenuAccueil menu = new MenuAccueil();
             MenuAccueil menu = new MenuAccueil();
-            menu.Player1 = playerDejarik;
             menu.ShowDialog();
             this.Close();
         }
@@ -158,7 +156,7 @@ namespace Projet_GONLO
         {
             if (BtnGhhhk.Enabled == true && BtnHoujix.Enabled == true)
             {
-                String message = "The computer chose the monster Ghhhk, you have then be assigned the monster Houjix";
+                String message = "The computer chose the monster Ghhhk, you have then be assigned the monster Houjix " + player1.Name;
                 computerChoose(BtnGhhhk, BtnHoujix, message);
                 cpu.AttMonster = houjix;
             }
@@ -170,7 +168,7 @@ namespace Projet_GONLO
             }
             else if (BtnKlorslug.Enabled == true && BtnGrimtaash.Enabled == true)
             {
-                String message = "The computer chose the monster Klorslug, you have then be assigned the monster Grimstaash";
+                String message = "The computer chose the monster Klorslug, you have then be assigned the monster Grimstaash ";
                 computerChoose(BtnKlorslug, BtnGrimtaash, message);
                 cpu.MovMonster = klorslug;
             }

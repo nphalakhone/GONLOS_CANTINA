@@ -18,17 +18,38 @@ namespace Projet_GONLO
         List<Button> listButtons;
         List<Player> players = new List<Player>();
         Player dejarikPlayer = new Player();
+        Boolean multiplayer;
 
-        public Dejarik()
+        public Dejarik(Boolean multi)
         {
+            multiplayer = multi;
             InitializeComponent();
             initalizeListButtons();
             Tile.CreateTiles();
+            addMonster();
+        }
+
+        private void addMonster()
+        {
+            if (multiplayer)
+            {
+
+            }
+            else
+            {
+                addMonsterCPU();
+            }
+        }
+
+        private void addMonsterCPU()
+        {
+            
         }
 
         private void initalizeListButtons()
         {
             listButtons = new List<Button>();
+            listButtons.Add(new Button());
             listButtons.Add(Button1);
             listButtons.Add(Button2);
             listButtons.Add(Button3);
@@ -72,12 +93,10 @@ namespace Projet_GONLO
                 listButtons[i].Enabled = false;
             }
 
-
             for (int i = 0; i < Tile.ListTiles[currPosition].ListMovement.Count; i++)
             {
-                accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[0].Number);
+                accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[i].Number);
             }
-
 
             //Activate accessible buttons
             for (int i = 0; i < accessibleButtons.Count; i++)
@@ -85,8 +104,6 @@ namespace Projet_GONLO
                 listButtons[accessibleButtons[i]].BackColor = Color.Green;
                 listButtons[accessibleButtons[i]].Enabled = true;
             }
-            //timerTransport.Start();
-
         }
 
         
@@ -166,7 +183,7 @@ namespace Projet_GONLO
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Dejarik newDejarik = new Dejarik();
+            Dejarik newDejarik = new Dejarik(multiplayer);
             newDejarik.ShowDialog();
             this.Close();
         }

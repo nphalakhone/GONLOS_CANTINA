@@ -175,7 +175,7 @@
             this.saveToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -186,7 +186,7 @@
             this.restartToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.restartToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
-            this.restartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.restartToolStripMenuItem.Text = "Restart";
             this.restartToolStripMenuItem.Click += new System.EventHandler(this.RestartToolStripMenuItem_Click);
             // 
@@ -197,7 +197,7 @@
             this.exitToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -383,6 +383,7 @@
             // 
             this.Button14.AutoEllipsis = true;
             this.Button14.BackColor = System.Drawing.Color.Transparent;
+            this.Button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button14.FlatAppearance.BorderSize = 0;
             this.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button14.Location = new System.Drawing.Point(170, 177);
