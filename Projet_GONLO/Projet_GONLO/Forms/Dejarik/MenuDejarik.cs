@@ -120,6 +120,7 @@ namespace Projet_GONLO
             {
                 Hide();
                 Dejarik newDejarikGame = new Dejarik(multiplayer);
+                newDejarikGame.Player1 = playerMenuDejarik;
                 newDejarikGame.ShowDialog();
                 this.Close();
             }
