@@ -64,9 +64,23 @@
             this.RPnlG3 = new Projet_GONLO.RoundPanel();
             this.RPnlG2 = new Projet_GONLO.RoundPanel();
             this.RPnlG1 = new Projet_GONLO.RoundPanel();
+            this.LblPlayerName = new System.Windows.Forms.Label();
+            this.LblAI = new System.Windows.Forms.Label();
+            this.CPBoxRound1Player = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
+            this.CPBoxRound2Player = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
+            this.CPBoxRound3Player = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
+            this.CPBoxRound3AI = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
+            this.CPBoxRound2AI = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
+            this.CPBoxRound1AI = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPBoxAI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CPBoxPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxRound1Player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxRound2Player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxRound3Player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxRound3AI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxRound2AI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxRound1AI)).BeginInit();
             this.SuspendLayout();
             // 
             // LblPointsPlayer
@@ -221,11 +235,13 @@
             // 
             this.RPnlForfeitGame.BackColor = System.Drawing.Color.Transparent;
             this.RPnlForfeitGame.BorderColor = System.Drawing.Color.White;
+            this.RPnlForfeitGame.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.RPnlForfeitGame.Edge = 20;
             this.RPnlForfeitGame.Location = new System.Drawing.Point(525, 652);
             this.RPnlForfeitGame.Name = "RPnlForfeitGame";
             this.RPnlForfeitGame.Size = new System.Drawing.Size(363, 30);
             this.RPnlForfeitGame.TabIndex = 20;
+            this.RPnlForfeitGame.Click += new System.EventHandler(this.RPnlForfeitGame_Click);
             // 
             // RPnlEndTurn
             // 
@@ -431,6 +447,84 @@
             this.RPnlG1.Size = new System.Drawing.Size(73, 89);
             this.RPnlG1.TabIndex = 0;
             // 
+            // LblPlayerName
+            // 
+            this.LblPlayerName.AutoSize = true;
+            this.LblPlayerName.BackColor = System.Drawing.Color.Transparent;
+            this.LblPlayerName.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPlayerName.ForeColor = System.Drawing.Color.Gold;
+            this.LblPlayerName.Location = new System.Drawing.Point(181, 76);
+            this.LblPlayerName.Name = "LblPlayerName";
+            this.LblPlayerName.Size = new System.Drawing.Size(177, 20);
+            this.LblPlayerName.TabIndex = 26;
+            this.LblPlayerName.Text = "Player\'s name";
+            // 
+            // LblAI
+            // 
+            this.LblAI.AutoSize = true;
+            this.LblAI.BackColor = System.Drawing.Color.Transparent;
+            this.LblAI.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAI.ForeColor = System.Drawing.Color.Gold;
+            this.LblAI.Location = new System.Drawing.Point(645, 76);
+            this.LblAI.Name = "LblAI";
+            this.LblAI.Size = new System.Drawing.Size(186, 20);
+            this.LblAI.TabIndex = 27;
+            this.LblAI.Text = "Your Opponent";
+            // 
+            // CPBoxRound1Player
+            // 
+            this.CPBoxRound1Player.BackColor = System.Drawing.Color.White;
+            this.CPBoxRound1Player.Location = new System.Drawing.Point(118, 170);
+            this.CPBoxRound1Player.Name = "CPBoxRound1Player";
+            this.CPBoxRound1Player.Size = new System.Drawing.Size(25, 25);
+            this.CPBoxRound1Player.TabIndex = 28;
+            this.CPBoxRound1Player.TabStop = false;
+            // 
+            // CPBoxRound2Player
+            // 
+            this.CPBoxRound2Player.BackColor = System.Drawing.Color.White;
+            this.CPBoxRound2Player.Location = new System.Drawing.Point(118, 208);
+            this.CPBoxRound2Player.Name = "CPBoxRound2Player";
+            this.CPBoxRound2Player.Size = new System.Drawing.Size(25, 25);
+            this.CPBoxRound2Player.TabIndex = 29;
+            this.CPBoxRound2Player.TabStop = false;
+            // 
+            // CPBoxRound3Player
+            // 
+            this.CPBoxRound3Player.BackColor = System.Drawing.Color.White;
+            this.CPBoxRound3Player.Location = new System.Drawing.Point(118, 245);
+            this.CPBoxRound3Player.Name = "CPBoxRound3Player";
+            this.CPBoxRound3Player.Size = new System.Drawing.Size(25, 25);
+            this.CPBoxRound3Player.TabIndex = 30;
+            this.CPBoxRound3Player.TabStop = false;
+            // 
+            // CPBoxRound3AI
+            // 
+            this.CPBoxRound3AI.BackColor = System.Drawing.Color.White;
+            this.CPBoxRound3AI.Location = new System.Drawing.Point(860, 245);
+            this.CPBoxRound3AI.Name = "CPBoxRound3AI";
+            this.CPBoxRound3AI.Size = new System.Drawing.Size(25, 25);
+            this.CPBoxRound3AI.TabIndex = 33;
+            this.CPBoxRound3AI.TabStop = false;
+            // 
+            // CPBoxRound2AI
+            // 
+            this.CPBoxRound2AI.BackColor = System.Drawing.Color.White;
+            this.CPBoxRound2AI.Location = new System.Drawing.Point(860, 208);
+            this.CPBoxRound2AI.Name = "CPBoxRound2AI";
+            this.CPBoxRound2AI.Size = new System.Drawing.Size(25, 25);
+            this.CPBoxRound2AI.TabIndex = 32;
+            this.CPBoxRound2AI.TabStop = false;
+            // 
+            // CPBoxRound1AI
+            // 
+            this.CPBoxRound1AI.BackColor = System.Drawing.Color.White;
+            this.CPBoxRound1AI.Location = new System.Drawing.Point(860, 170);
+            this.CPBoxRound1AI.Name = "CPBoxRound1AI";
+            this.CPBoxRound1AI.Size = new System.Drawing.Size(25, 25);
+            this.CPBoxRound1AI.TabIndex = 31;
+            this.CPBoxRound1AI.TabStop = false;
+            // 
             // Pazaak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,6 +532,14 @@
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.pazaakEmptyBoard11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1001, 750);
+            this.Controls.Add(this.CPBoxRound3AI);
+            this.Controls.Add(this.CPBoxRound2AI);
+            this.Controls.Add(this.CPBoxRound1AI);
+            this.Controls.Add(this.CPBoxRound3Player);
+            this.Controls.Add(this.CPBoxRound2Player);
+            this.Controls.Add(this.CPBoxRound1Player);
+            this.Controls.Add(this.LblAI);
+            this.Controls.Add(this.LblPlayerName);
             this.Controls.Add(this.CPBoxAI);
             this.Controls.Add(this.CPBoxPlayer);
             this.Controls.Add(this.menuStrip1);
@@ -478,6 +580,12 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPBoxAI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CPBoxPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxRound1Player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxRound2Player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxRound3Player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxRound3AI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxRound2AI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CPBoxRound1AI)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,5 +628,13 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private Classes.Pazaak.CircularPictureBox CPBoxPlayer;
         private Classes.Pazaak.CircularPictureBox CPBoxAI;
+        private System.Windows.Forms.Label LblPlayerName;
+        private System.Windows.Forms.Label LblAI;
+        private Classes.Pazaak.CircularPictureBox CPBoxRound1Player;
+        private Classes.Pazaak.CircularPictureBox CPBoxRound2Player;
+        private Classes.Pazaak.CircularPictureBox CPBoxRound3Player;
+        private Classes.Pazaak.CircularPictureBox CPBoxRound3AI;
+        private Classes.Pazaak.CircularPictureBox CPBoxRound2AI;
+        private Classes.Pazaak.CircularPictureBox CPBoxRound1AI;
     }
 }
