@@ -28,6 +28,7 @@ namespace Projet_GONLO
         }
 
         internal Player Player1 { get => playerCBS; set => playerCBS = value; }
+
         //private void InitializeArrayBool()
         //{
         //    for (int i = 0; i < PanelRempi.Length; i++)
@@ -63,7 +64,6 @@ namespace Projet_GONLO
             RoundPanel roundPanel = sender as RoundPanel;
            // int numberCards = CheckDeck();
             //MessageBox.Show(nbCartes.ToString());
-
                 if (positionCarteEnleve.Count == 0)
                 {
                     if (nbCartes < 10)
@@ -79,10 +79,8 @@ namespace Projet_GONLO
                     //MessageBox.Show(positionCarteEnleve.ElementAt(1).ToString());
                     playerDeck.ElementAt(positionCarteEnleve.ElementAt(0)).BackgroundImage = roundPanel.BackgroundImage;
                     positionCarteEnleve.RemoveAt(0);
-                nbCartes++;
-            }
-                
-           
+                    nbCartes++;
+                }
             if (nbCartes == 10)
             {
                 BtnEllReady.Enabled = true;

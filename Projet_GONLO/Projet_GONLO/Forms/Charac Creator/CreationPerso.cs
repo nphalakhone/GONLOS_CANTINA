@@ -173,10 +173,10 @@ namespace Projet_GONLO
             player.Species = VerificationSpecies();
             player.Name = TxtBoxNameGen.Text;
             player.Credits = 500;
-            player.PazaakGamesWon = 10;
-            player.PazaakGamesLost = 2;
-            player.DejarikGamesLost = 5;
-            player.DejarikGamesWon = 8;
+            player.PazaakGamesWon = 0;
+            player.PazaakGamesLost = 0;
+            player.DejarikGamesLost = 0;
+            player.DejarikGamesWon = 0;
             MenuAccueil menuAccueil = new MenuAccueil();
             menuAccueil.Player1 = player;
             if (CBoxFemale.Checked)
@@ -187,8 +187,6 @@ namespace Projet_GONLO
             {
                 player.Gender = "Male";
             }
-
-            //MessageBox.Show(player.Name + "," + player.Species + "," + player.Gender);
             menuAccueil.ShowDialog();
             this.Close();
         }
