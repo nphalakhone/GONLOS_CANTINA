@@ -85,6 +85,12 @@ namespace Projet_GONLO
 
         private void btn_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < listButtons.Count; i++)
+            {
+                listButtons[i].BackColor = Color.Transparent;
+                listButtons[i].Enabled = false;
+            }
+
             int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
             List<int> accessibleButtons = new List<int>();
 
