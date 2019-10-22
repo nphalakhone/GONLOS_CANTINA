@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,12 +53,8 @@ namespace Projet_GONLO
 
         private void BtnEllReady_Click(object sender, EventArgs e)
         {
-            //Hide();
-            //Pazaak newPazaakGame = new Pazaak();
-            //newPazaakGame.ShowDialog();
-            //this.Close();
             Hide();
-            PazaakWager newPazaakGame = new PazaakWager();
+            Pazaak newPazaakGame = new Pazaak();
             newPazaakGame.ShowDialog();
             this.Close();
         }
