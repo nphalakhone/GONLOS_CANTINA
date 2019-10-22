@@ -214,7 +214,6 @@
             // 
             this.Button1.AutoEllipsis = true;
             this.Button1.BackColor = System.Drawing.Color.Transparent;
-            this.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button1.FlatAppearance.BorderSize = 0;
             this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button1.Location = new System.Drawing.Point(395, 400);
@@ -228,7 +227,6 @@
             // 
             this.Button2.AutoEllipsis = true;
             this.Button2.BackColor = System.Drawing.Color.Transparent;
-            this.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button2.FlatAppearance.BorderSize = 0;
             this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button2.Location = new System.Drawing.Point(351, 233);
@@ -242,7 +240,6 @@
             // 
             this.Button3.AutoEllipsis = true;
             this.Button3.BackColor = System.Drawing.Color.Transparent;
-            this.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button3.FlatAppearance.BorderSize = 0;
             this.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button3.Location = new System.Drawing.Point(438, 233);
@@ -256,7 +253,6 @@
             // 
             this.Button4.AutoEllipsis = true;
             this.Button4.BackColor = System.Drawing.Color.Transparent;
-            this.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button4.FlatAppearance.BorderSize = 0;
             this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button4.Location = new System.Drawing.Point(525, 274);
@@ -270,7 +266,6 @@
             // 
             this.Button5.AutoEllipsis = true;
             this.Button5.BackColor = System.Drawing.Color.Transparent;
-            this.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button5.FlatAppearance.BorderSize = 0;
             this.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button5.Location = new System.Drawing.Point(573, 358);
@@ -284,7 +279,6 @@
             // 
             this.Button6.AutoEllipsis = true;
             this.Button6.BackColor = System.Drawing.Color.Transparent;
-            this.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button6.FlatAppearance.BorderSize = 0;
             this.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button6.Location = new System.Drawing.Point(573, 454);
@@ -298,7 +292,6 @@
             // 
             this.Button7.AutoEllipsis = true;
             this.Button7.BackColor = System.Drawing.Color.Transparent;
-            this.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button7.FlatAppearance.BorderSize = 0;
             this.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button7.Location = new System.Drawing.Point(525, 533);
@@ -312,7 +305,6 @@
             // 
             this.Button8.AutoEllipsis = true;
             this.Button8.BackColor = System.Drawing.Color.Transparent;
-            this.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button8.FlatAppearance.BorderSize = 0;
             this.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button8.Location = new System.Drawing.Point(438, 577);
@@ -326,7 +318,6 @@
             // 
             this.Button9.AutoEllipsis = true;
             this.Button9.BackColor = System.Drawing.Color.Transparent;
-            this.Button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button9.FlatAppearance.BorderSize = 0;
             this.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button9.Location = new System.Drawing.Point(351, 577);
@@ -340,7 +331,6 @@
             // 
             this.Button10.AutoEllipsis = true;
             this.Button10.BackColor = System.Drawing.Color.Transparent;
-            this.Button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button10.FlatAppearance.BorderSize = 0;
             this.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button10.Location = new System.Drawing.Point(264, 533);
@@ -354,7 +344,6 @@
             // 
             this.Button11.AutoEllipsis = true;
             this.Button11.BackColor = System.Drawing.Color.Transparent;
-            this.Button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button11.FlatAppearance.BorderSize = 0;
             this.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button11.Location = new System.Drawing.Point(218, 454);
@@ -368,7 +357,6 @@
             // 
             this.Button12.AutoEllipsis = true;
             this.Button12.BackColor = System.Drawing.Color.Transparent;
-            this.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button12.FlatAppearance.BorderSize = 0;
             this.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button12.Location = new System.Drawing.Point(218, 358);
@@ -382,7 +370,6 @@
             // 
             this.Button13.AutoEllipsis = true;
             this.Button13.BackColor = System.Drawing.Color.Transparent;
-            this.Button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button13.FlatAppearance.BorderSize = 0;
             this.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button13.Location = new System.Drawing.Point(264, 274);
@@ -410,7 +397,6 @@
             // 
             this.Button15.AutoEllipsis = true;
             this.Button15.BackColor = System.Drawing.Color.Transparent;
-            this.Button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button15.FlatAppearance.BorderSize = 0;
             this.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button15.Location = new System.Drawing.Point(318, 108);
@@ -424,7 +410,6 @@
             // 
             this.Button16.AutoEllipsis = true;
             this.Button16.BackColor = System.Drawing.Color.Transparent;
-            this.Button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button16.FlatAppearance.BorderSize = 0;
             this.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button16.Location = new System.Drawing.Point(472, 108);
@@ -438,7 +423,6 @@
             // 
             this.Button17.AutoEllipsis = true;
             this.Button17.BackColor = System.Drawing.Color.Transparent;
-            this.Button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button17.FlatAppearance.BorderSize = 0;
             this.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button17.Location = new System.Drawing.Point(612, 177);
@@ -452,7 +436,6 @@
             // 
             this.Button18.AutoEllipsis = true;
             this.Button18.BackColor = System.Drawing.Color.Transparent;
-            this.Button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button18.FlatAppearance.BorderSize = 0;
             this.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button18.Location = new System.Drawing.Point(698, 325);
@@ -466,7 +449,6 @@
             // 
             this.Button19.AutoEllipsis = true;
             this.Button19.BackColor = System.Drawing.Color.Transparent;
-            this.Button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button19.FlatAppearance.BorderSize = 0;
             this.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button19.Location = new System.Drawing.Point(698, 486);
@@ -480,7 +462,6 @@
             // 
             this.Button20.AutoEllipsis = true;
             this.Button20.BackColor = System.Drawing.Color.Transparent;
-            this.Button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button20.FlatAppearance.BorderSize = 0;
             this.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button20.Location = new System.Drawing.Point(612, 628);
@@ -494,7 +475,6 @@
             // 
             this.Button21.AutoEllipsis = true;
             this.Button21.BackColor = System.Drawing.Color.Transparent;
-            this.Button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button21.FlatAppearance.BorderSize = 0;
             this.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button21.Location = new System.Drawing.Point(472, 713);
@@ -508,7 +488,6 @@
             // 
             this.Button22.AutoEllipsis = true;
             this.Button22.BackColor = System.Drawing.Color.Transparent;
-            this.Button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button22.FlatAppearance.BorderSize = 0;
             this.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button22.Location = new System.Drawing.Point(318, 713);
@@ -522,7 +501,6 @@
             // 
             this.Button23.AutoEllipsis = true;
             this.Button23.BackColor = System.Drawing.Color.Transparent;
-            this.Button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button23.FlatAppearance.BorderSize = 0;
             this.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button23.Location = new System.Drawing.Point(170, 628);
@@ -536,7 +514,6 @@
             // 
             this.Button24.AutoEllipsis = true;
             this.Button24.BackColor = System.Drawing.Color.Transparent;
-            this.Button24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button24.FlatAppearance.BorderSize = 0;
             this.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button24.Location = new System.Drawing.Point(92, 486);
@@ -550,7 +527,6 @@
             // 
             this.Button25.AutoEllipsis = true;
             this.Button25.BackColor = System.Drawing.Color.Transparent;
-            this.Button25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Button25.FlatAppearance.BorderSize = 0;
             this.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button25.Location = new System.Drawing.Point(92, 325);

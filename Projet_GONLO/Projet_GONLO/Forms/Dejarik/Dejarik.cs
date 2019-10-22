@@ -1,5 +1,4 @@
-﻿using Projet_GONLO.Classes.Dejarik;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,9 +19,6 @@ namespace Projet_GONLO
         List<Player> players = new List<Player>();
         Player playerDejarik = new Player();
         Boolean multiplayer;
-        ComputerDejarik cpu = new ComputerDejarik();
-
-        internal ComputerDejarik Computer { get => cpu; set => cpu = value; }
 
         internal Player Player1 { get => playerDejarik; set => playerDejarik = value; }
 
@@ -32,9 +28,8 @@ namespace Projet_GONLO
             InitializeComponent();
             initalizeListButtons();
             Tile.CreateTiles();
-            
+            addMonster();
         }
-
 
         private void addMonster()
         {
@@ -50,25 +45,8 @@ namespace Projet_GONLO
 
         private void addMonsterCPU()
         {
-            
-            setButton(14, playerDejarik.AttMonster.Picture);
-            setButton(15, playerDejarik.DefMonster.Picture);
-            setButton(16, playerDejarik.MovMonster.Picture);
-            setButton(17, playerDejarik.PowMonster.Picture);
-            setButton(23, cpu.AttMonster.Picture);
-            setButton(22, cpu.DefMonster.Picture);
-            setButton(21, cpu.MovMonster.Picture);
-            setButton(20, cpu.PowMonster.Picture);
-
-        }
-
-        private void setButton(int x, Image img)
-        {
-            if (img != null)
-            {
-                listButtons[x].BackgroundImageLayout = ImageLayout.Stretch;
-                listButtons[x].Image = img;
-            }  
+            //listButtons[14].Image = playerDejarik.AttMonster.Picture;
+            //listButtons[15].Image = playerDejarik.DefMonster.Picture;
         }
 
         private void initalizeListButtons()
@@ -146,7 +124,7 @@ namespace Projet_GONLO
 
         private void Dejarik_Load(object sender, EventArgs e)
         {
-            addMonster();
+
         }
 
         private void GroupBox1_Enter(object sender, EventArgs e)

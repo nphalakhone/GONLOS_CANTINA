@@ -44,7 +44,6 @@ namespace Projet_GONLO
         private void BtnGhhhk_Click(object sender, EventArgs e)
         {
             playerMenuDejarik.AttMonster = ghhhk;
-            cpu.AttMonster = houjix;
             btnClick(BtnGhhhk, BtnHoujix);           
         }
  
@@ -52,49 +51,42 @@ namespace Projet_GONLO
         private void BtnHoujix_Click(object sender, EventArgs e)
         {
             playerMenuDejarik.AttMonster = houjix;
-            cpu.AttMonster = ghhhk;
             btnClick(BtnGhhhk, BtnHoujix);
         }
 
         private void BtnKintanStrider_Click(object sender, EventArgs e)
         {
             playerMenuDejarik.DefMonster = kintanStrider;
-            cpu.DefMonster = ngok;
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
         private void BtnNgok_Click(object sender, EventArgs e)
         {
             playerMenuDejarik.DefMonster = ngok;
-            cpu.DefMonster = kintanStrider;
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
         private void BtnKlorslug_Click(object sender, EventArgs e)
         {
             playerMenuDejarik.MovMonster = klorslug;
-            cpu.MovMonster = grimtaash;
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
         private void BtnGrimtaash_Click(object sender, EventArgs e)
         {
             playerMenuDejarik.MovMonster = grimtaash;
-            cpu.MovMonster = klorslug;
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
         private void BtnMantellian_Click(object sender, EventArgs e)
         {
             playerMenuDejarik.PowMonster = mantellianSavrip;
-            cpu.PowMonster = monnok;
             btnClick(BtnMantellian, BtnMonnok);
         }
 
         private void BtnMonnok_Click(object sender, EventArgs e)
         {
             playerMenuDejarik.PowMonster = monnok;
-            cpu.PowMonster = mantellianSavrip;
             btnClick(BtnMantellian, BtnMonnok);
         }
 
@@ -128,7 +120,6 @@ namespace Projet_GONLO
             {
                 Hide();
                 Dejarik newDejarikGame = new Dejarik(multiplayer);
-                newDejarikGame.Computer = cpu;
                 newDejarikGame.Player1 = playerMenuDejarik;
                 newDejarikGame.ShowDialog();
                 this.Close();
@@ -169,28 +160,24 @@ namespace Projet_GONLO
                 String message = "The computer chose the monster Ghhhk, you have then be assigned the monster Houjix " + playerMenuDejarik.Name;
                 computerChoose(BtnGhhhk, BtnHoujix, message);
                 cpu.AttMonster = houjix;
-                playerMenuDejarik.AttMonster = ghhhk;
             }
             else if (BtnKintanStrider.Enabled == true && BtnNgok.Enabled == true)
             {
                 String message = "The computer chose the monster Kintan Strider, you have then be assigned the monster Ngok";
                 computerChoose(BtnKintanStrider, BtnNgok, message);
-                cpu.DefMonster = kintanStrider;
-                playerMenuDejarik.DefMonster = ngok;
+                cpu.AttMonster = kintanStrider;
             }
             else if (BtnKlorslug.Enabled == true && BtnGrimtaash.Enabled == true)
             {
                 String message = "The computer chose the monster Klorslug, you have then be assigned the monster Grimstaash ";
                 computerChoose(BtnKlorslug, BtnGrimtaash, message);
                 cpu.MovMonster = klorslug;
-                playerMenuDejarik.MovMonster = grimtaash;
             }
             else
             {
                 String message = "The computer chose the monster Mantellian, you have then be assigned the monster Monnok";
                 computerChoose(BtnMantellian, BtnMonnok, message);
                 cpu.PowMonster = mantellianSavrip;
-                playerMenuDejarik.PowMonster = monnok;
             }
 
          }

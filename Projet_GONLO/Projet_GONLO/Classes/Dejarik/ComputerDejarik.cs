@@ -16,28 +16,10 @@ namespace Projet_GONLO.Classes.Dejarik
         public ComputerDejarik()
         {
         }
-        public Monster PowMonster
-        {
-            get { return _powMonster; }
-            set { _powMonster = value; }
-        }
 
-        public Monster AttMonster
-        {
-            get { return _attMonster; }
-            set { _attMonster = value; }
-        }
-
-        public Monster DefMonster
-        {
-            get { return _defMonster; }
-            set { _defMonster = value; }
-        }
-
-        public Monster MovMonster
-        {
-            get { return _movMonster; }
-            set { _movMonster = value; }
-        }
+        public Monster PowMonster { get => _powMonster; set => _powMonster = value; }
+        public Monster AttMonster { get => _attMonster; set => _attMonster = value; }
+        public Monster DefMonster { get => _defMonster; set => _defMonster = value; }
+        public Monster MovMonster { get => _movMonster; set => _movMonster = value; }
     }
 }
