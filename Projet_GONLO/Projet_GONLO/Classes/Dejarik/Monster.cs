@@ -19,21 +19,22 @@ namespace Projet_GONLO
         int attack;
         int defense;
         int movement;
+        int position;
         Image picture;
         typeMonster type;
 
 
         // Constructor Declaration of Class 
         public Monster(string name, int attack,
-                      int defense, int movement, Image picture, typeMonster type)
+                      int defense, int movement, Image picture, typeMonster type, int position)
         {
-            this.Name = name;
-            this.Attack = attack;
-            this.Defense = defense;
-            this.Movement = movement;
-            this.Picture = picture;
-            this.Type = type;
-
+            this.name = name;
+            this.attack = attack;
+            this.defense = defense;
+            this.movement = movement;
+            this.picture = picture;
+            this.type = type;
+            this.position = position;
         }
 
         public string Name { get => name; set => name = value; }
@@ -42,5 +43,6 @@ namespace Projet_GONLO
         public int Movement { get => movement; set => movement = value; }
         public Image Picture { get => picture; set => picture = value; }
         public typeMonster Type { get => type; set => type = value; }
+        public int Position { get => position; set => position = value; }
     }
 }

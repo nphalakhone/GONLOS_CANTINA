@@ -17,7 +17,10 @@ namespace Projet_GONLO
         private ComputerDejarik cpu = new ComputerDejarik();
         Monster mantellianSavrip, monnok, ghhhk, houjix, kintanStrider, ngok, klorslug, grimtaash;
         Player playerMenuDejarik = new Player();
-        
+
+        List<int> monsterPosPlayer1 = new List<int> { 20, 21, 22, 23 };
+        List<int> monsterPosPlayer2 = new List<int> { 14, 15, 16, 17 };
+
         internal Player Player1 { get => playerMenuDejarik; set => playerMenuDejarik = value; }
 
         public MenuDejarik()
@@ -28,7 +31,6 @@ namespace Projet_GONLO
 
         private void BtnSolo_Click(object sender, EventArgs e)
         {
-
             multiplayer = false;
             PnlChooseMonster.Visible = true;
             PnlChooseOption.Visible = false;
