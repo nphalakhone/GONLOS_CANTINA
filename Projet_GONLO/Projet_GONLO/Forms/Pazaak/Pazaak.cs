@@ -48,7 +48,7 @@ namespace Projet_GONLO
             setupPlayerdeck();
             setupBoard();
         }
-        internal int CreditsWaged { set => credsWaged = value; }
+        internal int CreditsWaged { get => credsWaged;  set => credsWaged = value; }
         internal Player Player1 { get => playerPazaak; set => playerPazaak = value; }
 
         private void setupBoard()
@@ -107,9 +107,13 @@ namespace Projet_GONLO
                 nbCardsAi++;
                 AiPoints += pointsAdded;
                 LblPointsAi.Text = AiPoints.ToString();
-                if (!playerStand)
+                if (!playerStand && AiPoints < 18)
                 {
                     turn = 0;
+                }
+                else if (AiPoints >= 18)
+                {
+                    AiStand = true;
                 }
             }
         }
@@ -190,9 +194,9 @@ namespace Projet_GONLO
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Pazaak newPazaakGame = new Pazaak();
-            newPazaakGame.Player1 = playerPazaak;
-            newPazaakGame.ShowDialog();
+            PazaakCardsSelector newPazaakCardSelector = new PazaakCardsSelector();
+            newPazaakCardSelector.Player1 = playerPazaak;
+            newPazaakCardSelector.ShowDialog();
             this.Close();
         }
 
