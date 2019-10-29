@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Other Classes\ButtonCircle.cs">
+    <Compile Include="ButtonCircle.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Classes\Other Classes\ButtonEllipse.cs">
+    <Compile Include="ButtonEllipse.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Classes\Dejarik\ComputerDejarik.cs" />
@@ -103,14 +103,14 @@
       <DependentUpon>Pazaak.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Program.cs" />
-    <Compile Include="Forms\Pazaak\PazaakWager.cs">
+    <Compile Include="PazaakWager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Pazaak\PazaakWager.Designer.cs">
+    <Compile Include="PazaakWager.Designer.cs">
       <DependentUpon>PazaakWager.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Classes\Other Classes\RoundPanel.cs">
+    <Compile Include="RoundPanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\Other Forms\StartForm.cs">
@@ -119,10 +119,10 @@
     <Compile Include="Forms\Other Forms\StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Other Classes\textBox.cs">
+    <Compile Include="textBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Classes\Other Classes\textBox.Designer.cs">
+    <Compile Include="textBox.Designer.cs">
       <DependentUpon>textBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Dejarik\Tile.cs" />
@@ -147,7 +147,7 @@
     <EmbeddedResource Include="Forms\Pazaak\PazaakCardsSelector.resx">
       <DependentUpon>PazaakCardsSelector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Pazaak\PazaakWager.resx">
+    <EmbeddedResource Include="PazaakWager.resx">
       <DependentUpon>PazaakWager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -163,7 +163,7 @@
     <EmbeddedResource Include="Forms\Other Forms\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Classes\Other Classes\textBox.resx">
+    <EmbeddedResource Include="textBox.resx">
       <DependentUpon>textBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
