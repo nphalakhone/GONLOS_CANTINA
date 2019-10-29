@@ -52,6 +52,9 @@
             this.RPnlPlusMinus1 = new Projet_GONLO.RoundPanel();
             this.RPnlPlus2 = new Projet_GONLO.RoundPanel();
             this.GBoxDeckCards = new System.Windows.Forms.GroupBox();
+            this.MTxtBoxWager = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LblWager = new System.Windows.Forms.Label();
             this.BtnEllReady = new Projet_GONLO.ButtonEllipse();
             this.RPnlPlayerDC9 = new Projet_GONLO.RoundPanel();
             this.RPnlPlayerDC4 = new Projet_GONLO.RoundPanel();
@@ -66,9 +69,6 @@
             this.MenuPazaakCS = new System.Windows.Forms.MenuStrip();
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LblWager = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.MTxtBoxWager = new System.Windows.Forms.MaskedTextBox();
             this.GBoxAvailableCards.SuspendLayout();
             this.GBoxDeckCards.SuspendLayout();
             this.MenuPazaakCS.SuspendLayout();
@@ -429,6 +429,37 @@
             this.GBoxDeckCards.TabStop = false;
             this.GBoxDeckCards.Text = "Chosen cards";
             // 
+            // MTxtBoxWager
+            // 
+            this.MTxtBoxWager.Location = new System.Drawing.Point(124, 640);
+            this.MTxtBoxWager.Mask = "999999999";
+            this.MTxtBoxWager.Name = "MTxtBoxWager";
+            this.MTxtBoxWager.Size = new System.Drawing.Size(72, 28);
+            this.MTxtBoxWager.TabIndex = 52;
+            this.MTxtBoxWager.ValidatingType = typeof(int);
+            this.MTxtBoxWager.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.MTxtBoxWager_MaskInputRejected);
+            this.MTxtBoxWager.TextChanged += new System.EventHandler(this.MTxtBoxWager_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label1.Location = new System.Drawing.Point(84, 610);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 22);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "to wager ?";
+            // 
+            // LblWager
+            // 
+            this.LblWager.AutoSize = true;
+            this.LblWager.ForeColor = System.Drawing.Color.LimeGreen;
+            this.LblWager.Location = new System.Drawing.Point(4, 590);
+            this.LblWager.Name = "LblWager";
+            this.LblWager.Size = new System.Drawing.Size(314, 22);
+            this.LblWager.TabIndex = 50;
+            this.LblWager.Text = "how much do you want";
+            // 
             // BtnEllReady
             // 
             this.BtnEllReady.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded2;
@@ -603,35 +634,6 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(202, 21);
             this.helpToolStripMenuItem.Text = "Back to main menu";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.HelpToolStripMenuItem_Click);
-            // 
-            // LblWager
-            // 
-            this.LblWager.AutoSize = true;
-            this.LblWager.ForeColor = System.Drawing.Color.LimeGreen;
-            this.LblWager.Location = new System.Drawing.Point(4, 590);
-            this.LblWager.Name = "LblWager";
-            this.LblWager.Size = new System.Drawing.Size(314, 22);
-            this.LblWager.TabIndex = 50;
-            this.LblWager.Text = "how much do you want";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label1.Location = new System.Drawing.Point(84, 610);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 22);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "to wager ?";
-            // 
-            // MTxtBoxWager
-            // 
-            this.MTxtBoxWager.Location = new System.Drawing.Point(124, 640);
-            this.MTxtBoxWager.Mask = "999999999";
-            this.MTxtBoxWager.Name = "MTxtBoxWager";
-            this.MTxtBoxWager.Size = new System.Drawing.Size(72, 28);
-            this.MTxtBoxWager.TabIndex = 52;
-            this.MTxtBoxWager.ValidatingType = typeof(int);
             // 
             // PazaakCardsSelector
             // 

@@ -66,27 +66,27 @@ namespace Projet_GONLO
             RoundPanel roundPanel = sender as RoundPanel;
            // int numberCards = CheckDeck();
             //MessageBox.Show(nbCartes.ToString());
-                if (positionCarteEnleve.Count == 0)
-                {
-                    if (nbCartes < 10)
+            if (positionCarteEnleve.Count == 0)
+            {
+                if (nbCartes < 10)
                 {
                     playerDeck.ElementAt(nbCartes).BackgroundImage = roundPanel.BackgroundImage;
                     nbCartes++;
                 }
                
                     //PanelRempi[nbCartes] = true;
-                }
-                else
-                {
+            }
+            else
+            {
                     //MessageBox.Show(positionCarteEnleve.ElementAt(1).ToString());
                     playerDeck.ElementAt(positionCarteEnleve.ElementAt(0)).BackgroundImage = roundPanel.BackgroundImage;
                     positionCarteEnleve.RemoveAt(0);
                     nbCartes++;
-                }
-            if (nbCartes == 10 && MTxtBoxWager.Text != null)
-            {
-                BtnEllReady.Enabled = true;
             }
+            //if (nbCartes == 10)
+            //{
+            //    BtnEllReady.Enabled = true;
+            //}
             if (nbCartes > 10)
             {
                 MessageBox.Show("You have the maximum cards allowed");
@@ -162,6 +162,16 @@ namespace Projet_GONLO
             menu.Player1 = playerCBS;
             menu.ShowDialog();
             this.Close();
+        }
+
+        private void MTxtBoxWager_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("You have to write down a number", "ATTENTION");
+        }
+
+        private void MTxtBoxWager_TextChanged(object sender, EventArgs e)
+        {
+            BtnEllReady.Enabled = true;
         }
     }
 }
