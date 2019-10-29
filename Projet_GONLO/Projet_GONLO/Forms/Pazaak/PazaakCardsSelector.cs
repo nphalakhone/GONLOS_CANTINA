@@ -18,7 +18,7 @@ namespace Projet_GONLO
         //List<bool> PanelRempi = new List<bool>();
         //bool[] PanelRempi = new bool[8];
         int nbCartes = 0;
-
+        int creditsWaged = 0;
 
         public PazaakCardsSelector()
         {
@@ -56,6 +56,7 @@ namespace Projet_GONLO
             Hide();
             Pazaak newPazaakGame = new Pazaak();
             newPazaakGame.Player1 = playerCBS;
+            newPazaakGame.CreditsWaged = int.Parse(MTxtBoxWager.Text);
             newPazaakGame.ShowDialog();
             this.Close();
         }
@@ -82,7 +83,7 @@ namespace Projet_GONLO
                     positionCarteEnleve.RemoveAt(0);
                     nbCartes++;
                 }
-            if (nbCartes == 10)
+            if (nbCartes == 10 && MTxtBoxWager.Text != null)
             {
                 BtnEllReady.Enabled = true;
             }

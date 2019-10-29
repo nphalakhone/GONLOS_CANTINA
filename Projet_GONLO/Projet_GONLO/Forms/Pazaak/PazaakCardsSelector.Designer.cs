@@ -66,6 +66,9 @@
             this.MenuPazaakCS = new System.Windows.Forms.MenuStrip();
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LblWager = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.MTxtBoxWager = new System.Windows.Forms.MaskedTextBox();
             this.GBoxAvailableCards.SuspendLayout();
             this.GBoxDeckCards.SuspendLayout();
             this.MenuPazaakCS.SuspendLayout();
@@ -403,6 +406,9 @@
             // 
             this.GBoxDeckCards.BackColor = System.Drawing.Color.Transparent;
             this.GBoxDeckCards.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GBoxDeckCards.Controls.Add(this.MTxtBoxWager);
+            this.GBoxDeckCards.Controls.Add(this.label1);
+            this.GBoxDeckCards.Controls.Add(this.LblWager);
             this.GBoxDeckCards.Controls.Add(this.BtnEllReady);
             this.GBoxDeckCards.Controls.Add(this.RPnlPlayerDC9);
             this.GBoxDeckCards.Controls.Add(this.RPnlPlayerDC4);
@@ -445,7 +451,7 @@
             this.RPnlPlayerDC9.BorderColor = System.Drawing.Color.White;
             this.RPnlPlayerDC9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.RPnlPlayerDC9.Edge = 20;
-            this.RPnlPlayerDC9.Location = new System.Drawing.Point(177, 441);
+            this.RPnlPlayerDC9.Location = new System.Drawing.Point(177, 376);
             this.RPnlPlayerDC9.Name = "RPnlPlayerDC9";
             this.RPnlPlayerDC9.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlayerDC9.TabIndex = 47;
@@ -458,7 +464,7 @@
             this.RPnlPlayerDC4.BorderColor = System.Drawing.Color.White;
             this.RPnlPlayerDC4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.RPnlPlayerDC4.Edge = 20;
-            this.RPnlPlayerDC4.Location = new System.Drawing.Point(66, 441);
+            this.RPnlPlayerDC4.Location = new System.Drawing.Point(66, 376);
             this.RPnlPlayerDC4.Name = "RPnlPlayerDC4";
             this.RPnlPlayerDC4.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlayerDC4.TabIndex = 36;
@@ -471,7 +477,7 @@
             this.RPnlPlayerDC6.BorderColor = System.Drawing.Color.Black;
             this.RPnlPlayerDC6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.RPnlPlayerDC6.Edge = 20;
-            this.RPnlPlayerDC6.Location = new System.Drawing.Point(177, 90);
+            this.RPnlPlayerDC6.Location = new System.Drawing.Point(177, 35);
             this.RPnlPlayerDC6.Name = "RPnlPlayerDC6";
             this.RPnlPlayerDC6.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlayerDC6.TabIndex = 44;
@@ -484,7 +490,7 @@
             this.RPnlPlayerDC1.BorderColor = System.Drawing.Color.Black;
             this.RPnlPlayerDC1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.RPnlPlayerDC1.Edge = 20;
-            this.RPnlPlayerDC1.Location = new System.Drawing.Point(66, 90);
+            this.RPnlPlayerDC1.Location = new System.Drawing.Point(66, 35);
             this.RPnlPlayerDC1.Name = "RPnlPlayerDC1";
             this.RPnlPlayerDC1.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlayerDC1.TabIndex = 32;
@@ -497,7 +503,7 @@
             this.RPnlPlayerDC7.BorderColor = System.Drawing.Color.White;
             this.RPnlPlayerDC7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.RPnlPlayerDC7.Edge = 20;
-            this.RPnlPlayerDC7.Location = new System.Drawing.Point(177, 207);
+            this.RPnlPlayerDC7.Location = new System.Drawing.Point(177, 142);
             this.RPnlPlayerDC7.Name = "RPnlPlayerDC7";
             this.RPnlPlayerDC7.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlayerDC7.TabIndex = 45;
@@ -510,7 +516,7 @@
             this.RPnlPlayerDC2.BorderColor = System.Drawing.Color.White;
             this.RPnlPlayerDC2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.RPnlPlayerDC2.Edge = 20;
-            this.RPnlPlayerDC2.Location = new System.Drawing.Point(66, 207);
+            this.RPnlPlayerDC2.Location = new System.Drawing.Point(66, 142);
             this.RPnlPlayerDC2.Name = "RPnlPlayerDC2";
             this.RPnlPlayerDC2.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlayerDC2.TabIndex = 34;
@@ -523,7 +529,7 @@
             this.RPnlPlayerDC8.BorderColor = System.Drawing.Color.White;
             this.RPnlPlayerDC8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.RPnlPlayerDC8.Edge = 20;
-            this.RPnlPlayerDC8.Location = new System.Drawing.Point(177, 324);
+            this.RPnlPlayerDC8.Location = new System.Drawing.Point(177, 259);
             this.RPnlPlayerDC8.Name = "RPnlPlayerDC8";
             this.RPnlPlayerDC8.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlayerDC8.TabIndex = 46;
@@ -536,7 +542,7 @@
             this.RPnlPlayerDC3.BorderColor = System.Drawing.Color.White;
             this.RPnlPlayerDC3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.RPnlPlayerDC3.Edge = 20;
-            this.RPnlPlayerDC3.Location = new System.Drawing.Point(66, 324);
+            this.RPnlPlayerDC3.Location = new System.Drawing.Point(66, 259);
             this.RPnlPlayerDC3.Name = "RPnlPlayerDC3";
             this.RPnlPlayerDC3.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlayerDC3.TabIndex = 35;
@@ -549,7 +555,7 @@
             this.RPnlPlayerDC10.BorderColor = System.Drawing.Color.White;
             this.RPnlPlayerDC10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.RPnlPlayerDC10.Edge = 20;
-            this.RPnlPlayerDC10.Location = new System.Drawing.Point(177, 557);
+            this.RPnlPlayerDC10.Location = new System.Drawing.Point(177, 492);
             this.RPnlPlayerDC10.Name = "RPnlPlayerDC10";
             this.RPnlPlayerDC10.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlayerDC10.TabIndex = 48;
@@ -562,7 +568,7 @@
             this.RPnlPlayerDC5.BorderColor = System.Drawing.Color.White;
             this.RPnlPlayerDC5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.RPnlPlayerDC5.Edge = 20;
-            this.RPnlPlayerDC5.Location = new System.Drawing.Point(66, 557);
+            this.RPnlPlayerDC5.Location = new System.Drawing.Point(66, 492);
             this.RPnlPlayerDC5.Name = "RPnlPlayerDC5";
             this.RPnlPlayerDC5.Size = new System.Drawing.Size(75, 90);
             this.RPnlPlayerDC5.TabIndex = 37;
@@ -598,6 +604,35 @@
             this.helpToolStripMenuItem.Text = "Back to main menu";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.HelpToolStripMenuItem_Click);
             // 
+            // LblWager
+            // 
+            this.LblWager.AutoSize = true;
+            this.LblWager.ForeColor = System.Drawing.Color.LimeGreen;
+            this.LblWager.Location = new System.Drawing.Point(4, 590);
+            this.LblWager.Name = "LblWager";
+            this.LblWager.Size = new System.Drawing.Size(314, 22);
+            this.LblWager.TabIndex = 50;
+            this.LblWager.Text = "how much do you want";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label1.Location = new System.Drawing.Point(84, 610);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 22);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "to wager ?";
+            // 
+            // MTxtBoxWager
+            // 
+            this.MTxtBoxWager.Location = new System.Drawing.Point(124, 640);
+            this.MTxtBoxWager.Mask = "999999999";
+            this.MTxtBoxWager.Name = "MTxtBoxWager";
+            this.MTxtBoxWager.Size = new System.Drawing.Size(72, 28);
+            this.MTxtBoxWager.TabIndex = 52;
+            this.MTxtBoxWager.ValidatingType = typeof(int);
+            // 
             // PazaakCardsSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -616,6 +651,7 @@
             this.GBoxAvailableCards.ResumeLayout(false);
             this.GBoxAvailableCards.PerformLayout();
             this.GBoxDeckCards.ResumeLayout(false);
+            this.GBoxDeckCards.PerformLayout();
             this.MenuPazaakCS.ResumeLayout(false);
             this.MenuPazaakCS.PerformLayout();
             this.ResumeLayout(false);
@@ -663,5 +699,8 @@
         private System.Windows.Forms.MenuStrip MenuPazaakCS;
         private System.Windows.Forms.ToolStripMenuItem filesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.MaskedTextBox MTxtBoxWager;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblWager;
     }
 }

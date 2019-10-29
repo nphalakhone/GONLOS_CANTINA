@@ -19,6 +19,7 @@ namespace Projet_GONLO
         Panel[] panelAiDeck;
         Panel[] TabPanelLeft;
         Panel[] TabPanelRight;
+        int credsWaged;
 
         Random rand = new Random();
 
@@ -47,7 +48,7 @@ namespace Projet_GONLO
             setupPlayerdeck();
             setupBoard();
         }
-
+        internal int CreditsWaged { set => credsWaged = value; }
         internal Player Player1 { get => playerPazaak; set => playerPazaak = value; }
 
         private void setupBoard()
@@ -233,6 +234,7 @@ namespace Projet_GONLO
             LblFlipCard2.Hide();
             LblFlipCard3.Hide();
             LblFlipCard4.Hide();
+            LblCreditsWagedNumeric.Text = credsWaged.ToString();
             LblPlayerName.Text = playerPazaak.Name;
             LblCreditsNumeric.Text = playerPazaak.Credits.ToString();
         }
