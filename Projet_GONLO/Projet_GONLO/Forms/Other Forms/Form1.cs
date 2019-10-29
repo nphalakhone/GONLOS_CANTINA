@@ -156,14 +156,14 @@ namespace Projet_GONLO
 
         private void BtnGBoxPI_Click(object sender, EventArgs e)
         {
-            if (GBoxPlayerInfo.Height == 445)
+            if (GBoxPlayerInfo.Height == 460)
             {
-                GBoxPlayerInfo.Height = 275;
+                GBoxPlayerInfo.Height = 280;
                 BtnGBoxPI.BackgroundImage = Properties.Resources.arrows;
             }
-            else if (GBoxPlayerInfo.Height == 275)
+            else if (GBoxPlayerInfo.Height == 280)
             {
-                GBoxPlayerInfo.Height = 445;
+                GBoxPlayerInfo.Height = 460;
                 BtnGBoxPI.BackgroundImage = Properties.Resources.arrowsUp;
             }
         }

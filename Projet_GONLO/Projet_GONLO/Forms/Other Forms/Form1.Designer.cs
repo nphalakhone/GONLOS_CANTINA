@@ -262,7 +262,7 @@
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.SteelBlue;
             this.label29.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.Gold;
+            this.label29.ForeColor = System.Drawing.Color.LimeGreen;
             this.label29.Location = new System.Drawing.Point(146, 398);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(74, 20);
@@ -365,9 +365,9 @@
             this.GBoxPlayerInfo.Controls.Add(this.LblNbPGL);
             this.GBoxPlayerInfo.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBoxPlayerInfo.ForeColor = System.Drawing.Color.LimeGreen;
-            this.GBoxPlayerInfo.Location = new System.Drawing.Point(307, 104);
+            this.GBoxPlayerInfo.Location = new System.Drawing.Point(291, 89);
             this.GBoxPlayerInfo.Name = "GBoxPlayerInfo";
-            this.GBoxPlayerInfo.Size = new System.Drawing.Size(280, 275);
+            this.GBoxPlayerInfo.Size = new System.Drawing.Size(296, 280);
             this.GBoxPlayerInfo.TabIndex = 33;
             this.GBoxPlayerInfo.TabStop = false;
             this.GBoxPlayerInfo.Text = "player\'s info";
@@ -379,7 +379,7 @@
             this.BtnGBoxPI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnGBoxPI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGBoxPI.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnGBoxPI.Location = new System.Drawing.Point(75, 225);
+            this.BtnGBoxPI.Location = new System.Drawing.Point(86, 225);
             this.BtnGBoxPI.Name = "BtnGBoxPI";
             this.BtnGBoxPI.Size = new System.Drawing.Size(119, 38);
             this.BtnGBoxPI.TabIndex = 33;
@@ -671,6 +671,7 @@
             // 
             this.BtnEllPlayDejarik.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtongold;
             this.BtnEllPlayDejarik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllPlayDejarik.FlatAppearance.BorderSize = 0;
             this.BtnEllPlayDejarik.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnEllPlayDejarik.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllPlayDejarik.Location = new System.Drawing.Point(366, 171);
@@ -864,7 +865,7 @@
             this.BtnEllExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllExit.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllExit.ForeColor = System.Drawing.Color.LimeGreen;
-            this.BtnEllExit.Location = new System.Drawing.Point(35, 452);
+            this.BtnEllExit.Location = new System.Drawing.Point(20, 452);
             this.BtnEllExit.Name = "BtnEllExit";
             this.BtnEllExit.Size = new System.Drawing.Size(250, 61);
             this.BtnEllExit.TabIndex = 10;
@@ -881,7 +882,7 @@
             this.BtnEllSB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllSB.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllSB.ForeColor = System.Drawing.Color.LimeGreen;
-            this.BtnEllSB.Location = new System.Drawing.Point(35, 345);
+            this.BtnEllSB.Location = new System.Drawing.Point(20, 345);
             this.BtnEllSB.Name = "BtnEllSB";
             this.BtnEllSB.Size = new System.Drawing.Size(250, 61);
             this.BtnEllSB.TabIndex = 9;
@@ -898,7 +899,7 @@
             this.BtnEllDejarik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllDejarik.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllDejarik.ForeColor = System.Drawing.Color.LimeGreen;
-            this.BtnEllDejarik.Location = new System.Drawing.Point(35, 246);
+            this.BtnEllDejarik.Location = new System.Drawing.Point(20, 246);
             this.BtnEllDejarik.Name = "BtnEllDejarik";
             this.BtnEllDejarik.Size = new System.Drawing.Size(250, 61);
             this.BtnEllDejarik.TabIndex = 8;
@@ -915,7 +916,7 @@
             this.BtnEllPazaak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllPazaak.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllPazaak.ForeColor = System.Drawing.Color.LimeGreen;
-            this.BtnEllPazaak.Location = new System.Drawing.Point(35, 150);
+            this.BtnEllPazaak.Location = new System.Drawing.Point(20, 150);
             this.BtnEllPazaak.Name = "BtnEllPazaak";
             this.BtnEllPazaak.Size = new System.Drawing.Size(250, 61);
             this.BtnEllPazaak.TabIndex = 7;
@@ -948,9 +949,9 @@
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.star_wars_resort;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 560);
-            this.Controls.Add(this.GBoxPlayerInfo);
-            this.Controls.Add(this.RPnlSBR);
             this.Controls.Add(this.RPnlDejarik);
+            this.Controls.Add(this.RPnlSBR);
+            this.Controls.Add(this.GBoxPlayerInfo);
             this.Controls.Add(this.RPnlPazaak);
             this.Controls.Add(this.BtnEllExit);
             this.Controls.Add(this.BtnEllSB);
