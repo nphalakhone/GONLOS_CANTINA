@@ -55,6 +55,7 @@ namespace Projet_GONLO
         {
             Hide();
             Pazaak newPazaakGame = new Pazaak();
+            newPazaakGame.Player1 = playerCBS;
             newPazaakGame.ShowDialog();
             this.Close();
         }

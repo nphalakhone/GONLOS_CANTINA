@@ -12,6 +12,7 @@ namespace Projet_GONLO
 {
     public partial class Pazaak : Form
     {
+        Player playerPazaak = new Player();
         Cards c = new Cards();
         Image[] playerDeck = new Image[4];
         Panel[] panelPlayerDeck;
@@ -21,11 +22,8 @@ namespace Projet_GONLO
 
         Random rand = new Random();
 
-
-
-
-          //  THESE VARIABLES ARE TEMPORAIRY WE  //
-         //   WILL USE OTHER VARIABLES LATER    //
+        //  THESE VARIABLES ARE TEMPORAIRY WE  //
+        //   WILL USE OTHER VARIABLES LATER    //
         //   WHEN PLAYER CLASS IS IMPLEMENTED  //
         int PlayerPoints = 0;
         int AiPoints = 0;
@@ -44,14 +42,13 @@ namespace Projet_GONLO
 
         public Pazaak()
         {
-        
-        InitializeComponent();
-
+            InitializeComponent();
             //sample deck
             setupPlayerdeck();
             setupBoard();
-
         }
+
+        internal Player Player1 { get => playerPazaak; set => playerPazaak = value; }
 
         private void setupBoard()
         {
@@ -81,10 +78,6 @@ namespace Projet_GONLO
                 panelPlayerDeck[i].BackgroundImage = playerDeck[i];
                 panelPlayerDeck[i].BackgroundImageLayout = ImageLayout.Stretch;
             }
-
-
-          
-
         }
 
         private void End_Turn_Click(object sender, EventArgs e)
@@ -103,8 +96,6 @@ namespace Projet_GONLO
                 {
                     turn = 1;
                 }
-                
-
             }
             else if(turn == 1 && !AiStand)
             {
@@ -119,7 +110,6 @@ namespace Projet_GONLO
                 {
                     turn = 0;
                 }
-                
             }
         }
 
@@ -200,6 +190,7 @@ namespace Projet_GONLO
         {
             this.Hide();
             Pazaak newPazaakGame = new Pazaak();
+            newPazaakGame.Player1 = playerPazaak;
             newPazaakGame.ShowDialog();
             this.Close();
         }
@@ -222,6 +213,28 @@ namespace Projet_GONLO
                 this.Close();
             }
             
+        }
+
+        private void Pazaak_Load(object sender, EventArgs e)
+        {
+            LblNumeric1.Hide();
+            LblNumeric2.Hide();
+            LblNumeric3.Hide();
+            LblNumeric4.Hide();
+            LblMinusValue1.Hide();
+            LblMinusValue2.Hide();
+            LblMinusValue3.Hide();
+            LblMinusValue4.Hide();
+            LblPlusValue1.Hide();
+            LblPlusValue2.Hide();
+            LblPlusValue3.Hide();
+            LblPlusValue4.Hide();
+            LblFlipCard1.Hide();
+            LblFlipCard2.Hide();
+            LblFlipCard3.Hide();
+            LblFlipCard4.Hide();
+            LblPlayerName.Text = playerPazaak.Name;
+            LblCreditsNumeric.Text = playerPazaak.Credits.ToString();
         }
     }
 }
