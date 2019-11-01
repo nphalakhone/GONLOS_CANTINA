@@ -18,12 +18,11 @@ namespace Projet_GONLO
     {
         List<Button> listButtons;
         List<Player> players = new List<Player>();
-        Player player1 = new Player();
+        Player playerDejarik = new Player();
+        Player player2 = new Player();
         Boolean multiplayer;
-        ComputerDejarik player2 = new ComputerDejarik();
 
-        List<int> monsterPosPlayer1 = new List<int> { 20, 21, 22, 23 };
-        List<int> monsterPosPlayer2 = new List<int> { 14, 15, 16, 17 };
+        internal Player Player2 { get => playerDejarik; set => player2 = value; }
 
         internal ComputerDejarik Computer { get => player2; set => player2 = value; }
 
