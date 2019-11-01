@@ -18,19 +18,19 @@ namespace Projet_GONLO
     {
         List<Button> listButtons;
         List<Player> players = new List<Player>();
-        Player playerDejarik = new Player();
+        Player player1 = new Player();
         Player player2 = new Player();
-        Boolean multiplayer;
+        Player currPlayer;
 
-        internal Player Player2 { get => playerDejarik; set => player2 = value; }
+        List<int> monsterPosPlayer1 = new List<int> { 20, 21, 22, 23 };
+        List<int> monsterPosPlayer2 = new List<int> { 14, 15, 16, 17 };
 
-        internal ComputerDejarik Computer { get => player2; set => player2 = value; }
+        internal Player Player2 { get => player2; set => player2 = value; }
 
         internal Player Player1 { get => player1; set => player1 = value; }
 
-        public Dejarik(Boolean multi)
+        public Dejarik()
         {
-            multiplayer = multi;
             InitializeComponent();
             initalizeListButtons();
             Tile.CreateTiles();
@@ -117,6 +117,9 @@ namespace Projet_GONLO
             }
 
             int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
+
+            Monster currMonster = checkForMonster(currPosition);
+
             List<int> accessibleButtons = new List<int>();
 
             for (int i = 0; i < listButtons.Count; i++)
@@ -135,6 +138,18 @@ namespace Projet_GONLO
                 listButtons[accessibleButtons[i]].BackColor = Color.Green;
                 listButtons[accessibleButtons[i]].Enabled = true;
             }
+        }
+
+        private Monster checkForMonster(int currPosition)
+        {
+            for (int i = 0; i < listButtons.Count; i++)
+            {
+                if (currPosition == )
+                {
+
+                }
+            }
+            return null;
         }
 
         private void Dejarik_Load(object sender, EventArgs e)
@@ -202,7 +217,7 @@ namespace Projet_GONLO
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Dejarik newDejarik = new Dejarik(multiplayer);
+            Dejarik newDejarik = new Dejarik();
             newDejarik.ShowDialog();
             this.Close();
         }
