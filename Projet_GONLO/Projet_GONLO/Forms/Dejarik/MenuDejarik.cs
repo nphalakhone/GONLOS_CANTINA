@@ -1,4 +1,4 @@
-﻿using Projet_GONLO.Classes.Dejarik;
+﻿using Projet_GONLO.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -165,7 +165,7 @@ namespace Projet_GONLO
                 && BtnMantellian.Enabled == false && BtnMonnok.Enabled == false)
             {
                 Hide();
-                Dejarik newDejarikGame = new Dejarik(multiplayer);
+                Dejarik newDejarikGame = new Dejarik();
                 newDejarikGame.Player2 = player2;
                 newDejarikGame.Player1 = playerMenuDejarik;
                 newDejarikGame.ShowDialog();

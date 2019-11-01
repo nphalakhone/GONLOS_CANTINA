@@ -1,4 +1,4 @@
-﻿using Projet_GONLO.Classes.Dejarik;
+﻿using Projet_GONLO.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +34,7 @@ namespace Projet_GONLO
             InitializeComponent();
             initalizeListButtons();
             Tile.CreateTiles();
+            currPlayer = player1;
         }
 
         private void initializeMonsterPosition()
@@ -110,22 +111,16 @@ namespace Projet_GONLO
 
         private void btn_Click(object sender, EventArgs e)
         {
+            int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
+            //Monster currMonster = checkForMonster(currPosition);
+            List<int> accessibleButtons = new List<int>();
+
             for (int i = 0; i < listButtons.Count; i++)
             {
                 listButtons[i].BackColor = Color.Transparent;
                 listButtons[i].Enabled = false;
             }
-
-            int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
-
-            Monster currMonster = checkForMonster(currPosition);
-
-            List<int> accessibleButtons = new List<int>();
-
-            for (int i = 0; i < listButtons.Count; i++)
-            {
-                listButtons[i].Enabled = false;
-            }
+ 
 
             for (int i = 0; i < Tile.ListTiles[currPosition].ListMovement.Count; i++)
             {
@@ -142,14 +137,34 @@ namespace Projet_GONLO
 
         private Monster checkForMonster(int currPosition)
         {
+            Monster currMonster = new Monster();
             for (int i = 0; i < listButtons.Count; i++)
             {
-                if (currPosition == )
+                if (currPosition == currPlayer.AttMonster.Position)
                 {
+                    currMonster = currPlayer.AttMonster;
+                    break;
+                }
 
+                else if (currPosition == currPlayer.DefMonster.Position)
+                {
+                    currMonster = currPlayer.DefMonster;
+                    break;
+                }
+
+                else if (currPosition == currPlayer.MovMonster.Position)
+                {
+                    currMonster = currPlayer.MovMonster;
+                    break;
+                }
+
+                else if (currPosition == currPlayer.PowMonster.Position)
+                {
+                    currMonster = currPlayer.PowMonster;
+                    break;
                 }
             }
-            return null;
+            return currMonster;
         }
 
         private void Dejarik_Load(object sender, EventArgs e)

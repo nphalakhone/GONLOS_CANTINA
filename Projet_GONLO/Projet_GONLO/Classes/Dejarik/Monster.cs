@@ -37,6 +37,11 @@ namespace Projet_GONLO
             this.position = position;
         }
 
+        public Monster()
+        {
+
+        }
+
         public string Name { get => name; set => name = value; }
         public int Attack { get => attack; set => attack = value; }
         public int Defense { get => defense; set => defense = value; }
