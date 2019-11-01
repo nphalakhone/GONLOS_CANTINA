@@ -19,10 +19,10 @@ namespace Projet_GONLO
         List<Button> listButtons;
         List<Player> players = new List<Player>();
         Player playerDejarik = new Player();
+        Player player2 = new Player();
         Boolean multiplayer;
-        ComputerDejarik cpu = new ComputerDejarik();
 
-        internal ComputerDejarik Computer { get => cpu; set => cpu = value; }
+        internal Player Player2 { get => playerDejarik; set => player2 = value; }
 
         internal Player Player1 { get => playerDejarik; set => playerDejarik = value; }
 
@@ -55,10 +55,10 @@ namespace Projet_GONLO
             setButton(15, playerDejarik.DefMonster.Picture);
             setButton(16, playerDejarik.MovMonster.Picture);
             setButton(17, playerDejarik.PowMonster.Picture);
-            setButton(23, cpu.AttMonster.Picture);
-            setButton(22, cpu.DefMonster.Picture);
-            setButton(21, cpu.MovMonster.Picture);
-            setButton(20, cpu.PowMonster.Picture);
+            setButton(23, player2.AttMonster.Picture);
+            setButton(22, player2.DefMonster.Picture);
+            setButton(21, player2.MovMonster.Picture);
+            setButton(20, player2.PowMonster.Picture);
 
         }
 
