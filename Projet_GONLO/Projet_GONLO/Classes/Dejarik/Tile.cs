@@ -59,7 +59,6 @@ namespace Projet_GONLO
             }
         }
 
-
         /// <summary>
         /// Case Number
         /// </summary>
