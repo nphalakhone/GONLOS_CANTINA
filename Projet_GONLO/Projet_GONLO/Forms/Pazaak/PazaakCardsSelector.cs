@@ -14,6 +14,7 @@ namespace Projet_GONLO
     {
         Player playerCBS = new Player();
         List<RoundPanel> playerDeck = new List<RoundPanel>();
+        List<Image> playerDeckImage = new List<Image>();
         List<int> positionCarteEnleve = new List<int>();
         //List<bool> PanelRempi = new List<bool>();
         //bool[] PanelRempi = new bool[8];
@@ -29,6 +30,8 @@ namespace Projet_GONLO
 
         internal Player Player1 { get => playerCBS; set => playerCBS = value; }
 
+
+        internal List<Image> Player1Deck { get => playerDeckImage; set => playerDeckImage = value; }
         //private void InitializeArrayBool()
         //{
         //    for (int i = 0; i < PanelRempi.Length; i++)
@@ -49,14 +52,27 @@ namespace Projet_GONLO
             playerDeck.Add(RPnlPlayerDC8);
             playerDeck.Add(RPnlPlayerDC9);
             playerDeck.Add(RPnlPlayerDC10);
+
+
+
+
         }
 
         private void BtnEllReady_Click(object sender, EventArgs e)
         {
+            
+            for (int i = 0; i < playerDeck.Count; i++)
+            {
+                playerDeckImage.Add(playerDeck[i].BackgroundImage);
+            }
             Hide();
-            Pazaak newPazaakGame = new Pazaak();
+            Pazaak newPazaakGame = new Pazaak(playerDeckImage);
             newPazaakGame.Player1 = playerCBS;
+            
+            //newPazaakGame.DeckPazaak = playerDeckImage;
+
             newPazaakGame.CreditsWaged = int.Parse(MTxtBoxWager.Text);
+            
             newPazaakGame.ShowDialog();
             this.Close();
         }

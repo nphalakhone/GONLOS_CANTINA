@@ -1,4 +1,4 @@
-﻿using System;
+﻿  using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +12,7 @@ namespace Projet_GONLO
 {
     public partial class Pazaak : Form
     {
+        List<Image> playerDeckPazaak = new List<Image>();
         Player playerPazaak = new Player();
         Cards c = new Cards();
         Image[] playerDeck = new Image[4];
@@ -41,8 +42,9 @@ namespace Projet_GONLO
         bool AiStand = false;
 
 
-        public Pazaak()
+        public Pazaak(List<Image> playerDeckPazaak)
         {
+            this.playerDeckPazaak = playerDeckPazaak;
             InitializeComponent();
             //sample deck
             setupPlayerdeck();
@@ -51,6 +53,8 @@ namespace Projet_GONLO
         internal int CreditsWaged { get => credsWaged;  set => credsWaged = value; }
         internal Player Player1 { get => playerPazaak; set => playerPazaak = value; }
 
+       // internal List<Image> DeckPazaak { get => playerDeckPazaak; set => playerDeckPazaak = value; }
+        
         private void setupBoard()
         {
             TabPanelLeft = new Panel[]
@@ -65,10 +69,13 @@ namespace Projet_GONLO
 
         private void setupPlayerdeck()
         {
-            playerDeck[0] = c.getCartePlus(4);
-            playerDeck[1] = c.getCarteMinus(3);
-            playerDeck[2] = c.getCartePlusMinus(2);
-            playerDeck[3] = c.getCartePlus(5);
+            //playerDeckPazaak
+            selectCardsForDeck();
+            
+            //playerDeck[0] = c.getCartePlus(4);
+            //playerDeck[1] = c.getCarteMinus(3);
+            //playerDeck[2] = c.getCartePlusMinus(2);
+            //playerDeck[3] = c.getCartePlus(5);
 
             panelPlayerDeck = new Panel[]
             {
@@ -79,6 +86,24 @@ namespace Projet_GONLO
                 panelPlayerDeck[i].BackgroundImage = playerDeck[i];
                 panelPlayerDeck[i].BackgroundImageLayout = ImageLayout.Stretch;
             }
+        }
+
+        private void selectCardsForDeck()
+        {
+            int tailleListe = playerDeckPazaak.Count;
+            
+            int nombreCarteSelectionne = 0;
+
+            while (nombreCarteSelectionne != 4)
+            {
+                int a = rand.Next(0, tailleListe);
+                playerDeck[nombreCarteSelectionne] = playerDeckPazaak.ElementAt(a);
+                playerDeckPazaak.RemoveAt(a);
+                tailleListe--;
+                nombreCarteSelectionne++;
+            }
+
+
         }
 
         private void End_Turn_Click(object sender, EventArgs e)
@@ -107,14 +132,14 @@ namespace Projet_GONLO
                 nbCardsAi++;
                 AiPoints += pointsAdded;
                 LblPointsAi.Text = AiPoints.ToString();
-                if (!playerStand && AiPoints < 18)
+                if (!playerStand) // AiPoints < 18
                 {
                     turn = 0;
                 }
-                else if (AiPoints >= 18)
-                {
-                    AiStand = true;
-                }
+                //else if (AiPoints >= 18)
+                //{
+                //    AiStand = true;
+                //}
             }
         }
 
