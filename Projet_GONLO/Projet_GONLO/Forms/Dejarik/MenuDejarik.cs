@@ -23,54 +23,148 @@ namespace Projet_GONLO
             createMonsters();
         }
 
-
         private void BtnGhhhk_Click(object sender, EventArgs e)
         {
-            
+            if (playerTurn == 1)
+            {
+                player1.AttMonster = ghhhk;
+                player2.AttMonster = houjix;
+                //giveMonsterPLayer(player1.AttMonster, player2.AttMonster, ghhhk, houjix);
+            }
+            else
+            {
+                player2.AttMonster = ghhhk;
+                player1.AttMonster = houjix;
+                //giveMonsterPLayer(player2.AttMonster, player1.AttMonster, ghhhk, houjix);
+            }
+           
             btnClick(BtnGhhhk, BtnHoujix);
         }
- 
+
 
         private void BtnHoujix_Click(object sender, EventArgs e)
         {
-
+            if (playerTurn == 1)
+            {
+                player1.AttMonster = houjix;
+                player2.AttMonster = ghhhk;
+                //giveMonsterPLayer(player1.AttMonster, player2.AttMonster, houjix, ghhhk);
+            }
+            else
+            {
+                player2.AttMonster = houjix;
+                player1.AttMonster = ghhhk;
+                //giveMonsterPLayer(player2.AttMonster, player1.AttMonster, houjix, ghhhk);
+            }
             btnClick(BtnGhhhk, BtnHoujix);
         }
 
         private void BtnKintanStrider_Click(object sender, EventArgs e)
         {
-
+            if (playerTurn == 1)
+            {
+                player1.DefMonster = kintanStrider;
+                player2.DefMonster = ngok;
+                //giveMonsterPLayer(player1.DefMonster, player2.DefMonster, kintanStrider, ngok);
+            }
+            else
+            {
+                player2.DefMonster = kintanStrider;
+                player1.DefMonster = ngok;
+                //giveMonsterPLayer(player2.DefMonster, player1.DefMonster, kintanStrider, ngok);
+            }
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
         private void BtnNgok_Click(object sender, EventArgs e)
         {
-
+            if (playerTurn == 1)
+            {
+                player1.DefMonster = ngok;
+                player2.DefMonster = kintanStrider;
+                //giveMonsterPLayer(player1.DefMonster, player2.DefMonster, ngok, kintanStrider);
+            }
+            else
+            {
+                player2.DefMonster = ngok;
+                player1.DefMonster = kintanStrider;
+                //giveMonsterPLayer(player2.DefMonster, player1.DefMonster, ngok, kintanStrider);
+            }
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
         private void BtnKlorslug_Click(object sender, EventArgs e)
         {
-
+            if (playerTurn == 1)
+            {
+                player1.MovMonster = klorslug;
+                player2.MovMonster = grimtaash;
+                //giveMonsterPLayer(player1.MovMonster, player2.MovMonster, klorslug, grimtaash);
+            }
+            else
+            {
+                player2.MovMonster = klorslug;
+                player1.MovMonster = grimtaash;
+                //giveMonsterPLayer(player2.MovMonster, player1.MovMonster, klorslug, grimtaash);
+            }
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
         private void BtnGrimtaash_Click(object sender, EventArgs e)
         {
-
+            if (playerTurn == 1)
+            {
+                player1.MovMonster = grimtaash;
+                player2.MovMonster = klorslug;
+                //giveMonsterPLayer(player1.MovMonster, player2.MovMonster, grimtaash, klorslug);
+            }
+            else
+            {
+                player2.MovMonster = grimtaash;
+                player1.MovMonster = klorslug;
+                //giveMonsterPLayer(player2.MovMonster, player1.MovMonster, grimtaash, klorslug);
+            }
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
         private void BtnMantellian_Click(object sender, EventArgs e)
         {
-  
+            if (playerTurn == 1)
+            {
+                player1.PowMonster = mantellianSavrip;
+                player2.PowMonster = monnok;
+                //giveMonsterPLayer(player1.PowMonster, player2.PowMonster, mantellianSavrip, monnok);
+            }
+            else
+            {
+                player2.PowMonster = mantellianSavrip;
+                player1.PowMonster = monnok;
+                //giveMonsterPLayer(player2.PowMonster, player1.PowMonster, mantellianSavrip, monnok);
+            }
             btnClick(BtnMantellian, BtnMonnok);
         }
 
         private void BtnMonnok_Click(object sender, EventArgs e)
         {
- 
+            if (playerTurn == 1)
+            {
+                player1.PowMonster = monnok;
+                player2.PowMonster = mantellianSavrip;
+                //giveMonsterPLayer(player1.PowMonster, player2.PowMonster, monnok, mantellianSavrip);
+            }
+            else
+            {
+                player2.PowMonster = monnok;
+                player1.PowMonster = mantellianSavrip;
+                //giveMonsterPLayer(player2.PowMonster, player1.PowMonster, monnok, mantellianSavrip);
+            }
             btnClick(BtnMantellian, BtnMonnok);
+        }
+
+        private void giveMonsterPLayer(Monster attMonster1, Monster attMonster2, Monster ghhhk, Monster houjix)
+        {
+            attMonster1 = ghhhk;
+            attMonster2 = houjix;
         }
 
         private void btnClick(Button btnGhhhk, Button btnHoujix)
@@ -128,9 +222,7 @@ namespace Projet_GONLO
         {
 
                 changeLabel();
-            
-
-                computerPick();
+           
                 checkMonsterFinish();
             
         }
@@ -181,11 +273,13 @@ namespace Projet_GONLO
             {
                 LblMenuPlayerTurn.Text = "Player 2 choose one monster for each category  ";
                 Refresh();
+                playerTurn = 2;
             }
             else
             {
                 LblMenuPlayerTurn.Text = "Player 1 choose one monster for each category  ";
                 Refresh();
+                playerTurn = 1;
             }
         }
     }

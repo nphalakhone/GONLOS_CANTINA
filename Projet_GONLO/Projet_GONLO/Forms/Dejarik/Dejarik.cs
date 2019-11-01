@@ -1,14 +1,7 @@
-﻿using Projet_GONLO.Classes.Dejarik;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -144,10 +137,7 @@ namespace Projet_GONLO
         {
             for (int i = 0; i < listButtons.Count; i++)
             {
-                if (currPosition == )
-                {
 
-                }
             }
             return null;
         }
