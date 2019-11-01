@@ -28,7 +28,6 @@ namespace Projet_GONLO
             InitializeComponent();
             initalizeListButtons();
             Tile.CreateTiles();
-            currPlayer = player1;
         }
 
         private void initializeMonsterPosition()
@@ -44,7 +43,7 @@ namespace Projet_GONLO
             player2.DefMonster.Position = 22;
             player2.MovMonster.Position = 21;
             player2.PowMonster.Position = 20;
-            
+
             //Setting the images based on the monsters positions
             setButton(player1.AttMonster.Position, player1.AttMonster.Picture);
             setButton(player1.DefMonster.Position, player1.DefMonster.Picture);
@@ -63,7 +62,7 @@ namespace Projet_GONLO
             {
                 listButtons[x].BackgroundImageLayout = ImageLayout.Stretch;
                 listButtons[x].Image = img;
-            }  
+            }
         }
 
         private void initalizeListButtons()
@@ -106,7 +105,7 @@ namespace Projet_GONLO
         private void btn_Click(object sender, EventArgs e)
         {
             int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
-            //Monster currMonster = checkForMonster(currPosition);
+            Monster currMonster = checkForMonster(currPosition);
             List<int> accessibleButtons = new List<int>();
 
             for (int i = 0; i < listButtons.Count; i++)
@@ -114,12 +113,11 @@ namespace Projet_GONLO
                 listButtons[i].BackColor = Color.Transparent;
                 listButtons[i].Enabled = false;
             }
- 
 
-            for (int i = 0; i < Tile.ListTiles[currPosition].ListMovement.Count; i++)
-            {
-                accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[i].Number);
-            }
+            for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
+                {
+                    accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
+                }
 
             //Activate accessible buttons
             for (int i = 0; i < accessibleButtons.Count; i++)
@@ -164,6 +162,7 @@ namespace Projet_GONLO
         private void Dejarik_Load(object sender, EventArgs e)
         {
             initializeMonsterPosition();
+            currPlayer = player1;
         }
 
         private void GroupBox1_Enter(object sender, EventArgs e)
