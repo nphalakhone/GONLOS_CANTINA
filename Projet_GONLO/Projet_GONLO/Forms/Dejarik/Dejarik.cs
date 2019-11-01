@@ -1,14 +1,8 @@
-﻿using Projet_GONLO.Classes.Dejarik;
+using Projet_GONLO.Classes;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -18,48 +12,49 @@ namespace Projet_GONLO
     {
         List<Button> listButtons;
         List<Player> players = new List<Player>();
-        Player playerDejarik = new Player();
-        Boolean multiplayer;
-        ComputerDejarik cpu = new ComputerDejarik();
+        Player player1 = new Player();
+        Player player2 = new Player();
+        Player currPlayer;
 
-        internal ComputerDejarik Computer { get => cpu; set => cpu = value; }
+        List<int> monsterPosPlayer1 = new List<int> { 20, 21, 22, 23 };
+        List<int> monsterPosPlayer2 = new List<int> { 14, 15, 16, 17 };
 
-        internal Player Player1 { get => playerDejarik; set => playerDejarik = value; }
+        internal Player Player2 { get => player2; set => player2 = value; }
 
-        public Dejarik(Boolean multi)
+        internal Player Player1 { get => player1; set => player1 = value; }
+
+        public Dejarik()
         {
-            multiplayer = multi;
             InitializeComponent();
             initalizeListButtons();
             Tile.CreateTiles();
-            
+            currPlayer = player1;
         }
 
-
-        private void addMonster()
+        private void initializeMonsterPosition()
         {
-            if (multiplayer)
-            {
+            //Setting the position of each monster on player 1 side
+            player1.AttMonster.Position = 14;
+            player1.DefMonster.Position = 15;
+            player1.MovMonster.Position = 16;
+            player1.PowMonster.Position = 17;
 
-            }
-            else
-            {
-                addMonsterCPU();
-            }
-        }
-
-        private void addMonsterCPU()
-        {
+            //Setting the position of each monster on player 2 side
+            player2.AttMonster.Position = 23;
+            player2.DefMonster.Position = 22;
+            player2.MovMonster.Position = 21;
+            player2.PowMonster.Position = 20;
             
-            setButton(14, playerDejarik.AttMonster.Picture);
-            setButton(15, playerDejarik.DefMonster.Picture);
-            setButton(16, playerDejarik.MovMonster.Picture);
-            setButton(17, playerDejarik.PowMonster.Picture);
-            setButton(23, cpu.AttMonster.Picture);
-            setButton(22, cpu.DefMonster.Picture);
-            setButton(21, cpu.MovMonster.Picture);
-            setButton(20, cpu.PowMonster.Picture);
+            //Setting the images based on the monsters positions
+            setButton(player1.AttMonster.Position, player1.AttMonster.Picture);
+            setButton(player1.DefMonster.Position, player1.DefMonster.Picture);
+            setButton(player1.MovMonster.Position, player1.MovMonster.Picture);
+            setButton(player1.PowMonster.Position, player1.PowMonster.Picture);
 
+            setButton(player2.AttMonster.Position, player2.AttMonster.Picture);
+            setButton(player2.DefMonster.Position, player2.DefMonster.Picture);
+            setButton(player2.MovMonster.Position, player2.MovMonster.Picture);
+            setButton(player2.PowMonster.Position, player2.PowMonster.Picture);
         }
 
         private void setButton(int x, Image img)
@@ -110,19 +105,16 @@ namespace Projet_GONLO
 
         private void btn_Click(object sender, EventArgs e)
         {
+            int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
+            //Monster currMonster = checkForMonster(currPosition);
+            List<int> accessibleButtons = new List<int>();
+
             for (int i = 0; i < listButtons.Count; i++)
             {
                 listButtons[i].BackColor = Color.Transparent;
                 listButtons[i].Enabled = false;
             }
-
-            int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
-            List<int> accessibleButtons = new List<int>();
-
-            for (int i = 0; i < listButtons.Count; i++)
-            {
-                listButtons[i].Enabled = false;
-            }
+ 
 
             for (int i = 0; i < Tile.ListTiles[currPosition].ListMovement.Count; i++)
             {
@@ -137,14 +129,41 @@ namespace Projet_GONLO
             }
         }
 
-        private void PictureBox1_Click(object sender, EventArgs e)
+        private Monster checkForMonster(int currPosition)
         {
+            Monster currMonster = new Monster();
+            for (int i = 0; i < listButtons.Count; i++)
+            {
+                if (currPosition == currPlayer.AttMonster.Position)
+                {
+                    currMonster = currPlayer.AttMonster;
+                    break;
+                }
 
+                else if (currPosition == currPlayer.DefMonster.Position)
+                {
+                    currMonster = currPlayer.DefMonster;
+                    break;
+                }
+
+                else if (currPosition == currPlayer.MovMonster.Position)
+                {
+                    currMonster = currPlayer.MovMonster;
+                    break;
+                }
+
+                else if (currPosition == currPlayer.PowMonster.Position)
+                {
+                    currMonster = currPlayer.PowMonster;
+                    break;
+                }
+            }
+            return currMonster;
         }
 
         private void Dejarik_Load(object sender, EventArgs e)
         {
-            addMonster();
+            initializeMonsterPosition();
         }
 
         private void GroupBox1_Enter(object sender, EventArgs e)
@@ -153,11 +172,6 @@ namespace Projet_GONLO
         }
 
         private void GroupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -203,7 +217,7 @@ namespace Projet_GONLO
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StreamWriter writer = new StreamWriter("C:\\Users\\1156103\\Documents\\GitHub\\GONLOS_CANTINA\\Projet_GONLO\\Saves\\Saves.txt");
-            string playerData = playerDejarik.Name + "," + playerDejarik.Species + "," + playerDejarik.Gender + "," + playerDejarik.PowMonster + "," + playerDejarik.AttMonster + "," + playerDejarik.DefMonster + "," + playerDejarik.MovMonster;
+            string playerData = player1.Name + "," + player1.Species + "," + player1.Gender + "," + player1.PowMonster + "," + player1.AttMonster + "," + player1.DefMonster + "," + player1.MovMonster;
             writer.Flush();
             writer.WriteLine(playerData);
         }
@@ -212,7 +226,7 @@ namespace Projet_GONLO
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Dejarik newDejarik = new Dejarik(multiplayer);
+            Dejarik newDejarik = new Dejarik();
             newDejarik.ShowDialog();
             this.Close();
         }
