@@ -105,8 +105,14 @@ namespace Projet_GONLO
 
         private void btn_Click(object sender, EventArgs e)
         {
+            //CREATE COMPTEUR FOR MOVEMENT
+            //if currentPlayer.currentMonster compteur de mouvement then end movement
+            //if currentPlayer already attacked, he stills can move
+            //if currentPlayer has moved and attacked, then end turn
+            endTurn();
+
             int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
-            Monster currMonster = checkCurrMonster(currPosition);
+            Monster currMonster = getClickMonster(currPosition);
             List<int> accessibleButtons = new List<int>();
 
             for (int i = 0; i < listButtons.Count; i++)
@@ -120,12 +126,32 @@ namespace Projet_GONLO
                 accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
             }
 
-            activateButtons(accessibleButtons, currPosition);
-
+            activateMovButtons(accessibleButtons, currPosition);
+            activateAttackButtons(accessibleButtons, currPosition);
 
         }
 
-        private void activateButtons(List<int> accessibleButtons, int currPosition)
+        private void endTurn()
+        {
+            Player playerTmp = new Player();
+
+            //Change current Player
+            playerTmp = currPlayer;
+            currPlayer = otherPlayer;
+            otherPlayer = playerTmp;
+        }
+
+        private void activateMovButtons(List<int> accessibleButtons, int currPosition)
+        {
+            //Activate accessible buttons
+            for (int i = 0; i < accessibleButtons.Count; i++)
+            {
+                listButtons[accessibleButtons[i]].BackColor = Color.Green;
+                listButtons[accessibleButtons[i]].Enabled = true;
+            }
+        }
+
+        private void activateAttackButtons(List<int> accessibleButtons, int currPosition)
         {
             //Activate accessible buttons
             for (int i = 0; i < accessibleButtons.Count; i++)
@@ -136,41 +162,23 @@ namespace Projet_GONLO
                     listButtons[accessibleButtons[i]].BackColor = Color.Yellow;
                     listButtons[accessibleButtons[i]].Enabled = true;
                 }
-                //Movement
-                else
-                {
-                    listButtons[accessibleButtons[i]].BackColor = Color.Green;
-                    listButtons[accessibleButtons[i]].Enabled = true;
-                }
-
             }
         }
 
         private Boolean checkForAttack(int accessible)
         {
             Boolean attack = false;
-            for (int i = 0; i < player2.ListMonsters.Count; i++)
+            for (int i = 0; i < otherPlayer.ListMonsters.Count; i++)
             {
-                //Attack
-                if (accessible == player2.ListMonsters[i].Position)
+                if (accessible == otherPlayer.ListMonsters[i].Position)
                 {
                     attack = true;
                 }
             }
-
-            for (int i = 0; i < player1.ListMonsters.Count; i++)
-            {
-                //Attack
-                if (accessible == player1.ListMonsters[i].Position)
-                {
-                    attack = true;
-                }
-            }
-
             return attack;
         }
 
-        private Monster checkCurrMonster(int currPosition)
+        private Monster getClickMonster(int currPosition)
         {
             Monster currMonster = new Monster();
             for (int i = 0; i < listButtons.Count; i++)
@@ -205,9 +213,10 @@ namespace Projet_GONLO
         private void Dejarik_Load(object sender, EventArgs e)
         {
             initializeMonsterPosition();
-            currPlayer = player1;
             player1.ListMonsters = new List<Monster> { player1.AttMonster, player1.DefMonster, player1.MovMonster, player1.PowMonster };
             player2.ListMonsters = new List<Monster> { player2.AttMonster, player2.DefMonster, player2.MovMonster, player2.PowMonster };
+            currPlayer = player1;
+            otherPlayer = player2;
         }
 
         private void BtnDice_Click(object sender, EventArgs e)
@@ -249,7 +258,6 @@ namespace Projet_GONLO
             writer.Flush();
             writer.WriteLine(playerData);
         }
-
 
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
         {

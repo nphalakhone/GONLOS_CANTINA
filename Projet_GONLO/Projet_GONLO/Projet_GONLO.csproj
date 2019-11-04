@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Dejarik\Dice.cs" />
     <Compile Include="User Control\ButtonCircle.cs">
       <SubType>Component</SubType>
     </Compile>
