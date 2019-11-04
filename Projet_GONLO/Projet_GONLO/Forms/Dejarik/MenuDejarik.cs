@@ -17,8 +17,6 @@ namespace Projet_GONLO
 
 
         internal Player Player1 { get => player1; set => player1 = value; }
-
-
         internal Player Player2 { get => player2; set => player2 = value; }
 
         public MenuDejarik()
@@ -33,6 +31,7 @@ namespace Projet_GONLO
             {
                 player1.AttMonster = ghhhk;
                 player2.AttMonster = houjix;
+                
                 //giveMonsterPLayer(player1.AttMonster, player2.AttMonster, ghhhk, houjix);
             }
             else
@@ -41,7 +40,7 @@ namespace Projet_GONLO
                 player1.AttMonster = houjix;
                 //giveMonsterPLayer(player2.AttMonster, player1.AttMonster, ghhhk, houjix);
             }
-           
+
             btnClick(BtnGhhhk, BtnHoujix);
         }
 

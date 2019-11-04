@@ -105,7 +105,7 @@ namespace Projet_GONLO
         private void btn_Click(object sender, EventArgs e)
         {
             int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
-            Monster currMonster = checkForMonster(currPosition);
+            Monster currMonster = checkCurrMonster(currPosition);
             List<int> accessibleButtons = new List<int>();
 
             for (int i = 0; i < listButtons.Count; i++)
@@ -115,19 +115,61 @@ namespace Projet_GONLO
             }
 
             for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
-                {
-                    accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
-                }
+            {
+                accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
+            }
 
+            activateButtons(accessibleButtons, currPosition);
+
+
+        }
+
+        private void activateButtons(List<int> accessibleButtons, int currPosition)
+        {
             //Activate accessible buttons
             for (int i = 0; i < accessibleButtons.Count; i++)
             {
-                listButtons[accessibleButtons[i]].BackColor = Color.Green;
-                listButtons[accessibleButtons[i]].Enabled = true;
+                //Attack
+                if (checkForAttack(accessibleButtons[i]))
+                {
+                    listButtons[accessibleButtons[i]].BackColor = Color.Yellow;
+                    listButtons[accessibleButtons[i]].Enabled = true;
+                }
+                //Movement
+                else
+                {
+                    listButtons[accessibleButtons[i]].BackColor = Color.Green;
+                    listButtons[accessibleButtons[i]].Enabled = true;
+                }
+
             }
         }
 
-        private Monster checkForMonster(int currPosition)
+        private Boolean checkForAttack(int accessible)
+        {
+            Boolean attack = false;
+            for (int i = 0; i < player2.ListMonsters.Count; i++)
+            {
+                //Attack
+                if (accessible == player2.ListMonsters[i].Position)
+                {
+                    attack = true;
+                }
+            }
+
+            for (int i = 0; i < player1.ListMonsters.Count; i++)
+            {
+                //Attack
+                if (accessible == player1.ListMonsters[i].Position)
+                {
+                    attack = true;
+                }
+            }
+
+            return attack;
+        }
+
+        private Monster checkCurrMonster(int currPosition)
         {
             Monster currMonster = new Monster();
             for (int i = 0; i < listButtons.Count; i++)
@@ -163,23 +205,9 @@ namespace Projet_GONLO
         {
             initializeMonsterPosition();
             currPlayer = player1;
+            player1.ListMonsters = new List<Monster> { player1.AttMonster, player1.DefMonster, player1.MovMonster, player1.PowMonster };
+            player2.ListMonsters = new List<Monster> { player2.AttMonster, player2.DefMonster, player2.MovMonster, player2.PowMonster };
         }
-
-        private void GroupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
 
         private void BtnDice_Click(object sender, EventArgs e)
         {

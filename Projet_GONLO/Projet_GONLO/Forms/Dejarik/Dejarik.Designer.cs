@@ -92,7 +92,6 @@
             this.GbLog.Size = new System.Drawing.Size(564, 420);
             this.GbLog.TabIndex = 1;
             this.GbLog.TabStop = false;
-            this.GbLog.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // ListBoxLog
             // 
@@ -121,7 +120,6 @@
             this.GbDice.Size = new System.Drawing.Size(564, 410);
             this.GbDice.TabIndex = 2;
             this.GbDice.TabStop = false;
-            this.GbDice.Enter += new System.EventHandler(this.GroupBox2_Enter);
             // 
             // PnlDe
             // 
@@ -131,7 +129,6 @@
             this.PnlDe.Name = "PnlDe";
             this.PnlDe.Size = new System.Drawing.Size(300, 300);
             this.PnlDe.TabIndex = 1;
-            this.PnlDe.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // BtnDice
             // 

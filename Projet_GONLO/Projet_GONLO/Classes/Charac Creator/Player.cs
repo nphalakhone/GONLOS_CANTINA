@@ -20,7 +20,8 @@ namespace Projet_GONLO
         private Monster _attMonster;
         private Monster _defMonster;
         private Monster _movMonster;
-       
+        private List<Monster> _listMonsters = new List<Monster>();
+
 
         public Player()
         {
@@ -99,6 +100,6 @@ namespace Projet_GONLO
             set { _movMonster = value; }
         }
 
-        
+        public List<Monster> ListMonsters { get => _listMonsters; set => _listMonsters = value; }
     }
 }
