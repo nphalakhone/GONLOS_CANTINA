@@ -15,6 +15,7 @@ namespace Projet_GONLO
         Player player1 = new Player();
         Player player2 = new Player();
         Player currPlayer;
+        Player otherPlayer;
 
         List<int> monsterPosPlayer1 = new List<int> { 20, 21, 22, 23 };
         List<int> monsterPosPlayer2 = new List<int> { 14, 15, 16, 17 };
