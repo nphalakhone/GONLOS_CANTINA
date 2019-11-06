@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dejarik));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GbLog = new System.Windows.Forms.GroupBox();
             this.ListBoxLog = new System.Windows.Forms.ListBox();
             this.LblPlayerTurn = new System.Windows.Forms.Label();
@@ -67,21 +66,11 @@
             this.Button23 = new Projet_GONLO.ButtonCircle();
             this.Button24 = new Projet_GONLO.ButtonCircle();
             this.Button25 = new Projet_GONLO.ButtonCircle();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.GbLog.SuspendLayout();
             this.GbDice.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Projet_GONLO.Properties.Resources._interface;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(834, 836);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // GbLog
             // 
@@ -557,6 +546,15 @@
             this.Button25.Tag = "25";
             this.Button25.UseVisualStyleBackColor = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::Projet_GONLO.Properties.Resources._interface;
+            this.panel1.Location = new System.Drawing.Point(13, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(834, 836);
+            this.panel1.TabIndex = 31;
+            // 
             // Dejarik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -590,15 +588,14 @@
             this.Controls.Add(this.Button25);
             this.Controls.Add(this.GbDice);
             this.Controls.Add(this.GbLog);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Dejarik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dejarik";
             this.Load += new System.EventHandler(this.Dejarik_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GbLog.ResumeLayout(false);
             this.GbLog.PerformLayout();
             this.GbDice.ResumeLayout(false);
@@ -610,8 +607,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox GbLog;
         private System.Windows.Forms.GroupBox GbDice;
         private System.Windows.Forms.Label LblPlayerTurn;
@@ -650,5 +645,6 @@
         private ButtonCircle Button12;
         private ButtonCircle Button13;
         private ButtonCircle Button1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

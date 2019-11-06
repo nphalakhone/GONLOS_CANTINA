@@ -11,18 +11,14 @@ namespace Projet_GONLO
     public partial class Dejarik : Form
     {
         List<Button> listButtons;
-        List<Player> players = new List<Player>();
         Player player1 = new Player();
         Player player2 = new Player();
-        Player currPlayer;
-        Player otherPlayer;
-
-        List<int> monsterPosPlayer1 = new List<int> { 20, 21, 22, 23 };
-        List<int> monsterPosPlayer2 = new List<int> { 14, 15, 16, 17 };
-
-        internal Player Player2 { get => player2; set => player2 = value; }
+        List<Player> players = new List<Player>();
+        int turn = 0;
+        int counter = 0;
 
         internal Player Player1 { get => player1; set => player1 = value; }
+        internal Player Player2 { get => player2; set => player2 = value; }
 
         public Dejarik()
         {
@@ -62,7 +58,12 @@ namespace Projet_GONLO
             if (img != null)
             {
                 listButtons[x].BackgroundImageLayout = ImageLayout.Stretch;
-                listButtons[x].Image = img;
+                listButtons[x].BackgroundImage = img;
+            }
+            else if (img == null)
+            {
+                listButtons[x].BackgroundImageLayout = ImageLayout.Stretch;
+                listButtons[x].BackgroundImage = null;
             }
         }
 
@@ -105,15 +106,23 @@ namespace Projet_GONLO
 
         private void btn_Click(object sender, EventArgs e)
         {
-            //CREATE COMPTEUR FOR MOVEMENT
-            //if currentPlayer.currentMonster compteur de mouvement then end movement
-            //if currentPlayer already attacked, he stills can move
-            //if currentPlayer has moved and attacked, then end turn
-            endTurn();
-
             int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
-            Monster currMonster = getClickMonster(currPosition);
-            List<int> accessibleButtons = new List<int>();
+
+            //If he chose to move
+            if (listButtons[currPosition].BackColor == Color.Green)
+            {
+                for (int i = 0; i < players[turn].ListMonsters.Count; i++)
+                {
+                    if (players[turn].CurrMonster == players[turn].ListMonsters[i])
+                    {
+                        movement(currPosition, players[turn].ListMonsters[i]);
+                    }
+                }
+            }
+
+            //When he begins (he choose a monster)
+            players[turn].CurrMonster = getClickMonster(currPosition);
+
 
             for (int i = 0; i < listButtons.Count; i++)
             {
@@ -121,93 +130,111 @@ namespace Projet_GONLO
                 listButtons[i].Enabled = false;
             }
 
+            if (counter == players[turn].CurrMonster.Movement)
+            {
+                counter = 0;
+                endTurn();
+            }
+            else
+            {
+                activateMovButtons(players[turn].CurrMonster.Position);
+            }
+
+            //activateAttackButtons(players[turn].CurrMonster.Position);
+        }
+
+        private void movement(int nextPosition, Monster monster)
+        {
+            setButton(monster.Position, null);
+            monster.Position = nextPosition;
+            setButton(nextPosition, monster.Picture);
+            counter++;
+        }
+
+        private void endTurn()
+        {
+            if (turn == 1)
+            {
+                turn = 0;
+            }
+            else if (turn == 0)
+            {
+                turn++;
+            }
+
+            activateCurrPlayer();
+        }
+
+        private void activateMovButtons(int currPosition)
+        {
+
+            List<int> accessibleButtons = new List<int>();
             for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
             {
                 accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
             }
 
-            activateMovButtons(accessibleButtons, currPosition);
-            activateAttackButtons(accessibleButtons, currPosition);
-
-        }
-
-        private void endTurn()
-        {
-            Player playerTmp = new Player();
-
-            //Change current Player
-            playerTmp = currPlayer;
-            currPlayer = otherPlayer;
-            otherPlayer = playerTmp;
-        }
-
-        private void activateMovButtons(List<int> accessibleButtons, int currPosition)
-        {
-            //Activate accessible buttons
+            //Activate accessible buttons for movement
             for (int i = 0; i < accessibleButtons.Count; i++)
             {
-                listButtons[accessibleButtons[i]].BackColor = Color.Green;
-                listButtons[accessibleButtons[i]].Enabled = true;
-            }
-        }
-
-        private void activateAttackButtons(List<int> accessibleButtons, int currPosition)
-        {
-            //Activate accessible buttons
-            for (int i = 0; i < accessibleButtons.Count; i++)
-            {
-                //Attack
-                if (checkForAttack(accessibleButtons[i]))
+                if (listButtons[accessibleButtons[i]].BackgroundImage == null)
                 {
-                    listButtons[accessibleButtons[i]].BackColor = Color.Yellow;
+                    listButtons[accessibleButtons[i]].BackColor = Color.Green;
                     listButtons[accessibleButtons[i]].Enabled = true;
                 }
+
             }
         }
 
-        private Boolean checkForAttack(int accessible)
+        private void activateAttackButtons(int currPosition)
         {
-            Boolean attack = false;
-            for (int i = 0; i < otherPlayer.ListMonsters.Count; i++)
+            List<int> accessibleButtons = new List<int>();
+            for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
             {
-                if (accessible == otherPlayer.ListMonsters[i].Position)
-                {
-                    attack = true;
-                }
+                accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
             }
-            return attack;
+
+            //Activate accessible buttons for attack
+            for (int i = 0; i < accessibleButtons.Count; i++)
+            {
+                ////Attack
+                //if (checkForAttack(accessibleButtons[i]))
+                //{
+                //    listButtons[accessibleButtons[i]].BackColor = Color.Yellow;
+                //    listButtons[accessibleButtons[i]].Enabled = true;
+                //}
+            }
         }
 
+        //private Boolean checkForAttack(int accessible)
+        //{
+        //    Boolean attack = false;
+        //    for (int i = 0; i < otherPlayer.ListMonsters.Count; i++)
+        //    {
+        //        if (accessible == otherPlayer.ListMonsters[i].Position)
+        //        {
+        //            attack = true;
+        //        }
+        //    }
+        //    return attack;
+        //}
+
+        /// <summary>
+        /// Get the monster of where the player clicked
+        /// </summary>
+        /// <param name="currPosition"></param>
+        /// <returns></returns>
         private Monster getClickMonster(int currPosition)
         {
-            Monster currMonster = new Monster();
-            for (int i = 0; i < listButtons.Count; i++)
+            for (int i = 0; i < players[turn].ListMonsters.Count; i++)
             {
-                if (currPosition == currPlayer.AttMonster.Position)
+                if (currPosition == players[turn].ListMonsters[i].Position)
                 {
-                    currMonster = currPlayer.AttMonster;
-                    break;
-                }
-
-                else if (currPosition == currPlayer.DefMonster.Position)
-                {
-                    currMonster = currPlayer.DefMonster;
-                    break;
-                }
-
-                else if (currPosition == currPlayer.MovMonster.Position)
-                {
-                    currMonster = currPlayer.MovMonster;
-                    break;
-                }
-
-                else if (currPosition == currPlayer.PowMonster.Position)
-                {
-                    currMonster = currPlayer.PowMonster;
+                    players[turn].CurrMonster = players[turn].ListMonsters[i];
                     break;
                 }
             }
-            return currMonster;
+            return players[turn].CurrMonster;
         }
 
         private void Dejarik_Load(object sender, EventArgs e)
@@ -215,8 +242,27 @@ namespace Projet_GONLO
             initializeMonsterPosition();
             player1.ListMonsters = new List<Monster> { player1.AttMonster, player1.DefMonster, player1.MovMonster, player1.PowMonster };
             player2.ListMonsters = new List<Monster> { player2.AttMonster, player2.DefMonster, player2.MovMonster, player2.PowMonster };
-            currPlayer = player1;
-            otherPlayer = player2;
+            players.Add(player1);
+            players.Add(player2);
+            activateCurrPlayer();
+        }
+
+        /// <summary>
+        /// Activate current player monsters.
+        /// </summary>
+        private void activateCurrPlayer()
+        {
+            for (int i = 0; i < listButtons.Count; i++)
+            {
+                if (!(i == players[turn].AttMonster.Position || i == players[turn].DefMonster.Position
+                    || i == players[turn].MovMonster.Position || i == players[turn].PowMonster.Position))
+                {
+                    listButtons[i].Enabled = false;
+                } else
+                {
+                    listButtons[i].Enabled = true;
+                }
+            }
         }
 
         private void BtnDice_Click(object sender, EventArgs e)
@@ -276,5 +322,6 @@ namespace Projet_GONLO
         {
             System.Diagnostics.Process.Start("Dejarik_Holochess_Rules.pdf");
         }
+
     }
 }
