@@ -16,6 +16,9 @@ namespace Projet_GONLO
         List<Player> players = new List<Player>();
         int turn = 0;
         int counter = 0;
+        int oldPosition = 0;
+        int actions = 0;//If actions = 0 = mouvement, if actions = 1 = attack, 
+
 
         internal Player Player1 { get => player1; set => player1 = value; }
         internal Player Player2 { get => player2; set => player2 = value; }
@@ -109,6 +112,16 @@ namespace Projet_GONLO
         {
             int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
 
+            //Old Position 
+            if (counter == 0)
+            {
+                oldPosition = currPosition;
+            }
+            
+
+            //When he begins (he choose a monster)
+            players[turn].CurrMonster = getClickMonster(currPosition);
+
             //If he chose to move
             if (listButtons[currPosition].BackColor == Color.Green)
             {
@@ -121,9 +134,6 @@ namespace Projet_GONLO
                 }
             }
 
-            //When he begins (he choose a monster)
-            players[turn].CurrMonster = getClickMonster(currPosition);
-
 
             for (int i = 0; i < listButtons.Count; i++)
             {
@@ -135,10 +145,12 @@ namespace Projet_GONLO
             {
                 counter = 0;
                 endTurn();
+                
             }
             else
             {
                 activateMovButtons(players[turn].CurrMonster.Position);
+                oldPosition = currPosition;
             }
 
             //activateAttackButtons(players[turn].CurrMonster.Position);
@@ -154,7 +166,8 @@ namespace Projet_GONLO
 
         private void endTurn()
         {
-            nextTurn();
+            alertChangePlayer();
+            changeLabel();
 
             if (turn == 1)
             {
@@ -166,13 +179,8 @@ namespace Projet_GONLO
             }
 
             activateCurrPlayer();
+                
             
-        }
-
-        private void nextTurn()
-        {
-            alertChangePlayer();
-            changeLabel();
         }
 
         private void alertChangePlayer()
@@ -203,13 +211,14 @@ namespace Projet_GONLO
         }
 
         private void activateMovButtons(int currPosition)
-        {
-
+        { 
             List<int> accessibleButtons = new List<int>();
             for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
             {
                 accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
             }
+
+            accessibleButtons.Remove(oldPosition);
 
             //Activate accessible buttons for movement
             for (int i = 0; i < accessibleButtons.Count; i++)
