@@ -102,13 +102,11 @@ namespace Projet_GONLO
             {
                 player1.MovMonster = klorslug;
                 player2.MovMonster = grimtaash;
-                //giveMonsterPLayer(player1.MovMonster, player2.MovMonster, klorslug, grimtaash);
             }
             else
             {
                 player2.MovMonster = klorslug;
                 player1.MovMonster = grimtaash;
-                //giveMonsterPLayer(player2.MovMonster, player1.MovMonster, klorslug, grimtaash);
             }
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
@@ -119,13 +117,11 @@ namespace Projet_GONLO
             {
                 player1.MovMonster = grimtaash;
                 player2.MovMonster = klorslug;
-                //giveMonsterPLayer(player1.MovMonster, player2.MovMonster, grimtaash, klorslug);
             }
             else
             {
                 player2.MovMonster = grimtaash;
                 player1.MovMonster = klorslug;
-                //giveMonsterPLayer(player2.MovMonster, player1.MovMonster, grimtaash, klorslug);
             }
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
@@ -136,13 +132,11 @@ namespace Projet_GONLO
             {
                 player1.PowMonster = mantellianSavrip;
                 player2.PowMonster = monnok;
-                //giveMonsterPLayer(player1.PowMonster, player2.PowMonster, mantellianSavrip, monnok);
             }
             else
             {
                 player2.PowMonster = mantellianSavrip;
                 player1.PowMonster = monnok;
-                //giveMonsterPLayer(player2.PowMonster, player1.PowMonster, mantellianSavrip, monnok);
             }
             btnClick(BtnMantellian, BtnMonnok);
         }
@@ -153,22 +147,15 @@ namespace Projet_GONLO
             {
                 player1.PowMonster = monnok;
                 player2.PowMonster = mantellianSavrip;
-                //giveMonsterPLayer(player1.PowMonster, player2.PowMonster, monnok, mantellianSavrip);
             }
             else
             {
                 player2.PowMonster = monnok;
                 player1.PowMonster = mantellianSavrip;
-                //giveMonsterPLayer(player2.PowMonster, player1.PowMonster, monnok, mantellianSavrip);
             }
             btnClick(BtnMantellian, BtnMonnok);
         }
 
-        private void giveMonsterPLayer(Monster attMonster1, Monster attMonster2, Monster ghhhk, Monster houjix)
-        {
-            attMonster1 = ghhhk;
-            attMonster2 = houjix;
-        }
 
         private void btnClick(Button btnGhhhk, Button btnHoujix)
         {

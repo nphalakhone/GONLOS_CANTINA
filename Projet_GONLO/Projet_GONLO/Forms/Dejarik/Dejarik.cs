@@ -153,6 +153,8 @@ namespace Projet_GONLO
 
         private void endTurn()
         {
+            nextTurn();
+
             if (turn == 1)
             {
                 turn = 0;
@@ -163,6 +165,40 @@ namespace Projet_GONLO
             }
 
             activateCurrPlayer();
+            
+        }
+
+        private void nextTurn()
+        {
+            alertChangePlayer();
+            changeLabel();
+        }
+
+        private void alertChangePlayer()
+        {
+            string message;
+            if (turn == 0)
+            {
+                message = "Player 2 turn";
+            }
+            else
+            {
+                message = "Player 1 turn";
+            }
+            string title = "Player's turn to play";
+            MessageBox.Show(message, title);
+        }
+
+        private void changeLabel()
+        {
+            if (turn == 0)
+            {
+                LblPlayerTurn.Text = "Player 2 turn";
+            }
+            else
+            {
+                LblPlayerTurn.Text = "Player 1 turn";
+            }
         }
 
         private void activateMovButtons(int currPosition)
