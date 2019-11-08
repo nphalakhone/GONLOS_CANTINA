@@ -100,6 +100,7 @@ namespace Projet_GONLO
             for (int i = 0; i < listButtons.Count; i++)
             {
                 listButtons[i].Click += btn_Click;
+                
             }
 
         }
@@ -261,6 +262,8 @@ namespace Projet_GONLO
                 } else
                 {
                     listButtons[i].Enabled = true;
+                    //listButtons[i].FlatAppearance.BorderColor = Color.Red;
+                    //listButtons[i].FlatAppearance.BorderSize = 5;
                 }
             }
         }

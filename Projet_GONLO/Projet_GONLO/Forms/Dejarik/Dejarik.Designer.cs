@@ -41,6 +41,7 @@
             this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Button1 = new Projet_GONLO.ButtonCircle();
             this.Button2 = new Projet_GONLO.ButtonCircle();
             this.Button3 = new Projet_GONLO.ButtonCircle();
@@ -66,7 +67,6 @@
             this.Button23 = new Projet_GONLO.ButtonCircle();
             this.Button24 = new Projet_GONLO.ButtonCircle();
             this.Button25 = new Projet_GONLO.ButtonCircle();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.GbLog.SuspendLayout();
             this.GbDice.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -195,6 +195,15 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(66, 21);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.HelpToolStripMenuItem_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::Projet_GONLO.Properties.Resources._interface;
+            this.panel1.Location = new System.Drawing.Point(13, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(834, 836);
+            this.panel1.TabIndex = 31;
             // 
             // Button1
             // 
@@ -545,15 +554,6 @@
             this.Button25.TabIndex = 16;
             this.Button25.Tag = "25";
             this.Button25.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::Projet_GONLO.Properties.Resources._interface;
-            this.panel1.Location = new System.Drawing.Point(13, 29);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(834, 836);
-            this.panel1.TabIndex = 31;
             // 
             // Dejarik
             // 
