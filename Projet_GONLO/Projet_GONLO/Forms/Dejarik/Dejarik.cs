@@ -54,6 +54,8 @@ namespace Projet_GONLO
             setButton(player2.DefMonster.Position, player2.DefMonster.Picture);
             setButton(player2.MovMonster.Position, player2.MovMonster.Picture);
             setButton(player2.PowMonster.Position, player2.PowMonster.Picture);
+
+            setInfoMonster();
         }
 
         private void setButton(int x, Image img)
@@ -291,6 +293,37 @@ namespace Projet_GONLO
             players.Add(player1);
             players.Add(player2);
             activateCurrPlayer();
+            
+
+
+        }
+
+        private void setInfoMonster()
+        {
+            imgP1MonsterAtk.BackgroundImageLayout = ImageLayout.Stretch;
+            imgP1MonsterAtk.Image = player1.AttMonster.Picture;
+
+            imgP1MonsterDef.BackgroundImageLayout = ImageLayout.Stretch;
+            imgP1MonsterDef.Image = player1.DefMonster.Picture;
+
+            imgP1MonsterMov.BackgroundImageLayout = ImageLayout.Stretch;
+            imgP1MonsterMov.Image = player1.MovMonster.Picture;
+
+            imgP1MonsterPow.BackgroundImageLayout = ImageLayout.Stretch;
+            imgP1MonsterPow.Image = player1.PowMonster.Picture;
+
+            imgP2MonsterAtk.BackgroundImageLayout = ImageLayout.Stretch;
+            imgP2MonsterAtk.Image = player2.AttMonster.Picture;
+
+            imgP2MonsterDef.BackgroundImageLayout = ImageLayout.Stretch;
+            imgP2MonsterDef.Image = player2.DefMonster.Picture;
+
+            imgP2MonsterMov.BackgroundImageLayout = ImageLayout.Stretch;
+            imgP2MonsterMov.Image = player2.MovMonster.Picture;
+
+            imgP2MonsterPow.BackgroundImageLayout = ImageLayout.Stretch;
+            imgP2MonsterPow.Image = player2.PowMonster.Picture;
+
         }
 
         /// <summary>
@@ -371,5 +404,14 @@ namespace Projet_GONLO
             System.Diagnostics.Process.Start("Dejarik_Holochess_Rules.pdf");
         }
 
+        private void LblAction_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
