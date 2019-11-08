@@ -14,6 +14,7 @@ namespace Projet_GONLO
         Player player1 = new Player();
         Player player2 = new Player();
         private int playerTurn = 1;
+        String logMonster = "";
 
 
         internal Player Player1 { get => player1; set => player1 = value; }
@@ -31,14 +32,13 @@ namespace Projet_GONLO
             {
                 player1.AttMonster = ghhhk;
                 player2.AttMonster = houjix;
-                
-                //giveMonsterPLayer(player1.AttMonster, player2.AttMonster, ghhhk, houjix);
+                logMonster += "Player 1 choose the monster : Ghhhk-";
             }
             else
             {
                 player2.AttMonster = ghhhk;
                 player1.AttMonster = houjix;
-                //giveMonsterPLayer(player2.AttMonster, player1.AttMonster, ghhhk, houjix);
+                logMonster += "Player 2 choose the monster : Ghhhk-";
             }
 
             btnClick(BtnGhhhk, BtnHoujix);
@@ -51,13 +51,13 @@ namespace Projet_GONLO
             {
                 player1.AttMonster = houjix;
                 player2.AttMonster = ghhhk;
-                //giveMonsterPLayer(player1.AttMonster, player2.AttMonster, houjix, ghhhk);
+                logMonster += "Player 1 choose the monster : Houjix-";
             }
             else
             {
                 player2.AttMonster = houjix;
                 player1.AttMonster = ghhhk;
-                //giveMonsterPLayer(player2.AttMonster, player1.AttMonster, houjix, ghhhk);
+                logMonster += "Player 2 choose the monster : Houjix-";
             }
             btnClick(BtnGhhhk, BtnHoujix);
         }
@@ -68,13 +68,13 @@ namespace Projet_GONLO
             {
                 player1.DefMonster = kintanStrider;
                 player2.DefMonster = ngok;
-                //giveMonsterPLayer(player1.DefMonster, player2.DefMonster, kintanStrider, ngok);
+                logMonster += "Player 1 choose the monster : Kintan Strider-";
             }
             else
             {
                 player2.DefMonster = kintanStrider;
                 player1.DefMonster = ngok;
-                //giveMonsterPLayer(player2.DefMonster, player1.DefMonster, kintanStrider, ngok);
+                logMonster += "Player 2 choose the monster : Kintan Strider-";
             }
             btnClick(BtnKintanStrider, BtnNgok);
         }
@@ -85,13 +85,13 @@ namespace Projet_GONLO
             {
                 player1.DefMonster = ngok;
                 player2.DefMonster = kintanStrider;
-                //giveMonsterPLayer(player1.DefMonster, player2.DefMonster, ngok, kintanStrider);
+                logMonster += "Player 1 choose the monster : Ngok-";
             }
             else
             {
                 player2.DefMonster = ngok;
                 player1.DefMonster = kintanStrider;
-                //giveMonsterPLayer(player2.DefMonster, player1.DefMonster, ngok, kintanStrider);
+                logMonster += "Player 2 choose the monster : Ngok-";
             }
             btnClick(BtnKintanStrider, BtnNgok);
         }
@@ -102,11 +102,13 @@ namespace Projet_GONLO
             {
                 player1.MovMonster = klorslug;
                 player2.MovMonster = grimtaash;
+                logMonster += "Player 1 choose the monster : Klorslug-";
             }
             else
             {
                 player2.MovMonster = klorslug;
                 player1.MovMonster = grimtaash;
+                logMonster += "Player 2 choose the monster : Klorslug-";
             }
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
@@ -117,11 +119,13 @@ namespace Projet_GONLO
             {
                 player1.MovMonster = grimtaash;
                 player2.MovMonster = klorslug;
+                logMonster += "Player 1 choose the monster : Grimtaash-";
             }
             else
             {
                 player2.MovMonster = grimtaash;
                 player1.MovMonster = klorslug;
+                logMonster += "Player 2 choose the monster : Grimtaash-";
             }
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
@@ -132,11 +136,13 @@ namespace Projet_GONLO
             {
                 player1.PowMonster = mantellianSavrip;
                 player2.PowMonster = monnok;
+                logMonster += "Player 1 choose the monster : Mantellian Savrip-";
             }
             else
             {
                 player2.PowMonster = mantellianSavrip;
                 player1.PowMonster = monnok;
+                logMonster += "Player 2 choose the monster : Mantellian Savrip-";
             }
             btnClick(BtnMantellian, BtnMonnok);
         }
@@ -147,11 +153,13 @@ namespace Projet_GONLO
             {
                 player1.PowMonster = monnok;
                 player2.PowMonster = mantellianSavrip;
+                logMonster += "Player 1 choose the monster : Monnok-";
             }
             else
             {
                 player2.PowMonster = monnok;
                 player1.PowMonster = mantellianSavrip;
+                logMonster += "Player 2 choose the monster : Monnok-";
             }
             btnClick(BtnMantellian, BtnMonnok);
         }

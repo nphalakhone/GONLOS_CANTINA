@@ -643,6 +643,7 @@
             this.imgP2MonsterAtk.Location = new System.Drawing.Point(108, 80);
             this.imgP2MonsterAtk.Name = "imgP2MonsterAtk";
             this.imgP2MonsterAtk.Size = new System.Drawing.Size(40, 40);
+            this.imgP2MonsterAtk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP2MonsterAtk.TabIndex = 7;
             this.imgP2MonsterAtk.TabStop = false;
             // 
@@ -653,6 +654,7 @@
             this.imgP1MonsterAtk.Location = new System.Drawing.Point(108, 34);
             this.imgP1MonsterAtk.Name = "imgP1MonsterAtk";
             this.imgP1MonsterAtk.Size = new System.Drawing.Size(40, 40);
+            this.imgP1MonsterAtk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP1MonsterAtk.TabIndex = 6;
             this.imgP1MonsterAtk.TabStop = false;
             // 
@@ -662,6 +664,7 @@
             this.imgP2MonsterDef.Location = new System.Drawing.Point(188, 80);
             this.imgP2MonsterDef.Name = "imgP2MonsterDef";
             this.imgP2MonsterDef.Size = new System.Drawing.Size(40, 40);
+            this.imgP2MonsterDef.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP2MonsterDef.TabIndex = 5;
             this.imgP2MonsterDef.TabStop = false;
             // 
@@ -671,6 +674,7 @@
             this.imgP1MonsterDef.Location = new System.Drawing.Point(188, 34);
             this.imgP1MonsterDef.Name = "imgP1MonsterDef";
             this.imgP1MonsterDef.Size = new System.Drawing.Size(40, 40);
+            this.imgP1MonsterDef.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP1MonsterDef.TabIndex = 4;
             this.imgP1MonsterDef.TabStop = false;
             // 
@@ -680,6 +684,7 @@
             this.imgP2MonsterMov.Location = new System.Drawing.Point(268, 80);
             this.imgP2MonsterMov.Name = "imgP2MonsterMov";
             this.imgP2MonsterMov.Size = new System.Drawing.Size(40, 40);
+            this.imgP2MonsterMov.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP2MonsterMov.TabIndex = 3;
             this.imgP2MonsterMov.TabStop = false;
             // 
@@ -689,6 +694,7 @@
             this.imgP1MonsterMov.Location = new System.Drawing.Point(268, 34);
             this.imgP1MonsterMov.Name = "imgP1MonsterMov";
             this.imgP1MonsterMov.Size = new System.Drawing.Size(40, 40);
+            this.imgP1MonsterMov.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP1MonsterMov.TabIndex = 2;
             this.imgP1MonsterMov.TabStop = false;
             // 
@@ -698,6 +704,7 @@
             this.imgP2MonsterPow.Location = new System.Drawing.Point(348, 80);
             this.imgP2MonsterPow.Name = "imgP2MonsterPow";
             this.imgP2MonsterPow.Size = new System.Drawing.Size(40, 40);
+            this.imgP2MonsterPow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP2MonsterPow.TabIndex = 1;
             this.imgP2MonsterPow.TabStop = false;
             // 
@@ -707,6 +714,7 @@
             this.imgP1MonsterPow.Location = new System.Drawing.Point(348, 34);
             this.imgP1MonsterPow.Name = "imgP1MonsterPow";
             this.imgP1MonsterPow.Size = new System.Drawing.Size(40, 40);
+            this.imgP1MonsterPow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP1MonsterPow.TabIndex = 0;
             this.imgP1MonsterPow.TabStop = false;
             // 
@@ -793,6 +801,7 @@
             this.BtnDice.TabIndex = 2;
             this.BtnDice.Text = "Roll the dice";
             this.BtnDice.UseVisualStyleBackColor = true;
+            this.BtnDice.Click += new System.EventHandler(this.btn_Click);
             // 
             // Dejarik
             // 
