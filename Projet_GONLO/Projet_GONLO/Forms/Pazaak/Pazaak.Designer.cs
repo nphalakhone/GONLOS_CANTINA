@@ -230,6 +230,7 @@
             this.LblFlipCard1.Size = new System.Drawing.Size(83, 14);
             this.LblFlipCard1.TabIndex = 34;
             this.LblFlipCard1.Text = "flip card";
+            this.LblFlipCard1.Click += new System.EventHandler(this.FlipCard_Click);
             // 
             // LblCredits
             // 
@@ -266,6 +267,7 @@
             this.LblFlipCard4.Size = new System.Drawing.Size(83, 14);
             this.LblFlipCard4.TabIndex = 37;
             this.LblFlipCard4.Text = "flip card";
+            this.LblFlipCard4.Click += new System.EventHandler(this.FlipCard_Click);
             // 
             // LblFlipCard3
             // 
@@ -278,6 +280,7 @@
             this.LblFlipCard3.Size = new System.Drawing.Size(83, 14);
             this.LblFlipCard3.TabIndex = 38;
             this.LblFlipCard3.Text = "flip card";
+            this.LblFlipCard3.Click += new System.EventHandler(this.FlipCard_Click);
             // 
             // LblFlipCard2
             // 
@@ -290,6 +293,7 @@
             this.LblFlipCard2.Size = new System.Drawing.Size(83, 14);
             this.LblFlipCard2.TabIndex = 39;
             this.LblFlipCard2.Text = "flip card";
+            this.LblFlipCard2.Click += new System.EventHandler(this.FlipCard_Click);
             // 
             // LblPlusValue1
             // 
@@ -564,6 +568,7 @@
             this.RPnlDownG4.Name = "RPnlDownG4";
             this.RPnlDownG4.Size = new System.Drawing.Size(73, 89);
             this.RPnlDownG4.TabIndex = 10;
+            this.RPnlDownG4.Click += new System.EventHandler(this.PlayerAddCard_Click);
             // 
             // RPnlDownG3
             // 
@@ -574,6 +579,7 @@
             this.RPnlDownG3.Name = "RPnlDownG3";
             this.RPnlDownG3.Size = new System.Drawing.Size(73, 89);
             this.RPnlDownG3.TabIndex = 9;
+            this.RPnlDownG3.Click += new System.EventHandler(this.PlayerAddCard_Click);
             // 
             // RPnlDownG2
             // 
@@ -584,6 +590,7 @@
             this.RPnlDownG2.Name = "RPnlDownG2";
             this.RPnlDownG2.Size = new System.Drawing.Size(73, 89);
             this.RPnlDownG2.TabIndex = 8;
+            this.RPnlDownG2.Click += new System.EventHandler(this.PlayerAddCard_Click);
             // 
             // RPnlDownG1
             // 
@@ -594,6 +601,7 @@
             this.RPnlDownG1.Name = "RPnlDownG1";
             this.RPnlDownG1.Size = new System.Drawing.Size(73, 89);
             this.RPnlDownG1.TabIndex = 7;
+            this.RPnlDownG1.Click += new System.EventHandler(this.PlayerAddCard_Click);
             // 
             // RPnlForfeitGame
             // 

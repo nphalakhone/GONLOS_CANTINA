@@ -102,8 +102,6 @@ namespace Projet_GONLO
                 tailleListe--;
                 nombreCarteSelectionne++;
             }
-
-
         }
 
         private void End_Turn_Click(object sender, EventArgs e)
@@ -266,6 +264,33 @@ namespace Projet_GONLO
             LblCreditsWagedNumeric.Text = credsWaged.ToString();
             LblPlayerName.Text = playerPazaak.Name;
             LblCreditsNumeric.Text = playerPazaak.Credits.ToString();
+        }
+
+        
+
+        private void PlayerAddCard_Click(object sender, EventArgs e)
+        {
+            RoundPanel roundPanel = sender as RoundPanel;
+            int nbcartes = 0;
+            for (int i = 0; i < TabPanelLeft.Length; i++)
+            {
+                if (TabPanelLeft[i].BackgroundImage != null)
+                {
+                    nbcartes++;
+                }
+            }
+
+            if (TabPanelLeft[nbcartes].BackgroundImage == null)
+            {
+                TabPanelLeft[nbcartes].BackgroundImage = roundPanel.BackgroundImage;
+                TabPanelLeft[nbcartes].BackgroundImageLayout = ImageLayout.Stretch;
+                roundPanel.BackgroundImage = null;
+            }
+        }
+
+        private void FlipCard_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
