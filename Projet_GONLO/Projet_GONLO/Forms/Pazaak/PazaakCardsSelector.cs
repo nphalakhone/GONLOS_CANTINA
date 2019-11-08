@@ -16,8 +16,6 @@ namespace Projet_GONLO
         List<RoundPanel> playerDeck = new List<RoundPanel>();
         List<Image> playerDeckImage = new List<Image>();
         List<int> positionCarteEnleve = new List<int>();
-        //List<bool> PanelRempi = new List<bool>();
-        //bool[] PanelRempi = new bool[8];
         int nbCartes = 0;
         int creditsWaged = 0;
 
@@ -25,20 +23,12 @@ namespace Projet_GONLO
         {
             InitializeComponent();
             FillListPanels();
-            //InitializeArrayBool();
         }
 
         internal Player Player1 { get => playerCBS; set => playerCBS = value; }
 
 
         internal List<Image> Player1Deck { get => playerDeckImage; set => playerDeckImage = value; }
-        //private void InitializeArrayBool()
-        //{
-        //    for (int i = 0; i < PanelRempi.Length; i++)
-        //    {
-        //        PanelRempi[i] = false;
-        //    }
-        //}
 
         public void FillListPanels()
         {
@@ -52,10 +42,6 @@ namespace Projet_GONLO
             playerDeck.Add(RPnlPlayerDC8);
             playerDeck.Add(RPnlPlayerDC9);
             playerDeck.Add(RPnlPlayerDC10);
-
-
-
-
         }
 
         private void BtnEllReady_Click(object sender, EventArgs e)
@@ -68,11 +54,7 @@ namespace Projet_GONLO
             Hide();
             Pazaak newPazaakGame = new Pazaak(playerDeckImage);
             newPazaakGame.Player1 = playerCBS;
-            
-            //newPazaakGame.DeckPazaak = playerDeckImage;
-
             newPazaakGame.CreditsWaged = int.Parse(MTxtBoxWager.Text);
-            
             newPazaakGame.ShowDialog();
             this.Close();
         }
@@ -80,8 +62,6 @@ namespace Projet_GONLO
         private void AddAvailableCards_Click(object sender, EventArgs e)
         {
             RoundPanel roundPanel = sender as RoundPanel;
-           // int numberCards = CheckDeck();
-            //MessageBox.Show(nbCartes.ToString());
             if (positionCarteEnleve.Count == 0)
             {
                 if (nbCartes < 10)
@@ -89,20 +69,13 @@ namespace Projet_GONLO
                     playerDeck.ElementAt(nbCartes).BackgroundImage = roundPanel.BackgroundImage;
                     nbCartes++;
                 }
-               
-                    //PanelRempi[nbCartes] = true;
             }
             else
             {
-                    //MessageBox.Show(positionCarteEnleve.ElementAt(1).ToString());
-                    playerDeck.ElementAt(positionCarteEnleve.ElementAt(0)).BackgroundImage = roundPanel.BackgroundImage;
-                    positionCarteEnleve.RemoveAt(0);
-                    nbCartes++;
+                playerDeck.ElementAt(positionCarteEnleve.ElementAt(0)).BackgroundImage = roundPanel.BackgroundImage;
+                positionCarteEnleve.RemoveAt(0);
+                nbCartes++;
             }
-            //if (nbCartes == 10)
-            //{
-            //    BtnEllReady.Enabled = true;
-            //}
             if (nbCartes > 10)
             {
                 MessageBox.Show("You have the maximum cards allowed");
@@ -122,31 +95,7 @@ namespace Projet_GONLO
                 positionCarteEnleve.Add(idx);
                 nbCartes--;
             }
-             
-            //if (roundPanel.BackgroundImage != null)
-            //{
-            //    roundPanel.BackgroundImage = null;
-            //    BtnEllReady.Enabled = false;
-            //    int pos = CheckHoleDeck();
-            //    //MessageBox.Show(pos.ToString());
-            //    positionCarteEnleve.Add(pos);
-            //}
         }
-
-        //public int CheckHoleDeck()
-        //{
-        //    int index = 0;
-        //    for (int i = 0; i < playerDeck.Count(); i++)
-        //    {
-        //        if (playerDeck.ElementAt(i).BackgroundImage == null)
-        //        {
-        //            //PanelRempi[i] = false;
-        //            index = i;
-        //            return index;
-        //        }
-        //    }
-        //    return index;
-        //}
 
         public int CheckDeck()
         {
@@ -188,6 +137,117 @@ namespace Projet_GONLO
         private void MTxtBoxWager_TextChanged(object sender, EventArgs e)
         {
             BtnEllReady.Enabled = true;
+            if (MTxtBoxWager.Text == null)
+            {
+                BtnEllReady.Enabled = false;
+            }
+        }
+
+        public List<string> getCardValue()
+        {
+            List<string> listCards = new List<string>();
+            listCards.Add(getMinusValue());
+            listCards.Add(getPlusValue());
+            listCards.Add(getPlusMinusValue());
+            return listCards;
+        }
+
+        private string getPlusValue()
+        {
+            string plus = "";
+            for (int i = 0; i < playerDeckImage.Count; i++)
+            {
+                if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus1))
+                {
+                    plus = "+1";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus2))
+                {
+                    plus = "+2";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus3))
+                {
+                    plus = "+3";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus4))
+                {
+                    plus = "+4";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus5))
+                {
+                    plus = "+5";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus6))
+                {
+                    plus = "+6";
+                }
+            }
+            return plus;
+        }
+
+        private string getMinusValue()
+        {
+            string minus = "";
+            for (int i = 0; i < playerDeckImage.Count; i++)
+            {
+                if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus1))
+                {
+                    minus = "-1";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus2))
+                {
+                    minus = "-2";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus3))
+                {
+                    minus = "-3";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus4))
+                {
+                    minus = "-4";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus5))
+                {
+                    minus = "-5";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus6))
+                {
+                    minus = "-6";
+                }
+            }
+            return minus;
+        }
+        private string getPlusMinusValue()
+        {
+            string plusMinus = "";
+            for (int i = 0; i < playerDeckImage.Count; i++)
+            {
+                if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus1))
+                {
+                    plusMinus = "+-1";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus2))
+                {
+                    plusMinus = "+-2";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus3))
+                {
+                    plusMinus = "+-3";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus4))
+                {
+                    plusMinus = "+-4";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus5))
+                {
+                    plusMinus = "+-5";
+                }
+                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus6))
+                {
+                    plusMinus = "+-6";
+                }
+            }
+            return plusMinus;
         }
     }
 }
