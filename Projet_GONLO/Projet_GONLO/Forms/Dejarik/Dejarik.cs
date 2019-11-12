@@ -105,7 +105,6 @@ namespace Projet_GONLO
             for (int i = 0; i < listButtons.Count; i++)
             {
                 listButtons[i].Click += btn_Click;
-                
             }
 
         }
@@ -113,6 +112,7 @@ namespace Projet_GONLO
         private void btn_Click(object sender, EventArgs e)
         {
             int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
+            oldPosition = currPosition;
 
             //Old Position 
             if (counter == 0)
@@ -190,11 +190,11 @@ namespace Projet_GONLO
             string message;
             if (turn == 0)
             {
-                message = "Player 2 turn";
+                message = "Player 2's turn";
             }
             else
             {
-                message = "Player 1 turn";
+                message = "Player 1's turn";
             }
             string title = "Player's turn to play";
             MessageBox.Show(message, title);
@@ -202,13 +202,16 @@ namespace Projet_GONLO
 
         private void changeLabel()
         {
+            int newTurn = 1;
             if (turn == 0)
             {
-                LblPlayerTurn.Text = "Player 2 turn";
+                LblPlayerTurn.Text = "Player 2's turn";
             }
             else
             {
-                LblPlayerTurn.Text = "Player 1 turn";
+                LblPlayerTurn.Text = "Player 1's turn";
+                newTurn += 1;
+                lblRound.Text = "Round : " + newTurn;
             }
         }
 
@@ -293,9 +296,6 @@ namespace Projet_GONLO
             players.Add(player1);
             players.Add(player2);
             activateCurrPlayer();
-            
-
-
         }
 
         private void setInfoMonster()
