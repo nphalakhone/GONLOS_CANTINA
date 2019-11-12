@@ -19,7 +19,7 @@ namespace Projet_GONLO
         int counter = 0;
         int actions = 0;//If actions = 0 = mouvement, if actions = 1 = attack, 
         List<String> logMonster;
-        String concatMonster;
+        Monster lastMonster;
 
 
         internal Player Player1 { get => player1; set => player1 = value; }
@@ -30,8 +30,7 @@ namespace Projet_GONLO
             InitializeComponent();
             initalizeListButtons();
             Tile.CreateTiles();
-            concatMonster = monster;
-            addLogMonster(concatMonster);
+            addLogMonster(monster);
         }
 
         private void addLogMonster(string monster)
@@ -132,6 +131,10 @@ namespace Projet_GONLO
             //When he begins (he choose a monster)
             players[turn].CurrMonster = getClickMonster(currPosition);
 
+            setCounterMov(players[turn].CurrMonster);
+
+            lastMonster = players[turn].CurrMonster;
+
             //If he chose to move
             if (listButtons[currPosition].BackColor == Color.Green)
             {
@@ -171,12 +174,20 @@ namespace Projet_GONLO
             monster.Position = nextPosition;
             setButton(nextPosition, monster.Picture);
             counter++;
+            setCounterMov(monster);
+        }
+
+        private void setCounterMov(Monster monster)
+        {
+            int tempMov = monster.Movement - counter;
+            LblMov.Text = "MOV : " + tempMov;
         }
 
         private void endTurn()
         {
             alertChangePlayer();
             changeLabel();
+            addLog();
 
             if (turn == 1)
             {
@@ -189,6 +200,21 @@ namespace Projet_GONLO
 
             activateCurrPlayer();
                 
+            
+        }
+
+        private void addLog()
+        {
+            String logTemp = "";
+            if (turn == 0)
+            {
+                logTemp = "Player 1 moved " + lastMonster.Name + " to position : " + lastMonster.Position;
+            }
+            else
+            {
+                logTemp = "Player 2 moved " + lastMonster.Name + " to position : " + lastMonster.Position;
+            }
+            ListBoxLog.Items.Add(logTemp);
             
         }
 
@@ -229,7 +255,7 @@ namespace Projet_GONLO
             {
                 if(j != currPosition)
                 {
-accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
+                    accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
                 }
                
             }
@@ -398,7 +424,7 @@ accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Dejarik newDejarik = new Dejarik(concatMonster);
+            MenuDejarik newDejarik = new MenuDejarik();
             newDejarik.ShowDialog();
             this.Close();
         }
