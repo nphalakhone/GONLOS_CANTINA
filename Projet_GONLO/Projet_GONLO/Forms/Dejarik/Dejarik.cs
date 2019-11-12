@@ -16,7 +16,8 @@ namespace Projet_GONLO
         Player player2 = new Player();
         List<Player> players = new List<Player>();
         int turn = 0;
-        int counter = 0;
+        int counterMov = 0;
+        int firstClick = 0;
         int oldPosition = 0;
         int actions = 0;//If actions = 0 = mouvement, if actions = 1 = attack, 
         List<String> logMonster;
@@ -132,10 +133,11 @@ namespace Projet_GONLO
             int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
 
 
-            if(counter == 0)
+            if(firstClick == 0)
             {
                 oldPosition = currPosition;
-                counter++;
+                firstClick++;
+
             }
 
             //When he begins (he choose a monster)
@@ -164,7 +166,7 @@ namespace Projet_GONLO
                 listButtons[i].Enabled = false;
             }
 
-            if (counter == players[turn].CurrMonster.Movement)
+            if (counterMov == players[turn].CurrMonster.Movement)
             {
                 
                 endTurn();
@@ -185,13 +187,13 @@ namespace Projet_GONLO
             setButton(monster.Position, null);
             monster.Position = nextPosition;
             setButton(nextPosition, monster.Picture);
-            counter++;
+            counterMov++;
             setCounterMov(monster);
         }
 
         private void setCounterMov(Monster monster)
         {
-            int tempMov = monster.Movement - counter;
+            int tempMov = monster.Movement - counterMov;
             LblMov.Text = "MOV : " + tempMov;
         }
 
@@ -212,7 +214,7 @@ namespace Projet_GONLO
             }
 
             activateCurrPlayer();
-            counter = 0;
+            counterMov = 0;
 
         }
 
@@ -274,7 +276,7 @@ namespace Projet_GONLO
             {
                 if(accessibleButtons[i] == oldPosition)
                 {
-                    accessibleButtons.Remove(i);
+                    accessibleButtons.Remove(oldPosition);
                 }
             }
 
