@@ -15,7 +15,13 @@ namespace Projet_GONLO
         Player player1 = new Player();
         Player player2 = new Player();
         List<Player> players = new List<Player>();
-        int turn = 0, newTurn = 1, counter = 0;
+
+        int newTurn = 1;
+
+        int turn = 0;
+        int counterMov = 0;
+        int firstClick = 0;
+        int oldPosition = 0;
         int actions = 0;//If actions = 0 = mouvement, if actions = 1 = attack, 
         List<String> logMonster;
         Monster lastMonster;
@@ -26,7 +32,9 @@ namespace Projet_GONLO
 
         public Dejarik(String monster)
         {
+            this.DoubleBuffered = true;
             InitializeComponent();
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             initalizeListButtons();
             Tile.CreateTiles();
             addLogMonster(monster);
@@ -126,7 +134,15 @@ namespace Projet_GONLO
         private void btn_Click(object sender, EventArgs e)
         {
             int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
-                
+
+
+            if(firstClick == 0)
+            {
+                oldPosition = currPosition;
+                firstClick++;
+
+            }
+
             //When he begins (he choose a monster)
             players[turn].CurrMonster = getClickMonster(currPosition);
 
@@ -153,15 +169,17 @@ namespace Projet_GONLO
                 listButtons[i].Enabled = false;
             }
 
-            if (counter == players[turn].CurrMonster.Movement)
+            if (counterMov == players[turn].CurrMonster.Movement)
             {
-                counter = 0;
-                endTurn();
                 
+                endTurn();
+
             }
             else
             {
+
                 activateMovButtons(players[turn].CurrMonster.Position);
+                oldPosition = currPosition;
             }
 
             //activateAttackButtons(players[turn].CurrMonster.Position);
@@ -172,18 +190,19 @@ namespace Projet_GONLO
             setButton(monster.Position, null);
             monster.Position = nextPosition;
             setButton(nextPosition, monster.Picture);
-            counter++;
+            counterMov++;
             setCounterMov(monster);
         }
 
         private void setCounterMov(Monster monster)
         {
-            int tempMov = monster.Movement - counter;
+            int tempMov = monster.Movement - counterMov;
             LblMov.Text = "MOV : " + tempMov;
         }
 
         private void endTurn()
         {
+            oldPosition = 0;
             alertChangePlayer();
             addLog();
             changeLabel();
@@ -198,8 +217,8 @@ namespace Projet_GONLO
             }
 
             activateCurrPlayer();
-                
-            
+            counterMov = 0;
+
         }
 
         private void addLog()
@@ -248,15 +267,20 @@ namespace Projet_GONLO
         }
 
         private void activateMovButtons(int currPosition)
-        { 
+        {
             List<int> accessibleButtons = new List<int>();
             for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
             {
-                if(j != currPosition)
+                accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
+            }
+
+            //******************************
+            for (int i = 0; i < accessibleButtons.Count; i++)
+            {
+                if(accessibleButtons[i] == oldPosition)
                 {
-                    accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
+                    accessibleButtons.Remove(oldPosition);
                 }
-               
             }
 
             //Activate accessible buttons for movement
@@ -371,7 +395,8 @@ namespace Projet_GONLO
                     || i == players[turn].MovMonster.Position || i == players[turn].PowMonster.Position))
                 {
                     listButtons[i].Enabled = false;
-                } else
+                }
+                else
                 {
                     listButtons[i].Enabled = true;
                     //listButtons[i].FlatAppearance.BorderColor = Color.Red;
