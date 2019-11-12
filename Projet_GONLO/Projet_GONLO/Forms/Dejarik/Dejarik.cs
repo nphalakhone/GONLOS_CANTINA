@@ -17,6 +17,7 @@ namespace Projet_GONLO
         List<Player> players = new List<Player>();
         int turn = 0;
         int counter = 0;
+        int oldPosition = 0;
         int actions = 0;//If actions = 0 = mouvement, if actions = 1 = attack, 
         List<String> logMonster;
         String concatMonster;
@@ -27,11 +28,14 @@ namespace Projet_GONLO
 
         public Dejarik(String monster)
         {
+            this.DoubleBuffered = true;
             InitializeComponent();
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             initalizeListButtons();
             Tile.CreateTiles();
             concatMonster = monster;
             addLogMonster(concatMonster);
+            
         }
 
         private void addLogMonster(string monster)
@@ -128,7 +132,14 @@ namespace Projet_GONLO
         private void btn_Click(object sender, EventArgs e)
         {
             int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
-                
+
+
+            if(counter == 0)
+            {
+                oldPosition = currPosition;
+                counter++;
+            }
+
             //When he begins (he choose a monster)
             players[turn].CurrMonster = getClickMonster(currPosition);
 
@@ -153,13 +164,15 @@ namespace Projet_GONLO
 
             if (counter == players[turn].CurrMonster.Movement)
             {
-                counter = 0;
-                endTurn();
                 
+                endTurn();
+
             }
             else
             {
+
                 activateMovButtons(players[turn].CurrMonster.Position);
+                oldPosition = currPosition;
             }
 
             //activateAttackButtons(players[turn].CurrMonster.Position);
@@ -171,10 +184,12 @@ namespace Projet_GONLO
             monster.Position = nextPosition;
             setButton(nextPosition, monster.Picture);
             counter++;
+
         }
 
         private void endTurn()
         {
+            oldPosition = 0;
             alertChangePlayer();
             changeLabel();
 
@@ -188,8 +203,8 @@ namespace Projet_GONLO
             }
 
             activateCurrPlayer();
-                
-            
+            counter = 0;
+
         }
 
         private void alertChangePlayer()
@@ -223,15 +238,20 @@ namespace Projet_GONLO
         }
 
         private void activateMovButtons(int currPosition)
-        { 
+        {
             List<int> accessibleButtons = new List<int>();
             for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
             {
-                if(j != currPosition)
+                accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
+            }
+
+            //******************************
+            for (int i = 0; i < accessibleButtons.Count; i++)
+            {
+                if(accessibleButtons[i] == oldPosition)
                 {
-accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
+                    accessibleButtons.Remove(i);
                 }
-               
             }
 
             //Activate accessible buttons for movement
@@ -346,7 +366,8 @@ accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
                     || i == players[turn].MovMonster.Position || i == players[turn].PowMonster.Position))
                 {
                     listButtons[i].Enabled = false;
-                } else
+                }
+                else
                 {
                     listButtons[i].Enabled = true;
                     //listButtons[i].FlatAppearance.BorderColor = Color.Red;
