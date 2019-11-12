@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 
@@ -18,16 +19,32 @@ namespace Projet_GONLO
         int counter = 0;
         int oldPosition = 0;
         int actions = 0;//If actions = 0 = mouvement, if actions = 1 = attack, 
+        List<String> logMonster;
+        String concatMonster;
 
 
         internal Player Player1 { get => player1; set => player1 = value; }
         internal Player Player2 { get => player2; set => player2 = value; }
 
-        public Dejarik()
+        public Dejarik(String monster)
         {
             InitializeComponent();
             initalizeListButtons();
             Tile.CreateTiles();
+            concatMonster = monster;
+            addLogMonster(concatMonster);
+        }
+
+        private void addLogMonster(string monster)
+        {
+            logMonster = monster.Split('-').ToList();
+            for (int i = 0; i < logMonster.Count; i++)
+            {
+                if (!logMonster[i].Equals(""))
+                {
+                    ListBoxLog.Items.Add(logMonster[i]);
+                }
+            }
         }
 
         private void initializeMonsterPosition()
@@ -389,7 +406,7 @@ namespace Projet_GONLO
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Dejarik newDejarik = new Dejarik();
+            Dejarik newDejarik = new Dejarik(concatMonster);
             newDejarik.ShowDialog();
             this.Close();
         }
