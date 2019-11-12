@@ -61,7 +61,7 @@
             this.LblMonnok.BackColor = System.Drawing.Color.Transparent;
             this.LblMonnok.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMonnok.ForeColor = System.Drawing.Color.Gold;
-            this.LblMonnok.Location = new System.Drawing.Point(1167, 350);
+            this.LblMonnok.Location = new System.Drawing.Point(1172, 175);
             this.LblMonnok.Name = "LblMonnok";
             this.LblMonnok.Size = new System.Drawing.Size(95, 20);
             this.LblMonnok.TabIndex = 47;
@@ -73,7 +73,7 @@
             this.LblMantellian.BackColor = System.Drawing.Color.Transparent;
             this.LblMantellian.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMantellian.ForeColor = System.Drawing.Color.Gold;
-            this.LblMantellian.Location = new System.Drawing.Point(1008, 350);
+            this.LblMantellian.Location = new System.Drawing.Point(1013, 175);
             this.LblMantellian.Name = "LblMantellian";
             this.LblMantellian.Size = new System.Drawing.Size(142, 20);
             this.LblMantellian.TabIndex = 46;
@@ -85,7 +85,7 @@
             this.LblGrimstaash.BackColor = System.Drawing.Color.Transparent;
             this.LblGrimstaash.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblGrimstaash.ForeColor = System.Drawing.Color.Gold;
-            this.LblGrimstaash.Location = new System.Drawing.Point(810, 345);
+            this.LblGrimstaash.Location = new System.Drawing.Point(815, 170);
             this.LblGrimstaash.Name = "LblGrimstaash";
             this.LblGrimstaash.Size = new System.Drawing.Size(144, 20);
             this.LblGrimstaash.TabIndex = 45;
@@ -97,7 +97,7 @@
             this.LblKlorslug.BackColor = System.Drawing.Color.Transparent;
             this.LblKlorslug.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblKlorslug.ForeColor = System.Drawing.Color.Gold;
-            this.LblKlorslug.Location = new System.Drawing.Point(683, 345);
+            this.LblKlorslug.Location = new System.Drawing.Point(688, 170);
             this.LblKlorslug.Name = "LblKlorslug";
             this.LblKlorslug.Size = new System.Drawing.Size(119, 20);
             this.LblKlorslug.TabIndex = 44;
@@ -109,7 +109,7 @@
             this.LblNgok.BackColor = System.Drawing.Color.Transparent;
             this.LblNgok.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNgok.ForeColor = System.Drawing.Color.Gold;
-            this.LblNgok.Location = new System.Drawing.Point(509, 345);
+            this.LblNgok.Location = new System.Drawing.Point(514, 170);
             this.LblNgok.Name = "LblNgok";
             this.LblNgok.Size = new System.Drawing.Size(65, 20);
             this.LblNgok.TabIndex = 43;
@@ -121,7 +121,7 @@
             this.LblKintanStrider.BackColor = System.Drawing.Color.Transparent;
             this.LblKintanStrider.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblKintanStrider.ForeColor = System.Drawing.Color.Gold;
-            this.LblKintanStrider.Location = new System.Drawing.Point(346, 350);
+            this.LblKintanStrider.Location = new System.Drawing.Point(351, 175);
             this.LblKintanStrider.Name = "LblKintanStrider";
             this.LblKintanStrider.Size = new System.Drawing.Size(128, 14);
             this.LblKintanStrider.TabIndex = 42;
@@ -133,7 +133,7 @@
             this.LblHoujix.BackColor = System.Drawing.Color.Transparent;
             this.LblHoujix.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblHoujix.ForeColor = System.Drawing.Color.Gold;
-            this.LblHoujix.Location = new System.Drawing.Point(167, 345);
+            this.LblHoujix.Location = new System.Drawing.Point(172, 170);
             this.LblHoujix.Name = "LblHoujix";
             this.LblHoujix.Size = new System.Drawing.Size(82, 20);
             this.LblHoujix.TabIndex = 41;
@@ -145,7 +145,7 @@
             this.LblGhhhk.BackColor = System.Drawing.Color.Transparent;
             this.LblGhhhk.Font = new System.Drawing.Font("SF Distant Galaxy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblGhhhk.ForeColor = System.Drawing.Color.Gold;
-            this.LblGhhhk.Location = new System.Drawing.Point(31, 345);
+            this.LblGhhhk.Location = new System.Drawing.Point(36, 170);
             this.LblGhhhk.Name = "LblGhhhk";
             this.LblGhhhk.Size = new System.Drawing.Size(79, 20);
             this.LblGhhhk.TabIndex = 40;
@@ -155,7 +155,7 @@
             // 
             this.BtnMonnok.BackgroundImage = global::Projet_GONLO.Properties.Resources.Monnok;
             this.BtnMonnok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnMonnok.Location = new System.Drawing.Point(1153, 373);
+            this.BtnMonnok.Location = new System.Drawing.Point(1158, 198);
             this.BtnMonnok.Name = "BtnMonnok";
             this.BtnMonnok.Size = new System.Drawing.Size(135, 145);
             this.BtnMonnok.TabIndex = 38;
@@ -166,7 +166,7 @@
             // 
             this.BtnMantellian.BackgroundImage = global::Projet_GONLO.Properties.Resources.Mantellian_Savrip;
             this.BtnMantellian.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnMantellian.Location = new System.Drawing.Point(1012, 373);
+            this.BtnMantellian.Location = new System.Drawing.Point(1017, 198);
             this.BtnMantellian.Name = "BtnMantellian";
             this.BtnMantellian.Size = new System.Drawing.Size(135, 145);
             this.BtnMantellian.TabIndex = 37;
@@ -177,7 +177,7 @@
             // 
             this.BtnGrimtaash.BackgroundImage = global::Projet_GONLO.Properties.Resources.grimtaash;
             this.BtnGrimtaash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnGrimtaash.Location = new System.Drawing.Point(816, 368);
+            this.BtnGrimtaash.Location = new System.Drawing.Point(821, 193);
             this.BtnGrimtaash.Name = "BtnGrimtaash";
             this.BtnGrimtaash.Size = new System.Drawing.Size(135, 145);
             this.BtnGrimtaash.TabIndex = 36;
@@ -188,7 +188,7 @@
             // 
             this.BtnKlorslug.BackgroundImage = global::Projet_GONLO.Properties.Resources.klorslaug;
             this.BtnKlorslug.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnKlorslug.Location = new System.Drawing.Point(675, 368);
+            this.BtnKlorslug.Location = new System.Drawing.Point(680, 193);
             this.BtnKlorslug.Name = "BtnKlorslug";
             this.BtnKlorslug.Size = new System.Drawing.Size(135, 145);
             this.BtnKlorslug.TabIndex = 35;
@@ -199,7 +199,7 @@
             // 
             this.BtnNgok.BackgroundImage = global::Projet_GONLO.Properties.Resources.Ngok;
             this.BtnNgok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnNgok.Location = new System.Drawing.Point(484, 368);
+            this.BtnNgok.Location = new System.Drawing.Point(489, 193);
             this.BtnNgok.Name = "BtnNgok";
             this.BtnNgok.Size = new System.Drawing.Size(135, 145);
             this.BtnNgok.TabIndex = 34;
@@ -210,7 +210,7 @@
             // 
             this.BtnKintanStrider.BackgroundImage = global::Projet_GONLO.Properties.Resources.Kintan_Strider;
             this.BtnKintanStrider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnKintanStrider.Location = new System.Drawing.Point(343, 368);
+            this.BtnKintanStrider.Location = new System.Drawing.Point(348, 193);
             this.BtnKintanStrider.Name = "BtnKintanStrider";
             this.BtnKintanStrider.Size = new System.Drawing.Size(135, 145);
             this.BtnKintanStrider.TabIndex = 33;
@@ -222,7 +222,7 @@
             this.BtnHoujix.BackgroundImage = global::Projet_GONLO.Properties.Resources.houjix1;
             this.BtnHoujix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnHoujix.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnHoujix.Location = new System.Drawing.Point(148, 368);
+            this.BtnHoujix.Location = new System.Drawing.Point(153, 193);
             this.BtnHoujix.Name = "BtnHoujix";
             this.BtnHoujix.Size = new System.Drawing.Size(135, 145);
             this.BtnHoujix.TabIndex = 32;
@@ -234,7 +234,7 @@
             this.BtnGhhhk.BackColor = System.Drawing.Color.Transparent;
             this.BtnGhhhk.BackgroundImage = global::Projet_GONLO.Properties.Resources.ghhhk;
             this.BtnGhhhk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnGhhhk.Location = new System.Drawing.Point(7, 368);
+            this.BtnGhhhk.Location = new System.Drawing.Point(12, 193);
             this.BtnGhhhk.Name = "BtnGhhhk";
             this.BtnGhhhk.Size = new System.Drawing.Size(135, 145);
             this.BtnGhhhk.TabIndex = 31;
@@ -246,7 +246,7 @@
             this.BtnChoosePow.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded;
             this.BtnChoosePow.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChoosePow.ForeColor = System.Drawing.Color.White;
-            this.BtnChoosePow.Location = new System.Drawing.Point(1084, 273);
+            this.BtnChoosePow.Location = new System.Drawing.Point(1088, 115);
             this.BtnChoosePow.Name = "BtnChoosePow";
             this.BtnChoosePow.Size = new System.Drawing.Size(150, 30);
             this.BtnChoosePow.TabIndex = 30;
@@ -258,7 +258,7 @@
             this.BtnChooseMov.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded;
             this.BtnChooseMov.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChooseMov.ForeColor = System.Drawing.Color.White;
-            this.BtnChooseMov.Location = new System.Drawing.Point(747, 273);
+            this.BtnChooseMov.Location = new System.Drawing.Point(751, 115);
             this.BtnChooseMov.Name = "BtnChooseMov";
             this.BtnChooseMov.Size = new System.Drawing.Size(150, 30);
             this.BtnChooseMov.TabIndex = 29;
@@ -270,7 +270,7 @@
             this.BtnChooseDef.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded;
             this.BtnChooseDef.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChooseDef.ForeColor = System.Drawing.Color.White;
-            this.BtnChooseDef.Location = new System.Drawing.Point(411, 273);
+            this.BtnChooseDef.Location = new System.Drawing.Point(415, 115);
             this.BtnChooseDef.Name = "BtnChooseDef";
             this.BtnChooseDef.Size = new System.Drawing.Size(150, 30);
             this.BtnChooseDef.TabIndex = 28;
@@ -283,7 +283,7 @@
             this.BtnChooseAtk.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded;
             this.BtnChooseAtk.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChooseAtk.ForeColor = System.Drawing.Color.White;
-            this.BtnChooseAtk.Location = new System.Drawing.Point(76, 273);
+            this.BtnChooseAtk.Location = new System.Drawing.Point(80, 115);
             this.BtnChooseAtk.Name = "BtnChooseAtk";
             this.BtnChooseAtk.Size = new System.Drawing.Size(150, 30);
             this.BtnChooseAtk.TabIndex = 27;
@@ -298,9 +298,9 @@
             this.LblMenuPlayerTurn.ForeColor = System.Drawing.Color.Gold;
             this.LblMenuPlayerTurn.Location = new System.Drawing.Point(298, 65);
             this.LblMenuPlayerTurn.Name = "LblMenuPlayerTurn";
-            this.LblMenuPlayerTurn.Size = new System.Drawing.Size(849, 28);
+            this.LblMenuPlayerTurn.Size = new System.Drawing.Size(846, 28);
             this.LblMenuPlayerTurn.TabIndex = 26;
-            this.LblMenuPlayerTurn.Text = "Player 1 choose one monster for each category  ";
+            this.LblMenuPlayerTurn.Text = "Player 1 select one monster for each category  ";
             // 
             // MnMenuDejarik
             // 
@@ -338,7 +338,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.StarsBackground;
-            this.ClientSize = new System.Drawing.Size(1325, 525);
+            this.ClientSize = new System.Drawing.Size(1325, 582);
             this.Controls.Add(this.LblMonnok);
             this.Controls.Add(this.LblMantellian);
             this.Controls.Add(this.MnMenuDejarik);

@@ -16,7 +16,6 @@ namespace Projet_GONLO
         List<Player> players = new List<Player>();
         int turn = 0;
         int counter = 0;
-        int oldPosition = 0;
         int actions = 0;//If actions = 0 = mouvement, if actions = 1 = attack, 
 
 
@@ -113,14 +112,7 @@ namespace Projet_GONLO
         private void btn_Click(object sender, EventArgs e)
         {
             int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
-
-            //Old Position 
-            if (counter == 0)
-            {
-                oldPosition = currPosition;
-            }
-            
-
+                              
             //When he begins (he choose a monster)
             players[turn].CurrMonster = getClickMonster(currPosition);
 
@@ -152,7 +144,6 @@ namespace Projet_GONLO
             else
             {
                 activateMovButtons(players[turn].CurrMonster.Position);
-                oldPosition = currPosition;
             }
 
             //activateAttackButtons(players[turn].CurrMonster.Position);
@@ -217,10 +208,12 @@ namespace Projet_GONLO
             List<int> accessibleButtons = new List<int>();
             for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
             {
-                accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
+                if(j != currPosition)
+                {
+accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
+                }
+               
             }
-
-            accessibleButtons.Remove(oldPosition);
 
             //Activate accessible buttons for movement
             for (int i = 0; i < accessibleButtons.Count; i++)
