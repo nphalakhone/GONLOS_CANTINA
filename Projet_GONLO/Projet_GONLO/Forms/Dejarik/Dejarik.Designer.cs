@@ -37,6 +37,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblRound = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.LblPow = new System.Windows.Forms.Label();
             this.LblMove = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.BtnEndTurn = new System.Windows.Forms.Button();
             this.PnlDe = new System.Windows.Forms.Panel();
             this.BtnDice = new System.Windows.Forms.Button();
-            this.lblRound = new System.Windows.Forms.Label();
             this.Button1 = new Projet_GONLO.ButtonCircle();
             this.Button2 = new Projet_GONLO.ButtonCircle();
             this.Button3 = new Projet_GONLO.ButtonCircle();
@@ -191,6 +191,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(564, 419);
             this.panel2.TabIndex = 32;
+            // 
+            // lblRound
+            // 
+            this.lblRound.AutoSize = true;
+            this.lblRound.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRound.ForeColor = System.Drawing.Color.Gold;
+            this.lblRound.Location = new System.Drawing.Point(10, 146);
+            this.lblRound.Name = "lblRound";
+            this.lblRound.Size = new System.Drawing.Size(91, 17);
+            this.lblRound.TabIndex = 10;
+            this.lblRound.Text = "Round : 1";
             // 
             // groupBox1
             // 
@@ -394,10 +405,12 @@
             // 
             // ListBoxLog
             // 
+            this.ListBoxLog.Font = new System.Drawing.Font("SF Distant Galaxy", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListBoxLog.FormattingEnabled = true;
+            this.ListBoxLog.ItemHeight = 12;
             this.ListBoxLog.Location = new System.Drawing.Point(6, 183);
             this.ListBoxLog.Name = "ListBoxLog";
-            this.ListBoxLog.Size = new System.Drawing.Size(552, 225);
+            this.ListBoxLog.Size = new System.Drawing.Size(552, 220);
             this.ListBoxLog.TabIndex = 6;
             // 
             // LblPlayerTurn
@@ -454,17 +467,6 @@
             this.BtnDice.Text = "Roll the dice";
             this.BtnDice.UseVisualStyleBackColor = true;
             this.BtnDice.Click += new System.EventHandler(this.btn_Click);
-            // 
-            // lblRound
-            // 
-            this.lblRound.AutoSize = true;
-            this.lblRound.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRound.ForeColor = System.Drawing.Color.Gold;
-            this.lblRound.Location = new System.Drawing.Point(10, 146);
-            this.lblRound.Name = "lblRound";
-            this.lblRound.Size = new System.Drawing.Size(91, 17);
-            this.lblRound.TabIndex = 10;
-            this.lblRound.Text = "Round : 1";
             // 
             // Button1
             // 
