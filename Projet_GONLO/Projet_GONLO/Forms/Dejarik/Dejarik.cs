@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 
@@ -17,16 +18,32 @@ namespace Projet_GONLO
         int turn = 0;
         int counter = 0;
         int actions = 0;//If actions = 0 = mouvement, if actions = 1 = attack, 
+        List<String> logMonster;
+        String concatMonster;
 
 
         internal Player Player1 { get => player1; set => player1 = value; }
         internal Player Player2 { get => player2; set => player2 = value; }
 
-        public Dejarik()
+        public Dejarik(String monster)
         {
             InitializeComponent();
             initalizeListButtons();
             Tile.CreateTiles();
+            concatMonster = monster;
+            addLogMonster(concatMonster);
+        }
+
+        private void addLogMonster(string monster)
+        {
+            logMonster = monster.Split('-').ToList();
+            for (int i = 0; i < logMonster.Count; i++)
+            {
+                if (!logMonster[i].Equals(""))
+                {
+                    ListBoxLog.Items.Add(logMonster[i]);
+                }
+            }
         }
 
         private void initializeMonsterPosition()
@@ -104,7 +121,6 @@ namespace Projet_GONLO
             for (int i = 0; i < listButtons.Count; i++)
             {
                 listButtons[i].Click += btn_Click;
-                
             }
 
         }
@@ -112,7 +128,7 @@ namespace Projet_GONLO
         private void btn_Click(object sender, EventArgs e)
         {
             int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
-                              
+                
             //When he begins (he choose a monster)
             players[turn].CurrMonster = getClickMonster(currPosition);
 
@@ -181,11 +197,11 @@ namespace Projet_GONLO
             string message;
             if (turn == 0)
             {
-                message = "Player 2 turn";
+                message = "Player 2's turn";
             }
             else
             {
-                message = "Player 1 turn";
+                message = "Player 1's turn";
             }
             string title = "Player's turn to play";
             MessageBox.Show(message, title);
@@ -193,13 +209,16 @@ namespace Projet_GONLO
 
         private void changeLabel()
         {
+            int newTurn = 1;
             if (turn == 0)
             {
-                LblPlayerTurn.Text = "Player 2 turn";
+                LblPlayerTurn.Text = "Player 2's turn";
             }
             else
             {
-                LblPlayerTurn.Text = "Player 1 turn";
+                LblPlayerTurn.Text = "Player 1's turn";
+                newTurn += 1;
+                lblRound.Text = "Round : " + newTurn;
             }
         }
 
@@ -286,9 +305,6 @@ accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
             players.Add(player1);
             players.Add(player2);
             activateCurrPlayer();
-            
-
-
         }
 
         private void setInfoMonster()
@@ -382,7 +398,7 @@ accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Dejarik newDejarik = new Dejarik();
+            Dejarik newDejarik = new Dejarik(concatMonster);
             newDejarik.ShowDialog();
             this.Close();
         }
