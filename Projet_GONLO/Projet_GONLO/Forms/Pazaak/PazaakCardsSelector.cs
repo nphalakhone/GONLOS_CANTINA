@@ -14,11 +14,14 @@ namespace Projet_GONLO
     {
         Player playerCBS = new Player();
         List<RoundPanel> playerDeck = new List<RoundPanel>();
+
         List<Image> playerDeckImage = new List<Image>();
         List<int> positionCarteEnleve = new List<int>();
         int nbCartes = 0;
         int creditsWaged = 0;
 
+        List<Panel> listeCarteTotal = new List<Panel>();
+        List<int> carteIntEnvoye = new List<int>();
         public PazaakCardsSelector()
         {
             InitializeComponent();
@@ -42,19 +45,45 @@ namespace Projet_GONLO
             playerDeck.Add(RPnlPlayerDC8);
             playerDeck.Add(RPnlPlayerDC9);
             playerDeck.Add(RPnlPlayerDC10);
+
+
+            listeCarteTotal.Add(RPnlPlus1);
+            listeCarteTotal.Add(RPnlPlus2);
+            listeCarteTotal.Add(RPnlPlus3);
+            listeCarteTotal.Add(RPnlPlus4);
+            listeCarteTotal.Add(RPnlPlus5);
+            listeCarteTotal.Add(RPnlPlus6);
+
+            listeCarteTotal.Add(RPnlMinus1);
+            listeCarteTotal.Add(RPnlMinus2);
+            listeCarteTotal.Add(RPnlMinus3);
+            listeCarteTotal.Add(RPnlMinus4);
+            listeCarteTotal.Add(RPnlMinus5);
+            listeCarteTotal.Add(RPnlMinus6);
+
+            listeCarteTotal.Add(RPnlPlusMinus1);
+            listeCarteTotal.Add(RPnlPlusMinus2);
+            listeCarteTotal.Add(RPnlPlusMinus3);
+            listeCarteTotal.Add(RPnlPlusMinus4);
+            listeCarteTotal.Add(RPnlPlusMinus5);
+            listeCarteTotal.Add(RPnlPlusMinus6);
+
         }
 
         private void BtnEllReady_Click(object sender, EventArgs e)
         {
-            
+
             for (int i = 0; i < playerDeck.Count; i++)
             {
                 playerDeckImage.Add(playerDeck[i].BackgroundImage);
             }
             Hide();
-            Pazaak newPazaakGame = new Pazaak(playerDeckImage);
+            Pazaak newPazaakGame = new Pazaak(playerDeckImage, carteIntEnvoye);
             newPazaakGame.Player1 = playerCBS;
+
+
             newPazaakGame.CreditsWaged = int.Parse(MTxtBoxWager.Text);
+
             newPazaakGame.ShowDialog();
             this.Close();
         }
@@ -62,6 +91,8 @@ namespace Projet_GONLO
         private void AddAvailableCards_Click(object sender, EventArgs e)
         {
             RoundPanel roundPanel = sender as RoundPanel;
+            int position = FindPositionPanel(roundPanel);
+            carteIntEnvoye.Add(position);
             if (positionCarteEnleve.Count == 0)
             {
                 if (nbCartes < 10)
@@ -69,9 +100,11 @@ namespace Projet_GONLO
                     playerDeck.ElementAt(nbCartes).BackgroundImage = roundPanel.BackgroundImage;
                     nbCartes++;
                 }
+
             }
             else
             {
+
                 playerDeck.ElementAt(positionCarteEnleve.ElementAt(0)).BackgroundImage = roundPanel.BackgroundImage;
                 positionCarteEnleve.RemoveAt(0);
                 nbCartes++;
@@ -82,6 +115,18 @@ namespace Projet_GONLO
             }
         }
 
+        private int FindPositionPanel(RoundPanel roundPanel)
+        {
+            for (int i = 0; i < listeCarteTotal.Count; i++)
+            {
+                if (roundPanel.BackgroundImage == listeCarteTotal[i].BackgroundImage)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         private void RemoveDeckCards(object sender, EventArgs e)
         {
             RoundPanel roundPanel = sender as RoundPanel;
@@ -89,12 +134,12 @@ namespace Projet_GONLO
             {
                 roundPanel.BackgroundImage = null;
                 BtnEllReady.Enabled = false;
-                //int pos = CheckHoleDeck();
                 int idx = playerDeck.IndexOf(roundPanel);
                 MessageBox.Show(idx.ToString());
                 positionCarteEnleve.Add(idx);
                 nbCartes--;
             }
+
         }
 
         public int CheckDeck()
@@ -137,117 +182,6 @@ namespace Projet_GONLO
         private void MTxtBoxWager_TextChanged(object sender, EventArgs e)
         {
             BtnEllReady.Enabled = true;
-            if (MTxtBoxWager.Text == null)
-            {
-                BtnEllReady.Enabled = false;
-            }
-        }
-
-        public List<string> getCardValue()
-        {
-            List<string> listCards = new List<string>();
-            listCards.Add(getMinusValue());
-            listCards.Add(getPlusValue());
-            listCards.Add(getPlusMinusValue());
-            return listCards;
-        }
-
-        private string getPlusValue()
-        {
-            string plus = "";
-            for (int i = 0; i < playerDeckImage.Count; i++)
-            {
-                if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus1))
-                {
-                    plus = "+1";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus2))
-                {
-                    plus = "+2";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus3))
-                {
-                    plus = "+3";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus4))
-                {
-                    plus = "+4";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus5))
-                {
-                    plus = "+5";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus6))
-                {
-                    plus = "+6";
-                }
-            }
-            return plus;
-        }
-
-        private string getMinusValue()
-        {
-            string minus = "";
-            for (int i = 0; i < playerDeckImage.Count; i++)
-            {
-                if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus1))
-                {
-                    minus = "-1";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus2))
-                {
-                    minus = "-2";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus3))
-                {
-                    minus = "-3";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus4))
-                {
-                    minus = "-4";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus5))
-                {
-                    minus = "-5";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus6))
-                {
-                    minus = "-6";
-                }
-            }
-            return minus;
-        }
-        private string getPlusMinusValue()
-        {
-            string plusMinus = "";
-            for (int i = 0; i < playerDeckImage.Count; i++)
-            {
-                if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus1))
-                {
-                    plusMinus = "+-1";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus2))
-                {
-                    plusMinus = "+-2";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus3))
-                {
-                    plusMinus = "+-3";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus4))
-                {
-                    plusMinus = "+-4";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus5))
-                {
-                    plusMinus = "+-5";
-                }
-                else if (playerDeckImage.ElementAt(i).Equals(Properties.Resources.CartePlus6))
-                {
-                    plusMinus = "+-6";
-                }
-            }
-            return plusMinus;
         }
     }
 }
