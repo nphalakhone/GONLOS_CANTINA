@@ -406,10 +406,12 @@
             // 
             // ListBoxLog
             // 
+            this.ListBoxLog.Font = new System.Drawing.Font("SF Distant Galaxy", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListBoxLog.FormattingEnabled = true;
+            this.ListBoxLog.ItemHeight = 12;
             this.ListBoxLog.Location = new System.Drawing.Point(6, 183);
             this.ListBoxLog.Name = "ListBoxLog";
-            this.ListBoxLog.Size = new System.Drawing.Size(552, 225);
+            this.ListBoxLog.Size = new System.Drawing.Size(552, 220);
             this.ListBoxLog.TabIndex = 6;
             // 
             // LblPlayerTurn

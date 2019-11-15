@@ -17,6 +17,7 @@ namespace Projet_GONLO
         Player otherPlayer;
         List<Player> players = new List<Player>();
         int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2;
+        int newTurn = 1;
         List<String> logMonster;
         Monster lastMonster;
 
@@ -234,8 +235,8 @@ namespace Projet_GONLO
         {
             oldPosition = 0;
             alertChangePlayer();
-            changeLabel();
             addLog();
+            changeLabel();
 
             if (turn == 1)
             {
@@ -261,11 +262,11 @@ namespace Projet_GONLO
             String logTemp = "";
             if (turn == 0)
             {
-                logTemp = "Player 1 moved " + lastMonster.Name + " to position : " + lastMonster.Position;
+                logTemp = "Round " + newTurn + " : Player 1 moved " + lastMonster.Name + " to position : " + lastMonster.Position;
             }
             else
             {
-                logTemp = "Player 2 moved " + lastMonster.Name + " to position : " + lastMonster.Position;
+                logTemp = "Round " + newTurn + " : Player 2 moved " + lastMonster.Name + " to position : " + lastMonster.Position;
             }
             ListBoxLog.Items.Add(logTemp);
 
@@ -288,7 +289,7 @@ namespace Projet_GONLO
 
         private void changeLabel()
         {
-            int newTurn = 1;
+            
             if (turn == 0)
             {
                 LblPlayerTurn.Text = "Player 2's turn";
