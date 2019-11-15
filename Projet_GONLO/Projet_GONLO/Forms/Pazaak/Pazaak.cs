@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Projet_GONLO
 {
@@ -426,6 +427,12 @@ namespace Projet_GONLO
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string[] lines = { playerPazaak.Name, playerPazaak.Species, playerPazaak.Gender };
+            StreamWriter file = new StreamWriter(@"C:\Users\1156103\Documents\GitHub\GONLOS_CANTINA\Projet_GONLO\Saves\Saves.txt");
+            foreach (string line in lines)
+            {
+                file.WriteLine(line);
+            }
 
         }
 

@@ -391,6 +391,7 @@
             this.LblAction.Size = new System.Drawing.Size(102, 17);
             this.LblAction.TabIndex = 8;
             this.LblAction.Text = "Action : 2";
+            this.LblAction.Click += new System.EventHandler(this.LblAction_Click_1);
             // 
             // LblMov
             // 
