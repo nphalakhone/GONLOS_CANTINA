@@ -39,21 +39,18 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LblPlayerName = new System.Windows.Forms.Label();
             this.LblAI = new System.Windows.Forms.Label();
-            this.LblFlipCard1 = new System.Windows.Forms.Label();
             this.LblCredits = new System.Windows.Forms.Label();
             this.LblCreditsWaged = new System.Windows.Forms.Label();
             this.LblFlipCard4 = new System.Windows.Forms.Label();
             this.LblFlipCard3 = new System.Windows.Forms.Label();
             this.LblFlipCard2 = new System.Windows.Forms.Label();
             this.LblPlusValue1 = new System.Windows.Forms.Label();
-            this.LblMinusValue1 = new System.Windows.Forms.Label();
             this.LblPlusValue2 = new System.Windows.Forms.Label();
             this.LblMinusValue2 = new System.Windows.Forms.Label();
             this.LblMinusValue3 = new System.Windows.Forms.Label();
             this.LblPlusValue3 = new System.Windows.Forms.Label();
             this.LblMinusValue4 = new System.Windows.Forms.Label();
             this.LblPlusValue4 = new System.Windows.Forms.Label();
-            this.LblNumeric1 = new System.Windows.Forms.Label();
             this.LblNumeric3 = new System.Windows.Forms.Label();
             this.LblNumeric2 = new System.Windows.Forms.Label();
             this.LblNumeric4 = new System.Windows.Forms.Label();
@@ -61,6 +58,9 @@
             this.LblCreditsWagedNumeric = new System.Windows.Forms.Label();
             this.LblCreditsSymbol1 = new System.Windows.Forms.Label();
             this.LblCreditsSymbol2 = new System.Windows.Forms.Label();
+            this.LblNumeric1 = new System.Windows.Forms.Label();
+            this.LblMinusValue1 = new System.Windows.Forms.Label();
+            this.LblFlipCard1 = new System.Windows.Forms.Label();
             this.CPBoxRound3AI = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
             this.CPBoxRound2AI = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
             this.CPBoxRound1AI = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
@@ -219,18 +219,6 @@
             this.LblAI.TabIndex = 27;
             this.LblAI.Text = "Your Opponent";
             // 
-            // LblFlipCard1
-            // 
-            this.LblFlipCard1.AutoSize = true;
-            this.LblFlipCard1.BackColor = System.Drawing.Color.Transparent;
-            this.LblFlipCard1.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFlipCard1.ForeColor = System.Drawing.Color.Gold;
-            this.LblFlipCard1.Location = new System.Drawing.Point(113, 600);
-            this.LblFlipCard1.Name = "LblFlipCard1";
-            this.LblFlipCard1.Size = new System.Drawing.Size(83, 13);
-            this.LblFlipCard1.TabIndex = 34;
-            this.LblFlipCard1.Text = "flip card";
-            // 
             // LblCredits
             // 
             this.LblCredits.AutoSize = true;
@@ -303,18 +291,6 @@
             this.LblPlusValue1.TabIndex = 40;
             this.LblPlusValue1.Text = "+";
             // 
-            // LblMinusValue1
-            // 
-            this.LblMinusValue1.AutoSize = true;
-            this.LblMinusValue1.BackColor = System.Drawing.Color.Transparent;
-            this.LblMinusValue1.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMinusValue1.ForeColor = System.Drawing.Color.Gold;
-            this.LblMinusValue1.Location = new System.Drawing.Point(142, 588);
-            this.LblMinusValue1.Name = "LblMinusValue1";
-            this.LblMinusValue1.Size = new System.Drawing.Size(12, 13);
-            this.LblMinusValue1.TabIndex = 41;
-            this.LblMinusValue1.Text = "-";
-            // 
             // LblPlusValue2
             // 
             this.LblPlusValue2.AutoSize = true;
@@ -386,18 +362,6 @@
             this.LblPlusValue4.Size = new System.Drawing.Size(12, 13);
             this.LblPlusValue4.TabIndex = 47;
             this.LblPlusValue4.Text = "+";
-            // 
-            // LblNumeric1
-            // 
-            this.LblNumeric1.AutoSize = true;
-            this.LblNumeric1.BackColor = System.Drawing.Color.Transparent;
-            this.LblNumeric1.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNumeric1.ForeColor = System.Drawing.Color.Gold;
-            this.LblNumeric1.Location = new System.Drawing.Point(154, 583);
-            this.LblNumeric1.Name = "LblNumeric1";
-            this.LblNumeric1.Size = new System.Drawing.Size(17, 13);
-            this.LblNumeric1.TabIndex = 48;
-            this.LblNumeric1.Text = "0";
             // 
             // LblNumeric3
             // 
@@ -482,6 +446,42 @@
             this.LblCreditsSymbol2.Size = new System.Drawing.Size(31, 24);
             this.LblCreditsSymbol2.TabIndex = 59;
             this.LblCreditsSymbol2.Text = "$";
+            // 
+            // LblNumeric1
+            // 
+            this.LblNumeric1.AutoSize = true;
+            this.LblNumeric1.BackColor = System.Drawing.Color.Transparent;
+            this.LblNumeric1.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNumeric1.ForeColor = System.Drawing.Color.Gold;
+            this.LblNumeric1.Location = new System.Drawing.Point(153, 583);
+            this.LblNumeric1.Name = "LblNumeric1";
+            this.LblNumeric1.Size = new System.Drawing.Size(17, 13);
+            this.LblNumeric1.TabIndex = 62;
+            this.LblNumeric1.Text = "0";
+            // 
+            // LblMinusValue1
+            // 
+            this.LblMinusValue1.AutoSize = true;
+            this.LblMinusValue1.BackColor = System.Drawing.Color.Transparent;
+            this.LblMinusValue1.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMinusValue1.ForeColor = System.Drawing.Color.Gold;
+            this.LblMinusValue1.Location = new System.Drawing.Point(141, 588);
+            this.LblMinusValue1.Name = "LblMinusValue1";
+            this.LblMinusValue1.Size = new System.Drawing.Size(12, 13);
+            this.LblMinusValue1.TabIndex = 61;
+            this.LblMinusValue1.Text = "-";
+            // 
+            // LblFlipCard1
+            // 
+            this.LblFlipCard1.AutoSize = true;
+            this.LblFlipCard1.BackColor = System.Drawing.Color.Transparent;
+            this.LblFlipCard1.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFlipCard1.ForeColor = System.Drawing.Color.Gold;
+            this.LblFlipCard1.Location = new System.Drawing.Point(112, 600);
+            this.LblFlipCard1.Name = "LblFlipCard1";
+            this.LblFlipCard1.Size = new System.Drawing.Size(83, 13);
+            this.LblFlipCard1.TabIndex = 60;
+            this.LblFlipCard1.Text = "flip card";
             // 
             // CPBoxRound3AI
             // 
@@ -822,6 +822,9 @@
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.pazaakEmptyBoard11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1001, 750);
+            this.Controls.Add(this.LblNumeric1);
+            this.Controls.Add(this.LblMinusValue1);
+            this.Controls.Add(this.LblFlipCard1);
             this.Controls.Add(this.LblMinusValue4);
             this.Controls.Add(this.LblMinusValue3);
             this.Controls.Add(this.LblCreditsSymbol2);
@@ -831,19 +834,16 @@
             this.Controls.Add(this.LblNumeric4);
             this.Controls.Add(this.LblNumeric2);
             this.Controls.Add(this.LblNumeric3);
-            this.Controls.Add(this.LblNumeric1);
             this.Controls.Add(this.LblPlusValue4);
             this.Controls.Add(this.LblPlusValue3);
             this.Controls.Add(this.LblMinusValue2);
             this.Controls.Add(this.LblPlusValue2);
-            this.Controls.Add(this.LblMinusValue1);
             this.Controls.Add(this.LblPlusValue1);
             this.Controls.Add(this.LblFlipCard2);
             this.Controls.Add(this.LblFlipCard3);
             this.Controls.Add(this.LblFlipCard4);
             this.Controls.Add(this.LblCreditsWaged);
             this.Controls.Add(this.LblCredits);
-            this.Controls.Add(this.LblFlipCard1);
             this.Controls.Add(this.CPBoxRound3AI);
             this.Controls.Add(this.CPBoxRound2AI);
             this.Controls.Add(this.CPBoxRound1AI);
@@ -949,21 +949,18 @@
         private Classes.Pazaak.CircularPictureBox CPBoxRound3AI;
         private Classes.Pazaak.CircularPictureBox CPBoxRound2AI;
         private Classes.Pazaak.CircularPictureBox CPBoxRound1AI;
-        private System.Windows.Forms.Label LblFlipCard1;
         private System.Windows.Forms.Label LblCredits;
         private System.Windows.Forms.Label LblCreditsWaged;
         private System.Windows.Forms.Label LblFlipCard4;
         private System.Windows.Forms.Label LblFlipCard3;
         private System.Windows.Forms.Label LblFlipCard2;
         private System.Windows.Forms.Label LblPlusValue1;
-        private System.Windows.Forms.Label LblMinusValue1;
         private System.Windows.Forms.Label LblPlusValue2;
         private System.Windows.Forms.Label LblMinusValue2;
         private System.Windows.Forms.Label LblMinusValue3;
         private System.Windows.Forms.Label LblPlusValue3;
         private System.Windows.Forms.Label LblMinusValue4;
         private System.Windows.Forms.Label LblPlusValue4;
-        private System.Windows.Forms.Label LblNumeric1;
         private System.Windows.Forms.Label LblNumeric3;
         private System.Windows.Forms.Label LblNumeric2;
         private System.Windows.Forms.Label LblNumeric4;
@@ -971,5 +968,8 @@
         private System.Windows.Forms.Label LblCreditsWagedNumeric;
         private System.Windows.Forms.Label LblCreditsSymbol1;
         private System.Windows.Forms.Label LblCreditsSymbol2;
+        private System.Windows.Forms.Label LblNumeric1;
+        private System.Windows.Forms.Label LblMinusValue1;
+        private System.Windows.Forms.Label LblFlipCard1;
     }
 }
