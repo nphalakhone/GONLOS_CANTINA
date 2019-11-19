@@ -23,6 +23,7 @@ namespace Projet_GONLO
     {
         List<Image> playerDeckPazaak = new List<Image>();
         List<int> carteIntEnvoye = new List<int>();
+        List<int> ListIntSelectionne = new List<int>();
         Player playerPazaak = new Player();
         Cards c = new Cards();
         Image[] playerDeck = new Image[4];
@@ -109,7 +110,6 @@ namespace Projet_GONLO
                     num = rand.Next(-6, 13);
                 }
                 AiDeck[i] = num;
-                MessageBox.Show(AiDeck[i].ToString());
             }
 
 
@@ -124,14 +124,32 @@ namespace Projet_GONLO
 
             int nombreCarteSelectionne = 0;
 
+            for (int i = 0; i < 4; i++)
+            {
+                ListIntSelectionne.Add(0);
+            }
+
             while (nombreCarteSelectionne != 4)
             {
                 int a = rand.Next(0, tailleListe);
                 playerDeck[nombreCarteSelectionne] = playerDeckPazaak.ElementAt(a);
                 playerDeckPazaak.RemoveAt(a);
+
+
+                ListIntSelectionne[nombreCarteSelectionne] = carteIntEnvoye.ElementAt(a);
+                carteIntEnvoye.RemoveAt(a);
+
+
                 tailleListe--;
                 nombreCarteSelectionne++;
             }
+
+
+            for (int i = 0; i < 4; i++)
+            {
+                MessageBox.Show((ListIntSelectionne[i] + 1).ToString());
+            }
+
 
 
         }
@@ -153,19 +171,12 @@ namespace Projet_GONLO
 
 
 
-        public void thread1()
-        {
-           
-                Thread.Sleep(4000);
-            
-        }
 
 
         private void AiTurn()
         {
            
-            Thread thr1 = new Thread(new ThreadStart(thread1));
-            thr1.Start();
+
 
 
             int pointsAdded = 0;
@@ -495,22 +506,28 @@ namespace Projet_GONLO
             
             TabPanelLeft[nbCardsPlayer].BackgroundImageLayout = ImageLayout.Stretch;
             nbCardsPlayer++;
-            if (carteIntEnvoye[indexPanel] >= 0 && carteIntEnvoye[indexPanel] < 6)
+
+            for (int i = 0; i < carteIntEnvoye.Count; i++)
             {
-                MessageBox.Show((carteIntEnvoye[indexPanel] + 1).ToString());
-                PlayerPoints += carteIntEnvoye[indexPanel] + 1;
+                //MessageBox.Show("liste int des cartes " + i +" " + carteIntEnvoye[i].ToString());
             }
-            else if (carteIntEnvoye[indexPanel] >= 6 && carteIntEnvoye[indexPanel] < 12)
+
+            if (ListIntSelectionne[indexPanel] >= 0 && ListIntSelectionne[indexPanel] < 6)
+            {
+                PlayerPoints += ListIntSelectionne[indexPanel] + 1;
+            }
+            else if (ListIntSelectionne[indexPanel] >= 6 && ListIntSelectionne[indexPanel] < 12)
             {
                 // -6 pcq index commence apres les cartes + et + 1 puisque l'index commence a zero
-                int pointsEnlever = carteIntEnvoye[indexPanel] - 5;
+                int pointsEnlever = ListIntSelectionne[indexPanel] - 5;
                 PlayerPoints -= pointsEnlever;
 
             }
             else
             {
-                int pointsEnlever = carteIntEnvoye[indexPanel] - 11;
-                PlayerPoints -= carteIntEnvoye[indexPanel];
+                
+                int pointsEnlever = ListIntSelectionne[indexPanel] - 11;
+                PlayerPoints -= pointsEnlever;
             }
             LblPointsPlayer.Text = PlayerPoints.ToString();
 
