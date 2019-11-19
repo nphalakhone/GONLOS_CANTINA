@@ -174,6 +174,7 @@ namespace Projet_GONLO
 
                 if (counterMov == players[turn].CurrMonster.Movement)
                 {
+                    addLog();
                     actions--;
                     LblAction.Text = "Action : " + actions;
                     activateCurrPlayer();
@@ -235,7 +236,7 @@ namespace Projet_GONLO
         {
             oldPosition = 0;
             alertChangePlayer();
-            addLog();
+            //addLog();
             changeLabel();
 
             if (turn == 1)
