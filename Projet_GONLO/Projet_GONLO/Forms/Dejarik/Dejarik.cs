@@ -16,8 +16,7 @@ namespace Projet_GONLO
         Player player2 = new Player();
         Player otherPlayer;
         List<Player> players = new List<Player>();
-        int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2;
-        int newTurn = 1;
+        int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2, newTurn = 1, dice = 0;
         List<String> logMonster;
         Monster lastMonster;
 
@@ -33,6 +32,7 @@ namespace Projet_GONLO
             initalizeListButtons();
             Tile.CreateTiles();
             addLogMonster(monster);
+            BtnDice.Enabled = false;
         }
 
         private void addLogMonster(string monster)
@@ -157,7 +157,7 @@ namespace Projet_GONLO
                 //Attack
                 else if (listButtons[currPosition].BackColor == Color.Red)
                 {
-                    clickAtkMonster();
+                    clickAtkMonster(currPosition);
                     counterMov = players[turn].CurrMonster.Movement;
                 }
 
@@ -186,22 +186,39 @@ namespace Projet_GONLO
                 }
 
             }
-
-           
-
-
         }
 
-        private void clickAtkMonster()
+        private void clickAtkMonster(int currPosition)
         {
             for (int i = 0; i < players[turn].ListMonsters.Count; i++)
             {
                 if (players[turn].CurrMonster == players[turn].ListMonsters[i])
                 {
-                    //attack(currPosition, players[turn].ListMonsters[i]);
+                    MessageBox.Show("Roll the dice to get a new Attack value", "Attack");
+                    int diceValueAtk = rollDice();
+
+                    MessageBox.Show("Roll the dice to get a new Defense value", "Defense");
+                    int diceValueDef = rollDice();
+
+                    if (dice != 0){
+                        attack(currPosition, players[turn].ListMonsters[i], diceValueAtk);
+                    }
                 }
             }
            
+        }
+
+        private int rollDice()
+        {
+            BtnDice.Enabled = true;
+            return 0;
+        }
+
+        private void attack(int currPosition, Monster monster, int diceValueAtk)
+        {
+            int newValueAtk = monster.Attack;
+            newValueAtk += diceValueAtk;
+            MessageBox.Show(""+newValueAtk,"New Attack Value");
         }
 
         private void clickMovMonster(int currPosition)
@@ -468,7 +485,7 @@ namespace Projet_GONLO
         private void BtnDice_Click(object sender, EventArgs e)
         {
             Random rng = new Random();
-            int dice = rng.Next(1, 7);
+            dice = rng.Next(1, 7);
             switch (dice)
             {
                 case 1:
