@@ -16,9 +16,6 @@ namespace Projet_GONLO
 
     enum Move { Stand, End_Turn, AddCard1, AddCard2, AddCard3, AddCard4 };
 
-
-
-
     public partial class Pazaak : Form
     {
         List<Image> playerDeckPazaak = new List<Image>();
@@ -52,10 +49,6 @@ namespace Projet_GONLO
 
         bool playerStand = false;
         bool AiStand = false;
-
-
-
-
 
 
         public Pazaak(List<Image> playerDeckPazaak, List<int> carteIntEnvoye)
@@ -97,8 +90,6 @@ namespace Projet_GONLO
                 panelPlayerDeck[i].BackgroundImage = playerDeck[i];
                 panelPlayerDeck[i].BackgroundImageLayout = ImageLayout.Stretch;
             }
-
-
             for (int i = 0; i < AiDeck.Length; i++)
             {
                 //1 2 3 4 5 6
@@ -111,11 +102,6 @@ namespace Projet_GONLO
                 }
                 AiDeck[i] = num;
             }
-
-
-
-
-
         }
 
         private void selectCardsForDeck()
@@ -128,30 +114,22 @@ namespace Projet_GONLO
             {
                 ListIntSelectionne.Add(0);
             }
-
             while (nombreCarteSelectionne != 4)
             {
                 int a = rand.Next(0, tailleListe);
                 playerDeck[nombreCarteSelectionne] = playerDeckPazaak.ElementAt(a);
                 playerDeckPazaak.RemoveAt(a);
 
-
                 ListIntSelectionne[nombreCarteSelectionne] = carteIntEnvoye.ElementAt(a);
                 carteIntEnvoye.RemoveAt(a);
-
 
                 tailleListe--;
                 nombreCarteSelectionne++;
             }
-
-
             for (int i = 0; i < 4; i++)
             {
                 MessageBox.Show((ListIntSelectionne[i] + 1).ToString());
             }
-
-
-
         }
 
         private void End_Turn_Click(object sender, EventArgs e)
@@ -164,21 +142,11 @@ namespace Projet_GONLO
             nbCardsPlayer++;
             PlayerPoints += pointsAdded;
             LblPointsPlayer.Text = PlayerPoints.ToString();
-
-
             AiTurn();
         }
 
-
-
-
-
         private void AiTurn()
         {
-           
-
-
-
             int pointsAdded = 0;
             CPBoxAI.BackColor = Color.Maroon;
             CPBoxPlayer.BackColor = Color.Black;
@@ -491,27 +459,41 @@ namespace Projet_GONLO
             LblCreditsWagedNumeric.Text = credsWaged.ToString();
             LblPlayerName.Text = playerPazaak.Name;
             LblCreditsNumeric.Text = playerPazaak.Credits.ToString();
+
+            ShowFlipCard();
+
         }
 
-       
+        private void ShowFlipCard()
+        {
+
+            Label[] Numeric = { LblNumeric1, LblNumeric2, LblNumeric3, LblNumeric4 };
+            Label[] MinusValue = { LblMinusValue1, LblMinusValue2, LblMinusValue3, LblMinusValue4 };
+            Label[] PlusValue = { LblPlusValue1, LblPlusValue2, LblPlusValue3, LblPlusValue4 };
+            Label[] FlipCard = { LblFlipCard1, LblFlipCard2, LblFlipCard3, LblFlipCard4 };
+
+            for (int i = 0; i < ListIntSelectionne.Count; i++) //carteIntEnvoye.Count
+            {
+                if (ListIntSelectionne[i] > 11)
+                {
+                    PlusValue[i].Show();
+                    MinusValue[i].Show();
+                    FlipCard[i].Show();
+                    Numeric[i].Text = (ListIntSelectionne[i] - 11).ToString();
+                    Numeric[i].Show();
+                }
+            }
+        }
 
         private void AddCardPlayerDeck(int indexPanel)
         {
-
-
             CPBoxAI.BackColor = Color.Black;
             CPBoxPlayer.BackColor = Color.Maroon;
             TabPanelLeft[nbCardsPlayer].BackgroundImage = playerDeck[indexPanel];
             panelPlayerDeck[indexPanel].BackgroundImage = null;
-            
+
             TabPanelLeft[nbCardsPlayer].BackgroundImageLayout = ImageLayout.Stretch;
             nbCardsPlayer++;
-
-            for (int i = 0; i < carteIntEnvoye.Count; i++)
-            {
-                //MessageBox.Show("liste int des cartes " + i +" " + carteIntEnvoye[i].ToString());
-            }
-
             if (ListIntSelectionne[indexPanel] >= 0 && ListIntSelectionne[indexPanel] < 6)
             {
                 PlayerPoints += ListIntSelectionne[indexPanel] + 1;
@@ -521,25 +503,15 @@ namespace Projet_GONLO
                 // -6 pcq index commence apres les cartes + et + 1 puisque l'index commence a zero
                 int pointsEnlever = ListIntSelectionne[indexPanel] - 5;
                 PlayerPoints -= pointsEnlever;
-
             }
             else
             {
-                
+
                 int pointsEnlever = ListIntSelectionne[indexPanel] - 11;
                 PlayerPoints -= pointsEnlever;
             }
             LblPointsPlayer.Text = PlayerPoints.ToString();
-
-
             AiTurn();
-
-
-
-
-
-
-
         }
 
         private void RPnlDownG1_Click(object sender, EventArgs e)
