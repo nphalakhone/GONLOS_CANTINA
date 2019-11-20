@@ -113,7 +113,7 @@
             this.LblPointsPlayer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LblPointsPlayer.Location = new System.Drawing.Point(457, 87);
             this.LblPointsPlayer.Name = "LblPointsPlayer";
-            this.LblPointsPlayer.Size = new System.Drawing.Size(23, 19);
+            this.LblPointsPlayer.Size = new System.Drawing.Size(23, 20);
             this.LblPointsPlayer.TabIndex = 21;
             this.LblPointsPlayer.Text = "0";
             // 
@@ -125,7 +125,7 @@
             this.LblPointsAi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LblPointsAi.Location = new System.Drawing.Point(523, 87);
             this.LblPointsAi.Name = "LblPointsAi";
-            this.LblPointsAi.Size = new System.Drawing.Size(23, 19);
+            this.LblPointsAi.Size = new System.Drawing.Size(23, 20);
             this.LblPointsAi.TabIndex = 22;
             this.LblPointsAi.Text = "0";
             // 
@@ -137,7 +137,7 @@
             this.helpToolStripMenuItem});
             this.MenuPazaak.Location = new System.Drawing.Point(0, 0);
             this.MenuPazaak.Name = "MenuPazaak";
-            this.MenuPazaak.Size = new System.Drawing.Size(1001, 24);
+            this.MenuPazaak.Size = new System.Drawing.Size(1001, 25);
             this.MenuPazaak.TabIndex = 23;
             this.MenuPazaak.Text = "MnDejarik";
             // 
@@ -150,7 +150,7 @@
             this.filesToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filesToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
             this.filesToolStripMenuItem.Name = "filesToolStripMenuItem";
-            this.filesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.filesToolStripMenuItem.Size = new System.Drawing.Size(70, 21);
             this.filesToolStripMenuItem.Text = "Files";
             // 
             // saveToolStripMenuItem
@@ -191,7 +191,7 @@
             this.helpToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(66, 21);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.HelpToolStripMenuItem_Click);
             // 
@@ -203,7 +203,7 @@
             this.LblPlayerName.ForeColor = System.Drawing.Color.Gold;
             this.LblPlayerName.Location = new System.Drawing.Point(181, 76);
             this.LblPlayerName.Name = "LblPlayerName";
-            this.LblPlayerName.Size = new System.Drawing.Size(177, 19);
+            this.LblPlayerName.Size = new System.Drawing.Size(177, 20);
             this.LblPlayerName.TabIndex = 26;
             this.LblPlayerName.Text = "Player\'s name";
             // 
@@ -215,7 +215,7 @@
             this.LblAI.ForeColor = System.Drawing.Color.Gold;
             this.LblAI.Location = new System.Drawing.Point(645, 76);
             this.LblAI.Name = "LblAI";
-            this.LblAI.Size = new System.Drawing.Size(186, 19);
+            this.LblAI.Size = new System.Drawing.Size(186, 20);
             this.LblAI.TabIndex = 27;
             this.LblAI.Text = "Your Opponent";
             // 
@@ -227,7 +227,7 @@
             this.LblCredits.ForeColor = System.Drawing.Color.Gold;
             this.LblCredits.Location = new System.Drawing.Point(123, 628);
             this.LblCredits.Name = "LblCredits";
-            this.LblCredits.Size = new System.Drawing.Size(108, 19);
+            this.LblCredits.Size = new System.Drawing.Size(108, 20);
             this.LblCredits.TabIndex = 35;
             this.LblCredits.Text = "credits :";
             // 
@@ -239,7 +239,7 @@
             this.LblCreditsWaged.ForeColor = System.Drawing.Color.Gold;
             this.LblCreditsWaged.Location = new System.Drawing.Point(123, 652);
             this.LblCreditsWaged.Name = "LblCreditsWaged";
-            this.LblCreditsWaged.Size = new System.Drawing.Size(191, 19);
+            this.LblCreditsWaged.Size = new System.Drawing.Size(191, 20);
             this.LblCreditsWaged.TabIndex = 36;
             this.LblCreditsWaged.Text = "credits waged :";
             // 
@@ -251,9 +251,10 @@
             this.LblFlipCard4.ForeColor = System.Drawing.Color.Gold;
             this.LblFlipCard4.Location = new System.Drawing.Point(394, 600);
             this.LblFlipCard4.Name = "LblFlipCard4";
-            this.LblFlipCard4.Size = new System.Drawing.Size(83, 13);
+            this.LblFlipCard4.Size = new System.Drawing.Size(83, 14);
             this.LblFlipCard4.TabIndex = 37;
             this.LblFlipCard4.Text = "flip card";
+            this.LblFlipCard4.Click += new System.EventHandler(this.FlipCard_Click);
             // 
             // LblFlipCard3
             // 
@@ -263,9 +264,10 @@
             this.LblFlipCard3.ForeColor = System.Drawing.Color.Gold;
             this.LblFlipCard3.Location = new System.Drawing.Point(300, 600);
             this.LblFlipCard3.Name = "LblFlipCard3";
-            this.LblFlipCard3.Size = new System.Drawing.Size(83, 13);
+            this.LblFlipCard3.Size = new System.Drawing.Size(83, 14);
             this.LblFlipCard3.TabIndex = 38;
             this.LblFlipCard3.Text = "flip card";
+            this.LblFlipCard3.Click += new System.EventHandler(this.FlipCard_Click);
             // 
             // LblFlipCard2
             // 
@@ -275,9 +277,10 @@
             this.LblFlipCard2.ForeColor = System.Drawing.Color.Gold;
             this.LblFlipCard2.Location = new System.Drawing.Point(207, 600);
             this.LblFlipCard2.Name = "LblFlipCard2";
-            this.LblFlipCard2.Size = new System.Drawing.Size(83, 13);
+            this.LblFlipCard2.Size = new System.Drawing.Size(83, 14);
             this.LblFlipCard2.TabIndex = 39;
             this.LblFlipCard2.Text = "flip card";
+            this.LblFlipCard2.Click += new System.EventHandler(this.FlipCard_Click);
             // 
             // LblPlusValue1
             // 
@@ -287,7 +290,7 @@
             this.LblPlusValue1.ForeColor = System.Drawing.Color.Gold;
             this.LblPlusValue1.Location = new System.Drawing.Point(142, 579);
             this.LblPlusValue1.Name = "LblPlusValue1";
-            this.LblPlusValue1.Size = new System.Drawing.Size(12, 13);
+            this.LblPlusValue1.Size = new System.Drawing.Size(12, 14);
             this.LblPlusValue1.TabIndex = 40;
             this.LblPlusValue1.Text = "+";
             // 
@@ -299,7 +302,7 @@
             this.LblPlusValue2.ForeColor = System.Drawing.Color.Gold;
             this.LblPlusValue2.Location = new System.Drawing.Point(237, 579);
             this.LblPlusValue2.Name = "LblPlusValue2";
-            this.LblPlusValue2.Size = new System.Drawing.Size(12, 13);
+            this.LblPlusValue2.Size = new System.Drawing.Size(12, 14);
             this.LblPlusValue2.TabIndex = 42;
             this.LblPlusValue2.Text = "+";
             // 
@@ -311,7 +314,7 @@
             this.LblMinusValue2.ForeColor = System.Drawing.Color.Gold;
             this.LblMinusValue2.Location = new System.Drawing.Point(237, 588);
             this.LblMinusValue2.Name = "LblMinusValue2";
-            this.LblMinusValue2.Size = new System.Drawing.Size(12, 13);
+            this.LblMinusValue2.Size = new System.Drawing.Size(12, 14);
             this.LblMinusValue2.TabIndex = 43;
             this.LblMinusValue2.Text = "-";
             // 
@@ -323,7 +326,7 @@
             this.LblMinusValue3.ForeColor = System.Drawing.Color.Gold;
             this.LblMinusValue3.Location = new System.Drawing.Point(328, 588);
             this.LblMinusValue3.Name = "LblMinusValue3";
-            this.LblMinusValue3.Size = new System.Drawing.Size(12, 13);
+            this.LblMinusValue3.Size = new System.Drawing.Size(12, 14);
             this.LblMinusValue3.TabIndex = 44;
             this.LblMinusValue3.Text = "-";
             // 
@@ -335,7 +338,7 @@
             this.LblPlusValue3.ForeColor = System.Drawing.Color.Gold;
             this.LblPlusValue3.Location = new System.Drawing.Point(328, 579);
             this.LblPlusValue3.Name = "LblPlusValue3";
-            this.LblPlusValue3.Size = new System.Drawing.Size(12, 13);
+            this.LblPlusValue3.Size = new System.Drawing.Size(12, 14);
             this.LblPlusValue3.TabIndex = 45;
             this.LblPlusValue3.Text = "+";
             // 
@@ -347,7 +350,7 @@
             this.LblMinusValue4.ForeColor = System.Drawing.Color.Gold;
             this.LblMinusValue4.Location = new System.Drawing.Point(420, 588);
             this.LblMinusValue4.Name = "LblMinusValue4";
-            this.LblMinusValue4.Size = new System.Drawing.Size(12, 13);
+            this.LblMinusValue4.Size = new System.Drawing.Size(12, 14);
             this.LblMinusValue4.TabIndex = 46;
             this.LblMinusValue4.Text = "-";
             // 
@@ -359,7 +362,7 @@
             this.LblPlusValue4.ForeColor = System.Drawing.Color.Gold;
             this.LblPlusValue4.Location = new System.Drawing.Point(420, 579);
             this.LblPlusValue4.Name = "LblPlusValue4";
-            this.LblPlusValue4.Size = new System.Drawing.Size(12, 13);
+            this.LblPlusValue4.Size = new System.Drawing.Size(12, 14);
             this.LblPlusValue4.TabIndex = 47;
             this.LblPlusValue4.Text = "+";
             // 
@@ -371,7 +374,7 @@
             this.LblNumeric3.ForeColor = System.Drawing.Color.Gold;
             this.LblNumeric3.Location = new System.Drawing.Point(341, 583);
             this.LblNumeric3.Name = "LblNumeric3";
-            this.LblNumeric3.Size = new System.Drawing.Size(17, 13);
+            this.LblNumeric3.Size = new System.Drawing.Size(17, 14);
             this.LblNumeric3.TabIndex = 50;
             this.LblNumeric3.Text = "0";
             // 
@@ -383,7 +386,7 @@
             this.LblNumeric2.ForeColor = System.Drawing.Color.Gold;
             this.LblNumeric2.Location = new System.Drawing.Point(249, 583);
             this.LblNumeric2.Name = "LblNumeric2";
-            this.LblNumeric2.Size = new System.Drawing.Size(17, 13);
+            this.LblNumeric2.Size = new System.Drawing.Size(17, 14);
             this.LblNumeric2.TabIndex = 52;
             this.LblNumeric2.Text = "0";
             // 
@@ -395,7 +398,7 @@
             this.LblNumeric4.ForeColor = System.Drawing.Color.Gold;
             this.LblNumeric4.Location = new System.Drawing.Point(433, 583);
             this.LblNumeric4.Name = "LblNumeric4";
-            this.LblNumeric4.Size = new System.Drawing.Size(17, 13);
+            this.LblNumeric4.Size = new System.Drawing.Size(17, 14);
             this.LblNumeric4.TabIndex = 54;
             this.LblNumeric4.Text = "0";
             // 
@@ -407,7 +410,7 @@
             this.LblCreditsNumeric.ForeColor = System.Drawing.Color.Gold;
             this.LblCreditsNumeric.Location = new System.Drawing.Point(317, 628);
             this.LblCreditsNumeric.Name = "LblCreditsNumeric";
-            this.LblCreditsNumeric.Size = new System.Drawing.Size(23, 19);
+            this.LblCreditsNumeric.Size = new System.Drawing.Size(23, 20);
             this.LblCreditsNumeric.TabIndex = 56;
             this.LblCreditsNumeric.Text = "0";
             // 
@@ -419,7 +422,7 @@
             this.LblCreditsWagedNumeric.ForeColor = System.Drawing.Color.Gold;
             this.LblCreditsWagedNumeric.Location = new System.Drawing.Point(317, 652);
             this.LblCreditsWagedNumeric.Name = "LblCreditsWagedNumeric";
-            this.LblCreditsWagedNumeric.Size = new System.Drawing.Size(23, 19);
+            this.LblCreditsWagedNumeric.Size = new System.Drawing.Size(23, 20);
             this.LblCreditsWagedNumeric.TabIndex = 57;
             this.LblCreditsWagedNumeric.Text = "0";
             // 
@@ -455,7 +458,7 @@
             this.LblNumeric1.ForeColor = System.Drawing.Color.Gold;
             this.LblNumeric1.Location = new System.Drawing.Point(153, 583);
             this.LblNumeric1.Name = "LblNumeric1";
-            this.LblNumeric1.Size = new System.Drawing.Size(17, 13);
+            this.LblNumeric1.Size = new System.Drawing.Size(17, 14);
             this.LblNumeric1.TabIndex = 62;
             this.LblNumeric1.Text = "0";
             // 
@@ -467,7 +470,7 @@
             this.LblMinusValue1.ForeColor = System.Drawing.Color.Gold;
             this.LblMinusValue1.Location = new System.Drawing.Point(141, 588);
             this.LblMinusValue1.Name = "LblMinusValue1";
-            this.LblMinusValue1.Size = new System.Drawing.Size(12, 13);
+            this.LblMinusValue1.Size = new System.Drawing.Size(12, 14);
             this.LblMinusValue1.TabIndex = 61;
             this.LblMinusValue1.Text = "-";
             // 
@@ -479,9 +482,10 @@
             this.LblFlipCard1.ForeColor = System.Drawing.Color.Gold;
             this.LblFlipCard1.Location = new System.Drawing.Point(112, 600);
             this.LblFlipCard1.Name = "LblFlipCard1";
-            this.LblFlipCard1.Size = new System.Drawing.Size(83, 13);
+            this.LblFlipCard1.Size = new System.Drawing.Size(83, 14);
             this.LblFlipCard1.TabIndex = 60;
             this.LblFlipCard1.Text = "flip card";
+            this.LblFlipCard1.Click += new System.EventHandler(this.FlipCard_Click);
             // 
             // CPBoxRound3AI
             // 

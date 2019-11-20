@@ -384,9 +384,11 @@ namespace Projet_GONLO
             {
                 MessageBox.Show("Player gagné!!");
             }
-
             gameOver = true;
+            ResetGame();
         }
+
+        
 
         private int differenceFrom20(int points)
         {
@@ -468,52 +470,20 @@ namespace Projet_GONLO
         {
 
             Label[] Numeric = { LblNumeric1, LblNumeric2, LblNumeric3, LblNumeric4 };
-            Label[] MinusValue = { LblMinusValue1, LblMinusValue2, LblMinusValue3, LblMinusValue4 };
             Label[] PlusValue = { LblPlusValue1, LblPlusValue2, LblPlusValue3, LblPlusValue4 };
             Label[] FlipCard = { LblFlipCard1, LblFlipCard2, LblFlipCard3, LblFlipCard4 };
 
-            for (int i = 0; i < ListIntSelectionne.Count; i++) //carteIntEnvoye.Count
+            for (int i = 0; i < ListIntSelectionne.Count; i++)
             {
                 if (ListIntSelectionne[i] > 11)
                 {
                     PlusValue[i].Show();
-                    MinusValue[i].Show();
                     FlipCard[i].Show();
                     Numeric[i].Text = (ListIntSelectionne[i] - 11).ToString();
                     Numeric[i].Show();
                 }
             }
         }
-
-        private void AddCardPlayerDeck(int indexPanel)
-        {
-            CPBoxAI.BackColor = Color.Black;
-            CPBoxPlayer.BackColor = Color.Maroon;
-            TabPanelLeft[nbCardsPlayer].BackgroundImage = playerDeck[indexPanel];
-            panelPlayerDeck[indexPanel].BackgroundImage = null;
-
-            TabPanelLeft[nbCardsPlayer].BackgroundImageLayout = ImageLayout.Stretch;
-            nbCardsPlayer++;
-            if (ListIntSelectionne[indexPanel] >= 0 && ListIntSelectionne[indexPanel] < 6)
-            {
-                PlayerPoints += ListIntSelectionne[indexPanel] + 1;
-            }
-            else if (ListIntSelectionne[indexPanel] >= 6 && ListIntSelectionne[indexPanel] < 12)
-            {
-                // -6 pcq index commence apres les cartes + et + 1 puisque l'index commence a zero
-                int pointsEnlever = ListIntSelectionne[indexPanel] - 5;
-                PlayerPoints -= pointsEnlever;
-            }
-            else
-            {
-
-                int pointsEnlever = ListIntSelectionne[indexPanel] - 11;
-                PlayerPoints -= pointsEnlever;
-            }
-            LblPointsPlayer.Text = PlayerPoints.ToString();
-            AiTurn();
-        }
-
         private void RPnlDownG1_Click(object sender, EventArgs e)
         {
             AddCardPlayerDeck(0);
@@ -533,5 +503,96 @@ namespace Projet_GONLO
         {
             AddCardPlayerDeck(3);
         }
+
+        private void AddCardPlayerDeck(int indexPanel)
+        {
+            Label[] MinusValue = { LblMinusValue1, LblMinusValue2, LblMinusValue3, LblMinusValue4 };
+            CPBoxAI.BackColor = Color.Black;
+            CPBoxPlayer.BackColor = Color.Maroon;
+            TabPanelLeft[nbCardsPlayer].BackgroundImage = playerDeck[indexPanel];
+            panelPlayerDeck[indexPanel].BackgroundImage = null;
+
+            TabPanelLeft[nbCardsPlayer].BackgroundImageLayout = ImageLayout.Stretch;
+            nbCardsPlayer++;
+            if (ListIntSelectionne[indexPanel] >= 0 && ListIntSelectionne[indexPanel] < 6)
+            {
+                PlayerPoints += ListIntSelectionne[indexPanel] + 1;
+            }
+            else if (ListIntSelectionne[indexPanel] >= 6 && ListIntSelectionne[indexPanel] < 12)
+            {
+                // -6 pcq index commence apres les cartes + et + 1 puisque l'index commence a zero
+                int pointsEnlever = ListIntSelectionne[indexPanel] - 5;
+                PlayerPoints -= pointsEnlever;
+            }
+            else
+            {
+                int pointsEnlever = ListIntSelectionne[indexPanel] - 11;
+                if (MinusValue[indexPanel].Visible)
+                {
+                    PlayerPoints -= pointsEnlever;
+                }
+                else
+                {
+                    PlayerPoints += pointsEnlever;
+                }
+            }
+            LblPointsPlayer.Text = PlayerPoints.ToString();
+            AiTurn();
+        }
+
+       
+
+        private void FlipCard_Click(object sender, EventArgs e)
+        {
+            Label[] MinusValue = { LblMinusValue1, LblMinusValue2, LblMinusValue3, LblMinusValue4 };
+            Label[] PlusValue = { LblPlusValue1, LblPlusValue2, LblPlusValue3, LblPlusValue4 };
+
+            string lablelName = ((Label)sender).Name;
+            for (int i = 0; i < playerDeck.Length; i++)
+            {
+                if (lablelName.IndexOf((i+1).ToString()) != -1)
+                {
+                   if (PlusValue[i].Visible)
+                   {
+                        PlusValue[i].Hide();
+                        MinusValue[i].Show();
+                    }
+                    else
+                    {
+                        PlusValue[i].Show();
+                        MinusValue[i].Hide();
+                    }
+                }
+            }
+        }
+
+
+        private void ResetGame()
+        {
+            for (int i = 0; i < TabPanelLeft.Length; i++)
+            {
+                TabPanelLeft[i].BackgroundImage = null;
+                TabPanelRight[i].BackgroundImage = null;
+            }
+            gameOver = false;
+            addedPlusMinus = false;
+            
+            PlayerPoints = 0;
+            AiPoints = 0;
+
+            // player = 0  Ai = 1
+            turn = 0;
+
+            //number of cards which 
+            //are on their side of the board
+            nbCardsPlayer = 0;
+            nbCardsAi = 0;
+
+            playerStand = false;
+            AiStand = false;
+
+        }
+
+
     }
 }
