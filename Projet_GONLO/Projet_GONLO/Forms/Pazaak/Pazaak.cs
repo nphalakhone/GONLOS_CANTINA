@@ -33,7 +33,7 @@ namespace Projet_GONLO
         Panel[] TabPanelLeft;
         Panel[] TabPanelRight;
         int credsWaged;
-        bool gameOver = false;
+        public bool gameOver = false;
         bool addedPlusMinus = false;
         Random rand = new Random();
         int PlayerPoints = 0;
@@ -164,7 +164,6 @@ namespace Projet_GONLO
             else if (moveAI == Projet_GONLO.Move.Stand)
             {
                 AiStand = true;
-                VerifyStands();
             }
             else
             {
@@ -172,6 +171,8 @@ namespace Projet_GONLO
             }
 
         }
+
+       
 
         private void addAICardToBoard(int index)
         {
@@ -325,9 +326,10 @@ namespace Projet_GONLO
             {
                 AiTurn();
                 VerifyStands();
-
+                
             }
-
+            ResetGame();
+            
 
         }
 
@@ -337,6 +339,7 @@ namespace Projet_GONLO
             {
                 FindWinner();
             }
+            
         }
 
         private void FindWinner()
@@ -385,7 +388,8 @@ namespace Projet_GONLO
                 MessageBox.Show("Player gagné!!");
             }
             gameOver = true;
-            ResetGame();
+            
+            
         }
 
         
@@ -507,6 +511,9 @@ namespace Projet_GONLO
         private void AddCardPlayerDeck(int indexPanel)
         {
             Label[] MinusValue = { LblMinusValue1, LblMinusValue2, LblMinusValue3, LblMinusValue4 };
+            Label[] Numeric = { LblNumeric1, LblNumeric2, LblNumeric3, LblNumeric4 };
+            Label[] PlusValue = { LblPlusValue1, LblPlusValue2, LblPlusValue3, LblPlusValue4 };
+            Label[] FlipCard = { LblFlipCard1, LblFlipCard2, LblFlipCard3, LblFlipCard4 };
             CPBoxAI.BackColor = Color.Black;
             CPBoxPlayer.BackColor = Color.Maroon;
             TabPanelLeft[nbCardsPlayer].BackgroundImage = playerDeck[indexPanel];
@@ -535,12 +542,17 @@ namespace Projet_GONLO
                 {
                     PlayerPoints += pointsEnlever;
                 }
+                MinusValue[indexPanel].Hide();
+                PlusValue[indexPanel].Hide();
+                Numeric[indexPanel].Hide();
+                FlipCard[indexPanel].Hide();
+
             }
+            panelPlayerDeck[indexPanel].Enabled = false;
             LblPointsPlayer.Text = PlayerPoints.ToString();
             AiTurn();
         }
 
-       
 
         private void FlipCard_Click(object sender, EventArgs e)
         {
@@ -579,17 +591,17 @@ namespace Projet_GONLO
             
             PlayerPoints = 0;
             AiPoints = 0;
-
-            // player = 0  Ai = 1
             turn = 0;
-
-            //number of cards which 
-            //are on their side of the board
             nbCardsPlayer = 0;
             nbCardsAi = 0;
 
             playerStand = false;
             AiStand = false;
+
+            LblPointsAi.Text = "0";
+            LblPointsPlayer.Text = "0";
+
+
 
         }
 
