@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-
+using Projet_GONLO.Classes.Pazaak;
 namespace Projet_GONLO
 {
 
@@ -32,23 +32,24 @@ namespace Projet_GONLO
         Panel[] panelAiDeck;
         Panel[] TabPanelLeft;
         Panel[] TabPanelRight;
+
+        CircularPictureBox[] tabCircularBtnPlayer;
+        CircularPictureBox[] tabCircularBtnAi;
         int credsWaged;
         public bool gameOver = false;
         bool addedPlusMinus = false;
         Random rand = new Random();
         int PlayerPoints = 0;
         int AiPoints = 0;
-
-        // player = 0  Ai = 1
-        int turn = 0;
-
-        //number of cards which 
-        //are on their side of the board
+        
         int nbCardsPlayer = 0;
         int nbCardsAi = 0;
 
         bool playerStand = false;
         bool AiStand = false;
+
+        int nbVictoirePlayer = 0;
+        int nbVictoireAi = 0;
 
 
         public Pazaak(List<Image> playerDeckPazaak, List<int> carteIntEnvoye)
@@ -75,6 +76,20 @@ namespace Projet_GONLO
             {
              RPnlD1, RPnlD2, RPnlD3, RPnlD4, RPnlD5, RPnlD6, RPnlD7, RPnlD8,RPnlD9
             };
+
+         tabCircularBtnPlayer = new CircularPictureBox[]
+        {
+            CPBoxRound1Player,
+            CPBoxRound2Player,
+            CPBoxRound3Player
+        };
+            tabCircularBtnAi = new CircularPictureBox[]
+        {
+            CPBoxRound1AI,
+            CPBoxRound2AI,
+            CPBoxRound3AI
+        };
+
         }
 
         private void setupPlayerdeck()
@@ -344,48 +359,54 @@ namespace Projet_GONLO
 
         private void FindWinner()
         {
-
+            string result = "";
+            
             if (AiPoints == PlayerPoints)
             {
-                MessageBox.Show("Egalite");
+                result = "Egalite";
             }
             else if (PlayerPoints == 20)
             {
-                MessageBox.Show("Player gagné!!");
+                result = "Player gagné!!";
+                
             }
             else if (AiPoints == 20)
             {
-                MessageBox.Show("Ai gagne!!");
+                result = "Ai gagne!!";
             }
             else if (AiPoints < 20 && PlayerPoints < 20)
             {
                 if (differenceFrom20(AiPoints) < differenceFrom20(PlayerPoints))
                 {
-                    MessageBox.Show("Ai gagne!!");
+                    result = "Ai gagne!!";
                 }
                 else
                 {
-                    MessageBox.Show("Player gagné!!");
+                    result = "Player gagné!!";
                 }
             }
             else if (AiPoints > 20 && PlayerPoints > 20)
             {
-                if (AiPoints < PlayerPoints)
-                {
-                    MessageBox.Show("Player gagné!!");
-                }
-                else
-                {
-                    MessageBox.Show("Ai gagne!!");
-                }
+                result = "Egalite";
             }
             else if (AiPoints < 20 && PlayerPoints > 20)
             {
-                MessageBox.Show("Ai gagne!!");
+                result = "Ai gagne!!";
             }
             else
             {
-                MessageBox.Show("Player gagné!!");
+                result = "Player gagné!!";
+            }
+            MessageBox.Show(result);
+            if (result == "Player gagné!!")
+            {   
+                tabCircularBtnPlayer[nbVictoirePlayer].BackColor = Color.Maroon;
+                nbVictoirePlayer++;
+            }
+            else if (result == "Ai gagne!!")
+            {
+                tabCircularBtnAi[nbVictoireAi].BackColor = Color.Maroon;
+                nbVictoireAi++;
             }
             gameOver = true;
             
@@ -591,7 +612,6 @@ namespace Projet_GONLO
             
             PlayerPoints = 0;
             AiPoints = 0;
-            turn = 0;
             nbCardsPlayer = 0;
             nbCardsAi = 0;
 
@@ -600,6 +620,33 @@ namespace Projet_GONLO
 
             LblPointsAi.Text = "0";
             LblPointsPlayer.Text = "0";
+
+            if (nbVictoirePlayer == 3)
+            {
+                MessageBox.Show("Vous avez gagne!!!!!!!!!");
+                playerPazaak.Credits += credsWaged;
+                this.Hide();
+                MenuAccueil newMenuAccueil = new MenuAccueil();
+                newMenuAccueil.Player1 = playerPazaak;
+                newMenuAccueil.ShowDialog();
+                this.Close();
+            }
+            if (nbVictoireAi == 3)
+            {
+                MessageBox.Show("Vous avez perdu :( :(");
+                playerPazaak.Credits -= credsWaged;
+                this.Hide();
+                MenuAccueil newMenuAccueil = new MenuAccueil();
+                newMenuAccueil.Player1 = playerPazaak;
+                newMenuAccueil.ShowDialog();
+                this.Close();
+            }
+
+
+
+
+
+
 
 
 

@@ -19,11 +19,11 @@ namespace Projet_GONLO
             //Application.Run(new MenuAccueil());
             //Application.Run(new CreationPerso());
             //Application.Run(new MenuDejarik());
-            //Application.Run(new StartForm());
+            Application.Run(new StartForm());
             //Application.Run(new Pazaak());
             //Application.Run(new StartForm());
             //Application.Run(new Pazaak());
-            Application.Run(new PazaakCardsSelector());
+            //Application.Run(new PazaakCardsSelector());
 
         }
     }
