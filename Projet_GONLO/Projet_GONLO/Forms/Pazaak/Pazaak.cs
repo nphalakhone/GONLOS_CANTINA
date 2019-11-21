@@ -625,6 +625,7 @@ namespace Projet_GONLO
             {
                 MessageBox.Show("Vous avez gagne!!!!!!!!!");
                 playerPazaak.Credits += credsWaged;
+                playerPazaak.PazaakGamesWon++;
                 this.Hide();
                 MenuAccueil newMenuAccueil = new MenuAccueil();
                 newMenuAccueil.Player1 = playerPazaak;
@@ -635,6 +636,7 @@ namespace Projet_GONLO
             {
                 MessageBox.Show("Vous avez perdu :( :(");
                 playerPazaak.Credits -= credsWaged;
+                playerPazaak.PazaakGamesLost++;
                 this.Hide();
                 MenuAccueil newMenuAccueil = new MenuAccueil();
                 newMenuAccueil.Player1 = playerPazaak;
