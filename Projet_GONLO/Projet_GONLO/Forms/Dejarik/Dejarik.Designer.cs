@@ -59,7 +59,6 @@
             this.ListBoxLog = new System.Windows.Forms.ListBox();
             this.LblPlayerTurn = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.BtnEndTurn = new System.Windows.Forms.Button();
             this.PnlDe = new System.Windows.Forms.Panel();
             this.BtnDice = new System.Windows.Forms.Button();
             this.Button1 = new Projet_GONLO.ButtonCircle();
@@ -429,24 +428,12 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded21;
-            this.panel4.Controls.Add(this.BtnEndTurn);
             this.panel4.Controls.Add(this.PnlDe);
             this.panel4.Controls.Add(this.BtnDice);
             this.panel4.Location = new System.Drawing.Point(864, 454);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(564, 411);
             this.panel4.TabIndex = 33;
-            // 
-            // BtnEndTurn
-            // 
-            this.BtnEndTurn.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEndTurn.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.BtnEndTurn.Location = new System.Drawing.Point(289, 363);
-            this.BtnEndTurn.Name = "BtnEndTurn";
-            this.BtnEndTurn.Size = new System.Drawing.Size(149, 32);
-            this.BtnEndTurn.TabIndex = 4;
-            this.BtnEndTurn.Text = "End turn";
-            this.BtnEndTurn.UseVisualStyleBackColor = true;
             // 
             // PnlDe
             // 
@@ -461,13 +448,13 @@
             // 
             this.BtnDice.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDice.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.BtnDice.Location = new System.Drawing.Point(129, 363);
+            this.BtnDice.Location = new System.Drawing.Point(209, 351);
             this.BtnDice.Name = "BtnDice";
             this.BtnDice.Size = new System.Drawing.Size(149, 32);
             this.BtnDice.TabIndex = 2;
             this.BtnDice.Text = "Roll the dice";
             this.BtnDice.UseVisualStyleBackColor = true;
-            this.BtnDice.Click += new System.EventHandler(this.btn_Click);
+            this.BtnDice.Click += new System.EventHandler(this.BtnDice_Click);
             // 
             // Button1
             // 
@@ -936,7 +923,6 @@
         private System.Windows.Forms.ListBox ListBoxLog;
         private System.Windows.Forms.Label LblPlayerTurn;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button BtnEndTurn;
         private System.Windows.Forms.Panel PnlDe;
         private System.Windows.Forms.Button BtnDice;
         private System.Windows.Forms.Label lblRound;
