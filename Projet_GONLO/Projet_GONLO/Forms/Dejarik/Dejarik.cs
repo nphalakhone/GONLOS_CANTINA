@@ -16,9 +16,10 @@ namespace Projet_GONLO
         Player player2 = new Player();
         Player otherPlayer;
         List<Player> players = new List<Player>();
-        int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2, newTurn = 1, dice = 0;
+        int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2, newTurn = 1, roll = 0;
         List<String> logMonster;
         Monster lastMonster;
+        Monster defendingMonster = null;
 
 
         internal Player Player1 { get => player1; set => player1 = value; }
@@ -141,7 +142,7 @@ namespace Projet_GONLO
                 disableButtons();
                 activateMovButtons(players[turn].CurrMonster.Position);
                 activateAttackButtons(players[turn].CurrMonster.Position);
-                
+
 
             }
             //after first click
@@ -151,12 +152,13 @@ namespace Projet_GONLO
                 if (listButtons[currPosition].BackColor == Color.Green)
                 {
                     clickMovMonster(currPosition);
-                    
+
                 }
 
                 //Attack
                 else if (listButtons[currPosition].BackColor == Color.Red)
                 {
+                    getDefMonster(currPosition);
                     clickAtkMonster(currPosition);
                     counterMov = players[turn].CurrMonster.Movement;
                 }
@@ -166,7 +168,7 @@ namespace Projet_GONLO
                 //Unfinished movement
                 if (counterMov != players[turn].CurrMonster.Movement)
                 {
-                    activateMovButtons(players[turn].CurrMonster.Position); 
+                    activateMovButtons(players[turn].CurrMonster.Position);
                 }
 
 
@@ -189,37 +191,155 @@ namespace Projet_GONLO
             }
         }
 
+        private void getDefMonster(int currPosition)
+        {
+            Player tmp = null;
+            if (turn == 0)
+            {
+                tmp = players[1];
+            }
+            else
+            {
+                tmp = players[0];
+            }
+
+            for (int i = 0; i < tmp.ListMonsters.Count; i++)
+            {
+                if (tmp.ListMonsters[i].Position == currPosition)
+                {
+                    defendingMonster = tmp.ListMonsters[i];
+                    MessageBox.Show("" + defendingMonster.Name, "Defending monster");
+                }
+            }
+
+        }
+
         private void clickAtkMonster(int currPosition)
         {
             for (int i = 0; i < players[turn].ListMonsters.Count; i++)
             {
                 if (players[turn].CurrMonster == players[turn].ListMonsters[i])
                 {
+                    disableButtons();
+                    BtnDice.Enabled = true;
                     MessageBox.Show("Roll the dice to get a new Attack value", "Attack");
-                    int diceValueAtk = rollDice();
-
-                    MessageBox.Show("Roll the dice to get a new Defense value", "Defense");
-                    int diceValueDef = rollDice();
-
-                    if (dice != 0){
-                        attack(currPosition, players[turn].ListMonsters[i], diceValueAtk);
-                    }
+                    rollDice();
                 }
             }
-           
+
         }
 
-        private int rollDice()
+        private void rollDice()
         {
-            BtnDice.Enabled = true;
-            return 0;
+            int newAtk = 0;
+            Random rng = new Random();
+            int dice = rng.Next(1, 7);
+            switch (dice)
+            {
+                case 1:
+                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_one;
+                    if (roll == 0)
+                    {
+                        newAtk = attack(players[turn].CurrMonster, dice);
+                        roll++;
+                        rollDice();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Roll the dice to get a new Defense value", "Defense");
+                        defend(dice, newAtk);
+                        roll = 0;
+                    }
+                    break;
+
+                case 2:
+                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_two;
+                    if (roll == 0)
+                    {
+                        attack(players[turn].CurrMonster, dice);
+                        roll++;
+                        rollDice();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Roll the dice to get a new Defense value", "Defense");
+                        defend(dice, newAtk);
+                        roll = 0;
+                    }
+                    break;
+
+                case 3:
+                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_three;
+                    if (roll == 0)
+                    {
+                        attack(players[turn].CurrMonster, dice);
+                        roll++;
+                        rollDice();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Roll the dice to get a new Defense value", "Defense");
+                        defend(dice, newAtk);
+                        roll = 0;
+                    }
+                    break;
+
+                case 4:
+                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_four;
+                    if (roll == 0)
+                    {
+                        attack(players[turn].CurrMonster, dice);
+                        roll++;
+                        rollDice();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Roll the dice to get a new Defense value", "Defense");
+                        defend(dice, newAtk);
+                        roll = 0;
+                    }
+                    break;
+
+                case 5:
+                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_five;
+                    if (roll == 0)
+                    {
+                        attack(players[turn].CurrMonster, dice);
+                        roll++;
+                        rollDice();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Roll the dice to get a new Defense value", "Defense");
+                        defend(dice, newAtk);
+                        roll = 0;
+                    }
+                    break;
+
+                case 6:
+                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_six;
+                    if (roll == 0)
+                    {
+                        attack(players[turn].CurrMonster, dice);
+                        roll++;
+                        rollDice();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Roll the dice to get a new Defense value", "Defense");
+                        defend(dice, newAtk);
+                        roll = 0;
+                    }
+                    break;
+            }
         }
 
-        private void attack(int currPosition, Monster monster, int diceValueAtk)
+        private int attack(Monster monster, int diceValueAtk)
         {
             int newValueAtk = monster.Attack;
             newValueAtk += diceValueAtk;
-            MessageBox.Show(""+newValueAtk,"New Attack Value");
+            MessageBox.Show("" + newValueAtk, "New Attack Value");
+            return newValueAtk;
         }
 
         private void clickMovMonster(int currPosition)
@@ -307,7 +427,7 @@ namespace Projet_GONLO
 
         private void changeLabel()
         {
-            
+
             if (turn == 0)
             {
                 LblPlayerTurn.Text = "Player 2's turn";
@@ -485,33 +605,94 @@ namespace Projet_GONLO
 
         private void BtnDice_Click(object sender, EventArgs e)
         {
-            Random rng = new Random();
-            dice = rng.Next(1, 7);
-            switch (dice)
+
+
+        }
+
+        private void defend(int dice, int newAtk)
+        {
+            int newDef = defendingMonster.Defense;
+            newDef += dice;
+            MessageBox.Show("" + newDef, "New Defense Value");
+            int whoWins = 0; //0 = attacker wins / 1 = defender wins
+
+            if (newAtk - newDef >= 5)
             {
-                case 1:
-                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_one;
-                    break;
+                whoWins = 0;
+                kill(whoWins);
+            }
+            else if (newAtk - newDef <= 4 && newAtk - newDef >= 1)
+            {
+                whoWins = 0;
+                push(whoWins);
+            }
+            else if (newAtk == newDef)
+            {
+                whoWins = 0;
+                push(whoWins);
+            }
+            else if (newDef - newAtk >= 5)
+            {
+                whoWins = 1;
+                push(whoWins);
+            }
+            else if (newDef - newAtk <= 4 && newDef - newAtk >= 1)
+            {
+                whoWins = 1;
+                kill(whoWins);
+            }
 
-                case 2:
-                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_two;
-                    break;
+        }
 
-                case 3:
-                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_three;
-                    break;
+        private void push(int whoWins)
+        {
+            if (whoWins == 0)
+            {
 
-                case 4:
-                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_four;
-                    break;
+            }
+            else
+            {
 
-                case 5:
-                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_five;
-                    break;
+            }
+        }
 
-                case 6:
-                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_six;
-                    break;
+        private void kill(int whoWins)
+        {
+            int tmp;
+
+            if (turn == 0)
+            {
+                tmp = 1;
+            }
+            else
+            {
+                tmp = 0;
+            }
+
+
+            if (whoWins == 0)
+            {
+                for (int i = 0; i < players[tmp].ListMonsters.Count; i++)
+                {
+                    if (defendingMonster == players[tmp].ListMonsters[i])
+                    {
+                        players[tmp].ListMonsters.Remove(players[tmp].ListMonsters[i]);
+
+
+                        for (int j = 0; j < listButtons.Count; j++)
+                        {
+                            if (j == defendingMonster.Position)
+                            {
+                                listButtons[j].BackgroundImage = null;
+                            }
+                        }
+
+                    }
+                }
+            }
+            else
+            {
+
             }
         }
 
@@ -538,22 +719,16 @@ namespace Projet_GONLO
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            MenuAccueil ma = new MenuAccueil();
+            ma.Player1 = player1;
+            ma.ShowDialog();
             this.Close();
         }
 
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("Dejarik_Holochess_Rules.pdf");
-        }
-
-        private void LblAction_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
