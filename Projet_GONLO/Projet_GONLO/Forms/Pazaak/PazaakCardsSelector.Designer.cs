@@ -431,12 +431,11 @@
             // 
             // MTxtBoxWager
             // 
-            this.MTxtBoxWager.Location = new System.Drawing.Point(124, 640);
-            this.MTxtBoxWager.Mask = "999999999";
+            this.MTxtBoxWager.Location = new System.Drawing.Point(45, 640);
+            this.MTxtBoxWager.Mask = "0000000000";
             this.MTxtBoxWager.Name = "MTxtBoxWager";
-            this.MTxtBoxWager.Size = new System.Drawing.Size(72, 28);
+            this.MTxtBoxWager.Size = new System.Drawing.Size(226, 28);
             this.MTxtBoxWager.TabIndex = 52;
-            this.MTxtBoxWager.ValidatingType = typeof(int);
             this.MTxtBoxWager.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.MTxtBoxWager_MaskInputRejected);
             this.MTxtBoxWager.TextChanged += new System.EventHandler(this.MTxtBoxWager_TextChanged);
             // 

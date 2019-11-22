@@ -72,7 +72,10 @@ namespace Projet_GONLO
 
         private void BtnEllReady_Click(object sender, EventArgs e)
         {
-
+            if (playerDeck.Count() != 10 || (MTxtBoxWager.Text.Equals("")))
+            {
+                BtnEllReady.Enabled = false;
+            }
             for (int i = 0; i < playerDeck.Count; i++)
             {
                 playerDeckImage.Add(playerDeck[i].BackgroundImage);
@@ -100,11 +103,9 @@ namespace Projet_GONLO
                     playerDeck.ElementAt(nbCartes).BackgroundImage = roundPanel.BackgroundImage;
                     nbCartes++;
                 }
-
             }
             else
             {
-
                 playerDeck.ElementAt(positionCarteEnleve.ElementAt(0)).BackgroundImage = roundPanel.BackgroundImage;
                 positionCarteEnleve.RemoveAt(0);
                 nbCartes++;
@@ -177,11 +178,13 @@ namespace Projet_GONLO
         private void MTxtBoxWager_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             DialogResult result = MessageBox.Show("You have to write down a number", "ATTENTION");
+            MTxtBoxWager.Text = "";
         }
 
         private void MTxtBoxWager_TextChanged(object sender, EventArgs e)
         {
             BtnEllReady.Enabled = true;
         }
+
     }
 }
