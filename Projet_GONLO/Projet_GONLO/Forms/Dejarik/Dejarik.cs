@@ -683,9 +683,9 @@ namespace Projet_GONLO
                                 var random = new Random();
                                 int newPos = accessibleButtons[random.Next(accessibleButtons.Count)];
                                 
-                                setButton(players[tmpAtk].ListMonsters[j].Position, null);
-                                players[tmpAtk].ListMonsters[j].Position = newPos;
-                                setButton(newPos, players[tmpAtk].ListMonsters[j].Picture);
+                                setButton(players[tmpAtk].ListMonsters[i].Position, null);
+                                players[tmpAtk].ListMonsters[i].Position = newPos;
+                                setButton(newPos, players[tmpAtk].ListMonsters[i].Picture);
                                 
 
                             }
@@ -717,9 +717,9 @@ namespace Projet_GONLO
                                 var random = new Random();
                                 int newPos = accessibleButtons[random.Next(accessibleButtons.Count)];
 
-                                setButton(players[tmpDef].ListMonsters[j].Position, null);
-                                players[tmpDef].ListMonsters[j].Position = newPos;
-                                setButton(newPos, players[tmpDef].ListMonsters[j].Picture);
+                                setButton(defendingMonster.Position, null);
+                                players[tmpDef].ListMonsters[i].Position = newPos;
+                                setButton(newPos, players[tmpDef].ListMonsters[i].Picture);
                             }
                         }
 
