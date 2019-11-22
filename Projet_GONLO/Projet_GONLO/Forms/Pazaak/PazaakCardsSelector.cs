@@ -72,10 +72,10 @@ namespace Projet_GONLO
 
         private void BtnEllReady_Click(object sender, EventArgs e)
         {
-            if (playerDeck.Count() != 10 || (MTxtBoxWager.Text.Equals("")))
-            {
-                BtnEllReady.Enabled = false;
-            }
+            //if (playerDeck.Count() != 10 || (MTxtBoxWager.Text.Equals("")))
+            //{
+            //    BtnEllReady.Enabled = false;
+            //}
             for (int i = 0; i < playerDeck.Count; i++)
             {
                 playerDeckImage.Add(playerDeck[i].BackgroundImage);
@@ -114,6 +114,23 @@ namespace Projet_GONLO
             {
                 MessageBox.Show("You have the maximum cards allowed");
             }
+
+
+
+            if (NbCardChosen() && MTxtBoxWager.Text == "")
+            {
+                BtnEllReady.Enabled = false;
+            }
+            else
+            {
+                BtnEllReady.Enabled = true;
+            }
+
+        }
+
+        private bool NbCardChosen()
+        {
+            return false;
         }
 
         private int FindPositionPanel(RoundPanel roundPanel)
@@ -140,6 +157,7 @@ namespace Projet_GONLO
                 positionCarteEnleve.Add(idx);
                 nbCartes--;
             }
+            BtnEllReady.Enabled = false;
 
         }
 
@@ -183,7 +201,15 @@ namespace Projet_GONLO
 
         private void MTxtBoxWager_TextChanged(object sender, EventArgs e)
         {
-            BtnEllReady.Enabled = true;
+            if (MTxtBoxWager.Text != "" && playerDeck.Count() == 10)
+            {
+                BtnEllReady.Enabled = true;
+            }
+            else
+            {
+                BtnEllReady.Enabled = false;
+            }
+            
         }
 
     }
