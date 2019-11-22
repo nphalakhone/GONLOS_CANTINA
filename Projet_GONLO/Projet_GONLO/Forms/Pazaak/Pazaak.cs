@@ -50,7 +50,7 @@ namespace Projet_GONLO
 
         int nbVictoirePlayer = 0;
         int nbVictoireAi = 0;
-
+        int nbCarteUtiliseAi = 0;
 
         public Pazaak(List<Image> playerDeckPazaak, List<int> carteIntEnvoye)
         {
@@ -149,6 +149,8 @@ namespace Projet_GONLO
 
         private void End_Turn_Click(object sender, EventArgs e)
         {
+            if (nbCardsPlayer != 9)
+            {
             int pointsAdded = rand.Next(1, 11);
             CPBoxAI.BackColor = Color.Black;
             CPBoxPlayer.BackColor = Color.Maroon;
@@ -158,6 +160,11 @@ namespace Projet_GONLO
             PlayerPoints += pointsAdded;
             LblPointsPlayer.Text = PlayerPoints.ToString();
             AiTurn();
+            }
+            else
+            {
+                Stand();
+            }
         }
 
         private void AiTurn()
@@ -219,6 +226,7 @@ namespace Projet_GONLO
             TabPanelRight[nbCardsAi].BackgroundImageLayout = ImageLayout.Stretch;
             LblPointsAi.Text = AiPoints.ToString();
             nbCardsAi++;
+            nbCarteUtiliseAi++;
 
         }
         private void AddCard(Move moveAI)
@@ -242,35 +250,52 @@ namespace Projet_GONLO
         }
         private Move DetermineMove()
         {
-            if (AiPoints <= 14)
+            if (nbCardsAi != 9)
             {
-                return Projet_GONLO.Move.End_Turn;
-            }
-            else if (AiPoints == 20 || AiPoints == 19 || AiPoints == 18 || addedPlusMinus)
-            {
-                return Projet_GONLO.Move.Stand;
-            }
-            else if (AiPoints > 20)
-            {
-                return MinusCard();
-            }
-            else if (AiPoints > 14 && AiPoints < 20)
-            {
-                return PlusCard();
+                if (AiPoints <= 14)
+                {
+                    return Projet_GONLO.Move.End_Turn;
+                }   
+                else if (AiPoints == 20 || AiPoints == 19 || AiPoints == 18 || addedPlusMinus)
+                {
+                    return Projet_GONLO.Move.Stand;
+                }
+                else if (AiPoints > 20)
+                {
+                    return MinusCard();
+                }
+                else if (AiPoints > 14 && AiPoints < 20)
+                {
+                    return PlusCard();
+                }
             }
             return Projet_GONLO.Move.Stand;
-
         }
 
         private Move AddPlusMinusCard()
         {
-            for (int i = 0; i < AiDeck.Length; i++)
-            {
-                if (AiDeck[i] > 6 && AiDeck[i] < 13)
+            if (PlayerPoints < 21) { 
+
+
+                for (int i = 0; i < AiDeck.Length; i++)
                 {
-                    addedPlusMinus = true;
-                    return DetermineCard(i);
+                    if (AiDeck[i] > 6 && AiDeck[i] < 13)
+                    {
+                        if (AiPoints > 20 && AiPoints - (AiDeck[i] - 6) > PlayerPoints && AiPoints - (AiDeck[i] - 6) <= 20)
+                        {
+                            addedPlusMinus = true;
+                            return DetermineCard(i);
+                        }
+                        else if (AiPoints < 20 && AiDeck[i] + (AiPoints-6) <= 20 && AiDeck[i] + (AiPoints - 6) >= PlayerPoints)
+                        {
+                            addedPlusMinus = true;
+                            return DetermineCard(i);
+                        }
+                        
+                    }
                 }
+
+
             }
 
 
@@ -287,11 +312,15 @@ namespace Projet_GONLO
 
                     if (AiDeck[i] > 0)
                     {
-                        if (AiDeck[i] < 7 && AiDeck[i] + AiPoints <= 20 && AiDeck[i] + AiPoints >= PlayerPoints)
+                        if (AiDeck[i] < 7 && AiDeck[i] + AiPoints <= 20) 
                         {
-                            MessageBox.Show(AiDeck[i].ToString());
+                            if (AiDeck[i] + AiPoints >= PlayerPoints ||  4 - nbCarteUtiliseAi > 0)
+                            {
+                                MessageBox.Show(AiDeck[i].ToString());
 
-                            return DetermineCard(i);
+                                return DetermineCard(i);
+                            }
+
                         }
                     }
                 }
@@ -307,7 +336,7 @@ namespace Projet_GONLO
                 for (int i = 0; i < AiDeck.Length; i++)
                 {
 
-                    if (AiDeck[i] < 0 && AiPoints + AiDeck[i] <= 20)
+                    if (AiDeck[i] < 0 && AiPoints + AiDeck[i] <= 20 && AiPoints + AiDeck[i] >= PlayerPoints)
                     {
                         return DetermineCard(i);
 
@@ -335,17 +364,20 @@ namespace Projet_GONLO
 
         private void Stand_Click(object sender, EventArgs e)
         {
+            Stand();
+        }
+
+        private void Stand()
+        {
             playerStand = true;
             VerifyStands();
             while (!gameOver)
             {
                 AiTurn();
                 VerifyStands();
-                
+
             }
             ResetGame();
-            
-
         }
 
         private void VerifyStands()
@@ -620,6 +652,7 @@ namespace Projet_GONLO
 
             LblPointsAi.Text = "0";
             LblPointsPlayer.Text = "0";
+            nbCarteUtiliseAi = 0;
 
             if (nbVictoirePlayer == 3)
             {
