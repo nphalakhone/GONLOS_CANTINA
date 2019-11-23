@@ -19,7 +19,7 @@ namespace Projet_GONLO
         int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2, newTurn = 1, roll = 0, newAtk = 0;
         List<String> logMonster;
         Monster lastMonster;
-        Monster defendingMonster = null;
+        Monster defendingMonster = null, attackingMonster = null;
 
 
         internal Player Player1 { get => player1; set => player1 = value; }
@@ -33,7 +33,6 @@ namespace Projet_GONLO
             initalizeListButtons();
             Tile.CreateTiles();
             addLogMonster(monster);
-            BtnDice.Enabled = false;
         }
 
         private void addLogMonster(string monster)
@@ -122,6 +121,7 @@ namespace Projet_GONLO
 
             for (int i = 0; i < listButtons.Count; i++)
             {
+                listButtons[i].BackgroundImage = null;
                 listButtons[i].Click += btn_Click;
             }
 
@@ -143,7 +143,14 @@ namespace Projet_GONLO
                 activateMovButtons(players[turn].CurrMonster.Position);
                 activateAttackButtons(players[turn].CurrMonster.Position);
 
+                for (int i = 0; i < players[turn].ListMonsters.Count; i++)
+                {
+                    if (players[turn].ListMonsters[i].Position == currPosition)
+                    {
+                        attackingMonster = players[turn].ListMonsters[i];
+                    }
 
+                }
             }
             //after first click
             else if (firstClick > 0)
@@ -161,6 +168,18 @@ namespace Projet_GONLO
                     getDefMonster(currPosition);
                     clickAtkMonster(currPosition);
                     counterMov = players[turn].CurrMonster.Movement;
+                }
+
+                else
+                {
+                    for (int i = 0; i < players[turn].ListMonsters.Count; i++)
+                    {
+                        if (players[turn].ListMonsters[i].Position == currPosition)
+                        {
+                            attackingMonster = players[turn].ListMonsters[i];
+                        }
+
+                    }
                 }
 
                 disableButtons();
@@ -221,7 +240,6 @@ namespace Projet_GONLO
                 if (players[turn].CurrMonster == players[turn].ListMonsters[i])
                 {
                     disableButtons();
-                    BtnDice.Enabled = true;
                     MessageBox.Show("Roll the dice to get a new Attack value", "Attack");
                     rollDice();
                 }
@@ -319,7 +337,7 @@ namespace Projet_GONLO
                     PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_six;
                     if (roll == 0)
                     {
-                        newAtk =attack(players[turn].CurrMonster, dice);
+                        newAtk = attack(players[turn].CurrMonster, dice);
                         roll++;
                         rollDice();
                     }
@@ -586,19 +604,18 @@ namespace Projet_GONLO
         /// </summary>
         private void activateCurrPlayer()
         {
+
             for (int i = 0; i < listButtons.Count; i++)
             {
-                if (!(i == players[turn].AttMonster.Position || i == players[turn].DefMonster.Position
-                    || i == players[turn].MovMonster.Position || i == players[turn].PowMonster.Position))
-                {
-                    listButtons[i].Enabled = false;
-                }
-                else
-                {
-                    listButtons[i].Enabled = true;
-                    //listButtons[i].FlatAppearance.BorderColor = Color.Red;
-                    //listButtons[i].FlatAppearance.BorderSize = 5;
-                }
+                listButtons[i].Enabled = false;
+            }
+
+
+            for (int j = 0; j < players[turn].ListMonsters.Count; j++)
+            {
+                listButtons[players[turn].ListMonsters[j].Position].Enabled = true;
+                //listButtons[i].FlatAppearance.BorderColor = Color.Red;
+                //listButtons[i].FlatAppearance.BorderSize = 5;
             }
         }
 
@@ -613,62 +630,52 @@ namespace Projet_GONLO
             int newDef = defendingMonster.Defense;
             newDef += dice;
             MessageBox.Show("" + newDef, "New Defense Value");
-            int whoWins = 0; //0 = attacker wins / 1 = defender wins
+            //int whoWins = 0; //0 = attacker wins / 1 = defender wins
 
             if (newAtk - newDef >= 5)
             {
-                whoWins = 0;
-                kill(whoWins);
+                kill("Attacker");
             }
             else if (newAtk - newDef <= 4 && newAtk - newDef >= 1)
             {
-                whoWins = 0;
-                push(whoWins);
+                push("Attacker");
             }
             else if (newAtk == newDef)
             {
-                whoWins = 0;
-                push(whoWins);
+                push("Attacker");
             }
             else if (newDef - newAtk >= 5)
             {
-                whoWins = 1;
-                kill(whoWins);
+                kill("Defender");
             }
             else if (newDef - newAtk <= 4 && newDef - newAtk >= 1)
             {
-                whoWins = 1;
-                push(whoWins);
+                push("Defender");
             }
 
         }
 
-        private void push(int whoWins)
+        private void push(String winner)
         {
-            int tmpAtk;
-
-            int tmpDef;
+            int tmpAtk = 0, tmpDef = 0;
 
             if (turn == 0)
             {
                 tmpAtk = 0;
                 tmpDef = 1;
             }
-            else
+            else if (turn == 1)
             {
                 tmpAtk = 1;
                 tmpDef = 0;
             }
 
-            if (whoWins == 0)
+            if (winner.Equals("Attacker"))
             {
-                for (int i = 0; i < players[tmpAtk].ListMonsters.Count; i++)
+                for (int i = 0; i < players[tmpDef].ListMonsters.Count; i++)
                 {
-                    if (defendingMonster == players[tmpAtk].ListMonsters[i])
+                    if (defendingMonster == players[tmpDef].ListMonsters[i])
                     {
-                        players[tmpAtk].ListMonsters.Remove(players[tmpAtk].ListMonsters[i]);
-
-
                         for (int j = 0; j < listButtons.Count; j++)
                         {
                             if (j == defendingMonster.Position)
@@ -677,112 +684,107 @@ namespace Projet_GONLO
 
                                 for (int x = 0; x < Tile.ListTiles[j].ListMovement.Count; x++)
                                 {
-                                    accessibleButtons.Add(Tile.ListTiles[j].ListMovement[x].Number);
+                                    if (listButtons[Tile.ListTiles[j].ListMovement[x].Number].BackgroundImage == null)
+                                    {
+                                        accessibleButtons.Add(Tile.ListTiles[j].ListMovement[x].Number);
+                                    }
                                 }
 
                                 var random = new Random();
                                 int newPos = accessibleButtons[random.Next(accessibleButtons.Count)];
-                                
+
+                                setButton(players[tmpDef].ListMonsters[i].Position, null);
+                                players[tmpDef].ListMonsters[i].Position = newPos;
+                                setButton(newPos, players[tmpDef].ListMonsters[i].Picture);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            else if (winner.Equals("Defender"))
+            {
+                for (int i = 0; i < players[tmpAtk].ListMonsters.Count; i++)
+                {
+                    if (attackingMonster == players[tmpAtk].ListMonsters[i])
+                    {
+                        for (int j = 0; j < listButtons.Count; j++)
+                        {
+                            if (j == attackingMonster.Position)
+                            {
+                                List<int> accessibleButtons = new List<int>();
+
+                                for (int x = 0; x < Tile.ListTiles[j].ListMovement.Count; x++)
+                                {
+                                    if (listButtons[Tile.ListTiles[j].ListMovement[x].Number].BackgroundImage == null)
+                                    {
+                                        accessibleButtons.Add(Tile.ListTiles[j].ListMovement[x].Number);
+                                    }
+                                }
+
+                                var random = new Random();
+                                int newPos = accessibleButtons[random.Next(accessibleButtons.Count)];
+
                                 setButton(players[tmpAtk].ListMonsters[i].Position, null);
                                 players[tmpAtk].ListMonsters[i].Position = newPos;
                                 setButton(newPos, players[tmpAtk].ListMonsters[i].Picture);
-                                
-
+                                break;
                             }
                         }
-
-                    }
-                }
-            }
-            else
-            {
-                for (int i = 0; i < players[tmpDef].ListMonsters.Count; i++)
-                {
-                    if (defendingMonster == players[tmpDef].ListMonsters[i])
-                    {
-                        players[tmpDef].ListMonsters.Remove(players[tmpDef].ListMonsters[i]);
-
-
-                        for (int j = 0; j < listButtons.Count; j++)
-                        {
-                            if (j == defendingMonster.Position)
-                            {
-                                List<int> accessibleButtons = new List<int>();
-
-                                for (int x = 0; x < Tile.ListTiles[j].ListMovement.Count; x++)
-                                {
-                                    accessibleButtons.Add(Tile.ListTiles[j].ListMovement[x].Number);
-                                }
-
-                                var random = new Random();
-                                int newPos = accessibleButtons[random.Next(accessibleButtons.Count)];
-
-                                setButton(defendingMonster.Position, null);
-                                players[tmpDef].ListMonsters[i].Position = newPos;
-                                setButton(newPos, players[tmpDef].ListMonsters[i].Picture);
-                            }
-                        }
-
                     }
                 }
             }
         }
 
-        private void kill(int whoWins)
+        private void kill(String winner)
         {
-            int tmpAtk;
-
-            int tmpDef;
+            int tmpAtk = 0, tmpDef = 0;
 
             if (turn == 0)
-            {
-                tmpAtk = 1;
-                tmpDef = 0;
-            }
-            else
             {
                 tmpAtk = 0;
                 tmpDef = 1;
             }
-
-
-            if (whoWins == 0)
+            else if (turn == 1)
             {
-                for (int i = 0; i < players[tmpAtk].ListMonsters.Count; i++)
-                {
-                    if (defendingMonster == players[tmpAtk].ListMonsters[i])
-                    {
-                        players[tmpAtk].ListMonsters.Remove(players[tmpAtk].ListMonsters[i]);
-
-
-                        for (int j = 0; j < listButtons.Count; j++)
-                        {
-                            if (j == defendingMonster.Position)
-                            {
-                                listButtons[j].BackgroundImage = null;
-                            }
-                        }
-
-                    }
-                }
+                tmpAtk = 1;
+                tmpDef = 0;
             }
-            else
+
+
+            if (winner.Equals("Attacker"))
             {
                 for (int i = 0; i < players[tmpDef].ListMonsters.Count; i++)
                 {
                     if (defendingMonster == players[tmpDef].ListMonsters[i])
                     {
                         players[tmpDef].ListMonsters.Remove(players[tmpDef].ListMonsters[i]);
-
-
                         for (int j = 0; j < listButtons.Count; j++)
                         {
                             if (j == defendingMonster.Position)
                             {
                                 listButtons[j].BackgroundImage = null;
+                                break;
                             }
                         }
-
+                    }
+                }
+            }
+            else if (winner.Equals("Defender"))
+            {
+                for (int i = 0; i < players[tmpAtk].ListMonsters.Count; i++)
+                {
+                    if (attackingMonster == players[tmpAtk].ListMonsters[i])
+                    {
+                        players[tmpAtk].ListMonsters.Remove(players[tmpAtk].ListMonsters[i]);
+                        for (int j = 0; j < listButtons.Count; j++)
+                        {
+                            if (j == attackingMonster.Position)
+                            {
+                                listButtons[j].BackgroundImage = null;
+                                break;
+                            }
+                        }
                     }
                 }
             }
