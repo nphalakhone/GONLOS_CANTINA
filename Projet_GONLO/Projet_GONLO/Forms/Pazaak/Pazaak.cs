@@ -52,15 +52,26 @@ namespace Projet_GONLO
         int nbVictoireAi = 0;
         int nbCarteUtiliseAi = 0;
 
-        public Pazaak(List<Image> playerDeckPazaak, List<int> carteIntEnvoye)
+        public Pazaak(List<Image> playerDeckPazaak, int[] carteIntEnvoye)
         {
             this.playerDeckPazaak = playerDeckPazaak;
-            this.carteIntEnvoye = carteIntEnvoye;
+            this.carteIntEnvoye = TabToList(carteIntEnvoye);
 
             InitializeComponent();
             setupPlayerdeck();
             setupBoard();
         }
+
+        private List<int> TabToList(int[] carteIntEnvoye)
+        {
+            List<int> listRetourner = new List<int>();
+            for (int i = 0; i < carteIntEnvoye.Length; i++)
+            {
+                listRetourner.Add(carteIntEnvoye[i]);
+            }
+            return listRetourner;
+        }
+
         internal int CreditsWaged { get => credsWaged; set => credsWaged = value; }
         internal Player Player1 { get => playerPazaak; set => playerPazaak = value; }
         public bool RoundOver1 { get => RoundOver; set => RoundOver = value; }

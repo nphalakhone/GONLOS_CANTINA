@@ -21,7 +21,11 @@ namespace Projet_GONLO
         int creditsWaged = 0;
 
         List<Panel> listeCarteTotal = new List<Panel>();
-        List<int> carteIntEnvoye = new List<int>();
+
+
+        //List<int> carteIntEnvoye = new List<int>();
+        int[] carteIntEnvoye = new int[10];
+
         public PazaakCardsSelector()
         {
             InitializeComponent();
@@ -95,18 +99,22 @@ namespace Projet_GONLO
         {
             RoundPanel roundPanel = sender as RoundPanel;
             int position = FindPositionPanel(roundPanel);
-            carteIntEnvoye.Add(position);
+            
             if (positionCarteEnleve.Count == 0)
             {
                 if (nbCartes < 10)
                 {
                     playerDeck.ElementAt(nbCartes).BackgroundImage = roundPanel.BackgroundImage;
+                    //carteIntEnvoye.Add(position);
+                    carteIntEnvoye[nbCartes] = position;
                     nbCartes++;
                 }
             }
             else
             {
                 playerDeck.ElementAt(positionCarteEnleve.ElementAt(0)).BackgroundImage = roundPanel.BackgroundImage;
+                //carteIntEnvoye.Add(position);
+                carteIntEnvoye[positionCarteEnleve[0]] = position;
                 positionCarteEnleve.RemoveAt(0);
                 nbCartes++;
             }
@@ -117,20 +125,27 @@ namespace Projet_GONLO
 
 
 
-            if (NbCardChosen() && MTxtBoxWager.Text == "")
+            if (AllCardsSelected() && MTxtBoxWager.Text != "")
             {
-                BtnEllReady.Enabled = false;
+                BtnEllReady.Enabled = true;
             }
             else
             {
-                BtnEllReady.Enabled = true;
+                BtnEllReady.Enabled = false;
             }
 
         }
 
-        private bool NbCardChosen()
+        private bool AllCardsSelected()
         {
-            return false;
+            for (int i = 0; i < playerDeck.Count; i++)
+            {
+                if (playerDeck[i].BackgroundImage == null)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         private int FindPositionPanel(RoundPanel roundPanel)
@@ -150,15 +165,32 @@ namespace Projet_GONLO
             RoundPanel roundPanel = sender as RoundPanel;
             if (roundPanel.BackgroundImage != null)
             {
+                int idx = playerDeck.IndexOf(roundPanel);
+                RemoveElementInt(roundPanel, idx);
                 roundPanel.BackgroundImage = null;
                 BtnEllReady.Enabled = false;
-                int idx = playerDeck.IndexOf(roundPanel);
-                MessageBox.Show(idx.ToString());
+                
+                //MessageBox.Show(idx.ToString());
+               
                 positionCarteEnleve.Add(idx);
                 nbCartes--;
             }
-            BtnEllReady.Enabled = false;
+            //BtnEllReady.Enabled = false;
 
+        }
+
+        private void RemoveElementInt(RoundPanel roundPanel, int idx)
+        {
+            int position = FindPositionPanel(roundPanel);
+            carteIntEnvoye[idx] = 100;
+            //for (int i = 0; i < carteIntEnvoye.Length; i++)
+            //{
+            //    if (carteIntEnvoye[i] == position)
+            //    {
+            //        carteIntEnvoye[i] = 100; //100 = vide
+            //        break;
+            //    }
+            //}
         }
 
         public int CheckDeck()
@@ -201,7 +233,7 @@ namespace Projet_GONLO
 
         private void MTxtBoxWager_TextChanged(object sender, EventArgs e)
         {
-            if (MTxtBoxWager.Text != "" && playerDeck.Count() == 10)
+            if (MTxtBoxWager.Text != "" && AllCardsSelected())
             {
                 BtnEllReady.Enabled = true;
             }
