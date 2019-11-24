@@ -60,7 +60,6 @@
             this.LblPlayerTurn = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.PnlDe = new System.Windows.Forms.Panel();
-            this.BtnDice = new System.Windows.Forms.Button();
             this.Button1 = new Projet_GONLO.ButtonCircle();
             this.Button2 = new Projet_GONLO.ButtonCircle();
             this.Button3 = new Projet_GONLO.ButtonCircle();
@@ -103,12 +102,13 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.filesToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1440, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1441, 25);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "MnDejarik";
             // 
@@ -410,7 +410,7 @@
             this.ListBoxLog.ItemHeight = 12;
             this.ListBoxLog.Location = new System.Drawing.Point(6, 183);
             this.ListBoxLog.Name = "ListBoxLog";
-            this.ListBoxLog.Size = new System.Drawing.Size(552, 220);
+            this.ListBoxLog.Size = new System.Drawing.Size(552, 208);
             this.ListBoxLog.TabIndex = 6;
             // 
             // LblPlayerTurn
@@ -429,7 +429,6 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded21;
             this.panel4.Controls.Add(this.PnlDe);
-            this.panel4.Controls.Add(this.BtnDice);
             this.panel4.Location = new System.Drawing.Point(864, 454);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(564, 411);
@@ -439,22 +438,10 @@
             // 
             this.PnlDe.BackgroundImage = global::Projet_GONLO.Properties.Resources.dice_six_faces_one;
             this.PnlDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PnlDe.Location = new System.Drawing.Point(132, 19);
+            this.PnlDe.Location = new System.Drawing.Point(136, 50);
             this.PnlDe.Name = "PnlDe";
             this.PnlDe.Size = new System.Drawing.Size(300, 300);
             this.PnlDe.TabIndex = 3;
-            // 
-            // BtnDice
-            // 
-            this.BtnDice.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDice.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.BtnDice.Location = new System.Drawing.Point(209, 351);
-            this.BtnDice.Name = "BtnDice";
-            this.BtnDice.Size = new System.Drawing.Size(149, 32);
-            this.BtnDice.TabIndex = 2;
-            this.BtnDice.Text = "Roll the dice";
-            this.BtnDice.UseVisualStyleBackColor = true;
-            this.BtnDice.Click += new System.EventHandler(this.BtnDice_Click);
             // 
             // Button1
             // 
@@ -811,7 +798,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.StarsBackground;
-            this.ClientSize = new System.Drawing.Size(1440, 876);
+            this.ClientSize = new System.Drawing.Size(1441, 876);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Button1);
@@ -874,7 +861,6 @@
         private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private RoundPanel PnlDice;
         private ButtonCircle Button15;
         private ButtonCircle Button16;
         private ButtonCircle Button17;
@@ -924,7 +910,6 @@
         private System.Windows.Forms.Label LblPlayerTurn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel PnlDe;
-        private System.Windows.Forms.Button BtnDice;
         private System.Windows.Forms.Label lblRound;
     }
 }
