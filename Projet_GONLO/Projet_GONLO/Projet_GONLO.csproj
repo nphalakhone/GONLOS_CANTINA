@@ -173,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Slippery_Slopes_Cantina.jpg" />
+    <None Include="Resources\StarsBackground3.png" />
     <None Include="Resources\StarsBackground2.png" />
     <None Include="Resources\201-2018253_sign-symbol-icons-in-svg-and-png-yellow.png" />
     <None Include="Resources\arrows.png" />

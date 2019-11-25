@@ -160,8 +160,8 @@
   <data name="CartePlusMinus6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Carte+-6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backButtonBLuesteel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backButtonBLuesteel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BlueSteelFaded2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BlueSteelFaded2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BlueSteelFaded21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BlueSteelFaded2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,6 +184,9 @@
   <data name="Ngok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Monsters\Ngok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="grimtaash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Monsters\grimtaash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CarteMinus6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Carte-6.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,9 +208,6 @@
   <data name="klorslaug1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Monsters\klorslaug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dice_six_faces_six" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dice-six-faces-six.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="CartePlusMinus2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Carte+-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -226,8 +226,8 @@
   <data name="ghhhk3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Monsters\ghhhk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backButtongold" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backButtongold.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ghhhk4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Monsters\ghhhk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pazaakEmptyBoard1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pazaakEmptyBoard1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,17 +319,20 @@
   <data name="star_wars_resort" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\star_wars_resort.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="grimtaash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Monsters\grimtaash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backButtongold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backButtongold.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BlueSteelFaded2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BlueSteelFaded2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dice_six_faces_six" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dice-six-faces-six.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CartePlus5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Carte+5.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Carte6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Carte6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carte1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carte1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Carte9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Carte9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -355,10 +358,10 @@
   <data name="pazaakBoard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pazaakBoard.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Carte1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Carte1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backButtonBLuesteel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backButtonBLuesteel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ghhhk4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Monsters\ghhhk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StarsBackground3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StarsBackground3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
