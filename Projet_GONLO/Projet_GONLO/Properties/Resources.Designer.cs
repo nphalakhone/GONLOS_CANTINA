@@ -823,6 +823,16 @@ namespace Projet_GONLO.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap StarsBackground3 {
+            get {
+                object obj = ResourceManager.GetObject("StarsBackground3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SwoopBikeRacing {
             get {
                 object obj = ResourceManager.GetObject("SwoopBikeRacing", resourceCulture);
