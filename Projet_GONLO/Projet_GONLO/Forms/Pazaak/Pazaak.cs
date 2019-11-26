@@ -465,12 +465,16 @@ namespace Projet_GONLO
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string[] lines = { playerPazaak.Name, playerPazaak.Species, playerPazaak.Gender };
-            StreamWriter file = new StreamWriter(@"C:\Users\1156103\Documents\GitHub\GONLOS_CANTINA\Projet_GONLO\Saves\Saves.txt");
-            foreach (string line in lines)
-            {
-                file.WriteLine(line);
-            }
+            string filename = "Saves.txt";
+            string fullPath = Path.GetFullPath(filename);
+            string saveLine = playerPazaak.Name + ";" + playerPazaak.Gender + ";" + playerPazaak.Species + ";"
+                + playerPazaak.Credits.ToString() + playerPazaak.PazaakGamesWon.ToString() + ";" 
+                + playerPazaak.PazaakGamesLost.ToString() + ";" + playerPazaak.DejarikGamesWon.ToString() + ";" + playerPazaak.DejarikGamesLost.ToString();
+
+            Console.WriteLine(saveLine, fullPath);
+
+            StreamWriter file = new StreamWriter(fullPath);
+            
 
         }
 
