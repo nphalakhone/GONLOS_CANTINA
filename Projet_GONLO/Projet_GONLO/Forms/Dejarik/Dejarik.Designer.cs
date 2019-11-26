@@ -178,7 +178,7 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel2.Location = new System.Drawing.Point(864, 29);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(564, 419);
+            this.panel2.Size = new System.Drawing.Size(564, 565);
             this.panel2.TabIndex = 32;
             // 
             // lblRound
@@ -186,7 +186,7 @@
             this.lblRound.AutoSize = true;
             this.lblRound.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRound.ForeColor = System.Drawing.Color.Gold;
-            this.lblRound.Location = new System.Drawing.Point(10, 146);
+            this.lblRound.Location = new System.Drawing.Point(383, 87);
             this.lblRound.Name = "lblRound";
             this.lblRound.Size = new System.Drawing.Size(91, 17);
             this.lblRound.TabIndex = 10;
@@ -209,9 +209,9 @@
             this.groupBox1.Controls.Add(this.imgP1MonsterMov);
             this.groupBox1.Controls.Add(this.imgP2MonsterPow);
             this.groupBox1.Controls.Add(this.imgP1MonsterPow);
-            this.groupBox1.Location = new System.Drawing.Point(130, 51);
+            this.groupBox1.Location = new System.Drawing.Point(7, 120);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(428, 126);
+            this.groupBox1.Size = new System.Drawing.Size(552, 224);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             // 
@@ -220,7 +220,7 @@
             this.LblPow.AutoSize = true;
             this.LblPow.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPow.ForeColor = System.Drawing.Color.Gold;
-            this.LblPow.Location = new System.Drawing.Point(347, 17);
+            this.LblPow.Location = new System.Drawing.Point(488, 16);
             this.LblPow.Name = "LblPow";
             this.LblPow.Size = new System.Drawing.Size(41, 14);
             this.LblPow.TabIndex = 13;
@@ -231,7 +231,7 @@
             this.LblMove.AutoSize = true;
             this.LblMove.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMove.ForeColor = System.Drawing.Color.Gold;
-            this.LblMove.Location = new System.Drawing.Point(270, 17);
+            this.LblMove.Location = new System.Drawing.Point(376, 16);
             this.LblMove.Name = "LblMove";
             this.LblMove.Size = new System.Drawing.Size(38, 14);
             this.LblMove.TabIndex = 12;
@@ -242,7 +242,7 @@
             this.LblDef.AutoSize = true;
             this.LblDef.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDef.ForeColor = System.Drawing.Color.Gold;
-            this.LblDef.Location = new System.Drawing.Point(191, 17);
+            this.LblDef.Location = new System.Drawing.Point(240, 16);
             this.LblDef.Name = "LblDef";
             this.LblDef.Size = new System.Drawing.Size(35, 14);
             this.LblDef.TabIndex = 11;
@@ -253,7 +253,7 @@
             this.LblAtk.AutoSize = true;
             this.LblAtk.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblAtk.ForeColor = System.Drawing.Color.Gold;
-            this.LblAtk.Location = new System.Drawing.Point(111, 17);
+            this.LblAtk.Location = new System.Drawing.Point(124, 16);
             this.LblAtk.Name = "LblAtk";
             this.LblAtk.Size = new System.Drawing.Size(37, 14);
             this.LblAtk.TabIndex = 10;
@@ -264,7 +264,7 @@
             this.LblP2Monstre.AutoSize = true;
             this.LblP2Monstre.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblP2Monstre.ForeColor = System.Drawing.Color.Gold;
-            this.LblP2Monstre.Location = new System.Drawing.Point(6, 80);
+            this.LblP2Monstre.Location = new System.Drawing.Point(6, 161);
             this.LblP2Monstre.Name = "LblP2Monstre";
             this.LblP2Monstre.Size = new System.Drawing.Size(82, 14);
             this.LblP2Monstre.TabIndex = 9;
@@ -275,7 +275,7 @@
             this.LblP1Monstre.AutoSize = true;
             this.LblP1Monstre.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblP1Monstre.ForeColor = System.Drawing.Color.Gold;
-            this.LblP1Monstre.Location = new System.Drawing.Point(6, 34);
+            this.LblP1Monstre.Location = new System.Drawing.Point(6, 56);
             this.LblP1Monstre.Name = "LblP1Monstre";
             this.LblP1Monstre.Size = new System.Drawing.Size(76, 14);
             this.LblP1Monstre.TabIndex = 8;
@@ -284,17 +284,17 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Location = new System.Drawing.Point(1, 76);
+            this.panel3.Location = new System.Drawing.Point(1, 123);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(429, 1);
+            this.panel3.Size = new System.Drawing.Size(5522, 1);
             this.panel3.TabIndex = 5;
             // 
             // imgP2MonsterAtk
             // 
             this.imgP2MonsterAtk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgP2MonsterAtk.Location = new System.Drawing.Point(108, 80);
+            this.imgP2MonsterAtk.Location = new System.Drawing.Point(108, 138);
             this.imgP2MonsterAtk.Name = "imgP2MonsterAtk";
-            this.imgP2MonsterAtk.Size = new System.Drawing.Size(40, 40);
+            this.imgP2MonsterAtk.Size = new System.Drawing.Size(75, 75);
             this.imgP2MonsterAtk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP2MonsterAtk.TabIndex = 7;
             this.imgP2MonsterAtk.TabStop = false;
@@ -305,7 +305,7 @@
             this.imgP1MonsterAtk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgP1MonsterAtk.Location = new System.Drawing.Point(108, 34);
             this.imgP1MonsterAtk.Name = "imgP1MonsterAtk";
-            this.imgP1MonsterAtk.Size = new System.Drawing.Size(40, 40);
+            this.imgP1MonsterAtk.Size = new System.Drawing.Size(75, 75);
             this.imgP1MonsterAtk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP1MonsterAtk.TabIndex = 6;
             this.imgP1MonsterAtk.TabStop = false;
@@ -313,9 +313,9 @@
             // imgP2MonsterDef
             // 
             this.imgP2MonsterDef.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgP2MonsterDef.Location = new System.Drawing.Point(188, 80);
+            this.imgP2MonsterDef.Location = new System.Drawing.Point(218, 138);
             this.imgP2MonsterDef.Name = "imgP2MonsterDef";
-            this.imgP2MonsterDef.Size = new System.Drawing.Size(40, 40);
+            this.imgP2MonsterDef.Size = new System.Drawing.Size(75, 75);
             this.imgP2MonsterDef.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP2MonsterDef.TabIndex = 5;
             this.imgP2MonsterDef.TabStop = false;
@@ -323,9 +323,9 @@
             // imgP1MonsterDef
             // 
             this.imgP1MonsterDef.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgP1MonsterDef.Location = new System.Drawing.Point(188, 34);
+            this.imgP1MonsterDef.Location = new System.Drawing.Point(218, 34);
             this.imgP1MonsterDef.Name = "imgP1MonsterDef";
-            this.imgP1MonsterDef.Size = new System.Drawing.Size(40, 40);
+            this.imgP1MonsterDef.Size = new System.Drawing.Size(75, 75);
             this.imgP1MonsterDef.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP1MonsterDef.TabIndex = 4;
             this.imgP1MonsterDef.TabStop = false;
@@ -333,9 +333,9 @@
             // imgP2MonsterMov
             // 
             this.imgP2MonsterMov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgP2MonsterMov.Location = new System.Drawing.Point(268, 80);
+            this.imgP2MonsterMov.Location = new System.Drawing.Point(355, 138);
             this.imgP2MonsterMov.Name = "imgP2MonsterMov";
-            this.imgP2MonsterMov.Size = new System.Drawing.Size(40, 40);
+            this.imgP2MonsterMov.Size = new System.Drawing.Size(75, 75);
             this.imgP2MonsterMov.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP2MonsterMov.TabIndex = 3;
             this.imgP2MonsterMov.TabStop = false;
@@ -343,9 +343,9 @@
             // imgP1MonsterMov
             // 
             this.imgP1MonsterMov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgP1MonsterMov.Location = new System.Drawing.Point(268, 34);
+            this.imgP1MonsterMov.Location = new System.Drawing.Point(355, 34);
             this.imgP1MonsterMov.Name = "imgP1MonsterMov";
-            this.imgP1MonsterMov.Size = new System.Drawing.Size(40, 40);
+            this.imgP1MonsterMov.Size = new System.Drawing.Size(75, 75);
             this.imgP1MonsterMov.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP1MonsterMov.TabIndex = 2;
             this.imgP1MonsterMov.TabStop = false;
@@ -353,9 +353,9 @@
             // imgP2MonsterPow
             // 
             this.imgP2MonsterPow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgP2MonsterPow.Location = new System.Drawing.Point(348, 80);
+            this.imgP2MonsterPow.Location = new System.Drawing.Point(471, 138);
             this.imgP2MonsterPow.Name = "imgP2MonsterPow";
-            this.imgP2MonsterPow.Size = new System.Drawing.Size(40, 40);
+            this.imgP2MonsterPow.Size = new System.Drawing.Size(75, 75);
             this.imgP2MonsterPow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP2MonsterPow.TabIndex = 1;
             this.imgP2MonsterPow.TabStop = false;
@@ -363,9 +363,9 @@
             // imgP1MonsterPow
             // 
             this.imgP1MonsterPow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgP1MonsterPow.Location = new System.Drawing.Point(348, 34);
+            this.imgP1MonsterPow.Location = new System.Drawing.Point(471, 34);
             this.imgP1MonsterPow.Name = "imgP1MonsterPow";
-            this.imgP1MonsterPow.Size = new System.Drawing.Size(40, 40);
+            this.imgP1MonsterPow.Size = new System.Drawing.Size(75, 75);
             this.imgP1MonsterPow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgP1MonsterPow.TabIndex = 0;
             this.imgP1MonsterPow.TabStop = false;
@@ -375,7 +375,7 @@
             this.LblAction.AutoSize = true;
             this.LblAction.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblAction.ForeColor = System.Drawing.Color.Gold;
-            this.LblAction.Location = new System.Drawing.Point(10, 74);
+            this.LblAction.Location = new System.Drawing.Point(11, 87);
             this.LblAction.Name = "LblAction";
             this.LblAction.Size = new System.Drawing.Size(102, 17);
             this.LblAction.TabIndex = 8;
@@ -387,7 +387,7 @@
             this.LblMov.AutoSize = true;
             this.LblMov.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMov.ForeColor = System.Drawing.Color.Gold;
-            this.LblMov.Location = new System.Drawing.Point(10, 110);
+            this.LblMov.Location = new System.Drawing.Point(209, 87);
             this.LblMov.Name = "LblMov";
             this.LblMov.Size = new System.Drawing.Size(73, 17);
             this.LblMov.TabIndex = 7;
@@ -398,7 +398,7 @@
             this.ListBoxLog.Font = new System.Drawing.Font("SF Distant Galaxy", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListBoxLog.FormattingEnabled = true;
             this.ListBoxLog.ItemHeight = 12;
-            this.ListBoxLog.Location = new System.Drawing.Point(6, 183);
+            this.ListBoxLog.Location = new System.Drawing.Point(7, 350);
             this.ListBoxLog.Name = "ListBoxLog";
             this.ListBoxLog.Size = new System.Drawing.Size(552, 208);
             this.ListBoxLog.TabIndex = 6;
@@ -419,18 +419,18 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded21;
             this.panel4.Controls.Add(this.PnlDe);
-            this.panel4.Location = new System.Drawing.Point(864, 454);
+            this.panel4.Location = new System.Drawing.Point(864, 600);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(564, 411);
+            this.panel4.Size = new System.Drawing.Size(564, 265);
             this.panel4.TabIndex = 33;
             // 
             // PnlDe
             // 
             this.PnlDe.BackgroundImage = global::Projet_GONLO.Properties.Resources.dice_six_faces_one;
             this.PnlDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PnlDe.Location = new System.Drawing.Point(136, 50);
+            this.PnlDe.Location = new System.Drawing.Point(179, 37);
             this.PnlDe.Name = "PnlDe";
-            this.PnlDe.Size = new System.Drawing.Size(300, 300);
+            this.PnlDe.Size = new System.Drawing.Size(200, 200);
             this.PnlDe.TabIndex = 3;
             // 
             // Button1
