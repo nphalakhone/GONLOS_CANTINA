@@ -386,6 +386,9 @@ namespace Projet_GONLO
             LblMov.Text = "MOV : " + tempMov;
         }
 
+        /// <summary>
+        /// Finir le tour d'un joueur
+        /// </summary>
         private void endTurn()
         {
             oldPosition = 0;
@@ -498,7 +501,10 @@ namespace Projet_GONLO
 
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="currPosition"></param>
         private void activateAttackButtons(int currPosition)
         {
             List<int> accessibleButtons = new List<int>();
@@ -616,7 +622,17 @@ namespace Projet_GONLO
                 listButtons[players[turn].ListMonsters[j].Position].Enabled = true;
                 //listButtons[i].FlatAppearance.BorderColor = Color.Red;
                 //listButtons[i].FlatAppearance.BorderSize = 5;
+                if (turn == 0)
+                {
+                    listButtons[players[turn].ListMonsters[j].Position].BackColor = Color.MidnightBlue;
+                }
+                else
+                {
+                    listButtons[players[turn].ListMonsters[j].Position].BackColor = Color.Gold;
+                }
             }
+
+            
         }
 
         private void BtnDice_Click(object sender, EventArgs e)
