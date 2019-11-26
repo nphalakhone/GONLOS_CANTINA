@@ -5,14 +5,15 @@ namespace Project_GONLO_Tests
     [TestClass]
     public class PazaakCardsSelectorTest
     {
-
+        Player player;
 
 
         [TestMethod]
         public void TestMethod1()
         {
-            
-            Player player = new Player();
+
+            //Arrange
+            player = new Player();
             player.Name = "Test_Name";
             player.Credits = 500;
             player.PazaakGamesWon = 0;
@@ -20,7 +21,14 @@ namespace Project_GONLO_Tests
             player.DejarikGamesLost = 0;
             player.DejarikGamesWon = 0;
             PazaakCardsSelector pazaakCards = new PazaakCardsSelector();
-            pazaakCards.= player;
+            pazaakCards.Player1 = player;
+
+            //Act
+            string nameSentForm = pazaakCards.Player1.Name;
+            string name = player.Name;
+
+            //Assert
+            Assert.AreEqual(name, nameSentForm);
         }
     }
 }
