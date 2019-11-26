@@ -29,7 +29,7 @@ namespace Projet_GONLO
         bool RoundOver = false;
 
         Panel[] panelPlayerDeck;
-        Panel[] panelAiDeck;
+        //Panel[] panelAiDeck;
         Panel[] TabPanelLeft;
         Panel[] TabPanelRight;
 

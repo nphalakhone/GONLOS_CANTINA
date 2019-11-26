@@ -107,7 +107,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1441, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1441, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "MnDejarik";
             // 
@@ -117,10 +117,10 @@
             this.saveToolStripMenuItem,
             this.restartToolStripMenuItem,
             this.exitToolStripMenuItem});
-            this.filesToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filesToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
             this.filesToolStripMenuItem.Name = "filesToolStripMenuItem";
-            this.filesToolStripMenuItem.Size = new System.Drawing.Size(70, 21);
+            this.filesToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
             this.filesToolStripMenuItem.Text = "Files";
             // 
             // saveToolStripMenuItem
@@ -130,7 +130,7 @@
             this.saveToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -141,7 +141,7 @@
             this.restartToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.restartToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
-            this.restartToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
             this.restartToolStripMenuItem.Text = "Restart";
             this.restartToolStripMenuItem.Click += new System.EventHandler(this.RestartToolStripMenuItem_Click);
             // 
@@ -152,16 +152,16 @@
             this.exitToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(66, 21);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.HelpToolStripMenuItem_Click);
             // 
@@ -184,11 +184,11 @@
             // lblRound
             // 
             this.lblRound.AutoSize = true;
-            this.lblRound.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRound.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRound.ForeColor = System.Drawing.Color.Gold;
             this.lblRound.Location = new System.Drawing.Point(383, 87);
             this.lblRound.Name = "lblRound";
-            this.lblRound.Size = new System.Drawing.Size(91, 17);
+            this.lblRound.Size = new System.Drawing.Size(78, 20);
             this.lblRound.TabIndex = 10;
             this.lblRound.Text = "Round : 1";
             // 
@@ -218,66 +218,66 @@
             // LblPow
             // 
             this.LblPow.AutoSize = true;
-            this.LblPow.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPow.ForeColor = System.Drawing.Color.Gold;
             this.LblPow.Location = new System.Drawing.Point(488, 16);
             this.LblPow.Name = "LblPow";
-            this.LblPow.Size = new System.Drawing.Size(41, 14);
+            this.LblPow.Size = new System.Drawing.Size(40, 16);
             this.LblPow.TabIndex = 13;
             this.LblPow.Text = "POW";
             // 
             // LblMove
             // 
             this.LblMove.AutoSize = true;
-            this.LblMove.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMove.ForeColor = System.Drawing.Color.Gold;
             this.LblMove.Location = new System.Drawing.Point(376, 16);
             this.LblMove.Name = "LblMove";
-            this.LblMove.Size = new System.Drawing.Size(38, 14);
+            this.LblMove.Size = new System.Drawing.Size(38, 16);
             this.LblMove.TabIndex = 12;
             this.LblMove.Text = "MOV";
             // 
             // LblDef
             // 
             this.LblDef.AutoSize = true;
-            this.LblDef.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDef.ForeColor = System.Drawing.Color.Gold;
             this.LblDef.Location = new System.Drawing.Point(240, 16);
             this.LblDef.Name = "LblDef";
-            this.LblDef.Size = new System.Drawing.Size(35, 14);
+            this.LblDef.Size = new System.Drawing.Size(35, 16);
             this.LblDef.TabIndex = 11;
             this.LblDef.Text = "DEF";
             // 
             // LblAtk
             // 
             this.LblAtk.AutoSize = true;
-            this.LblAtk.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblAtk.ForeColor = System.Drawing.Color.Gold;
             this.LblAtk.Location = new System.Drawing.Point(124, 16);
             this.LblAtk.Name = "LblAtk";
-            this.LblAtk.Size = new System.Drawing.Size(37, 14);
+            this.LblAtk.Size = new System.Drawing.Size(34, 16);
             this.LblAtk.TabIndex = 10;
             this.LblAtk.Text = "ATK";
             // 
             // LblP2Monstre
             // 
             this.LblP2Monstre.AutoSize = true;
-            this.LblP2Monstre.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblP2Monstre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblP2Monstre.ForeColor = System.Drawing.Color.Gold;
             this.LblP2Monstre.Location = new System.Drawing.Point(6, 161);
             this.LblP2Monstre.Name = "LblP2Monstre";
-            this.LblP2Monstre.Size = new System.Drawing.Size(82, 14);
+            this.LblP2Monstre.Size = new System.Drawing.Size(57, 16);
             this.LblP2Monstre.TabIndex = 9;
             this.LblP2Monstre.Text = "Player 2";
             // 
             // LblP1Monstre
             // 
             this.LblP1Monstre.AutoSize = true;
-            this.LblP1Monstre.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblP1Monstre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblP1Monstre.ForeColor = System.Drawing.Color.Gold;
             this.LblP1Monstre.Location = new System.Drawing.Point(6, 56);
             this.LblP1Monstre.Name = "LblP1Monstre";
-            this.LblP1Monstre.Size = new System.Drawing.Size(76, 14);
+            this.LblP1Monstre.Size = new System.Drawing.Size(57, 16);
             this.LblP1Monstre.TabIndex = 8;
             this.LblP1Monstre.Text = "Player 1";
             // 
@@ -373,11 +373,11 @@
             // LblAction
             // 
             this.LblAction.AutoSize = true;
-            this.LblAction.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblAction.ForeColor = System.Drawing.Color.Gold;
             this.LblAction.Location = new System.Drawing.Point(11, 87);
             this.LblAction.Name = "LblAction";
-            this.LblAction.Size = new System.Drawing.Size(102, 17);
+            this.LblAction.Size = new System.Drawing.Size(75, 20);
             this.LblAction.TabIndex = 8;
             this.LblAction.Text = "Action : 2";
             this.LblAction.Click += new System.EventHandler(this.LblAction_Click_1);
@@ -385,32 +385,31 @@
             // LblMov
             // 
             this.LblMov.AutoSize = true;
-            this.LblMov.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMov.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMov.ForeColor = System.Drawing.Color.Gold;
             this.LblMov.Location = new System.Drawing.Point(209, 87);
             this.LblMov.Name = "LblMov";
-            this.LblMov.Size = new System.Drawing.Size(73, 17);
+            this.LblMov.Size = new System.Drawing.Size(59, 20);
             this.LblMov.TabIndex = 7;
             this.LblMov.Text = "Mov : 0";
             // 
             // ListBoxLog
             // 
-            this.ListBoxLog.Font = new System.Drawing.Font("SF Distant Galaxy", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListBoxLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListBoxLog.FormattingEnabled = true;
-            this.ListBoxLog.ItemHeight = 12;
             this.ListBoxLog.Location = new System.Drawing.Point(7, 350);
             this.ListBoxLog.Name = "ListBoxLog";
-            this.ListBoxLog.Size = new System.Drawing.Size(552, 208);
+            this.ListBoxLog.Size = new System.Drawing.Size(552, 199);
             this.ListBoxLog.TabIndex = 6;
             // 
             // LblPlayerTurn
             // 
             this.LblPlayerTurn.AutoSize = true;
-            this.LblPlayerTurn.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPlayerTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPlayerTurn.ForeColor = System.Drawing.Color.Gold;
             this.LblPlayerTurn.Location = new System.Drawing.Point(6, 10);
             this.LblPlayerTurn.Name = "LblPlayerTurn";
-            this.LblPlayerTurn.Size = new System.Drawing.Size(373, 38);
+            this.LblPlayerTurn.Size = new System.Drawing.Size(268, 42);
             this.LblPlayerTurn.TabIndex = 5;
             this.LblPlayerTurn.Text = "Player 1\'s Turn";
             // 
@@ -421,14 +420,14 @@
             this.panel4.Controls.Add(this.PnlDe);
             this.panel4.Location = new System.Drawing.Point(864, 600);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(564, 265);
+            this.panel4.Size = new System.Drawing.Size(564, 232);
             this.panel4.TabIndex = 33;
             // 
             // PnlDe
             // 
             this.PnlDe.BackgroundImage = global::Projet_GONLO.Properties.Resources.dice_six_faces_one;
             this.PnlDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PnlDe.Location = new System.Drawing.Point(179, 37);
+            this.PnlDe.Location = new System.Drawing.Point(182, 15);
             this.PnlDe.Name = "PnlDe";
             this.PnlDe.Size = new System.Drawing.Size(200, 200);
             this.PnlDe.TabIndex = 3;
@@ -446,7 +445,6 @@
             this.Button1.TabIndex = 30;
             this.Button1.Tag = "1";
             this.Button1.UseVisualStyleBackColor = false;
-            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Button2
             // 
@@ -461,7 +459,6 @@
             this.Button2.TabIndex = 18;
             this.Button2.Tag = "2";
             this.Button2.UseVisualStyleBackColor = false;
-            this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Button3
             // 
@@ -476,7 +473,6 @@
             this.Button3.TabIndex = 19;
             this.Button3.Tag = "3";
             this.Button3.UseVisualStyleBackColor = false;
-            this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // Button4
             // 
@@ -491,7 +487,6 @@
             this.Button4.TabIndex = 20;
             this.Button4.Tag = "4";
             this.Button4.UseVisualStyleBackColor = false;
-            this.Button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // Button5
             // 
@@ -506,7 +501,6 @@
             this.Button5.TabIndex = 21;
             this.Button5.Tag = "5";
             this.Button5.UseVisualStyleBackColor = false;
-            this.Button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // Button6
             // 
@@ -521,7 +515,6 @@
             this.Button6.TabIndex = 22;
             this.Button6.Tag = "6";
             this.Button6.UseVisualStyleBackColor = false;
-            this.Button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // Button7
             // 
@@ -536,7 +529,6 @@
             this.Button7.TabIndex = 23;
             this.Button7.Tag = "7";
             this.Button7.UseVisualStyleBackColor = false;
-            this.Button7.Click += new System.EventHandler(this.Button7_Click);
             // 
             // Button8
             // 
@@ -551,7 +543,6 @@
             this.Button8.TabIndex = 24;
             this.Button8.Tag = "8";
             this.Button8.UseVisualStyleBackColor = false;
-            this.Button8.Click += new System.EventHandler(this.Button8_Click);
             // 
             // Button9
             // 
@@ -566,7 +557,6 @@
             this.Button9.TabIndex = 25;
             this.Button9.Tag = "9";
             this.Button9.UseVisualStyleBackColor = false;
-            this.Button9.Click += new System.EventHandler(this.Button9_Click);
             // 
             // Button10
             // 
@@ -581,7 +571,6 @@
             this.Button10.TabIndex = 26;
             this.Button10.Tag = "10";
             this.Button10.UseVisualStyleBackColor = false;
-            this.Button10.Click += new System.EventHandler(this.Button10_Click);
             // 
             // Button11
             // 
@@ -596,7 +585,6 @@
             this.Button11.TabIndex = 27;
             this.Button11.Tag = "11";
             this.Button11.UseVisualStyleBackColor = false;
-            this.Button11.Click += new System.EventHandler(this.Button11_Click);
             // 
             // Button12
             // 
@@ -611,7 +599,6 @@
             this.Button12.TabIndex = 28;
             this.Button12.Tag = "12";
             this.Button12.UseVisualStyleBackColor = false;
-            this.Button12.Click += new System.EventHandler(this.Button12_Click);
             // 
             // Button13
             // 
@@ -626,7 +613,6 @@
             this.Button13.TabIndex = 29;
             this.Button13.Tag = "13";
             this.Button13.UseVisualStyleBackColor = false;
-            this.Button13.Click += new System.EventHandler(this.Button13_Click);
             // 
             // Button14
             // 
@@ -641,7 +627,6 @@
             this.Button14.TabIndex = 17;
             this.Button14.Tag = "14";
             this.Button14.UseVisualStyleBackColor = false;
-            this.Button14.Click += new System.EventHandler(this.Button14_Click);
             // 
             // Button15
             // 
@@ -656,7 +641,6 @@
             this.Button15.TabIndex = 6;
             this.Button15.Tag = "15";
             this.Button15.UseVisualStyleBackColor = false;
-            this.Button15.Click += new System.EventHandler(this.Button15_Click);
             // 
             // Button16
             // 
@@ -671,7 +655,6 @@
             this.Button16.TabIndex = 7;
             this.Button16.Tag = "16";
             this.Button16.UseVisualStyleBackColor = false;
-            this.Button16.Click += new System.EventHandler(this.Button16_Click);
             // 
             // Button17
             // 
@@ -686,7 +669,6 @@
             this.Button17.TabIndex = 8;
             this.Button17.Tag = "17";
             this.Button17.UseVisualStyleBackColor = false;
-            this.Button17.Click += new System.EventHandler(this.Button17_Click);
             // 
             // Button18
             // 
@@ -701,7 +683,6 @@
             this.Button18.TabIndex = 9;
             this.Button18.Tag = "18";
             this.Button18.UseVisualStyleBackColor = false;
-            this.Button18.Click += new System.EventHandler(this.Button18_Click);
             // 
             // Button19
             // 
@@ -716,7 +697,6 @@
             this.Button19.TabIndex = 10;
             this.Button19.Tag = "19";
             this.Button19.UseVisualStyleBackColor = false;
-            this.Button19.Click += new System.EventHandler(this.Button19_Click);
             // 
             // Button20
             // 
@@ -731,7 +711,6 @@
             this.Button20.TabIndex = 11;
             this.Button20.Tag = "20";
             this.Button20.UseVisualStyleBackColor = false;
-            this.Button20.Click += new System.EventHandler(this.Button20_Click);
             // 
             // Button21
             // 
@@ -746,7 +725,6 @@
             this.Button21.TabIndex = 12;
             this.Button21.Tag = "21";
             this.Button21.UseVisualStyleBackColor = false;
-            this.Button21.Click += new System.EventHandler(this.Button21_Click);
             // 
             // Button22
             // 
@@ -761,7 +739,6 @@
             this.Button22.TabIndex = 13;
             this.Button22.Tag = "22";
             this.Button22.UseVisualStyleBackColor = false;
-            this.Button22.Click += new System.EventHandler(this.Button22_Click);
             // 
             // Button23
             // 
@@ -776,7 +753,6 @@
             this.Button23.TabIndex = 14;
             this.Button23.Tag = "23";
             this.Button23.UseVisualStyleBackColor = false;
-            this.Button23.Click += new System.EventHandler(this.Button23_Click);
             // 
             // Button24
             // 
@@ -791,7 +767,6 @@
             this.Button24.TabIndex = 15;
             this.Button24.Tag = "24";
             this.Button24.UseVisualStyleBackColor = false;
-            this.Button24.Click += new System.EventHandler(this.Button24_Click);
             // 
             // Button25
             // 
@@ -806,14 +781,13 @@
             this.Button25.TabIndex = 16;
             this.Button25.Tag = "25";
             this.Button25.UseVisualStyleBackColor = false;
-            this.Button25.Click += new System.EventHandler(this.Button25_Click);
             // 
             // Dejarik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.StarsBackground3;
-            this.ClientSize = new System.Drawing.Size(1441, 876);
+            this.ClientSize = new System.Drawing.Size(1441, 841);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Button1);
