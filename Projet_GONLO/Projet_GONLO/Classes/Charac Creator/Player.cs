@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projet_GONLO
 {
-    class Player
+   public class Player
     {
         private string _nom;
         private string _species;

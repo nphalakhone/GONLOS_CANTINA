@@ -10,18 +10,18 @@ namespace Projet_GONLO
 {
     public enum typeMonster { Power, Offensive, Defensive, Mobile };
 
-    class Monster
+    public class Monster
     {
 
 
         // Instance Variables 
-        string name;
-        int attack;
-        int defense;
-        int movement;
-        int position;
-        Image picture;
-        typeMonster type;
+        private string name;
+        private int attack;
+        private int defense;
+        private int movement;
+        private int position;
+        private Image picture;
+        private typeMonster type;
 
 
         // Constructor Declaration of Class 

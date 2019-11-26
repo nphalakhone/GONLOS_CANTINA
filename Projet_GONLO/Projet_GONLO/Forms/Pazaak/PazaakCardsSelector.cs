@@ -32,8 +32,8 @@ namespace Projet_GONLO
             FillListPanels();
         }
 
-        internal Player Player1 { get => playerCBS; set => playerCBS = value; }
-
+        public Player Player1 { get => playerCBS; set => playerCBS = value; }
+        //internal
 
         internal List<Image> Player1Deck { get => playerDeckImage; set => playerDeckImage = value; }
 
@@ -183,14 +183,6 @@ namespace Projet_GONLO
         {
             int position = FindPositionPanel(roundPanel);
             carteIntEnvoye[idx] = 100;
-            //for (int i = 0; i < carteIntEnvoye.Length; i++)
-            //{
-            //    if (carteIntEnvoye[i] == position)
-            //    {
-            //        carteIntEnvoye[i] = 100; //100 = vide
-            //        break;
-            //    }
-            //}
         }
 
         public int CheckDeck()
