@@ -178,6 +178,10 @@
     <None Include="Resources\201-2018253_sign-symbol-icons-in-svg-and-png-yellow.png" />
     <None Include="Resources\arrows.png" />
     <None Include="Resources\arrows %281%29.png" />
+    <None Include="Resources\atk.png" />
+    <None Include="Resources\atk1.png" />
+    <None Include="Resources\21021955.jpg" />
+    <None Include="Resources\21021955.png" />
     <Content Include="Resources\backButton.jpg" />
     <None Include="Resources\zabrak.jpg" />
     <None Include="Resources\twilekCouple.jpg" />
@@ -238,6 +242,8 @@
     <None Include="Resources\Monsters\Mantellian_Savrip.png" />
     <None Include="Resources\Monsters\Monnok.png" />
     <None Include="Resources\boutonSteelDejarik.JPG" />
+    <None Include="Resources\def.png" />
+    <None Include="Resources\def1.png" />
     <Content Include="Resources\StarsBackground.PNG" />
     <None Include="Resources\StarsBackground1.PNG" />
     <None Include="Resources\holochess-arkit.jpg" />
