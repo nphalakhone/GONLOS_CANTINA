@@ -145,74 +145,96 @@ namespace Projet_GONLO
             //FIRST CLICK
             if (firstClick == 0)
             {
-                oldPosition = currPosition;
-                firstClick++;
-                disableButtons();
-                activateMovButtons(players[turn].CurrMonster.Position);
-                activateAttackButtons(players[turn].CurrMonster.Position);
-
-                for (int i = 0; i < players[turn].ListMonsters.Count; i++)
-                {
-                    if (players[turn].ListMonsters[i].Position == currPosition)
-                    {
-                        attackingMonster = players[turn].ListMonsters[i];
-                    }
-
-                }
+                onFirstClick(currPosition);
             }
+
             //after first click
             else if (firstClick > 0)
             {
-                //Movement
-                if (listButtons[currPosition].BackColor == Color.Green)
-                {
-                    clickMovMonster(currPosition);
-
-                }
-
-                //Attack
-                else if (listButtons[currPosition].BackColor == Color.Red)
-                {
-                    getDefMonster(currPosition);
-                    clickAtkMonster(currPosition);
-                    counterMov = players[turn].CurrMonster.Movement;
-                }
-
-                else
-                {
-                    for (int i = 0; i < players[turn].ListMonsters.Count; i++)
-                    {
-                        if (players[turn].ListMonsters[i].Position == currPosition)
-                        {
-                            attackingMonster = players[turn].ListMonsters[i];
-                        }
-
-                    }
-                }
+                //Pick Atk or Mov
+                actionPicker(currPosition);
 
                 disableButtons();
 
                 //Unfinished movement
-                if (counterMov != players[turn].CurrMonster.Movement)
-                {
-                    activateMovButtons(players[turn].CurrMonster.Position);
-                }
-
-
+                checkUnfinishedMov();
+                
                 oldPosition = currPosition;
 
-                if (counterMov == players[turn].CurrMonster.Movement)
+                //End turn
+                endSetup();
+            }
+        }
+
+        private void checkUnfinishedMov()
+        {
+            if (counterMov != players[turn].CurrMonster.Movement)
+            {
+                activateMovButtons(players[turn].CurrMonster.Position);
+            }
+        }
+
+        private void endSetup()
+        {
+            if (counterMov == players[turn].CurrMonster.Movement)
+            {
+                addLog();
+                actions--;
+                LblAction.Text = "Action : " + actions;
+                activateCurrPlayer();
+                firstClick = 0;
+                counterMov = 0;
+            }
+            if (actions == 0)
+            {
+                endTurn();
+            }
+        }
+
+        private void actionPicker(int currPosition)
+        {
+            //Movement
+            if (listButtons[currPosition].BackColor == Color.Green)
+            {
+                clickMovMonster(currPosition);
+            }
+
+            //Attack
+            else if (listButtons[currPosition].BackColor == Color.Red)
+            {
+                pickAtk(currPosition);
+            }
+            else
+            {
+                findAtkMonster(currPosition);
+            }
+        }
+
+        private void pickAtk(int currPosition)
+        {
+            getDefMonster(currPosition);
+            clickAtkMonster(currPosition);
+            counterMov = players[turn].CurrMonster.Movement;
+        }
+
+        private void onFirstClick(int currPosition)
+        {
+            oldPosition = currPosition;
+            firstClick++;
+            disableButtons();
+            activateMovButtons(players[turn].CurrMonster.Position);
+            activateAttackButtons(players[turn].CurrMonster.Position);
+
+            findAtkMonster(currPosition);
+        }
+
+        private void findAtkMonster(int currPosition)
+        {
+            for (int i = 0; i < players[turn].ListMonsters.Count; i++)
+            {
+                if (players[turn].ListMonsters[i].Position == currPosition)
                 {
-                    addLog();
-                    actions--;
-                    LblAction.Text = "Action : " + actions;
-                    activateCurrPlayer();
-                    firstClick = 0;
-                    counterMov = 0;
-                }
-                if (actions == 0)
-                {
-                    endTurn();
+                    attackingMonster = players[turn].ListMonsters[i];
                 }
 
             }
@@ -392,15 +414,13 @@ namespace Projet_GONLO
             {
                 turn++;
             }
-
+  
             disableButtons();
             activateCurrPlayer();
             counterMov = 0;
             firstClick = 0;
             actions = 2;
             LblAction.Text = "Action : " + actions;
-
-
         }
 
         /// <summary>
@@ -477,9 +497,6 @@ namespace Projet_GONLO
         private void activateMovButtons(int currPosition)
         {
             List<int> accessibleButtons = new List<int>();
-
-
-
             for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
             {
                 accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
@@ -537,7 +554,6 @@ namespace Projet_GONLO
         private bool checkForAttack(int accessible)
         {
             bool attack = false;
-
 
             if (turn == 0)
             {
@@ -643,7 +659,6 @@ namespace Projet_GONLO
             LblAtkMonsterPow2.Text = "" + player2.PowMonster.Attack;
             LblDefMonsterPow2.Text = "" + player2.PowMonster.Defense;
             LblMovMonsterPow2.Text = "" + player2.PowMonster.Movement;
-
         }
 
         /// <summary>
@@ -651,12 +666,10 @@ namespace Projet_GONLO
         /// </summary>
         private void activateCurrPlayer()
         {
-
             for (int i = 0; i < listButtons.Count; i++)
             {
                 listButtons[i].Enabled = false;
             }
-
 
             for (int j = 0; j < players[turn].ListMonsters.Count; j++)
             {
@@ -811,11 +824,6 @@ namespace Projet_GONLO
                     }
                 }
             }
-        }
-
-        private void pushMonster()
-        {
-
         }
 
         /// <summary>
