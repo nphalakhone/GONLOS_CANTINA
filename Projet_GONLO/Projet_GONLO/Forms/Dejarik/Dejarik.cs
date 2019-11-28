@@ -218,6 +218,10 @@ namespace Projet_GONLO
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="currPosition"></param>
         private void getDefMonster(int currPosition)
         {
             Player tmp = null;
@@ -241,6 +245,10 @@ namespace Projet_GONLO
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="currPosition"></param>
         private void clickAtkMonster(int currPosition)
         {
             for (int i = 0; i < players[turn].ListMonsters.Count; i++)
@@ -255,6 +263,9 @@ namespace Projet_GONLO
 
         }
 
+        /// <summary>
+        /// Method that roll the dice
+        /// </summary>
         private void rollDice()
         {
             Random rng = new Random();
@@ -309,6 +320,12 @@ namespace Projet_GONLO
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="monster"></param>
+        /// <param name="diceValueAtk"></param>
+        /// <returns></returns>
         private int attack(Monster monster, int diceValueAtk)
         {
             int newValueAtk = monster.Attack;
@@ -317,6 +334,10 @@ namespace Projet_GONLO
             return newValueAtk;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="currPosition"></param>
         private void clickMovMonster(int currPosition)
         {
             for (int i = 0; i < players[turn].ListMonsters.Count; i++)
@@ -329,6 +350,11 @@ namespace Projet_GONLO
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nextPosition"></param>
+        /// <param name="monster"></param>
         private void movement(int nextPosition, Monster monster)
         {
             setButton(monster.Position, null);
@@ -338,6 +364,10 @@ namespace Projet_GONLO
             setCounterMov(monster);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="monster"></param>
         private void setCounterMov(Monster monster)
         {
             int tempMov = monster.Movement - counterMov;
@@ -373,6 +403,9 @@ namespace Projet_GONLO
 
         }
 
+        /// <summary>
+        /// Method that add the movement log
+        /// </summary>
         private void addLog()
         {
             String logTemp = "";
@@ -388,6 +421,9 @@ namespace Projet_GONLO
 
         }
 
+        /// <summary>
+        /// Method that create an alert to notify that the turn have changed
+        /// </summary>
         private void alertChangePlayer()
         {
             string message;
@@ -403,6 +439,9 @@ namespace Projet_GONLO
             MessageBox.Show(message, title);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void changeLabel()
         {
 
@@ -418,6 +457,9 @@ namespace Projet_GONLO
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void disableButtons()
         {
             //Disable all buttons before enabling them
@@ -428,6 +470,10 @@ namespace Projet_GONLO
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="currPosition"></param>
         private void activateMovButtons(int currPosition)
         {
             List<int> accessibleButtons = new List<int>();
@@ -483,6 +529,11 @@ namespace Projet_GONLO
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="accessible"></param>
+        /// <returns></returns>
         private bool checkForAttack(int accessible)
         {
             bool attack = false;
@@ -525,6 +576,11 @@ namespace Projet_GONLO
             return players[turn].CurrMonster;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Dejarik_Load(object sender, EventArgs e)
         {
             initializeMonsterPosition();
@@ -535,31 +591,58 @@ namespace Projet_GONLO
             activateCurrPlayer();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void setInfoMonster()
         {
             imgP1MonsterAtk.BackgroundImageLayout = ImageLayout.Stretch;
             imgP1MonsterAtk.Image = player1.AttMonster.Picture;
+            LblAtkMonsterAtk1.Text = "" + player1.AttMonster.Attack;
+            LblDefMonsterAtk1.Text = "" + player1.AttMonster.Defense;
+            LblMovMonsterAtk1.Text = "" + player1.AttMonster.Movement;
 
             imgP1MonsterDef.BackgroundImageLayout = ImageLayout.Stretch;
             imgP1MonsterDef.Image = player1.DefMonster.Picture;
+            LblAtkMonsterDef1.Text = "" + player1.DefMonster.Attack;
+            LblDefMonsterDef1.Text = "" + player1.DefMonster.Defense;
+            LblMovMonsterDef1.Text = "" + player1.DefMonster.Movement;
 
             imgP1MonsterMov.BackgroundImageLayout = ImageLayout.Stretch;
             imgP1MonsterMov.Image = player1.MovMonster.Picture;
+            LblAtkMonsterMov1.Text = "" + player1.MovMonster.Attack;
+            LblDefMonsterMov1.Text = "" + player1.MovMonster.Defense;
+            LblMovMonsterMov1.Text = "" + player1.MovMonster.Movement;
 
             imgP1MonsterPow.BackgroundImageLayout = ImageLayout.Stretch;
             imgP1MonsterPow.Image = player1.PowMonster.Picture;
+            LblAtkMonsterPow1.Text = "" + player1.PowMonster.Attack;
+            LblDefMonsterPow1.Text = "" + player1.PowMonster.Defense;
+            LblMovMonsterPow1.Text = "" + player1.PowMonster.Movement;
 
             imgP2MonsterAtk.BackgroundImageLayout = ImageLayout.Stretch;
             imgP2MonsterAtk.Image = player2.AttMonster.Picture;
+            LblAtkMonsterAtk2.Text = "" + player2.AttMonster.Attack;
+            LblDefMonsterAtk2.Text = "" + player2.AttMonster.Defense;
+            LblMovMonsterAtk2.Text = "" + player2.AttMonster.Movement;
 
             imgP2MonsterDef.BackgroundImageLayout = ImageLayout.Stretch;
             imgP2MonsterDef.Image = player2.DefMonster.Picture;
+            LblAtkMonsterDef2.Text = "" + player2.DefMonster.Attack;
+            LblDefMonsterDef2.Text = "" + player2.DefMonster.Defense;
+            LblMovMonsterDef2.Text = "" + player2.DefMonster.Movement;
 
             imgP2MonsterMov.BackgroundImageLayout = ImageLayout.Stretch;
             imgP2MonsterMov.Image = player2.MovMonster.Picture;
+            LblAtkMonsterMov2.Text = "" + player2.MovMonster.Attack;
+            LblDefMonsterMov2.Text = "" + player2.MovMonster.Defense;
+            LblMovMonsterMov2.Text = "" + player2.MovMonster.Movement;
 
             imgP2MonsterPow.BackgroundImageLayout = ImageLayout.Stretch;
             imgP2MonsterPow.Image = player2.PowMonster.Picture;
+            LblAtkMonsterPow2.Text = "" + player2.PowMonster.Attack;
+            LblDefMonsterPow2.Text = "" + player2.PowMonster.Defense;
+            LblMovMonsterPow2.Text = "" + player2.PowMonster.Movement;
 
         }
 
@@ -593,7 +676,16 @@ namespace Projet_GONLO
             
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dice"></param>
+        /// <param name="newAtk"></param>
         private void defend(int dice, int newAtk)
         {
             int newDef = defendingMonster.Defense;
@@ -624,6 +716,10 @@ namespace Projet_GONLO
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="winner"></param>
         private void push(String winner)
         {
             int tmpAtk = 0, tmpDef = 0;
@@ -722,6 +818,10 @@ namespace Projet_GONLO
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="winner"></param>
         private void kill(String winner)
         {
             int tmpAtk = 0, tmpDef = 0;
@@ -790,11 +890,6 @@ namespace Projet_GONLO
             MenuDejarik newDejarik = new MenuDejarik();
             newDejarik.ShowDialog();
             this.Close();
-        }
-
-        private void LblAction_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)

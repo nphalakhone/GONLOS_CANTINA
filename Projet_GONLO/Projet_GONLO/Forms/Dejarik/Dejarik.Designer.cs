@@ -36,8 +36,12 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PnlDe = new System.Windows.Forms.Panel();
             this.lblRound = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LblPow = new System.Windows.Forms.Label();
             this.LblMove = new System.Windows.Forms.Label();
             this.LblDef = new System.Windows.Forms.Label();
@@ -57,8 +61,51 @@
             this.LblMov = new System.Windows.Forms.Label();
             this.ListBoxLog = new System.Windows.Forms.ListBox();
             this.LblPlayerTurn = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.PnlDe = new System.Windows.Forms.Panel();
+            this.LblAtkMonsterAtk1 = new System.Windows.Forms.Label();
+            this.LblDefMonsterAtk1 = new System.Windows.Forms.Label();
+            this.LblMovMonsterAtk1 = new System.Windows.Forms.Label();
+            this.LblMovMonsterDef1 = new System.Windows.Forms.Label();
+            this.LblDefMonsterDef1 = new System.Windows.Forms.Label();
+            this.LblAtkMonsterDef1 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.LblMovMonsterMov1 = new System.Windows.Forms.Label();
+            this.LblDefMonsterMov1 = new System.Windows.Forms.Label();
+            this.LblAtkMonsterMov1 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.LblMovMonsterPow1 = new System.Windows.Forms.Label();
+            this.LblDefMonsterPow1 = new System.Windows.Forms.Label();
+            this.LblAtkMonsterPow1 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.LblMovMonsterPow2 = new System.Windows.Forms.Label();
+            this.LblDefMonsterPow2 = new System.Windows.Forms.Label();
+            this.LblAtkMonsterPow2 = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.LblMovMonsterMov2 = new System.Windows.Forms.Label();
+            this.LblDefMonsterMov2 = new System.Windows.Forms.Label();
+            this.LblAtkMonsterMov2 = new System.Windows.Forms.Label();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.LblMovMonsterDef2 = new System.Windows.Forms.Label();
+            this.LblDefMonsterDef2 = new System.Windows.Forms.Label();
+            this.LblAtkMonsterDef2 = new System.Windows.Forms.Label();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.LblMovMonsterAtk2 = new System.Windows.Forms.Label();
+            this.LblDefMonsterAtk2 = new System.Windows.Forms.Label();
+            this.LblAtkMonsterAtk2 = new System.Windows.Forms.Label();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
             this.Button1 = new Projet_GONLO.ButtonCircle();
             this.Button2 = new Projet_GONLO.ButtonCircle();
             this.Button3 = new Projet_GONLO.ButtonCircle();
@@ -87,6 +134,9 @@
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP2MonsterAtk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterAtk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP2MonsterDef)).BeginInit();
@@ -95,7 +145,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterMov)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP2MonsterPow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterPow)).BeginInit();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -107,7 +177,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1441, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1441, 25);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "MnDejarik";
             // 
@@ -117,10 +187,10 @@
             this.saveToolStripMenuItem,
             this.restartToolStripMenuItem,
             this.exitToolStripMenuItem});
-            this.filesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filesToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filesToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
             this.filesToolStripMenuItem.Name = "filesToolStripMenuItem";
-            this.filesToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
+            this.filesToolStripMenuItem.Size = new System.Drawing.Size(70, 21);
             this.filesToolStripMenuItem.Text = "Files";
             // 
             // saveToolStripMenuItem
@@ -130,7 +200,7 @@
             this.saveToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -141,7 +211,7 @@
             this.restartToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.restartToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
-            this.restartToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.restartToolStripMenuItem.Text = "Restart";
             this.restartToolStripMenuItem.Click += new System.EventHandler(this.RestartToolStripMenuItem_Click);
             // 
@@ -152,16 +222,16 @@
             this.exitToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(66, 21);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.HelpToolStripMenuItem_Click);
             // 
@@ -169,6 +239,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded21;
+            this.panel2.Controls.Add(this.PnlDe);
             this.panel2.Controls.Add(this.lblRound);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.LblAction);
@@ -178,22 +249,81 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel2.Location = new System.Drawing.Point(864, 29);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(564, 565);
+            this.panel2.Size = new System.Drawing.Size(564, 800);
             this.panel2.TabIndex = 32;
+            // 
+            // PnlDe
+            // 
+            this.PnlDe.BackgroundImage = global::Projet_GONLO.Properties.Resources.dice_six_faces_one;
+            this.PnlDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PnlDe.Enabled = false;
+            this.PnlDe.Location = new System.Drawing.Point(396, 429);
+            this.PnlDe.Name = "PnlDe";
+            this.PnlDe.Size = new System.Drawing.Size(150, 150);
+            this.PnlDe.TabIndex = 3;
             // 
             // lblRound
             // 
             this.lblRound.AutoSize = true;
-            this.lblRound.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRound.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRound.ForeColor = System.Drawing.Color.Gold;
-            this.lblRound.Location = new System.Drawing.Point(383, 87);
+            this.lblRound.Location = new System.Drawing.Point(371, 65);
             this.lblRound.Name = "lblRound";
-            this.lblRound.Size = new System.Drawing.Size(78, 20);
+            this.lblRound.Size = new System.Drawing.Size(91, 17);
             this.lblRound.TabIndex = 10;
             this.lblRound.Text = "Round : 1";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.imgP1MonsterAtk);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.pictureBox2);
+            this.groupBox1.Controls.Add(this.LblMovMonsterPow2);
+            this.groupBox1.Controls.Add(this.pictureBox3);
+            this.groupBox1.Controls.Add(this.LblDefMonsterPow2);
+            this.groupBox1.Controls.Add(this.LblAtkMonsterAtk1);
+            this.groupBox1.Controls.Add(this.LblAtkMonsterPow2);
+            this.groupBox1.Controls.Add(this.LblDefMonsterAtk1);
+            this.groupBox1.Controls.Add(this.pictureBox13);
+            this.groupBox1.Controls.Add(this.LblMovMonsterAtk1);
+            this.groupBox1.Controls.Add(this.pictureBox14);
+            this.groupBox1.Controls.Add(this.pictureBox15);
+            this.groupBox1.Controls.Add(this.LblMovMonsterMov2);
+            this.groupBox1.Controls.Add(this.LblDefMonsterMov2);
+            this.groupBox1.Controls.Add(this.LblAtkMonsterMov2);
+            this.groupBox1.Controls.Add(this.pictureBox16);
+            this.groupBox1.Controls.Add(this.pictureBox17);
+            this.groupBox1.Controls.Add(this.pictureBox18);
+            this.groupBox1.Controls.Add(this.LblMovMonsterDef2);
+            this.groupBox1.Controls.Add(this.LblDefMonsterDef2);
+            this.groupBox1.Controls.Add(this.LblAtkMonsterDef2);
+            this.groupBox1.Controls.Add(this.pictureBox19);
+            this.groupBox1.Controls.Add(this.pictureBox20);
+            this.groupBox1.Controls.Add(this.pictureBox21);
+            this.groupBox1.Controls.Add(this.LblMovMonsterAtk2);
+            this.groupBox1.Controls.Add(this.LblDefMonsterAtk2);
+            this.groupBox1.Controls.Add(this.LblAtkMonsterAtk2);
+            this.groupBox1.Controls.Add(this.pictureBox22);
+            this.groupBox1.Controls.Add(this.pictureBox23);
+            this.groupBox1.Controls.Add(this.pictureBox24);
+            this.groupBox1.Controls.Add(this.LblMovMonsterPow1);
+            this.groupBox1.Controls.Add(this.LblDefMonsterPow1);
+            this.groupBox1.Controls.Add(this.LblAtkMonsterPow1);
+            this.groupBox1.Controls.Add(this.pictureBox10);
+            this.groupBox1.Controls.Add(this.pictureBox11);
+            this.groupBox1.Controls.Add(this.pictureBox12);
+            this.groupBox1.Controls.Add(this.LblMovMonsterMov1);
+            this.groupBox1.Controls.Add(this.LblDefMonsterMov1);
+            this.groupBox1.Controls.Add(this.LblAtkMonsterMov1);
+            this.groupBox1.Controls.Add(this.pictureBox7);
+            this.groupBox1.Controls.Add(this.pictureBox8);
+            this.groupBox1.Controls.Add(this.pictureBox9);
+            this.groupBox1.Controls.Add(this.LblMovMonsterDef1);
+            this.groupBox1.Controls.Add(this.LblDefMonsterDef1);
+            this.groupBox1.Controls.Add(this.LblAtkMonsterDef1);
+            this.groupBox1.Controls.Add(this.pictureBox4);
+            this.groupBox1.Controls.Add(this.pictureBox5);
+            this.groupBox1.Controls.Add(this.pictureBox6);
             this.groupBox1.Controls.Add(this.LblPow);
             this.groupBox1.Controls.Add(this.LblMove);
             this.groupBox1.Controls.Add(this.LblDef);
@@ -202,89 +332,118 @@
             this.groupBox1.Controls.Add(this.LblP1Monstre);
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Controls.Add(this.imgP2MonsterAtk);
-            this.groupBox1.Controls.Add(this.imgP1MonsterAtk);
             this.groupBox1.Controls.Add(this.imgP2MonsterDef);
             this.groupBox1.Controls.Add(this.imgP1MonsterDef);
             this.groupBox1.Controls.Add(this.imgP2MonsterMov);
             this.groupBox1.Controls.Add(this.imgP1MonsterMov);
             this.groupBox1.Controls.Add(this.imgP2MonsterPow);
             this.groupBox1.Controls.Add(this.imgP1MonsterPow);
-            this.groupBox1.Location = new System.Drawing.Point(7, 120);
+            this.groupBox1.Location = new System.Drawing.Point(7, 88);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(552, 224);
+            this.groupBox1.Size = new System.Drawing.Size(552, 324);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::Projet_GONLO.Properties.Resources._210219551;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(163, 116);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Projet_GONLO.Properties.Resources.def1;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(135, 116);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Projet_GONLO.Properties.Resources.atk1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(108, 116);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // LblPow
             // 
             this.LblPow.AutoSize = true;
-            this.LblPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPow.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPow.ForeColor = System.Drawing.Color.Gold;
-            this.LblPow.Location = new System.Drawing.Point(488, 16);
+            this.LblPow.Location = new System.Drawing.Point(468, 16);
             this.LblPow.Name = "LblPow";
-            this.LblPow.Size = new System.Drawing.Size(40, 16);
+            this.LblPow.Size = new System.Drawing.Size(41, 14);
             this.LblPow.TabIndex = 13;
             this.LblPow.Text = "POW";
             // 
             // LblMove
             // 
             this.LblMove.AutoSize = true;
-            this.LblMove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMove.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMove.ForeColor = System.Drawing.Color.Gold;
-            this.LblMove.Location = new System.Drawing.Point(376, 16);
+            this.LblMove.Location = new System.Drawing.Point(351, 16);
             this.LblMove.Name = "LblMove";
-            this.LblMove.Size = new System.Drawing.Size(38, 16);
+            this.LblMove.Size = new System.Drawing.Size(38, 14);
             this.LblMove.TabIndex = 12;
             this.LblMove.Text = "MOV";
             // 
             // LblDef
             // 
             this.LblDef.AutoSize = true;
-            this.LblDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDef.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDef.ForeColor = System.Drawing.Color.Gold;
             this.LblDef.Location = new System.Drawing.Point(240, 16);
             this.LblDef.Name = "LblDef";
-            this.LblDef.Size = new System.Drawing.Size(35, 16);
+            this.LblDef.Size = new System.Drawing.Size(35, 14);
             this.LblDef.TabIndex = 11;
             this.LblDef.Text = "DEF";
             // 
             // LblAtk
             // 
             this.LblAtk.AutoSize = true;
-            this.LblAtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAtk.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblAtk.ForeColor = System.Drawing.Color.Gold;
-            this.LblAtk.Location = new System.Drawing.Point(124, 16);
+            this.LblAtk.Location = new System.Drawing.Point(129, 16);
             this.LblAtk.Name = "LblAtk";
-            this.LblAtk.Size = new System.Drawing.Size(34, 16);
+            this.LblAtk.Size = new System.Drawing.Size(37, 14);
             this.LblAtk.TabIndex = 10;
             this.LblAtk.Text = "ATK";
             // 
             // LblP2Monstre
             // 
             this.LblP2Monstre.AutoSize = true;
-            this.LblP2Monstre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblP2Monstre.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblP2Monstre.ForeColor = System.Drawing.Color.Gold;
-            this.LblP2Monstre.Location = new System.Drawing.Point(6, 161);
+            this.LblP2Monstre.Location = new System.Drawing.Point(9, 203);
             this.LblP2Monstre.Name = "LblP2Monstre";
-            this.LblP2Monstre.Size = new System.Drawing.Size(57, 16);
+            this.LblP2Monstre.Size = new System.Drawing.Size(82, 14);
             this.LblP2Monstre.TabIndex = 9;
             this.LblP2Monstre.Text = "Player 2";
             // 
             // LblP1Monstre
             // 
             this.LblP1Monstre.AutoSize = true;
-            this.LblP1Monstre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblP1Monstre.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblP1Monstre.ForeColor = System.Drawing.Color.Gold;
             this.LblP1Monstre.Location = new System.Drawing.Point(6, 56);
             this.LblP1Monstre.Name = "LblP1Monstre";
-            this.LblP1Monstre.Size = new System.Drawing.Size(57, 16);
+            this.LblP1Monstre.Size = new System.Drawing.Size(76, 14);
             this.LblP1Monstre.TabIndex = 8;
             this.LblP1Monstre.Text = "Player 1";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Location = new System.Drawing.Point(1, 123);
+            this.panel3.Location = new System.Drawing.Point(1, 162);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(5522, 1);
             this.panel3.TabIndex = 5;
@@ -292,7 +451,7 @@
             // imgP2MonsterAtk
             // 
             this.imgP2MonsterAtk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgP2MonsterAtk.Location = new System.Drawing.Point(108, 138);
+            this.imgP2MonsterAtk.Location = new System.Drawing.Point(108, 180);
             this.imgP2MonsterAtk.Name = "imgP2MonsterAtk";
             this.imgP2MonsterAtk.Size = new System.Drawing.Size(75, 75);
             this.imgP2MonsterAtk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -303,7 +462,7 @@
             // 
             this.imgP1MonsterAtk.BackColor = System.Drawing.Color.Transparent;
             this.imgP1MonsterAtk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgP1MonsterAtk.Location = new System.Drawing.Point(108, 34);
+            this.imgP1MonsterAtk.Location = new System.Drawing.Point(108, 35);
             this.imgP1MonsterAtk.Name = "imgP1MonsterAtk";
             this.imgP1MonsterAtk.Size = new System.Drawing.Size(75, 75);
             this.imgP1MonsterAtk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -313,7 +472,7 @@
             // imgP2MonsterDef
             // 
             this.imgP2MonsterDef.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgP2MonsterDef.Location = new System.Drawing.Point(218, 138);
+            this.imgP2MonsterDef.Location = new System.Drawing.Point(218, 180);
             this.imgP2MonsterDef.Name = "imgP2MonsterDef";
             this.imgP2MonsterDef.Size = new System.Drawing.Size(75, 75);
             this.imgP2MonsterDef.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -333,7 +492,7 @@
             // imgP2MonsterMov
             // 
             this.imgP2MonsterMov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgP2MonsterMov.Location = new System.Drawing.Point(355, 138);
+            this.imgP2MonsterMov.Location = new System.Drawing.Point(330, 180);
             this.imgP2MonsterMov.Name = "imgP2MonsterMov";
             this.imgP2MonsterMov.Size = new System.Drawing.Size(75, 75);
             this.imgP2MonsterMov.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -343,7 +502,7 @@
             // imgP1MonsterMov
             // 
             this.imgP1MonsterMov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgP1MonsterMov.Location = new System.Drawing.Point(355, 34);
+            this.imgP1MonsterMov.Location = new System.Drawing.Point(330, 35);
             this.imgP1MonsterMov.Name = "imgP1MonsterMov";
             this.imgP1MonsterMov.Size = new System.Drawing.Size(75, 75);
             this.imgP1MonsterMov.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -353,7 +512,7 @@
             // imgP2MonsterPow
             // 
             this.imgP2MonsterPow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgP2MonsterPow.Location = new System.Drawing.Point(471, 138);
+            this.imgP2MonsterPow.Location = new System.Drawing.Point(450, 180);
             this.imgP2MonsterPow.Name = "imgP2MonsterPow";
             this.imgP2MonsterPow.Size = new System.Drawing.Size(75, 75);
             this.imgP2MonsterPow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -363,7 +522,7 @@
             // imgP1MonsterPow
             // 
             this.imgP1MonsterPow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgP1MonsterPow.Location = new System.Drawing.Point(471, 34);
+            this.imgP1MonsterPow.Location = new System.Drawing.Point(450, 35);
             this.imgP1MonsterPow.Name = "imgP1MonsterPow";
             this.imgP1MonsterPow.Size = new System.Drawing.Size(75, 75);
             this.imgP1MonsterPow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -373,64 +532,519 @@
             // LblAction
             // 
             this.LblAction.AutoSize = true;
-            this.LblAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAction.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblAction.ForeColor = System.Drawing.Color.Gold;
-            this.LblAction.Location = new System.Drawing.Point(11, 87);
+            this.LblAction.Location = new System.Drawing.Point(9, 65);
             this.LblAction.Name = "LblAction";
-            this.LblAction.Size = new System.Drawing.Size(75, 20);
+            this.LblAction.Size = new System.Drawing.Size(102, 17);
             this.LblAction.TabIndex = 8;
             this.LblAction.Text = "Action : 2";
-            this.LblAction.Click += new System.EventHandler(this.LblAction_Click_1);
             // 
             // LblMov
             // 
             this.LblMov.AutoSize = true;
-            this.LblMov.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMov.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMov.ForeColor = System.Drawing.Color.Gold;
-            this.LblMov.Location = new System.Drawing.Point(209, 87);
+            this.LblMov.Location = new System.Drawing.Point(215, 65);
             this.LblMov.Name = "LblMov";
-            this.LblMov.Size = new System.Drawing.Size(59, 20);
+            this.LblMov.Size = new System.Drawing.Size(73, 17);
             this.LblMov.TabIndex = 7;
             this.LblMov.Text = "Mov : 0";
             // 
             // ListBoxLog
             // 
-            this.ListBoxLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListBoxLog.Font = new System.Drawing.Font("SF Distant Galaxy", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListBoxLog.FormattingEnabled = true;
-            this.ListBoxLog.Location = new System.Drawing.Point(7, 350);
+            this.ListBoxLog.ItemHeight = 12;
+            this.ListBoxLog.Location = new System.Drawing.Point(13, 429);
             this.ListBoxLog.Name = "ListBoxLog";
-            this.ListBoxLog.Size = new System.Drawing.Size(552, 199);
+            this.ListBoxLog.Size = new System.Drawing.Size(372, 352);
             this.ListBoxLog.TabIndex = 6;
             // 
             // LblPlayerTurn
             // 
             this.LblPlayerTurn.AutoSize = true;
-            this.LblPlayerTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPlayerTurn.Font = new System.Drawing.Font("SF Distant Galaxy", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPlayerTurn.ForeColor = System.Drawing.Color.Gold;
             this.LblPlayerTurn.Location = new System.Drawing.Point(6, 10);
             this.LblPlayerTurn.Name = "LblPlayerTurn";
-            this.LblPlayerTurn.Size = new System.Drawing.Size(268, 42);
+            this.LblPlayerTurn.Size = new System.Drawing.Size(373, 38);
             this.LblPlayerTurn.TabIndex = 5;
             this.LblPlayerTurn.Text = "Player 1\'s Turn";
             // 
-            // panel4
+            // LblAtkMonsterAtk1
             // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded21;
-            this.panel4.Controls.Add(this.PnlDe);
-            this.panel4.Location = new System.Drawing.Point(864, 600);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(564, 232);
-            this.panel4.TabIndex = 33;
+            this.LblAtkMonsterAtk1.AutoSize = true;
+            this.LblAtkMonsterAtk1.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAtkMonsterAtk1.ForeColor = System.Drawing.Color.Gold;
+            this.LblAtkMonsterAtk1.Location = new System.Drawing.Point(108, 139);
+            this.LblAtkMonsterAtk1.Name = "LblAtkMonsterAtk1";
+            this.LblAtkMonsterAtk1.Size = new System.Drawing.Size(20, 17);
+            this.LblAtkMonsterAtk1.TabIndex = 17;
+            this.LblAtkMonsterAtk1.Text = "0";
             // 
-            // PnlDe
+            // LblDefMonsterAtk1
             // 
-            this.PnlDe.BackgroundImage = global::Projet_GONLO.Properties.Resources.dice_six_faces_one;
-            this.PnlDe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PnlDe.Location = new System.Drawing.Point(182, 15);
-            this.PnlDe.Name = "PnlDe";
-            this.PnlDe.Size = new System.Drawing.Size(200, 200);
-            this.PnlDe.TabIndex = 3;
+            this.LblDefMonsterAtk1.AutoSize = true;
+            this.LblDefMonsterAtk1.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDefMonsterAtk1.ForeColor = System.Drawing.Color.Gold;
+            this.LblDefMonsterAtk1.Location = new System.Drawing.Point(136, 139);
+            this.LblDefMonsterAtk1.Name = "LblDefMonsterAtk1";
+            this.LblDefMonsterAtk1.Size = new System.Drawing.Size(20, 17);
+            this.LblDefMonsterAtk1.TabIndex = 18;
+            this.LblDefMonsterAtk1.Text = "0";
+            // 
+            // LblMovMonsterAtk1
+            // 
+            this.LblMovMonsterAtk1.AutoSize = true;
+            this.LblMovMonsterAtk1.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMovMonsterAtk1.ForeColor = System.Drawing.Color.Gold;
+            this.LblMovMonsterAtk1.Location = new System.Drawing.Point(164, 139);
+            this.LblMovMonsterAtk1.Name = "LblMovMonsterAtk1";
+            this.LblMovMonsterAtk1.Size = new System.Drawing.Size(20, 17);
+            this.LblMovMonsterAtk1.TabIndex = 19;
+            this.LblMovMonsterAtk1.Text = "0";
+            // 
+            // LblMovMonsterDef1
+            // 
+            this.LblMovMonsterDef1.AutoSize = true;
+            this.LblMovMonsterDef1.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMovMonsterDef1.ForeColor = System.Drawing.Color.Gold;
+            this.LblMovMonsterDef1.Location = new System.Drawing.Point(274, 138);
+            this.LblMovMonsterDef1.Name = "LblMovMonsterDef1";
+            this.LblMovMonsterDef1.Size = new System.Drawing.Size(20, 17);
+            this.LblMovMonsterDef1.TabIndex = 25;
+            this.LblMovMonsterDef1.Text = "0";
+            // 
+            // LblDefMonsterDef1
+            // 
+            this.LblDefMonsterDef1.AutoSize = true;
+            this.LblDefMonsterDef1.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDefMonsterDef1.ForeColor = System.Drawing.Color.Gold;
+            this.LblDefMonsterDef1.Location = new System.Drawing.Point(246, 138);
+            this.LblDefMonsterDef1.Name = "LblDefMonsterDef1";
+            this.LblDefMonsterDef1.Size = new System.Drawing.Size(20, 17);
+            this.LblDefMonsterDef1.TabIndex = 24;
+            this.LblDefMonsterDef1.Text = "0";
+            // 
+            // LblAtkMonsterDef1
+            // 
+            this.LblAtkMonsterDef1.AutoSize = true;
+            this.LblAtkMonsterDef1.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAtkMonsterDef1.ForeColor = System.Drawing.Color.Gold;
+            this.LblAtkMonsterDef1.Location = new System.Drawing.Point(218, 138);
+            this.LblAtkMonsterDef1.Name = "LblAtkMonsterDef1";
+            this.LblAtkMonsterDef1.Size = new System.Drawing.Size(20, 17);
+            this.LblAtkMonsterDef1.TabIndex = 23;
+            this.LblAtkMonsterDef1.Text = "0";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::Projet_GONLO.Properties.Resources._210219551;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(273, 115);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox4.TabIndex = 22;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::Projet_GONLO.Properties.Resources.def1;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(245, 115);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox5.TabIndex = 21;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::Projet_GONLO.Properties.Resources.atk1;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(218, 115);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox6.TabIndex = 20;
+            this.pictureBox6.TabStop = false;
+            // 
+            // LblMovMonsterMov1
+            // 
+            this.LblMovMonsterMov1.AutoSize = true;
+            this.LblMovMonsterMov1.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMovMonsterMov1.ForeColor = System.Drawing.Color.Gold;
+            this.LblMovMonsterMov1.Location = new System.Drawing.Point(386, 138);
+            this.LblMovMonsterMov1.Name = "LblMovMonsterMov1";
+            this.LblMovMonsterMov1.Size = new System.Drawing.Size(20, 17);
+            this.LblMovMonsterMov1.TabIndex = 31;
+            this.LblMovMonsterMov1.Text = "0";
+            // 
+            // LblDefMonsterMov1
+            // 
+            this.LblDefMonsterMov1.AutoSize = true;
+            this.LblDefMonsterMov1.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDefMonsterMov1.ForeColor = System.Drawing.Color.Gold;
+            this.LblDefMonsterMov1.Location = new System.Drawing.Point(358, 138);
+            this.LblDefMonsterMov1.Name = "LblDefMonsterMov1";
+            this.LblDefMonsterMov1.Size = new System.Drawing.Size(20, 17);
+            this.LblDefMonsterMov1.TabIndex = 30;
+            this.LblDefMonsterMov1.Text = "0";
+            // 
+            // LblAtkMonsterMov1
+            // 
+            this.LblAtkMonsterMov1.AutoSize = true;
+            this.LblAtkMonsterMov1.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAtkMonsterMov1.ForeColor = System.Drawing.Color.Gold;
+            this.LblAtkMonsterMov1.Location = new System.Drawing.Point(330, 138);
+            this.LblAtkMonsterMov1.Name = "LblAtkMonsterMov1";
+            this.LblAtkMonsterMov1.Size = new System.Drawing.Size(20, 17);
+            this.LblAtkMonsterMov1.TabIndex = 29;
+            this.LblAtkMonsterMov1.Text = "0";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::Projet_GONLO.Properties.Resources._210219551;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(385, 115);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox7.TabIndex = 28;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::Projet_GONLO.Properties.Resources.def1;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(357, 115);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox8.TabIndex = 27;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = global::Projet_GONLO.Properties.Resources.atk1;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Location = new System.Drawing.Point(330, 115);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox9.TabIndex = 26;
+            this.pictureBox9.TabStop = false;
+            // 
+            // LblMovMonsterPow1
+            // 
+            this.LblMovMonsterPow1.AutoSize = true;
+            this.LblMovMonsterPow1.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMovMonsterPow1.ForeColor = System.Drawing.Color.Gold;
+            this.LblMovMonsterPow1.Location = new System.Drawing.Point(506, 138);
+            this.LblMovMonsterPow1.Name = "LblMovMonsterPow1";
+            this.LblMovMonsterPow1.Size = new System.Drawing.Size(20, 17);
+            this.LblMovMonsterPow1.TabIndex = 37;
+            this.LblMovMonsterPow1.Text = "0";
+            // 
+            // LblDefMonsterPow1
+            // 
+            this.LblDefMonsterPow1.AutoSize = true;
+            this.LblDefMonsterPow1.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDefMonsterPow1.ForeColor = System.Drawing.Color.Gold;
+            this.LblDefMonsterPow1.Location = new System.Drawing.Point(478, 138);
+            this.LblDefMonsterPow1.Name = "LblDefMonsterPow1";
+            this.LblDefMonsterPow1.Size = new System.Drawing.Size(20, 17);
+            this.LblDefMonsterPow1.TabIndex = 36;
+            this.LblDefMonsterPow1.Text = "0";
+            // 
+            // LblAtkMonsterPow1
+            // 
+            this.LblAtkMonsterPow1.AutoSize = true;
+            this.LblAtkMonsterPow1.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAtkMonsterPow1.ForeColor = System.Drawing.Color.Gold;
+            this.LblAtkMonsterPow1.Location = new System.Drawing.Point(450, 138);
+            this.LblAtkMonsterPow1.Name = "LblAtkMonsterPow1";
+            this.LblAtkMonsterPow1.Size = new System.Drawing.Size(20, 17);
+            this.LblAtkMonsterPow1.TabIndex = 35;
+            this.LblAtkMonsterPow1.Text = "0";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImage = global::Projet_GONLO.Properties.Resources._210219551;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Location = new System.Drawing.Point(505, 115);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox10.TabIndex = 34;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackgroundImage = global::Projet_GONLO.Properties.Resources.def1;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox11.Location = new System.Drawing.Point(477, 115);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox11.TabIndex = 33;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackgroundImage = global::Projet_GONLO.Properties.Resources.atk1;
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox12.Location = new System.Drawing.Point(450, 115);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox12.TabIndex = 32;
+            this.pictureBox12.TabStop = false;
+            // 
+            // LblMovMonsterPow2
+            // 
+            this.LblMovMonsterPow2.AutoSize = true;
+            this.LblMovMonsterPow2.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMovMonsterPow2.ForeColor = System.Drawing.Color.Gold;
+            this.LblMovMonsterPow2.Location = new System.Drawing.Point(506, 284);
+            this.LblMovMonsterPow2.Name = "LblMovMonsterPow2";
+            this.LblMovMonsterPow2.Size = new System.Drawing.Size(20, 17);
+            this.LblMovMonsterPow2.TabIndex = 61;
+            this.LblMovMonsterPow2.Text = "0";
+            // 
+            // LblDefMonsterPow2
+            // 
+            this.LblDefMonsterPow2.AutoSize = true;
+            this.LblDefMonsterPow2.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDefMonsterPow2.ForeColor = System.Drawing.Color.Gold;
+            this.LblDefMonsterPow2.Location = new System.Drawing.Point(478, 284);
+            this.LblDefMonsterPow2.Name = "LblDefMonsterPow2";
+            this.LblDefMonsterPow2.Size = new System.Drawing.Size(20, 17);
+            this.LblDefMonsterPow2.TabIndex = 60;
+            this.LblDefMonsterPow2.Text = "0";
+            // 
+            // LblAtkMonsterPow2
+            // 
+            this.LblAtkMonsterPow2.AutoSize = true;
+            this.LblAtkMonsterPow2.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAtkMonsterPow2.ForeColor = System.Drawing.Color.Gold;
+            this.LblAtkMonsterPow2.Location = new System.Drawing.Point(450, 284);
+            this.LblAtkMonsterPow2.Name = "LblAtkMonsterPow2";
+            this.LblAtkMonsterPow2.Size = new System.Drawing.Size(20, 17);
+            this.LblAtkMonsterPow2.TabIndex = 59;
+            this.LblAtkMonsterPow2.Text = "0";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackgroundImage = global::Projet_GONLO.Properties.Resources._210219551;
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox13.Location = new System.Drawing.Point(505, 261);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox13.TabIndex = 58;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackgroundImage = global::Projet_GONLO.Properties.Resources.def1;
+            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox14.Location = new System.Drawing.Point(477, 261);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox14.TabIndex = 57;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackgroundImage = global::Projet_GONLO.Properties.Resources.atk1;
+            this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox15.Location = new System.Drawing.Point(450, 261);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox15.TabIndex = 56;
+            this.pictureBox15.TabStop = false;
+            // 
+            // LblMovMonsterMov2
+            // 
+            this.LblMovMonsterMov2.AutoSize = true;
+            this.LblMovMonsterMov2.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMovMonsterMov2.ForeColor = System.Drawing.Color.Gold;
+            this.LblMovMonsterMov2.Location = new System.Drawing.Point(386, 284);
+            this.LblMovMonsterMov2.Name = "LblMovMonsterMov2";
+            this.LblMovMonsterMov2.Size = new System.Drawing.Size(20, 17);
+            this.LblMovMonsterMov2.TabIndex = 55;
+            this.LblMovMonsterMov2.Text = "0";
+            // 
+            // LblDefMonsterMov2
+            // 
+            this.LblDefMonsterMov2.AutoSize = true;
+            this.LblDefMonsterMov2.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDefMonsterMov2.ForeColor = System.Drawing.Color.Gold;
+            this.LblDefMonsterMov2.Location = new System.Drawing.Point(358, 284);
+            this.LblDefMonsterMov2.Name = "LblDefMonsterMov2";
+            this.LblDefMonsterMov2.Size = new System.Drawing.Size(20, 17);
+            this.LblDefMonsterMov2.TabIndex = 54;
+            this.LblDefMonsterMov2.Text = "0";
+            // 
+            // LblAtkMonsterMov2
+            // 
+            this.LblAtkMonsterMov2.AutoSize = true;
+            this.LblAtkMonsterMov2.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAtkMonsterMov2.ForeColor = System.Drawing.Color.Gold;
+            this.LblAtkMonsterMov2.Location = new System.Drawing.Point(330, 284);
+            this.LblAtkMonsterMov2.Name = "LblAtkMonsterMov2";
+            this.LblAtkMonsterMov2.Size = new System.Drawing.Size(20, 17);
+            this.LblAtkMonsterMov2.TabIndex = 53;
+            this.LblAtkMonsterMov2.Text = "0";
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackgroundImage = global::Projet_GONLO.Properties.Resources._210219551;
+            this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox16.Location = new System.Drawing.Point(385, 261);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox16.TabIndex = 52;
+            this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackgroundImage = global::Projet_GONLO.Properties.Resources.def1;
+            this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox17.Location = new System.Drawing.Point(357, 261);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox17.TabIndex = 51;
+            this.pictureBox17.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BackgroundImage = global::Projet_GONLO.Properties.Resources.atk1;
+            this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox18.Location = new System.Drawing.Point(330, 261);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox18.TabIndex = 50;
+            this.pictureBox18.TabStop = false;
+            // 
+            // LblMovMonsterDef2
+            // 
+            this.LblMovMonsterDef2.AutoSize = true;
+            this.LblMovMonsterDef2.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMovMonsterDef2.ForeColor = System.Drawing.Color.Gold;
+            this.LblMovMonsterDef2.Location = new System.Drawing.Point(274, 284);
+            this.LblMovMonsterDef2.Name = "LblMovMonsterDef2";
+            this.LblMovMonsterDef2.Size = new System.Drawing.Size(20, 17);
+            this.LblMovMonsterDef2.TabIndex = 49;
+            this.LblMovMonsterDef2.Text = "0";
+            // 
+            // LblDefMonsterDef2
+            // 
+            this.LblDefMonsterDef2.AutoSize = true;
+            this.LblDefMonsterDef2.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDefMonsterDef2.ForeColor = System.Drawing.Color.Gold;
+            this.LblDefMonsterDef2.Location = new System.Drawing.Point(246, 284);
+            this.LblDefMonsterDef2.Name = "LblDefMonsterDef2";
+            this.LblDefMonsterDef2.Size = new System.Drawing.Size(20, 17);
+            this.LblDefMonsterDef2.TabIndex = 48;
+            this.LblDefMonsterDef2.Text = "0";
+            // 
+            // LblAtkMonsterDef2
+            // 
+            this.LblAtkMonsterDef2.AutoSize = true;
+            this.LblAtkMonsterDef2.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAtkMonsterDef2.ForeColor = System.Drawing.Color.Gold;
+            this.LblAtkMonsterDef2.Location = new System.Drawing.Point(218, 284);
+            this.LblAtkMonsterDef2.Name = "LblAtkMonsterDef2";
+            this.LblAtkMonsterDef2.Size = new System.Drawing.Size(20, 17);
+            this.LblAtkMonsterDef2.TabIndex = 47;
+            this.LblAtkMonsterDef2.Text = "0";
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.BackgroundImage = global::Projet_GONLO.Properties.Resources._210219551;
+            this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox19.Location = new System.Drawing.Point(273, 261);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox19.TabIndex = 46;
+            this.pictureBox19.TabStop = false;
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.BackgroundImage = global::Projet_GONLO.Properties.Resources.def1;
+            this.pictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox20.Location = new System.Drawing.Point(245, 261);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox20.TabIndex = 45;
+            this.pictureBox20.TabStop = false;
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.BackgroundImage = global::Projet_GONLO.Properties.Resources.atk1;
+            this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox21.Location = new System.Drawing.Point(218, 261);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox21.TabIndex = 44;
+            this.pictureBox21.TabStop = false;
+            // 
+            // LblMovMonsterAtk2
+            // 
+            this.LblMovMonsterAtk2.AutoSize = true;
+            this.LblMovMonsterAtk2.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMovMonsterAtk2.ForeColor = System.Drawing.Color.Gold;
+            this.LblMovMonsterAtk2.Location = new System.Drawing.Point(164, 284);
+            this.LblMovMonsterAtk2.Name = "LblMovMonsterAtk2";
+            this.LblMovMonsterAtk2.Size = new System.Drawing.Size(20, 17);
+            this.LblMovMonsterAtk2.TabIndex = 43;
+            this.LblMovMonsterAtk2.Text = "0";
+            // 
+            // LblDefMonsterAtk2
+            // 
+            this.LblDefMonsterAtk2.AutoSize = true;
+            this.LblDefMonsterAtk2.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDefMonsterAtk2.ForeColor = System.Drawing.Color.Gold;
+            this.LblDefMonsterAtk2.Location = new System.Drawing.Point(136, 284);
+            this.LblDefMonsterAtk2.Name = "LblDefMonsterAtk2";
+            this.LblDefMonsterAtk2.Size = new System.Drawing.Size(20, 17);
+            this.LblDefMonsterAtk2.TabIndex = 42;
+            this.LblDefMonsterAtk2.Text = "0";
+            // 
+            // LblAtkMonsterAtk2
+            // 
+            this.LblAtkMonsterAtk2.AutoSize = true;
+            this.LblAtkMonsterAtk2.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAtkMonsterAtk2.ForeColor = System.Drawing.Color.Gold;
+            this.LblAtkMonsterAtk2.Location = new System.Drawing.Point(108, 284);
+            this.LblAtkMonsterAtk2.Name = "LblAtkMonsterAtk2";
+            this.LblAtkMonsterAtk2.Size = new System.Drawing.Size(20, 17);
+            this.LblAtkMonsterAtk2.TabIndex = 41;
+            this.LblAtkMonsterAtk2.Text = "0";
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.BackgroundImage = global::Projet_GONLO.Properties.Resources._210219551;
+            this.pictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox22.Location = new System.Drawing.Point(163, 261);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox22.TabIndex = 40;
+            this.pictureBox22.TabStop = false;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.BackgroundImage = global::Projet_GONLO.Properties.Resources.def1;
+            this.pictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox23.Location = new System.Drawing.Point(135, 261);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox23.TabIndex = 39;
+            this.pictureBox23.TabStop = false;
+            // 
+            // pictureBox24
+            // 
+            this.pictureBox24.BackgroundImage = global::Projet_GONLO.Properties.Resources.atk1;
+            this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox24.Location = new System.Drawing.Point(108, 261);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox24.TabIndex = 38;
+            this.pictureBox24.TabStop = false;
             // 
             // Button1
             // 
@@ -788,7 +1402,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.StarsBackground3;
             this.ClientSize = new System.Drawing.Size(1441, 841);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Button1);
             this.Controls.Add(this.Button2);
@@ -828,6 +1441,9 @@
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP2MonsterAtk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterAtk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP2MonsterDef)).EndInit();
@@ -836,7 +1452,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterMov)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP2MonsterPow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterPow)).EndInit();
-            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -895,8 +1531,55 @@
         private System.Windows.Forms.Label LblMov;
         private System.Windows.Forms.ListBox ListBoxLog;
         private System.Windows.Forms.Label LblPlayerTurn;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel PnlDe;
         private System.Windows.Forms.Label lblRound;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label LblMovMonsterAtk1;
+        private System.Windows.Forms.Label LblDefMonsterAtk1;
+        private System.Windows.Forms.Label LblAtkMonsterAtk1;
+        private System.Windows.Forms.Label LblMovMonsterPow1;
+        private System.Windows.Forms.Label LblDefMonsterPow1;
+        private System.Windows.Forms.Label LblAtkMonsterPow1;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Label LblMovMonsterMov1;
+        private System.Windows.Forms.Label LblDefMonsterMov1;
+        private System.Windows.Forms.Label LblAtkMonsterMov1;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label LblMovMonsterDef1;
+        private System.Windows.Forms.Label LblDefMonsterDef1;
+        private System.Windows.Forms.Label LblAtkMonsterDef1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label LblMovMonsterPow2;
+        private System.Windows.Forms.Label LblDefMonsterPow2;
+        private System.Windows.Forms.Label LblAtkMonsterPow2;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.Label LblMovMonsterMov2;
+        private System.Windows.Forms.Label LblDefMonsterMov2;
+        private System.Windows.Forms.Label LblAtkMonsterMov2;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Label LblMovMonsterDef2;
+        private System.Windows.Forms.Label LblDefMonsterDef2;
+        private System.Windows.Forms.Label LblAtkMonsterDef2;
+        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.PictureBox pictureBox21;
+        private System.Windows.Forms.Label LblMovMonsterAtk2;
+        private System.Windows.Forms.Label LblDefMonsterAtk2;
+        private System.Windows.Forms.Label LblAtkMonsterAtk2;
+        private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.PictureBox pictureBox23;
+        private System.Windows.Forms.PictureBox pictureBox24;
     }
 }
