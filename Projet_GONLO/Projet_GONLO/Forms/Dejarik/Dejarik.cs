@@ -421,20 +421,6 @@ namespace Projet_GONLO
             firstClick = 0;
             actions = 2;
             LblAction.Text = "Action : " + actions;
-            endGame();
-        }
-
-        private void endGame()
-        {
-            if(players[0].ListMonsters.Count == 0)
-            {
-                MessageBox.Show("Player 2 won the game !");
-                disableButtons();
-            } else if (players[1].ListMonsters.Count == 1)
-            {
-                MessageBox.Show("Player 1 won the game !");
-                disableButtons();
-            }
         }
 
         /// <summary>
