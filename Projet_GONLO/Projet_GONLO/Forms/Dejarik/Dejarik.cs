@@ -51,10 +51,21 @@ namespace Projet_GONLO
         {
             //Setting the position of each monster on player 1 side
             setUpPlayersMonster(player1, 14, 15, 16, 17);
+
             //Setting the position of each monster on player 2 side
             setUpPlayersMonster(player2, 23, 22, 21, 20);
 
-            setInfoMonster();
+            //Player 1
+            setInfoMonsters(imgP1MonsterAtk, LblAtkMonsterAtk1, LblDefMonsterAtk1, LblMovMonsterAtk1, player1.AttMonster);
+            setInfoMonsters(imgP1MonsterDef, LblAtkMonsterDef1, LblDefMonsterDef1, LblMovMonsterDef1, player1.DefMonster);
+            setInfoMonsters(imgP1MonsterMov, LblAtkMonsterMov1, LblDefMonsterMov1, LblMovMonsterMov1, player1.MovMonster);
+            setInfoMonsters(imgP1MonsterPow, LblAtkMonsterPow1, LblDefMonsterPow1, LblMovMonsterPow1, player1.PowMonster);
+
+            //Player 2
+            setInfoMonsters(imgP2MonsterAtk, LblAtkMonsterAtk2, LblDefMonsterAtk2, LblMovMonsterAtk2, player2.AttMonster);
+            setInfoMonsters(imgP2MonsterDef, LblAtkMonsterDef2, LblDefMonsterDef2, LblMovMonsterDef2, player2.DefMonster);
+            setInfoMonsters(imgP2MonsterMov, LblAtkMonsterMov2, LblDefMonsterMov2, LblMovMonsterMov2, player2.MovMonster);
+            setInfoMonsters(imgP2MonsterPow, LblAtkMonsterPow2, LblDefMonsterPow2, LblMovMonsterPow2, player2.PowMonster);
         }
 
         private void setUpPlayersMonster(Player p, int posAtk, int posDef, int posMov, int posPow)
@@ -150,24 +161,19 @@ namespace Projet_GONLO
                 disableButtonsWithTransparent();
 
                 //Unfinished movement
-                checkUnfinishedMov();
-                
+                if (counterMov != players[turn].CurrMonster.Movement)
+                {
+                    activateMovButtons(players[turn].CurrMonster.Position);
+                }
+
                 oldPosition = currPosition;
 
                 //End turn
-                endSetup();
+                endAction();
             }
         }
 
-        private void checkUnfinishedMov()
-        {
-            if (counterMov != players[turn].CurrMonster.Movement)
-            {
-                activateMovButtons(players[turn].CurrMonster.Position);
-            }
-        }
-
-        private void endSetup()
+        private void endAction()
         {
             if (counterMov == players[turn].CurrMonster.Movement)
             {
@@ -195,19 +201,15 @@ namespace Projet_GONLO
             //Attack
             else if (listButtons[currPosition].BackColor == Color.Red)
             {
-                pickAtk(currPosition);
+                getDefMonster(currPosition);
+                clickAtkMonster(currPosition);
+                counterMov = players[turn].CurrMonster.Movement;
             }
+
             else
             {
                 findAtkMonster(currPosition);
             }
-        }
-
-        private void pickAtk(int currPosition)
-        {
-            getDefMonster(currPosition);
-            clickAtkMonster(currPosition);
-            counterMov = players[turn].CurrMonster.Movement;
         }
 
         private void onFirstClick(int currPosition)
@@ -254,7 +256,6 @@ namespace Projet_GONLO
                 if (tmp.ListMonsters[i].Position == currPosition)
                 {
                     defendingMonster = tmp.ListMonsters[i];
-                    MessageBox.Show("" + defendingMonster.Name, "Defending monster");
                 }
             }
 
@@ -271,7 +272,6 @@ namespace Projet_GONLO
                 if (players[turn].CurrMonster == players[turn].ListMonsters[i])
                 {
                     disableButtonsWithTransparent();
-                    MessageBox.Show("Roll the dice to get a new Attack value", "Attack");
                     rollDice();
                 }
             }
@@ -329,7 +329,6 @@ namespace Projet_GONLO
             }
             else
             {
-                MessageBox.Show("Roll the dice to get a new Defense value", "Defense");
                 defend(dice, newAtk);
                 roll = 0;
             }
@@ -608,58 +607,13 @@ namespace Projet_GONLO
             activateCurrPlayer();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        private void setInfoMonster()
+        private void setInfoMonsters(PictureBox imgMonster, Label lblAtk, Label lblDef, Label lblMov, Monster playerMonsterType)
         {
-            imgP1MonsterAtk.BackgroundImageLayout = ImageLayout.Stretch;
-            imgP1MonsterAtk.Image = player1.AttMonster.Picture;
-            LblAtkMonsterAtk1.Text = "" + player1.AttMonster.Attack;
-            LblDefMonsterAtk1.Text = "" + player1.AttMonster.Defense;
-            LblMovMonsterAtk1.Text = "" + player1.AttMonster.Movement;
-
-            imgP1MonsterDef.BackgroundImageLayout = ImageLayout.Stretch;
-            imgP1MonsterDef.Image = player1.DefMonster.Picture;
-            LblAtkMonsterDef1.Text = "" + player1.DefMonster.Attack;
-            LblDefMonsterDef1.Text = "" + player1.DefMonster.Defense;
-            LblMovMonsterDef1.Text = "" + player1.DefMonster.Movement;
-
-            imgP1MonsterMov.BackgroundImageLayout = ImageLayout.Stretch;
-            imgP1MonsterMov.Image = player1.MovMonster.Picture;
-            LblAtkMonsterMov1.Text = "" + player1.MovMonster.Attack;
-            LblDefMonsterMov1.Text = "" + player1.MovMonster.Defense;
-            LblMovMonsterMov1.Text = "" + player1.MovMonster.Movement;
-
-            imgP1MonsterPow.BackgroundImageLayout = ImageLayout.Stretch;
-            imgP1MonsterPow.Image = player1.PowMonster.Picture;
-            LblAtkMonsterPow1.Text = "" + player1.PowMonster.Attack;
-            LblDefMonsterPow1.Text = "" + player1.PowMonster.Defense;
-            LblMovMonsterPow1.Text = "" + player1.PowMonster.Movement;
-
-            imgP2MonsterAtk.BackgroundImageLayout = ImageLayout.Stretch;
-            imgP2MonsterAtk.Image = player2.AttMonster.Picture;
-            LblAtkMonsterAtk2.Text = "" + player2.AttMonster.Attack;
-            LblDefMonsterAtk2.Text = "" + player2.AttMonster.Defense;
-            LblMovMonsterAtk2.Text = "" + player2.AttMonster.Movement;
-
-            imgP2MonsterDef.BackgroundImageLayout = ImageLayout.Stretch;
-            imgP2MonsterDef.Image = player2.DefMonster.Picture;
-            LblAtkMonsterDef2.Text = "" + player2.DefMonster.Attack;
-            LblDefMonsterDef2.Text = "" + player2.DefMonster.Defense;
-            LblMovMonsterDef2.Text = "" + player2.DefMonster.Movement;
-
-            imgP2MonsterMov.BackgroundImageLayout = ImageLayout.Stretch;
-            imgP2MonsterMov.Image = player2.MovMonster.Picture;
-            LblAtkMonsterMov2.Text = "" + player2.MovMonster.Attack;
-            LblDefMonsterMov2.Text = "" + player2.MovMonster.Defense;
-            LblMovMonsterMov2.Text = "" + player2.MovMonster.Movement;
-
-            imgP2MonsterPow.BackgroundImageLayout = ImageLayout.Stretch;
-            imgP2MonsterPow.Image = player2.PowMonster.Picture;
-            LblAtkMonsterPow2.Text = "" + player2.PowMonster.Attack;
-            LblDefMonsterPow2.Text = "" + player2.PowMonster.Defense;
-            LblMovMonsterPow2.Text = "" + player2.PowMonster.Movement;
+            imgMonster.BackgroundImageLayout = ImageLayout.Stretch;
+            imgMonster.Image = playerMonsterType.Picture;
+            lblAtk.Text = "" + playerMonsterType.Attack;
+            lblDef.Text = "" + playerMonsterType.Defense;
+            lblMov.Text = "" + playerMonsterType.Movement;
         }
 
         /// <summary>
