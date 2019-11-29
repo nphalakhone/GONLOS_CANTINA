@@ -16,7 +16,7 @@ namespace Projet_GONLO
         Player player2 = new Player();
         Player otherPlayer;
         List<Player> players = new List<Player>();
-        int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2, newTurn = 1, roll = 0, newAtk = 0;
+        int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2, newTurn = 1, roll = 0, newAtk = 0, checkAtk = 0;
         List<String> logMonster;
         Monster lastMonster;
         Monster defendingMonster = null, attackingMonster = null;
@@ -137,7 +137,8 @@ namespace Projet_GONLO
 
         private void btn_Click(object sender, EventArgs e)
         {
-            int currPosition = Int32.Parse(((Button)sender).Tag.ToString());
+            int currPosition = Int32.Parse(((Button)sender).Name.ToString().Substring(6));
+
             players[turn].CurrMonster = getClickMonster(currPosition);
             lastMonster = players[turn].CurrMonster;
             setCounterMov(players[turn].CurrMonster);
@@ -158,7 +159,7 @@ namespace Projet_GONLO
 
                 //Unfinished movement
                 checkUnfinishedMov();
-                
+
                 oldPosition = currPosition;
 
                 //End turn
@@ -176,9 +177,13 @@ namespace Projet_GONLO
 
         private void endSetup()
         {
+
             if (counterMov == players[turn].CurrMonster.Movement)
             {
-                addLog();
+                if (checkAtk == 0)
+                {
+                    addLogMouvement();
+                }
                 actions--;
                 LblAction.Text = "Action : " + actions;
                 activateCurrPlayer();
@@ -191,18 +196,21 @@ namespace Projet_GONLO
             }
         }
 
+
         private void actionPicker(int currPosition)
         {
             //Movement
             if (listButtons[currPosition].BackColor == Color.Green)
             {
                 clickMovMonster(currPosition);
+                checkAtk = 0;
             }
 
             //Attack
             else if (listButtons[currPosition].BackColor == Color.Red)
             {
                 pickAtk(currPosition);
+                checkAtk = 1;
             }
             else
             {
@@ -228,6 +236,11 @@ namespace Projet_GONLO
             findAtkMonster(currPosition);
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="currPosition"></param>
         private void findAtkMonster(int currPosition)
         {
             for (int i = 0; i < players[turn].ListMonsters.Count; i++)
@@ -295,32 +308,32 @@ namespace Projet_GONLO
             switch (dice)
             {
                 case 1:
-                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_one;
+                    PnlDeAtk.BackgroundImage = Properties.Resources.dice_six_faces_one;
                     giveNewAtkDefValue(dice);
                     break;
 
                 case 2:
-                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_two;
+                    PnlDeAtk.BackgroundImage = Properties.Resources.dice_six_faces_two;
                     giveNewAtkDefValue(dice);
                     break;
 
                 case 3:
-                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_three;
+                    PnlDeAtk.BackgroundImage = Properties.Resources.dice_six_faces_three;
                     giveNewAtkDefValue(dice);
                     break;
 
                 case 4:
-                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_four;
+                    PnlDeAtk.BackgroundImage = Properties.Resources.dice_six_faces_four;
                     giveNewAtkDefValue(dice);
                     break;
 
                 case 5:
-                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_five;
+                    PnlDeAtk.BackgroundImage = Properties.Resources.dice_six_faces_five;
                     giveNewAtkDefValue(dice);
                     break;
 
                 case 6:
-                    PnlDe.BackgroundImage = Properties.Resources.dice_six_faces_six;
+                    PnlDeAtk.BackgroundImage = Properties.Resources.dice_six_faces_six;
                     giveNewAtkDefValue(dice);
                     break;
             }
@@ -370,6 +383,7 @@ namespace Projet_GONLO
                 }
             }
 
+
         }
 
         /// <summary>
@@ -414,7 +428,7 @@ namespace Projet_GONLO
             {
                 turn++;
             }
-  
+
             disableButtons();
             activateCurrPlayer();
             counterMov = 0;
@@ -426,16 +440,26 @@ namespace Projet_GONLO
         /// <summary>
         /// Method that add the movement log
         /// </summary>
-        private void addLog()
+        private void addLogMouvement()
         {
             String logTemp = "";
+            String pos = "";
+
+            for (int i = 0; i < listButtons.Count; i++)
+            {
+                if (lastMonster.Position == i)
+                {
+                    pos = listButtons[i].Tag.ToString();
+                }
+            }
+
             if (turn == 0)
             {
-                logTemp = "Round " + newTurn + " : Player 1 moved " + lastMonster.Name + " to position : " + lastMonster.Position;
+                logTemp = "Round " + newTurn + " : Player 1 moved " + lastMonster.Name + " to position : " + pos;
             }
             else
             {
-                logTemp = "Round " + newTurn + " : Player 2 moved " + lastMonster.Name + " to position : " + lastMonster.Position;
+                logTemp = "Round " + newTurn + " : Player 2 moved " + lastMonster.Name + " to position : " + pos;
             }
             ListBoxLog.Items.Add(logTemp);
 
@@ -686,13 +710,10 @@ namespace Projet_GONLO
                 }
             }
 
-            
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
 
         }
+
+
 
         /// <summary>
         /// 
@@ -748,6 +769,8 @@ namespace Projet_GONLO
                 tmpDef = 0;
             }
 
+            addLogPush(winner, tmpAtk, tmpDef);
+
             if (winner.Equals("Attacker"))
             {
                 for (int i = 0; i < players[tmpDef].ListMonsters.Count; i++)
@@ -771,12 +794,12 @@ namespace Projet_GONLO
                                 var random = new Random();
                                 int newPos = 0;
 
-                                if(accessibleButtons.Count > 0)
+                                if (accessibleButtons.Count > 0)
                                 {
                                     newPos = accessibleButtons[random.Next(accessibleButtons.Count)];
                                 }
-                                
 
+                                addLogPush(winner, tmpAtk, tmpDef);
                                 setButton(players[tmpDef].ListMonsters[i].Position, null);
                                 players[tmpDef].ListMonsters[i].Position = newPos;
                                 setButton(newPos, players[tmpDef].ListMonsters[i].Picture);
@@ -815,6 +838,8 @@ namespace Projet_GONLO
                                     newPos = accessibleButtons[random.Next(accessibleButtons.Count)];
                                 }
 
+                                addLogPush(winner, tmpAtk, tmpDef);
+
                                 setButton(players[tmpAtk].ListMonsters[i].Position, null);
                                 players[tmpAtk].ListMonsters[i].Position = newPos;
                                 setButton(newPos, players[tmpAtk].ListMonsters[i].Picture);
@@ -825,6 +850,7 @@ namespace Projet_GONLO
                 }
             }
         }
+
 
         /// <summary>
         /// 
@@ -844,7 +870,7 @@ namespace Projet_GONLO
                 tmpAtk = 1;
                 tmpDef = 0;
             }
-
+            addLogKill(winner, tmpAtk, tmpDef);
 
             if (winner.Equals("Attacker"))
             {
@@ -882,6 +908,64 @@ namespace Projet_GONLO
                     }
                 }
             }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="winner"></param>
+        /// <param name="tmpAtk"></param>
+        /// <param name="tmpDef"></param>
+        private void addLogPush(string winner, int tmpAtk, int tmpDef)
+        {
+            String logTemp = "";
+            if (winner.Equals("Attacker"))
+            {
+                logTemp = creationLogTemp(tmpAtk, attackingMonster, defendingMonster);
+            }
+            else if (winner.Equals("Defender"))
+            {
+                logTemp = creationLogTemp(tmpAtk, defendingMonster, attackingMonster);
+
+            }
+            ListBoxLog.Items.Add(logTemp);
+        }
+
+        private String creationLogTemp(int tmpAtk, Monster killerMonster, Monster killedMonster)
+        {
+            String logTemp = "";
+            if (tmpAtk == 0)
+            {
+                logTemp = "Player 1's monster : " + killerMonster.Name + " pushed \n Player 2's monster : " + killedMonster.Name;
+            }
+            else
+            {
+                logTemp = "Player 2's monster : " + killerMonster.Name + " pushed \n Player 1's monster : " + killedMonster.Name;
+            }
+
+            return logTemp;
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="winner"></param>
+        /// <param name="tmpAtk"></param>
+        /// <param name="tmpDef"></param>
+        private void addLogKill(String winner, int tmpAtk, int tmpDef)
+        {
+            String logtemp = "";
+            if (winner.Equals("Attacker"))
+            {
+                logtemp = players[tmpAtk] + "' " + attackingMonster.Name + " killed " + players[tmpDef] + "' " + defendingMonster.Name;
+            }
+            else if (winner.Equals("Defender"))
+            {
+                logtemp = players[tmpDef] + "' " + defendingMonster.Name + " killed " + players[tmpAtk] + "' " + attackingMonster.Name;
+            }
+            ListBoxLog.Items.Add(logtemp);
         }
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
