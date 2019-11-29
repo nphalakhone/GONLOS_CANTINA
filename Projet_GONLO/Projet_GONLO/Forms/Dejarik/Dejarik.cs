@@ -497,10 +497,7 @@ namespace Projet_GONLO
         private void activateMovButtons(int currPosition)
         {
             List<int> accessibleButtons = new List<int>();
-            for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
-            {
-                accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
-            }
+            accessibleButtons = createAccessibleButtonsList(currPosition);
 
             //******************************
             for (int i = 0; i < accessibleButtons.Count; i++)
@@ -529,10 +526,7 @@ namespace Projet_GONLO
         private void activateAttackButtons(int currPosition)
         {
             List<int> accessibleButtons = new List<int>();
-            for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
-            {
-                accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
-            }
+            accessibleButtons = createAccessibleButtonsList(currPosition);
 
             //Activate accessible buttons for attack
             for (int i = 0; i < accessibleButtons.Count; i++)
@@ -545,6 +539,17 @@ namespace Projet_GONLO
                 }
             }
         }
+
+        private List<int> createAccessibleButtonsList(int currPosition)
+        {
+            List<int> accessibleButtons = new List<int>();
+            for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
+            {
+                accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
+            }
+            return accessibleButtons;
+        }
+
 
         /// <summary>
         /// 
