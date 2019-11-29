@@ -465,17 +465,84 @@ namespace Projet_GONLO
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string filename = "Saves.txt";
-            string fullPath = Path.GetFullPath(filename);
-            string saveLine = playerPazaak.Name + ";" + playerPazaak.Gender + ";" + playerPazaak.Species + ";"
-                + playerPazaak.Credits.ToString() + playerPazaak.PazaakGamesWon.ToString() + ";" 
-                + playerPazaak.PazaakGamesLost.ToString() + ";" + playerPazaak.DejarikGamesWon.ToString() + ";" + playerPazaak.DejarikGamesLost.ToString();
+            List<Player> playersSaved = new List<Player>();
+            bool toSave = false;
+            playersSaved = readSaveFile();
 
-            Console.WriteLine(saveLine, fullPath);
+            foreach (Player p in playersSaved)
+            {
+                if (p.Name == playerPazaak.Name)
+                {
+                    DialogResult dr = MessageBox.Show("Your data already exists in the save file. " +
+                        "Do you wish to overwrite your saved data?", "ATTENTION", MessageBoxButtons.YesNo);
 
-            StreamWriter file = new StreamWriter(fullPath);
+                    switch (dr)
+                    {
+                        case DialogResult.Yes:
+                            toSave = true;
+                            StreamWriter sw2 = new StreamWriter(Application.StartupPath + "\\Saves\\" + "test.txt");
+                            sw2.WriteLine(playerPazaak.Name + ";" + playerPazaak.Gender + ";" + playerPazaak.Species + ";" + playerPazaak.Credits.ToString() + ";" +
+                            playerPazaak.PazaakGamesWon.ToString() + ";" + playerPazaak.PazaakGamesLost.ToString() + ";" + playerPazaak.DejarikGamesWon.ToString() + ";" 
+                            + playerPazaak.DejarikGamesLost.ToString());
+                            sw2.Close();
+                            break;
+                        case DialogResult.No:
+                            toSave = false;
+                            break;
+                    }
+                }
+                else
+                {
+                    toSave = false;
+                }
+            }
+
+            if (toSave)
+            {
+                foreach (Player p in playersSaved)
+                {
+                    if (p.Name == playerPazaak.Name)
+                    {
+                        p.Credits = playerPazaak.Credits;
+                        p.PazaakGamesWon = playerPazaak.PazaakGamesWon;
+                        p.PazaakGamesLost = playerPazaak.PazaakGamesLost;
+                        p.DejarikGamesWon = playerPazaak.DejarikGamesWon;
+                        p.DejarikGamesLost = playerPazaak.DejarikGamesLost;
+                    }
+                }
+            }
+
+            StreamWriter sw = new StreamWriter(Application.StartupPath + "\\Saves\\" + "test.txt");
+            
+            sw.WriteLine(playerPazaak.Name + ";" + playerPazaak.Gender + ";" + playerPazaak.Species + ";" + playerPazaak.Credits.ToString() + ";" +
+                         playerPazaak.PazaakGamesWon.ToString() + ";" + playerPazaak.PazaakGamesLost.ToString() + ";" + playerPazaak.DejarikGamesWon.ToString() + ";" + playerPazaak.DejarikGamesLost.ToString());
             
 
+            sw.Close();
+        }
+
+        public List<Player> readSaveFile()
+        {
+            List<Player> playersSaved = new List<Player>();
+
+            StreamReader sr = new StreamReader(Application.StartupPath + "\\Saves\\" + "test.txt");
+            string line = "";
+            while ((line = sr.ReadLine()) != null)
+            {
+                string[] new_player = line.Split(';');
+                Player player = new Player();
+                player.Name = new_player[0];
+                player.Gender = new_player[1];
+                player.Species = new_player[2];
+                player.Credits = Int32.Parse(new_player[3]);
+                player.PazaakGamesWon = Int32.Parse(new_player[4]);
+                player.PazaakGamesLost = Int32.Parse(new_player[5]);
+                player.DejarikGamesWon = Int32.Parse(new_player[6]);
+                player.DejarikGamesLost = Int32.Parse(new_player[7]);
+                playersSaved.Add(player);
+            }
+            sr.Close();
+            return playersSaved;
         }
 
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
@@ -489,7 +556,17 @@ namespace Projet_GONLO
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show("Are you sure you want to forfeit and quit the game ? You will  automaticaly lose the amount of credits taht you waged", "Attention", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                playerPazaak.Credits -= credsWaged;
+                playerPazaak.PazaakGamesLost++;
+                this.Hide();
+                MenuAccueil newMenuAccueil = new MenuAccueil();
+                newMenuAccueil.Player1 = playerPazaak;
+                newMenuAccueil.ShowDialog();
+                this.Close();
+            }
         }
 
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -503,6 +580,7 @@ namespace Projet_GONLO
             if (result == DialogResult.Yes)
             {
                 playerPazaak.Credits -= credsWaged;
+                playerPazaak.PazaakGamesLost++;
                 this.Hide();
                 MenuAccueil newMenuAccueil = new MenuAccueil();
                 newMenuAccueil.Player1 = playerPazaak;
@@ -533,14 +611,11 @@ namespace Projet_GONLO
             LblCreditsWagedNumeric.Text = credsWaged.ToString();
             LblPlayerName.Text = playerPazaak.Name;
             LblCreditsNumeric.Text = playerPazaak.Credits.ToString();
-
             ShowFlipCard();
-
         }
 
         private void ShowFlipCard()
         {
-
             Label[] Numeric = { LblNumeric1, LblNumeric2, LblNumeric3, LblNumeric4 };
             Label[] PlusValue = { LblPlusValue1, LblPlusValue2, LblPlusValue3, LblPlusValue4 };
             Label[] FlipCard = { LblFlipCard1, LblFlipCard2, LblFlipCard3, LblFlipCard4 };
@@ -691,17 +766,6 @@ namespace Projet_GONLO
                 newMenuAccueil.ShowDialog();
                 this.Close();
             }
-
-
-
-
-
-
-
-
-
         }
-
-
     }
 }

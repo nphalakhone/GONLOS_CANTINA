@@ -156,7 +156,7 @@ namespace Projet_GONLO
                 player2.PowMonster = mantellianSavrip;
                 player1.PowMonster = monnok;
                 logMonster += "Player 2 chose the monster : Mantellian Savrip-";
-                logMonster += "Player 2 gets the monster : Monnok-";
+                logMonster += "Player 1 gets the monster : Monnok-";
             }
             btnClick(BtnMantellian, BtnMonnok);
         }
@@ -243,15 +243,15 @@ namespace Projet_GONLO
 
         private void changeLabel()
         {
-            if (LblMenuPlayerTurn.Text.Equals("Player 1 choose one monster for each category  "))
+            if (LblMenuPlayerTurn.Text.Equals("Player 1 select one monster for each category  "))
             {
-                LblMenuPlayerTurn.Text = "Player 2 choose one monster for each category  ";
+                LblMenuPlayerTurn.Text = "Player 2 select one monster for each category  ";
                 Refresh();
                 playerTurn = 2;
             }
             else
             {
-                LblMenuPlayerTurn.Text = "Player 1 choose one monster for each category  ";
+                LblMenuPlayerTurn.Text = "Player 1 select one monster for each category  ";
                 Refresh();
                 playerTurn = 1;
             }
