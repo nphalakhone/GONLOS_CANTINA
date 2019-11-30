@@ -364,7 +364,6 @@ namespace Projet_GONLO
             }
         }
 
-
         private void giveNewAtkDefValue(int dice)
         {
             if (roll == 0)
@@ -422,8 +421,6 @@ namespace Projet_GONLO
                     movement(currPosition, players[turn].ListMonsters[i]);
                 }
             }
-
-
         }
 
         /// <summary>
@@ -610,7 +607,6 @@ namespace Projet_GONLO
             List<int> accessibleButtons = new List<int>();
             for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
             {
-
                 accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
             }
 
@@ -625,7 +621,6 @@ namespace Projet_GONLO
                 }
             }
         }
-
 
         private List<int> getMovAccessibleButtons(int currPosition)
         {
@@ -742,20 +737,12 @@ namespace Projet_GONLO
             }
         }
 
-
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="dice"></param>
-        /// <param name="newAtk"></param>
         private void defend(int dice, int newAtk)
         {
             int newDef = defendingMonster.Defense;
             newDef += dice;
             LblDefMonsterName.Text = defendingMonster.Name;
             LblNewDefenseValue.Text = ": " + newDef;
-            //int whoWins = 0; //0 = attacker wins / 1 = defender wins
 
             if (newAtk - newDef >= 5)
             {
@@ -780,13 +767,9 @@ namespace Projet_GONLO
 
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="winner"></param>
         private void push(String winner)
         {
-            setWhoAtkWhoDef();
+            setAtkDef();
             addLogPush(winner, tmpAtk);
             if (winner.Equals("Attacker"))
             {
@@ -800,11 +783,6 @@ namespace Projet_GONLO
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="tmpVal"></param>
-        /// <param name="monsterInvolved"></param>
         private void pushMonster(int tmpVal, Monster monsterInvolved)
         {
             for (int i = 0; i < players[tmpVal].ListMonsters.Count; i++)
@@ -857,13 +835,9 @@ namespace Projet_GONLO
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="winner"></param>
         private void kill(String winner)
         {
-            setWhoAtkWhoDef();
+            setAtkDef();
             addLogKill(winner, tmpAtk);
             if (winner.Equals("Attacker"))
             {
@@ -875,7 +849,7 @@ namespace Projet_GONLO
             }
         }
 
-        private void setWhoAtkWhoDef()
+        private void setAtkDef()
         {
             if (turn == 0)
             {
@@ -908,12 +882,6 @@ namespace Projet_GONLO
             }
         }
 
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="winner"></param>
-        /// <param name="tmpAtk"></param>
         private void addLogPush(string winner, int tmpAtk)
         {
             String logTemp = "";
@@ -946,13 +914,6 @@ namespace Projet_GONLO
             return logTemp;
         }
 
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="winner"></param>
-        /// <param name="tmpAtk"></param>
-        /// <param name="tmpDef"></param>
         private void addLogKill(string winner, int tmpAtk)
         {
             String logTemp = "";
@@ -982,7 +943,6 @@ namespace Projet_GONLO
 
             return logTemp;
         }
-
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
