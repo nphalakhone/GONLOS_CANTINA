@@ -219,14 +219,14 @@ namespace Projet_GONLO
         private void actionPicker(int currPosition)
         {
             //Movement
-            if (listButtons[currPosition].BackColor == Color.Green)
+            if (listButtons[currPosition].BackColor == Color.FromArgb(80, Color.Lime))
             {
                 clickMovMonster(currPosition);
                 checkAtk = 0;
             }
 
             //Attack
-            else if (listButtons[currPosition].BackColor == Color.Red)
+            else if (listButtons[currPosition].BackColor == Color.FromArgb(70, Color.Red))
             {
                 getDefMonster(currPosition);
                 clickAtkMonster(currPosition);
@@ -559,6 +559,7 @@ namespace Projet_GONLO
                 listButtons[i].BackColor = Color.Transparent;
                 listButtons[i].Enabled = false;
             }
+
         }
 
         private void disableAllButtons()
@@ -567,6 +568,7 @@ namespace Projet_GONLO
             {
                 listButtons[i].Enabled = false;
             }
+
         }
 
         /// <summary>
@@ -595,7 +597,7 @@ namespace Projet_GONLO
             //Activate accessible buttons for movement
             for (int i = 0; i < accessibleButtons.Count; i++)
             {
-                listButtons[accessibleButtons[i]].BackColor = Color.Green;
+                listButtons[accessibleButtons[i]].BackColor = Color.FromArgb(80, Color.Lime); 
                 listButtons[accessibleButtons[i]].Enabled = true;
             }
         }
@@ -618,7 +620,7 @@ namespace Projet_GONLO
                 ////Attack
                 if (checkForAttack(accessibleButtons[i]))
                 {
-                    listButtons[accessibleButtons[i]].BackColor = Color.Red;
+                    listButtons[accessibleButtons[i]].BackColor = Color.FromArgb(70, Color.Red);
                     listButtons[accessibleButtons[i]].Enabled = true;
                 }
             }
@@ -731,11 +733,11 @@ namespace Projet_GONLO
 
                 if (turn == 0)
                 {
-                    listButtons[players[turn].ListMonsters[j].Position].BackColor = Color.MidnightBlue;
+                    listButtons[players[turn].ListMonsters[j].Position].BackColor = Color.FromArgb(70, Color.BlueViolet);
                 }
                 else
                 {
-                    listButtons[players[turn].ListMonsters[j].Position].BackColor = Color.Gold;
+                    listButtons[players[turn].ListMonsters[j].Position].BackColor = Color.FromArgb(80, Color.Gold);
                 }
             }
         }
