@@ -832,13 +832,11 @@ namespace Projet_GONLO
                             {
                                 if (monsterInvolved == defendingMonster)
                                 {
-                                    addLogKill(winner, tmpAtk);
                                     kill("Attacker");
                                     break;
                                 }
                                 else if (monsterInvolved == attackingMonster)
                                 {
-                                    addLogKill(winner, tmpAtk);
                                     kill("Defender");
                                     break;
                                 }
@@ -943,45 +941,36 @@ namespace Projet_GONLO
             ListBoxLog.Items.Add(logTemp);
         }
 
-        private String creationLogTempPush(int tmpAtk, Monster winMonster, Monster loseMonster)
-        {
-            String logTemp = "";
-            String pos = "";
-
-
-
-            return logTemp;
-        }
 
         private void addLogKill(string winner, int tmpAtk)
         {
             String logTemp = "";
-            if (winner.Equals("Attacker"))
+            if (tmpAtk == 0)
             {
-                logTemp = creationLogTempKill(tmpAtk, attackingMonster, defendingMonster);
+                if (winner.Equals("Attacker"))
+                {
+                    logTemp = "Round " + newTurn + " : Player 1's monster : " + attackingMonster.Name + " killed Player 2's monster : " + defendingMonster.Name;
+                }
+                else if (winner.Equals("Defender"))
+                {
+                    logTemp = "Round " + newTurn + " : Player 2's monster : " + defendingMonster.Name + " killed Player 1's monster : " + attackingMonster.Name;
+                }
             }
-            else if (winner.Equals("Defender"))
+            //if player 2 is attacking
+            else
             {
-                logTemp = creationLogTempKill(tmpAtk, defendingMonster, attackingMonster);
-
+                if (winner.Equals("Attacker"))
+                {
+                    logTemp = "Round " + newTurn + " : Player 2's monster : " + attackingMonster.Name + " killed Player 1's monster : " + defendingMonster.Name;
+                }
+                else if (winner.Equals("Defender"))
+                {
+                    logTemp = "Round " + newTurn + " : Player 1's monster : " + defendingMonster.Name + " killed Player 2's monster : " + attackingMonster.Name;
+                }
             }
             ListBoxLog.Items.Add(logTemp);
         }
 
-        private string creationLogTempKill(int tmpAtk, Monster winMonster, Monster loseMonster)
-        {
-            String logTemp = "";
-            if (tmpAtk == 0)
-            {
-                logTemp = "Round " + newTurn + " : Player 1's monster : " + winMonster.Name + " killed Player 2's monster : " + loseMonster.Name;
-            }
-            else
-            {
-                logTemp = "Round " + newTurn + " : Player 2's monster : " + winMonster.Name + " killed Player 1's monster : " + loseMonster.Name;
-            }
-
-            return logTemp;
-        }
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {

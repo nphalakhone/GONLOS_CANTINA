@@ -37,9 +37,11 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LblNewDefenseValue = new System.Windows.Forms.Label();
+            this.circularPictureBox2 = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
             this.LblDefMonsterName = new System.Windows.Forms.Label();
             this.LblDefendingMonster = new System.Windows.Forms.Label();
             this.LblNewAttackValue = new System.Windows.Forms.Label();
+            this.circularPictureBox1 = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
             this.LblAtkMonsterName = new System.Windows.Forms.Label();
             this.LblAttackingMonster = new System.Windows.Forms.Label();
             this.pnlDeDef = new System.Windows.Forms.Panel();
@@ -113,8 +115,6 @@
             this.LblMov = new System.Windows.Forms.Label();
             this.ListBoxLog = new System.Windows.Forms.ListBox();
             this.LblPlayerTurn = new System.Windows.Forms.Label();
-            this.circularPictureBox2 = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
-            this.circularPictureBox1 = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
             this.Button1 = new Projet_GONLO.ButtonCircle();
             this.Button2 = new Projet_GONLO.ButtonCircle();
             this.Button3 = new Projet_GONLO.ButtonCircle();
@@ -142,6 +142,8 @@
             this.Button25 = new Projet_GONLO.ButtonCircle();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterAtk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -175,8 +177,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterMov)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP2MonsterPow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterPow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -283,6 +283,17 @@
             this.LblNewDefenseValue.TabIndex = 18;
             this.LblNewDefenseValue.Text = ": 0";
             // 
+            // circularPictureBox2
+            // 
+            this.circularPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.circularPictureBox2.Image = global::Projet_GONLO.Properties.Resources.def1;
+            this.circularPictureBox2.Location = new System.Drawing.Point(395, 739);
+            this.circularPictureBox2.Name = "circularPictureBox2";
+            this.circularPictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox2.TabIndex = 17;
+            this.circularPictureBox2.TabStop = false;
+            // 
             // LblDefMonsterName
             // 
             this.LblDefMonsterName.AutoSize = true;
@@ -314,6 +325,17 @@
             this.LblNewAttackValue.Size = new System.Drawing.Size(67, 38);
             this.LblNewAttackValue.TabIndex = 14;
             this.LblNewAttackValue.Text = ": 0";
+            // 
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.circularPictureBox1.Image = global::Projet_GONLO.Properties.Resources.atk1;
+            this.circularPictureBox1.Location = new System.Drawing.Point(114, 736);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox1.TabIndex = 13;
+            this.circularPictureBox1.TabStop = false;
             // 
             // LblAtkMonsterName
             // 
@@ -1001,7 +1023,7 @@
             // 
             this.LblP2Monstre.AutoSize = true;
             this.LblP2Monstre.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblP2Monstre.ForeColor = System.Drawing.Color.BlueViolet;
+            this.LblP2Monstre.ForeColor = System.Drawing.Color.Gold;
             this.LblP2Monstre.Location = new System.Drawing.Point(9, 203);
             this.LblP2Monstre.Name = "LblP2Monstre";
             this.LblP2Monstre.Size = new System.Drawing.Size(82, 14);
@@ -1012,7 +1034,7 @@
             // 
             this.LblP1Monstre.AutoSize = true;
             this.LblP1Monstre.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblP1Monstre.ForeColor = System.Drawing.Color.Gold;
+            this.LblP1Monstre.ForeColor = System.Drawing.Color.BlueViolet;
             this.LblP1Monstre.Location = new System.Drawing.Point(6, 56);
             this.LblP1Monstre.Name = "LblP1Monstre";
             this.LblP1Monstre.Size = new System.Drawing.Size(76, 14);
@@ -1144,28 +1166,6 @@
             this.LblPlayerTurn.Size = new System.Drawing.Size(373, 38);
             this.LblPlayerTurn.TabIndex = 5;
             this.LblPlayerTurn.Text = "Player 1\'s Turn";
-            // 
-            // circularPictureBox2
-            // 
-            this.circularPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.circularPictureBox2.Image = global::Projet_GONLO.Properties.Resources.def1;
-            this.circularPictureBox2.Location = new System.Drawing.Point(395, 739);
-            this.circularPictureBox2.Name = "circularPictureBox2";
-            this.circularPictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox2.TabIndex = 17;
-            this.circularPictureBox2.TabStop = false;
-            // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.circularPictureBox1.Image = global::Projet_GONLO.Properties.Resources.atk1;
-            this.circularPictureBox1.Location = new System.Drawing.Point(114, 736);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 13;
-            this.circularPictureBox1.TabStop = false;
             // 
             // Button1
             // 
@@ -1560,6 +1560,8 @@
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterAtk)).EndInit();
@@ -1594,8 +1596,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterMov)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP2MonsterPow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterPow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
