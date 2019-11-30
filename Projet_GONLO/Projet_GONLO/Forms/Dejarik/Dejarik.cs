@@ -151,6 +151,7 @@ namespace Projet_GONLO
             if (firstClick == 0)
             {
                 onFirstClick(currPosition);
+                player2.ListMonsters.Clear();
             }
 
             //after first click
@@ -190,12 +191,15 @@ namespace Projet_GONLO
                 firstClick = 0;
                 counterMov = 0;
             }
+
+
             if (actions == 0)
             {
                 endTurn();
             }
 
             endGame();
+
         }
 
         private void endGame()
@@ -204,11 +208,13 @@ namespace Projet_GONLO
             {
                 MessageBox.Show("Player 2 won the game !");
                 disableButtonsWithTransparent();
+                exit();
             }
-            else if (players[1].ListMonsters.Count == 1)
+            else if (players[1].ListMonsters.Count == 0)
             {
                 MessageBox.Show("Player 1 won the game !");
                 disableButtonsWithTransparent();
+                exit();
             }
         }
 
@@ -905,6 +911,11 @@ namespace Projet_GONLO
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            exit();
+        }
+
+        private void exit()
         {
             this.Hide();
             MenuAccueil ma = new MenuAccueil();
