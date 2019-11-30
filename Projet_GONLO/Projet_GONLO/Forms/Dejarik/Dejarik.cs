@@ -386,7 +386,7 @@ namespace Projet_GONLO
         {
             if (turn == 0)
             {
-                ListBoxLog.Items.Add("Round " + newTurn + " Player 1's Monster : " + monster.Name + " rolled a : "  + dice);
+                ListBoxLog.Items.Add("Round " + newTurn + " Player 1's Monster : " + monster.Name + " rolled a : " + dice);
             }
             else
             {
@@ -595,12 +595,8 @@ namespace Projet_GONLO
             //Activate accessible buttons for movement
             for (int i = 0; i < accessibleButtons.Count; i++)
             {
-                if (listButtons[accessibleButtons[i]].BackgroundImage == null)
-                {
-                    listButtons[accessibleButtons[i]].BackColor = Color.Green;
-                    listButtons[accessibleButtons[i]].Enabled = true;
-                }
-
+                listButtons[accessibleButtons[i]].BackColor = Color.Green;
+                listButtons[accessibleButtons[i]].Enabled = true;
             }
         }
         /// <summary>
