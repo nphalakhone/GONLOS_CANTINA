@@ -385,11 +385,28 @@ namespace Projet_GONLO
         {
             if (turn == 0)
             {
-                ListBoxLog.Items.Add("Round " + newTurn + " Player 1's Monster : " + monster.Name + " rolled a : " + dice);
+
+                if (roll == 0)
+                {
+                    ListBoxLog.Items.Add("Round " + newTurn + " Player 1's Monster : " + monster.Name + " rolled a : " + dice);
+                }
+                else
+                {
+                    ListBoxLog.Items.Add("Round " + newTurn + " Player 2's Monster : " + monster.Name + " rolled a : " + dice);
+                }
+
             }
             else
             {
-                ListBoxLog.Items.Add("Round " + newTurn + " Player 2's Monster : " + monster.Name + " rolled a : " + dice);
+                if (roll > 0)
+                {
+                    ListBoxLog.Items.Add("Round " + newTurn + " Player 2's Monster : " + monster.Name + " rolled a : " + dice);
+                }
+                else
+                {
+                    ListBoxLog.Items.Add("Round " + newTurn + " Player 1's Monster : " + monster.Name + " rolled a : " + dice);
+                }
+
             }
         }
 
@@ -594,7 +611,7 @@ namespace Projet_GONLO
             //Activate accessible buttons for movement
             for (int i = 0; i < accessibleButtons.Count; i++)
             {
-                listButtons[accessibleButtons[i]].BackColor = Color.FromArgb(80, Color.Lime); 
+                listButtons[accessibleButtons[i]].BackColor = Color.FromArgb(80, Color.Lime);
                 listButtons[accessibleButtons[i]].Enabled = true;
             }
         }
@@ -770,20 +787,21 @@ namespace Projet_GONLO
         private void push(String winner)
         {
             setAtkDef();
-            addLogPush(winner, tmpAtk);
+
             if (winner.Equals("Attacker"))
             {
-                pushMonster(tmpDef, defendingMonster);
+                pushMonster(tmpDef, defendingMonster, winner);
             }
 
             else if (winner.Equals("Defender"))
             {
-                pushMonster(tmpAtk, attackingMonster);
+                pushMonster(tmpAtk, attackingMonster, winner);
 
             }
+
         }
 
-        private void pushMonster(int tmpVal, Monster monsterInvolved)
+        private void pushMonster(int tmpVal, Monster monsterInvolved, String winner)
         {
             for (int i = 0; i < players[tmpVal].ListMonsters.Count; i++)
             {
@@ -814,11 +832,13 @@ namespace Projet_GONLO
                             {
                                 if (monsterInvolved == defendingMonster)
                                 {
+                                    addLogKill(winner, tmpAtk);
                                     kill("Attacker");
                                     break;
                                 }
                                 else if (monsterInvolved == attackingMonster)
                                 {
+                                    addLogKill(winner, tmpAtk);
                                     kill("Defender");
                                     break;
                                 }
@@ -828,6 +848,12 @@ namespace Projet_GONLO
                             setMonsterImg(players[tmpVal].ListMonsters[i].Position, null);
                             players[tmpVal].ListMonsters[i].Position = newPos;
                             setMonsterImg(newPos, players[tmpVal].ListMonsters[i].Picture);
+
+                            if (accessibleButtons.Count > 0)
+                            {
+                                addLogPush(winner, tmpAtk);
+                            }
+
                             break;
                         }
                     }
@@ -884,15 +910,35 @@ namespace Projet_GONLO
 
         private void addLogPush(string winner, int tmpAtk)
         {
+            string pos = "";
             String logTemp = "";
-            if (winner.Equals("Attacker"))
-            {
-                logTemp = creationLogTempPush(tmpAtk, attackingMonster, defendingMonster);
-            }
-            else if (winner.Equals("Defender"))
-            {
-                logTemp = creationLogTempPush(tmpAtk, defendingMonster, attackingMonster);
 
+            if (tmpAtk == 0)
+            {              
+                if (winner.Equals("Attacker"))
+                {
+                    pos = findTagButton(defendingMonster);
+                    logTemp = "Round " + newTurn + " : Player 1's monster : " + attackingMonster.Name + " pushed Player 2's monster : " + defendingMonster.Name + " to " + pos;
+                }
+                else
+                {
+                    pos = findTagButton(attackingMonster);
+                    logTemp = "Round " + newTurn + " : Player 2's monster : " + defendingMonster.Name + " pushed Player 1's monster : " + attackingMonster.Name + " to " + pos;
+                }
+            }
+            //player 2 is attacker
+            else
+            {          
+                if (winner.Equals("Defender"))
+                {
+                    pos = findTagButton(defendingMonster);
+                    logTemp = "Round " + newTurn + " : Player 2's monster : " + attackingMonster.Name + " pushed Player 1's monster : " + defendingMonster.Name + " to " + pos;
+                }
+                else
+                {
+                    pos = findTagButton(attackingMonster);
+                    logTemp = "Round " + newTurn + " : Player 1's monster : " + defendingMonster.Name + " pushed Player 2's monster : " + attackingMonster.Name + " to " + pos;
+                }
             }
             ListBoxLog.Items.Add(logTemp);
         }
@@ -901,15 +947,8 @@ namespace Projet_GONLO
         {
             String logTemp = "";
             String pos = "";
-            pos = findTagButton(winMonster);
-            if (tmpAtk == 0)
-            {
-                logTemp = "Round " + newTurn + " : Player 1's monster : " + winMonster.Name + " pushed Player 2's monster : " + loseMonster.Name + " to " + pos;
-            }
-            else
-            {
-                logTemp = "Round " + newTurn + " : Player 2's monster : " + winMonster.Name + " pushed Player 1's monster : " + loseMonster.Name + " to " + pos;
-            }
+
+
 
             return logTemp;
         }
