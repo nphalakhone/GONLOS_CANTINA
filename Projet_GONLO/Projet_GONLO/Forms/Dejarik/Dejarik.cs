@@ -151,7 +151,6 @@ namespace Projet_GONLO
             if (firstClick == 0)
             {
                 onFirstClick(currPosition);
-                player2.ListMonsters.Clear();
             }
 
             //after first click
@@ -172,7 +171,6 @@ namespace Projet_GONLO
 
                 oldPosition = currPosition;
 
-                //End turn
                 endAction();
             }
         }
@@ -542,26 +540,28 @@ namespace Projet_GONLO
         private void activateMovButtons(int currPosition)
         {
             List<int> accessibleButtons = new List<int>();
-            accessibleButtons = getAccessibleButtons(currPosition);
+            accessibleButtons = getMovAccessibleButtons(currPosition);
 
-                for (int i = 0; i < accessibleButtons.Count; i++)
+            for (int i = 0; i < accessibleButtons.Count; i++)
+            {
+                if (accessibleButtons[i] == oldPosition)
                 {
-                    if (accessibleButtons[i] == oldPosition)
-                    {
-                        accessibleButtons.Remove(oldPosition);
-                    }
+                    accessibleButtons.Remove(oldPosition);
                 }
+            }
 
-                //Activate accessible buttons for movement
-                for (int i = 0; i < accessibleButtons.Count; i++)
-                {
-                    if (listButtons[accessibleButtons[i]].BackgroundImage == null)
-                    {
-                        listButtons[accessibleButtons[i]].BackColor = Color.Green;
-                        listButtons[accessibleButtons[i]].Enabled = true;
-                    }
+            if (accessibleButtons.Count == 0)
+            {
+                counterMov = players[turn].CurrMonster.Movement;
+                endAction();
+            }
 
-                }
+            //Activate accessible buttons for movement
+            for (int i = 0; i < accessibleButtons.Count; i++)
+            {
+                listButtons[accessibleButtons[i]].BackColor = Color.Green;
+                listButtons[accessibleButtons[i]].Enabled = true;
+            }
         }
         /// <summary>
         /// 
@@ -570,7 +570,11 @@ namespace Projet_GONLO
         private void activateAttackButtons(int currPosition)
         {
             List<int> accessibleButtons = new List<int>();
-            accessibleButtons = getAccessibleButtons(currPosition);
+            for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
+            {
+
+                accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
+            }
 
             //Activate accessible buttons for attack
             for (int i = 0; i < accessibleButtons.Count; i++)
@@ -584,14 +588,18 @@ namespace Projet_GONLO
             }
         }
 
-        private List<int> getAccessibleButtons(int currPosition)
+        private List<int> getMovAccessibleButtons(int currPosition)
         {
             List<int> accessibleButtons = new List<int>();
             for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
-            { 
-              accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);             
+            {
+                if (listButtons[Tile.ListTiles[currPosition].ListMovement[j].Number].BackgroundImage == null)
+                {
+                    accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
+                }
+
             }
-            
+
             return accessibleButtons;
         }
 
@@ -771,6 +779,19 @@ namespace Projet_GONLO
                             if (accessibleButtons.Count > 0)
                             {
                                 newPos = accessibleButtons[random.Next(accessibleButtons.Count)];
+                            }
+                            else if (accessibleButtons.Count == 0)
+                            {
+                                if (monsterInvolved == defendingMonster)
+                                {
+                                    kill("Attacker");
+                                    break;
+                                }
+                                else if (monsterInvolved == attackingMonster)
+                                {
+                                    kill("Defender");
+                                    break;
+                                }
                             }
 
 
