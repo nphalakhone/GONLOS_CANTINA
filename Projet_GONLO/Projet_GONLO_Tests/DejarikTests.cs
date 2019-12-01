@@ -43,6 +43,150 @@ namespace Projet_GONLO_Tests
             
         }
 
+        /// <summary>
+        /// Test if a monster moved correctly and if his position has changed
+        /// </summary>
+        [TestMethod]
+        public void MonsterMovementTest()
+        {
+
+        }
+
+        /// <summary>
+        /// Test if the player's monsters positions are correctly set up
+        /// </summary>
+        [TestMethod]
+        public void SetUpPlayerMonstersTest()
+        {
+
+        }
+
+        /// <summary>
+        /// Test if the monster's image is correctly displayed on the button (on board)
+        /// </summary>
+        [TestMethod]
+        public void SetMonsterImgTest()
+        {
+
+        }
+
+        /// <summary>
+        /// Test if the monster's image and stats are correctly displayed on the right side of the board
+        /// </summary>
+        [TestMethod]
+        public void SetInfoMonsters()
+        {
+
+        }
+
+        /// <summary>
+        /// Test if current player monsters are enabled
+        /// </summary>
+        [TestMethod]
+        public void ActivateCurrPlayerTest()
+        {
+
+        }
+
+        /// <summary>
+        /// Test if the buttons are correctly disabled
+        /// </summary>
+        [TestMethod]
+        public void ButtonsDisabledTest()
+        {
+
+        }
+
+        /// <summary>
+        /// Test if current player monsters are correctly colored according to turn
+        /// </summary>
+        [TestMethod]
+        public void ActivateColorsTest()
+        {
+
+        }
+
+        /// <summary>
+        /// Test that when newAtk is greater than newDef by 4 or more, the defender is killed by the attacker
+        /// </summary>
+        [TestMethod]
+        public void DefendAttKillTest()
+        {
+
+        }
+
+        /// <summary>
+        /// Test that when newAtk is greater than newDef by 1 to 3, the defender is pushed by the attacker
+        /// </summary>
+        [TestMethod]
+        public void DefendAttPushTest()
+        {
+
+        }
+
+        /// <summary>
+        /// Test that when newAtk is equal to newDef, the defender is pushed by the attacker
+        /// </summary>
+        [TestMethod]
+        public void DefendEqualsTest()
+        {
+
+        }
+
+        /// <summary>
+        /// Test that when newDef is greater than newAtk by 4 or more, the attacker is killed by the defender
+        /// </summary>
+        [TestMethod]
+        public void DefendDefKillTest()
+        {
+
+        }
+
+        /// <summary>
+        /// Test that when newDef is greater than newAtk by 1 to 3, the attacker is pushed by the defender
+        /// </summary>
+        [TestMethod]
+        public void DefendDefPushTest()
+        {
+
+        }
+
+        /// <summary>
+        /// Test if the monster is correctly pushed and if his position has changed
+        /// </summary>
+        [TestMethod]
+        public void PushMonsterTest()
+        {
+
+        }
+
+        /// <summary>
+        /// Test that if the monster has any place to be pushed, he is killed
+        /// </summary>
+        [TestMethod]
+        public void PushMonsterKilledTest()
+        {
+
+        }
+
+        /// <summary>
+        /// Test if the monster is correctly killed and removed from the map and listMonsters
+        /// </summary>
+        [TestMethod]
+        public void KillMonsterTest()
+        {
+
+        }
+
+        /// <summary>
+        /// Test if the variables tmpAtk and tmpDef are correctly modified according to turn
+        /// </summary>
+        [TestMethod]
+        public void SetAtkDefTest()
+        {
+
+        }
+
 
         /// <summary>
         /// Test if the player action end when the monster cannot move anymore
