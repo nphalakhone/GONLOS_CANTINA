@@ -10,20 +10,21 @@ namespace Projet_GONLO_Tests
     [TestClass]
     public class DejarikTest
     {
+        private PrivateObject dejarikTest;
 
+        /// <summary>
+        /// Test if the list of buttons is correclty initalized
+        /// </summary>
         [TestMethod]
         public void InitializeListButtonsTest()
         {
-            //dejarikTest = new PrivateObject(typeof(Dejarik), "");
-            //dejarikTest.Invoke("initalizeListButtons");//call method
-            //List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");//get the list
-            //Assert.AreEqual(26, listButtons.Count);
-
-            var DejarikTest = new Dejarik("");
-            var privatedejarikTest = new PrivateObject(DejarikTest);
-            privatedejarikTest.Invoke("initalizeListButtons");
-            List<Button> listButtons = (List<Button>)privatedejarikTest.GetField("listButtons");
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            dejarikTest.Invoke("initalizeListButtons");//call method
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");//getObject
             Assert.AreEqual(26, listButtons.Count);
         }
+
+
+
     }
 }
