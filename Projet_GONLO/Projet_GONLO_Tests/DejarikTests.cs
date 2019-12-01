@@ -31,6 +31,7 @@ namespace Projet_GONLO_Tests
         public void ClickedMonsterIsRightMonster()
         {
 
+
         }
 
 

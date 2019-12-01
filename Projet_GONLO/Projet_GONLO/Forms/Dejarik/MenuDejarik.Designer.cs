@@ -180,46 +180,53 @@
             // 
             // BtnChoosePow
             // 
-            this.BtnChoosePow.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded;
+            this.BtnChoosePow.BackColor = System.Drawing.Color.Transparent;
+            this.BtnChoosePow.Enabled = false;
+            this.BtnChoosePow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnChoosePow.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnChoosePow.ForeColor = System.Drawing.Color.White;
+            this.BtnChoosePow.ForeColor = System.Drawing.Color.Gold;
             this.BtnChoosePow.Location = new System.Drawing.Point(1570, 84);
             this.BtnChoosePow.Name = "BtnChoosePow";
             this.BtnChoosePow.Size = new System.Drawing.Size(250, 30);
             this.BtnChoosePow.TabIndex = 30;
             this.BtnChoosePow.Text = "Power Type Monsters";
-            this.BtnChoosePow.UseVisualStyleBackColor = true;
+            this.BtnChoosePow.UseVisualStyleBackColor = false;
             // 
             // BtnChooseMov
             // 
-            this.BtnChooseMov.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded;
+            this.BtnChooseMov.BackColor = System.Drawing.Color.Transparent;
+            this.BtnChooseMov.Enabled = false;
+            this.BtnChooseMov.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnChooseMov.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnChooseMov.ForeColor = System.Drawing.Color.White;
+            this.BtnChooseMov.ForeColor = System.Drawing.Color.Gold;
             this.BtnChooseMov.Location = new System.Drawing.Point(1087, 84);
             this.BtnChooseMov.Name = "BtnChooseMov";
             this.BtnChooseMov.Size = new System.Drawing.Size(250, 30);
             this.BtnChooseMov.TabIndex = 29;
             this.BtnChooseMov.Text = "Movement Type Monsters";
-            this.BtnChooseMov.UseVisualStyleBackColor = true;
+            this.BtnChooseMov.UseVisualStyleBackColor = false;
             // 
             // BtnChooseDef
             // 
-            this.BtnChooseDef.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded;
+            this.BtnChooseDef.BackColor = System.Drawing.Color.Transparent;
+            this.BtnChooseDef.Enabled = false;
+            this.BtnChooseDef.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnChooseDef.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnChooseDef.ForeColor = System.Drawing.Color.White;
+            this.BtnChooseDef.ForeColor = System.Drawing.Color.Gold;
             this.BtnChooseDef.Location = new System.Drawing.Point(601, 84);
             this.BtnChooseDef.Name = "BtnChooseDef";
             this.BtnChooseDef.Size = new System.Drawing.Size(250, 30);
             this.BtnChooseDef.TabIndex = 28;
             this.BtnChooseDef.Text = "Defense Type Monsters";
-            this.BtnChooseDef.UseVisualStyleBackColor = true;
+            this.BtnChooseDef.UseVisualStyleBackColor = false;
             // 
             // BtnChooseAtk
             // 
             this.BtnChooseAtk.BackColor = System.Drawing.Color.Transparent;
-            this.BtnChooseAtk.BackgroundImage = global::Projet_GONLO.Properties.Resources.BlueSteelFaded;
+            this.BtnChooseAtk.Enabled = false;
+            this.BtnChooseAtk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnChooseAtk.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnChooseAtk.ForeColor = System.Drawing.Color.White;
+            this.BtnChooseAtk.ForeColor = System.Drawing.Color.Gold;
             this.BtnChooseAtk.Location = new System.Drawing.Point(118, 84);
             this.BtnChooseAtk.Name = "BtnChooseAtk";
             this.BtnChooseAtk.Size = new System.Drawing.Size(250, 30);
