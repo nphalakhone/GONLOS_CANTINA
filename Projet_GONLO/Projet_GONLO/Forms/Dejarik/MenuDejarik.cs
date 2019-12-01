@@ -23,8 +23,44 @@ namespace Projet_GONLO
 
         public MenuDejarik()
         {
+            this.DoubleBuffered = true;
             InitializeComponent();       
             createMonsters();
+            setBtnInfoExtender();
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+        }
+
+        public void groupBoxExtended(GroupBox gb, Button button)
+        {
+            if (gb.Height == 635)
+            {
+                gb.Height = 265;
+                button.Location = new Point(57, 212);
+                button.BackgroundImage = Properties.Resources.arrows;
+            }
+            else if (gb.Height == 265)
+            {
+                gb.Height = 635;
+                button.Location = new Point(57, 212);
+                button.BackgroundImage = Properties.Resources.arrowsUp;
+            }
+        }
+
+        private void setBtnInfoExtender()
+        {
+            BtnInfoGHHHK.Click += (sender, EventArgs) => { ClickInfoMonsters(sender, EventArgs, grpGhhhk, BtnInfoGHHHK); };
+            BtnInfoHoujix.Click += (sender, EventArgs) => { ClickInfoMonsters(sender, EventArgs, grpHoujix, BtnInfoHoujix); };
+            BtnInfoKintanStrider.Click += (sender, EventArgs) => { ClickInfoMonsters(sender, EventArgs, grpKintanStrider, BtnInfoKintanStrider); };
+            BtnInfoNgok.Click += (sender, EventArgs) => { ClickInfoMonsters(sender, EventArgs, grpNgok, BtnInfoNgok); };
+            BtnInfoKlorslug.Click += (sender, EventArgs) => { ClickInfoMonsters(sender, EventArgs, grpKlorslug, BtnInfoKlorslug); };
+            buBtnInfoGrimstaash.Click += (sender, EventArgs) => { ClickInfoMonsters(sender, EventArgs, grpGrimstaash, buBtnInfoGrimstaash); };
+            BtnInfoMantellian.Click += (sender, EventArgs) => { ClickInfoMonsters(sender, EventArgs, grpMantellian, BtnInfoMantellian); };
+            BtnInfoMonnok.Click += (sender, EventArgs) => { ClickInfoMonsters(sender, EventArgs, grpMonnok, BtnInfoMonnok); };
+        }
+
+        private void ClickInfoMonsters(object sender, EventArgs e, GroupBox gbox, Button btnInfo)
+        {
+            groupBoxExtended(gbox, btnInfo);
         }
 
         private void BtnGhhhk_Click(object sender, EventArgs e)
@@ -43,7 +79,6 @@ namespace Projet_GONLO
                 logMonster += "Player 2 chose the monster : Ghhhk-";
                 logMonster += "Player 1 gets the monster : Houjix-";
             }
-
             btnClick(BtnGhhhk, BtnHoujix);
         }
 
@@ -181,11 +216,15 @@ namespace Projet_GONLO
             btnClick(BtnMantellian, BtnMonnok);
         }
 
-
-        private void btnClick(Button btnGhhhk, Button btnHoujix)
+        private void picAtkValue_Click(object sender, EventArgs e)
         {
-            btnGhhhk.Enabled = false;
-            btnHoujix.Enabled = false;
+
+        }
+
+        private void btnClick(Button monster1, Button monster2)
+        {
+            monster1.Enabled = false;
+            monster2.Enabled = false;
             checkMonsterFinish();
             nextTurn();
         }

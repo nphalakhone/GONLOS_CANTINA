@@ -120,4 +120,40 @@
   <metadata name="MnMenuDejarik.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="lblInfoGHHHK.Text" xml:space="preserve">
+    <value>The Ghhhk is a four-legged green animal that hails from the
+planet Bith (also known as Clak’dor VII). Oil from their skin is
+used as a healing salve. Male ghhhk wake up at sunrise to
+start their mating call.</value>
+  </data>
+  <data name="lblInfoKintanStrider.Text" xml:space="preserve">
+    <value>The Kintan Strider is a semi-sentient being from Kintan
+able to use simple weapons, such as clubs and maces.
+They have long arms and nearly went extinct on Kintan.
+Luckily, the creatures were exported and bred on other
+worlds, as well.</value>
+  </data>
+  <data name="lblInfoKlorslug.Text" xml:space="preserve">
+    <value>The K’lor’slug originally hailed from the swamps of
+Noe’ha’on, but it lives on many other planets after
+having slipped aboard one of the vessels that visited its
+planet. The k’lor’slug is a dangerous and poisonous
+hunter often considered a symbol of gluttony and decay.</value>
+  </data>
+  <data name="lblInfoMantellian.Text" xml:space="preserve">
+    <value>The Mantellian Savrip is the only sentient being in the
+dejarik game, though many people still consider it to be
+nothing more than a simple creature. These hulking
+reptilians wear simple clothes and they are often hunted
+down on their home planet Ord Mantell.
+</value>
+  </data>
+  <data name="lblInfoMonnok.Text" xml:space="preserve">
+    <value>The Monnok is another semi-sentient that uses primitive
+weapons such as spears and staffs. The monnok is
+respected on its home world of Socorro for its hunting
+qualities. Smugglers regarded the monnok as an omen for a
+difficult, but rewarding journey.
+</value>
+  </data>
 </root>
