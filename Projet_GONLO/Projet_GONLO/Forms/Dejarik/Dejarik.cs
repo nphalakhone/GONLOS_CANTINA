@@ -557,6 +557,8 @@ namespace Projet_GONLO
                 listButtons[i].Enabled = false;
             }
 
+            activateColors();
+
         }
 
         private void disableAllButtons()
@@ -565,6 +567,8 @@ namespace Projet_GONLO
             {
                 listButtons[i].Enabled = false;
             }
+
+            activateColors();
 
         }
 
@@ -725,15 +729,16 @@ namespace Projet_GONLO
             for (int j = 0; j < players[turn].ListMonsters.Count; j++)
             {
                 listButtons[players[turn].ListMonsters[j].Position].Enabled = true;
+            }
 
-                if (turn == 0)
-                {
-                    listButtons[players[turn].ListMonsters[j].Position].BackColor = Color.FromArgb(70, Color.BlueViolet);
-                }
-                else
-                {
-                    listButtons[players[turn].ListMonsters[j].Position].BackColor = Color.FromArgb(80, Color.Gold);
-                }
+            activateColors();
+        }
+
+        private void activateColors()
+        {
+            for (int j = 0; j < players[turn].ListMonsters.Count; j++)
+            {
+                listButtons[players[turn].ListMonsters[j].Position].BackColor = Color.FromArgb(80, Color.Gold);
             }
         }
 
