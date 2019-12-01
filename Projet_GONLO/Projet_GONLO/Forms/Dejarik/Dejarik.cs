@@ -161,13 +161,10 @@ namespace Projet_GONLO
 
                 disableButtonsWithTransparent();
 
-                //Unfinished movement
-
                 if (counterMov != players[turn].CurrMonster.Movement)
                 {
                     activateMovButtons(players[turn].CurrMonster.Position);
                 }
-
 
                 oldPosition = currPosition;
 
@@ -247,7 +244,6 @@ namespace Projet_GONLO
             disableButtonsWithTransparent();
             activateMovButtons(players[turn].CurrMonster.Position);
             activateAttackButtons(players[turn].CurrMonster.Position);
-
             findAtkMonster(currPosition);
         }
 
@@ -608,17 +604,28 @@ namespace Projet_GONLO
 
             if (accessibleButtons.Count == 0)
             {
-                counterMov = players[turn].CurrMonster.Movement;
-                endAction();
+                if (counterMov < players[turn].CurrMonster.Movement && counterMov > 0)
+                {
+                    counterMov = players[turn].CurrMonster.Movement;
+                    endAction();
+                }
+                else
+                {
+                    return;
+                }
             }
-
-            //Activate accessible buttons for movement
-            for (int i = 0; i < accessibleButtons.Count; i++)
+            else
             {
-                listButtons[accessibleButtons[i]].BackColor = Color.FromArgb(80, Color.Lime);
-                listButtons[accessibleButtons[i]].Enabled = true;
+                //Activate accessible buttons for movement
+                for (int i = 0; i < accessibleButtons.Count; i++)
+                {
+                    listButtons[accessibleButtons[i]].BackColor = Color.FromArgb(80, Color.Lime);
+                    listButtons[accessibleButtons[i]].Enabled = true;
+                }
             }
         }
+
+
         /// <summary>
         /// 
         /// </summary>
@@ -631,6 +638,7 @@ namespace Projet_GONLO
                 accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
             }
 
+
             //Activate accessible buttons for attack
             for (int i = 0; i < accessibleButtons.Count; i++)
             {
@@ -641,6 +649,9 @@ namespace Projet_GONLO
                     listButtons[accessibleButtons[i]].Enabled = true;
                 }
             }
+
+
+
         }
 
         private List<int> getMovAccessibleButtons(int currPosition)
@@ -917,7 +928,7 @@ namespace Projet_GONLO
             String logTemp = "";
 
             if (tmpAtk == 0)
-            {              
+            {
                 if (winner.Equals("Attacker"))
                 {
                     pos = findTagButton(defendingMonster);
@@ -931,7 +942,7 @@ namespace Projet_GONLO
             }
             //player 2 is attacker
             else
-            {          
+            {
                 if (winner.Equals("Defender"))
                 {
                     pos = findTagButton(defendingMonster);
