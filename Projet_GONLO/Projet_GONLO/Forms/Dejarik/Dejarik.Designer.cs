@@ -1034,7 +1034,7 @@
             // 
             this.LblP1Monstre.AutoSize = true;
             this.LblP1Monstre.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblP1Monstre.ForeColor = System.Drawing.Color.BlueViolet;
+            this.LblP1Monstre.ForeColor = System.Drawing.Color.Gold;
             this.LblP1Monstre.Location = new System.Drawing.Point(6, 56);
             this.LblP1Monstre.Name = "LblP1Monstre";
             this.LblP1Monstre.Size = new System.Drawing.Size(76, 14);
