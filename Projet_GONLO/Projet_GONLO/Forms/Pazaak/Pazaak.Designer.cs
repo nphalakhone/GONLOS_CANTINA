@@ -94,6 +94,10 @@
             this.RPnlG3 = new Projet_GONLO.RoundPanel();
             this.RPnlG2 = new Projet_GONLO.RoundPanel();
             this.RPnlG1 = new Projet_GONLO.RoundPanel();
+            this.PnlAiDeck1 = new Projet_GONLO.RoundPanel();
+            this.PnlAiDeck2 = new Projet_GONLO.RoundPanel();
+            this.PnlAiDeck3 = new Projet_GONLO.RoundPanel();
+            this.PnlAiDeck4 = new Projet_GONLO.RoundPanel();
             this.MenuPazaak.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPBoxRound3AI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CPBoxRound2AI)).BeginInit();
@@ -819,6 +823,46 @@
             this.RPnlG1.Size = new System.Drawing.Size(73, 89);
             this.RPnlG1.TabIndex = 0;
             // 
+            // PnlAiDeck1
+            // 
+            this.PnlAiDeck1.BackColor = System.Drawing.Color.Transparent;
+            this.PnlAiDeck1.BorderColor = System.Drawing.Color.White;
+            this.PnlAiDeck1.Edge = 20;
+            this.PnlAiDeck1.Location = new System.Drawing.Point(529, 480);
+            this.PnlAiDeck1.Name = "PnlAiDeck1";
+            this.PnlAiDeck1.Size = new System.Drawing.Size(73, 89);
+            this.PnlAiDeck1.TabIndex = 11;
+            // 
+            // PnlAiDeck2
+            // 
+            this.PnlAiDeck2.BackColor = System.Drawing.Color.Transparent;
+            this.PnlAiDeck2.BorderColor = System.Drawing.Color.White;
+            this.PnlAiDeck2.Edge = 20;
+            this.PnlAiDeck2.Location = new System.Drawing.Point(626, 480);
+            this.PnlAiDeck2.Name = "PnlAiDeck2";
+            this.PnlAiDeck2.Size = new System.Drawing.Size(73, 89);
+            this.PnlAiDeck2.TabIndex = 12;
+            // 
+            // PnlAiDeck3
+            // 
+            this.PnlAiDeck3.BackColor = System.Drawing.Color.Transparent;
+            this.PnlAiDeck3.BorderColor = System.Drawing.Color.White;
+            this.PnlAiDeck3.Edge = 20;
+            this.PnlAiDeck3.Location = new System.Drawing.Point(719, 481);
+            this.PnlAiDeck3.Name = "PnlAiDeck3";
+            this.PnlAiDeck3.Size = new System.Drawing.Size(73, 89);
+            this.PnlAiDeck3.TabIndex = 13;
+            // 
+            // PnlAiDeck4
+            // 
+            this.PnlAiDeck4.BackColor = System.Drawing.Color.Transparent;
+            this.PnlAiDeck4.BorderColor = System.Drawing.Color.White;
+            this.PnlAiDeck4.Edge = 20;
+            this.PnlAiDeck4.Location = new System.Drawing.Point(811, 480);
+            this.PnlAiDeck4.Name = "PnlAiDeck4";
+            this.PnlAiDeck4.Size = new System.Drawing.Size(73, 89);
+            this.PnlAiDeck4.TabIndex = 14;
+            // 
             // Pazaak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -826,6 +870,10 @@
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.pazaakEmptyBoard11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1001, 750);
+            this.Controls.Add(this.PnlAiDeck4);
+            this.Controls.Add(this.PnlAiDeck3);
+            this.Controls.Add(this.PnlAiDeck2);
+            this.Controls.Add(this.PnlAiDeck1);
             this.Controls.Add(this.LblNumeric1);
             this.Controls.Add(this.LblMinusValue1);
             this.Controls.Add(this.LblFlipCard1);
@@ -975,5 +1023,9 @@
         private System.Windows.Forms.Label LblNumeric1;
         private System.Windows.Forms.Label LblMinusValue1;
         private System.Windows.Forms.Label LblFlipCard1;
+        private RoundPanel PnlAiDeck1;
+        private RoundPanel PnlAiDeck2;
+        private RoundPanel PnlAiDeck3;
+        private RoundPanel PnlAiDeck4;
     }
 }

@@ -52,7 +52,23 @@ namespace Projet_GONLO
             playerPazaak = new Player();
             InitializeComponent();
             setupPlayerdeck();
+            setupAiDeck();
             setupBoard();
+        }
+
+        private void setupAiDeck()
+        {
+            Panel[] TabPnlAiDeck = new Panel[]
+           {
+             PnlAiDeck1,PnlAiDeck2,PnlAiDeck3,PnlAiDeck4
+           };
+
+            for (int i = 0; i < TabPnlAiDeck.Length; i++)
+            {
+                TabPnlAiDeck[i].BackgroundImage = Properties.Resources.back_card_Pazaak;
+                TabPnlAiDeck[i].BackgroundImageLayout = ImageLayout.Stretch;
+            }
+
         }
 
         private List<int> TabToList(int[] carteIntEnvoye)
@@ -93,6 +109,8 @@ namespace Projet_GONLO
             CPBoxRound2AI,
             CPBoxRound3AI
         };
+
+
 
         }
 
@@ -206,6 +224,12 @@ namespace Projet_GONLO
 
         private void addAICardToBoard(int index)
         {
+            //PnlAiDeck1
+            Panel[] TabPnlAiDeck = new Panel[]
+            {
+             PnlAiDeck1,PnlAiDeck2,PnlAiDeck3,PnlAiDeck4
+            };
+
             MessageBox.Show("add card");
             if (AiDeck[index] < 0)
             {
@@ -237,6 +261,7 @@ namespace Projet_GONLO
             AiDeck[index] = 100; //empty
             TabPanelRight[ai.NbCards].BackgroundImageLayout = ImageLayout.Stretch;
             LblPointsAi.Text = ai.Points.ToString();
+            TabPnlAiDeck[index].BackgroundImage = null;
             ai.NbCards++;
             ai.NbCarteUtiliseAi++;
 

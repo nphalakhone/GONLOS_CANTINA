@@ -244,6 +244,7 @@
     <None Include="Resources\boutonSteelDejarik.JPG" />
     <None Include="Resources\def.png" />
     <None Include="Resources\def1.png" />
+    <None Include="Resources\Cards\back_card_Pazaak.png" />
     <Content Include="Resources\StarsBackground.PNG" />
     <None Include="Resources\StarsBackground1.PNG" />
     <None Include="Resources\holochess-arkit.jpg" />
