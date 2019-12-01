@@ -218,6 +218,62 @@ namespace Projet_GONLO_Tests
 
         }
 
+        /// <summary>
+        /// Test if the log display the movement of the monster
+        /// </summary>
+        [TestMethod]
+        public void MonsterMoveLogTest()
+        {
+
+        }
+
+
+        /// <summary>
+        /// Test if the monster has the right atk after rolling the dice
+        /// </summary>
+        [TestMethod]
+        public void MonsterRollNewAtk()
+        {
+
+        }
+
+
+        /// <summary>
+        /// Test if the monster has the right def after rolling the dice
+        /// </summary>
+        [TestMethod]
+        public void MonsterRollNewDef()
+        {
+
+        }
+
+
+        /// <summary>
+        /// Test if the attack monster is the one that the player clicked
+        /// </summary>
+        [TestMethod]
+        public void VerifyAttackMonster()
+        {
+
+        }
+
+        /// <summary>
+        /// Test if the defense monster is the one that the player attacked
+        /// </summary>
+        [TestMethod]
+        public void VerifyDefenseMonster()
+        {
+
+        }
+
+        /// <summary>
+        /// Test if the log return the correct value for the dice
+        /// </summary>
+        [TestMethod]
+        public void RollDiceLogTest()
+        {
+
+        }
 
     }
 }
