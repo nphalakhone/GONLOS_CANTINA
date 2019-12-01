@@ -181,7 +181,6 @@
             // BtnChoosePow
             // 
             this.BtnChoosePow.BackColor = System.Drawing.Color.Transparent;
-            this.BtnChoosePow.Enabled = false;
             this.BtnChoosePow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnChoosePow.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChoosePow.ForeColor = System.Drawing.Color.Gold;
@@ -195,7 +194,6 @@
             // BtnChooseMov
             // 
             this.BtnChooseMov.BackColor = System.Drawing.Color.Transparent;
-            this.BtnChooseMov.Enabled = false;
             this.BtnChooseMov.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnChooseMov.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChooseMov.ForeColor = System.Drawing.Color.Gold;
@@ -209,7 +207,6 @@
             // BtnChooseDef
             // 
             this.BtnChooseDef.BackColor = System.Drawing.Color.Transparent;
-            this.BtnChooseDef.Enabled = false;
             this.BtnChooseDef.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnChooseDef.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChooseDef.ForeColor = System.Drawing.Color.Gold;
@@ -223,7 +220,6 @@
             // BtnChooseAtk
             // 
             this.BtnChooseAtk.BackColor = System.Drawing.Color.Transparent;
-            this.BtnChooseAtk.Enabled = false;
             this.BtnChooseAtk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnChooseAtk.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChooseAtk.ForeColor = System.Drawing.Color.Gold;
