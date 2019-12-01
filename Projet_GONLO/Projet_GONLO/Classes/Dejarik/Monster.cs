@@ -23,7 +23,6 @@ namespace Projet_GONLO
         private Image picture;
         private typeMonster type;
 
-
         // Constructor Declaration of Class 
         public Monster(string name, int attack,
                       int defense, int movement, Image picture, typeMonster type, int position)

@@ -199,7 +199,7 @@ namespace Projet_GONLO
 
         private void endGame()
         {
-            if (newRound == 3)
+            if (newRound == 25)
             {
                 if (players[0].ListMonsters.Count > players[1].ListMonsters.Count)
                 {
@@ -749,6 +749,8 @@ namespace Projet_GONLO
             activateCurrPlayer();
         }
 
+        
+
         /// <summary>
         /// 
         /// </summary>
@@ -929,6 +931,7 @@ namespace Projet_GONLO
                 if (monsterInvolved == players[tmpVal].ListMonsters[i])
                 {
                     players[tmpVal].ListMonsters.Remove(players[tmpVal].ListMonsters[i]);
+
                     for (int j = 0; j < listButtons.Count; j++)
                     {
                         if (j == monsterInvolved.Position)
@@ -941,6 +944,7 @@ namespace Projet_GONLO
             }
         }
 
+        
         private void addLogPush(string winner, int tmpAtk)
         {
             string pos = "";
