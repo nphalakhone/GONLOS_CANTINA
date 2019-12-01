@@ -199,7 +199,7 @@ namespace Projet_GONLO
 
         private void endGame()
         {
-            if (newRound == 3)
+            if (newRound == 25)
             {
                 if (players[0].ListMonsters.Count > players[1].ListMonsters.Count)
                 {
