@@ -3,7 +3,7 @@ using Projet_GONLO;
 namespace Project_GONLO_Tests
 {
     [TestClass]
-    public class PazaakCardsSelectorTest
+    public class PazaakCardsSelectorTests
     {
         Player player;
 
