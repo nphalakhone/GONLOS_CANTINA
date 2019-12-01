@@ -13,7 +13,6 @@ namespace Projet_GONLO
 {
     public partial class LoadForm : Form
     {
-        List<Player> listPlayer = new List<Player>();
         Player playerSelected = new Player();
 
         public LoadForm()
@@ -31,35 +30,60 @@ namespace Projet_GONLO
 
         private void BtnEllLoad_Click(object sender, EventArgs e)
         {
-            string nameEntered = TBoxName.Text;
-            List<string> saveFile = File.ReadAllLines("C:\\Users\\1156103\\Documents\\GitHub\\GONLOS_CANTINA\\Projet_GONLO\\Saves\\Saves.txt").ToList();
-            foreach (var line in saveFile)
+            List<Player> playersSaved = new List<Player>();
+            string line = "";
+
+            if (!File.Exists(Application.StartupPath + "\\SavesTest.txt"))
             {
-                string[] playerData = line.Split(',');
-                Player newPlayer = new Player();
-                newPlayer.Name = playerData[0];
-                newPlayer.Species = playerData[1];
-                newPlayer.Gender = playerData[2];
-                newPlayer.Credits = int.Parse(playerData[3]);
-                //newPlayer.PowMonster = playerData[4];
-                //newPlayer.AttMonster = playerData[5];
-                //newPlayer.DefMonster = playerData[6];
-                //newPlayer.MovMonster = playerData[7];
-                listPlayer.Add(newPlayer);
+                MessageBox.Show("There is no SavesTest file in your computer", "ATTENTION");
+                this.Hide();
+                StartForm start = new StartForm();
+                start.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                StreamReader sr = new StreamReader(Application.StartupPath + "\\SavesTest.txt");
+                while ((line = sr.ReadLine()) != null)
+                {
+                    string[] new_player = line.Split(';');
+                    Player player = new Player();
+                    player.Name = new_player[0];
+                    player.Gender = new_player[1];
+                    player.Species = new_player[2];
+                    player.Credits = Int32.Parse(new_player[3]);
+                    player.PazaakGamesWon = Int32.Parse(new_player[4]);
+                    player.PazaakGamesLost = Int32.Parse(new_player[5]);
+                    player.DejarikGamesWon = Int32.Parse(new_player[6]);
+                    player.DejarikGamesLost = Int32.Parse(new_player[7]);
+                    playersSaved.Add(player);
+                }
+                sr.Close();
             }
 
-            foreach (var player in listPlayer)
+            foreach (Player p in playersSaved)
             {
-                if (player.Name == nameEntered)
+                if (TBoxName.Text == p.Name)
                 {
-                    playerSelected = player;
+                    playerSelected.Name = p.Name;
+                    playerSelected.Gender = p.Gender;
+                    playerSelected.Species = p.Species;
+                    playerSelected.Credits = p.Credits;
+                    playerSelected.PazaakGamesWon = p.PazaakGamesWon;
+                    playerSelected.PazaakGamesLost = p.PazaakGamesLost;
+                    playerSelected.DejarikGamesWon = p.DejarikGamesWon;
+                    playerSelected.DejarikGamesLost = p.DejarikGamesLost;
+                    this.Hide();
+                    MenuAccueil menu = new MenuAccueil();
+                    menu.Player1 = playerSelected;
+                    menu.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("The name: " + TBoxName.Text + " does not appear on our guest file", "ATTENTION");
                 }
             }
-            this.Hide();
-            //MenuAccueil menu = new MenuAccueil();
-            MenuAccueil menu = new MenuAccueil();
-            menu.ShowDialog();
-            this.Close();
         }
 
         private void LoadForm_Load(object sender, EventArgs e)

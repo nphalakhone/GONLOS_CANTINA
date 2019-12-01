@@ -67,7 +67,7 @@
             this.BtnEllExit.FlatAppearance.BorderSize = 0;
             this.BtnEllExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllExit.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEllExit.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllExit.ForeColor = System.Drawing.Color.Gold;
             this.BtnEllExit.Location = new System.Drawing.Point(109, 526);
             this.BtnEllExit.Name = "BtnEllExit";
             this.BtnEllExit.Size = new System.Drawing.Size(275, 100);
@@ -84,7 +84,7 @@
             this.BtnEllStart.FlatAppearance.BorderSize = 0;
             this.BtnEllStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllStart.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEllStart.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllStart.ForeColor = System.Drawing.Color.Gold;
             this.BtnEllStart.Location = new System.Drawing.Point(109, 220);
             this.BtnEllStart.Name = "BtnEllStart";
             this.BtnEllStart.Size = new System.Drawing.Size(275, 100);
@@ -101,7 +101,7 @@
             this.BtnEllLoad.FlatAppearance.BorderSize = 0;
             this.BtnEllLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllLoad.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEllLoad.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllLoad.ForeColor = System.Drawing.Color.Gold;
             this.BtnEllLoad.Location = new System.Drawing.Point(109, 372);
             this.BtnEllLoad.Name = "BtnEllLoad";
             this.BtnEllLoad.Size = new System.Drawing.Size(275, 100);

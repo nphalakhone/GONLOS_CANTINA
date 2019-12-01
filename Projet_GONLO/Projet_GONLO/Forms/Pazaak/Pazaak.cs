@@ -467,8 +467,8 @@ namespace Projet_GONLO
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             List<Player> playersSaved = new List<Player>();
-            bool toSave = false;
             playersSaved = readSaveFile();
+            StreamWriter sw2 = new StreamWriter(Application.StartupPath + "\\SavesTest.txt");
 
             foreach (Player p in playersSaved)
             {
@@ -480,54 +480,52 @@ namespace Projet_GONLO
                     switch (dr)
                     {
                         case DialogResult.Yes:
-                            toSave = true;
-                            StreamWriter sw2 = new StreamWriter(Application.StartupPath + "\\Saves\\" + "test.txt");
-                            sw2.WriteLine(playerPazaak.Name + ";" + playerPazaak.Gender + ";" + playerPazaak.Species + ";" + playerPazaak.Credits.ToString() + ";" +
-                            playerPazaak.PazaakGamesWon.ToString() + ";" + playerPazaak.PazaakGamesLost.ToString() + ";" + playerPazaak.DejarikGamesWon.ToString() + ";" 
-                            + playerPazaak.DejarikGamesLost.ToString());
-                            sw2.Close();
+                            setPlayerData(p, playerPazaak);
+                            writePlayerData(sw2, p);
                             break;
                         case DialogResult.No:
-                            toSave = false;
                             break;
                     }
-                }
-                else
+                } else
                 {
-                    toSave = false;
+                    writePlayerData(sw2, p);
                 }
             }
+            playersSaved.Add(playerPazaak);
+            writePlayerData(sw2, playerPazaak);
+            sw2.Close();
+        }
 
-            if (toSave)
-            {
-                foreach (Player p in playersSaved)
-                {
-                    if (p.Name == playerPazaak.Name)
-                    {
-                        p.Credits = playerPazaak.Credits;
-                        p.PazaakGamesWon = playerPazaak.PazaakGamesWon;
-                        p.PazaakGamesLost = playerPazaak.PazaakGamesLost;
-                        p.DejarikGamesWon = playerPazaak.DejarikGamesWon;
-                        p.DejarikGamesLost = playerPazaak.DejarikGamesLost;
-                    }
-                }
-            }
+        private void setPlayerData(Player playerFromFile, Player playerInGame)
+        {
+            playerFromFile.Name = playerInGame.Name;
+            playerFromFile.Gender = playerInGame.Gender;
+            playerFromFile.Species = playerInGame.Species;
+            playerFromFile.Credits = playerInGame.Credits;
+            playerFromFile.PazaakGamesWon = playerInGame.PazaakGamesWon;
+            playerFromFile.PazaakGamesLost = playerInGame.PazaakGamesLost;
+            playerFromFile.DejarikGamesWon = playerInGame.DejarikGamesWon;
+            playerFromFile.DejarikGamesLost = playerInGame.DejarikGamesLost;
+        }
 
-            StreamWriter sw = new StreamWriter(Application.StartupPath + "\\Saves\\" + "test.txt");
-            
-            sw.WriteLine(playerPazaak.Name + ";" + playerPazaak.Gender + ";" + playerPazaak.Species + ";" + playerPazaak.Credits.ToString() + ";" +
-                         playerPazaak.PazaakGamesWon.ToString() + ";" + playerPazaak.PazaakGamesLost.ToString() + ";" + playerPazaak.DejarikGamesWon.ToString() + ";" + playerPazaak.DejarikGamesLost.ToString());
-            
-
-            sw.Close();
+        private void writePlayerData(StreamWriter streamWriter, Player player)
+        {
+            streamWriter.WriteLine(player.Name + ";" + player.Gender + ";" + player.Species + ";" + player.Credits.ToString() + ";" +
+                            player.PazaakGamesWon.ToString() + ";" + player.PazaakGamesLost.ToString() + ";" + player.DejarikGamesWon.ToString() + ";"
+                            + player.DejarikGamesLost.ToString());
         }
 
         public List<Player> readSaveFile()
         {
             List<Player> playersSaved = new List<Player>();
-
-            StreamReader sr = new StreamReader(Application.StartupPath + "\\Saves\\" + "test.txt");
             string line = "";
+
+            if (!File.Exists(Application.StartupPath + "\\SavesTest.txt"))
+            {
+                StreamWriter sw = new StreamWriter(Application.StartupPath + "\\SavesTest.txt");
+                sw.Close();
+            }
+            StreamReader sr = new StreamReader(Application.StartupPath + "\\SavesTest.txt");
             while ((line = sr.ReadLine()) != null)
             {
                 string[] new_player = line.Split(';');
