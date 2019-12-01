@@ -16,7 +16,7 @@ namespace Projet_GONLO
         Player player2 = new Player();
         Player otherPlayer;
         List<Player> players = new List<Player>();
-        int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2, newTurn = 1, roll = 0, newAtk = 0, tmpAtk = 0, tmpDef = 0, checkAtk = 0;
+        int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2, newRound = 1, roll = 0, newAtk = 0, tmpAtk = 0, tmpDef = 0, checkAtk = 0;
         List<String> logMonster;
         Monster lastMonster;
         Monster defendingMonster = null, attackingMonster = null;
@@ -199,18 +199,37 @@ namespace Projet_GONLO
 
         private void endGame()
         {
+            if (newRound == 3)
+            {
+                if (players[0].ListMonsters.Count > players[1].ListMonsters.Count)
+                {
+                    MessageBox.Show("Player 1 is the winner of the game !");
+                    disableButtonsWithTransparent();
+                    exit();
+                }
+                else if (players[1].ListMonsters.Count > players[0].ListMonsters.Count)
+                {
+                    MessageBox.Show("Player 2 is the winner of the game !");
+                    disableButtonsWithTransparent();
+                    exit();
+                }
+            }
+            else
+            {
             if (players[0].ListMonsters.Count == 0)
             {
-                MessageBox.Show("Player 2 won the game !");
+                MessageBox.Show("Player 2 is the winner of the game !");
                 disableButtonsWithTransparent();
-                exit();
+                //exit();
             }
             else if (players[1].ListMonsters.Count == 0)
             {
-                MessageBox.Show("Player 1 won the game !");
+                MessageBox.Show("Player 1 is the winner of the game !");
                 disableButtonsWithTransparent();
-                exit();
+                //exit();
             }
+            }
+
         }
 
         private void actionPicker(int currPosition)
@@ -384,11 +403,11 @@ namespace Projet_GONLO
 
                 if (roll == 0)
                 {
-                    ListBoxLog.Items.Add("Round " + newTurn + " Player 1's Monster : " + monster.Name + " rolled a : " + dice);
+                    ListBoxLog.Items.Add("Round " + newRound + " Player 1's Monster : " + monster.Name + " rolled a : " + dice);
                 }
                 else
                 {
-                    ListBoxLog.Items.Add("Round " + newTurn + " Player 2's Monster : " + monster.Name + " rolled a : " + dice);
+                    ListBoxLog.Items.Add("Round " + newRound + " Player 2's Monster : " + monster.Name + " rolled a : " + dice);
                 }
 
             }
@@ -396,11 +415,11 @@ namespace Projet_GONLO
             {
                 if (roll > 0)
                 {
-                    ListBoxLog.Items.Add("Round " + newTurn + " Player 2's Monster : " + monster.Name + " rolled a : " + dice);
+                    ListBoxLog.Items.Add("Round " + newRound + " Player 2's Monster : " + monster.Name + " rolled a : " + dice);
                 }
                 else
                 {
-                    ListBoxLog.Items.Add("Round " + newTurn + " Player 1's Monster : " + monster.Name + " rolled a : " + dice);
+                    ListBoxLog.Items.Add("Round " + newRound + " Player 1's Monster : " + monster.Name + " rolled a : " + dice);
                 }
 
             }
@@ -499,11 +518,11 @@ namespace Projet_GONLO
 
             if (turn == 0)
             {
-                logTemp = "Round " + newTurn + " : Player 1 moved " + lastMonster.Name + " to position : " + pos;
+                logTemp = "Round " + newRound + " : Player 1 moved " + lastMonster.Name + " to position : " + pos;
             }
             else
             {
-                logTemp = "Round " + newTurn + " : Player 2 moved " + lastMonster.Name + " to position : " + pos;
+                logTemp = "Round " + newRound + " : Player 2 moved " + lastMonster.Name + " to position : " + pos;
             }
             ListBoxLog.Items.Add(logTemp);
 
@@ -553,8 +572,8 @@ namespace Projet_GONLO
             else
             {
                 LblPlayerTurn.Text = "Player 1's turn";
-                newTurn += 1;
-                lblRound.Text = "Round : " + newTurn;
+                newRound += 1;
+                lblRound.Text = "Round : " + newRound;
             }
         }
 
@@ -932,12 +951,12 @@ namespace Projet_GONLO
                 if (winner.Equals("Attacker"))
                 {
                     pos = findTagButton(defendingMonster);
-                    logTemp = "Round " + newTurn + " : Player 1's monster : " + attackingMonster.Name + " pushed Player 2's monster : " + defendingMonster.Name + " to " + pos;
+                    logTemp = "Round " + newRound + " : Player 1's monster : " + attackingMonster.Name + " pushed Player 2's monster : " + defendingMonster.Name + " to " + pos;
                 }
                 else
                 {
                     pos = findTagButton(attackingMonster);
-                    logTemp = "Round " + newTurn + " : Player 2's monster : " + defendingMonster.Name + " pushed Player 1's monster : " + attackingMonster.Name + " to " + pos;
+                    logTemp = "Round " + newRound + " : Player 2's monster : " + defendingMonster.Name + " pushed Player 1's monster : " + attackingMonster.Name + " to " + pos;
                 }
             }
             //player 2 is attacker
@@ -946,12 +965,12 @@ namespace Projet_GONLO
                 if (winner.Equals("Defender"))
                 {
                     pos = findTagButton(defendingMonster);
-                    logTemp = "Round " + newTurn + " : Player 2's monster : " + attackingMonster.Name + " pushed Player 1's monster : " + defendingMonster.Name + " to " + pos;
+                    logTemp = "Round " + newRound + " : Player 2's monster : " + attackingMonster.Name + " pushed Player 1's monster : " + defendingMonster.Name + " to " + pos;
                 }
                 else
                 {
                     pos = findTagButton(attackingMonster);
-                    logTemp = "Round " + newTurn + " : Player 1's monster : " + defendingMonster.Name + " pushed Player 2's monster : " + attackingMonster.Name + " to " + pos;
+                    logTemp = "Round " + newRound + " : Player 1's monster : " + defendingMonster.Name + " pushed Player 2's monster : " + attackingMonster.Name + " to " + pos;
                 }
             }
             ListBoxLog.Items.Add(logTemp);
@@ -965,11 +984,11 @@ namespace Projet_GONLO
             {
                 if (winner.Equals("Attacker"))
                 {
-                    logTemp = "Round " + newTurn + " : Player 1's monster : " + attackingMonster.Name + " killed Player 2's monster : " + defendingMonster.Name;
+                    logTemp = "Round " + newRound + " : Player 1's monster : " + attackingMonster.Name + " killed Player 2's monster : " + defendingMonster.Name;
                 }
                 else if (winner.Equals("Defender"))
                 {
-                    logTemp = "Round " + newTurn + " : Player 2's monster : " + defendingMonster.Name + " killed Player 1's monster : " + attackingMonster.Name;
+                    logTemp = "Round " + newRound + " : Player 2's monster : " + defendingMonster.Name + " killed Player 1's monster : " + attackingMonster.Name;
                 }
             }
             //if player 2 is attacking
@@ -977,11 +996,11 @@ namespace Projet_GONLO
             {
                 if (winner.Equals("Attacker"))
                 {
-                    logTemp = "Round " + newTurn + " : Player 2's monster : " + attackingMonster.Name + " killed Player 1's monster : " + defendingMonster.Name;
+                    logTemp = "Round " + newRound + " : Player 2's monster : " + attackingMonster.Name + " killed Player 1's monster : " + defendingMonster.Name;
                 }
                 else if (winner.Equals("Defender"))
                 {
-                    logTemp = "Round " + newTurn + " : Player 1's monster : " + defendingMonster.Name + " killed Player 2's monster : " + attackingMonster.Name;
+                    logTemp = "Round " + newRound + " : Player 1's monster : " + defendingMonster.Name + " killed Player 2's monster : " + attackingMonster.Name;
                 }
             }
             ListBoxLog.Items.Add(logTemp);
