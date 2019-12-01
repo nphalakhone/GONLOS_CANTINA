@@ -66,7 +66,7 @@
             this.BtnEllLoad.FlatAppearance.BorderSize = 0;
             this.BtnEllLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllLoad.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEllLoad.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllLoad.ForeColor = System.Drawing.Color.Gold;
             this.BtnEllLoad.Location = new System.Drawing.Point(460, 220);
             this.BtnEllLoad.Name = "BtnEllLoad";
             this.BtnEllLoad.Size = new System.Drawing.Size(175, 75);
@@ -83,7 +83,7 @@
             this.BtnEllBack.FlatAppearance.BorderSize = 0;
             this.BtnEllBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllBack.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEllBack.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllBack.ForeColor = System.Drawing.Color.Gold;
             this.BtnEllBack.Location = new System.Drawing.Point(50, 220);
             this.BtnEllBack.Name = "BtnEllBack";
             this.BtnEllBack.Size = new System.Drawing.Size(175, 75);
@@ -112,7 +112,7 @@
             this.BtnEllDelete.FlatAppearance.BorderSize = 0;
             this.BtnEllDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllDelete.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEllDelete.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllDelete.ForeColor = System.Drawing.Color.Gold;
             this.BtnEllDelete.Location = new System.Drawing.Point(253, 220);
             this.BtnEllDelete.Name = "BtnEllDelete";
             this.BtnEllDelete.Size = new System.Drawing.Size(175, 75);
