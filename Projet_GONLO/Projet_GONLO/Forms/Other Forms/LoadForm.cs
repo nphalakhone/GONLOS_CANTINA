@@ -13,7 +13,9 @@ namespace Projet_GONLO
 {
     public partial class LoadForm : Form
     {
+        StreamWriter sw = new StreamWriter(Application.StartupPath + "\\SavesTest.txt");
         Player playerSelected = new Player();
+        List<Player> playersSaved = new List<Player>();
 
         public LoadForm()
         {
@@ -30,12 +32,11 @@ namespace Projet_GONLO
 
         private void BtnEllLoad_Click(object sender, EventArgs e)
         {
-            List<Player> playersSaved = new List<Player>();
             string line = "";
 
             if (!File.Exists(Application.StartupPath + "\\SavesTest.txt"))
             {
-                MessageBox.Show("There is no SavesTest file in your computer", "ATTENTION");
+                MessageBox.Show("There is no Save file in your computer, you must create a player and save it first.", "ATTENTION");
                 this.Hide();
                 StartForm start = new StartForm();
                 start.ShowDialog();
@@ -96,6 +97,28 @@ namespace Projet_GONLO
             BtnEllLoad.Enabled = true;
         }
 
-        
+        private void BtnEllDelete_Click(object sender, EventArgs e)
+        {
+            int temp = 0;
+            for (int i = 0; i < playersSaved.Count; i++)
+            {
+                if (TBoxName.Text == playersSaved.ElementAt(i).Name)
+                {
+                    temp = i;
+                }
+                else
+                {
+                    MessageBox.Show("The name: " + TBoxName.Text + " does not appear on our guest file", "ATTENTION");
+                }
+            }
+            playersSaved.RemoveAt(temp);
+            foreach (Player p in playersSaved)
+            {
+                sw.WriteLine(p.Name + ";" + p.Gender + ";" + p.Species + ";" + p.Credits.ToString() + ";" +
+                            p.PazaakGamesWon.ToString() + ";" + p.PazaakGamesLost.ToString() + ";" + p.DejarikGamesWon.ToString() + ";"
+                            + p.DejarikGamesLost.ToString());
+            }
+
+        }
     }
 }
