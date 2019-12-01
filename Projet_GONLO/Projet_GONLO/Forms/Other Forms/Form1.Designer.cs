@@ -178,7 +178,7 @@
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.SteelBlue;
             this.label27.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label27.ForeColor = System.Drawing.Color.Gold;
             this.label27.Location = new System.Drawing.Point(5, 25);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(78, 20);
@@ -190,7 +190,7 @@
             this.label28.AutoSize = true;
             this.label28.BackColor = System.Drawing.Color.SteelBlue;
             this.label28.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label28.ForeColor = System.Drawing.Color.Gold;
             this.label28.Location = new System.Drawing.Point(5, 155);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(108, 20);
@@ -202,7 +202,7 @@
             this.LblNumPGWon.AutoSize = true;
             this.LblNumPGWon.BackColor = System.Drawing.Color.SteelBlue;
             this.LblNumPGWon.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNumPGWon.ForeColor = System.Drawing.Color.LimeGreen;
+            this.LblNumPGWon.ForeColor = System.Drawing.Color.Gold;
             this.LblNumPGWon.Location = new System.Drawing.Point(7, 297);
             this.LblNumPGWon.Name = "LblNumPGWon";
             this.LblNumPGWon.Size = new System.Drawing.Size(174, 20);
@@ -226,7 +226,7 @@
             this.label31.AutoSize = true;
             this.label31.BackColor = System.Drawing.Color.SteelBlue;
             this.label31.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label31.ForeColor = System.Drawing.Color.Gold;
             this.label31.Location = new System.Drawing.Point(7, 322);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(75, 20);
@@ -238,7 +238,7 @@
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.Color.SteelBlue;
             this.label32.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label32.ForeColor = System.Drawing.Color.Gold;
             this.label32.Location = new System.Drawing.Point(147, 322);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(74, 20);
@@ -262,7 +262,7 @@
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.SteelBlue;
             this.label29.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label29.ForeColor = System.Drawing.Color.Gold;
             this.label29.Location = new System.Drawing.Point(146, 398);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(74, 20);
@@ -286,7 +286,7 @@
             this.label34.AutoSize = true;
             this.label34.BackColor = System.Drawing.Color.SteelBlue;
             this.label34.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label34.ForeColor = System.Drawing.Color.Gold;
             this.label34.Location = new System.Drawing.Point(6, 398);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(75, 20);
@@ -310,7 +310,7 @@
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.SteelBlue;
             this.label36.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label36.ForeColor = System.Drawing.Color.Gold;
             this.label36.Location = new System.Drawing.Point(6, 373);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(173, 20);
@@ -322,7 +322,7 @@
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.Color.SteelBlue;
             this.label30.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label30.ForeColor = System.Drawing.Color.Gold;
             this.label30.Location = new System.Drawing.Point(5, 90);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(105, 20);
@@ -364,7 +364,7 @@
             this.GBoxPlayerInfo.Controls.Add(this.label32);
             this.GBoxPlayerInfo.Controls.Add(this.LblNbPGL);
             this.GBoxPlayerInfo.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GBoxPlayerInfo.ForeColor = System.Drawing.Color.LimeGreen;
+            this.GBoxPlayerInfo.ForeColor = System.Drawing.Color.Gold;
             this.GBoxPlayerInfo.Location = new System.Drawing.Point(291, 89);
             this.GBoxPlayerInfo.Name = "GBoxPlayerInfo";
             this.GBoxPlayerInfo.Size = new System.Drawing.Size(296, 280);
@@ -416,7 +416,8 @@
             this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox2.Location = new System.Drawing.Point(15, 288);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(548, 156);
@@ -506,8 +507,8 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label24.Font = new System.Drawing.Font("SF Distant Galaxy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label24.Location = new System.Drawing.Point(18, 30);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(528, 14);
@@ -580,7 +581,8 @@
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Location = new System.Drawing.Point(15, 288);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(548, 156);
@@ -724,6 +726,7 @@
             // 
             this.BtnEllPlayPazaak.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtongold;
             this.BtnEllPlayPazaak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEllPlayPazaak.FlatAppearance.BorderSize = 0;
             this.BtnEllPlayPazaak.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnEllPlayPazaak.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEllPlayPazaak.Location = new System.Drawing.Point(366, 171);
@@ -747,7 +750,8 @@
             this.GbxPazaak.Controls.Add(this.label2);
             this.GbxPazaak.Controls.Add(this.label1);
             this.GbxPazaak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GbxPazaak.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GbxPazaak.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GbxPazaak.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.GbxPazaak.Location = new System.Drawing.Point(15, 288);
             this.GbxPazaak.Name = "GbxPazaak";
             this.GbxPazaak.Size = new System.Drawing.Size(548, 156);
@@ -864,7 +868,7 @@
             this.BtnEllExit.FlatAppearance.BorderSize = 0;
             this.BtnEllExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllExit.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEllExit.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllExit.ForeColor = System.Drawing.Color.Gold;
             this.BtnEllExit.Location = new System.Drawing.Point(20, 452);
             this.BtnEllExit.Name = "BtnEllExit";
             this.BtnEllExit.Size = new System.Drawing.Size(250, 61);
@@ -881,7 +885,7 @@
             this.BtnEllSB.FlatAppearance.BorderSize = 0;
             this.BtnEllSB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllSB.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEllSB.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllSB.ForeColor = System.Drawing.Color.Gold;
             this.BtnEllSB.Location = new System.Drawing.Point(20, 345);
             this.BtnEllSB.Name = "BtnEllSB";
             this.BtnEllSB.Size = new System.Drawing.Size(250, 61);
@@ -898,7 +902,7 @@
             this.BtnEllDejarik.FlatAppearance.BorderSize = 0;
             this.BtnEllDejarik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllDejarik.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEllDejarik.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllDejarik.ForeColor = System.Drawing.Color.Gold;
             this.BtnEllDejarik.Location = new System.Drawing.Point(20, 246);
             this.BtnEllDejarik.Name = "BtnEllDejarik";
             this.BtnEllDejarik.Size = new System.Drawing.Size(250, 61);
@@ -915,7 +919,7 @@
             this.BtnEllPazaak.FlatAppearance.BorderSize = 0;
             this.BtnEllPazaak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEllPazaak.Font = new System.Drawing.Font("SF Distant Galaxy Alternate", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEllPazaak.ForeColor = System.Drawing.Color.LimeGreen;
+            this.BtnEllPazaak.ForeColor = System.Drawing.Color.Gold;
             this.BtnEllPazaak.Location = new System.Drawing.Point(20, 150);
             this.BtnEllPazaak.Name = "BtnEllPazaak";
             this.BtnEllPazaak.Size = new System.Drawing.Size(250, 61);
@@ -949,8 +953,8 @@
             this.BackgroundImage = global::Projet_GONLO.Properties.Resources.star_wars_resort;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 560);
-            this.Controls.Add(this.RPnlDejarik);
             this.Controls.Add(this.RPnlSBR);
+            this.Controls.Add(this.RPnlDejarik);
             this.Controls.Add(this.GBoxPlayerInfo);
             this.Controls.Add(this.RPnlPazaak);
             this.Controls.Add(this.BtnEllExit);
