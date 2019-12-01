@@ -6,15 +6,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Projet_GONLO.Tests
 {
+    
+
+
     [TestClass()]
     public class DejarikTests
     {
+
+        
+
         [TestMethod()]
-        public void DejarikTest()
+        public void InitializeListButtonsTest()
         {
-            throw new NotImplementedException();
+            var dejarik = new Dejarik("");
+            
         }
     }
 }

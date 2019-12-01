@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projet_GONLO", "Projet_GONL
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{18A79853-430F-4DCE-96BA-25767F5D49BB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project_GONLO_Tests", "Project_GONLO_Tests\Project_GONLO_Tests.csproj", "{1828785F-6BC9-46E5-867E-EE247D16CAA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projet_GONLO_Tests", "Projet_GONLO_Tests\Projet_GONLO_Tests.csproj", "{DEC6CF3D-AD17-49DC-85F3-390FD06962E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,10 @@ Global
 		{28903FB2-F8C8-4C2A-BE72-0B22EE0A92C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28903FB2-F8C8-4C2A-BE72-0B22EE0A92C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28903FB2-F8C8-4C2A-BE72-0B22EE0A92C5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1828785F-6BC9-46E5-867E-EE247D16CAA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1828785F-6BC9-46E5-867E-EE247D16CAA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1828785F-6BC9-46E5-867E-EE247D16CAA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1828785F-6BC9-46E5-867E-EE247D16CAA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEC6CF3D-AD17-49DC-85F3-390FD06962E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEC6CF3D-AD17-49DC-85F3-390FD06962E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEC6CF3D-AD17-49DC-85F3-390FD06962E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEC6CF3D-AD17-49DC-85F3-390FD06962E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
