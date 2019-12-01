@@ -22,6 +22,7 @@ namespace Projet_GONLO
         private int position;
         private Image picture;
         private typeMonster type;
+        private PictureBox pictureBox;
 
 
         // Constructor Declaration of Class 
@@ -49,5 +50,6 @@ namespace Projet_GONLO
         public Image Picture { get => picture; set => picture = value; }
         public typeMonster Type { get => type; set => type = value; }
         public int Position { get => position; set => position = value; }
+        public PictureBox PictureBox { get => pictureBox; set => pictureBox = value; }
     }
 }
