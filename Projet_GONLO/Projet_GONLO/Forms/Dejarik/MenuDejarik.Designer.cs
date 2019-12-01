@@ -156,6 +156,7 @@
             // 
             this.BtnHoujix.BackgroundImage = global::Projet_GONLO.Properties.Resources.houjix1;
             this.BtnHoujix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnHoujix.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnHoujix.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BtnHoujix.Location = new System.Drawing.Point(57, 41);
             this.BtnHoujix.Name = "BtnHoujix";
@@ -169,6 +170,7 @@
             this.BtnGhhhk.BackColor = System.Drawing.Color.Transparent;
             this.BtnGhhhk.BackgroundImage = global::Projet_GONLO.Properties.Resources.ghhhk;
             this.BtnGhhhk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnGhhhk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnGhhhk.Location = new System.Drawing.Point(57, 41);
             this.BtnGhhhk.Name = "BtnGhhhk";
             this.BtnGhhhk.Size = new System.Drawing.Size(135, 145);
@@ -620,6 +622,7 @@
             // 
             this.BtnKintanStrider.BackgroundImage = global::Projet_GONLO.Properties.Resources.Kintan_Strider;
             this.BtnKintanStrider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnKintanStrider.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnKintanStrider.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BtnKintanStrider.Location = new System.Drawing.Point(57, 41);
             this.BtnKintanStrider.Name = "BtnKintanStrider";
@@ -748,6 +751,7 @@
             // 
             this.BtnNgok.BackgroundImage = global::Projet_GONLO.Properties.Resources.Ngok;
             this.BtnNgok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnNgok.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnNgok.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BtnNgok.Location = new System.Drawing.Point(57, 41);
             this.BtnNgok.Name = "BtnNgok";
@@ -875,6 +879,7 @@
             // 
             this.BtnKlorslug.BackgroundImage = global::Projet_GONLO.Properties.Resources.klorslaug1;
             this.BtnKlorslug.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnKlorslug.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnKlorslug.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BtnKlorslug.Location = new System.Drawing.Point(57, 41);
             this.BtnKlorslug.Name = "BtnKlorslug";
@@ -1004,6 +1009,7 @@
             // 
             this.BtnGrimtaash.BackgroundImage = global::Projet_GONLO.Properties.Resources.grimtaash;
             this.BtnGrimtaash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnGrimtaash.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnGrimtaash.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BtnGrimtaash.Location = new System.Drawing.Point(57, 41);
             this.BtnGrimtaash.Name = "BtnGrimtaash";
@@ -1131,6 +1137,7 @@
             // 
             this.BtnMantellian.BackgroundImage = global::Projet_GONLO.Properties.Resources.Mantellian_Savrip;
             this.BtnMantellian.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnMantellian.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnMantellian.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BtnMantellian.Location = new System.Drawing.Point(57, 41);
             this.BtnMantellian.Name = "BtnMantellian";
@@ -1258,6 +1265,7 @@
             // 
             this.BtnMonnok.BackgroundImage = global::Projet_GONLO.Properties.Resources.Monnok;
             this.BtnMonnok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnMonnok.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnMonnok.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BtnMonnok.Location = new System.Drawing.Point(57, 41);
             this.BtnMonnok.Name = "BtnMonnok";
