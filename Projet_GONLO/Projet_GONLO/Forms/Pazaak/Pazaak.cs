@@ -21,7 +21,7 @@ namespace Projet_GONLO
         List<Image> playerDeckPazaak = new List<Image>();
         List<int> carteIntEnvoye = new List<int>();
         List<int> ListIntSelectionne = new List<int>();
-        Player playerPazaak = new Player();
+        Player playerPazaak;
         Cards c = new Cards();
         Image[] playerDeck = new Image[4];
         int[] AiDeck = new int[4];
@@ -39,24 +39,17 @@ namespace Projet_GONLO
         public bool gameOver = false;
         bool addedPlusMinus = false;
         Random rand = new Random();
-        int PlayerPoints = 0;
-        int AiPoints = 0;
+        Player ai = new Player();
         
-        int nbCardsPlayer = 0;
-        int nbCardsAi = 0;
 
-        bool playerStand = false;
-        bool AiStand = false;
 
-        int nbVictoirePlayer = 0;
-        int nbVictoireAi = 0;
-        int nbCarteUtiliseAi = 0;
+
 
         public Pazaak(List<Image> playerDeckPazaak, int[] carteIntEnvoye)
         {
             this.playerDeckPazaak = playerDeckPazaak;
             this.carteIntEnvoye = TabToList(carteIntEnvoye);
-
+            playerPazaak = new Player();
             InitializeComponent();
             setupPlayerdeck();
             setupBoard();
@@ -160,16 +153,18 @@ namespace Projet_GONLO
 
         private void End_Turn_Click(object sender, EventArgs e)
         {
-            if (nbCardsPlayer != 9)
+            if (playerPazaak.NbCards != 9)
             {
             int pointsAdded = rand.Next(1, 11);
             CPBoxAI.BackColor = Color.Black;
             CPBoxPlayer.BackColor = Color.Maroon;
-            TabPanelLeft[nbCardsPlayer].BackgroundImage = c.getCarteNormal(pointsAdded);
-            TabPanelLeft[nbCardsPlayer].BackgroundImageLayout = ImageLayout.Stretch;
-            nbCardsPlayer++;
-            PlayerPoints += pointsAdded;
-            LblPointsPlayer.Text = PlayerPoints.ToString();
+            TabPanelLeft[playerPazaak.NbCards].BackgroundImage = c.getCarteNormal(pointsAdded);
+            TabPanelLeft[playerPazaak.NbCards].BackgroundImageLayout = ImageLayout.Stretch;
+            playerPazaak.NbCards++;
+                //PlayerPoints += pointsAdded;
+                //LblPointsPlayer.Text = PlayerPoints.ToString();
+                playerPazaak.Points += pointsAdded;
+                LblPointsPlayer.Text = playerPazaak.Points.ToString();
             AiTurn();
             }
             else
@@ -188,15 +183,17 @@ namespace Projet_GONLO
             if (moveAI == Projet_GONLO.Move.End_Turn)
             {
                 pointsAdded = rand.Next(1, 11);
-                TabPanelRight[nbCardsAi].BackgroundImage = c.getCarteNormal(pointsAdded);
-                TabPanelRight[nbCardsAi].BackgroundImageLayout = ImageLayout.Stretch;
-                nbCardsAi++;
-                AiPoints += pointsAdded;
-                LblPointsAi.Text = AiPoints.ToString();
+                TabPanelRight[ai.NbCards].BackgroundImage = c.getCarteNormal(pointsAdded);
+                TabPanelRight[ai.NbCards].BackgroundImageLayout = ImageLayout.Stretch;
+                ai.NbCards++;
+                //AiPoints += pointsAdded;
+                //LblPointsAi.Text = AiPoints.ToString();
+                ai.Points += pointsAdded;
+                LblPointsAi.Text = ai.Points.ToString();
             }
             else if (moveAI == Projet_GONLO.Move.Stand)
             {
-                AiStand = true;
+                ai.Stand = true;
             }
             else
             {
@@ -212,32 +209,36 @@ namespace Projet_GONLO
             MessageBox.Show("add card");
             if (AiDeck[index] < 0)
             {
-                TabPanelRight[nbCardsAi].BackgroundImage = c.getCarteMinus(AiDeck[index] - 2 * (AiDeck[index]));
-                AiPoints += AiDeck[index];
+                TabPanelRight[ai.NbCards].BackgroundImage = c.getCarteMinus(AiDeck[index] - 2 * (AiDeck[index]));
+                //AiPoints += AiDeck[index];
+                ai.Points += AiDeck[index];
             }
             else if (AiDeck[index] > 0 && AiDeck[index] < 7)
             {
-                TabPanelRight[nbCardsAi].BackgroundImage = c.getCartePlus(AiDeck[index]);
-                AiPoints += AiDeck[index];
+                TabPanelRight[ai.NbCards].BackgroundImage = c.getCartePlus(AiDeck[index]);
+                //AiPoints += AiDeck[index];
+                ai.Points += AiDeck[index];
             }
             else
             {
-                if (AiPoints > 20)
+                if (ai.Points > 20)
                 {
-                    TabPanelRight[nbCardsAi].BackgroundImage = c.getCartePlusMinus(AiDeck[index] - 6);
-                    AiPoints -= AiDeck[index] - 6;
+                    TabPanelRight[ai.NbCards].BackgroundImage = c.getCartePlusMinus(AiDeck[index] - 6);
+                    //AiPoints -= AiDeck[index] - 6;
+                    ai.Points -= AiDeck[index] - 6;
                 }
                 else
                 {
-                    TabPanelRight[nbCardsAi].BackgroundImage = c.getCartePlusMinus(AiDeck[index] - 6);
-                    AiPoints += AiDeck[index] - 6;
+                    TabPanelRight[ai.NbCards].BackgroundImage = c.getCartePlusMinus(AiDeck[index] - 6);
+                    //AiPoints += AiDeck[index] - 6;
+                    ai.Points += AiDeck[index] - 6;
                 }
             }
             AiDeck[index] = 100; //empty
-            TabPanelRight[nbCardsAi].BackgroundImageLayout = ImageLayout.Stretch;
-            LblPointsAi.Text = AiPoints.ToString();
-            nbCardsAi++;
-            nbCarteUtiliseAi++;
+            TabPanelRight[ai.NbCards].BackgroundImageLayout = ImageLayout.Stretch;
+            LblPointsAi.Text = ai.Points.ToString();
+            ai.NbCards++;
+            ai.NbCarteUtiliseAi++;
 
         }
         private void AddCard(Move moveAI)
@@ -261,21 +262,21 @@ namespace Projet_GONLO
         }
         private Move DetermineMove()
         {
-            if (nbCardsAi != 9)
+            if (ai.NbCards != 9)
             {
-                if (AiPoints <= 14)
+                if (ai.Points <= 14)
                 {
                     return Projet_GONLO.Move.End_Turn;
                 }   
-                else if (AiPoints == 20 || AiPoints == 19 || AiPoints == 18 || addedPlusMinus)
+                else if (ai.Points == 20 || ai.Points == 19 || ai.Points == 18 || addedPlusMinus)
                 {
                     return Projet_GONLO.Move.Stand;
                 }
-                else if (AiPoints > 20)
+                else if (ai.Points > 20)
                 {
                     return MinusCard();
                 }
-                else if (AiPoints > 14 && AiPoints < 20)
+                else if (ai.Points > 14 && ai.Points < 20)
                 {
                     return PlusCard();
                 }
@@ -285,19 +286,19 @@ namespace Projet_GONLO
 
         private Move AddPlusMinusCard()
         {
-            if (PlayerPoints < 21) { 
+            if (playerPazaak.Points < 21) { 
 
 
                 for (int i = 0; i < AiDeck.Length; i++)
                 {
                     if (AiDeck[i] > 6 && AiDeck[i] < 13)
                     {
-                        if (AiPoints > 20 && AiPoints - (AiDeck[i] - 6) > PlayerPoints && AiPoints - (AiDeck[i] - 6) <= 20)
+                        if (ai.Points > 20 && ai.Points - (AiDeck[i] - 6) > playerPazaak.Points && ai.Points - (AiDeck[i] - 6) <= 20)
                         {
                             addedPlusMinus = true;
                             return DetermineCard(i);
                         }
-                        else if (AiPoints < 20 && AiDeck[i] + (AiPoints-6) <= 20 && AiDeck[i] + (AiPoints - 6) >= PlayerPoints)
+                        else if (ai.Points < 20 && AiDeck[i] + (ai.Points - 6) <= 20 && AiDeck[i] + (ai.Points - 6) >= playerPazaak.Points)
                         {
                             addedPlusMinus = true;
                             return DetermineCard(i);
@@ -315,7 +316,7 @@ namespace Projet_GONLO
 
         private Move PlusCard()
         {
-            if (PlayerPoints < 20)
+            if (playerPazaak.Points < 20)
             {
 
                 for (int i = 0; i < AiDeck.Length; i++)
@@ -323,9 +324,9 @@ namespace Projet_GONLO
 
                     if (AiDeck[i] > 0)
                     {
-                        if (AiDeck[i] < 7 && AiDeck[i] + AiPoints <= 20) 
+                        if (AiDeck[i] < 7 && AiDeck[i] + ai.Points <= 20) 
                         {
-                            if (AiDeck[i] + AiPoints >= PlayerPoints ||  4 - nbCarteUtiliseAi > 0)
+                            if (AiDeck[i] + ai.Points >= playerPazaak.Points ||  4 - ai.NbCarteUtiliseAi > 0)
                             {
                                 MessageBox.Show(AiDeck[i].ToString());
 
@@ -341,13 +342,13 @@ namespace Projet_GONLO
 
         private Move MinusCard()
         {
-            if (PlayerPoints <= 20)
+            if (playerPazaak.Points <= 20)
             {
 
                 for (int i = 0; i < AiDeck.Length; i++)
                 {
 
-                    if (AiDeck[i] < 0 && AiPoints + AiDeck[i] <= 20 && AiPoints + AiDeck[i] >= PlayerPoints)
+                    if (AiDeck[i] < 0 && ai.Points + AiDeck[i] <= 20 && ai.Points + AiDeck[i] >= playerPazaak.Points)
                     {
                         return DetermineCard(i);
 
@@ -380,7 +381,7 @@ namespace Projet_GONLO
 
         private void Stand()
         {
-            playerStand = true;
+            playerPazaak.Stand = true;
             VerifyStands();
             while (!gameOver)
             {
@@ -393,7 +394,7 @@ namespace Projet_GONLO
 
         private void VerifyStands()
         {
-            if (AiStand && playerStand)
+            if (ai.Stand && playerPazaak.Stand)
             {
                 FindWinner();
             }
@@ -404,22 +405,22 @@ namespace Projet_GONLO
         {
             string result = "";
             
-            if (AiPoints == PlayerPoints)
+            if (ai.Points == playerPazaak.Points)
             {
                 result = "Egalite";
             }
-            else if (PlayerPoints == 20)
+            else if (playerPazaak.Points == 20)
             {
                 result = "Player gagné!!";
                 
             }
-            else if (AiPoints == 20)
+            else if (ai.Points == 20)
             {
                 result = "Ai gagne!!";
             }
-            else if (AiPoints < 20 && PlayerPoints < 20)
+            else if (ai.Points < 20 && playerPazaak.Points < 20)
             {
-                if (differenceFrom20(AiPoints) < differenceFrom20(PlayerPoints))
+                if (differenceFrom20(ai.Points) < differenceFrom20(playerPazaak.Points))
                 {
                     result = "Ai gagne!!";
                 }
@@ -428,11 +429,11 @@ namespace Projet_GONLO
                     result = "Player gagné!!";
                 }
             }
-            else if (AiPoints > 20 && PlayerPoints > 20)
+            else if (ai.Points > 20 && playerPazaak.Points > 20)
             {
                 result = "Egalite";
             }
-            else if (AiPoints < 20 && PlayerPoints > 20)
+            else if (ai.Points < 20 && playerPazaak.Points > 20)
             {
                 result = "Ai gagne!!";
             }
@@ -443,13 +444,13 @@ namespace Projet_GONLO
             MessageBox.Show(result);
             if (result == "Player gagné!!")
             {   
-                tabCircularBtnPlayer[nbVictoirePlayer].BackColor = Color.Maroon;
-                nbVictoirePlayer++;
+                tabCircularBtnPlayer[playerPazaak.NbVictoire].BackColor = Color.Maroon;
+                playerPazaak.NbVictoire++;
             }
             else if (result == "Ai gagne!!")
             {
-                tabCircularBtnAi[nbVictoireAi].BackColor = Color.Maroon;
-                nbVictoireAi++;
+                tabCircularBtnAi[ai.NbVictoire].BackColor = Color.Maroon;
+                ai.NbVictoire++;
             }
             gameOver = true;
             
@@ -657,31 +658,31 @@ namespace Projet_GONLO
             Label[] FlipCard = { LblFlipCard1, LblFlipCard2, LblFlipCard3, LblFlipCard4 };
             CPBoxAI.BackColor = Color.Black;
             CPBoxPlayer.BackColor = Color.Maroon;
-            TabPanelLeft[nbCardsPlayer].BackgroundImage = playerDeck[indexPanel];
+            TabPanelLeft[playerPazaak.NbCards].BackgroundImage = playerDeck[indexPanel];
             panelPlayerDeck[indexPanel].BackgroundImage = null;
 
-            TabPanelLeft[nbCardsPlayer].BackgroundImageLayout = ImageLayout.Stretch;
-            nbCardsPlayer++;
+            TabPanelLeft[playerPazaak.NbCards].BackgroundImageLayout = ImageLayout.Stretch;
+            playerPazaak.NbCards++;
             if (ListIntSelectionne[indexPanel] >= 0 && ListIntSelectionne[indexPanel] < 6)
             {
-                PlayerPoints += ListIntSelectionne[indexPanel] + 1;
+                playerPazaak.Points += ListIntSelectionne[indexPanel] + 1;
             }
             else if (ListIntSelectionne[indexPanel] >= 6 && ListIntSelectionne[indexPanel] < 12)
             {
                 // -6 pcq index commence apres les cartes + et + 1 puisque l'index commence a zero
                 int pointsEnlever = ListIntSelectionne[indexPanel] - 5;
-                PlayerPoints -= pointsEnlever;
+                playerPazaak.Points -= pointsEnlever;
             }
             else
             {
                 int pointsEnlever = ListIntSelectionne[indexPanel] - 11;
                 if (MinusValue[indexPanel].Visible)
                 {
-                    PlayerPoints -= pointsEnlever;
+                    playerPazaak.Points -= pointsEnlever;
                 }
                 else
                 {
-                    PlayerPoints += pointsEnlever;
+                    playerPazaak.Points += pointsEnlever;
                 }
                 MinusValue[indexPanel].Hide();
                 PlusValue[indexPanel].Hide();
@@ -690,7 +691,7 @@ namespace Projet_GONLO
 
             }
             panelPlayerDeck[indexPanel].Enabled = false;
-            LblPointsPlayer.Text = PlayerPoints.ToString();
+            LblPointsPlayer.Text = playerPazaak.Points.ToString();
             AiTurn();
         }
 
@@ -730,35 +731,39 @@ namespace Projet_GONLO
             gameOver = false;
             addedPlusMinus = false;
             
-            PlayerPoints = 0;
-            AiPoints = 0;
-            nbCardsPlayer = 0;
-            nbCardsAi = 0;
+            playerPazaak.Points = 0;
+            ai.Points = 0;
+            playerPazaak.NbCards = 0;
+            ai.NbCards = 0;
 
-            playerStand = false;
-            AiStand = false;
+            ai.Stand = false;
+            playerPazaak.Stand = false;
 
             LblPointsAi.Text = "0";
             LblPointsPlayer.Text = "0";
-            nbCarteUtiliseAi = 0;
+            ai.NbCarteUtiliseAi = 0;
 
-            if (nbVictoirePlayer == 3)
+            if (playerPazaak.NbVictoire == 3)
             {
                 MessageBox.Show("Vous avez gagne!!!!!!!!!");
                 playerPazaak.Credits += credsWaged;
                 playerPazaak.PazaakGamesWon++;
                 this.Hide();
+                playerPazaak.NbVictoire = 0;
+                ai.NbVictoire = 0;
                 MenuAccueil newMenuAccueil = new MenuAccueil();
                 newMenuAccueil.Player1 = playerPazaak;
                 newMenuAccueil.ShowDialog();
                 this.Close();
             }
-            if (nbVictoireAi == 3)
+            if (ai.NbVictoire == 3)
             {
                 MessageBox.Show("Vous avez perdu :( :(");
                 playerPazaak.Credits -= credsWaged;
                 playerPazaak.PazaakGamesLost++;
                 this.Hide();
+                playerPazaak.NbVictoire = 0;
+                ai.NbVictoire = 0;
                 MenuAccueil newMenuAccueil = new MenuAccueil();
                 newMenuAccueil.Player1 = playerPazaak;
                 newMenuAccueil.ShowDialog();

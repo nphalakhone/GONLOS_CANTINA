@@ -23,6 +23,11 @@ namespace Projet_GONLO
         private Monster currMonster;
         private List<Monster> _listMonsters = new List<Monster>();
 
+        private int points = 0;
+        private int nbCards = 0;
+        private bool stand = false;
+        private int nbVictoire = 0;
+        private int nbCarteUtiliseAi = 0;
 
         public Player()
         {
@@ -107,6 +112,31 @@ namespace Projet_GONLO
             set { currMonster = value; }
         }
 
-        public List<Monster> ListMonsters { get => _listMonsters; set => _listMonsters = value; }
+        public List<Monster> ListMonsters {
+            get => _listMonsters;
+            set => _listMonsters = value;
+        }
+
+
+        public int Points {
+            get => points;
+            set => points = value;
+        }
+        public int NbCards {
+            get => nbCards;
+            set => nbCards = value;
+        }
+        public bool Stand {
+            get => stand;
+            set => stand = value;
+        }
+        public int NbVictoire {
+            get => nbVictoire;
+            set => nbVictoire = value;
+        }
+        public int NbCarteUtiliseAi {
+            get => nbCarteUtiliseAi;
+            set => nbCarteUtiliseAi = value;
+        }
     }
 }

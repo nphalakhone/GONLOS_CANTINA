@@ -24,6 +24,55 @@ namespace Projet_GONLO_Tests
             Assert.AreEqual(26, listButtons.Count);
         }
 
+        /// <summary>
+        /// Test if the clicked monster is the right one with the right stats
+        /// </summary>
+        [TestMethod]
+        public void ClickedMonsterIsRightMonster()
+        {
+
+        }
+
+
+        /// <summary>
+        /// Test if a monster can move to an available position
+        /// </summary>
+        [TestMethod]
+        public void MoveMonsterToAvailablePositionTest()
+        {
+            
+        }
+
+
+        /// <summary>
+        /// Test if the player action end when the monster cannot move anymore
+        /// </summary>
+        [TestMethod]
+        public void EndActionWhenMonsterCantMoveTest()
+        {
+
+        }
+
+
+        /// <summary>
+        /// Test if the action end when the monster has no more movement
+        /// </summary>
+        [TestMethod]
+        public void EndActionWhenMonsterFinishMovementTest()
+        {
+
+        }
+
+
+
+        /// <summary>
+        /// Test if a monster cannot move on the same tile as another monster
+        /// </summary>
+        [TestMethod]
+        public void MonsterNoSamePosition()
+        {
+
+        }
 
 
     }
