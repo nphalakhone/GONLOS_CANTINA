@@ -777,11 +777,11 @@ namespace Projet_GONLO
             LblDefMonsterName.Text = defendingMonster.Name;
             LblNewDefenseValue.Text = ": " + newDef;
 
-            if (newAtk - newDef >= 5)
+            if (newAtk - newDef >= 4)
             {
                 kill("Attacker");
             }
-            else if (newAtk - newDef <= 4 && newAtk - newDef >= 1)
+            else if (newAtk - newDef <= 3 && newAtk - newDef >= 1)
             {
                 push("Attacker");
             }
@@ -789,11 +789,11 @@ namespace Projet_GONLO
             {
                 push("Attacker");
             }
-            else if (newDef - newAtk >= 5)
+            else if (newDef - newAtk >= 4)
             {
                 kill("Defender");
             }
-            else if (newDef - newAtk <= 4 && newDef - newAtk >= 1)
+            else if (newDef - newAtk <= 3 && newDef - newAtk >= 1)
             {
                 push("Defender");
             }
