@@ -744,24 +744,12 @@ namespace Projet_GONLO
             initializeMonsterPosition();
             player1.ListMonsters = new List<Monster> { player1.AttMonster, player1.DefMonster, player1.MovMonster, player1.PowMonster };
             player2.ListMonsters = new List<Monster> { player2.AttMonster, player2.DefMonster, player2.MovMonster, player2.PowMonster };
-            initializePictureBox();
             players.Add(player1);
             players.Add(player2);
             activateCurrPlayer();
         }
 
-        private void initializePictureBox()
-        {
-            player1.AttMonster.PictureBox = imgP1MonsterAtk;
-            player1.DefMonster.PictureBox = imgP1MonsterDef;
-            player1.MovMonster.PictureBox = imgP1MonsterMov;
-            player1.PowMonster.PictureBox = imgP1MonsterPow;
-
-            player2.AttMonster.PictureBox = imgP2MonsterAtk;
-            player2.DefMonster.PictureBox = imgP2MonsterDef;
-            player2.MovMonster.PictureBox = imgP2MonsterMov;
-            player2.PowMonster.PictureBox = imgP2MonsterPow;
-        }
+        
 
         /// <summary>
         /// 
@@ -944,9 +932,6 @@ namespace Projet_GONLO
                 {
                     players[tmpVal].ListMonsters.Remove(players[tmpVal].ListMonsters[i]);
 
-                    monsterInvolved.PictureBox.Image = disableToGray(monsterInvolved.PictureBox.Image);
-                    monsterInvolved.PictureBox.BackColor = Color.Transparent;
-
                     for (int j = 0; j < listButtons.Count; j++)
                     {
                         if (j == monsterInvolved.Position)
@@ -959,20 +944,7 @@ namespace Projet_GONLO
             }
         }
 
-        private Bitmap disableToGray(Image image)
-        {
-            Bitmap btm = new Bitmap(image);
-            for (int i = 0; i < btm.Width; i++)
-            {
-                for (int j = 0; j < btm.Height; j++)
-                {
-                    int ser = (btm.GetPixel(i, j).R + btm.GetPixel(i, j).G + btm.GetPixel(i, j).B) / 3;
-                    btm.SetPixel(i, j, Color.FromArgb(ser, ser, ser));
-                }
-            }
-            return btm;
-        }
-
+        
         private void addLogPush(string winner, int tmpAtk)
         {
             string pos = "";
