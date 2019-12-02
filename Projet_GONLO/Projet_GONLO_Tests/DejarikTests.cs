@@ -220,7 +220,19 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void ButtonsDisabledTest()
         {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            ActivateColorsTest();
 
+            //Act
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
+            dejarikTest.Invoke("disableAllButtons");
+
+            //Assert
+            for (int i = 0; i < listButtons.Count; i++)
+            {
+                Assert.IsFalse(listButtons[i].Enabled);
+            }
         }
 
         /// <summary>
@@ -259,7 +271,6 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void DefendAttKillP1Test()
         {
-
             //Arrange
             Monster attackingMonster =  new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
             Monster defendingMonster =  new Monster("The Houjix", 3, 1, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("houjix"), typeMonster.Offensive, 0);
@@ -274,15 +285,14 @@ namespace Projet_GONLO_Tests
             players.Add(player1);
             players.Add(player2);
 
-
             //Act
             dejarikTest.SetField("players", players);
             dejarikTest.SetField("attackingMonster", attackingMonster);
             dejarikTest.SetField("defendingMonster", defendingMonster);
             dejarikTest.Invoke("defend", 1, 9);
-
             players = (List<Player>)dejarikTest.GetField("players");
 
+            //Assert
             Assert.AreEqual(0, players[1].ListMonsters.Count);
         }
 
@@ -292,7 +302,6 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void DefendAttKillP2Test()
         {
-
             //Arrange
             Monster attackingMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
             Monster defendingMonster = new Monster("The Houjix", 3, 1, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("houjix"), typeMonster.Offensive, 0);
@@ -307,16 +316,15 @@ namespace Projet_GONLO_Tests
             players.Add(player1);
             players.Add(player2);
 
-
             //Act
             dejarikTest.SetField("turn", 1);
             dejarikTest.SetField("players", players);
             dejarikTest.SetField("attackingMonster", attackingMonster);
             dejarikTest.SetField("defendingMonster", defendingMonster);
             dejarikTest.Invoke("defend", 1, 9);
-
             players = (List<Player>)dejarikTest.GetField("players");
 
+            //Assert
             Assert.AreEqual(0, players[0].ListMonsters.Count);
         }
 
@@ -340,15 +348,14 @@ namespace Projet_GONLO_Tests
             players.Add(player1);
             players.Add(player2);
 
-
             //Act
             dejarikTest.SetField("players", players);
             dejarikTest.SetField("attackingMonster", attackingMonster);
             dejarikTest.SetField("defendingMonster", defendingMonster);
             dejarikTest.Invoke("defend", 8, 9);
-
             players = (List<Player>)dejarikTest.GetField("players");
 
+            //Assert
             Assert.AreEqual(0, players[1].ListMonsters.Count);
         }
 
