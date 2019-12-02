@@ -599,7 +599,7 @@ namespace Projet_GONLO
             {
                 listButtons[i].Enabled = false;
             }
-
+            
             activateColors();
 
         }
