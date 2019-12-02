@@ -14,6 +14,7 @@ namespace Projet_GONLO_Tests
     {
         private PrivateObject dejarikTest;
         private Player player1;
+        private Player player2;
 
         /// <summary>
         /// Test if the list of buttons is correclty initalized
@@ -129,9 +130,67 @@ namespace Projet_GONLO_Tests
         /// Test that when newAtk is greater than newDef by 4 or more, the defender is killed by the attacker
         /// </summary>
         [TestMethod]
-        public void DefendAttKillTest()
+        public void DefendAttKillP1Test()
         {
 
+            //Arrange
+            Monster attackingMonster =  new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
+            Monster defendingMonster =  new Monster("The Houjix", 3, 1, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("houjix"), typeMonster.Offensive, 0);
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            player1 = new Player();
+            player2 = new Player();
+            player1.AttMonster = attackingMonster;
+            player2.AttMonster = defendingMonster;
+            player1.ListMonsters = new List<Monster> { player1.AttMonster };
+            player2.ListMonsters = new List<Monster> { player2.AttMonster };
+            List<Player> players = new List<Player>();
+            players.Add(player1);
+            players.Add(player2);
+
+
+            //Act
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("attackingMonster", attackingMonster);
+            dejarikTest.SetField("defendingMonster", defendingMonster);
+            dejarikTest.Invoke("defend", 1, 9);
+
+            players = (List<Player>)dejarikTest.GetField("players");
+
+            Assert.AreEqual(0, players[1].ListMonsters.Count);
+        }
+
+        /// <summary>
+        /// Test that when newAtk is greater than newDef by 4 or more, the defender is killed by the attacker
+        /// </summary>
+        [TestMethod]
+        public void DefendAttKillP2Test()
+        {
+
+            //Arrange
+            Monster attackingMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
+            Monster defendingMonster = new Monster("The Houjix", 3, 1, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("houjix"), typeMonster.Offensive, 0);
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            player1 = new Player();
+            player2 = new Player();
+            player1.AttMonster = defendingMonster;
+            player2.AttMonster = attackingMonster;
+            player1.ListMonsters = new List<Monster> { player1.AttMonster };
+            player2.ListMonsters = new List<Monster> { player2.AttMonster };
+            List<Player> players = new List<Player>();
+            players.Add(player1);
+            players.Add(player2);
+
+
+            //Act
+            dejarikTest.SetField("turn", 1);
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("attackingMonster", attackingMonster);
+            dejarikTest.SetField("defendingMonster", defendingMonster);
+            dejarikTest.Invoke("defend", 1, 9);
+
+            players = (List<Player>)dejarikTest.GetField("players");
+
+            Assert.AreEqual(0, players[0].ListMonsters.Count);
         }
 
         /// <summary>
@@ -140,7 +199,30 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void DefendAttPushTest()
         {
+            //Arrange
+            Monster attackingMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
+            Monster defendingMonster = new Monster("The Houjix", 3, 1, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("houjix"), typeMonster.Offensive, 0);
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            player1 = new Player();
+            player2 = new Player();
+            player1.AttMonster = attackingMonster;
+            player2.AttMonster = defendingMonster;
+            player1.ListMonsters = new List<Monster> { player1.AttMonster };
+            player2.ListMonsters = new List<Monster> { player2.AttMonster };
+            List<Player> players = new List<Player>();
+            players.Add(player1);
+            players.Add(player2);
 
+
+            //Act
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("attackingMonster", attackingMonster);
+            dejarikTest.SetField("defendingMonster", defendingMonster);
+            dejarikTest.Invoke("defend", 8, 9);
+
+            players = (List<Player>)dejarikTest.GetField("players");
+
+            Assert.AreEqual(0, players[1].ListMonsters.Count);
         }
 
         /// <summary>
@@ -213,7 +295,7 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void EndActionWhenMonsterCantMoveTest()
         {
-
+            //dernier test de guillaume
         }
 
 

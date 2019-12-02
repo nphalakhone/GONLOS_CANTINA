@@ -1034,11 +1034,15 @@ namespace Projet_GONLO
 
         private void exit()
         {
+
+            Application.Exit();
+            /*
             this.Hide();
             MenuAccueil ma = new MenuAccueil();
             ma.Player1 = player1;
             ma.ShowDialog();
             this.Close();
+            */
         }
 
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
