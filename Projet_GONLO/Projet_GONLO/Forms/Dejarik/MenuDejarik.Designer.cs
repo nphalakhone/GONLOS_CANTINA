@@ -968,9 +968,9 @@
             this.lblDefValue6.ForeColor = System.Drawing.Color.Gold;
             this.lblDefValue6.Location = new System.Drawing.Point(112, 557);
             this.lblDefValue6.Name = "lblDefValue6";
-            this.lblDefValue6.Size = new System.Drawing.Size(74, 19);
+            this.lblDefValue6.Size = new System.Drawing.Size(81, 19);
             this.lblDefValue6.TabIndex = 66;
-            this.lblDefValue6.Text = "DEF : 1";
+            this.lblDefValue6.Text = "DEF : 2";
             // 
             // lblAtkValue6
             // 
@@ -980,9 +980,9 @@
             this.lblAtkValue6.ForeColor = System.Drawing.Color.Gold;
             this.lblAtkValue6.Location = new System.Drawing.Point(109, 521);
             this.lblAtkValue6.Name = "lblAtkValue6";
-            this.lblAtkValue6.Size = new System.Drawing.Size(83, 19);
+            this.lblAtkValue6.Size = new System.Drawing.Size(76, 19);
             this.lblAtkValue6.TabIndex = 49;
-            this.lblAtkValue6.Text = "ATK : 2";
+            this.lblAtkValue6.Text = "ATK : 1";
             // 
             // picDefValue6
             // 
