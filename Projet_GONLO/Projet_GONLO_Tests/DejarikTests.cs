@@ -118,7 +118,27 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void SetUpPlayerMonstersTest()
         {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            player1 = new Player();            
+            player1.AttMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
+            player1.DefMonster = new Monster("The Kintan Strider", 1, 3, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Kintan_Strider"), typeMonster.Defensive, 0);
+            player1.MovMonster = new Monster("The K'lor'slug", 2, 1, 3, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("klorslaug"), typeMonster.Mobile, 0);
+            player1.PowMonster = new Monster("The Monnok", 3, 2, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Monnok"), typeMonster.Power, 0);
 
+            //Act
+            dejarikTest.Invoke("setUpPlayersMonster", player1, 16, 17, 18, 19);
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
+
+            //Assert
+            Assert.AreEqual(player1.AttMonster.Position, 16);
+            Assert.AreEqual(player1.DefMonster.Position, 17);
+            Assert.AreEqual(player1.MovMonster.Position, 18);
+            Assert.AreEqual(player1.PowMonster.Position, 19);
+            Assert.AreEqual(player1.AttMonster.Picture, listButtons[16].BackgroundImage);
+            Assert.AreEqual(player1.DefMonster.Picture, listButtons[17].BackgroundImage);
+            Assert.AreEqual(player1.MovMonster.Picture, listButtons[18].BackgroundImage);
+            Assert.AreEqual(player1.PowMonster.Picture, listButtons[19].BackgroundImage);
         }
 
         /// <summary>
@@ -127,16 +147,41 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void SetMonsterImgTest()
         {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            Monster myMonster = new Monster("The Mantellian Savrip", 2, 3, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Mantellian_Savrip"), typeMonster.Power, 12);
 
+            //Act
+            dejarikTest.Invoke("setMonsterImg", myMonster.Position, myMonster.Picture);
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
+
+            //Assert
+            Assert.AreEqual(myMonster.Picture, listButtons[12].BackgroundImage);
         }
 
         /// <summary>
         /// Test if the monster's image and stats are correctly displayed on the right side of the board
         /// </summary>
         [TestMethod]
-        public void SetInfoMonsters()
+        public void SetInfoMonstersTest()
         {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            Monster myMonster = new Monster("The Mantellian Savrip", 2, 3, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Mantellian_Savrip"), typeMonster.Power, 12);
 
+            //Act
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
+            PictureBox p = (PictureBox)dejarikTest.GetField("imgP1MonsterAtk");
+            Label atk = (Label)dejarikTest.GetField("LblAtkMonsterAtk1");
+            Label def = (Label)dejarikTest.GetField("LblDefMonsterAtk1");
+            Label mov = (Label)dejarikTest.GetField("LblMovMonsterAtk1");
+            dejarikTest.Invoke("setInfoMonsters", p, atk,def, mov, myMonster);
+
+            //Assert
+            Assert.AreEqual(myMonster.Picture, p.Image);
+            Assert.AreEqual(myMonster.Attack.ToString(), atk.Text.ToString());
+            Assert.AreEqual(myMonster.Defense.ToString(), def.Text.ToString());
+            Assert.AreEqual(myMonster.Movement.ToString(), mov.Text.ToString());
         }
 
         /// <summary>
@@ -145,7 +190,28 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void ActivateCurrPlayerTest()
         {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            player1 = new Player();
+            player1.AttMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 13);
+            player1.DefMonster = new Monster("The Kintan Strider", 1, 3, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Kintan_Strider"), typeMonster.Defensive, 14);
+            player1.MovMonster = new Monster("The K'lor'slug", 2, 1, 3, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("klorslaug"), typeMonster.Mobile, 19);
+            player1.PowMonster = new Monster("The Monnok", 3, 2, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Monnok"), typeMonster.Power, 25);
+            player1.ListMonsters = new List<Monster> { player1.AttMonster, player1.DefMonster, player1.MovMonster, player1.PowMonster };
+            List<Player> players = new List<Player>();
+            players.Add(player1);
 
+            //Act
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("turn", 0);
+            dejarikTest.Invoke("activateCurrPlayer");
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
+
+            //Assert
+            Assert.IsTrue(listButtons[13].Enabled);
+            Assert.IsTrue(listButtons[14].Enabled);
+            Assert.IsTrue(listButtons[19].Enabled);
+            Assert.IsTrue(listButtons[25].Enabled);
         }
 
         /// <summary>
@@ -163,7 +229,28 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void ActivateColorsTest()
         {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            player1 = new Player();
+            player1.AttMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 13);
+            player1.DefMonster = new Monster("The Kintan Strider", 1, 3, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Kintan_Strider"), typeMonster.Defensive, 14);
+            player1.MovMonster = new Monster("The K'lor'slug", 2, 1, 3, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("klorslaug"), typeMonster.Mobile, 19);
+            player1.PowMonster = new Monster("The Monnok", 3, 2, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Monnok"), typeMonster.Power, 25);
+            player1.ListMonsters = new List<Monster> { player1.AttMonster, player1.DefMonster, player1.MovMonster, player1.PowMonster };
+            List<Player> players = new List<Player>();
+            players.Add(player1);
 
+            //Act
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("turn", 0);
+            dejarikTest.Invoke("activateColors");
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
+
+            //Assert
+            Assert.IsTrue(listButtons[13].BackColor == Color.FromArgb(80, Color.Gold));
+            Assert.IsTrue(listButtons[14].BackColor == Color.FromArgb(80, Color.Gold));
+            Assert.IsTrue(listButtons[19].BackColor == Color.FromArgb(80, Color.Gold));
+            Assert.IsTrue(listButtons[25].BackColor == Color.FromArgb(80, Color.Gold));
         }
 
         /// <summary>
