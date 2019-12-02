@@ -22,9 +22,14 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void InitializeListButtonsTest()
         {
+            //Arrange
             dejarikTest = new PrivateObject(new Dejarik(""));
+
+            //Act
             dejarikTest.Invoke("initalizeListButtons");//call method
             List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");//getObject
+
+            //Assert
             Assert.AreEqual(26, listButtons.Count);
         }
 
@@ -44,8 +49,6 @@ namespace Projet_GONLO_Tests
             players.Add(player1);
 
             //Act
-            dejarikTest.Invoke("initalizeListButtons");
-            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
             dejarikTest.SetField("players", players);
             dejarikTest.SetField("turn", 0);
             
@@ -55,12 +58,37 @@ namespace Projet_GONLO_Tests
 
 
         /// <summary>
-        /// Test if a monster can move to an available position
+        /// Test if monster available moving positions are correct in normal condition
         /// </summary>
         [TestMethod]
-        public void MoveMonsterToAvailablePositionTest()
+        public void MoveAvailablePositionTest()
         {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            List<int> accessibleButtons = new List<int>() {1,3,13,15};
+
+            //Act and assert
+            CollectionAssert.AreEqual(accessibleButtons, (List<int>)dejarikTest.Invoke("getMovAccessibleButtons", 2));
+        }
+
+
+        /// <summary>
+        /// Test if monster available moving positions are correct when the monster has a neighbour
+        /// </summary>
+        [TestMethod]
+        public void MoveToAvailablePositionNeighbourTest()
+        {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
+            listButtons[3].BackgroundImage = (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Mantellian_Savrip");//Place a neighbour at position 3
+            List<int> accessibleButtons = new List<int>() { 1, 13, 15 };
             
+            //Act (Monster at position 3)
+            dejarikTest.SetField("listButtons", listButtons);
+
+            //Assert After
+            CollectionAssert.AreEqual(accessibleButtons, (List<int>)dejarikTest.Invoke("getMovAccessibleButtons", 2));
         }
 
         /// <summary>
@@ -69,7 +97,19 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void MonsterMovementTest()
         {
+            //Arrange
+            Monster myMonster = new Monster("The Mantellian Savrip", 2, 3, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Mantellian_Savrip"), typeMonster.Power, 12);
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            int nextPosition = 25;
 
+            //Act
+            dejarikTest.Invoke("movement", nextPosition, myMonster);
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
+
+            //Assert
+            Assert.AreEqual(null,listButtons[12].BackgroundImage);
+            Assert.AreEqual(myMonster.Position, 25);
+            Assert.AreEqual(myMonster.Picture, listButtons[25].BackgroundImage);
         }
 
         /// <summary>
