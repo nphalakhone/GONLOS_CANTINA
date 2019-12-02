@@ -1013,10 +1013,83 @@ namespace Projet_GONLO
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StreamWriter writer = new StreamWriter("C:\\Users\\1156103\\Documents\\GitHub\\GONLOS_CANTINA\\Projet_GONLO\\Saves\\Saves.txt");
-            string playerData = player1.Name + "," + player1.Species + "," + player1.Gender + "," + player1.PowMonster + "," + player1.AttMonster + "," + player1.DefMonster + "," + player1.MovMonster;
-            writer.Flush();
-            writer.WriteLine(playerData);
+            List<Player> playersSaved = new List<Player>();
+            playersSaved = readSaveFile();
+            StreamWriter sw2 = new StreamWriter(Application.StartupPath + "\\SavesTest.txt");
+
+            foreach (Player p in playersSaved)
+            {
+                if (p.Name == players[0].Name)
+                {
+                    DialogResult dr = MessageBox.Show("Your data already exists in the save file. " +
+                        "Do you wish to overwrite your saved data?", "ATTENTION", MessageBoxButtons.YesNo);
+
+                    switch (dr)
+                    {
+                        case DialogResult.Yes:
+                            setPlayerData(p, players[0]);
+                            writePlayerData(sw2, p);
+                            break;
+                        case DialogResult.No:
+                            break;
+                    }
+                }
+                else
+                {
+                    writePlayerData(sw2, p);
+                }
+            }
+            playersSaved.Add(players[0]);
+            writePlayerData(sw2, players[0]);
+            sw2.Close();
+        }
+
+        private void setPlayerData(Player playerFromFile, Player playerInGame)
+        {
+            playerFromFile.Name = playerInGame.Name;
+            playerFromFile.Gender = playerInGame.Gender;
+            playerFromFile.Species = playerInGame.Species;
+            playerFromFile.Credits = playerInGame.Credits;
+            playerFromFile.PazaakGamesWon = playerInGame.PazaakGamesWon;
+            playerFromFile.PazaakGamesLost = playerInGame.PazaakGamesLost;
+            playerFromFile.DejarikGamesWon = playerInGame.DejarikGamesWon;
+            playerFromFile.DejarikGamesLost = playerInGame.DejarikGamesLost;
+        }
+
+        private void writePlayerData(StreamWriter streamWriter, Player player)
+        {
+            streamWriter.WriteLine(player.Name + ";" + player.Gender + ";" + player.Species + ";" + player.Credits.ToString() + ";" +
+                            player.PazaakGamesWon.ToString() + ";" + player.PazaakGamesLost.ToString() + ";" + player.DejarikGamesWon.ToString() + ";"
+                            + player.DejarikGamesLost.ToString());
+        }
+
+        public List<Player> readSaveFile()
+        {
+            List<Player> playersSaved = new List<Player>();
+            string line = "";
+
+            if (!File.Exists(Application.StartupPath + "\\SavesTest.txt"))
+            {
+                StreamWriter sw = new StreamWriter(Application.StartupPath + "\\SavesTest.txt");
+                sw.Close();
+            }
+            StreamReader sr = new StreamReader(Application.StartupPath + "\\SavesTest.txt");
+            while ((line = sr.ReadLine()) != null)
+            {
+                string[] new_player = line.Split(';');
+                Player player = new Player();
+                player.Name = new_player[0];
+                player.Gender = new_player[1];
+                player.Species = new_player[2];
+                player.Credits = Int32.Parse(new_player[3]);
+                player.PazaakGamesWon = Int32.Parse(new_player[4]);
+                player.PazaakGamesLost = Int32.Parse(new_player[5]);
+                player.DejarikGamesWon = Int32.Parse(new_player[6]);
+                player.DejarikGamesLost = Int32.Parse(new_player[7]);
+                playersSaved.Add(player);
+            }
+            sr.Close();
+            return playersSaved;
         }
 
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1034,12 +1107,18 @@ namespace Projet_GONLO
 
         private void exit()
         {
+
+            Application.Exit();
+            /*
             this.Hide();
             MenuAccueil ma = new MenuAccueil();
             ma.Player1 = player1;
             ma.ShowDialog();
             this.Close();
+            */
         }
+
+       
 
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
