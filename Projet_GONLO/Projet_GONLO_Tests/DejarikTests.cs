@@ -276,5 +276,44 @@ namespace Projet_GONLO_Tests
 
         }
 
+
+        /// <summary>
+        /// Test if the log return the correct test when the attacker win the push
+        /// </summary>
+        [TestMethod]
+        public void PushAttackerWinLogTest()
+        {
+
+        }
+
+
+        /// <summary>
+        /// Test if the log return the correct test when the defender win the push
+        /// </summary>
+        [TestMethod]
+        public void PushDefenderWinLogTest()
+        {
+
+        }
+
+
+        /// <summary>
+        /// Test if the log return the correct test when the attacker win the kill
+        /// </summary>
+        [TestMethod]
+        public void kilattackerWinLogTest()
+        {
+
+        }
+
+
+        /// <summary>
+        /// Test if the log return the correct test when the defender win the kill
+        /// </summary>
+        [TestMethod]
+        public void killDefenderWinLogTest()
+        {
+
+        }
     }
 }
