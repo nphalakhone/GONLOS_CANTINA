@@ -1014,7 +1014,7 @@ namespace Projet_GONLO
             //player 2 is attacker
             else
             {
-                if (winner.Equals("Defender"))
+                if (winner.Equals("Attacker"))
                 {
                     pos = findTagButton(defendingMonster);
                     logTemp = "Round " + newRound + " : Player 2's monster : " + attackingMonster.Name + " pushed Player 1's monster : " + defendingMonster.Name + " to " + pos;

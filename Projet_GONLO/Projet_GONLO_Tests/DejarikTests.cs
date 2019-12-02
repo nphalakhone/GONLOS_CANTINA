@@ -342,6 +342,7 @@ namespace Projet_GONLO_Tests
             player2 = new Player();
             player1.AttMonster = attackingMonster;
             player2.AttMonster = defendingMonster;
+            player2.AttMonster.Position = 14;
             player1.ListMonsters = new List<Monster> { player1.AttMonster };
             player2.ListMonsters = new List<Monster> { player2.AttMonster };
             List<Player> players = new List<Player>();
