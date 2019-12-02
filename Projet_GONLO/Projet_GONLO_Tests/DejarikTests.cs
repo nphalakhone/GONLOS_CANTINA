@@ -321,10 +321,10 @@ namespace Projet_GONLO_Tests
         }
 
         /// <summary>
-        /// Test that when newAtk is greater than newDef by 1 to 3, the defender is pushed by the attacker
+        /// Test that when newAtk is greater than newDef by 1 to 3, the defender is pushed by the attacker (Player 1's turn)
         /// </summary>
         [TestMethod]
-        public void DefendAttPushTest()
+        public void DefendAttPushP1Test()
         {
             //Arrange
             Monster attackingMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
@@ -343,7 +343,7 @@ namespace Projet_GONLO_Tests
 
 
             //Act
-            
+            dejarikTest.Invoke("initalizeListButtons");   
             dejarikTest.SetField("players", players);
             dejarikTest.SetField("attackingMonster", attackingMonster);
             dejarikTest.SetField("defendingMonster", defendingMonster);
@@ -352,6 +352,42 @@ namespace Projet_GONLO_Tests
 
             players = (List<Player>)dejarikTest.GetField("players");
             Assert.AreNotEqual(14, players[1].AttMonster.Position);
+        }
+
+
+        /// <summary>
+        /// Test that when newAtk is greater than newDef by 1 to 3, the defender is pushed by the attacker (PLayer 2's turn)
+        /// </summary>
+        [TestMethod]
+        public void DefendAttPushP2Test()
+        {
+            //Arrange
+            Monster attackingMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
+            Monster defendingMonster = new Monster("The Houjix", 3, 1, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("houjix"), typeMonster.Offensive, 0);
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            player1 = new Player();
+            player2 = new Player();
+            player1.AttMonster = defendingMonster;
+            player2.AttMonster = attackingMonster;
+            player1.AttMonster.Position = 14;
+            player1.ListMonsters = new List<Monster> { player1.AttMonster };
+            player2.ListMonsters = new List<Monster> { player2.AttMonster };
+            List<Player> players = new List<Player>();
+            players.Add(player1);
+            players.Add(player2);
+
+
+            //Act
+            dejarikTest.Invoke("initalizeListButtons");
+            dejarikTest.SetField("turn", 1);
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("attackingMonster", attackingMonster);
+            dejarikTest.SetField("defendingMonster", defendingMonster);
+            dejarikTest.Invoke("defend", 8, 9);
+
+
+            players = (List<Player>)dejarikTest.GetField("players");
+            Assert.AreNotEqual(14, players[0].AttMonster.Position);
         }
 
         /// <summary>
