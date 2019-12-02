@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Projet_GONLO;
 using Projet_GONLO.Classes;
+using System.ComponentModel;
 
 namespace Projet_GONLO_Tests
 {
@@ -11,6 +13,7 @@ namespace Projet_GONLO_Tests
     public class DejarikTest
     {
         private PrivateObject dejarikTest;
+        private Player player1;
 
         /// <summary>
         /// Test if the list of buttons is correclty initalized
@@ -30,8 +33,23 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void ClickedMonsterIsRightMonster()
         {
+            //Arrange
+            Monster myMonster = new Monster("The Mantellian Savrip",2, 3, 2,(Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Mantellian_Savrip"), typeMonster.Power, 12);
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            player1 = new Player();
+            player1.DefMonster = myMonster;
+            player1.ListMonsters = new List<Monster> {player1.DefMonster};
+            List<Player> players = new List<Player>();
+            players.Add(player1);
 
-
+            //Act
+            dejarikTest.Invoke("initalizeListButtons");
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("turn", 0);
+            
+            //Assert
+            Assert.AreEqual(myMonster, dejarikTest.Invoke("getClickMonster", 12));
         }
 
 
