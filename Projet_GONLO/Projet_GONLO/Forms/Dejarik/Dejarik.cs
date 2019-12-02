@@ -16,7 +16,7 @@ namespace Projet_GONLO
         Player player2 = new Player();
         Player otherPlayer;
         List<Player> players = new List<Player>();
-        int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2, newRound = 1, roll = 0, newAtk = 0, tmpAtk = 0, tmpDef = 0, checkAtk = 0;
+        int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2, newRound = 1, roll = 0, newAtk = 0, tmpAtk = 0, tmpDef = 0, checkAtk = 0, adjacentMonsters = 0;
         List<String> logMonster;
         Monster lastMonster;
         Monster defendingMonster = null, attackingMonster = null;
@@ -671,7 +671,7 @@ namespace Projet_GONLO
 
             if (accessibleButtons.Count == 0)
             {
-                if (counterMov < players[turn].CurrMonster.Movement && counterMov > 0)
+                if (counterMov < players[turn].CurrMonster.Movement && counterMov > 0 || adjacentMonsters >= 3)
                 {
                     counterMov = players[turn].CurrMonster.Movement;
                     endAction();
@@ -724,11 +724,16 @@ namespace Projet_GONLO
         private List<int> getMovAccessibleButtons(int currPosition)
         {
             List<int> accessibleButtons = new List<int>();
+            adjacentMonsters = 0;
             for (int j = 0; j < Tile.ListTiles[currPosition].ListMovement.Count; j++)
             {
                 if (listButtons[Tile.ListTiles[currPosition].ListMovement[j].Number].BackgroundImage == null)
                 {
                     accessibleButtons.Add(Tile.ListTiles[currPosition].ListMovement[j].Number);
+                }
+                else if(listButtons[Tile.ListTiles[currPosition].ListMovement[j].Number].BackColor == Color.FromArgb(80, Color.Gold))
+                {
+                    adjacentMonsters++;
                 }
             }
 
