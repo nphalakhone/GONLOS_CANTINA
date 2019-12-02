@@ -54,6 +54,7 @@
     <Compile Include="PazaakCardSelectorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DejarikTests.cs" />
+    <Compile Include="PazaakTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

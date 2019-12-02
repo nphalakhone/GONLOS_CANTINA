@@ -51,12 +51,12 @@ namespace Projet_GONLO
             this.carteIntEnvoye = TabToList(carteIntEnvoye);
             playerPazaak = new Player();
             InitializeComponent();
-            setupPlayerdeck();
-            setupAiDeck();
-            setupBoard();
+            SetupPlayerdeck();
+            SetupAiDeck();
+            SetupBoard();
         }
 
-        private void setupAiDeck()
+        private void SetupAiDeck()
         {
             Panel[] TabPnlAiDeck = new Panel[]
            {
@@ -86,7 +86,7 @@ namespace Projet_GONLO
         public bool RoundOver1 { get => RoundOver; set => RoundOver = value; }
 
 
-        private void setupBoard()
+        private void SetupBoard()
         {
             TabPanelLeft = new Panel[]
             {
@@ -114,9 +114,9 @@ namespace Projet_GONLO
 
         }
 
-        private void setupPlayerdeck()
+        private void SetupPlayerdeck()
         {
-            selectCardsForDeck();
+            SelectCardsForDeck();
 
             panelPlayerDeck = new Panel[]
             {
@@ -141,7 +141,7 @@ namespace Projet_GONLO
             }
         }
 
-        private void selectCardsForDeck()
+        private void SelectCardsForDeck()
         {
             int tailleListe = playerDeckPazaak.Count;
 
@@ -163,10 +163,10 @@ namespace Projet_GONLO
                 tailleListe--;
                 nombreCarteSelectionne++;
             }
-            for (int i = 0; i < 4; i++)
-            {
-                MessageBox.Show((ListIntSelectionne[i] + 1).ToString());
-            }
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    MessageBox.Show((ListIntSelectionne[i] + 1).ToString());
+            //}
         }
 
         private void End_Turn_Click(object sender, EventArgs e)
