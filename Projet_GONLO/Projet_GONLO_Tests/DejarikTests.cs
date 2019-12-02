@@ -516,9 +516,28 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void MonsterRollNewDef()
         {
+            //Arrange
+            Monster attackingMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
+            Monster defendingMonster = new Monster("The Houjix", 3, 1, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("houjix"), typeMonster.Offensive, 0);
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            player1 = new Player();
+            player2 = new Player();
+            player1.AttMonster = defendingMonster;
+            player2.AttMonster = attackingMonster;
+            player1.ListMonsters = new List<Monster> { player1.AttMonster };
+            player2.ListMonsters = new List<Monster> { player2.AttMonster };
+            List<Player> players = new List<Player>();
+            players.Add(player1);
+            players.Add(player2);
 
+            //Act
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("attackingMonster", attackingMonster);
+            dejarikTest.SetField("defendingMonster", defendingMonster);
+            dejarikTest.Invoke("defend", 5, 1);
+
+            Assert.AreEqual(6, (int)dejarikTest.GetField("newDef"));
         }
-
 
         /// <summary>
         /// Test if the attack monster is the one that the player clicked
@@ -526,7 +545,25 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void VerifyAttackMonster()
         {
+            //Arrange
+            Monster attackingMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
+            Monster randomMonster = new Monster("The Kintan Strider", 1, 3, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Kintan_Strider"), typeMonster.Defensive, 14);
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            player1 = new Player();
+            player1.DefMonster = randomMonster;
+            player1.AttMonster = attackingMonster;
+            player1.AttMonster.Position = 14;
+            player1.DefMonster.Position = 15;
+            player1.ListMonsters = new List<Monster> { player1.AttMonster, player1.DefMonster };
+            List<Player> players = new List<Player>();
+            players.Add(player1);
 
+            //Act
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("turn", 0);
+            dejarikTest.Invoke("findAtkMonster", players[(int)dejarikTest.GetField("turn")].ListMonsters[0].Position);
+
+            Assert.AreEqual(players[(int)dejarikTest.GetField("turn")].ListMonsters[0], (Monster)dejarikTest.GetField("attackingMonster"));
         }
 
         /// <summary>
@@ -535,7 +572,7 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void VerifyDefenseMonster()
         {
-
+            
         }
 
         /// <summary>
@@ -572,7 +609,7 @@ namespace Projet_GONLO_Tests
         /// Test if the log return the correct test when the attacker win the kill
         /// </summary>
         [TestMethod]
-        public void kilattackerWinLogTest()
+        public void killattackerWinLogTest()
         {
 
         }

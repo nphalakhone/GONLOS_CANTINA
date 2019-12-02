@@ -16,7 +16,7 @@ namespace Projet_GONLO
         Player player2 = new Player();
         Player otherPlayer;
         List<Player> players = new List<Player>();
-        int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2, newRound = 1, roll = 0, newAtk = 0, tmpAtk = 0, tmpDef = 0, checkAtk = 0;
+        int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2, newRound = 1, roll = 0, newAtk = 0, newDef = 0, tmpAtk = 0, tmpDef = 0, checkAtk = 0;
         List<String> logMonster;
         Monster lastMonster;
         Monster defendingMonster = null, attackingMonster = null;
@@ -792,7 +792,7 @@ namespace Projet_GONLO
 
         private void defend(int dice, int newAtk)
         {
-            int newDef = defendingMonster.Defense;
+            newDef = defendingMonster.Defense;
             newDef += dice;
             LblDefMonsterName.Text = defendingMonster.Name;
             LblNewDefenseValue.Text = ": " + newDef;
