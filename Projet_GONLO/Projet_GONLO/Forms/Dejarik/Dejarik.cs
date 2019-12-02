@@ -25,10 +25,6 @@ namespace Projet_GONLO
         internal Player Player1 { get => player1; set => player1 = value; }
         internal Player Player2 { get => player2; set => player2 = value; }
 
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="monster"></param>
         public Dejarik(String monster)
         {
             this.DoubleBuffered = true;
@@ -39,10 +35,7 @@ namespace Projet_GONLO
             addLogMonster(monster);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="monster"></param>
+
         private void addLogMonster(string monster)
         {
             logMonster = monster.Split('-').ToList();
@@ -55,9 +48,6 @@ namespace Projet_GONLO
             }
         }
 
-        /// <summary>
-        /// Initialize the positions and labels of players' monsters
-        /// </summary>
         private void initializeMonsterPosition()
         {
             //Setting the position of each monster on player 1 side
@@ -79,14 +69,6 @@ namespace Projet_GONLO
             setInfoMonsters(imgP2MonsterPow, LblAtkMonsterPow2, LblDefMonsterPow2, LblMovMonsterPow2, player2.PowMonster);
         }
 
-        /// <summary>
-        /// Set up the positions of monsters and put the monsters on the board
-        /// </summary>
-        /// <param name="p"></param>
-        /// <param name="posAtk"></param>
-        /// <param name="posDef"></param>
-        /// <param name="posMov"></param>
-        /// <param name="posPow"></param>
         private void setUpPlayersMonster(Player p, int posAtk, int posDef, int posMov, int posPow)
         {
             p.AttMonster.Position = posAtk;
@@ -102,7 +84,7 @@ namespace Projet_GONLO
 
 
         /// <summary>
-        /// Set the monster image at the correct position on board (on the correct button)
+        /// 
         /// </summary>
         /// <param name="x"></param>
         /// <param name="img"></param>
@@ -120,9 +102,6 @@ namespace Projet_GONLO
             }
         }
 
-        /// <summary>
-        /// Initialization of the list of 25 buttons (buttons of the game board)
-        /// </summary>
         private void initalizeListButtons()
         {
             listButtons = new List<Button>();
@@ -161,12 +140,6 @@ namespace Projet_GONLO
 
         }
 
-        /// <summary>
-        /// Main method of when the player click on a button on the map
-        /// Everything is verified in this method (first click, movement, attack, etc)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void btn_Click(object sender, EventArgs e)
         {
             int currPosition = Int32.Parse(((Button)sender).Name.ToString().Substring(6));
@@ -200,9 +173,6 @@ namespace Projet_GONLO
             }
         }
 
-        /// <summary>
-        /// End the action of the current monster (in each turn the player has 2 actions)
-        /// </summary>
         private void endAction()
         {
             if (counterMov == players[turn].CurrMonster.Movement)
@@ -228,10 +198,6 @@ namespace Projet_GONLO
 
         }
 
-        /// <summary>
-        /// End the game if one player monsters are all dead
-        /// After 25 rounds, the game stops and check which player has the most monsters
-        /// </summary>
         private void endGame()
         {
             if (newRound == 25)
@@ -245,12 +211,6 @@ namespace Projet_GONLO
                 else if (players[1].ListMonsters.Count > players[0].ListMonsters.Count)
                 {
                     MessageBox.Show("Player 2 is the winner of the game !");
-                    disableButtonsWithTransparent();
-                    exit();
-                }
-                else if (players[1].ListMonsters.Count == players[0].ListMonsters.Count)
-                {
-                    MessageBox.Show("Equality!");
                     disableButtonsWithTransparent();
                     exit();
                 }
@@ -273,11 +233,6 @@ namespace Projet_GONLO
 
         }
 
-        /// <summary>
-        /// Check which action the player has decided to do
-        /// If the color is Lime, it means that he chose to move, Red, he chose to attack
-        /// </summary>
-        /// <param name="currPosition"></param>
         private void actionPicker(int currPosition)
         {
             //Movement
@@ -290,7 +245,7 @@ namespace Projet_GONLO
             //Attack
             else if (listButtons[currPosition].BackColor == Color.FromArgb(70, Color.Red))
             {
-                setDefMonster(currPosition);
+                getDefMonster(currPosition);
                 clickAtkMonster(currPosition);
                 counterMov = players[turn].CurrMonster.Movement;
                 checkAtk = 1;
@@ -298,14 +253,10 @@ namespace Projet_GONLO
 
             else
             {
-                setAtkMonster(currPosition);
+                findAtkMonster(currPosition);
             }
         }
 
-        /// <summary>
-        /// Event on the first click, when the player chooses the monster with which he will play
-        /// </summary>
-        /// <param name="currPosition"></param>
         private void onFirstClick(int currPosition)
         {
             oldPosition = currPosition;
@@ -313,15 +264,15 @@ namespace Projet_GONLO
             disableButtonsWithTransparent();
             activateMovButtons(players[turn].CurrMonster.Position);
             activateAttackButtons(players[turn].CurrMonster.Position);
-            setAtkMonster(currPosition);
+            findAtkMonster(currPosition);
         }
 
 
         /// <summary>
-        /// Find the current attacking monster
+        /// 
         /// </summary>
         /// <param name="currPosition"></param>
-        private void setAtkMonster(int currPosition)
+        private void findAtkMonster(int currPosition)
         {
             for (int i = 0; i < players[turn].ListMonsters.Count; i++)
             {
@@ -334,10 +285,10 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Find the 
+        /// 
         /// </summary>
         /// <param name="currPosition"></param>
-        private void setDefMonster(int currPosition)
+        private void getDefMonster(int currPosition)
         {
             Player tmp = null;
             if (turn == 0)
