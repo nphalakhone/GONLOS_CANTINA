@@ -247,6 +247,7 @@ namespace Projet_GONLO_Tests
             player2 = new Player();
             player1.AttMonster = attackingMonster;
             player2.AttMonster = defendingMonster;
+            player2.AttMonster.Position = 14;
             player1.ListMonsters = new List<Monster> { player1.AttMonster };
             player2.ListMonsters = new List<Monster> { player2.AttMonster };
             List<Player> players = new List<Player>();
@@ -255,14 +256,15 @@ namespace Projet_GONLO_Tests
 
 
             //Act
+            
             dejarikTest.SetField("players", players);
             dejarikTest.SetField("attackingMonster", attackingMonster);
             dejarikTest.SetField("defendingMonster", defendingMonster);
             dejarikTest.Invoke("defend", 8, 9);
 
-            players = (List<Player>)dejarikTest.GetField("players");
 
-            Assert.AreEqual(0, players[1].ListMonsters.Count);
+            players = (List<Player>)dejarikTest.GetField("players");
+            Assert.AreNotEqual(14, players[1].AttMonster.Position);
         }
 
         /// <summary>
