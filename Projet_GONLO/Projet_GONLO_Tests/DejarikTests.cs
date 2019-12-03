@@ -527,9 +527,37 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void EndActionWhenMonsterFinishMovementTest()
         {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            Monster myMonster = new Monster("The Ghhhk", 3, 2, 4, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 21);
+            int actions = 2, movement = 2, oldPosition = 20, turn = 0;
+            player1 = new Player();
+            player2 = new Player();
+            player1.CurrMonster = myMonster;
+            player2.AttMonster = myMonster;
+            List<Player> players = new List<Player>();
+            players.Add(player1);
+            players.Add(player2);
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
 
+            //Place monsters around the position 21 on the board (2 monsters)
+            listButtons[8].BackgroundImage = (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Mantellian_Savrip");
+            listButtons[22].BackgroundImage = (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk");
+
+            //Act (Monster at position 3)
+            dejarikTest.SetField("listButtons", listButtons);
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("actions", actions);
+            dejarikTest.SetField("counterMov", movement);
+            dejarikTest.SetField("oldPosition", oldPosition);
+            dejarikTest.SetField("turn", turn);
+            dejarikTest.SetField("lastMonster", myMonster);
+            dejarikTest.Invoke("activateMovButtons", myMonster.Position);
+
+            //Assert
+            Assert.AreEqual(actions - 1, dejarikTest.GetField("actions"));
+            Assert.AreEqual(0, dejarikTest.GetField("counterMov"));
         }
-
 
 
         /// <summary>
@@ -537,16 +565,6 @@ namespace Projet_GONLO_Tests
         /// </summary>
         [TestMethod]
         public void MonsterMoveLogTest()
-        {
-
-        }
-
-
-        /// <summary>
-        /// Test if the monster has the right atk after rolling the dice
-        /// </summary>
-        [TestMethod]
-        public void MonsterRollNewAtk()
         {
 
         }
