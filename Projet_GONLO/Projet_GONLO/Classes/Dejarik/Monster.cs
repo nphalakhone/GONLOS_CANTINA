@@ -13,22 +13,17 @@ namespace Projet_GONLO
     public class Monster
     {
 
+
         // Instance Variables 
         private string name;
-        private int attack, defense, movement, position;
+        private int attack;
+        private int defense;
+        private int movement;
+        private int position;
         private Image picture;
         private typeMonster type;
 
-        /// <summary>
-        /// Default constructor
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="attack"></param>
-        /// <param name="defense"></param>
-        /// <param name="movement"></param>
-        /// <param name="picture"></param>
-        /// <param name="type"></param>
-        /// <param name="position"></param>
+        // Constructor Declaration of Class 
         public Monster(string name, int attack,
                       int defense, int movement, Image picture, typeMonster type, int position)
         {
@@ -41,17 +36,11 @@ namespace Projet_GONLO
             this.position = position;
         }
 
-        /// <summary>
-        /// Empty constructor
-        /// </summary>
         public Monster()
         {
 
         }
 
-        /// <summary>
-        /// Getters and setters for each variable
-        /// </summary>
         public string Name { get => name; set => name = value; }
         public int Attack { get => attack; set => attack = value; }
         public int Defense { get => defense; set => defense = value; }

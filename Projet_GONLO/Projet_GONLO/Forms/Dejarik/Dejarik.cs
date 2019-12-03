@@ -9,24 +9,29 @@ using System.Windows.Forms;
 
 namespace Projet_GONLO
 {
-    /// <summary>
-    /// Main dejarik class
-    /// </summary>
     public partial class Dejarik : Form
     {
-        /// <summary>
-        /// Global variables
-        /// </summary>
         List<Button> listButtons;
-        Player player1 = new Player(), player2 = new Player(), otherPlayer;
+        Player player1 = new Player();
+        Player player2 = new Player();
+        Player otherPlayer;
         List<Player> players = new List<Player>();
         int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2, newRound = 1, roll = 0, newAtk = 0, newDef = 0, tmpAtk = 0, tmpDef = 0, checkAtk = 0, adjacentMonsters = 0;
         List<String> logMonster;
+<<<<<<< HEAD
         Monster lastMonster, defendingMonster = null, attackingMonster = null;
         internal Player Player1, Player2;
+=======
+        Monster lastMonster;
+        Monster defendingMonster = null, attackingMonster = null;
+
+
+        internal Player Player1 { get => player1; set => player1 = value; }
+        internal Player Player2 { get => player2; set => player2 = value; }
+>>>>>>> 194ce8252da39d4aca1e61617b212f9fc68dd4e7
 
         /// <summary>
-        /// Default constructor
+        /// Constructor
         /// </summary>
         /// <param name="monster"></param>
         public Dejarik(String monster)
@@ -100,6 +105,7 @@ namespace Projet_GONLO
             setMonsterImg(p.PowMonster.Position, p.PowMonster.Picture);
         }
 
+
         /// <summary>
         /// Set the monster image at the correct position on board (on the correct button)
         /// </summary>
@@ -162,27 +168,28 @@ namespace Projet_GONLO
 
         /// <summary>
         /// Main method of when the player click on a button on the map
-        /// Everything is verified in this method (first click, movement, addAttackDice, etc)
+        /// Everything is verified in this method (first click, movement, attack, etc)
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btn_Click(object sender, EventArgs e)
         {
             int currPosition = Int32.Parse(((Button)sender).Name.ToString().Substring(6));
+
             players[turn].CurrMonster = getClickMonster(currPosition);
             lastMonster = players[turn].CurrMonster;
             setCounterMov(players[turn].CurrMonster);
 
-            //first click
+            //FIRST CLICK
             if (firstClick == 0)
             {
                 onFirstClick(currPosition);
             }
 
-            //other clicks
+            //after first click
             else if (firstClick > 0)
             {
-                //check if it's an addAttackDice or a movement
+                //Pick Atk or Mov
                 actionPicker(currPosition);
 
                 disableButtonsWithTransparent();
@@ -193,6 +200,7 @@ namespace Projet_GONLO
                 }
 
                 oldPosition = currPosition;
+
                 endAction();
             }
         }
@@ -272,7 +280,7 @@ namespace Projet_GONLO
 
         /// <summary>
         /// Check which action the player has decided to do
-        /// If the color is Lime, it means that he chose to move, Red, he chose to addAttackDice
+        /// If the color is Lime, it means that he chose to move, Red, he chose to attack
         /// </summary>
         /// <param name="currPosition"></param>
         private void actionPicker(int currPosition)
@@ -331,7 +339,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Find the current defending monster
+        /// Find the 
         /// </summary>
         /// <param name="currPosition"></param>
         private void setDefMonster(int currPosition)
@@ -357,7 +365,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// The player clicked on the monster who will be attacked
+        /// 
         /// </summary>
         /// <param name="currPosition"></param>
         private void clickAtkMonster(int currPosition)
@@ -370,10 +378,11 @@ namespace Projet_GONLO
                     rollDice();
                 }
             }
+
         }
 
         /// <summary>
-        /// Method that rolls the dice and update the image of the dice
+        /// Method that roll the dice
         /// </summary>
         private void rollDice()
         {
@@ -413,10 +422,6 @@ namespace Projet_GONLO
             }
         }
 
-        /// <summary>
-        /// Set the image of the panel dice 
-        /// </summary>
-        /// <param name="diceImg"></param>
         private void setDiceImg(Bitmap diceImg)
         {
             if (roll == 0)
@@ -429,16 +434,11 @@ namespace Projet_GONLO
             }
         }
 
-        /// <summary>
-        /// Update the value of addAttackDice and defense before playing the addAttackDice
-        /// Add the dice value to the stats of the concerned monsters
-        /// </summary>
-        /// <param name="dice"></param>
         private void giveNewAtkDefValue(int dice)
         {
             if (roll == 0)
             {
-                newAtk = addAttackDice(players[turn].CurrMonster, dice);
+                newAtk = attack(players[turn].CurrMonster, dice);
                 addLogRollDice(dice, attackingMonster);
                 roll++;
                 rollDice();
@@ -446,16 +446,11 @@ namespace Projet_GONLO
             else
             {
                 addLogRollDice(dice, defendingMonster);
-                addDefenseDice(dice, newAtk);
+                defend(dice, newAtk);
                 roll = 0;
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="dice"></param>
-        /// <param name="monster"></param>
         private void addLogRollDice(int dice, Monster monster)
         {
             if (turn == 0)
@@ -486,12 +481,12 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Add the dice value to the attack value of the monster
+        /// 
         /// </summary>
         /// <param name="monster"></param>
         /// <param name="diceValueAtk"></param>
         /// <returns></returns>
-        private int addAttackDice(Monster monster, int diceValueAtk)
+        private int attack(Monster monster, int diceValueAtk)
         {
             int newValueAtk = monster.Attack;
             newValueAtk += diceValueAtk;
@@ -501,7 +496,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// The player clicked on the tile where he will move
+        /// 
         /// </summary>
         /// <param name="currPosition"></param>
         private void clickMovMonster(int currPosition)
@@ -516,7 +511,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Monster movement method, change position of the monster and on the board
+        /// 
         /// </summary>
         /// <param name="nextPosition"></param>
         /// <param name="monster"></param>
@@ -530,7 +525,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Set the label counterMov (number of movement remaining of the current monster in movement)
+        /// 
         /// </summary>
         /// <param name="monster"></param>
         private void setCounterMov(Monster monster)
@@ -540,7 +535,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// End the turn of a player, when he completed his 2 actions
+        /// Finir le tour d'un joueur
         /// </summary>
         private void endTurn()
         {
@@ -588,11 +583,6 @@ namespace Projet_GONLO
 
         }
 
-        /// <summary>
-        /// Find the correct tag according to the monster position button (for the log)
-        /// </summary>
-        /// <param name="monster"></param>
-        /// <returns></returns>
         private String findTagButton(Monster monster)
         {
             String pos = "";
@@ -607,7 +597,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Method that create an alert to notify that the turn has changed
+        /// Method that create an alert to notify that the turn have changed
         /// </summary>
         private void alertChangePlayer()
         {
@@ -625,7 +615,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Update the main label of the player turn
+        /// 
         /// </summary>
         private void changeLabel()
         {
@@ -643,7 +633,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Disable all buttons with transparent before enabling them (end of turn)
+        /// Disable all buttons before enabling them
         /// </summary>
         private void disableButtonsWithTransparent()
         {
@@ -656,9 +646,6 @@ namespace Projet_GONLO
             activateColors();
         }
 
-        /// <summary>
-        /// Disable all buttons before enabling them
-        /// </summary>
         private void disableAllButtons()
         {
             for (int i = 0; i < listButtons.Count; i++)
@@ -671,8 +658,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Activate available positions (in Lime Green) according to the current position of the monster
-        /// Checks if the monster can move, if he can't the action is ended
+        /// 
         /// </summary>
         /// <param name="currPosition"></param>
         private void activateMovButtons(int currPosition)
@@ -713,7 +699,7 @@ namespace Projet_GONLO
 
 
         /// <summary>
-        /// Activate available monsters to addAttackDice (in red)
+        /// 
         /// </summary>
         /// <param name="currPosition"></param>
         private void activateAttackButtons(int currPosition)
@@ -725,7 +711,7 @@ namespace Projet_GONLO
             }
 
 
-            //Activate accessible buttons for addAttackDice
+            //Activate accessible buttons for attack
             for (int i = 0; i < accessibleButtons.Count; i++)
             {
                 ////Attack
@@ -735,14 +721,11 @@ namespace Projet_GONLO
                     listButtons[accessibleButtons[i]].Enabled = true;
                 }
             }
+
+
+
         }
 
-        /// <summary>
-        /// Return the accessible buttons for movement according to the position
-        /// If there is a monster on an position, the position is no longer available
-        /// </summary>
-        /// <param name="currPosition"></param>
-        /// <returns></returns>
         private List<int> getMovAccessibleButtons(int currPosition)
         {
             List<int> accessibleButtons = new List<int>();
@@ -762,8 +745,9 @@ namespace Projet_GONLO
             return accessibleButtons;
         }
 
+
         /// <summary>
-        /// Check if an addAttackDice is possible
+        /// 
         /// </summary>
         /// <param name="accessible"></param>
         /// <returns></returns>
@@ -791,7 +775,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Return the monster of where the player clicked
+        /// Get the monster of where the player clicked
         /// </summary>
         /// <param name="currPosition"></param>
         /// <returns></returns>
@@ -809,8 +793,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Dejarik load, intialize the monster positions and the different players monsters
-        /// Activate the current player monsters
+        /// 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -822,10 +805,12 @@ namespace Projet_GONLO
             players.Add(player1);
             players.Add(player2);
             activateCurrPlayer();
-        }       
+        }
+
+        
 
         /// <summary>
-        /// Update the stats and picture of each monster on the right panel
+        /// 
         /// </summary>
         /// <param name="imgMonster"></param>
         /// <param name="lblAtk"></param>
@@ -842,7 +827,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Activate current player monsters (enabled)
+        /// Activate current player monsters.
         /// </summary>
         private void activateCurrPlayer()
         {
@@ -856,9 +841,6 @@ namespace Projet_GONLO
             activateColors();
         }
 
-        /// <summary>
-        /// Add Gold color on current player monsters
-        /// </summary>
         private void activateColors()
         {
             for (int j = 0; j < players[turn].ListMonsters.Count; j++)
@@ -867,12 +849,9 @@ namespace Projet_GONLO
             }
         }
 
-        /// <summary>
-        /// Add the dice value to the defense value of the monster
-        /// </summary>
-        /// <param name="dice"></param>
-        /// <param name="newAtk"></param>
-        private void addDefenseDice(int dice, int newAtk)
+
+
+        private void defend(int dice, int newAtk)
         {
             newDef = defendingMonster.Defense;
             newDef += dice;
@@ -902,10 +881,6 @@ namespace Projet_GONLO
 
         }
 
-        /// <summary>
-        /// Call the pushMonster method according to the winner
-        /// </summary>
-        /// <param name="winner"></param>
         private void push(String winner)
         {
             setAtkDef();
@@ -923,13 +898,6 @@ namespace Projet_GONLO
 
         }
 
-        /// <summary>
-        /// Push the monster to another tile, change his position of the monster and on the board
-        /// If the monster has nowhere to be pushed, he dies
-        /// </summary>
-        /// <param name="tmpVal"></param>
-        /// <param name="monsterInvolved"></param>
-        /// <param name="winner"></param>
         private void pushMonster(int tmpVal, Monster monsterInvolved, String winner)
         {
             for (int i = 0; i < players[tmpVal].ListMonsters.Count; i++)
@@ -988,10 +956,6 @@ namespace Projet_GONLO
             }
         }
 
-        /// <summary>
-        /// Call the killMonster method according to the winner
-        /// </summary>
-        /// <param name="winner"></param>
         private void kill(String winner)
         {
             setAtkDef();
@@ -1006,9 +970,6 @@ namespace Projet_GONLO
             }
         }
 
-        /// <summary>
-        /// Determine who is the current attacker player and defender player
-        /// </summary>
         private void setAtkDef()
         {
             if (turn == 0)
@@ -1023,11 +984,6 @@ namespace Projet_GONLO
             }
         }
 
-        /// <summary>
-        /// Kills the monster, removed from the list and from the board
-        /// </summary>
-        /// <param name="tmpVal"></param>
-        /// <param name="monsterInvolved"></param>
         private void killMonster(int tmpVal, Monster monsterInvolved)
         {
             for (int i = 0; i < players[tmpVal].ListMonsters.Count; i++)
@@ -1048,11 +1004,7 @@ namespace Projet_GONLO
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="winner"></param>
-        /// <param name="tmpAtk"></param>
+        
         private void addLogPush(string winner, int tmpAtk)
         {
             string pos = "";
@@ -1088,11 +1040,7 @@ namespace Projet_GONLO
             ListBoxLog.Items.Add(logTemp);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="winner"></param>
-        /// <param name="tmpAtk"></param>
+
         private void addLogKill(string winner, int tmpAtk)
         {
             String logTemp = "";
@@ -1122,11 +1070,7 @@ namespace Projet_GONLO
             ListBoxLog.Items.Add(logTemp);
         }
 
-        /// <summary>
-        /// Save game
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StreamWriter writer = new StreamWriter("C:\\Users\\1156103\\Documents\\GitHub\\GONLOS_CANTINA\\Projet_GONLO\\Saves\\Saves.txt");
@@ -1135,11 +1079,6 @@ namespace Projet_GONLO
             writer.WriteLine(playerData);
         }
 
-        /// <summary>
-        /// Restart dejarik board game
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -1148,19 +1087,11 @@ namespace Projet_GONLO
             this.Close();
         }
 
-        /// <summary>
-        /// Exit on the menu 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        /// <summary>
-        /// Exits and return to main menu
-        /// </summary>
         private void exitMainMenu()
         {
             player1.DejarikGamesLost++;
@@ -1176,11 +1107,6 @@ namespace Projet_GONLO
             exitMainMenu();
         }
 
-        /// <summary>
-        /// Opens pdf file with the rules and informations of Dejarik Board Game
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("Dejarik_Holochess_Rules.pdf");
