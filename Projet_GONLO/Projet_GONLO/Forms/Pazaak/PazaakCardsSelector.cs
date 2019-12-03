@@ -214,7 +214,7 @@ namespace Projet_GONLO
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MenuAccueil menu = new MenuAccueil();
+            MainForm menu = new MainForm();
             menu.Player1 = playerCBS;
             menu.ShowDialog();
             this.Close();

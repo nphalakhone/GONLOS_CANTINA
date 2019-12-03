@@ -13,15 +13,24 @@ namespace Projet_GONLO
 {
     public partial class LoadForm : Form
     {
+        //Global variables
         StreamWriter sw = new StreamWriter(Application.StartupPath + "\\SavesTest.txt");
         Player playerSelected = new Player();
         List<Player> playersSaved = new List<Player>();
 
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public LoadForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This click event method closes the Load form and opens the Start form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnEllBack_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -30,6 +39,12 @@ namespace Projet_GONLO
             this.Close();
         }
 
+        /// <summary>
+        /// This click event method closes the Load form and opens the Main form 
+        /// if the save file and the user's player name are existing
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnEllLoad_Click(object sender, EventArgs e)
         {
             string line = "";
@@ -75,7 +90,7 @@ namespace Projet_GONLO
                     playerSelected.DejarikGamesWon = p.DejarikGamesWon;
                     playerSelected.DejarikGamesLost = p.DejarikGamesLost;
                     this.Hide();
-                    MenuAccueil menu = new MenuAccueil();
+                    MainForm menu = new MainForm();
                     menu.Player1 = playerSelected;
                     menu.ShowDialog();
                     this.Close();
@@ -87,16 +102,31 @@ namespace Projet_GONLO
             }
         }
 
+        /// <summary>
+        /// This method sets the default form when it loads
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoadForm_Load(object sender, EventArgs e)
         {
             BtnEllLoad.Enabled = false;
         }
 
+        /// <summary>
+        /// This onkey event method enables the load button when the user writes down a name
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TBoxName_TextChanged(object sender, EventArgs e)
         {
             BtnEllLoad.Enabled = true;
         }
 
+        /// <summary>
+        /// This click event method delete a save game that the user has written down
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnEllDelete_Click(object sender, EventArgs e)
         {
             int temp = 0;

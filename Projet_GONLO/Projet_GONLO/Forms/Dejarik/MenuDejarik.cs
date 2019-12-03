@@ -344,7 +344,7 @@ namespace Projet_GONLO
         {
             sound.Stop();
             Hide();
-            MenuAccueil menu = new MenuAccueil();
+            MainForm menu = new MainForm();
             menu.Player1 = player1;
             menu.ShowDialog();
             this.Close();

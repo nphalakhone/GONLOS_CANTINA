@@ -1164,7 +1164,7 @@ namespace Projet_GONLO
         {
             player1.DejarikGamesLost++;
             this.Hide();
-            MenuAccueil newMenuAccueil = new MenuAccueil();
+            MainForm newMenuAccueil = new MainForm();
             newMenuAccueil.Player1 = player1;
             newMenuAccueil.ShowDialog();
             this.Close();
