@@ -33,6 +33,7 @@
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnToMainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -140,7 +141,6 @@
             this.Button23 = new Projet_GONLO.ButtonCircle();
             this.Button24 = new Projet_GONLO.ButtonCircle();
             this.Button25 = new Projet_GONLO.ButtonCircle();
-            this.returnToMainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).BeginInit();
@@ -227,6 +227,17 @@
             this.restartToolStripMenuItem.Size = new System.Drawing.Size(283, 22);
             this.restartToolStripMenuItem.Text = "Restart";
             this.restartToolStripMenuItem.Click += new System.EventHandler(this.RestartToolStripMenuItem_Click);
+            // 
+            // returnToMainMenuToolStripMenuItem
+            // 
+            this.returnToMainMenuToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.returnToMainMenuToolStripMenuItem.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
+            this.returnToMainMenuToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.returnToMainMenuToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.returnToMainMenuToolStripMenuItem.Name = "returnToMainMenuToolStripMenuItem";
+            this.returnToMainMenuToolStripMenuItem.Size = new System.Drawing.Size(283, 22);
+            this.returnToMainMenuToolStripMenuItem.Text = "Return to Main Menu";
+            this.returnToMainMenuToolStripMenuItem.Click += new System.EventHandler(this.returnToMainMenuToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -1519,17 +1530,6 @@
             this.Button25.Tag = "A10";
             this.Button25.UseVisualStyleBackColor = false;
             // 
-            // returnToMainMenuToolStripMenuItem
-            // 
-            this.returnToMainMenuToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
-            this.returnToMainMenuToolStripMenuItem.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
-            this.returnToMainMenuToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.returnToMainMenuToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.returnToMainMenuToolStripMenuItem.Name = "returnToMainMenuToolStripMenuItem";
-            this.returnToMainMenuToolStripMenuItem.Size = new System.Drawing.Size(283, 22);
-            this.returnToMainMenuToolStripMenuItem.Text = "Return to Main Menu";
-            this.returnToMainMenuToolStripMenuItem.Click += new System.EventHandler(this.returnToMainMenuToolStripMenuItem_Click);
-            // 
             // Dejarik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1564,6 +1564,7 @@
             this.Controls.Add(this.Button25);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Dejarik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

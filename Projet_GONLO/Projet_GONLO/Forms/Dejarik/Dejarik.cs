@@ -1171,6 +1171,8 @@ namespace Projet_GONLO
                 playersSaved.Add(players[0]);
                 writePlayerData(playersSaved);
             }
+
+            MessageBox.Show("Player info saved");
         }
 
 
@@ -1245,7 +1247,7 @@ namespace Projet_GONLO
         {
             this.Hide();
             MenuAccueil newMenuAccueil = new MenuAccueil();
-            newMenuAccueil.Player1 = player1;
+            newMenuAccueil.Player1 = players[0];
             newMenuAccueil.ShowDialog();
             this.Close();
         }
