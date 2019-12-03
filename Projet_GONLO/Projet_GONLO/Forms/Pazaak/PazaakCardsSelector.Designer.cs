@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PazaakCardsSelector));
             this.RPnlPlus1 = new Projet_GONLO.RoundPanel();
             this.GBoxAvailableCards = new System.Windows.Forms.GroupBox();
             this.label32 = new System.Windows.Forms.Label();
@@ -645,6 +646,7 @@
             this.Controls.Add(this.GBoxDeckCards);
             this.Controls.Add(this.GBoxAvailableCards);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PazaakCardsSelector";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PazaakCardsSelector";
