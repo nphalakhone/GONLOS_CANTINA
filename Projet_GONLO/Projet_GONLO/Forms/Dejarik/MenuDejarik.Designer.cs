@@ -156,8 +156,8 @@
             // 
             this.BtnHoujix.BackgroundImage = global::Projet_GONLO.Properties.Resources.houjix1;
             this.BtnHoujix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnHoujix.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnHoujix.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnHoujix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnHoujix.ForeColor = System.Drawing.Color.Gold;
             this.BtnHoujix.Location = new System.Drawing.Point(57, 41);
             this.BtnHoujix.Name = "BtnHoujix";
             this.BtnHoujix.Size = new System.Drawing.Size(135, 145);
@@ -170,7 +170,7 @@
             this.BtnGhhhk.BackColor = System.Drawing.Color.Transparent;
             this.BtnGhhhk.BackgroundImage = global::Projet_GONLO.Properties.Resources.ghhhk;
             this.BtnGhhhk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnGhhhk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnGhhhk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGhhhk.Location = new System.Drawing.Point(57, 41);
             this.BtnGhhhk.Name = "BtnGhhhk";
             this.BtnGhhhk.Size = new System.Drawing.Size(135, 145);
@@ -283,7 +283,6 @@
             this.picAtkValue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAtkValue.TabIndex = 48;
             this.picAtkValue.TabStop = false;
-            this.picAtkValue.Click += new System.EventHandler(this.picAtkValue_Click);
             // 
             // lblAtkValue
             // 
@@ -625,8 +624,8 @@
             // 
             this.BtnKintanStrider.BackgroundImage = global::Projet_GONLO.Properties.Resources.Kintan_Strider;
             this.BtnKintanStrider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnKintanStrider.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnKintanStrider.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnKintanStrider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnKintanStrider.ForeColor = System.Drawing.Color.Gold;
             this.BtnKintanStrider.Location = new System.Drawing.Point(57, 41);
             this.BtnKintanStrider.Name = "BtnKintanStrider";
             this.BtnKintanStrider.Size = new System.Drawing.Size(135, 145);
@@ -754,8 +753,8 @@
             // 
             this.BtnNgok.BackgroundImage = global::Projet_GONLO.Properties.Resources.Ngok;
             this.BtnNgok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnNgok.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnNgok.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnNgok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNgok.ForeColor = System.Drawing.Color.Gold;
             this.BtnNgok.Location = new System.Drawing.Point(57, 41);
             this.BtnNgok.Name = "BtnNgok";
             this.BtnNgok.Size = new System.Drawing.Size(135, 145);
@@ -882,8 +881,8 @@
             // 
             this.BtnKlorslug.BackgroundImage = global::Projet_GONLO.Properties.Resources.klorslaug1;
             this.BtnKlorslug.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnKlorslug.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnKlorslug.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnKlorslug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnKlorslug.ForeColor = System.Drawing.Color.Gold;
             this.BtnKlorslug.Location = new System.Drawing.Point(57, 41);
             this.BtnKlorslug.Name = "BtnKlorslug";
             this.BtnKlorslug.Size = new System.Drawing.Size(135, 145);
@@ -1012,8 +1011,8 @@
             // 
             this.BtnGrimtaash.BackgroundImage = global::Projet_GONLO.Properties.Resources.grimtaash;
             this.BtnGrimtaash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnGrimtaash.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnGrimtaash.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnGrimtaash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGrimtaash.ForeColor = System.Drawing.Color.Gold;
             this.BtnGrimtaash.Location = new System.Drawing.Point(57, 41);
             this.BtnGrimtaash.Name = "BtnGrimtaash";
             this.BtnGrimtaash.Size = new System.Drawing.Size(135, 145);
@@ -1140,8 +1139,8 @@
             // 
             this.BtnMantellian.BackgroundImage = global::Projet_GONLO.Properties.Resources.Mantellian_Savrip;
             this.BtnMantellian.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnMantellian.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnMantellian.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnMantellian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMantellian.ForeColor = System.Drawing.Color.Gold;
             this.BtnMantellian.Location = new System.Drawing.Point(57, 41);
             this.BtnMantellian.Name = "BtnMantellian";
             this.BtnMantellian.Size = new System.Drawing.Size(135, 145);
@@ -1268,8 +1267,8 @@
             // 
             this.BtnMonnok.BackgroundImage = global::Projet_GONLO.Properties.Resources.Monnok;
             this.BtnMonnok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnMonnok.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnMonnok.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnMonnok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMonnok.ForeColor = System.Drawing.Color.Gold;
             this.BtnMonnok.Location = new System.Drawing.Point(57, 41);
             this.BtnMonnok.Name = "BtnMonnok";
             this.BtnMonnok.Size = new System.Drawing.Size(135, 145);
