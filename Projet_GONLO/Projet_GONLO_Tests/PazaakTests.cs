@@ -235,7 +235,7 @@ namespace Projet_GONLO_Tests
         }
 
         [TestMethod]
-        public void DetermineMoveTest()
+        public void DetermineMoveTest1()
         {
             //Arrange
             int[] carteIntEnvoye = { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 };
@@ -259,6 +259,167 @@ namespace Projet_GONLO_Tests
 
             //Assert
             Assert.AreEqual(true, correctMove);
+        }
+
+
+
+        [TestMethod]
+        public void DetermineMoveTest2()
+        {
+            //Arrange
+            int[] carteIntEnvoye = { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 };
+            List<Image> playerDeckPazaak = new List<Image>();
+            for (int i = 0; i < 10; i++)
+            {
+
+                playerDeckPazaak.Add(Projet_GONLO.Properties.Resources.Carte4);
+            }
+            pazaakTest = new PrivateObject(new Pazaak(playerDeckPazaak, carteIntEnvoye));
+
+            //Act
+            Player player = (Player)pazaakTest.GetField("ai");
+            player.Points = 13;
+            Move move = (Move)pazaakTest.Invoke("DetermineMove");//call method
+            bool correctMove = false;
+            if (move == Move.End_Turn)
+            {
+                correctMove = true;
+            }
+
+            //Assert
+            Assert.AreEqual(true, correctMove);
+        }
+
+        [TestMethod]
+        public void DetermineMoveTest3()
+        {
+            //Arrange
+            int[] carteIntEnvoye = { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 };
+            List<Image> playerDeckPazaak = new List<Image>();
+            for (int i = 0; i < 10; i++)
+            {
+
+                playerDeckPazaak.Add(Projet_GONLO.Properties.Resources.Carte4);
+            }
+            pazaakTest = new PrivateObject(new Pazaak(playerDeckPazaak, carteIntEnvoye));
+
+            //Act
+            Player player = (Player)pazaakTest.GetField("ai");
+            player.Points = 17;
+            Move move = (Move)pazaakTest.Invoke("DetermineMove");//call method
+            bool correctMove = false;
+            if (move == Move.AddCard1 || move == Move.AddCard2 ||
+                move == Move.AddCard3 || move == Move.AddCard4)
+            {
+                correctMove = true;
+            }
+
+            //Assert
+            Assert.AreEqual(true, correctMove);
+        }
+
+        [TestMethod]
+        public void AddPlusMinusCardTest()
+        {
+            //Arrange
+            int[] carteIntEnvoye = { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+            List<Image> playerDeckPazaak = new List<Image>();
+            for (int i = 0; i < 10; i++)
+            {
+                playerDeckPazaak.Add(Projet_GONLO.Properties.Resources.CartePlusMinus4);
+            }
+            pazaakTest = new PrivateObject(new Pazaak(playerDeckPazaak, carteIntEnvoye));
+
+            //Act
+            Player player = (Player)pazaakTest.GetField("ai");
+            player.Points = 16;
+            Move move = (Move)pazaakTest.Invoke("AddPlusMinusCard");//call method
+            bool correctMove = false;
+            if (move == Move.AddCard1 || move == Move.AddCard2 ||
+                move == Move.AddCard3 || move == Move.AddCard4)
+            {
+                correctMove = true;
+            }
+            //Assert
+            Assert.AreEqual(true, correctMove);
+        }
+
+
+        [TestMethod]
+        public void PlusCardTest()
+        {
+            //Arrange
+            int[] carteIntEnvoye = { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
+            List<Image> playerDeckPazaak = new List<Image>();
+            for (int i = 0; i < 10; i++)
+            {
+                playerDeckPazaak.Add(Projet_GONLO.Properties.Resources.CartePlus4);
+            }
+            pazaakTest = new PrivateObject(new Pazaak(playerDeckPazaak, carteIntEnvoye));
+
+            //Act
+            Player player = (Player)pazaakTest.GetField("ai");
+            player.Points = 16;
+            Move move = (Move)pazaakTest.Invoke("PlusCard");//call method
+            bool correctMove = false;
+            if (move == Move.AddCard1 || move == Move.AddCard2 ||
+                move == Move.AddCard3 || move == Move.AddCard4)
+            {
+                correctMove = true;
+            }
+            //Assert
+            Assert.AreEqual(true, correctMove);
+        }
+
+        [TestMethod]
+        public void MinusCardTest()
+        {
+            //Arrange
+            int[] carteIntEnvoye = { -2, -2, -2, -2, -2, -2, -2, -2, -2, -2};
+            List<Image> playerDeckPazaak = new List<Image>();
+            for (int i = 0; i < 10; i++)
+            {
+                playerDeckPazaak.Add(Projet_GONLO.Properties.Resources.CarteMinus2);
+            }
+            pazaakTest = new PrivateObject(new Pazaak(playerDeckPazaak, carteIntEnvoye));
+
+            //Act
+            Player player = (Player)pazaakTest.GetField("ai");
+            player.Points = 22;
+            Move move = (Move)pazaakTest.Invoke("MinusCard");//call method
+            bool correctMove = false;
+            if (move == Move.AddCard1 || move == Move.AddCard2 ||
+                move == Move.AddCard3 || move == Move.AddCard4)
+            {
+                correctMove = true;
+            }
+            //Assert
+            Assert.AreEqual(true, correctMove);
+        }
+
+
+        [TestMethod]
+        public void DetermineCardTest()
+        {
+            //Arrange
+            int[] carteIntEnvoye = { -2, -2, -2, -2, -2, -2, -2, -2, -2, -2 };
+            List<Image> playerDeckPazaak = new List<Image>();
+            for (int i = 0; i < 10; i++)
+            {
+                playerDeckPazaak.Add(Projet_GONLO.Properties.Resources.CarteMinus2);
+            }
+            pazaakTest = new PrivateObject(new Pazaak(playerDeckPazaak, carteIntEnvoye));
+
+            //Act
+            Move move = (Move)pazaakTest.Invoke("DetermineCard", 0);//call method
+            bool goodMove = false;
+            MessageBox.Show(move.ToString());
+            if (move == Move.AddCard1)
+            {
+                goodMove = true;
+            }
+            //Assert
+            Assert.AreEqual(true, goodMove);
         }
 
 
