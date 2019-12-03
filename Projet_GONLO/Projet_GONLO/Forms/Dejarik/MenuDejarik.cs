@@ -102,7 +102,8 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Houjix-";
             }
 
-            BtnGhhhk.BackColor = Color.FromArgb(80, Color.Gold);               
+            BtnGhhhk.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnHoujix.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnGhhhk, BtnHoujix);
         }
 
@@ -128,6 +129,7 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Ghhhk-";
             }
             BtnHoujix.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnGhhhk.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnGhhhk, BtnHoujix);
         }
 
@@ -153,6 +155,7 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Ngok-";
             }
             BtnKintanStrider.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnNgok.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
@@ -178,6 +181,7 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Kintan Strider-";
             }
             BtnNgok.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnKintanStrider.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
@@ -203,6 +207,7 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Grimtaash-";
             }
             BtnKlorslug.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnGrimtaash.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
@@ -228,6 +233,7 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Klorslug-";
             }
             BtnGrimtaash.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnKlorslug.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
@@ -253,6 +259,7 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Monnok-";
             }
             BtnMantellian.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnMonnok.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnMantellian, BtnMonnok);
         }
 
@@ -278,9 +285,16 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Mantellian Savrip-";
             }
             BtnMonnok.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnMantellian.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnMantellian, BtnMonnok);
         }
 
+
+        /// <summary>
+        /// method that disable the other button and check if the menu is done
+        /// </summary>
+        /// <param name="monster1"></param>
+        /// <param name="monster2"></param>
         private void btnClick(Button monster1, Button monster2)
         {
             monster1.Enabled = false;
