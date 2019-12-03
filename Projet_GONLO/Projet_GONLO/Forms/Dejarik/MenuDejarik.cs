@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using Projet_GONLO.Classes.Dejarik;
 using System.Media;
 
 namespace Projet_GONLO
