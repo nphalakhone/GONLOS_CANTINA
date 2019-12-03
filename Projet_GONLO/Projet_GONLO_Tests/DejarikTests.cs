@@ -760,23 +760,6 @@ namespace Projet_GONLO_Tests
             Assert.AreEqual(myMonster.Attack+5, newValue);
         }
 
-        /// <summary>
-        /// Test if the method addDefenseDice correctly the dice value to the attack
-        /// </summary>
-        [TestMethod]
-        public void AddDefenseDice()
-        {
-            //Arrange
-            Monster myMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
-            dejarikTest = new PrivateObject(new Dejarik(""));
-
-            //Act
-            dejarikTest.SetField("defendingMonster", myMonster);
-            int newValue = (int)dejarikTest.Invoke("addDefenseDice", myMonster, 3);
-
-            //Assert
-            Assert.AreEqual(myMonster.Defense + 3, newValue);
-        }
 
 
 
