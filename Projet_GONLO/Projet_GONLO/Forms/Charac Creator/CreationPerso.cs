@@ -12,6 +12,7 @@ namespace Projet_GONLO
 {
     public partial class CreationPerso : Form
     {
+        //Global Variables
         Player player = new Player();
         BorderStyle style3D = BorderStyle.Fixed3D;
         BorderStyle styleNone = BorderStyle.None;
