@@ -708,7 +708,19 @@ namespace Projet_GONLO_Tests
             dejarikTest.SetField("newRound", 1);
             dejarikTest.SetField("attackingMonster", attackingMonster);
             dejarikTest.SetField("defendingMonster", defendingMonster);
-            dejarikTest.Invoke("clickAtkMonster", player1.AttMonster.Position);
+            dejarikTest.Invoke("defend", 1, 1);
+
+            String expectedStringPushWinner = "Round " + 1 + " : Player 1's monster : " + attackingMonster.Name + " pushed Player 2's monster : " + defendingMonster.Name + " to " + dejarikTest.Invoke("findTagButton", defendingMonster);
+            ListBox lb = (ListBox)dejarikTest.GetField("ListBoxLog");
+            String actualStringPushWinner = "";
+            for (int i = 0; i < lb.Items.Count; i++)
+            {
+                if (lb.Items[i].Equals(expectedStringPushWinner))
+                {
+                    actualStringPushWinner = lb.Items[i].ToString();
+                    Assert.AreEqual(expectedStringPushWinner, actualStringPushWinner);
+                }
+            }
 
         }
 
