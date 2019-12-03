@@ -430,7 +430,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Update the value of addAttackDice and defense before playing the addAttackDice
+        /// Update the value of addAttackDice and defend before playing the addAttackDice
         /// Add the dice value to the stats of the concerned monsters
         /// </summary>
         /// <param name="dice"></param>
@@ -446,7 +446,7 @@ namespace Projet_GONLO
             else
             {
                 addLogRollDice(dice, defendingMonster);
-                addDefenseDice(dice, newAtk);
+                defend(dice, newAtk);
                 roll = 0;
             }
         }
@@ -868,11 +868,11 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Add the dice value to the defense value of the monster
+        /// Add the dice value to the defend value of the monster
         /// </summary>
         /// <param name="dice"></param>
         /// <param name="newAtk"></param>
-        private void addDefenseDice(int dice, int newAtk)
+        private void defend(int dice, int newAtk)
         {
             newDef = defendingMonster.Defense;
             newDef += dice;

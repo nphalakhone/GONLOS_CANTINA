@@ -510,15 +510,6 @@ namespace Projet_GONLO_Tests
 
 
         /// <summary>
-        /// Test if a monster cannot move on the same tile as another monster
-        /// </summary>
-        [TestMethod]
-        public void MonsterNoSamePosition()
-        {
-
-        }
-
-        /// <summary>
         /// Test if the log display the movement of the monster
         /// </summary>
         [TestMethod]
