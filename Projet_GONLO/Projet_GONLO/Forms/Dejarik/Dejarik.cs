@@ -238,22 +238,22 @@ namespace Projet_GONLO
                 if (players[0].ListMonsters.Count > players[1].ListMonsters.Count)
                 {
                     MessageBox.Show("Player 1 is the winner of the game !");
-                    player1.DejarikGamesWon++;
+                    players[0].DejarikGamesWon++;
                     disableButtonsWithTransparent();
-                    exitMainMenu();
+
                 }
                 else if (players[1].ListMonsters.Count > players[0].ListMonsters.Count)
                 {
                     MessageBox.Show("Player 2 is the winner of the game !");
-                    player1.DejarikGamesLost++;
+                    players[0].DejarikGamesLost++;
                     disableButtonsWithTransparent();
-                    exitMainMenu();
+
                 }
                 else if (players[1].ListMonsters.Count == players[0].ListMonsters.Count)
                 {
                     MessageBox.Show("Draw!");
                     disableButtonsWithTransparent();
-                    exitMainMenu();
+
                 }
             }
             else
@@ -261,16 +261,16 @@ namespace Projet_GONLO
                 if (players[0].ListMonsters.Count == 0)
                 {
                     MessageBox.Show("Player 2 is the winner of the game !");
-                    player1.DejarikGamesLost++;
+                    players[0].DejarikGamesLost++;
                     disableButtonsWithTransparent();
-                    //exit();
+
                 }
                 else if (players[1].ListMonsters.Count == 0)
                 {
                     MessageBox.Show("Player 1 is the winner of the game !");
-                    player1.DejarikGamesWon++;
+                    players[0].DejarikGamesWon++;
                     disableButtonsWithTransparent();
-                    //exit();
+
                 }
             }
 
@@ -479,7 +479,7 @@ namespace Projet_GONLO
             }
             else
             {
-                if (roll > 0)
+                if (roll == 0)
                 {
                     ListBoxLog.Items.Add("Round " + newRound + " Player 2's Monster : " + monster.Name + " rolled a : " + dice);
                 }
