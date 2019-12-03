@@ -1137,53 +1137,55 @@ namespace Projet_GONLO
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             List<Player> playersSaved = new List<Player>();
+            bool found = false;
+            int position = 0;
             playersSaved = readSaveFile();
-            StreamWriter sw2 = new StreamWriter(Application.StartupPath + "\\SavesTest.txt");
-
+            //MessageBox.Show(playersSaved.Count.ToString());
             foreach (Player p in playersSaved)
             {
-                if (p.Name == player1.Name)
+                if (p.Name == players[0].Name)
                 {
-                    DialogResult dr = MessageBox.Show("Your data already exists in the save file. " +
-                        "Do you wish to overwrite your saved data?", "ATTENTION", MessageBoxButtons.YesNo);
-
-                    switch (dr)
-                    {
-                        case DialogResult.Yes:
-                            setPlayerData(p, player1);
-                            writePlayerData(sw2, p);
-                            break;
-                        case DialogResult.No:
-                            break;
-                    }
+                    found = true;
+                    break;
                 }
-                else
+                position++;
+            }
+            if (found)
+            {
+                DialogResult dr = MessageBox.Show("Your data already exists in the save file. " +
+                    "Do you wish to overwrite your saved data?", "ATTENTION", MessageBoxButtons.YesNo);
+
+                switch (dr)
                 {
-                    writePlayerData(sw2, p);
+                    case DialogResult.Yes:
+                        playersSaved[position] = players[0];
+                        writePlayerData(playersSaved);
+                        break;
+                    case DialogResult.No:
+                        writePlayerData(playersSaved);
+                        break;
                 }
             }
-            playersSaved.Add(player1);
-            writePlayerData(sw2, player1);
-            sw2.Close();
+            else
+            {
+                playersSaved.Add(players[0]);
+                writePlayerData(playersSaved);
+            }
+
+            MessageBox.Show("Player info saved");
         }
 
-        private void setPlayerData(Player playerFromFile, Player playerInGame)
-        {
-            playerFromFile.Name = playerInGame.Name;
-            playerFromFile.Gender = playerInGame.Gender;
-            playerFromFile.Species = playerInGame.Species;
-            playerFromFile.Credits = playerInGame.Credits;
-            playerFromFile.PazaakGamesWon = playerInGame.PazaakGamesWon;
-            playerFromFile.PazaakGamesLost = playerInGame.PazaakGamesLost;
-            playerFromFile.DejarikGamesWon = playerInGame.DejarikGamesWon;
-            playerFromFile.DejarikGamesLost = playerInGame.DejarikGamesLost;
-        }
 
-        private void writePlayerData(StreamWriter streamWriter, Player player)
+        private void writePlayerData(List<Player> players)
         {
-            streamWriter.WriteLine(player.Name + ";" + player.Gender + ";" + player.Species + ";" + player.Credits.ToString() + ";" +
+            StreamWriter streamWriter = new StreamWriter(Application.StartupPath + "\\SavesTest.txt");
+            foreach (Player player in players)
+            {
+                streamWriter.WriteLine(player.Name + ";" + player.Gender + ";" + player.Species + ";" + player.Credits.ToString() + ";" +
                             player.PazaakGamesWon.ToString() + ";" + player.PazaakGamesLost.ToString() + ";" + player.DejarikGamesWon.ToString() + ";"
                             + player.DejarikGamesLost.ToString());
+            }
+            streamWriter.Close();
         }
 
         public List<Player> readSaveFile()
@@ -1245,7 +1247,7 @@ namespace Projet_GONLO
         {
             this.Hide();
             MenuAccueil newMenuAccueil = new MenuAccueil();
-            newMenuAccueil.Player1 = player1;
+            newMenuAccueil.Player1 = players[0];
             newMenuAccueil.ShowDialog();
             this.Close();
         }

@@ -104,7 +104,7 @@ namespace Projet_GONLO
             MessageBox.Show("How to Play Pazzak:\n" +
 
             "The goal of the game is to win the best of 5.Each player has their own deck of 4 cards.\n" +
-            "Your 4 cards are are 4 cards randomly selected from the 10 cards selected in the last window.\n" +
+            "Your 4 cards are randomly selected from the 10 cards you selected in the last window.\n" +
             "To win you must the closest to 20 but not go over 20 \n\n\n " +
             "During your turn you have for options:\n" +
             "1.End turn:  this will add a random card form 1 to 10\n\n" +
