@@ -8,6 +8,7 @@ namespace Projet_GONLO
 {
    public class Player
     {
+        //Global variables
         private string _nom;
         private string _species;
         private string _gender;
@@ -29,6 +30,7 @@ namespace Projet_GONLO
         private int nbVictoire = 0;
         private int nbCarteUtiliseAi = 0;
 
+        //Default constructor
         public Player()
         {
             
