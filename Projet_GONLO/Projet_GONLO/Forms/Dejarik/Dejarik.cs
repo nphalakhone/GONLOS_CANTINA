@@ -487,7 +487,7 @@ namespace Projet_GONLO
                 {
                     ListBoxLog.Items.Add("Round " + newRound + " Player 1's Monster : " + monster.Name + " rolled a : " + dice);
                 }
-
+   
             }
         }
 
@@ -1267,7 +1267,7 @@ namespace Projet_GONLO
         /// <param name="e"></param>
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("Dejarik_Holochess_Rules.pdf");
+            System.Diagnostics.Process.Start("Dejarik_Holochess_Rules_Gonlo.pdf");
         }
     }
 }

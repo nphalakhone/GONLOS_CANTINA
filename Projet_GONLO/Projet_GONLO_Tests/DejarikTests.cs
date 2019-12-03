@@ -860,7 +860,7 @@ namespace Projet_GONLO_Tests
         }
 
         /// <summary>
-        /// Test if the log return the correct value for the dice (attack and defense)
+        /// Test if the log return the correct value for the dice (attack)
         /// </summary>
         [TestMethod]
         public void RollDiceLogTest()
@@ -884,20 +884,18 @@ namespace Projet_GONLO_Tests
             //Act
             dejarikTest.SetField("players", players);
             dejarikTest.SetField("turn", 0);
+            dejarikTest.SetField("roll", 0);
             dejarikTest.SetField("newRound", 1);
             dejarikTest.SetField("attackingMonster", attackingMonster);
             dejarikTest.SetField("defendingMonster", defendingMonster);
-            dejarikTest.Invoke("giveNewAtkDefValue");
+            int newAtkVal = (int)dejarikTest.Invoke("addAttackDice", attackingMonster, 3);
+            dejarikTest.Invoke("addLogRollDice", 3, attackingMonster);
 
-            int expectedAtkDiceValue = (int)dejarikTest.GetField("newAtk") - player1.AttMonster.Attack; // 3
+            int expectedAtkDiceValue = newAtkVal - player1.AttMonster.Attack; // 3
             String expectedStringAttackingPlayer = "Round " + 1 + " Player 1's Monster : " + player1.AttMonster.Name + " rolled a : " + expectedAtkDiceValue;
-
-            int expectedDefDiceValue = (int)dejarikTest.GetField("newDef") - player2.DefMonster.Defense; // 4
-            String expectedStringDefendingPlayer = "Round " + 1 + " Player 2's Monster : " + player2.DefMonster.Name + " rolled a : " + expectedDefDiceValue;
 
             ListBox lb = (ListBox)dejarikTest.GetField("ListBoxLog");
             String actualStringAtk = "";
-            String actualStringDef = "";
 
             for (int i = 0; i < lb.Items.Count; i++)
             {
@@ -905,13 +903,8 @@ namespace Projet_GONLO_Tests
                 {
                     actualStringAtk = lb.Items[i].ToString();
                 }
-                //if (lb.Items[i].Equals(expectedStringDefendingPlayer))
-                //{
-                //    actualStringDef = lb.Items[i].ToString();
-                //}
             }
             Assert.AreEqual(expectedStringAttackingPlayer, actualStringAtk);
-            //Assert.AreEqual(expectedStringDefendingPlayer, actualStringDef);
         }
 
 
