@@ -101,14 +101,14 @@ namespace Projet_GONLO
             set { _powMonster = value; }
         }
 
-        //Getter / Setter for player's Dejarik monsters attack data
+        //Getter / Setter for player's Dejarik monsters addAttackDice data
         public Monster AttMonster
         {
             get { return _attMonster; }
             set { _attMonster = value; }
         }
 
-        //Getter / Setter for player's Dejarik monsters defense data
+        //Getter / Setter for player's Dejarik monsters defend data
         public Monster DefMonster
         {
             get { return _defMonster; }

@@ -76,7 +76,7 @@ namespace Projet_GONLO_Tests
         /// Test if monster available moving positions are correct when the monster has a neighbour
         /// </summary>
         [TestMethod]
-        public void MoveToAvailablePositionNeighbourTest()
+        public void MoveToAvailablePosition1NeighbourTest()
         {
             //Arrange
             dejarikTest = new PrivateObject(new Dejarik(""));
@@ -87,8 +87,31 @@ namespace Projet_GONLO_Tests
             //Act (Monster at position 3)
             dejarikTest.SetField("listButtons", listButtons);
 
-            //Assert After
+            //Assert
             CollectionAssert.AreEqual(accessibleButtons, (List<int>)dejarikTest.Invoke("getMovAccessibleButtons", 2));
+        }
+
+        /// <summary>
+        /// Test if monster available moving positions are correct when the monster has 3 neighbours
+        /// </summary>
+        [TestMethod]
+        public void MoveToAvailablePositionNeighboursTest()
+        {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
+
+            //Place monsters around the position 21 on the board (3 monsters)
+            listButtons[8].BackgroundImage = (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Mantellian_Savrip");
+            listButtons[20].BackgroundImage = (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Monnok");
+            listButtons[22].BackgroundImage = (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk");
+            List<int> accessibleButtons = new List<int>() {};
+
+            //Act (Monster at position 8, 20 and 22)
+            dejarikTest.SetField("listButtons", listButtons);
+
+            //Assert
+            CollectionAssert.AreEqual(accessibleButtons, (List<int>)dejarikTest.Invoke("getMovAccessibleButtons", 21));
         }
 
         /// <summary>
@@ -392,18 +415,17 @@ namespace Projet_GONLO_Tests
             dejarikTest.SetField("attackingMonster", attackingMonster);
             dejarikTest.SetField("defendingMonster", defendingMonster);
             dejarikTest.Invoke("defend", 7, 9);
-            players = (List<Player>)dejarikTest.GetField("players");
 
-            //Assert
-            Assert.AreEqual(1, players[0].ListMonsters.Count); //monstre existe toujours dans la liste
+
+            players = (List<Player>)dejarikTest.GetField("players"); //monstre existe toujours dans la liste
             Assert.AreNotEqual(14, players[0].AttMonster.Position); //monstre a bouger
         }
 
         /// <summary>
-        /// Test that when newAtk is equal to newDef, the defender is pushed by the attacker (Player 1's turn)
+        /// Test that when newAtk is equal to newDef, the defender is pushed by the attacker
         /// </summary>
         [TestMethod]
-        public void DefendEqualsP1Test()
+        public void DefendEqualsTest()
         {
             //Arrange
             Monster attackingMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
@@ -428,7 +450,6 @@ namespace Projet_GONLO_Tests
             dejarikTest.Invoke("defend", 8, 9);
             players = (List<Player>)dejarikTest.GetField("players");
             object newDef = dejarikTest.GetField("newDef");
-
             //Assert
             Assert.AreEqual(9, newDef);
             Assert.AreEqual(1, players[1].ListMonsters.Count); //monstre existe toujours dans la liste
@@ -436,6 +457,7 @@ namespace Projet_GONLO_Tests
         }
 
         /// <summary>
+        /// Test that when newDef is greater than newAtk by 4 or more, the attacker is killed by the defender
         /// Test that when newAtk is equal to newDef, the defender is pushed by the attacker (Player 2's turn)
         /// </summary>
         [TestMethod]
@@ -474,6 +496,7 @@ namespace Projet_GONLO_Tests
         }
 
         /// <summary>
+        /// Test that when newDef is greater than newAtk by 1 to 3, the attacker is pushed by the defender
         /// Test that when newDef is greater than newAtk by 4 or more, the attacker is killed by the defender (Player 1's turn)
         /// </summary>
         [TestMethod]
@@ -538,6 +561,7 @@ namespace Projet_GONLO_Tests
         }
 
         /// <summary>
+        /// Test if the monster is correctly pushed and if his position has changed
         /// Test that when the pushed monster has no space to move, he is killed (Player 1's turn)
         /// </summary>
         [TestMethod]
@@ -584,6 +608,7 @@ namespace Projet_GONLO_Tests
 
 
         /// <summary>
+        /// Test that if the monster has any place to be pushed, he is killed
         /// Test that when the pushed monster has no space to move, he is killed (Player 2's turn)
         /// </summary>
         [TestMethod]
@@ -629,6 +654,7 @@ namespace Projet_GONLO_Tests
         }
 
         /// <summary>
+        /// Test if the monster is correctly killed and removed from the map and listMonsters
         /// Test that when newDef is greater than newAtk by 1 to 3, the attacker is pushed by the defender (Player 1's turn)
         /// </summary>
         [TestMethod]
@@ -664,6 +690,7 @@ namespace Projet_GONLO_Tests
 
 
         /// <summary>
+        /// Test if the variables tmpAtk and tmpDef are correctly modified according to turn
         /// Test that when newDef is greater than newAtk by 1 to 3, the attacker is pushed by the defender (Player 21's turn)
         /// </summary>
         [TestMethod]
@@ -715,35 +742,43 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void EndActionWhenMonsterFinishMovementTest()
         {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            Monster myMonster = new Monster("The Ghhhk", 3, 2, 4, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 21);
+            int actions = 2, movement = 2, oldPosition = 20, turn = 0;
+            player1 = new Player();
+            player2 = new Player();
+            player1.CurrMonster = myMonster;
+            List<Player> players = new List<Player>();
+            players.Add(player1);
+            players.Add(player2);
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
 
+            //Place monsters around the position 21 on the board (2 monsters)
+            listButtons[8].BackgroundImage = (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Mantellian_Savrip");
+            listButtons[22].BackgroundImage = (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk");
+
+            //Act (Monster at position 3)
+            dejarikTest.SetField("listButtons", listButtons);
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("actions", actions);
+            dejarikTest.SetField("counterMov", movement);
+            dejarikTest.SetField("oldPosition", oldPosition);
+            dejarikTest.SetField("turn", turn);
+            dejarikTest.SetField("lastMonster", myMonster);
+            dejarikTest.Invoke("activateMovButtons", myMonster.Position);
+
+            //Assert
+            Assert.AreEqual(actions - 1, dejarikTest.GetField("actions"));
+            Assert.AreEqual(0, dejarikTest.GetField("counterMov"));
         }
 
-
-
-        /// <summary>
-        /// Test if a monster cannot move on the same tile as another monster
-        /// </summary>
-        [TestMethod]
-        public void MonsterNoSamePosition()
-        {
-
-        }
 
         /// <summary>
         /// Test if the log display the movement of the monster
         /// </summary>
         [TestMethod]
         public void MonsterMoveLogTest()
-        {
-
-        }
-
-
-        /// <summary>
-        /// Test if the monster has the right atk after rolling the dice
-        /// </summary>
-        [TestMethod]
-        public void MonsterRollNewAtk()
         {
 
         }
@@ -1065,5 +1100,27 @@ namespace Projet_GONLO_Tests
             }
             Assert.AreEqual(actualStringKillWinner, actualStringKillWinner);
         }
+
+        /// <summary>
+        /// Test if the method addAttackDice add correctly the dice value to the attack
+        /// </summary>
+        [TestMethod]
+        public void AddAttackDice()
+        {
+            //Arrange
+            Monster myMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
+            dejarikTest = new PrivateObject(new Dejarik(""));
+
+            //Act
+            dejarikTest.SetField("attackingMonster", myMonster);
+            int newValue = (int)dejarikTest.Invoke("addAttackDice", myMonster, 5);
+
+            //Assert
+            Assert.AreEqual(myMonster.Attack+5, newValue);
+        }
+
+
+
+
     }
 }

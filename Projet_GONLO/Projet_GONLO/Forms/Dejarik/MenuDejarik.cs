@@ -5,24 +5,27 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using Projet_GONLO.Classes.Dejarik;
 using System.Media;
 
 namespace Projet_GONLO
 {
     public partial class MenuDejarik : Form
     {
+        /// <summary>
+        /// Global variables
+        /// </summary>
         Monster mantellianSavrip, monnok, ghhhk, houjix, kintanStrider, ngok, klorslug, grimtaash;
         Player player1 = new Player();
         Player player2 = new Player();
         SoundPlayer sound = new SoundPlayer(Properties.Resources.Dejarik_Cantina);
         private int playerTurn = 1;
         String logMonster = "";
-
-
         internal Player Player1 { get => player1; set => player1 = value; }
         internal Player Player2 { get => player2; set => player2 = value; }
 
+        /// <summary>
+        /// Default contructor
+        /// </summary>
         public MenuDejarik()
         {
             this.DoubleBuffered = true;
@@ -32,6 +35,7 @@ namespace Projet_GONLO
             setBtnInfoExtender();
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
+
 
         public void groupBoxExtended(GroupBox gb, Button button)
         {
@@ -49,6 +53,9 @@ namespace Projet_GONLO
             }
         }
 
+        /// <summary>
+        /// Associate the click event to each arrow information buttons
+        /// </summary>
         private void setBtnInfoExtender()
         {
             BtnInfoGHHHK.Click += (sender, EventArgs) => { ClickInfoMonsters(sender, EventArgs, grpGhhhk, BtnInfoGHHHK); };
@@ -61,11 +68,23 @@ namespace Projet_GONLO
             BtnInfoMonnok.Click += (sender, EventArgs) => { ClickInfoMonsters(sender, EventArgs, grpMonnok, BtnInfoMonnok); };
         }
 
+        /// <summary>
+        /// Click event of the arrow information button (show information of the monster)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <param name="gbox"></param>
+        /// <param name="btnInfo"></param>
         private void ClickInfoMonsters(object sender, EventArgs e, GroupBox gbox, Button btnInfo)
         {
             groupBoxExtended(gbox, btnInfo);
         }
 
+        /// <summary>
+        /// BtnGhhhk click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnGhhhk_Click(object sender, EventArgs e)
         {
             if (playerTurn == 1)
@@ -83,11 +102,16 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Houjix-";
             }
 
-            BtnGhhhk.BackColor = Color.FromArgb(80, Color.Gold);               
+            BtnGhhhk.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnHoujix.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnGhhhk, BtnHoujix);
         }
 
-
+        /// <summary>
+        /// BtnHoujix click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnHoujix_Click(object sender, EventArgs e)
         {
             if (playerTurn == 1)
@@ -105,9 +129,15 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Ghhhk-";
             }
             BtnHoujix.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnGhhhk.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnGhhhk, BtnHoujix);
         }
 
+        /// <summary>
+        /// BtnKintanStrider click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnKintanStrider_Click(object sender, EventArgs e)
         {
             if (playerTurn == 1)
@@ -125,9 +155,15 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Ngok-";
             }
             BtnKintanStrider.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnNgok.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
+        /// <summary>
+        /// BtnNgok click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnNgok_Click(object sender, EventArgs e)
         {
             if (playerTurn == 1)
@@ -145,9 +181,15 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Kintan Strider-";
             }
             BtnNgok.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnKintanStrider.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
+        /// <summary>
+        /// BtnKlorslug click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnKlorslug_Click(object sender, EventArgs e)
         {
             if (playerTurn == 1)
@@ -165,9 +207,15 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Grimtaash-";
             }
             BtnKlorslug.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnGrimtaash.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
+        /// <summary>
+        /// BtnGrimtaash click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnGrimtaash_Click(object sender, EventArgs e)
         {
             if (playerTurn == 1)
@@ -185,9 +233,15 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Klorslug-";
             }
             BtnGrimtaash.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnKlorslug.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
+        /// <summary>
+        /// BtnMantellian click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnMantellian_Click(object sender, EventArgs e)
         {
             if (playerTurn == 1)
@@ -205,9 +259,15 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Monnok-";
             }
             BtnMantellian.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnMonnok.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnMantellian, BtnMonnok);
         }
 
+        /// <summary>
+        /// BtnMonnok click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnMonnok_Click(object sender, EventArgs e)
         {
             if (playerTurn == 1)
@@ -225,9 +285,16 @@ namespace Projet_GONLO
                 logMonster += "Player 1 gets the monster : Mantellian Savrip-";
             }
             BtnMonnok.BackColor = Color.FromArgb(80, Color.Gold);
+            BtnMantellian.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnMantellian, BtnMonnok);
         }
 
+
+        /// <summary>
+        /// method that disable the other button and check if the menu is done
+        /// </summary>
+        /// <param name="monster1"></param>
+        /// <param name="monster2"></param>
         private void btnClick(Button monster1, Button monster2)
         {
             monster1.Enabled = false;
@@ -236,6 +303,9 @@ namespace Projet_GONLO
             nextTurn();
         }
 
+        /// <summary>
+        /// Create the 8 monsters of the dejarik board game
+        /// </summary>
         private void createMonsters()
         {
             mantellianSavrip = new Monster("The Mantellian Savrip", 2, 3, 2, (Image)Properties.Resources.ResourceManager.GetObject("Mantellian_Savrip"), typeMonster.Power, 0);
@@ -248,7 +318,10 @@ namespace Projet_GONLO
             grimtaash = new Monster("Grimtaash the Molator", 1, 2, 3, (Image)Properties.Resources.ResourceManager.GetObject("grimtaash"), typeMonster.Mobile, 0);
         }
 
-
+        /// <summary>
+        /// Check if each monster is clicked (chosen by one player)
+        /// If yes, the dejarik board game can begin
+        /// </summary>
         private void checkMonsterFinish()
         {
             if (BtnGhhhk.Enabled == false && BtnHoujix.Enabled == false
@@ -265,12 +338,22 @@ namespace Projet_GONLO
             }
         }
 
+        /// <summary>
+        /// Exit menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             sound.Stop();
             this.Close();
         }
 
+        /// <summary>
+        /// Return to the main menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ReturnToMainMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             sound.Stop();
@@ -281,12 +364,18 @@ namespace Projet_GONLO
             this.Close();
         }
 
+        /// <summary>
+        /// Change the turn of monster selection
+        /// </summary>
         private void nextTurn()
         {
                 changeLabel();
                 checkMonsterFinish();
         }
 
+        /// <summary>
+        /// Update the labels to advertise which player chooses first
+        /// </summary>
         private void changeLabel()
         {
             if (LblMenuPlayerTurn.Text.Equals("Player 1 select one monster for each category  "))
