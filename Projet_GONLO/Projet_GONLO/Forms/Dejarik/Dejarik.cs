@@ -479,7 +479,7 @@ namespace Projet_GONLO
             }
             else
             {
-                if (roll > 0)
+                if (roll == 0)
                 {
                     ListBoxLog.Items.Add("Round " + newRound + " Player 2's Monster : " + monster.Name + " rolled a : " + dice);
                 }
