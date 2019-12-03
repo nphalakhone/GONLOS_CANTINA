@@ -8,6 +8,9 @@ using System.Windows.Forms;
 
 namespace Projet_GONLO.Classes.Pazaak
 {
+    /// <summary>
+    /// Class for a circular picture box, with a paint event
+    /// </summary>
     public class CircularPictureBox : PictureBox
     {
         protected override void OnPaint(PaintEventArgs pe)

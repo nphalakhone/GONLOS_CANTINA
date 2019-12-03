@@ -6,13 +6,21 @@ using System.Threading.Tasks;
 
 namespace Projet_GONLO
 {
+    /// <summary>
+    /// Class Tile, necessary for the Dejarik Board Game
+    /// </summary>
     public class Tile
     {
         private List<Tile> listMovement = new List<Tile>();
 
-        //Liste de tous les bouttons qui sont sur le board
+        /// <summary>
+        /// List of all tiles of the game (25 tiles)
+        /// </summary>
         private static List<Tile> listTiles = new List<Tile>();
 
+        /// <summary>
+        /// Initialize the list of tiles
+        /// </summary>
         public static void CreateTiles()
         {
             for (int i = 0; i < 26; i++)
@@ -22,6 +30,9 @@ namespace Projet_GONLO
             CreateGraphTiles();
         }
 
+        /// <summary>
+        /// Associate each index of the tile list with available tiles
+        /// </summary>
         private static void CreateGraphTiles()
         {
             AssociateMovement(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
@@ -51,6 +62,11 @@ namespace Projet_GONLO
             AssociateMovement(25, 12, 14, 24);
         }
 
+        /// <summary>
+        /// Add available movements in the list of movements of the tile
+        /// </summary>
+        /// <param name="myTile"></param>
+        /// <param name="tab"></param>
         private static void AssociateMovement(int myTile, params int[] tab)
         {
             foreach (int position in tab)
@@ -60,7 +76,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Case Number
+        /// Getter and setter for number
         /// </summary>
         public int Number
         {
@@ -77,6 +93,9 @@ namespace Projet_GONLO
             Number = number;
         }
 
+        /// <summary>
+        /// Getter for the list of tiles
+        /// </summary>
         public static List<Tile> ListTiles
         {
             get
@@ -85,6 +104,9 @@ namespace Projet_GONLO
             }
         }
 
+        /// <summary>
+        /// Getter for the list of movements of a tile
+        /// </summary>
         public List<Tile> ListMovement
         {
             get

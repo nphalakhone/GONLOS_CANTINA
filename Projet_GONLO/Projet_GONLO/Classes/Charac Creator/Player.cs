@@ -6,36 +6,30 @@ using System.Threading.Tasks;
 
 namespace Projet_GONLO
 {
+    /// <summary>
+    /// Class Player
+    /// </summary>
    public class Player
     {
         //Global variables
-        private string _nom;
-        private string _species;
-        private string _gender;
-        private int _credits;
-        private int _pazaakgameswon;
-        private int _pazaakgameslost;
-        private int _dejarikgameswon;
-        private int _dejarikgameslost;
-        private Monster _powMonster;
-        private Monster _attMonster;
-        private Monster _defMonster;
-        private Monster _movMonster;
-        private Monster currMonster;
+        private string _nom, _species, _gender;
+        private int  _credits,_pazaakgameswon, _pazaakgameslost, _dejarikgameswon, _dejarikgameslost,
+            points = 0, nbCards = 0, nbVictoire = 0, nbCarteUtiliseAi = 0;
+        private Monster _powMonster, _attMonster,  _defMonster, _movMonster, currMonster;
         private List<Monster> _listMonsters = new List<Monster>();
-
-        private int points = 0;
-        private int nbCards = 0;
         private bool stand = false;
-        private int nbVictoire = 0;
-        private int nbCarteUtiliseAi = 0;
 
-        //Default constructor
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public Player()
         {
             
         }
 
+        /// <summary>
+        /// Getters and setters for each variable
+        /// </summary>
         public string Name
         {
             get { return _nom; }
@@ -118,7 +112,6 @@ namespace Projet_GONLO
             get => _listMonsters;
             set => _listMonsters = value;
         }
-
 
         public int Points {
             get => points;

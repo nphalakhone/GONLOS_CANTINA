@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Projet_GONLO
 {
+    /// <summary>
+    /// Class for generated names (in character menu)
+    /// </summary>
     class GeneratedNamesList
     {
         //Global Random
