@@ -1171,6 +1171,8 @@ namespace Projet_GONLO
                 playersSaved.Add(players[0]);
                 writePlayerData(playersSaved);
             }
+
+            MessageBox.Show("Player info saved");
         }
 
 
