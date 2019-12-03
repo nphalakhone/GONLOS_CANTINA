@@ -23,6 +23,7 @@ namespace Projet_GONLO
         int turn = 0, counterMov = 0, firstClick = 0, oldPosition = 0, actions = 2, newRound = 1, roll = 0, newAtk = 0, newDef = 0, tmpAtk = 0, tmpDef = 0, checkAtk = 0, adjacentMonsters = 0;
         List<String> logMonster;
         Monster lastMonster, defendingMonster = null, attackingMonster = null;
+        internal Player Player1, Player2;
 
         /// <summary>
         /// Default constructor
