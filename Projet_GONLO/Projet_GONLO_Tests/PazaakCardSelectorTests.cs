@@ -52,6 +52,9 @@ namespace Projet_GONLO_Tests
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
         public void AllCardsSelectedTest()
         {
@@ -66,7 +69,9 @@ namespace Projet_GONLO_Tests
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
         public void FindPositionPanelTest()
         {
@@ -82,6 +87,9 @@ namespace Projet_GONLO_Tests
             Assert.AreEqual(1, indice);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
         public void CheckDeckTest()
         {
