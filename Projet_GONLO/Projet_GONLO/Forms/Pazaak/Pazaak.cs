@@ -218,22 +218,25 @@ namespace Projet_GONLO
 
        
 
-        private void AddAICardToBoard(int index)
+        private void addAICardToBoard(int index)
         {
+            //PnlAiDeck1
             Panel[] TabPnlAiDeck = new Panel[]
             {
              PnlAiDeck1,PnlAiDeck2,PnlAiDeck3,PnlAiDeck4
             };
 
-            
+            MessageBox.Show("add card");
             if (AiDeck[index] < 0)
             {
                 TabPanelRight[ai.NbCards].BackgroundImage = c.getCarteMinus(AiDeck[index] - 2 * (AiDeck[index]));
+                //AiPoints += AiDeck[index];
                 ai.Points += AiDeck[index];
             }
             else if (AiDeck[index] > 0 && AiDeck[index] < 7)
             {
                 TabPanelRight[ai.NbCards].BackgroundImage = c.getCartePlus(AiDeck[index]);
+                //AiPoints += AiDeck[index];
                 ai.Points += AiDeck[index];
             }
             else
@@ -241,11 +244,13 @@ namespace Projet_GONLO
                 if (ai.Points > 20)
                 {
                     TabPanelRight[ai.NbCards].BackgroundImage = c.getCartePlusMinus(AiDeck[index] - 6);
+                    //AiPoints -= AiDeck[index] - 6;
                     ai.Points -= AiDeck[index] - 6;
                 }
                 else
                 {
                     TabPanelRight[ai.NbCards].BackgroundImage = c.getCartePlusMinus(AiDeck[index] - 6);
+                    //AiPoints += AiDeck[index] - 6;
                     ai.Points += AiDeck[index] - 6;
                 }
             }
@@ -262,16 +267,16 @@ namespace Projet_GONLO
             switch (moveAI)
             {
                 case Projet_GONLO.Move.AddCard1:
-                    AddAICardToBoard(0);
+                    addAICardToBoard(0);
                     break;
                 case Projet_GONLO.Move.AddCard2:
-                    AddAICardToBoard(1);
+                    addAICardToBoard(1);
                     break;
                 case Projet_GONLO.Move.AddCard3:
-                    AddAICardToBoard(2);
+                    addAICardToBoard(2);
                     break;
                 case Projet_GONLO.Move.AddCard4:
-                    AddAICardToBoard(3);
+                    addAICardToBoard(3);
                     break;
 
             }
