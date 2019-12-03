@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using Projet_GONLO.Classes.Dejarik;
+using System.Media;
 
 namespace Projet_GONLO
 {
@@ -14,6 +15,7 @@ namespace Projet_GONLO
         Monster mantellianSavrip, monnok, ghhhk, houjix, kintanStrider, ngok, klorslug, grimtaash;
         Player player1 = new Player();
         Player player2 = new Player();
+        SoundPlayer sound = new SoundPlayer(Properties.Resources.Dejarik_Cantina);
         private int playerTurn = 1;
         String logMonster = "";
 
@@ -24,7 +26,8 @@ namespace Projet_GONLO
         public MenuDejarik()
         {
             this.DoubleBuffered = true;
-            InitializeComponent();       
+            InitializeComponent();
+            sound.PlayLooping();
             createMonsters();
             setBtnInfoExtender();
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
@@ -260,11 +263,13 @@ namespace Projet_GONLO
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            sound.Stop();
             this.Close();
         }
 
         private void ReturnToMainMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            sound.Stop();
             Hide();
             MenuAccueil menu = new MenuAccueil();
             menu.Player1 = player1;
