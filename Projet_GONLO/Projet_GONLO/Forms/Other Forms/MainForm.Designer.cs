@@ -1,6 +1,6 @@
 ﻿namespace Projet_GONLO
 {
-    partial class MenuAccueil
+    partial class MainForm
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAccueil));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LblWelcome = new System.Windows.Forms.Label();
             this.LblGonlo = new System.Windows.Forms.Label();
             this.timerSlide1 = new System.Windows.Forms.Timer(this.components);
@@ -875,7 +875,7 @@
             this.BtnEllExit.TabIndex = 10;
             this.BtnEllExit.Text = "Exit";
             this.BtnEllExit.UseVisualStyleBackColor = false;
-            this.BtnEllExit.Click += new System.EventHandler(this.BtnEllSettings_Click);
+            this.BtnEllExit.Click += new System.EventHandler(this.BtnEllExit_Click);
             // 
             // BtnEllSB
             // 

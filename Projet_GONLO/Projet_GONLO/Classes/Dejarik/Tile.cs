@@ -6,13 +6,20 @@ using System.Threading.Tasks;
 
 namespace Projet_GONLO
 {
+    /// <summary>
+    /// Class tile, necessary for the Dejarik Board Game
+    /// </summary>
     public class Tile
     {
+        //List of movement 
         private List<Tile> listMovement = new List<Tile>();
 
-        //Liste de tous les bouttons qui sont sur le board
+        //List of all the tiles of the game (25 tiles)
         private static List<Tile> listTiles = new List<Tile>();
 
+        /// <summary>
+        /// Initialize the list of tiles
+        /// </summary>
         public static void CreateTiles()
         {
             for (int i = 0; i < 26; i++)
@@ -22,6 +29,9 @@ namespace Projet_GONLO
             CreateGraphTiles();
         }
 
+        /// <summary>
+        /// Associate available positions (movement) for each tile
+        /// </summary>
         private static void CreateGraphTiles()
         {
             AssociateMovement(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
@@ -51,6 +61,11 @@ namespace Projet_GONLO
             AssociateMovement(25, 12, 14, 24);
         }
 
+        /// <summary>
+        /// Add available positions to the list movement of the tile
+        /// </summary>
+        /// <param name="myTile"></param>
+        /// <param name="tab"></param>
         private static void AssociateMovement(int myTile, params int[] tab)
         {
             foreach (int position in tab)
@@ -60,7 +75,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// Case Number
+        /// Number getter and setter
         /// </summary>
         public int Number
         {
@@ -77,6 +92,9 @@ namespace Projet_GONLO
             Number = number;
         }
 
+        /// <summary>
+        /// Getter of list tiles
+        /// </summary>
         public static List<Tile> ListTiles
         {
             get
@@ -85,6 +103,9 @@ namespace Projet_GONLO
             }
         }
 
+        /// <summary>
+        /// Getter of list movement
+        /// </summary>
         public List<Tile> ListMovement
         {
             get

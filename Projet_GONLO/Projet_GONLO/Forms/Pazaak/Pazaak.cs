@@ -218,25 +218,22 @@ namespace Projet_GONLO
 
        
 
-        private void addAICardToBoard(int index)
+        private void AddAICardToBoard(int index)
         {
-            //PnlAiDeck1
             Panel[] TabPnlAiDeck = new Panel[]
             {
              PnlAiDeck1,PnlAiDeck2,PnlAiDeck3,PnlAiDeck4
             };
 
-            MessageBox.Show("add card");
+            
             if (AiDeck[index] < 0)
             {
                 TabPanelRight[ai.NbCards].BackgroundImage = c.getCarteMinus(AiDeck[index] - 2 * (AiDeck[index]));
-                //AiPoints += AiDeck[index];
                 ai.Points += AiDeck[index];
             }
             else if (AiDeck[index] > 0 && AiDeck[index] < 7)
             {
                 TabPanelRight[ai.NbCards].BackgroundImage = c.getCartePlus(AiDeck[index]);
-                //AiPoints += AiDeck[index];
                 ai.Points += AiDeck[index];
             }
             else
@@ -244,13 +241,11 @@ namespace Projet_GONLO
                 if (ai.Points > 20)
                 {
                     TabPanelRight[ai.NbCards].BackgroundImage = c.getCartePlusMinus(AiDeck[index] - 6);
-                    //AiPoints -= AiDeck[index] - 6;
                     ai.Points -= AiDeck[index] - 6;
                 }
                 else
                 {
                     TabPanelRight[ai.NbCards].BackgroundImage = c.getCartePlusMinus(AiDeck[index] - 6);
-                    //AiPoints += AiDeck[index] - 6;
                     ai.Points += AiDeck[index] - 6;
                 }
             }
@@ -267,16 +262,16 @@ namespace Projet_GONLO
             switch (moveAI)
             {
                 case Projet_GONLO.Move.AddCard1:
-                    addAICardToBoard(0);
+                    AddAICardToBoard(0);
                     break;
                 case Projet_GONLO.Move.AddCard2:
-                    addAICardToBoard(1);
+                    AddAICardToBoard(1);
                     break;
                 case Projet_GONLO.Move.AddCard3:
-                    addAICardToBoard(2);
+                    AddAICardToBoard(2);
                     break;
                 case Projet_GONLO.Move.AddCard4:
-                    addAICardToBoard(3);
+                    AddAICardToBoard(3);
                     break;
 
             }
@@ -582,7 +577,7 @@ namespace Projet_GONLO
                 playerPazaak.Credits -= credsWaged;
                 playerPazaak.PazaakGamesLost++;
                 this.Hide();
-                MenuAccueil newMenuAccueil = new MenuAccueil();
+                MainForm newMenuAccueil = new MainForm();
                 newMenuAccueil.Player1 = playerPazaak;
                 newMenuAccueil.ShowDialog();
                 this.Close();
@@ -602,7 +597,7 @@ namespace Projet_GONLO
                 playerPazaak.Credits -= credsWaged;
                 playerPazaak.PazaakGamesLost++;
                 this.Hide();
-                MenuAccueil newMenuAccueil = new MenuAccueil();
+                MainForm newMenuAccueil = new MainForm();
                 newMenuAccueil.Player1 = playerPazaak;
                 newMenuAccueil.ShowDialog();
                 this.Close();
@@ -772,7 +767,7 @@ namespace Projet_GONLO
                 this.Hide();
                 playerPazaak.NbVictoire = 0;
                 ai.NbVictoire = 0;
-                MenuAccueil newMenuAccueil = new MenuAccueil();
+                MainForm newMenuAccueil = new MainForm();
                 newMenuAccueil.Player1 = playerPazaak;
                 newMenuAccueil.ShowDialog();
                 this.Close();
@@ -785,7 +780,7 @@ namespace Projet_GONLO
                 this.Hide();
                 playerPazaak.NbVictoire = 0;
                 ai.NbVictoire = 0;
-                MenuAccueil newMenuAccueil = new MenuAccueil();
+                MainForm newMenuAccueil = new MainForm();
                 newMenuAccueil.Player1 = playerPazaak;
                 newMenuAccueil.ShowDialog();
                 this.Close();
