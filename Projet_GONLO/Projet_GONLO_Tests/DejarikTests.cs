@@ -76,7 +76,7 @@ namespace Projet_GONLO_Tests
         /// Test if monster available moving positions are correct when the monster has a neighbour
         /// </summary>
         [TestMethod]
-        public void MoveToAvailablePositionNeighbourTest()
+        public void MoveToAvailablePosition1NeighbourTest()
         {
             //Arrange
             dejarikTest = new PrivateObject(new Dejarik(""));
@@ -87,8 +87,31 @@ namespace Projet_GONLO_Tests
             //Act (Monster at position 3)
             dejarikTest.SetField("listButtons", listButtons);
 
-            //Assert After
+            //Assert
             CollectionAssert.AreEqual(accessibleButtons, (List<int>)dejarikTest.Invoke("getMovAccessibleButtons", 2));
+        }
+
+        /// <summary>
+        /// Test if monster available moving positions are correct when the monster has 3 neighbours
+        /// </summary>
+        [TestMethod]
+        public void MoveToAvailablePositionNeighboursTest()
+        {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
+
+            //Place monsters around the position 21 on the board (3 monsters)
+            listButtons[8].BackgroundImage = (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Mantellian_Savrip");
+            listButtons[20].BackgroundImage = (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Monnok");
+            listButtons[22].BackgroundImage = (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk");
+            List<int> accessibleButtons = new List<int>() {};
+
+            //Act (Monster at position 8, 20 and 22)
+            dejarikTest.SetField("listButtons", listButtons);
+
+            //Assert
+            CollectionAssert.AreEqual(accessibleButtons, (List<int>)dejarikTest.Invoke("getMovAccessibleButtons", 21));
         }
 
         /// <summary>
