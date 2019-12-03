@@ -551,6 +551,8 @@ namespace Projet_GONLO
         {
             return 20 - points;
         }
+
+
         /// <summary>
         /// Methode qui save le joueur dans un fichier text
         /// </summary>
@@ -558,62 +560,60 @@ namespace Projet_GONLO
         /// <param name="e"></param>
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            List<Player> playersSaved = new List<Player>();
+            List <Player> playersSaved = new List<Player>();
+            bool found = false;
+            int position = 0;
             playersSaved = readSaveFile();
-            StreamWriter sw2 = new StreamWriter(Application.StartupPath + "\\SavesTest.txt");
-
+            //MessageBox.Show(playersSaved.Count.ToString());
             foreach (Player p in playersSaved)
             {
                 if (p.Name == playerPazaak.Name)
                 {
-                    DialogResult dr = MessageBox.Show("Your data already exists in the save file. " +
-                        "Do you wish to overwrite your saved data?", "ATTENTION", MessageBoxButtons.YesNo);
+                    found = true;
+                    break;
+                }
+                position++;
+            }
+            if (found)
+            {
+                DialogResult dr = MessageBox.Show("Your data already exists in the save file. " +
+                    "Do you wish to overwrite your saved data?", "ATTENTION", MessageBoxButtons.YesNo);
 
-                    switch (dr)
-                    {
-                        case DialogResult.Yes:
-                            setPlayerData(p, playerPazaak);
-                            writePlayerData(sw2, p);
-                            break;
-                        case DialogResult.No:
-                            break;
-                    }
-                } else
+                switch (dr)
                 {
-                    writePlayerData(sw2, p);
+                    case DialogResult.Yes:
+                        playersSaved[position] = playerPazaak;
+                        writePlayerData(playersSaved);
+                        break;
+                    case DialogResult.No:
+                        writePlayerData(playersSaved);
+                        break;
                 }
             }
-            playersSaved.Add(playerPazaak);
-            writePlayerData(sw2, playerPazaak);
-            sw2.Close();
+            else
+            {
+                playersSaved.Add(playerPazaak);
+                writePlayerData(playersSaved);
+            }
         }
-        /// <summary>
-        /// Method qui initialise toutes les informations du client
-        /// </summary>
-        /// <param name="playerFromFile"></param>
-        /// <param name="playerInGame"></param>
-        private void setPlayerData(Player playerFromFile, Player playerInGame)
-        {
-            playerFromFile.Name = playerInGame.Name;
-            playerFromFile.Gender = playerInGame.Gender;
-            playerFromFile.Species = playerInGame.Species;
-            playerFromFile.Credits = playerInGame.Credits;
-            playerFromFile.PazaakGamesWon = playerInGame.PazaakGamesWon;
-            playerFromFile.PazaakGamesLost = playerInGame.PazaakGamesLost;
-            playerFromFile.DejarikGamesWon = playerInGame.DejarikGamesWon;
-            playerFromFile.DejarikGamesLost = playerInGame.DejarikGamesLost;
-        }
+
         /// <summary>
         /// Methode qui ecrit les informations du client dans un fichier text
         /// </summary>
         /// <param name="streamWriter"></param>
         /// <param name="player"></param>
-        private void writePlayerData(StreamWriter streamWriter, Player player)
+        private void writePlayerData(List<Player> players)
         {
-            streamWriter.WriteLine(player.Name + ";" + player.Gender + ";" + player.Species + ";" + player.Credits.ToString() + ";" +
+            StreamWriter streamWriter = new StreamWriter(Application.StartupPath + "\\SavesTest.txt");
+            foreach (Player player in players)
+            {
+                streamWriter.WriteLine(player.Name + ";" + player.Gender + ";" + player.Species + ";" + player.Credits.ToString() + ";" +
                             player.PazaakGamesWon.ToString() + ";" + player.PazaakGamesLost.ToString() + ";" + player.DejarikGamesWon.ToString() + ";"
                             + player.DejarikGamesLost.ToString());
+            }
+            streamWriter.Close();
         }
+
         /// <summary>
         /// Methode qui lit un fichier text et save les informations dans une liste de joueurs
         /// </summary>
@@ -646,6 +646,7 @@ namespace Projet_GONLO
             sr.Close();
             return playersSaved;
         }
+
         /// <summary>
         /// Methode qui restart la partie de pazzak lorsque l'on clique sur l'onglet restart
         /// </summary>
@@ -870,8 +871,8 @@ namespace Projet_GONLO
             }
         }
 
-`       /// <summary>
-        /// method that resets all components of the pazzak round
+        /// <summary>
+        /// This method that resets all components of the pazaak round
         /// </summary>
         private void ResetGame()
         {

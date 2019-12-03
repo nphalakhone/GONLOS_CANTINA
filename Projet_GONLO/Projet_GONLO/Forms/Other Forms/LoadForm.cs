@@ -13,7 +13,7 @@ namespace Projet_GONLO
 {
     public partial class LoadForm : Form
     {
-        StreamWriter sw = new StreamWriter(Application.StartupPath + "\\SavesTest.txt");
+        StreamWriter sw;
         Player playerSelected = new Player();
         List<Player> playersSaved = new List<Player>();
 
@@ -33,7 +33,7 @@ namespace Projet_GONLO
         private void BtnEllLoad_Click(object sender, EventArgs e)
         {
             string line = "";
-
+            bool found = false;
             if (!File.Exists(Application.StartupPath + "\\SavesTest.txt"))
             {
                 MessageBox.Show("There is no Save file in your computer, you must create a player and save it first.", "ATTENTION");
@@ -74,17 +74,18 @@ namespace Projet_GONLO
                     playerSelected.PazaakGamesLost = p.PazaakGamesLost;
                     playerSelected.DejarikGamesWon = p.DejarikGamesWon;
                     playerSelected.DejarikGamesLost = p.DejarikGamesLost;
-                    this.Hide();
-                    MenuAccueil menu = new MenuAccueil();
-                    menu.Player1 = playerSelected;
-                    menu.ShowDialog();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("The name: " + TBoxName.Text + " does not appear on our guest file", "ATTENTION");
+                    found = true;
                 }
             }
+            if (!found)
+            {
+                MessageBox.Show("The name: " + TBoxName.Text + " does not appear on our guest file", "ATTENTION");
+            }
+            this.Hide();
+            MenuAccueil menu = new MenuAccueil();
+            menu.Player1 = playerSelected;
+            menu.ShowDialog();
+            this.Close();
         }
 
         private void LoadForm_Load(object sender, EventArgs e)
@@ -112,13 +113,14 @@ namespace Projet_GONLO
                 }
             }
             playersSaved.RemoveAt(temp);
+            sw = new StreamWriter(Application.StartupPath + "\\SavesTest.txt");
             foreach (Player p in playersSaved)
             {
                 sw.WriteLine(p.Name + ";" + p.Gender + ";" + p.Species + ";" + p.Credits.ToString() + ";" +
                             p.PazaakGamesWon.ToString() + ";" + p.PazaakGamesLost.ToString() + ";" + p.DejarikGamesWon.ToString() + ";"
                             + p.DejarikGamesLost.ToString());
             }
-
+            sw.Close();
         }
     }
 }
