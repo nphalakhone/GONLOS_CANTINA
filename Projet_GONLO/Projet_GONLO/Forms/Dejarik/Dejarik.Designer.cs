@@ -37,9 +37,11 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LblNewDefenseValue = new System.Windows.Forms.Label();
+            this.circularPictureBox2 = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
             this.LblDefMonsterName = new System.Windows.Forms.Label();
             this.LblDefendingMonster = new System.Windows.Forms.Label();
             this.LblNewAttackValue = new System.Windows.Forms.Label();
+            this.circularPictureBox1 = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
             this.LblAtkMonsterName = new System.Windows.Forms.Label();
             this.LblAttackingMonster = new System.Windows.Forms.Label();
             this.pnlDeDef = new System.Windows.Forms.Panel();
@@ -113,8 +115,6 @@
             this.LblMov = new System.Windows.Forms.Label();
             this.ListBoxLog = new System.Windows.Forms.ListBox();
             this.LblPlayerTurn = new System.Windows.Forms.Label();
-            this.circularPictureBox2 = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
-            this.circularPictureBox1 = new Projet_GONLO.Classes.Pazaak.CircularPictureBox();
             this.Button1 = new Projet_GONLO.ButtonCircle();
             this.Button2 = new Projet_GONLO.ButtonCircle();
             this.Button3 = new Projet_GONLO.ButtonCircle();
@@ -140,8 +140,11 @@
             this.Button23 = new Projet_GONLO.ButtonCircle();
             this.Button24 = new Projet_GONLO.ButtonCircle();
             this.Button25 = new Projet_GONLO.ButtonCircle();
+            this.returnToMainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterAtk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -175,8 +178,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterMov)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP2MonsterPow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterPow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -197,6 +198,7 @@
             this.filesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveToolStripMenuItem,
             this.restartToolStripMenuItem,
+            this.returnToMainMenuToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.filesToolStripMenuItem.Font = new System.Drawing.Font("SF Distant Galaxy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filesToolStripMenuItem.ForeColor = System.Drawing.Color.Gold;
@@ -211,7 +213,7 @@
             this.saveToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(283, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -222,7 +224,7 @@
             this.restartToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.restartToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
-            this.restartToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(283, 22);
             this.restartToolStripMenuItem.Text = "Restart";
             this.restartToolStripMenuItem.Click += new System.EventHandler(this.RestartToolStripMenuItem_Click);
             // 
@@ -233,7 +235,7 @@
             this.exitToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(283, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -283,6 +285,17 @@
             this.LblNewDefenseValue.TabIndex = 18;
             this.LblNewDefenseValue.Text = ": 0";
             // 
+            // circularPictureBox2
+            // 
+            this.circularPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.circularPictureBox2.Image = global::Projet_GONLO.Properties.Resources.def1;
+            this.circularPictureBox2.Location = new System.Drawing.Point(395, 739);
+            this.circularPictureBox2.Name = "circularPictureBox2";
+            this.circularPictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox2.TabIndex = 17;
+            this.circularPictureBox2.TabStop = false;
+            // 
             // LblDefMonsterName
             // 
             this.LblDefMonsterName.AutoSize = true;
@@ -314,6 +327,17 @@
             this.LblNewAttackValue.Size = new System.Drawing.Size(67, 38);
             this.LblNewAttackValue.TabIndex = 14;
             this.LblNewAttackValue.Text = ": 0";
+            // 
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.circularPictureBox1.Image = global::Projet_GONLO.Properties.Resources.atk1;
+            this.circularPictureBox1.Location = new System.Drawing.Point(114, 736);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox1.TabIndex = 13;
+            this.circularPictureBox1.TabStop = false;
             // 
             // LblAtkMonsterName
             // 
@@ -1145,28 +1169,6 @@
             this.LblPlayerTurn.TabIndex = 5;
             this.LblPlayerTurn.Text = "Player 1\'s Turn";
             // 
-            // circularPictureBox2
-            // 
-            this.circularPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.circularPictureBox2.Image = global::Projet_GONLO.Properties.Resources.def1;
-            this.circularPictureBox2.Location = new System.Drawing.Point(395, 739);
-            this.circularPictureBox2.Name = "circularPictureBox2";
-            this.circularPictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox2.TabIndex = 17;
-            this.circularPictureBox2.TabStop = false;
-            // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.circularPictureBox1.Image = global::Projet_GONLO.Properties.Resources.atk1;
-            this.circularPictureBox1.Location = new System.Drawing.Point(114, 736);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 13;
-            this.circularPictureBox1.TabStop = false;
-            // 
             // Button1
             // 
             this.Button1.AutoEllipsis = true;
@@ -1517,6 +1519,17 @@
             this.Button25.Tag = "A10";
             this.Button25.UseVisualStyleBackColor = false;
             // 
+            // returnToMainMenuToolStripMenuItem
+            // 
+            this.returnToMainMenuToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.returnToMainMenuToolStripMenuItem.BackgroundImage = global::Projet_GONLO.Properties.Resources.backButtonSteel;
+            this.returnToMainMenuToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.returnToMainMenuToolStripMenuItem.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.returnToMainMenuToolStripMenuItem.Name = "returnToMainMenuToolStripMenuItem";
+            this.returnToMainMenuToolStripMenuItem.Size = new System.Drawing.Size(283, 22);
+            this.returnToMainMenuToolStripMenuItem.Text = "Return to Main Menu";
+            this.returnToMainMenuToolStripMenuItem.Click += new System.EventHandler(this.returnToMainMenuToolStripMenuItem_Click);
+            // 
             // Dejarik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1560,6 +1573,8 @@
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterAtk)).EndInit();
@@ -1594,8 +1609,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterMov)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP2MonsterPow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgP1MonsterPow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1713,5 +1726,6 @@
         public System.Windows.Forms.PictureBox imgP1MonsterMov;
         public System.Windows.Forms.PictureBox imgP2MonsterPow;
         public System.Windows.Forms.PictureBox imgP1MonsterPow;
+        private System.Windows.Forms.ToolStripMenuItem returnToMainMenuToolStripMenuItem;
     }
 }

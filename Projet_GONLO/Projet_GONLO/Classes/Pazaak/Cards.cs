@@ -11,30 +11,25 @@ namespace Projet_GONLO
 {
     class Cards
     {
-
+        //Global variables
         private static Image[] TabPlusCards = new Image[6];
         private Image[] TabMinusCards = new Image[6];
         private Image[] TabPlusMinusCards = new Image[6];
         private Image[] TabNormalCards = new Image[10];
 
-
+        /// <summary>
+        /// Default Cards constructor
+        /// </summary>
         public Cards()
         {
             RemplirTableauCartes();
         }
 
+        /// <summary>
+        /// This method fills the Image arrays with their proper cards
+        /// </summary>
         private void RemplirTableauCartes()
         {
-            //ResourceManager rm = Resources.ResourceManager;
-
-
-
-
-            //Object rm = Properties.Resources.ResourceManager.GetObject("Card1");
-            //TabPlusCards[0] = (Bitmap)rm;
-
-            //TabPlusCards[0] = (Image)Properties.Resources.ResourceManager.GetObject("Card1");
-            
             for (int i = 0; i < TabPlusCards.Length; i++)
             {
                 TabPlusCards[i] = (Image)Properties.Resources.ResourceManager.GetObject("Carte" + "Plus" + (i+1));
@@ -51,33 +46,43 @@ namespace Projet_GONLO
             {
                 TabNormalCards[i] = (Image)Properties.Resources.ResourceManager.GetObject("Carte" + (i + 1));
             }
-
-            //TabPlusCards[0] = Resources.ResourceManager.GetObject("Resource_Image");
-            //    for (int i = 0; i < 6; i++)
-            //    {
-            //        TabPlusCards[i] = (Bitmap)rm.GetObject("Card" + "+" + (i+1).ToString());
-            //        TabMinusCards[i] = (Bitmap)rm.GetObject("Card" + "-" + (i + 1).ToString());
-            //        TabPlusMinusCards[i] = (Bitmap)rm.GetObject("Card" + "+-" + (i + 1).ToString());
-            //    }
-            //    for (int i = 0; i < TabNormalCards.Length; i++)
-            //    {
-            //        TabNormalCards[i] = (Bitmap)rm.GetObject("Card" + (i + 1).ToString());
-            //    }
-            //}
         }
 
+        /// <summary>
+        /// This Getter method returns a plus card image
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns> Image TabPlusCards[num] </returns>
         public Image getCartePlus(int num)
         {
             return TabPlusCards[num-1];
         }
+
+        /// <summary>
+        /// This Getter method returns a minus card image
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns> Image TabMinusCards[num] </returns>
         public Image getCarteMinus(int num)
         {
             return TabMinusCards[num - 1];
         }
+
+        /// <summary>
+        /// This Getter method returns a plus/minus card image
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns> Image TabPlusMinusCards[num] </returns>
         public Image getCartePlusMinus(int num)
         {
             return TabPlusMinusCards[num - 1];
         }
+
+        /// <summary>
+        /// This Getter method returns a normal card image
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns> Image TabNor</returns>
         public Image getCarteNormal(int num)
         {
             return TabNormalCards[num - 1];

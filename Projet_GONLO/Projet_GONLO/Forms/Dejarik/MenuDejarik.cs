@@ -82,6 +82,8 @@ namespace Projet_GONLO
                 logMonster += "Player 2 chose the monster : Ghhhk-";
                 logMonster += "Player 1 gets the monster : Houjix-";
             }
+
+            BtnGhhhk.BackColor = Color.FromArgb(80, Color.Gold);               
             btnClick(BtnGhhhk, BtnHoujix);
         }
 
@@ -102,6 +104,7 @@ namespace Projet_GONLO
                 logMonster += "Player 2 chose the monster : Houjix-";
                 logMonster += "Player 1 gets the monster : Ghhhk-";
             }
+            BtnHoujix.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnGhhhk, BtnHoujix);
         }
 
@@ -121,6 +124,7 @@ namespace Projet_GONLO
                 logMonster += "Player 2 chose the monster : Kintan Strider-";
                 logMonster += "Player 1 gets the monster : Ngok-";
             }
+            BtnKintanStrider.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
@@ -140,6 +144,7 @@ namespace Projet_GONLO
                 logMonster += "Player 2 chose the monster : Ngok-";
                 logMonster += "Player 1 gets the monster : Kintan Strider-";
             }
+            BtnNgok.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnKintanStrider, BtnNgok);
         }
 
@@ -159,6 +164,7 @@ namespace Projet_GONLO
                 logMonster += "Player 2 chose the monster : Klorslug-";
                 logMonster += "Player 1 gets the monster : Grimtaash-";
             }
+            BtnKlorslug.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
@@ -178,6 +184,7 @@ namespace Projet_GONLO
                 logMonster += "Player 2 chose the monster : Grimtaash-";
                 logMonster += "Player 1 gets the monster : Klorslug-";
             }
+            BtnGrimtaash.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnKlorslug, BtnGrimtaash);
         }
 
@@ -197,6 +204,7 @@ namespace Projet_GONLO
                 logMonster += "Player 2 chose the monster : Mantellian Savrip-";
                 logMonster += "Player 1 gets the monster : Monnok-";
             }
+            BtnMantellian.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnMantellian, BtnMonnok);
         }
 
@@ -216,12 +224,8 @@ namespace Projet_GONLO
                 logMonster += "Player 2 chose the monster : Monnok-";
                 logMonster += "Player 1 gets the monster : Mantellian Savrip-";
             }
+            BtnMonnok.BackColor = Color.FromArgb(80, Color.Gold);
             btnClick(BtnMantellian, BtnMonnok);
-        }
-
-        private void picAtkValue_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnClick(Button monster1, Button monster2)
@@ -279,11 +283,8 @@ namespace Projet_GONLO
 
         private void nextTurn()
         {
-
                 changeLabel();
-           
                 checkMonsterFinish();
-            
         }
 
         private void changeLabel()
