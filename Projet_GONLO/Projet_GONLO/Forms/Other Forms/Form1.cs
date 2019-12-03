@@ -139,6 +139,21 @@ namespace Projet_GONLO
         {
             sound.Stop();
             Hide();
+            MessageBox.Show("You must now select 10 cards for your deck. You will only have access to 4 of them and they will be chosen randomly. \n" +
+                " During the Pazaak best of 5 duel. You may only use each card once during the duel. Choose wisely. \n\n\n"
+                +
+                "For more information:\n" +
+                "+ Cards: When selected during Pazaak Duel will increase your score of the number written on the card.\n\n" +
+                "- Cards: When selected during Pazaak Duel will decrease your score of the number written on the card.\n\n" +
+                "+-Cards: When selected during Pazaak Duel will increase or decrease your score of the number written on the card. \n" +
+                "When you will click on the “flip card” text you will see a “+” or “-” (+by default)." +
+                "This symbol will decide which what the card will do.",
+                "Pazzak Card Selector Infomation");
+
+
+
+
+
             PazaakCardsSelector pazaakCards = new PazaakCardsSelector();
             pazaakCards.Player1 = player1;
             pazaakCards.ShowDialog();
