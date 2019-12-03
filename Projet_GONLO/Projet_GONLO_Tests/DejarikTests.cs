@@ -563,7 +563,7 @@ namespace Projet_GONLO_Tests
             //Act
             dejarikTest.SetField("players", players);
             dejarikTest.SetField("turn", 0);
-            dejarikTest.Invoke("findAtkMonster", players[(int)dejarikTest.GetField("turn")].ListMonsters[0].Position);
+            dejarikTest.Invoke("setAtkMonster", player1.AttMonster.Position);
 
             Assert.AreEqual(players[(int)dejarikTest.GetField("turn")].ListMonsters[0], (Monster)dejarikTest.GetField("attackingMonster"));
         }
@@ -574,31 +574,121 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void VerifyDefenseMonster()
         {
-            
+            //Arrange
+            Monster attackingMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
+            Monster defendingMonster = new Monster("The Kintan Strider", 1, 3, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Kintan_Strider"), typeMonster.Defensive, 14);
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            player1 = new Player();
+            player2 = new Player();
+            player1.AttMonster = attackingMonster;
+            player2.DefMonster = defendingMonster;
+            player1.AttMonster.Position = 14;
+            player2.DefMonster.Position = 15;
+            player1.ListMonsters = new List<Monster> { player1.AttMonster };
+            player2.ListMonsters = new List<Monster> { player2.DefMonster };
+            List<Player> players = new List<Player>();
+            players.Add(player1);
+            players.Add(player2);
+
+            //Act
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("turn", 0);
+            dejarikTest.Invoke("setDefMonster", (int)player2.DefMonster.Position);
+
+            Assert.AreEqual(player2.DefMonster, (Monster)dejarikTest.GetField("defendingMonster"));
         }
 
         /// <summary>
-        /// Test if the log return the correct value for the dice
+        /// Test if the log return the correct value for the dice (attack and defense)
         /// </summary>
         [TestMethod]
         public void RollDiceLogTest()
         {
+            //Arrange
+            Monster attackingMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
+            Monster defendingMonster = new Monster("The Kintan Strider", 1, 3, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Kintan_Strider"), typeMonster.Defensive, 14);
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            player1 = new Player();
+            player2 = new Player();
+            player1.AttMonster = attackingMonster;
+            player2.DefMonster = defendingMonster;
+            player1.AttMonster.Position = 14;
+            player2.DefMonster.Position = 15;
+            player1.ListMonsters = new List<Monster> { player1.AttMonster };
+            player2.ListMonsters = new List<Monster> { player2.DefMonster };
+            List<Player> players = new List<Player>();
+            players.Add(player1);
+            players.Add(player2);
 
+            //Act
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("turn", 0);
+            dejarikTest.SetField("newRound", 1);
+            dejarikTest.SetField("attackingMonster", attackingMonster);
+            dejarikTest.SetField("defendingMonster", defendingMonster);
+            dejarikTest.Invoke("clickAtkMonster", player1.AttMonster.Position);
+
+            int expectedAtkDiceValue = (int)dejarikTest.GetField("newAtk") - player1.AttMonster.Attack;
+            String expectedStringAttackingPlayer = "Round " + 1 + " Player 1's Monster : " + player1.AttMonster.Name + " rolled a : " + expectedAtkDiceValue;
+
+            int expectedDefDiceValue = (int)dejarikTest.GetField("newDef") - player2.DefMonster.Defense;
+            String expectedStringDefendingPlayer = "Round " + 1 + " Player 2's Monster : " + player2.DefMonster.Name + " rolled a : " + expectedDefDiceValue;
+
+            ListBox lb = (ListBox)dejarikTest.GetField("ListBoxLog");
+            String actualStringAtk = "";
+            String actualStringDef = "";
+
+            for (int i = 0; i < lb.Items.Count; i++)
+            {
+                if (lb.Items[i].Equals(expectedAtkDiceValue))
+                {
+                    actualStringAtk = lb.Items[i].ToString();
+                    Assert.AreEqual(expectedStringAttackingPlayer, actualStringAtk);
+                }
+                else if (lb.Items[i].Equals(expectedDefDiceValue))
+                {
+                    actualStringDef = lb.Items[i].ToString();
+                    Assert.AreEqual(expectedStringDefendingPlayer, actualStringDef);
+                }
+            }
         }
 
 
         /// <summary>
-        /// Test if the log return the correct test when the attacker win the push
+        /// Test if the log return the correct string when the attacker win the push
         /// </summary>
         [TestMethod]
         public void PushAttackerWinLogTest()
         {
+            //Arrange
+            Monster attackingMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
+            Monster defendingMonster = new Monster("The Kintan Strider", 1, 3, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("Kintan_Strider"), typeMonster.Defensive, 14);
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            player1 = new Player();
+            player2 = new Player();
+            player1.AttMonster = attackingMonster;
+            player2.DefMonster = defendingMonster;
+            player1.AttMonster.Position = 14;
+            player2.DefMonster.Position = 15;
+            player1.ListMonsters = new List<Monster> { player1.AttMonster };
+            player2.ListMonsters = new List<Monster> { player2.DefMonster };
+            List<Player> players = new List<Player>();
+            players.Add(player1);
+            players.Add(player2);
+
+            //Act
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("turn", 0);
+            dejarikTest.SetField("newRound", 1);
+            dejarikTest.SetField("attackingMonster", attackingMonster);
+            dejarikTest.SetField("defendingMonster", defendingMonster);
+            dejarikTest.Invoke("clickAtkMonster", player1.AttMonster.Position);
 
         }
 
 
         /// <summary>
-        /// Test if the log return the correct test when the defender win the push
+        /// Test if the log return the correct string when the defender win the push
         /// </summary>
         [TestMethod]
         public void PushDefenderWinLogTest()
@@ -608,7 +698,7 @@ namespace Projet_GONLO_Tests
 
 
         /// <summary>
-        /// Test if the log return the correct test when the attacker win the kill
+        /// Test if the log return the correct string when the attacker win the kill
         /// </summary>
         [TestMethod]
         public void killattackerWinLogTest()
@@ -618,7 +708,7 @@ namespace Projet_GONLO_Tests
 
 
         /// <summary>
-        /// Test if the log return the correct test when the defender win the kill
+        /// Test if the log return the correct string when the defender win the kill
         /// </summary>
         [TestMethod]
         public void killDefenderWinLogTest()

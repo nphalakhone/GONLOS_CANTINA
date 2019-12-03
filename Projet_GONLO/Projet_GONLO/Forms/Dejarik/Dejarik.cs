@@ -434,19 +434,19 @@ namespace Projet_GONLO
             if (roll == 0)
             {
                 newAtk = attack(players[turn].CurrMonster, dice);
-                addLogRollDick(dice, attackingMonster);
+                addLogRollDice(dice, attackingMonster);
                 roll++;
                 rollDice();
             }
             else
             {
-                addLogRollDick(dice, defendingMonster);
+                addLogRollDice(dice, defendingMonster);
                 defend(dice, newAtk);
                 roll = 0;
             }
         }
 
-        private void addLogRollDick(int dice, Monster monster)
+        private void addLogRollDice(int dice, Monster monster)
         {
             if (turn == 0)
             {
