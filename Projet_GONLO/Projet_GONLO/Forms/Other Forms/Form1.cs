@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace Projet_GONLO
     public partial class MenuAccueil : Form
     {
         Player player1 = new Player();
+        SoundPlayer sound = new SoundPlayer(Properties.Resources.Cantina_Band);
         //public MenuAccueil()
         //{
         //    this.DoubleBuffered = true;
@@ -25,7 +27,9 @@ namespace Projet_GONLO
         {
             this.DoubleBuffered = true;
             InitializeComponent();
-           // player1 = player;
+            
+            sound.PlayLooping();
+            // player1 = player;
         }
 
         bool etatWelcome = true;
@@ -133,6 +137,7 @@ namespace Projet_GONLO
 
         private void BtnEllPlayPazaak_Click(object sender, EventArgs e)
         {
+            sound.Stop();
             Hide();
             PazaakCardsSelector pazaakCards = new PazaakCardsSelector();
             pazaakCards.Player1 = player1;
@@ -147,6 +152,7 @@ namespace Projet_GONLO
 
         private void BtnEllPlayDejarik_Click(object sender, EventArgs e)
         {
+            sound.Stop();
             Hide();
             MenuDejarik menuDejarik = new MenuDejarik();
             menuDejarik.Player1 = player1;
