@@ -358,8 +358,8 @@ namespace Projet_GONLO_Tests
             players = (List<Player>)dejarikTest.GetField("players");
 
             //Assert
-            Assert.AreEqual(1, players[1].ListMonsters.Count);
-            Assert.AreNotEqual(14, players[1].AttMonster.Position);
+            Assert.AreEqual(1, players[1].ListMonsters.Count); //monstre existe toujours dans la liste
+            Assert.AreNotEqual(14, players[1].AttMonster.Position); //monstre a bouger
         }
 
 
@@ -394,8 +394,8 @@ namespace Projet_GONLO_Tests
             dejarikTest.Invoke("defend", 7, 9);
 
 
-            players = (List<Player>)dejarikTest.GetField("players");
-            Assert.AreNotEqual(14, players[0].AttMonster.Position);
+            players = (List<Player>)dejarikTest.GetField("players"); //monstre existe toujours dans la liste
+            Assert.AreNotEqual(14, players[0].AttMonster.Position); //monstre a bouger
         }
 
         /// <summary>
@@ -404,7 +404,33 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void DefendEqualsTest()
         {
+            //Arrange
+            Monster attackingMonster = new Monster("The Ghhhk", 3, 2, 1, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 0);
+            Monster defendingMonster = new Monster("The Houjix", 3, 1, 2, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("houjix"), typeMonster.Offensive, 0);
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            player1 = new Player();
+            player2 = new Player();
+            player1.AttMonster = attackingMonster;
+            player2.AttMonster = defendingMonster;
+            player2.AttMonster.Position = 14;
+            player1.ListMonsters = new List<Monster> { player1.AttMonster };
+            player2.ListMonsters = new List<Monster> { player2.AttMonster };
+            List<Player> players = new List<Player>();
+            players.Add(player1);
+            players.Add(player2);
 
+            //Act
+            dejarikTest.Invoke("initalizeListButtons");
+            dejarikTest.SetField("players", players);
+            dejarikTest.SetField("attackingMonster", attackingMonster);
+            dejarikTest.SetField("defendingMonster", defendingMonster);
+            dejarikTest.Invoke("defend", 8, 9);
+            players = (List<Player>)dejarikTest.GetField("players");
+            object newDef = dejarikTest.GetField("newDef");
+            //Assert
+            Assert.AreEqual(9, newDef);
+            Assert.AreEqual(1, players[1].ListMonsters.Count); //monstre existe toujours dans la liste
+            Assert.AreNotEqual(14, players[1].AttMonster.Position); //monstre a bouger
         }
 
         /// <summary>

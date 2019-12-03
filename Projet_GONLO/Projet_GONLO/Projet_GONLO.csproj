@@ -245,6 +245,10 @@
     <None Include="Resources\def.png" />
     <None Include="Resources\def1.png" />
     <None Include="Resources\Cards\back_card_Pazaak.png" />
+    <None Include="Resources\Cantina_Band.mp3" />
+    <None Include="Resources\Cantina_Band.wav" />
+    <None Include="Resources\Pazzak_Cantina.wav" />
+    <None Include="Resources\Dejarik_Cantina.wav" />
     <Content Include="Resources\StarsBackground.PNG" />
     <None Include="Resources\StarsBackground1.PNG" />
     <None Include="Resources\holochess-arkit.jpg" />

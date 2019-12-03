@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,7 @@ namespace Projet_GONLO
     {
         Player playerCBS = new Player();
         List<RoundPanel> playerDeck = new List<RoundPanel>();
+        SoundPlayer sound = new SoundPlayer(Properties.Resources.Pazzak_Cantina);
 
         List<Image> playerDeckImage = new List<Image>();
         List<int> positionCarteEnleve = new List<int>();
@@ -29,6 +31,7 @@ namespace Projet_GONLO
         public PazaakCardsSelector()
         {
             InitializeComponent();
+            sound.PlayLooping();
             FillListPanels();
         }
 
@@ -90,8 +93,7 @@ namespace Projet_GONLO
 
 
             newPazaakGame.CreditsWaged = int.Parse(MTxtBoxWager.Text);
-
-            newPazaakGame.ShowDialog();
+            newPazaakGame.ShowDialog();   
             this.Close();
         }
 
@@ -205,6 +207,7 @@ namespace Projet_GONLO
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            sound.Stop();
             this.Close();
         }
 

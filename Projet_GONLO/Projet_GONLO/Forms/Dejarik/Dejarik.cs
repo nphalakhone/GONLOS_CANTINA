@@ -240,19 +240,19 @@ namespace Projet_GONLO
                 {
                     MessageBox.Show("Player 1 is the winner of the game !");
                     disableButtonsWithTransparent();
-                    exit();
+                    exitMainMenu();
                 }
                 else if (players[1].ListMonsters.Count > players[0].ListMonsters.Count)
                 {
                     MessageBox.Show("Player 2 is the winner of the game !");
                     disableButtonsWithTransparent();
-                    exit();
+                    exitMainMenu();
                 }
                 else if (players[1].ListMonsters.Count == players[0].ListMonsters.Count)
                 {
                     MessageBox.Show("Equality!");
                     disableButtonsWithTransparent();
-                    exit();
+                    exitMainMenu();
                 }
             }
             else
@@ -844,6 +844,8 @@ namespace Projet_GONLO
             }
         }
 
+
+
         private void defend(int dice, int newAtk)
         {
             newDef = defendingMonster.Defense;
@@ -1082,16 +1084,22 @@ namespace Projet_GONLO
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            exit();
+            Application.Exit();
         }
 
-        private void exit()
+        private void exitMainMenu()
         {
+            player1.DejarikGamesLost++;
             this.Hide();
-            MenuAccueil ma = new MenuAccueil();
-            ma.Player1 = player1;
-            ma.ShowDialog();
+            MenuAccueil newMenuAccueil = new MenuAccueil();
+            newMenuAccueil.Player1 = player1;
+            newMenuAccueil.ShowDialog();
             this.Close();
+        }
+
+        private void returnToMainMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            exitMainMenu();
         }
 
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)

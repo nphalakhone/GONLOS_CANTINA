@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Projet_GONLO
 {
-    class RoundPanel : Panel
+    public class RoundPanel : Panel
     {
         Pen pen;
         float penWidth = 2.0f;

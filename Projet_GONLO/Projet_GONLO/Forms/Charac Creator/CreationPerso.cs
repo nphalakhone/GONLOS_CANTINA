@@ -169,7 +169,6 @@ namespace Projet_GONLO
         private void BtnEllNext_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //MenuAccueil menuAccueil = new MenuAccueil();
             player.Species = VerificationSpecies();
             player.Name = TxtBoxNameGen.Text;
             player.Credits = 500;
@@ -236,76 +235,83 @@ namespace Projet_GONLO
 
         public void GenderCheckName()
         {
+            string gender = "";
             if (RPnlImgMando.BorderStyle == style3D && CBoxMale.Checked)
             {
                 string playerName;
-                playerName = nameList.getListNameMand_M();
+                gender = "M";
+                playerName = nameList.getListNameMand(gender);
                 TxtBoxNameGen.Text = playerName;
             }
             else if (RPnlImgMando.BorderStyle == style3D && CBoxFemale.Checked)
             {
                 string playerName;
-                playerName = nameList.getListNameMand_F();
+                playerName = nameList.getListNameMand(gender);
                 TxtBoxNameGen.Text = playerName;
             }
             else if (RPnlImgZabrak.BorderStyle == style3D && CBoxMale.Checked)
             {
                 string playerName;
-                playerName = nameList.getListNameZab_M();
+                gender = "M";
+                playerName = nameList.getListNameZab(gender);
                 TxtBoxNameGen.Text = playerName;
             }
             else if (RPnlImgZabrak.BorderStyle == style3D && CBoxFemale.Checked)
             {
                 string playerName;
-                playerName = nameList.getListNameZab_F();
+                playerName = nameList.getListNameZab(gender);
                 TxtBoxNameGen.Text = playerName;
             }
             else if (RPnlImgSPB.BorderStyle == style3D && CBoxMale.Checked)
             {
                 string playerName;
-                playerName = nameList.getListNameSPB_M();
+                gender = "M";
+                playerName = nameList.getListNameSPB(gender);
                 TxtBoxNameGen.Text = playerName;
             }
             else if (RPnlImgSPB.BorderStyle == style3D && CBoxFemale.Checked)
             {
                 string playerName;
-                playerName = nameList.getListNameSPB_F();
+                playerName = nameList.getListNameSPB(gender);
                 TxtBoxNameGen.Text = playerName;
             }
             else if (RPnlImgTwi.BorderStyle == style3D && CBoxMale.Checked)
             {
                 string playerName;
-                playerName = nameList.getListNameTwilek_M();
+                gender = "M";
+                playerName = nameList.getListNameTwilek(gender);
                 TxtBoxNameGen.Text = playerName;
             }
             else if (RPnlImgTwi.BorderStyle == style3D && CBoxFemale.Checked)
             {
                 string playerName;
-                playerName = nameList.getListNameTwilek_F();
+                playerName = nameList.getListNameTwilek(gender);
                 TxtBoxNameGen.Text = playerName;
             }
             else if (RPnlImgCath.BorderStyle == style3D && CBoxMale.Checked)
             {
                 string playerName;
-                playerName = nameList.getListNameCathar_M();
+                gender = "M";
+                playerName = nameList.getListNameCathar(gender);
                 TxtBoxNameGen.Text = playerName;
             }
             else if (RPnlImgCath.BorderStyle == style3D && CBoxFemale.Checked)
             {
                 string playerName;
-                playerName = nameList.getListNameCathar_F();
+                playerName = nameList.getListNameCathar(gender);
                 TxtBoxNameGen.Text = playerName;
             }
             else if (RPnlImgHum.BorderStyle == style3D && CBoxMale.Checked)
             {
                 string playerName;
-                playerName = nameList.getListNameHum_M();
+                gender = "M";
+                playerName = nameList.getListNameHum(gender);
                 TxtBoxNameGen.Text = playerName;
             }
             else if (RPnlImgHum.BorderStyle == style3D && CBoxFemale.Checked)
             {
                 string playerName;
-                playerName = nameList.getListNameHum_F();
+                playerName = nameList.getListNameHum(gender);
                 TxtBoxNameGen.Text = playerName;
             }
         }
