@@ -9,14 +9,22 @@ namespace Projet_GONLO
     static class Program
     {
         /// <summary>
-        /// Main entry point of the application.
+        /// Point d'entrée principal de l'application.
         /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new MenuAccueil());
+            //Application.Run(new CreationPerso());
+            //Application.Run(new MenuDejarik());
             Application.Run(new StartForm());
+            //Application.Run(new Pazaak());
+            //Application.Run(new StartForm());
+            //Application.Run(new Pazaak());
+            //Application.Run(new PazaakCardsSelector());
+
         }
     }
 }

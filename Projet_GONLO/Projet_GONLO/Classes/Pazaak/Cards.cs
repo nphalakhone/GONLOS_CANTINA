@@ -9,32 +9,32 @@ using System.Threading.Tasks;
 
 namespace Projet_GONLO
 {
-    /// <summary>
-    /// Class card, necessary for the Pazaak Card Game
-    /// </summary>
     class Cards
     {
-        /// <summary>
-        /// Different arrays of each type of card
-        /// </summary>
-        private Image[] TabPlusCards = new Image[6];
+
+        private static Image[] TabPlusCards = new Image[6];
         private Image[] TabMinusCards = new Image[6];
         private Image[] TabPlusMinusCards = new Image[6];
         private Image[] TabNormalCards = new Image[10];
 
-        /// <summary>
-        /// Default constructor
-        /// </summary>
+
         public Cards()
         {
-            FillCardArrays();
+            RemplirTableauCartes();
         }
 
-        /// <summary>
-        /// Fill the different arrays with the correct cards
-        /// </summary>
-        private void FillCardArrays()
-        {           
+        private void RemplirTableauCartes()
+        {
+            //ResourceManager rm = Resources.ResourceManager;
+
+
+
+
+            //Object rm = Properties.Resources.ResourceManager.GetObject("Card1");
+            //TabPlusCards[0] = (Bitmap)rm;
+
+            //TabPlusCards[0] = (Image)Properties.Resources.ResourceManager.GetObject("Card1");
+            
             for (int i = 0; i < TabPlusCards.Length; i++)
             {
                 TabPlusCards[i] = (Image)Properties.Resources.ResourceManager.GetObject("Carte" + "Plus" + (i+1));
@@ -51,13 +51,21 @@ namespace Projet_GONLO
             {
                 TabNormalCards[i] = (Image)Properties.Resources.ResourceManager.GetObject("Carte" + (i + 1));
             }
+
+            //TabPlusCards[0] = Resources.ResourceManager.GetObject("Resource_Image");
+            //    for (int i = 0; i < 6; i++)
+            //    {
+            //        TabPlusCards[i] = (Bitmap)rm.GetObject("Card" + "+" + (i+1).ToString());
+            //        TabMinusCards[i] = (Bitmap)rm.GetObject("Card" + "-" + (i + 1).ToString());
+            //        TabPlusMinusCards[i] = (Bitmap)rm.GetObject("Card" + "+-" + (i + 1).ToString());
+            //    }
+            //    for (int i = 0; i < TabNormalCards.Length; i++)
+            //    {
+            //        TabNormalCards[i] = (Bitmap)rm.GetObject("Card" + (i + 1).ToString());
+            //    }
+            //}
         }
 
-        /// <summary>
-        /// Getters and setters for each type of card
-        /// </summary>
-        /// <param name="num"></param>
-        /// <returns></returns>
         public Image getCartePlus(int num)
         {
             return TabPlusCards[num-1];
