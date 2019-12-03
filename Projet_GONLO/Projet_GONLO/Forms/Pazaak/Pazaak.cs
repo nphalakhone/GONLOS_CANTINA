@@ -393,8 +393,6 @@ namespace Projet_GONLO
                         {
                             if (AiDeck[i] + ai.Points >= playerPazaak.Points ||  4 - ai.NbCarteUtiliseAi > 0)
                             {
-                                MessageBox.Show(AiDeck[i].ToString());
-
                                 return DetermineCard(i);
                             }
 
