@@ -512,16 +512,6 @@ namespace Projet_GONLO_Tests
 
 
         /// <summary>
-        /// Test if the player action end when the monster cannot move anymore
-        /// </summary>
-        [TestMethod]
-        public void EndActionWhenMonsterCantMoveTest()
-        {
-            //dernier test de guillaume
-        }
-
-
-        /// <summary>
         /// Test if the action end when the monster has no more movement
         /// </summary>
         [TestMethod]
@@ -534,7 +524,6 @@ namespace Projet_GONLO_Tests
             player1 = new Player();
             player2 = new Player();
             player1.CurrMonster = myMonster;
-            player2.AttMonster = myMonster;
             List<Player> players = new List<Player>();
             players.Add(player1);
             players.Add(player2);
