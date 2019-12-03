@@ -42,7 +42,7 @@ namespace Projet_GONLO
         }
 
         /// <summary>
-        /// 
+        /// Method that add the result of the picked phase in the logger
         /// </summary>
         /// <param name="monster"></param>
         private void addLogMonster(string monster)
