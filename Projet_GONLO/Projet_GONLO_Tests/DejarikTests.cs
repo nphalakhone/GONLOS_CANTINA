@@ -764,16 +764,6 @@ namespace Projet_GONLO_Tests
 
 
         /// <summary>
-        /// Test if the log display the movement of the monster
-        /// </summary>
-        [TestMethod]
-        public void MonsterMoveLogTest()
-        {
-
-        }
-
-
-        /// <summary>
         /// Test if the monster has the right def after rolling the dice
         /// </summary>
         [TestMethod]
