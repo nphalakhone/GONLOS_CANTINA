@@ -14,7 +14,7 @@ using Projet_GONLO.Classes.Pazaak;
 namespace Projet_GONLO
 {
     /// <summary>
-    /// enum that has a property for each posible move the player can make
+    /// This enumerator has a property for each possible move the player can make
     /// </summary>
     public enum Move { Stand, End_Turn, AddCard1, AddCard2, AddCard3, AddCard4 };
 
@@ -51,7 +51,7 @@ namespace Projet_GONLO
 
 
         /// <summary>
-        /// Constructor Pazzak
+        /// Pazaak Constructor
         /// </summary>
         /// <param name="playerDeckPazaak"></param>
         /// <param name="carteIntEnvoye"></param>
@@ -65,8 +65,9 @@ namespace Projet_GONLO
             SetupAiDeck();
             SetupBoard();
         }
+
         /// <summary>
-        /// Method that sets up global array with the values passed to the pazaak form
+        /// This method that sets up global array with the values passed to the pazaak form
         /// to acentuate accesibility
         /// </summary>
         private void SetupAiDeck()
@@ -84,7 +85,7 @@ namespace Projet_GONLO
 
         }
         /// <summary>
-        /// Method that converts array passed in parameters into list
+        /// This method converts an array passed in parameters into a list
         /// </summary>
         /// <param name="carteIntEnvoye"></param>
         /// <returns></returns>
@@ -98,8 +99,19 @@ namespace Projet_GONLO
             return listRetourner;
         }
 
+        /// <summary>
+        /// Internal int object which is how much the player waged
+        /// </summary>
         internal int CreditsWaged { get => credsWaged; set => credsWaged = value; }
+
+        /// <summary>
+        /// Internal Player object which is the user's player
+        /// </summary>
         internal Player Player1 { get => playerPazaak; set => playerPazaak = value; }
+
+        /// <summary>
+        /// Property RoundOver1
+        /// </summary>
         public bool RoundOver1 { get => RoundOver; set => RoundOver = value; }
 
         /// <summary>
@@ -650,6 +662,7 @@ namespace Projet_GONLO
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -658,6 +671,8 @@ namespace Projet_GONLO
             newPazaakCardSelector.ShowDialog();
             this.Close();
         }
+
+
         /// <summary>
         /// Method that leaves the game and removes credits from the player
         /// </summary>
@@ -677,6 +692,8 @@ namespace Projet_GONLO
                 this.Close();
             }
         }
+
+
         /// <summary>
         /// Method de declenche lorsque l'on clique sur help
         /// </summary>
@@ -684,8 +701,25 @@ namespace Projet_GONLO
         /// <param name="e"></param>
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("How to Play Pazaak:\n" +
 
+            "The goal of the game is to win the best of 5.Each player has their own deck of 4 cards.\n" +
+            "Your 4 cards are randomly selected from the 10 cards you selected in the last window.\n" +
+            "To win you must the closest to 20 but not go over 20 \n\n\n " +
+            "During your turn you have for options:\n" +
+            "1.End turn:  this will add a random card form 1 to 10\n\n" +
+            "2.Stand: you stop adding cards\n\n" +
+            "3.Add Card: it will add one of our cards form your deck to the bord\n\n\n" +
+            "For more information:\n\n" +
+            "+ Cards: When selected during Pazaak Duel will increase your score of the number written on the card.\n\n" +
+            "- Cards: When selected during Pazaak Duel will decrease your score of the number written on the card.\n\n" +
+            "+/- Cards: When selected during Pazaak Duel will increase or decrease your score of the number written on the card. \n" +
+            "When you will click on the “flip card” text you will see a “+” or “-” (+by default)." +
+            "This symbol will decide which what the card will do.",
+             "Pazzak Infomation");
         }
+
+
         /// <summary>
         /// Methode that is accessed when clicked on forfeit game button
         /// </summary>
@@ -704,8 +738,9 @@ namespace Projet_GONLO
                 newMenuAccueil.ShowDialog();
                 this.Close();
             }
-
         }
+
+
         /// <summary>
         /// Method that permits to load pazzak form and sets up all the labels to
         /// be by default false
