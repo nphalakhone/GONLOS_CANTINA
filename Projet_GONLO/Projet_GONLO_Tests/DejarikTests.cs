@@ -762,6 +762,103 @@ namespace Projet_GONLO_Tests
             Assert.AreEqual(0, dejarikTest.GetField("counterMov"));
         }
 
+        /// <summary>
+        /// Test if player 1 wins after 25 rounds
+        /// </summary>
+        [TestMethod]
+        public void EndGameWinPlayer1Test()
+        {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            Monster myMonster = new Monster("The Ghhhk", 3, 2, 4, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 21);
+            player1 = new Player();
+            player2 = new Player();
+            player1.DefMonster= myMonster;    
+            player1.AttMonster = myMonster;
+            player2.AttMonster = myMonster;
+            player1.ListMonsters = new List<Monster> { player1.AttMonster, player1.DefMonster };
+            player2.ListMonsters = new List<Monster> { player2.AttMonster };
+            List<Player> players = new List<Player>();
+            players.Add(player1);
+            players.Add(player2);
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
+        
+            //Act (Monster at position 3)
+            dejarikTest.SetField("listButtons", listButtons);
+            dejarikTest.SetField("newRound", 25);
+            dejarikTest.SetField("players", players);
+            dejarikTest.Invoke("endGame");
+            players = (List<Player>)dejarikTest.GetField("players");
+
+            //Assert
+            Assert.AreEqual(1, players[0].DejarikGamesWon);
+        }
+
+        /// <summary>
+        /// Test if player 2 wins after 25 rounds
+        /// </summary>
+        [TestMethod]
+        public void EndGameWinPlayer2Test()
+        {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            Monster myMonster = new Monster("The Ghhhk", 3, 2, 4, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 21);
+            player1 = new Player();
+            player2 = new Player();
+            player2.DefMonster = myMonster;
+            player1.AttMonster = myMonster;
+            player2.AttMonster = myMonster;
+            player1.ListMonsters = new List<Monster> { player1.AttMonster};
+            player2.ListMonsters = new List<Monster> { player2.AttMonster , player2.DefMonster};
+            List<Player> players = new List<Player>();
+            players.Add(player1);
+            players.Add(player2);
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
+
+            //Act (Monster at position 3)
+            dejarikTest.SetField("listButtons", listButtons);
+            dejarikTest.SetField("newRound", 25);
+            dejarikTest.SetField("players", players);
+            dejarikTest.Invoke("endGame");
+            players = (List<Player>)dejarikTest.GetField("players");
+
+            //Assert
+            Assert.AreEqual(1, players[0].DejarikGamesLost);
+        }
+
+
+        /// <summary>
+        /// Test if draw after 25 rounds
+        /// </summary>
+        [TestMethod]
+        public void EndGameDrawTest()
+        {
+            //Arrange
+            dejarikTest = new PrivateObject(new Dejarik(""));
+            Monster myMonster = new Monster("The Ghhhk", 3, 2, 4, (Image)Projet_GONLO.Properties.Resources.ResourceManager.GetObject("ghhhk"), typeMonster.Offensive, 21);
+            player1 = new Player();
+            player2 = new Player();
+            player1.AttMonster = myMonster;
+            player2.AttMonster = myMonster;
+            player1.ListMonsters = new List<Monster> { player1.AttMonster };
+            player2.ListMonsters = new List<Monster> { player2.AttMonster };
+            List<Player> players = new List<Player>();
+            players.Add(player1);
+            players.Add(player2);
+            List<Button> listButtons = (List<Button>)dejarikTest.GetField("listButtons");
+
+            //Act (Monster at position 3)
+            dejarikTest.SetField("listButtons", listButtons);
+            dejarikTest.SetField("newRound", 25);
+            dejarikTest.SetField("players", players);
+            dejarikTest.Invoke("endGame");
+            players = (List<Player>)dejarikTest.GetField("players");
+
+            //Assert
+            Assert.AreEqual(0, players[0].DejarikGamesLost);
+            Assert.AreEqual(0, players[0].DejarikGamesWon);
+        }
+
 
         /// <summary>
         /// Test if the monster has the right def after rolling the dice
