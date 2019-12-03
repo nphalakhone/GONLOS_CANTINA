@@ -725,17 +725,6 @@ namespace Projet_GONLO_Tests
             Assert.AreNotEqual(14, players[1].AttMonster.Position); //monstre a bouger
         }
 
-
-        /// <summary>
-        /// Test if the player action end when the monster cannot move anymore
-        /// </summary>
-        [TestMethod]
-        public void EndActionWhenMonsterCantMoveTest()
-        {
-
-        }
-
-
         /// <summary>
         /// Test if the action end when the monster has no more movement
         /// </summary>
