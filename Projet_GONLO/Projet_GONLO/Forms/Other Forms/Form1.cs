@@ -12,11 +12,26 @@ using System.Windows.Forms;
 
 namespace Projet_GONLO
 {
-    public partial class MainForm : Form
+    public partial class MenuAccueil : Form
     {
-        //Global Variables
         Player player1 = new Player();
         SoundPlayer sound = new SoundPlayer(Properties.Resources.Cantina_Band);
+        //public MenuAccueil()
+        //{
+        //    this.DoubleBuffered = true;
+        //    InitializeComponent();
+
+        //}
+
+        public MenuAccueil()
+        {
+            this.DoubleBuffered = true;
+            InitializeComponent();
+            
+            sound.PlayLooping();
+            // player1 = player;
+        }
+
         bool etatWelcome = true;
         bool etatGonlo = true;
         int len1;
@@ -24,27 +39,8 @@ namespace Projet_GONLO
         string txt1;
         string txt2;
 
-        /// <summary>
-        /// Default Constructor
-        /// </summary>
-        public MainForm()
-        {
-            this.DoubleBuffered = true;
-            InitializeComponent();
-            sound.PlayLooping();
-            // player1 = player;
-        }
-
-        /// <summary>
-        /// Property that grants the form a Player object
-        /// </summary>
         internal Player Player1 { get => player1; set => player1 = value; }
 
-        /// <summary>
-        /// This method sets the default form when it loads
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void MenuAccueil_Load(object sender, EventArgs e)
         {
             txt1 = LblWelcome.Text;
@@ -64,11 +60,6 @@ namespace Projet_GONLO
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
-        /// <summary>
-        /// This click event method shows the Pazaak's informations panel and hides the others
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void BtnEllPazaak_Click(object sender, EventArgs e)
         {
             RPnlDejarik.Hide();
@@ -77,11 +68,6 @@ namespace Projet_GONLO
             this.Refresh();
         }
 
-        /// <summary>
-        /// This click event method shows the Dejarik's informations panel and hides the others
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void BtnEllDejarik_Click(object sender, EventArgs e)
         {
             RPnlPazaak.Hide();
@@ -90,11 +76,6 @@ namespace Projet_GONLO
             this.Refresh();
         }
 
-        /// <summary>
-        /// This click event method shows the Swoop Bike Racing's informations panel and hides the others
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void BtnEllSB_Click(object sender, EventArgs e)
         {
             RPnlPazaak.Hide();
@@ -103,24 +84,14 @@ namespace Projet_GONLO
             this.Refresh();
         }
 
-        /// <summary>
-        /// This click event method closes the game
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BtnEllExit_Click(object sender, EventArgs e)
+        private void BtnEllSettings_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        /// <summary>
-        /// This method makes the labels on top of the form move left to right
-        /// and changes the font of the text
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void TimerSlide1_Tick(object sender, EventArgs e)
         {
+
             //label1
             if (LblWelcome.Left < this.Width)
             {
@@ -164,11 +135,6 @@ namespace Projet_GONLO
             }
         }
 
-        /// <summary>
-        /// This click event method closes the MenuAccueil form and opens the Pazaak Game
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void BtnEllPlayPazaak_Click(object sender, EventArgs e)
         {
             sound.Stop();
@@ -177,14 +143,13 @@ namespace Projet_GONLO
             pazaakCards.Player1 = player1;
             pazaakCards.ShowDialog();
             this.Close();
+            //Hide();
+            //Pazaak newPazaakGame = new Pazaak();
+            //newPazaakGame.ShowDialog();
+            //this.Close();
 
         }
 
-        /// <summary>
-        /// This click event method closes the MenuAccueil form and opens the Dejarik Game
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void BtnEllPlayDejarik_Click(object sender, EventArgs e)
         {
             sound.Stop();
@@ -195,11 +160,6 @@ namespace Projet_GONLO
             this.Close();
         }
 
-        /// <summary>
-        /// This click event method expands the player's information board
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void BtnGBoxPI_Click(object sender, EventArgs e)
         {
             if (GBoxPlayerInfo.Height == 460)

@@ -582,7 +582,7 @@ namespace Projet_GONLO
                 playerPazaak.Credits -= credsWaged;
                 playerPazaak.PazaakGamesLost++;
                 this.Hide();
-                MainForm newMenuAccueil = new MainForm();
+                MenuAccueil newMenuAccueil = new MenuAccueil();
                 newMenuAccueil.Player1 = playerPazaak;
                 newMenuAccueil.ShowDialog();
                 this.Close();
@@ -602,7 +602,7 @@ namespace Projet_GONLO
                 playerPazaak.Credits -= credsWaged;
                 playerPazaak.PazaakGamesLost++;
                 this.Hide();
-                MainForm newMenuAccueil = new MainForm();
+                MenuAccueil newMenuAccueil = new MenuAccueil();
                 newMenuAccueil.Player1 = playerPazaak;
                 newMenuAccueil.ShowDialog();
                 this.Close();
@@ -772,7 +772,7 @@ namespace Projet_GONLO
                 this.Hide();
                 playerPazaak.NbVictoire = 0;
                 ai.NbVictoire = 0;
-                MainForm newMenuAccueil = new MainForm();
+                MenuAccueil newMenuAccueil = new MenuAccueil();
                 newMenuAccueil.Player1 = playerPazaak;
                 newMenuAccueil.ShowDialog();
                 this.Close();
@@ -785,7 +785,7 @@ namespace Projet_GONLO
                 this.Hide();
                 playerPazaak.NbVictoire = 0;
                 ai.NbVictoire = 0;
-                MainForm newMenuAccueil = new MainForm();
+                MenuAccueil newMenuAccueil = new MenuAccueil();
                 newMenuAccueil.Player1 = playerPazaak;
                 newMenuAccueil.ShowDialog();
                 this.Close();

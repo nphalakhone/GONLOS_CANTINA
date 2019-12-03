@@ -10,10 +10,6 @@ namespace Projet_GONLO.Classes.Pazaak
 {
     public class CircularPictureBox : PictureBox
     {
-        /// <summary>
-        /// This method makes the button look elliptical
-        /// </summary>
-        /// <param name="pe"></param>
         protected override void OnPaint(PaintEventArgs pe)
         {
             GraphicsPath g = new GraphicsPath();
