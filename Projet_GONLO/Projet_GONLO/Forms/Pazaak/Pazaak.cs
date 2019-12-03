@@ -870,7 +870,7 @@ namespace Projet_GONLO
             }
         }
 
-`       /// <summary>
+        /// <summary>
         /// method that resets all components of the pazzak round
         /// </summary>
         private void ResetGame()
