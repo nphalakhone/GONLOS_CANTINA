@@ -59,11 +59,10 @@ namespace Projet_GONLO_Tests
             PazaakCardSelectorTest = new PrivateObject(new PazaakCardsSelector());
 
             //Act
-            PazaakCardSelectorTest.Invoke("FillListPanels");
             bool filled = (bool)PazaakCardSelectorTest.Invoke("AllCardsSelected");
 
             //Assert
-            Assert.AreEqual(true, filled);
+            Assert.AreEqual(false, filled);
         }
 
 
@@ -97,7 +96,13 @@ namespace Projet_GONLO_Tests
             Assert.AreEqual(0, nbCartes);
         }
 
-       
+
+
+
+
+
+
+
 
 
     }

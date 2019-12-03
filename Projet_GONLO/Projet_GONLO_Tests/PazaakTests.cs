@@ -21,14 +21,24 @@ namespace Projet_GONLO_Tests
         [TestMethod]
         public void SetupAiDeckTest()
         {
+            
+            int[] carteIntEnvoye = { 1,2,3,4,5,6,7,8,9,10};
+            List<Image> playerDeckPazaak = new List<Image>();
+            for (int i = 0; i < 10; i++)
+            {
+                //Projet_GONLO.Properties.Resources.Carte4;
+                playerDeckPazaak.Add(Projet_GONLO.Properties.Resources.Carte4);
+            }
+            
+
             //Arrange
-            pazaakTest = new PrivateObject(new Pazaak(null, null));
+            pazaakTest = new PrivateObject(new Pazaak(playerDeckPazaak, carteIntEnvoye));
 
             //Act
             pazaakTest.Invoke("SetupAiDeck");//call method
-            List<Panel> TabPnlAiDeck = (List<Panel>)pazaakTest.GetField("TabPnlAiDeck");//getObject
+            Panel[] TabPnlAiDeck = (Panel[])pazaakTest.GetField("TabPnlAiDeck");//getObject
             int compteur = 0;
-            for (int i = 0; i < TabPnlAiDeck.Count; i++)
+            for (int i = 0; i < TabPnlAiDeck.Length; i++)
             {
                 if (TabPnlAiDeck[i].BackgroundImage != null && 
                     TabPnlAiDeck[i].BackgroundImageLayout == ImageLayout.Stretch)
@@ -47,31 +57,50 @@ namespace Projet_GONLO_Tests
         public void TabToListTest()
         {
             //Arrange
-            pazaakTest = new PrivateObject(new Pazaak(null, null));
+            int[] carteIntEnvoye = { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
+            List<Image> playerDeckPazaak = new List<Image>();
+            for (int i = 0; i < 10; i++)
+            {
+                
+                playerDeckPazaak.Add(Projet_GONLO.Properties.Resources.Carte4);
+            }
+            pazaakTest = new PrivateObject(new Pazaak(playerDeckPazaak, carteIntEnvoye));
 
             //Act
-            int[] carteIntEnvoye =
+            List<int> listeTest = (List<int>) pazaakTest.Invoke("TabToList", carteIntEnvoye);
+            bool pareil = true;
+            for (int i = 0; i < listeTest.Count; i++)
             {
-                3,3,3,3
-            };
-            
+                if (listeTest[i] != carteIntEnvoye[i])
+                {
+                    pareil = false;
+                }
+            }
+
             //Assert
-            Assert.AreEqual(carteIntEnvoye, pazaakTest.Invoke("TabToList", carteIntEnvoye));
+           Assert.AreEqual(true, pareil);
         }
 
         [TestMethod]
         public void SetupBoardTest()
         {
             //Arrange
-            pazaakTest = new PrivateObject(new Pazaak(null, null));
+            int[] carteIntEnvoye = { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 };
+            List<Image> playerDeckPazaak = new List<Image>();
+            for (int i = 0; i < 10; i++)
+            {
+
+                playerDeckPazaak.Add(Projet_GONLO.Properties.Resources.Carte4);
+            }
+            pazaakTest = new PrivateObject(new Pazaak(playerDeckPazaak, carteIntEnvoye));
 
             //Act
             pazaakTest.Invoke("SetupBoard");//call method
-            List<Panel> TabPanelLeft = (List<Panel>)pazaakTest.GetField("TabPanelLeft");//getObject
-            List<Panel> TabPanelRight = (List<Panel>)pazaakTest.GetField("TabPanelRight");//getObject
+            Panel[] TabPanelLeft = (Panel[])pazaakTest.GetField("TabPanelLeft");//getObject
+            Panel[] TabPanelRight = (Panel[])pazaakTest.GetField("TabPanelRight");//getObject
             int compteurLeft = 0;
             int compteurRight = 0;
-            for (int i = 0; i < TabPanelLeft.Count; i++)
+            for (int i = 0; i < TabPanelLeft.Length; i++)
             {
                  if (TabPanelLeft[i] != null)
                   {
@@ -84,20 +113,28 @@ namespace Projet_GONLO_Tests
             }
 
             //Assert
-            Assert.AreEqual(TabPanelLeft.Count, compteurLeft);
-            Assert.AreEqual(TabPanelRight.Count, compteurRight);
+            Assert.AreEqual(TabPanelLeft.Length, compteurLeft);
+            Assert.AreEqual(TabPanelRight.Length, compteurRight);
         }
 
 
         [TestMethod]
-        public void setupPlayerdeckTest()
+        public void SetupPlayerdeckTest()
         {
+
             //Arrange
-            pazaakTest = new PrivateObject(new Pazaak(null, null));
+            int[] carteIntEnvoye = { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 };
+            List<Image> playerDeckPazaak = new List<Image>();
+            for (int i = 0; i < 10; i++)
+            {
+
+                playerDeckPazaak.Add(Projet_GONLO.Properties.Resources.Carte4);
+            }
+            pazaakTest = new PrivateObject(new Pazaak(playerDeckPazaak, carteIntEnvoye));
 
             //Act
             pazaakTest.Invoke("SetupPlayerdeck");//call method
-            List<Panel> panelPlayerDeck = (List<Panel>)pazaakTest.GetField("panelPlayerDeck");//getObject
+            Panel[] panelPlayerDeck = (Panel[])pazaakTest.GetField("panelPlayerDeck");//getObject
             int[] AiDeck = (int[])pazaakTest.GetField("AiDeck");//getObject
             int compteur = 0;
             for (int i = 0; i < AiDeck.Length; i++)
@@ -117,24 +154,37 @@ namespace Projet_GONLO_Tests
         public void SelectCardsForDeckTest()
         {
             //Arrange
-            pazaakTest = new PrivateObject(new Pazaak(null, null));
+            int[] carteIntEnvoye = { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 };
+            List<Image> playerDeckPazaak = new List<Image>();
+            for (int i = 0; i < 10; i++)
+            {
+
+                playerDeckPazaak.Add(Projet_GONLO.Properties.Resources.Carte4);
+            }
+            pazaakTest = new PrivateObject(new Pazaak(playerDeckPazaak, carteIntEnvoye));
 
             //Act
             pazaakTest.Invoke("SelectCardsForDeck");//call method
-            List<Panel> panelPlayerDeck = (List<Panel>)pazaakTest.GetField("panelPlayerDeck");//getObject
-            int[] AiDeck = (int[])pazaakTest.GetField("AiDeck");//getObject
+            List<int> ListIntSelectionne = (List<int>)pazaakTest.GetField("ListIntSelectionne");//getObject
             int compteur = 0;
-            for (int i = 0; i < AiDeck.Length; i++)
+            for (int i = 0; i < ListIntSelectionne.Count; i++)
             {
-                if (AiDeck[i] > -7 && AiDeck[i] < 13)
+                if (ListIntSelectionne[i] > -7 && ListIntSelectionne[i] < 13)
                 {
                     compteur++;
                 }
             }
 
             //Assert
-            Assert.AreEqual(AiDeck.Length, compteur);
+            Assert.AreEqual(ListIntSelectionne.Count, compteur);
         }
+
+
+       
+
+
+
+
 
 
 
