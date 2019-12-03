@@ -14,7 +14,7 @@ using Projet_GONLO.Classes.Pazaak;
 namespace Projet_GONLO
 {
 
-    enum Move { Stand, End_Turn, AddCard1, AddCard2, AddCard3, AddCard4 };
+    public enum Move { Stand, End_Turn, AddCard1, AddCard2, AddCard3, AddCard4 };
 
     public partial class Pazaak : Form
     {
@@ -32,7 +32,7 @@ namespace Projet_GONLO
         //Panel[] panelAiDeck;
         Panel[] TabPanelLeft;
         Panel[] TabPanelRight;
-
+        Panel[] TabPnlAiDeck;
         CircularPictureBox[] tabCircularBtnPlayer;
         CircularPictureBox[] tabCircularBtnAi;
         int credsWaged;
@@ -58,7 +58,7 @@ namespace Projet_GONLO
 
         private void SetupAiDeck()
         {
-            Panel[] TabPnlAiDeck = new Panel[]
+           TabPnlAiDeck = new Panel[]
            {
              PnlAiDeck1,PnlAiDeck2,PnlAiDeck3,PnlAiDeck4
            };
@@ -163,10 +163,6 @@ namespace Projet_GONLO
                 tailleListe--;
                 nombreCarteSelectionne++;
             }
-            //for (int i = 0; i < 4; i++)
-            //{
-            //    MessageBox.Show((ListIntSelectionne[i] + 1).ToString());
-            //}
         }
 
         private void End_Turn_Click(object sender, EventArgs e)

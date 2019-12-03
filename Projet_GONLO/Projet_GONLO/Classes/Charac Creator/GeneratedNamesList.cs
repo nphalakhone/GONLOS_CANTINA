@@ -8,446 +8,474 @@ namespace Projet_GONLO
 {
     class GeneratedNamesList
     {
+        //Global Random
         private Random rand = new Random();
 
-        public List<string> listNameMandalorianM = new List<string>();
-        public List<string> listNameMandalorianF = new List<string>();
-        public List<string> listNameZabrakM = new List<string>();
-        public List<string> listNameZabrakF = new List<string>();
-        public List<string> listNameSPB_M = new List<string>();
-        public List<string> listNameSPB_F = new List<string>();
-        public List<string> listNameTwilekM = new List<string>();
-        public List<string> listNameTwilekF = new List<string>();
-        public List<string> listNameCatharM = new List<string>();
-        public List<string> listNameCatharF = new List<string>();
-        public List<string> listNameHumanM = new List<string>();
-        public List<string> listNameHumanF = new List<string>();
+        //Lists of names for all species 
+        public List<string> listNameMandalorian = new List<string>();
+        public List<string> listNameZabrak = new List<string>();
+        public List<string> listNameSPB = new List<string>();
+        public List<string> listNameTwilek = new List<string>();
+        public List<string> listNameCathar = new List<string>();
+        public List<string> listNameHuman = new List<string>();
 
-        private List<string> FillListNameMand_M()
+        /// <summary>
+        /// This method adds Mandalorian names in the List<string> listNameMandalorian
+        /// </summary>
+        /// <returns> List<string> listNameMandalorian </returns>
+        private List<string> FillListNameMand()
         {
-            listNameMandalorianM.Add("Par Wruuc");
-            listNameMandalorianM.Add("Drick Wrarkard");
-            listNameMandalorianM.Add("Pad Zahl");
-            listNameMandalorianM.Add("Juk Daxagg");
-            listNameMandalorianM.Add("Lliyiod Tunch");
-            listNameMandalorianM.Add("Xideank Drachorr");
-            listNameMandalorianM.Add("Iopoe Fyrs");
-            listNameMandalorianM.Add("Anno Rasuard");
-            listNameMandalorianM.Add("Rhiidebeenx Krungh");
-            listNameMandalorianM.Add("Kroesulu Zulgai");
-            listNameMandalorianM.Add("Xean Guas");
-            listNameMandalorianM.Add("Murk Strunygg");
-            listNameMandalorianM.Add("Throng Wit");
-            listNameMandalorianM.Add("Grej Walgoc");
-            listNameMandalorianM.Add("Kriikruk Blill");
-            listNameMandalorianM.Add("Gokku Stretod");
-            listNameMandalorianM.Add("Rasoegg Kuun");
-            listNameMandalorianM.Add("Njoraild Paurvun");
-            listNameMandalorianM.Add("Orosan Qugg");
-            listNameMandalorianM.Add("Vraidavoe Foobbest");
+            //Male Mandalorian names
+            listNameMandalorian.Add("Par Wruuc");
+            listNameMandalorian.Add("Drick Wrarkard");
+            listNameMandalorian.Add("Pad Zahl");
+            listNameMandalorian.Add("Juk Daxagg");
+            listNameMandalorian.Add("Lliyiod Tunch");
+            listNameMandalorian.Add("Xideank Drachorr");
+            listNameMandalorian.Add("Iopoe Fyrs");
+            listNameMandalorian.Add("Anno Rasuard");
+            listNameMandalorian.Add("Rhiidebeenx Krungh");
+            listNameMandalorian.Add("Kroesulu Zulgai");
+            listNameMandalorian.Add("Xean Guas");
+            listNameMandalorian.Add("Murk Strunygg");
+            listNameMandalorian.Add("Throng Wit");
+            listNameMandalorian.Add("Grej Walgoc");
+            listNameMandalorian.Add("Kriikruk Blill");
+            listNameMandalorian.Add("Gokku Stretod");
+            listNameMandalorian.Add("Rasoegg Kuun");
+            listNameMandalorian.Add("Njoraild Paurvun");
+            listNameMandalorian.Add("Orosan Qugg");
+            listNameMandalorian.Add("Vraidavoe Foobbest");
 
-            return listNameMandalorianM;
+            //Female Mandalorian names
+            listNameMandalorian.Add("Fi Tros");
+            listNameMandalorian.Add("Va Ikkatt");
+            listNameMandalorian.Add("Sham Wran");
+            listNameMandalorian.Add("Shialk Blaso");
+            listNameMandalorian.Add("Aodesh Troord");
+            listNameMandalorian.Add("Haymnalk Ulyll");
+            listNameMandalorian.Add("Kaytai Sywr");
+            listNameMandalorian.Add("Bonnoo Cyyos");
+            listNameMandalorian.Add("Ikaiba Veg");
+            listNameMandalorian.Add("Risilo Dreli");
+            listNameMandalorian.Add("Khin Suwr");
+            listNameMandalorian.Add("Zha Wapmyt");
+            listNameMandalorian.Add("Rilk Skegg");
+            listNameMandalorian.Add("Bi Ydu");
+            listNameMandalorian.Add("Phobbial Blunch");
+            listNameMandalorian.Add("Huskish Qaurhout");
+            listNameMandalorian.Add("Uyias Cral");
+            listNameMandalorian.Add("Nemsaith Tarvhic");
+            listNameMandalorian.Add("Aviddes Nud");
+            listNameMandalorian.Add("Bhekkiggath Dakko");
+
+            return listNameMandalorian;
         }
 
-        private List<string> FillListNameMand_F()
+        /// <summary>
+        /// This Getter method returns a Mandalorian name depending on the gender
+        /// </summary>
+        /// <param name="gender"></param>
+        /// <returns> string name </returns>
+        public string getListNameMand(string gender)
         {
-            listNameMandalorianF.Add("Fi Tros");
-            listNameMandalorianF.Add("Va Ikkatt");
-            listNameMandalorianF.Add("Sham Wran");
-            listNameMandalorianF.Add("Shialk Blaso");
-            listNameMandalorianF.Add("Aodesh Troord");
-            listNameMandalorianF.Add("Haymnalk Ulyll");
-            listNameMandalorianF.Add("Kaytai Sywr");
-            listNameMandalorianF.Add("Bonnoo Cyyos");
-            listNameMandalorianF.Add("Ikaiba Veg");
-            listNameMandalorianF.Add("Risilo Dreli");
-            listNameMandalorianF.Add("Khin Suwr");
-            listNameMandalorianF.Add("Zha Wapmyt");
-            listNameMandalorianF.Add("Rilk Skegg");
-            listNameMandalorianF.Add("Bi Ydu");
-            listNameMandalorianF.Add("Phobbial Blunch");
-            listNameMandalorianF.Add("Huskish Qaurhout");
-            listNameMandalorianF.Add("Uyias Cral");
-            listNameMandalorianF.Add("Nemsaith Tarvhic");
-            listNameMandalorianF.Add("Aviddes Nud");
-            listNameMandalorianF.Add("Bhekkiggath Dakko");
-
-            return listNameMandalorianF;
-        }
-
-        public string getListNameMand_M()
-        {
-            FillListNameMand_M();
+            FillListNameMand();
             string name;
-            int listIndex = rand.Next(0, 20);
-            name = listNameMandalorianM.ElementAt(listIndex);
-            return name;
-        }
-
-        public string getListNameMand_F()
-        {
-            FillListNameMand_F();
-            string name;
-            int listIndex = rand.Next(0, 20);
-            name = listNameMandalorianF.ElementAt(listIndex);
-            return name;
-        }
-
-
-
-        private List<string> FillListNameZab_M()
-        {
-            listNameZabrakM.Add("Kradroo");
-            listNameZabrakM.Add("Vratropa");
-            listNameZabrakM.Add("Vukraru");
-            listNameZabrakM.Add("Kuprar");
-            listNameZabrakM.Add("Reprura");
-            listNameZabrakM.Add("Aekror");
-            listNameZabrakM.Add("Vrutas");
-            listNameZabrakM.Add("Stavrag");
-            listNameZabrakM.Add("Storga");
-            listNameZabrakM.Add("Drasuu");
-            listNameZabrakM.Add("Retae");
-            listNameZabrakM.Add("Povue");
-            listNameZabrakM.Add("Sogrok");
-            listNameZabrakM.Add("Mosa");
-            listNameZabrakM.Add("Duvao");
-            listNameZabrakM.Add("Audo");
-            listNameZabrakM.Add("Gexam");
-            listNameZabrakM.Add("Grebromu");
-            listNameZabrakM.Add("Kagoma");
-            listNameZabrakM.Add("Peta");
-
-            return listNameZabrakM;
-        }
-
-        private List<string> FillListNameZab_F()
-        {
-            listNameZabrakF.Add("Stomati");
-            listNameZabrakF.Add("Buqa");
-            listNameZabrakF.Add("Ausake");
-            listNameZabrakF.Add("Gedrio");
-            listNameZabrakF.Add("Nokrido");
-            listNameZabrakF.Add("Blunes");
-            listNameZabrakF.Add("Oovreda");
-            listNameZabrakF.Add("Xokrose");
-            listNameZabrakF.Add("Kugei");
-            listNameZabrakF.Add("Reme");
-            listNameZabrakF.Add("Blavax");
-            listNameZabrakF.Add("Gumok");
-            listNameZabrakF.Add("Gedama");
-            listNameZabrakF.Add("Lokrao");
-            listNameZabrakF.Add("Eaveku");
-            listNameZabrakF.Add("Aosri");
-            listNameZabrakF.Add("Hage");
-            listNameZabrakF.Add("Aosrou");
-            listNameZabrakF.Add("Eesaxo");
-            listNameZabrakF.Add("Qado");
-
-            return listNameZabrakF;
-        }
-
-        public string getListNameZab_M()
-        {
-            FillListNameZab_M();
-            string name;
-            int listIndex = rand.Next(0, 20);
-            name = listNameZabrakM.ElementAt(listIndex);
-            return name;
-        }
-
-        public string getListNameZab_F()
-        {
-            FillListNameZab_F();
-            string name;
-            int listIndex = rand.Next(0, 20);
-            name = listNameZabrakF.ElementAt(listIndex);
+            if (gender == "M")
+            {
+                int listIndex = rand.Next(0, 20);
+                name = listNameMandalorian.ElementAt(listIndex);
+            }
+            else
+            {
+                int listIndex = rand.Next(21, 40);
+                name = listNameMandalorian.ElementAt(listIndex);
+            }
             return name;
         }
 
 
 
-        private List<string> FillListNameSPB_M()
+        /// <summary>
+        /// This method adds Zabrak names in the List<string> listNameZabrak
+        /// </summary>
+        /// <returns> List<string> listNameZabrak </returns>
+        private List<string> FillListNameZab()
         {
-            listNameSPB_M.Add("Krâmshan");
-            listNameSPB_M.Add("Yuhshat");
-            listNameSPB_M.Add("Sralos");
-            listNameSPB_M.Add("Rhilzos");
-            listNameSPB_M.Add("Kaidhis");
-            listNameSPB_M.Add("Zroshwû");
-            listNameSPB_M.Add("Hotsais");
-            listNameSPB_M.Add("Dona");
-            listNameSPB_M.Add("Tishdû");
-            listNameSPB_M.Add("Rhûrji");
-            listNameSPB_M.Add("Nikwum");
-            listNameSPB_M.Add("Nuykaits");
-            listNameSPB_M.Add("Lajliw");
-            listNameSPB_M.Add("Chotûsh");
-            listNameSPB_M.Add("Whâdkuz");
-            listNameSPB_M.Add("Ûlowyi");
-            listNameSPB_M.Add("Wrushow");
-            listNameSPB_M.Add("Hiljûm");
-            listNameSPB_M.Add("Tsoikâ");
-            listNameSPB_M.Add("Wrojim");
+            //Male Zabrak names
+            listNameZabrak.Add("Kradroo");
+            listNameZabrak.Add("Vratropa");
+            listNameZabrak.Add("Vukraru");
+            listNameZabrak.Add("Kuprar");
+            listNameZabrak.Add("Reprura");
+            listNameZabrak.Add("Aekror");
+            listNameZabrak.Add("Vrutas");
+            listNameZabrak.Add("Stavrag");
+            listNameZabrak.Add("Storga");
+            listNameZabrak.Add("Drasuu");
+            listNameZabrak.Add("Retae");
+            listNameZabrak.Add("Povue");
+            listNameZabrak.Add("Sogrok");
+            listNameZabrak.Add("Mosa");
+            listNameZabrak.Add("Duvao");
+            listNameZabrak.Add("Audo");
+            listNameZabrak.Add("Gexam");
+            listNameZabrak.Add("Grebromu");
+            listNameZabrak.Add("Kagoma");
+            listNameZabrak.Add("Peta");
 
-            return listNameSPB_M;
+            //Female Zabrak names
+            listNameZabrak.Add("Stomati");
+            listNameZabrak.Add("Buqa");
+            listNameZabrak.Add("Ausake");
+            listNameZabrak.Add("Gedrio");
+            listNameZabrak.Add("Nokrido");
+            listNameZabrak.Add("Blunes");
+            listNameZabrak.Add("Oovreda");
+            listNameZabrak.Add("Xokrose");
+            listNameZabrak.Add("Kugei");
+            listNameZabrak.Add("Reme");
+            listNameZabrak.Add("Blavax");
+            listNameZabrak.Add("Gumok");
+            listNameZabrak.Add("Gedama");
+            listNameZabrak.Add("Lokrao");
+            listNameZabrak.Add("Eaveku");
+            listNameZabrak.Add("Aosri");
+            listNameZabrak.Add("Hage");
+            listNameZabrak.Add("Aosrou");
+            listNameZabrak.Add("Eesaxo");
+            listNameZabrak.Add("Qado");
+
+            return listNameZabrak;
         }
 
-        private List<string> FillListNameSPB_F()
+        /// <summary>
+        /// This Getter method returns a Zabrak name depending on the gender
+        /// </summary>
+        /// <param name="gender"></param>
+        /// <returns> string name </returns>
+        public string getListNameZab(string gender)
         {
-            listNameSPB_F.Add("Zarua");
-            listNameSPB_F.Add("Ekheniu");
-            listNameSPB_F.Add("Wiqul");
-            listNameSPB_F.Add("Eqoleath");
-            listNameSPB_F.Add("Dhulua");
-            listNameSPB_F.Add("Ruglea");
-            listNameSPB_F.Add("Xukeath");
-            listNameSPB_F.Add("Ixikam");
-            listNameSPB_F.Add("Zhigriux");
-            listNameSPB_F.Add("Namrualyr");
-            listNameSPB_F.Add("Isopuasy");
-            listNameSPB_F.Add("Bhahi");
-            listNameSPB_F.Add("Awexviash");
-            listNameSPB_F.Add("Ipleqaeth");
-            listNameSPB_F.Add("Gheaxduatiur");
-            listNameSPB_F.Add("Vrokwa");
-            listNameSPB_F.Add("Udragbe");
-            listNameSPB_F.Add("Uwraqias");
-            listNameSPB_F.Add("Komla");
-            listNameSPB_F.Add("Uxuhia");
-
-            return listNameSPB_F;
-        }
-
-        public string getListNameSPB_M()
-        {
-            FillListNameSPB_M();
+            FillListNameZab();
             string name;
-            int listIndex = rand.Next(0, 20);
-            name = listNameSPB_M.ElementAt(listIndex);
-            return name;
-        }
-
-        public string getListNameSPB_F()
-        {
-            FillListNameSPB_F();
-            string name;
-            int listIndex = rand.Next(0, 20);
-            name = listNameSPB_F.ElementAt(listIndex);
-            return name;
-        }
-
-
-
-        private List<string> FillListNameTwilek_M()
-        {
-            listNameTwilekM.Add("Bumbacri");
-            listNameTwilekM.Add("Audopfaru");
-            listNameTwilekM.Add("Hekkile");
-            listNameTwilekM.Add("Uumibcidus");
-            listNameTwilekM.Add("Criswajif");
-            listNameTwilekM.Add("Hig'fowim");
-            listNameTwilekM.Add("Ajobzacru");
-            listNameTwilekM.Add("Aulewnabik");
-            listNameTwilekM.Add("Okumhahag");
-            listNameTwilekM.Add("Gitzuci");
-            listNameTwilekM.Add("Iciwdogiq");
-            listNameTwilekM.Add("Aubihhisew");
-            listNameTwilekM.Add("Aeluh'haja");
-            listNameTwilekM.Add("Gat'cenu");
-            listNameTwilekM.Add("Gegbacis");
-            listNameTwilekM.Add("Omamhuse");
-            listNameTwilekM.Add("Aerebtukal");
-            listNameTwilekM.Add("Ekozfela");
-            listNameTwilekM.Add("Ietitnaro");
-            listNameTwilekM.Add("Oosritlace");
-
-            return listNameTwilekM;
-        }
-
-        private List<string> FillListNameTwilek_F()
-        {
-            listNameTwilekF.Add("Ipastabu");
-            listNameTwilekF.Add("Esagtupi");
-            listNameTwilekF.Add("Aawummedo");
-            listNameTwilekF.Add("Oeyodsomo");
-            listNameTwilekF.Add("Iopor'niwul");
-            listNameTwilekF.Add("Ianer'bine");
-            listNameTwilekF.Add("Ojippifof");
-            listNameTwilekF.Add("Ubomvetah");
-            listNameTwilekF.Add("Cumbira");
-            listNameTwilekF.Add("Azuzcoda");
-            listNameTwilekF.Add("Ocobhemon");
-            listNameTwilekF.Add("Iatudlove");
-            listNameTwilekF.Add("Uhit'hiwiy");
-            listNameTwilekF.Add("Augip'rutir");
-            listNameTwilekF.Add("Obitpikum");
-            listNameTwilekF.Add("Omiwlacri");
-            listNameTwilekF.Add("Alumhakem");
-            listNameTwilekF.Add("Ifulcoje");
-            listNameTwilekF.Add("Uayuwbome");
-            listNameTwilekF.Add("Yarwafug");
-
-            return listNameTwilekF;
-        }
-
-        public string getListNameTwilek_M()
-        {
-            FillListNameTwilek_M();
-            string name;
-            int listIndex = rand.Next(0, 20);
-            name = listNameTwilekM.ElementAt(listIndex);
-            return name;
-        }
-
-        public string getListNameTwilek_F()
-        {
-            FillListNameTwilek_F();
-            string name;
-            int listIndex = rand.Next(0, 20);
-            name = listNameTwilekF.ElementAt(listIndex);
+            if (gender == "M")
+            {
+                int listIndex = rand.Next(0, 20);
+                name = listNameZabrak.ElementAt(listIndex);
+            }
+            else
+            {
+                int listIndex = rand.Next(21, 40);
+                name = listNameZabrak.ElementAt(listIndex);
+            }
             return name;
         }
 
 
 
-        private List<string> FillListNameCathar_M()
+        /// <summary>
+        /// This method adds Sith Pureblood names in the List<string> listNameSPB
+        /// </summary>
+        /// <returns> List<string> listNameSPB </returns>
+        private List<string> FillListNameSPB()
         {
-            listNameCatharM.Add("Cronu Jhido");
-            listNameCatharM.Add("Musu Tamol");
-            listNameCatharM.Add("Cido Korgor");
-            listNameCatharM.Add("Criso Lhudul");
-            listNameCatharM.Add("Harby Josa");
-            listNameCatharM.Add("Ixihr Mun");
-            listNameCatharM.Add("Si Nhi");
-            listNameCatharM.Add("Ty Sit");
-            listNameCatharM.Add("Ric Kuk");
-            listNameCatharM.Add("Nurr No");
-            listNameCatharM.Add("Crundi Kirgon");
-            listNameCatharM.Add("Horam Tudir");
-            listNameCatharM.Add("Tirbo Mhoshuk");
-            listNameCatharM.Add("Suda Torgor");
-            listNameCatharM.Add("Ruso Phalon");
-            listNameCatharM.Add("Usi Phu");
-            listNameCatharM.Add("Ixi Rul");
-            listNameCatharM.Add("Akhun La");
-            listNameCatharM.Add("Asy So");
-            listNameCatharM.Add("Isam Lhu");
+            //Male Sith Pureblood names
+            listNameSPB.Add("Krâmshan");
+            listNameSPB.Add("Yuhshat");
+            listNameSPB.Add("Sralos");
+            listNameSPB.Add("Rhilzos");
+            listNameSPB.Add("Kaidhis");
+            listNameSPB.Add("Zroshwû");
+            listNameSPB.Add("Hotsais");
+            listNameSPB.Add("Dona");
+            listNameSPB.Add("Tishdû");
+            listNameSPB.Add("Rhûrji");
+            listNameSPB.Add("Nikwum");
+            listNameSPB.Add("Nuykaits");
+            listNameSPB.Add("Lajliw");
+            listNameSPB.Add("Chotûsh");
+            listNameSPB.Add("Whâdkuz");
+            listNameSPB.Add("Ûlowyi");
+            listNameSPB.Add("Wrushow");
+            listNameSPB.Add("Hiljûm");
+            listNameSPB.Add("Tsoikâ");
+            listNameSPB.Add("Wrojim");
 
-            return listNameCatharM;
+            //Female Sith Pureblood names
+            listNameSPB.Add("Zarua");
+            listNameSPB.Add("Ekheniu");
+            listNameSPB.Add("Wiqul");
+            listNameSPB.Add("Eqoleath");
+            listNameSPB.Add("Dhulua");
+            listNameSPB.Add("Ruglea");
+            listNameSPB.Add("Xukeath");
+            listNameSPB.Add("Ixikam");
+            listNameSPB.Add("Zhigriux");
+            listNameSPB.Add("Namrualyr");
+            listNameSPB.Add("Isopuasy");
+            listNameSPB.Add("Bhahi");
+            listNameSPB.Add("Awexviash");
+            listNameSPB.Add("Ipleqaeth");
+            listNameSPB.Add("Gheaxduatiur");
+            listNameSPB.Add("Vrokwa");
+            listNameSPB.Add("Udragbe");
+            listNameSPB.Add("Uwraqias");
+            listNameSPB.Add("Komla");
+            listNameSPB.Add("Uxuhia");
+
+            return listNameSPB;
         }
 
-        private List<string> FillListNameCathar_F()
+        /// <summary>
+        /// This Getter method returns a Sith Pureblood name depending on the gender
+        /// </summary>
+        /// <param name="gender"></param>
+        /// <returns> string name </returns>
+        public string getListNameSPB(string gender)
         {
-            listNameCatharF.Add("Jalvyn Khamu");
-            listNameCatharF.Add("Mimoz Pozun");
-            listNameCatharF.Add("Churoxi Tado");
-            listNameCatharF.Add("Calyr Runam");
-            listNameCatharF.Add("Manihr Lusal");
-            listNameCatharF.Add("Choryn Mar");
-            listNameCatharF.Add("Cuwusha Pot");
-            listNameCatharF.Add("Monish Ko");
-            listNameCatharF.Add("Sothiza Mu");
-            listNameCatharF.Add("Jusuhi Lum");
-            listNameCatharF.Add("Covazy Lurgo");
-            listNameCatharF.Add("Nirisa Jazik");
-            listNameCatharF.Add("Ralvohy Sashun");
-            listNameCatharF.Add("Rovyr Nhosu");
-            listNameCatharF.Add("Mimuna Sorgik");
-            listNameCatharF.Add("Daliny Jo");
-            listNameCatharF.Add("Naryz Mhag");
-            listNameCatharF.Add("Sulvisy Lus");
-            listNameCatharF.Add("Siluxa Ril");
-            listNameCatharF.Add("Sovos Par");
-
-            return listNameCatharF;
-        }
-
-        public string getListNameCathar_M()
-        {
-            FillListNameCathar_M();
+            FillListNameSPB();
             string name;
-            int listIndex = rand.Next(0, 20);
-            name = listNameCatharM.ElementAt(listIndex);
+            if (gender == "M")
+            {
+                int listIndex = rand.Next(0, 20);
+                name = listNameSPB.ElementAt(listIndex);
+            }
+            else
+            {
+                int listIndex = rand.Next(21, 40);
+                name = listNameSPB.ElementAt(listIndex);
+            }
             return name;
         }
 
-        public string getListNameCathar_F()
+
+
+        /// <summary>
+        /// This method adds Twilek names in the List<string> listNameTwilek
+        /// </summary>
+        /// <returns> List<string> listNameTwilek </returns>
+        private List<string> FillListNameTwilek()
         {
-            FillListNameCathar_F();
+            //Male Twilek names
+            listNameTwilek.Add("Bumbacri");
+            listNameTwilek.Add("Audopfaru");
+            listNameTwilek.Add("Hekkile");
+            listNameTwilek.Add("Uumibcidus");
+            listNameTwilek.Add("Criswajif");
+            listNameTwilek.Add("Hig'fowim");
+            listNameTwilek.Add("Ajobzacru");
+            listNameTwilek.Add("Aulewnabik");
+            listNameTwilek.Add("Okumhahag");
+            listNameTwilek.Add("Gitzuci");
+            listNameTwilek.Add("Iciwdogiq");
+            listNameTwilek.Add("Aubihhisew");
+            listNameTwilek.Add("Aeluh'haja");
+            listNameTwilek.Add("Gat'cenu");
+            listNameTwilek.Add("Gegbacis");
+            listNameTwilek.Add("Omamhuse");
+            listNameTwilek.Add("Aerebtukal");
+            listNameTwilek.Add("Ekozfela");
+            listNameTwilek.Add("Ietitnaro");
+            listNameTwilek.Add("Oosritlace");
+
+            //Female Twilek names
+            listNameTwilek.Add("Ipastabu");
+            listNameTwilek.Add("Esagtupi");
+            listNameTwilek.Add("Aawummedo");
+            listNameTwilek.Add("Oeyodsomo");
+            listNameTwilek.Add("Iopor'niwul");
+            listNameTwilek.Add("Ianer'bine");
+            listNameTwilek.Add("Ojippifof");
+            listNameTwilek.Add("Ubomvetah");
+            listNameTwilek.Add("Cumbira");
+            listNameTwilek.Add("Azuzcoda");
+            listNameTwilek.Add("Ocobhemon");
+            listNameTwilek.Add("Iatudlove");
+            listNameTwilek.Add("Uhit'hiwiy");
+            listNameTwilek.Add("Augip'rutir");
+            listNameTwilek.Add("Obitpikum");
+            listNameTwilek.Add("Omiwlacri");
+            listNameTwilek.Add("Alumhakem");
+            listNameTwilek.Add("Ifulcoje");
+            listNameTwilek.Add("Uayuwbome");
+            listNameTwilek.Add("Yarwafug");
+
+            return listNameTwilek;
+        }
+
+        /// <summary>
+        /// This Getter method returns a Twilek name depending on the gender
+        /// </summary>
+        /// <param name="gender"></param>
+        /// <returns> string name </returns>
+        public string getListNameTwilek(string gender)
+        {
+            FillListNameTwilek();
             string name;
-            int listIndex = rand.Next(0, 20);
-            name = listNameCatharF.ElementAt(listIndex);
+            if (gender == "M")
+            {
+                int listIndex = rand.Next(0, 20);
+                name = listNameTwilek.ElementAt(listIndex);
+            }
+            else
+            {
+                int listIndex = rand.Next(21, 40);
+                name = listNameTwilek.ElementAt(listIndex);
+            }
             return name;
         }
 
-        private List<string> FillListNameHum_M()
-        {
-            listNameHumanM.Add("Jetraf Hyndbal");
-            listNameHumanM.Add("Khatann Freeappl");
-            listNameHumanM.Add("Remalex Sarsib");
-            listNameHumanM.Add("Jespeyt Smaher");
-            listNameHumanM.Add("Alaade Edgegedn");
-            listNameHumanM.Add("Jamagar Sevhum");
-            listNameHumanM.Add("Dillash Whijohn");
-            listNameHumanM.Add("Logakyl Searud");
-            listNameHumanM.Add("Mavandy Oxefent");
-            listNameHumanM.Add("Jonabarr Braedd");
-            listNameHumanM.Add("Trolond Stacri");
-            listNameHumanM.Add("Nasgid Denlcrib");
-            listNameHumanM.Add("Antoosc Spibond");
-            listNameHumanM.Add("Omartodd Daviyar");
-            listNameHumanM.Add("Philjea Meacruff");
-            listNameHumanM.Add("Guicurt Angmabr");
-            listNameHumanM.Add("Jakelev Fulpix");
-            listNameHumanM.Add("Andrbra Druisa");
-            listNameHumanM.Add("Irvitoby Colcoz");
-            listNameHumanM.Add("Markev Hurpic");
 
-            return listNameHumanM;
+
+        /// <summary>
+        /// This method adds Cathar names in the List<string> listNameCathar
+        /// </summary>
+        /// <returns> List<string> listNameCathar </returns>
+        private List<string> FillListNameCathar()
+        {
+            //Male Cathar names
+            listNameCathar.Add("Cronu Jhido");
+            listNameCathar.Add("Musu Tamol");
+            listNameCathar.Add("Cido Korgor");
+            listNameCathar.Add("Criso Lhudul");
+            listNameCathar.Add("Harby Josa");
+            listNameCathar.Add("Ixihr Mun");
+            listNameCathar.Add("Si Nhi");
+            listNameCathar.Add("Ty Sit");
+            listNameCathar.Add("Ric Kuk");
+            listNameCathar.Add("Nurr No");
+            listNameCathar.Add("Crundi Kirgon");
+            listNameCathar.Add("Horam Tudir");
+            listNameCathar.Add("Tirbo Mhoshuk");
+            listNameCathar.Add("Suda Torgor");
+            listNameCathar.Add("Ruso Phalon");
+            listNameCathar.Add("Usi Phu");
+            listNameCathar.Add("Ixi Rul");
+            listNameCathar.Add("Akhun La");
+            listNameCathar.Add("Asy So");
+            listNameCathar.Add("Isam Lhu");
+
+            //Female Cathar names
+            listNameCathar.Add("Jalvyn Khamu");
+            listNameCathar.Add("Mimoz Pozun");
+            listNameCathar.Add("Churoxi Tado");
+            listNameCathar.Add("Calyr Runam");
+            listNameCathar.Add("Manihr Lusal");
+            listNameCathar.Add("Choryn Mar");
+            listNameCathar.Add("Cuwusha Pot");
+            listNameCathar.Add("Monish Ko");
+            listNameCathar.Add("Sothiza Mu");
+            listNameCathar.Add("Jusuhi Lum");
+            listNameCathar.Add("Covazy Lurgo");
+            listNameCathar.Add("Nirisa Jazik");
+            listNameCathar.Add("Ralvohy Sashun");
+            listNameCathar.Add("Rovyr Nhosu");
+            listNameCathar.Add("Mimuna Sorgik");
+            listNameCathar.Add("Daliny Jo");
+            listNameCathar.Add("Naryz Mhag");
+            listNameCathar.Add("Sulvisy Lus");
+            listNameCathar.Add("Siluxa Ril");
+            listNameCathar.Add("Sovos Par");
+
+            return listNameCathar;
         }
 
-        private List<string> FillListNameHum_F()
+        /// <summary>
+        /// This Getter method returns a Cathar name depending on the gender
+        /// </summary>
+        /// <param name="gender"></param>
+        /// <returns> string name </returns>
+        public string getListNameCathar(string gender)
         {
-            listNameHumanF.Add("Brekour Beckmake");
-            listNameHumanF.Add("Fioale Dauwal");
-            listNameHumanF.Add("Jayvivi Domefair");
-            listNameHumanF.Add("Jacalex Coasher");
-            listNameHumanF.Add("Briyvon Ralpil");
-            listNameHumanF.Add("Jeweesth Cockpet");
-            listNameHumanF.Add("Keylnor Rickrail");
-            listNameHumanF.Add("Makjos Sadpop");
-            listNameHumanF.Add("Taneric Chancha");
-            listNameHumanF.Add("Fabfra Passta");
-            listNameHumanF.Add("Joreliz Hallevat");
-            listNameHumanF.Add("Lauanne Talbpay");
-            listNameHumanF.Add("Ciemar Whilang");
-            listNameHumanF.Add("Jewpris Rickrou");
-            listNameHumanF.Add("Heatjayd Dalebee");
-            listNameHumanF.Add("Leahkas Holldurn");
-            listNameHumanF.Add("Daryas Bealsirm");
-            listNameHumanF.Add("Valana Cruhab");
-            listNameHumanF.Add("Lyndali Turrawl");
-            listNameHumanF.Add("Julizoe Decktrap");
-
-            return listNameHumanF;
-        }
-
-        public string getListNameHum_M()
-        {
-            FillListNameHum_M();
+            FillListNameCathar();
             string name;
-            int listIndex = rand.Next(0, 20);
-            name = listNameHumanM.ElementAt(listIndex);
+            if (gender == "M")
+            {
+                int listIndex = rand.Next(0, 20);
+                name = listNameCathar.ElementAt(listIndex);
+            }
+            else
+            {
+                int listIndex = rand.Next(21, 40);
+                name = listNameCathar.ElementAt(listIndex);
+            }
             return name;
         }
 
-        public string getListNameHum_F()
+
+
+        /// <summary>
+        /// This method adds Human names in the List<string> listNameHuman
+        /// </summary>
+        /// <returns> List<string> listNameHuman </returns>
+        private List<string> FillListNameHum()
         {
-            FillListNameHum_F();
+            //Male Human names
+            listNameHuman.Add("Jetraf Hyndbal");
+            listNameHuman.Add("Khatann Freeappl");
+            listNameHuman.Add("Remalex Sarsib");
+            listNameHuman.Add("Jespeyt Smaher");
+            listNameHuman.Add("Alaade Edgegedn");
+            listNameHuman.Add("Jamagar Sevhum");
+            listNameHuman.Add("Dillash Whijohn");
+            listNameHuman.Add("Logakyl Searud");
+            listNameHuman.Add("Mavandy Oxefent");
+            listNameHuman.Add("Jonabarr Braedd");
+            listNameHuman.Add("Trolond Stacri");
+            listNameHuman.Add("Nasgid Denlcrib");
+            listNameHuman.Add("Antoosc Spibond");
+            listNameHuman.Add("Omartodd Daviyar");
+            listNameHuman.Add("Philjea Meacruff");
+            listNameHuman.Add("Guicurt Angmabr");
+            listNameHuman.Add("Jakelev Fulpix");
+            listNameHuman.Add("Andrbra Druisa");
+            listNameHuman.Add("Irvitoby Colcoz");
+            listNameHuman.Add("Markev Hurpic");
+
+            //Female Human names
+            listNameHuman.Add("Brekour Beckmake");
+            listNameHuman.Add("Fioale Dauwal");
+            listNameHuman.Add("Jayvivi Domefair");
+            listNameHuman.Add("Jacalex Coasher");
+            listNameHuman.Add("Briyvon Ralpil");
+            listNameHuman.Add("Jeweesth Cockpet");
+            listNameHuman.Add("Keylnor Rickrail");
+            listNameHuman.Add("Makjos Sadpop");
+            listNameHuman.Add("Taneric Chancha");
+            listNameHuman.Add("Fabfra Passta");
+            listNameHuman.Add("Joreliz Hallevat");
+            listNameHuman.Add("Lauanne Talbpay");
+            listNameHuman.Add("Ciemar Whilang");
+            listNameHuman.Add("Jewpris Rickrou");
+            listNameHuman.Add("Heatjayd Dalebee");
+            listNameHuman.Add("Leahkas Holldurn");
+            listNameHuman.Add("Daryas Bealsirm");
+            listNameHuman.Add("Valana Cruhab");
+            listNameHuman.Add("Lyndali Turrawl");
+            listNameHuman.Add("Julizoe Decktrap");
+
+            return listNameHuman;
+        }
+
+        /// <summary>
+        /// This Getter method returns a Human name depending on the gender
+        /// </summary>
+        /// <param name="gender"></param>
+        /// <returns> string name </returns>
+        public string getListNameHum(string gender)
+        {
+            FillListNameHum();
             string name;
-            int listIndex = rand.Next(0, 20);
-            name = listNameHumanF.ElementAt(listIndex);
+            if (gender == "M")
+            {
+                int listIndex = rand.Next(0, 20);
+                name = listNameHuman.ElementAt(listIndex);
+            }
+            else
+            {
+                int listIndex = rand.Next(21, 40);
+                name = listNameHuman.ElementAt(listIndex);
+            }
             return name;
         }
     }
