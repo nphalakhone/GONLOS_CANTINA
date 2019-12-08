@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>starwars_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -172,6 +175,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Slippery_Slopes_Cantina.jpg" />
+    <Content Include="starwars_icon.ico" />
     <None Include="Resources\StarsBackground3.png" />
     <None Include="Resources\StarsBackground2.png" />
     <None Include="Resources\201-2018253_sign-symbol-icons-in-svg-and-png-yellow.png" />

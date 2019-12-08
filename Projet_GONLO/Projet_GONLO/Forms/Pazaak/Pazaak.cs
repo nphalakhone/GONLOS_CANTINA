@@ -13,9 +13,15 @@ using System.IO;
 using Projet_GONLO.Classes.Pazaak;
 namespace Projet_GONLO
 {
-
+    /// <summary>
+    /// This enumerator has a property for each possible move the player can make
+    /// </summary>
     public enum Move { Stand, End_Turn, AddCard1, AddCard2, AddCard3, AddCard4 };
 
+
+    /// <summary>
+    /// Class Pazaak
+    /// </summary>
     public partial class Pazaak : Form
     {
         List<Image> playerDeckPazaak = new List<Image>();
@@ -40,11 +46,15 @@ namespace Projet_GONLO
         bool addedPlusMinus = false;
         Random rand = new Random();
         Player ai = new Player();
-        
+
+        string result;
 
 
-
-
+        /// <summary>
+        /// Pazaak Constructor
+        /// </summary>
+        /// <param name="playerDeckPazaak"></param>
+        /// <param name="carteIntEnvoye"></param>
         public Pazaak(List<Image> playerDeckPazaak, int[] carteIntEnvoye)
         {
             this.playerDeckPazaak = playerDeckPazaak;
@@ -56,6 +66,10 @@ namespace Projet_GONLO
             SetupBoard();
         }
 
+        /// <summary>
+        /// This method that sets up global array with the values passed to the pazaak form
+        /// to acentuate accesibility
+        /// </summary>
         private void SetupAiDeck()
         {
            TabPnlAiDeck = new Panel[]
@@ -70,7 +84,11 @@ namespace Projet_GONLO
             }
 
         }
-
+        /// <summary>
+        /// This method converts an array passed in parameters into a list
+        /// </summary>
+        /// <param name="carteIntEnvoye"></param>
+        /// <returns></returns>
         private List<int> TabToList(int[] carteIntEnvoye)
         {
             List<int> listRetourner = new List<int>();
@@ -81,11 +99,24 @@ namespace Projet_GONLO
             return listRetourner;
         }
 
+        /// <summary>
+        /// Internal int object which is how much the player waged
+        /// </summary>
         internal int CreditsWaged { get => credsWaged; set => credsWaged = value; }
+
+        /// <summary>
+        /// Internal Player object which is the user's player
+        /// </summary>
         internal Player Player1 { get => playerPazaak; set => playerPazaak = value; }
+
+        /// <summary>
+        /// Property RoundOver1
+        /// </summary>
         public bool RoundOver1 { get => RoundOver; set => RoundOver = value; }
 
-
+        /// <summary>
+        /// Method that filled global arrays for better accessibilty
+        /// </summary>
         private void SetupBoard()
         {
             TabPanelLeft = new Panel[]
@@ -113,7 +144,9 @@ namespace Projet_GONLO
 
 
         }
-
+        /// <summary>
+        /// Method that filled global arrays for better accessibilty
+        /// </summary>
         private void SetupPlayerdeck()
         {
             SelectCardsForDeck();
@@ -141,6 +174,9 @@ namespace Projet_GONLO
             }
         }
 
+        /// <summary>
+        /// Method that selects 4 specific cards that can will be used for the player deck
+        /// </summary>
         private void SelectCardsForDeck()
         {
             int tailleListe = playerDeckPazaak.Count;
@@ -164,7 +200,11 @@ namespace Projet_GONLO
                 nombreCarteSelectionne++;
             }
         }
-
+        /// <summary>
+        /// Click event for end turn button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void End_Turn_Click(object sender, EventArgs e)
         {
             if (playerPazaak.NbCards != 9)
@@ -175,10 +215,8 @@ namespace Projet_GONLO
             TabPanelLeft[playerPazaak.NbCards].BackgroundImage = c.getCarteNormal(pointsAdded);
             TabPanelLeft[playerPazaak.NbCards].BackgroundImageLayout = ImageLayout.Stretch;
             playerPazaak.NbCards++;
-                //PlayerPoints += pointsAdded;
-                //LblPointsPlayer.Text = PlayerPoints.ToString();
-                playerPazaak.Points += pointsAdded;
-                LblPointsPlayer.Text = playerPazaak.Points.ToString();
+            playerPazaak.Points += pointsAdded;
+            LblPointsPlayer.Text = playerPazaak.Points.ToString();
             AiTurn();
             }
             else
@@ -186,7 +224,10 @@ namespace Projet_GONLO
                 Stand();
             }
         }
-
+        /// <summary>
+        /// Method that analyses what the ai should do during its turn
+        /// and executes the action
+        /// </summary>
         private void AiTurn()
         {
             int pointsAdded = 0;
@@ -200,8 +241,6 @@ namespace Projet_GONLO
                 TabPanelRight[ai.NbCards].BackgroundImage = c.getCarteNormal(pointsAdded);
                 TabPanelRight[ai.NbCards].BackgroundImageLayout = ImageLayout.Stretch;
                 ai.NbCards++;
-                //AiPoints += pointsAdded;
-                //LblPointsAi.Text = AiPoints.ToString();
                 ai.Points += pointsAdded;
                 LblPointsAi.Text = ai.Points.ToString();
             }
@@ -217,7 +256,10 @@ namespace Projet_GONLO
         }
 
        
-
+        /// <summary>
+        /// Method that adds a card from the player deck based an on index
+        /// </summary>
+        /// <param name="index"></param>
         private void AddAICardToBoard(int index)
         {
             Panel[] TabPnlAiDeck = new Panel[]
@@ -257,6 +299,11 @@ namespace Projet_GONLO
             ai.NbCarteUtiliseAi++;
 
         }
+        /// <summary>
+        /// Methode that that detects which enum will be assciated with which card
+        /// in the Ai deck
+        /// </summary>
+        /// <param name="moveAI"></param>
         private void AddCard(Move moveAI)
         {
             switch (moveAI)
@@ -276,6 +323,11 @@ namespace Projet_GONLO
 
             }
         }
+
+        /// <summary>
+        /// Method that determines the best move based on the player and the ai points
+        /// </summary>
+        /// <returns></returns>
         private Move DetermineMove()
         {
             if (ai.NbCards != 9)
@@ -300,6 +352,10 @@ namespace Projet_GONLO
             return Projet_GONLO.Move.Stand;
         }
 
+        /// <summary>
+        /// Method that verify's if there is a Plus minus card to add
+        /// </summary>
+        /// <returns></returns>
         private Move AddPlusMinusCard()
         {
             if (playerPazaak.Points < 21) { 
@@ -330,6 +386,11 @@ namespace Projet_GONLO
             return Projet_GONLO.Move.Stand;
         }
 
+
+        /// <summary>
+        /// Method that verifys if there is a potential + card that could be used
+        /// </summary>
+        /// <returns></returns>
         private Move PlusCard()
         {
             if (playerPazaak.Points < 20)
@@ -344,8 +405,6 @@ namespace Projet_GONLO
                         {
                             if (AiDeck[i] + ai.Points >= playerPazaak.Points ||  4 - ai.NbCarteUtiliseAi > 0)
                             {
-                                MessageBox.Show(AiDeck[i].ToString());
-
                                 return DetermineCard(i);
                             }
 
@@ -355,7 +414,10 @@ namespace Projet_GONLO
             }
             return AddPlusMinusCard();
         }
-
+        /// <summary>
+        /// Method that verifys if there is a potential minus card that can be used
+        /// </summary>
+        /// <returns></returns>
         private Move MinusCard()
         {
             if (playerPazaak.Points <= 20)
@@ -373,7 +435,11 @@ namespace Projet_GONLO
             }
             return AddPlusMinusCard();
         }
-
+        /// <summary>
+        /// Method that determines which enum to return based on an index
+        /// </summary>
+        /// <param name="element"></param>
+        /// <returns></returns>
         private Move DetermineCard(int element)
         {
             switch (element)
@@ -389,12 +455,19 @@ namespace Projet_GONLO
             }
             return Projet_GONLO.Move.Stand;
         }
-
+        /// <summary>
+        /// Method that is called when the player stands
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Stand_Click(object sender, EventArgs e)
         {
             Stand();
         }
-
+        /// <summary>
+        /// Method that loops if the player stands and the ai didnt
+        /// otherwise it will just verify the winner
+        /// </summary>
         private void Stand()
         {
             playerPazaak.Stand = true;
@@ -407,7 +480,9 @@ namespace Projet_GONLO
             }
             ResetGame();
         }
-
+        /// <summary>
+        /// Method that verifiys if both player have standed
+        /// </summary>
         private void VerifyStands()
         {
             if (ai.Stand && playerPazaak.Stand)
@@ -416,10 +491,13 @@ namespace Projet_GONLO
             }
             
         }
-
+        /// <summary>
+        /// Methode that finds a winner and show the appropiate
+        /// message box to indicate the winner
+        /// </summary>
         private void FindWinner()
         {
-            string result = "";
+            result = "";
             
             if (ai.Points == playerPazaak.Points)
             {
@@ -474,63 +552,82 @@ namespace Projet_GONLO
         }
 
         
-
+        /// <summary>
+        /// Method that verifys the differce of points a player may have over 20
+        /// </summary>
+        /// <param name="points"></param>
+        /// <returns></returns>
         private int differenceFrom20(int points)
         {
             return 20 - points;
         }
 
+
+        /// <summary>
+        /// Methode qui save le joueur dans un fichier text
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            List<Player> playersSaved = new List<Player>();
+            List <Player> playersSaved = new List<Player>();
+            bool found = false;
+            int position = 0;
             playersSaved = readSaveFile();
-            StreamWriter sw2 = new StreamWriter(Application.StartupPath + "\\SavesTest.txt");
-
+            //MessageBox.Show(playersSaved.Count.ToString());
             foreach (Player p in playersSaved)
             {
                 if (p.Name == playerPazaak.Name)
                 {
-                    DialogResult dr = MessageBox.Show("Your data already exists in the save file. " +
-                        "Do you wish to overwrite your saved data?", "ATTENTION", MessageBoxButtons.YesNo);
+                    found = true;
+                    break;
+                }
+                position++;
+            }
+            if (found)
+            {
+                DialogResult dr = MessageBox.Show("Your data already exists in the save file. " +
+                    "Do you wish to overwrite your saved data?", "ATTENTION", MessageBoxButtons.YesNo);
 
-                    switch (dr)
-                    {
-                        case DialogResult.Yes:
-                            setPlayerData(p, playerPazaak);
-                            writePlayerData(sw2, p);
-                            break;
-                        case DialogResult.No:
-                            break;
-                    }
-                } else
+                switch (dr)
                 {
-                    writePlayerData(sw2, p);
+                    case DialogResult.Yes:
+                        playersSaved[position] = playerPazaak;
+                        writePlayerData(playersSaved);
+                        break;
+                    case DialogResult.No:
+                        writePlayerData(playersSaved);
+                        break;
                 }
             }
-            playersSaved.Add(playerPazaak);
-            writePlayerData(sw2, playerPazaak);
-            sw2.Close();
+            else
+            {
+                playersSaved.Add(playerPazaak);
+                writePlayerData(playersSaved);
+            }
         }
 
-        private void setPlayerData(Player playerFromFile, Player playerInGame)
+        /// <summary>
+        /// Methode qui ecrit les informations du client dans un fichier text
+        /// </summary>
+        /// <param name="streamWriter"></param>
+        /// <param name="player"></param>
+        private void writePlayerData(List<Player> players)
         {
-            playerFromFile.Name = playerInGame.Name;
-            playerFromFile.Gender = playerInGame.Gender;
-            playerFromFile.Species = playerInGame.Species;
-            playerFromFile.Credits = playerInGame.Credits;
-            playerFromFile.PazaakGamesWon = playerInGame.PazaakGamesWon;
-            playerFromFile.PazaakGamesLost = playerInGame.PazaakGamesLost;
-            playerFromFile.DejarikGamesWon = playerInGame.DejarikGamesWon;
-            playerFromFile.DejarikGamesLost = playerInGame.DejarikGamesLost;
-        }
-
-        private void writePlayerData(StreamWriter streamWriter, Player player)
-        {
-            streamWriter.WriteLine(player.Name + ";" + player.Gender + ";" + player.Species + ";" + player.Credits.ToString() + ";" +
+            StreamWriter streamWriter = new StreamWriter(Application.StartupPath + "\\SavesTest.txt");
+            foreach (Player player in players)
+            {
+                streamWriter.WriteLine(player.Name + ";" + player.Gender + ";" + player.Species + ";" + player.Credits.ToString() + ";" +
                             player.PazaakGamesWon.ToString() + ";" + player.PazaakGamesLost.ToString() + ";" + player.DejarikGamesWon.ToString() + ";"
                             + player.DejarikGamesLost.ToString());
+            }
+            streamWriter.Close();
         }
 
+        /// <summary>
+        /// Methode qui lit un fichier text et save les informations dans une liste de joueurs
+        /// </summary>
+        /// <returns></returns>
         public List<Player> readSaveFile()
         {
             List<Player> playersSaved = new List<Player>();
@@ -560,6 +657,12 @@ namespace Projet_GONLO
             return playersSaved;
         }
 
+        /// <summary>
+        /// Methode qui restart la partie de pazzak lorsque l'on clique sur l'onglet restart
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void RestartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -569,6 +672,12 @@ namespace Projet_GONLO
             this.Close();
         }
 
+
+        /// <summary>
+        /// Method that leaves the game and removes credits from the player
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to forfeit and quit the game ? You will  automaticaly lose the amount of credits taht you waged", "Attention", MessageBoxButtons.YesNo);
@@ -584,11 +693,38 @@ namespace Projet_GONLO
             }
         }
 
+
+        /// <summary>
+        /// Method de declenche lorsque l'on clique sur help
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("How to Play Pazaak:\n" +
 
+            "The goal of the game is to win the best of 5.Each player has their own deck of 4 cards.\n" +
+            "Your 4 cards are randomly selected from the 10 cards you selected in the last window.\n" +
+            "To win you must the closest to 20 but not go over 20 \n\n\n " +
+            "During your turn you have for options:\n" +
+            "1.End turn:  this will add a random card form 1 to 10\n\n" +
+            "2.Stand: you stop adding cards\n\n" +
+            "3.Add Card: it will add one of our cards form your deck to the bord\n\n\n" +
+            "For more information:\n\n" +
+            "+ Cards: When selected during Pazaak Duel will increase your score of the number written on the card.\n\n" +
+            "- Cards: When selected during Pazaak Duel will decrease your score of the number written on the card.\n\n" +
+            "+/- Cards: When selected during Pazaak Duel will increase or decrease your score of the number written on the card. \n" +
+            "When you will click on the “flip card” text you will see a “+” or “-” (+by default)." +
+            "This symbol will decide which what the card will do.",
+             "Pazzak Infomation");
         }
 
+
+        /// <summary>
+        /// Methode that is accessed when clicked on forfeit game button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RPnlForfeitGame_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to forfeit and quit the game ?", "Attention", MessageBoxButtons.YesNo);
@@ -602,9 +738,15 @@ namespace Projet_GONLO
                 newMenuAccueil.ShowDialog();
                 this.Close();
             }
-
         }
 
+
+        /// <summary>
+        /// Method that permits to load pazzak form and sets up all the labels to
+        /// be by default false
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Pazaak_Load(object sender, EventArgs e)
         {
             LblNumeric1.Hide();
@@ -628,7 +770,9 @@ namespace Projet_GONLO
             LblCreditsNumeric.Text = playerPazaak.Credits.ToString();
             ShowFlipCard();
         }
-
+        /// <summary>
+        /// Method that shows the appropirate labels for a plus minus card
+        /// </summary>
         private void ShowFlipCard()
         {
             Label[] Numeric = { LblNumeric1, LblNumeric2, LblNumeric3, LblNumeric4 };
@@ -646,26 +790,46 @@ namespace Projet_GONLO
                 }
             }
         }
+        /// <summary>
+        /// Method for when card1 of player deck is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RPnlDownG1_Click(object sender, EventArgs e)
         {
             AddCardPlayerDeck(0);
         }
-
+        /// <summary>
+        /// Method for when card2 of player deck is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RPnlDownG2_Click(object sender, EventArgs e)
         {
             AddCardPlayerDeck(1);
         }
-
+        /// <summary>
+        /// Method for when card3 of player deck is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RPnlDownG3_Click(object sender, EventArgs e)
         {
             AddCardPlayerDeck(2);
         }
-
+        /// <summary>
+        /// Method for when card4 of player deck is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RPnlDownG4_Click(object sender, EventArgs e)
         {
             AddCardPlayerDeck(3);
         }
-
+        /// <summary>
+        /// Method that adds the corret card from the player deck to the board
+        /// </summary>
+        /// <param name="indexPanel"></param>
         private void AddCardPlayerDeck(int indexPanel)
         {
             Label[] MinusValue = { LblMinusValue1, LblMinusValue2, LblMinusValue3, LblMinusValue4 };
@@ -711,7 +875,11 @@ namespace Projet_GONLO
             AiTurn();
         }
 
-
+        /// <summary>
+        /// Method that shows the + and - sign when clicked on "filp card"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FlipCard_Click(object sender, EventArgs e)
         {
             Label[] MinusValue = { LblMinusValue1, LblMinusValue2, LblMinusValue3, LblMinusValue4 };
@@ -736,7 +904,9 @@ namespace Projet_GONLO
             }
         }
 
-
+        /// <summary>
+        /// This method that resets all components of the pazaak round
+        /// </summary>
         private void ResetGame()
         {
             for (int i = 0; i < TabPanelLeft.Length; i++)
